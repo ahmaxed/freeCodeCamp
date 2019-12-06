@@ -2,8 +2,10 @@ import { put, select, takeEvery, delay } from 'redux-saga/effects';
 
 import {
   openDonationModal,
-  preventDonationRequests,
-  shouldRequestDonationSelector
+  preventBlockDonationRequests,
+  shouldRequestDonationSelector,
+  preventProgressDonationRequests,
+  canRequestBlockDonationSelector
 } from './';
 
 function* showDonateModalSaga() {
@@ -11,7 +13,12 @@ function* showDonateModalSaga() {
   if (shouldRequestDonation) {
     yield delay(200);
     yield put(openDonationModal());
-    yield put(preventDonationRequests());
+    const isBlockDonation = yield select(canRequestBlockDonationSelector);
+    if (isBlockDonation) {
+      yield put(preventBlockDonationRequests());
+    } else {
+      yield put(preventProgressDonationRequests());
+    }
   }
 }
 
