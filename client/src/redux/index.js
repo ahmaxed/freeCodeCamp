@@ -167,30 +167,27 @@ export const showCertFetchStateSelector = state => state[ns].showCertFetchState;
 export const shouldRequestDonationSelector = state => {
   const completedChallenges = completedChallengesSelector(state);
   const completionCount = completionCountSelector(state);
-  const currentCompletedLength = completedChallenges.length;
   const canRequestProgressDonation = state[ns].canRequestProgressDonation;
   const isDonating = isDonatingSelector(state);
   const canRequestBlockDonation = canRequestBlockDonationSelector(state);
 
   // don't request donation if already donating
-  if (isDonating === true) return false;
+  if (isDonating) return false;
 
   // a block has been completed
-  if (canRequestBlockDonation === true) return true;
+  if (canRequestBlockDonation) return true;
 
-  // the user has not completed 9 challenges in total yet
-  if (currentCompletedLength < 9) {
+  // a donation has already been requested
+  if (!canRequestProgressDonation) return false;
+
+  // donations only appear after the user has completed ten challenges (i.e.
+  // not before the 11th challenge has mounted)
+  if (completedChallenges.length < 10) {
     return false;
   }
-  // this will mean we are on the 10th submission in total for the user
-  if (completedChallenges.length === 9 && canRequestProgressDonation === true) {
-    return true;
-  }
-  // this will mean we are on the 3rd submission for this browser session
-  if (completionCount === 2 && canRequestProgressDonation === true) {
-    return true;
-  }
-  return false;
+  // this will mean we have completed 3 or more challenges this browser session
+  // and enough challenges overall to not be new
+  return completionCount >= 3;
 };
 
 export const userByNameSelector = username => state => {
