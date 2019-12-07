@@ -5,9 +5,10 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { Modal, Button } from '@freecodecamp/react-bootstrap';
-import { Link, Spacer } from '../../../components/helpers';
+import { Link } from '../../../components/helpers';
 import { blockNameify } from '../../../../utils/blockNameify';
 import Heart from '../../../assets/icons/Heart';
+import Cup from '../../../assets/icons/Cup';
 
 import ga from '../../../analytics';
 import {
@@ -62,12 +63,12 @@ class DonateModal extends Component {
     }
     const blockDonationText = (
       <div className='block-modal-text'>
+        <div className='donation-icon-container'>
+          <Cup className='donation-icon' />
+        </div>
         <p className='text-center'>
           Nicely done. You just completed {blockNameify(block)}.
         </p>
-        <div className='heart-icon-container'>
-          <Heart className='heart-icon' />
-        </div>
         <p className='text-center'>
           Help us create even more learning resources like this.
         </p>
@@ -76,20 +77,19 @@ class DonateModal extends Component {
 
     const progressDonationText = (
       <div className='text-center progress-modal-text'>
-        <Spacer />
+        <div className='donation-icon-container'>
+          <Heart className='donation-icon' />
+        </div>
         <p>
           freeCodeCamp.org is a tiny nonprofit that's helping millions of people
           learn to code for free.
         </p>
-        <Spacer />
         <p>
           Join <strong>{activeDonors}</strong> supporters.
         </p>
-        <Spacer />
         <p>
           Your $15 / month donation will help keep tech education free and open.
         </p>
-        <Spacer />
       </div>
     );
 
