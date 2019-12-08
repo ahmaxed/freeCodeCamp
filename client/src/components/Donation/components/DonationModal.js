@@ -88,7 +88,7 @@ class DonateModal extends Component {
           Join <strong>{activeDonors}</strong> supporters.
         </p>
         <p>
-          Your $15 / month donation will help keep tech education free and open.
+          Your donation will help keep tech education free and open.
         </p>
       </div>
     );
