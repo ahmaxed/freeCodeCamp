@@ -53,7 +53,7 @@ function Cup(props) {
   );
 }
 
-GreenNotCompleted.displayName = 'GreenNotCompleted';
+Cup.displayName = 'Cup';
 GreenNotCompleted.propTypes = propTypes;
 
 export default GreenNotCompleted;
