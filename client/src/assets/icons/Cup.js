@@ -56,4 +56,4 @@ function Cup(props) {
 Cup.displayName = 'Cup';
 Cup.propTypes = propTypes;
 
-export default GreenNotCompleted;
+export default Cup;
