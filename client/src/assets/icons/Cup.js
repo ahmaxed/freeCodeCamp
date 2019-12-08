@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 
 const propTypes = {};
 
-function GreenNotCompleted(props) {
+function Cup(props) {
   return (
     <Fragment>
       <span className='sr-only'>Gold Cup</span>
