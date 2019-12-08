@@ -74,9 +74,8 @@ export class DonatePage extends Component {
   }
 
   render() {
-    const { stripe } = this.state;
+    const { stripe, enableSettings } = this.state;
     const { showLoading, isDonating } = this.props;
-    const { enableSettings } = this.state;
 
     if (showLoading) {
       return <Loader fullScreen={true} />;

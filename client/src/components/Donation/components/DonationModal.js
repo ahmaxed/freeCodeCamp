@@ -4,11 +4,14 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { Modal, Button } from '@freecodecamp/react-bootstrap';
-import { Link } from '../../../components/helpers';
+import { Modal, Button, Col, Row } from '@freecodecamp/react-bootstrap';
+import { Spacer } from '../../../components/helpers';
 import { blockNameify } from '../../../../utils/blockNameify';
 import Heart from '../../../assets/icons/Heart';
 import Cup from '../../../assets/icons/Cup';
+import DonateForm from './DonateForm';
+import { stripeScriptLoader } from '../../../utils/scriptLoaders';
+import { stripePublicKey } from '../../../../config/env.json';
 
 import ga from '../../../analytics';
 import {
@@ -52,12 +55,56 @@ const propTypes = {
 };
 
 class DonateModal extends Component {
-  state = {
-    isBlockDonation: this.props.isBlockDonation
-  };
+  constructor(...props) {
+    super(...props);
+    this.state = {
+      isBlockDonation: this.props.isBlockDonation,
+      stripe: null,
+      enableSettings: false
+    };
+    this.enableDonationSettingsPage = this.enableDonationSettingsPage.bind(
+      this
+    );
+    this.handleStripeLoad = this.handleStripeLoad.bind(this);
+  }
+
+  componentDidMount() {
+    if (window.Stripe) {
+      this.handleStripeLoad();
+    } else if (document.querySelector('#stripe-js')) {
+      document
+        .querySelector('#stripe-js')
+        .addEventListener('load', this.handleStripeLoad);
+    } else {
+      stripeScriptLoader(this.handleStripeLoad);
+    }
+  }
+
+  componentWillUnmount() {
+    const stripeMountPoint = document.querySelector('#stripe-js');
+    if (stripeMountPoint) {
+      stripeMountPoint.removeEventListener('load', this.handleStripeLoad);
+    }
+  }
+
+  handleStripeLoad() {
+    // Create Stripe instance once Stripe.js loads
+    if (stripePublicKey) {
+      this.setState(state => ({
+        ...state,
+        stripe: window.Stripe(stripePublicKey)
+      }));
+    }
+  }
+
+  enableDonationSettingsPage(enableSettings = true) {
+    this.setState({ enableSettings });
+  }
+
   render() {
     const { show, block, activeDonors } = this.props;
-    const { isBlockDonation } = this.state;
+    const { isBlockDonation, stripe } = this.state;
+
     if (show) {
       ga.modalview('/donation-modal');
     }
@@ -87,14 +134,17 @@ class DonateModal extends Component {
         <p>
           Join <strong>{activeDonors}</strong> supporters.
         </p>
-        <p>
-          Your donation will help keep tech education free and open.
-        </p>
+        <p>Your donation will help keep tech education free and open.</p>
       </div>
     );
 
     return (
-      <Modal bsSize='lg' className='donation-modal' show={show}>
+      <Modal
+        bsSize='lg'
+        className='donation-modal'
+        id='donation-modal'
+        show={show}
+      >
         <Modal.Header className='fcc-modal'>
           <Modal.Title className='modal-title text-center'>
             <strong>Support freeCodeCamp.org</strong>
@@ -102,25 +152,25 @@ class DonateModal extends Component {
         </Modal.Header>
         <Modal.Body>
           {isBlockDonation ? blockDonationText : progressDonationText}
+          <DonateForm
+            enableDonationSettingsPage={this.enableDonationSettingsPage}
+            stripe={stripe}
+          />
+          <Spacer />
+          <Row>
+            <Col sm={10} smOffset={1} xs={12}>
+              <Button
+                block={true}
+                bsSize='sm'
+                bsStyle='primary'
+                onClick={this.props.closeDonationModal}
+              >
+                close
+              </Button>
+            </Col>
+          </Row>
+          <Spacer />
         </Modal.Body>
-        <Modal.Footer>
-          <Link
-            className='btn-invert btn btn-lg btn-primary btn-block btn-cta'
-            onClick={this.props.closeDonationModal}
-            to={`/donate`}
-          >
-            Support our nonprofit
-          </Link>
-          <Button
-            block={true}
-            bsSize='lg'
-            bsStyle='primary'
-            className='btn-invert'
-            onClick={this.props.closeDonationModal}
-          >
-            Ask me later
-          </Button>
-        </Modal.Footer>
       </Modal>
     );
   }
