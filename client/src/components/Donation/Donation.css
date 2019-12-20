@@ -222,7 +222,31 @@ li.disabled > a {
   outline-style: solid;
 }
 
+.paypal-payment-methods,
+.form-payment-methods {
+  height: 30px;
+  width: 300px;
+}
+
+.paypal-payment-methods {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.form-payments-wrapper {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 39px;
+}
+
 @media screen and (max-width: 991px) {
+  .form-payments-wrapper {
+    justify-content: flex-start;
+    margin-top: 15px;
+    height: auto;
+  }
   .donation-icon-container {
     margin: 30px;
   }
@@ -233,5 +257,13 @@ li.disabled > a {
   .donation-modal .modal-title {
     font-weight: 600;
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .paypal-payment-methods,
+  .form-payment-methods {
+    height: 20px;
+    width: 200px;
   }
 }

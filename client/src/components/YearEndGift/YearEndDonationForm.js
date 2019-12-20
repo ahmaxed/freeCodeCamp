@@ -266,16 +266,11 @@ class YearEndDonationForm extends Component {
         <Col sm={10} smOffset={1} xs={12}>
           <Image
             alt='payment options'
+            className='paypal-payment-methods'
             src={
               'https://cdn.freecodecamp.org' +
-              '/platform/universal/payment-methods-large.png'
+              '/platform/universal/paypal-payments.png'
             }
-            style={{
-              height: '30px',
-              marginBottom: '15px',
-              marginTop: '10px',
-              width: '260px'
-            }}
           />
           {this.renderPayPalDonations()}
           <Spacer />

@@ -9,8 +9,7 @@ import {
   ControlLabel,
   Form,
   FormControl,
-  FormGroup,
-  Image
+  FormGroup
 } from '@freecodecamp/react-bootstrap';
 import { injectStripe } from 'react-stripe-elements';
 
@@ -202,14 +201,6 @@ class DonateFormChildViewForHOC extends Component {
         <StripeCardForm
           getValidationState={this.getValidationState}
           theme={defaultTheme ? defaultTheme : theme}
-        />
-        <Image
-          alt='payment options'
-          src={
-            'https://cdn.freecodecamp.org' +
-            '/platform/universal/payment-methods-small.png'
-          }
-          style={{ height: '30px', marginBottom: '15px', width: '155px' }}
         />
         <Button
           block={true}
