@@ -6,9 +6,13 @@ export default function() {
       domain: process.env.COOKIE_DOMAIN || 'localhost'
     }
   });
+  // Note: paypal webhook goes through /internal
   return function csrf(req, res, next) {
-    const path = req.path.split('/')[1];
-    if (/(^api$|^unauthenticated$|^internal$|^p$)/.test(path)) {
+    const pathArr = req.path.split('/');
+    if (/(^api$|^unauthenticated$|^internal$|^p$)/.test(pathArr[1])) {
+      return next();
+    }
+    if (/(^donate$)/.test(pathArr[1]) && /(^update-paypal$)/.test(pathArr[2])) {
       return next();
     }
     return protection(req, res, next);

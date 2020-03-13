@@ -39,6 +39,30 @@ const donationSubscriptionConfig = {
   }
 };
 
+// Shared paypal configuration
+const paypalConfig = {
+  production: {
+    webhookId: '',
+    durationPlans: {
+      month: {
+        '500': {
+          planId: 'P-1L11422374370240ULZKX3PA'
+        }
+      }
+    }
+  },
+  development: {
+    webhookId: '8WC85638LR507660A',
+    durationPlans: {
+      month: {
+        '500': {
+          planId: 'P-6VP46874PR423771HLZDKFBA'
+        }
+      }
+    }
+  }
+};
+
 module.exports = {
   durationsConfig,
   amountsConfig,
@@ -47,5 +71,6 @@ module.exports = {
   durationKeysConfig,
   donationOneTimeConfig,
   donationSubscriptionConfig,
-  modalDefaultStateConfig
+  modalDefaultStateConfig,
+  paypalConfig
 };

@@ -38,6 +38,9 @@
     "endDate": {
       "type": "DateString"
     },
+    "status": {
+      "type": "string"
+    },
     "subscriptionId": {
       "type": "string",
       "required": true,
