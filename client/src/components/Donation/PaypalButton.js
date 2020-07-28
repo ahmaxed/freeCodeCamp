@@ -77,46 +77,48 @@ export class PaypalButton extends Component {
     const { duration, planId, amount } = this.state;
     const isSubscription = duration !== 'onetime';
     return (
-      <PayPalButtonScriptLoader
-        amount={amount}
-        clinetId={paypalClientId}
-        createOrder={(data, actions) => {
-          return actions.order.create({
-            purchase_units: [
-              {
-                amount: {
-                  currency_code: 'USD',
-                  value: (amount / 100).toString()
+      <div className='paypal-button-container'>
+        <PayPalButtonScriptLoader
+          amount={amount}
+          clinetId={paypalClientId}
+          createOrder={(data, actions) => {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    currency_code: 'USD',
+                    value: (amount / 100).toString()
+                  }
                 }
-              }
-            ]
-          });
-        }}
-        createSubscription={(data, actions) => {
-          return actions.subscription.create({
-            plan_id: planId
-          });
-        }}
-        isSubscription={isSubscription}
-        onApprove={data => {
-          this.handleApproval(data, isSubscription);
-        }}
-        onCancel={() => {
-          this.props.onDonationStateChange(
-            false,
-            false,
-            `Uh - oh. It looks like your transaction didn't go through. Could you please try again?`
-          );
-        }}
-        onError={() =>
-          this.props.onDonationStateChange(false, false, 'Please try again.')
-        }
-        plantId={planId}
-        style={{
-          tagline: false,
-          height: 43
-        }}
-      />
+              ]
+            });
+          }}
+          createSubscription={(data, actions) => {
+            return actions.subscription.create({
+              plan_id: planId
+            });
+          }}
+          isSubscription={isSubscription}
+          onApprove={data => {
+            this.handleApproval(data, isSubscription);
+          }}
+          onCancel={() => {
+            this.props.onDonationStateChange(
+              false,
+              false,
+              `Uh - oh. It looks like your transaction didn't go through. Could you please try again?`
+            );
+          }}
+          onError={() =>
+            this.props.onDonationStateChange(false, false, 'Please try again.')
+          }
+          plantId={planId}
+          style={{
+            tagline: false,
+            height: 43
+          }}
+        />
+      </div>
     );
   }
 }

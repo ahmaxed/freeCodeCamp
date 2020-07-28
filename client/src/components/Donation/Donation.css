@@ -236,6 +236,15 @@ li.disabled > a {
   font-size: 1rem;
 }
 
+.donation-modal .paypal-buttons {
+  width: 250px;
+}
+
+.donation-modal .paypal-button-container {
+  width: 296px;
+  margin: 0 auto;
+}
+
 .donation-icon-container {
   display: flex;
   flex-direction: column;
