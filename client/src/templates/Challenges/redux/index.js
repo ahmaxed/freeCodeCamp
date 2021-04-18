@@ -4,13 +4,7 @@ import { createTypes } from '../../../../utils/stateManagement';
 
 import { createPoly } from '../../../../../utils/polyvinyl';
 import { getLines } from '../../../../../utils/get-lines';
-import completionEpic from './completion-epic';
-import codeLockEpic from './code-lock-epic';
-import createQuestionEpic from './create-question-epic';
-import codeStorageEpic from './code-storage-epic';
 
-import { createExecuteChallengeSaga } from './execute-challenge-saga';
-import { createCurrentChallengeSaga } from './current-challenge-saga';
 import { challengeTypes } from '../../../../utils/challengeTypes';
 import { getTargetEditor } from '../utils/getTargetEditor';
 import { completedChallengesSelector } from '../../../redux';
@@ -92,18 +86,6 @@ export const types = createTypes(
   ],
   ns
 );
-
-export const epics = [
-  codeLockEpic,
-  completionEpic,
-  createQuestionEpic,
-  codeStorageEpic
-];
-
-export const sagas = [
-  ...createExecuteChallengeSaga(types),
-  ...createCurrentChallengeSaga(types)
-];
 
 // TODO: can createPoly handle editable region, rather than separating it?
 export const createFiles = createAction(types.createFiles, challengeFiles =>
