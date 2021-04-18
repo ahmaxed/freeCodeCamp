@@ -1,12 +1,12 @@
 /* eslint-disable-next-line  max-len */
 import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
 import { createStore as reduxCreateStore, applyMiddleware } from 'redux';
-
+import createSagaMiddleware from 'redux-saga';
 import { createEpicMiddleware } from 'redux-observable';
 
 import rootEpic from './rootEpic';
 import rootReducer from './rootReducer';
-
+import rootSaga from './rootSaga';
 import { isBrowser } from '../../utils';
 
 import envData from '../../../config/env.json';
@@ -15,6 +15,11 @@ const { environment } = envData;
 
 const clientSide = isBrowser();
 
+const sagaMiddleware = createSagaMiddleware({
+  context: {
+    document: clientSide ? document : {}
+  }
+});
 const epicMiddleware = createEpicMiddleware({
   dependencies: {
     window: clientSide ? window : {},
@@ -30,13 +35,17 @@ const composeEnhancers = composeWithDevTools({
 export const createStore = () => {
   let store;
   if (environment === 'production') {
-    store = reduxCreateStore(rootReducer, applyMiddleware(epicMiddleware));
+    store = reduxCreateStore(
+      rootReducer,
+      applyMiddleware(sagaMiddleware, epicMiddleware)
+    );
   } else {
     store = reduxCreateStore(
       rootReducer,
-      composeEnhancers(applyMiddleware(epicMiddleware))
+      composeEnhancers(applyMiddleware(sagaMiddleware, epicMiddleware))
     );
   }
+  sagaMiddleware.run(rootSaga);
   epicMiddleware.run(rootEpic);
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

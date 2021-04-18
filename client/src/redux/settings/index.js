@@ -1,8 +1,13 @@
 import { createAction, handleActions } from 'redux-actions';
 
 import { createTypes, createAsyncTypes } from '../../utils/createTypes';
+import { createDangerZoneSaga } from './danger-zone-saga';
+import { createSettingsSagas } from './settings-sagas';
+import { createUpdateMyEmailSaga } from './update-email-saga';
 
 // prettier-ignore
+import { createUpdateLegacyCertSaga } from
+'./update-legacy-certificate-saga';
 
 export const ns = 'settings';
 
@@ -35,6 +40,13 @@ export const types = createTypes(
   ],
   ns
 );
+
+export const sagas = [
+  ...createSettingsSagas(types),
+  ...createUpdateMyEmailSaga(types),
+  ...createDangerZoneSaga(types),
+  ...createUpdateLegacyCertSaga(types)
+];
 
 const checkForSuccessPayload = ({ type, payload }) =>
   type === 'success' ? payload : null;

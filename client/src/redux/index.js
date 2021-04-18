@@ -3,6 +3,14 @@ import { uniqBy } from 'lodash-es';
 import store from 'store';
 
 import { createTypes, createAsyncTypes } from '../utils/createTypes';
+import { createFetchUserSaga } from './fetch-user-saga';
+import { createAcceptTermsSaga } from './accept-terms-saga';
+import { createAppMountSaga } from './app-mount-saga';
+import { createReportUserSaga } from './report-user-saga';
+import { createShowCertSaga } from './show-cert-saga';
+import { createNightModeSaga } from './night-mode-saga';
+import { createDonationSaga } from './donation-saga';
+import { createGaSaga } from './ga-saga';
 
 import hardGoToEpic from './hard-go-to-epic';
 import failedUpdatesEpic from './failed-updates-epic';
@@ -11,6 +19,7 @@ import updateCompleteEpic from './update-complete-epic';
 import { types as settingsTypes } from './settings';
 import { types as challengeTypes } from '../templates/Challenges/redux/';
 // eslint-disable-next-line max-len
+import { CURRENT_CHALLENGE_KEY } from '../templates/Challenges/redux/current-challenge-saga';
 
 export const ns = 'app';
 
@@ -33,7 +42,7 @@ const initialState = {
   recentlyClaimedBlock: null,
   canRequestProgressDonation: true,
   completionCount: 0,
-  currentChallengeId: store.get(1),
+  currentChallengeId: store.get(CURRENT_CHALLENGE_KEY),
   showCert: {},
   showCertFetchState: {
     ...defaultFetchState
@@ -84,6 +93,17 @@ export const types = createTypes(
 );
 
 export const epics = [hardGoToEpic, failedUpdatesEpic, updateCompleteEpic];
+
+export const sagas = [
+  ...createAcceptTermsSaga(types),
+  ...createAppMountSaga(types),
+  ...createDonationSaga(types),
+  ...createGaSaga(types),
+  ...createFetchUserSaga(types),
+  ...createShowCertSaga(types),
+  ...createReportUserSaga(types),
+  ...createNightModeSaga({ ...types, ...settingsTypes })
+];
 
 export const appMount = createAction(types.appMount);
 

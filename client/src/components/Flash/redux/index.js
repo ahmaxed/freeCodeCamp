@@ -11,6 +11,8 @@ const initialState = {
 
 const types = createTypes(['createFlashMessage', 'removeFlashMessage'], ns);
 
+export const sagas = [];
+
 export const createFlashMessage = createAction(
   types.createFlashMessage,
   msg => ({ id: nanoid(), ...msg })
