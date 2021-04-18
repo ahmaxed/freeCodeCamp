@@ -1,4 +1,4 @@
-const _ = require('lodash');
+const flatten = require('lodash/flatten');
 
 const {
   getChallengesForLang,
@@ -25,7 +25,7 @@ exports.buildChallenges = async function buildChallenges() {
     .map(superBlock => curriculum[superBlock].blocks)
     .reduce((blocks, superBlock) => {
       const currentBlocks = Object.keys(superBlock).map(key => superBlock[key]);
-      return blocks.concat(_.flatten(currentBlocks));
+      return blocks.concat(flatten(currentBlocks));
     }, []);
 
   const builtChallenges = blocks
