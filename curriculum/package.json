@@ -57,7 +57,7 @@
     "rehype": "^11.0.0",
     "rework-visit": "^1.0.0",
     "string-similarity": "^4.0.2",
-    "unist-util-visit": "^2.0.3",
+    "unist-util-visit": "^3.0.0",
     "vfile": "^4.2.0"
   }
 }
