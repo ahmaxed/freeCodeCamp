@@ -58,6 +58,6 @@
     "rework-visit": "^1.0.0",
     "string-similarity": "^4.0.2",
     "unist-util-visit": "^2.0.3",
-    "vfile": "^4.2.0"
+    "vfile": "^5.0.1"
   }
 }
