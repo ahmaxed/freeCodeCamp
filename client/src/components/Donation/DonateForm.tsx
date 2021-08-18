@@ -33,6 +33,7 @@ import DonateCompletion from './DonateCompletion';
 
 import type { AddDonationData } from './PaypalButton';
 import PaypalButton from './PaypalButton';
+import CardFrom from './card-form';
 import WalletsWrapper from './walletsButton';
 
 import './Donation.css';
@@ -294,6 +295,8 @@ class DonateForm extends Component<DonateFormProps, DonateFromComponentState> {
       { usd: donationAmount / 100 }
     )}:`;
 
+    console.log(isMinimalForm);
+
     return (
       <>
         <b className={isMinimalForm ? 'donation-label-modal' : ''}>
@@ -317,10 +320,13 @@ class DonateForm extends Component<DonateFormProps, DonateFromComponentState> {
             donationDuration={donationDuration}
             handlePaymentButtonLoad={this.handlePaymentButtonLoad}
             handleProcessing={handleProcessing}
+            isMinimalForm={isMinimalForm}
             isPaypalLoading={paypal}
             onDonationStateChange={this.onDonationStateChange}
             theme={defaultTheme ? defaultTheme : theme}
           />
+          {isMinimalForm && <div className='separator'>Or pay with card</div>}
+          {isMinimalForm && <CardFrom />}
         </div>
       </>
     );
