@@ -1,11 +1,7 @@
 describe('Donate page', () => {
-  before(() => {
-    cy.clearCookies();
+  it('Donation ', () => {
     cy.exec('npm run seed');
     cy.login();
-  });
-
-  it('Donation ', () => {
     cy.visit('/donate');
     cy.wait(10000);
     cy.get('.donation-elements').within(() => {
