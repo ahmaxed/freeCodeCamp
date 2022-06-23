@@ -208,7 +208,4 @@ client/static/mobile
 client/static/curriculum-data
 
 ### UI Components ###
-tools/ui-components/dist/*
-
-### act secrets
-my.secrets
+tools/ui-components/dist
