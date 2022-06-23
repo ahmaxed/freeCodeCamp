@@ -30,7 +30,7 @@ Cypress.on('uncaught:exception', err => {
     err.name === 'ChunkLoadError' ||
     // paypal sdk error
     (err.name === 'TypeError' &&
-      err.message.includes('i.removeEventListener is not a function'))
+      err.message.includes('removeEventListener is not a function'))
   ) {
     return false;
   }
