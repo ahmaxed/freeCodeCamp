@@ -43,7 +43,9 @@ jobs:
           cache: 'npm'
 
       - name: Set freeCodeCamp Environment Variables
-        run: sed '/STRIPE/d; /PAYPAL/d;' sample.env > .env
+        run: |
+          sed '/STRIPE/d; /PAYPAL/d;' sample.env > .env
+          echo 'STRIPE_PUBLIC_KEY=${{ secrets.STRIPE_PUBLIC_KEY }}' >> .env
 
       - name: Install and Build
         env:
