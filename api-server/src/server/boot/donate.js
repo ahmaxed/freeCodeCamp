@@ -211,6 +211,8 @@ export default function donateBoot(app, done) {
   const stripeInvalid = stripeSecretInvalid || stripPublicInvalid;
   const paypalInvalid = paypalPublicInvalid || paypalSecretInvalid;
 
+  console.log(`PUBLIC STRIPE KEYS: ${keys.stripe.public}`);
+
   if (stripeInvalid || paypalInvalid) {
     if (process.env.FREECODECAMP_NODE_ENV === 'production') {
       throw new Error('Donation API keys are required to boot the server!');
