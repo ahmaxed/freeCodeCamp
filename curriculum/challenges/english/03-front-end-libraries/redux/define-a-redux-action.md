@@ -3,7 +3,6 @@ id: 5a24c314108439a4d403614d
 title: Define a Redux Action
 challengeType: 6
 forumTopicId: 301440
-dashedName: define-a-redux-action
 ---
 
 # --description--
@@ -18,7 +17,7 @@ Writing a Redux action is as simple as declaring an object with a type property.
 
 # --hints--
 
-An `action` object should exist.
+An action object should exist.
 
 ```js
 assert(
@@ -28,7 +27,7 @@ assert(
 );
 ```
 
-The `action` object should have a key property `type` with value `LOGIN`.
+The action should have a key property type with value `LOGIN`.
 
 ```js
 assert(

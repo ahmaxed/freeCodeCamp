@@ -3,7 +3,6 @@ id: 5a23c84252665b21eecc7edc
 title: Last Friday of each month
 challengeType: 5
 forumTopicId: 302299
-dashedName: last-friday-of-each-month
 ---
 
 # --description--

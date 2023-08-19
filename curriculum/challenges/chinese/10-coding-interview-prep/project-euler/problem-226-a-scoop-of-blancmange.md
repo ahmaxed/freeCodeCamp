@@ -1,44 +1,27 @@
 ---
 id: 5900f4511000cf542c50ff62
-title: 'Problem 226: A Scoop of Blancmange'
+title: 问题226：Blancmange的一个独家新闻
 challengeType: 5
-forumTopicId: 301869
-dashedName: problem-226-a-scoop-of-blancmange
+videoUrl: ''
 ---
 
 # --description--
 
-The blancmange curve is the set of points (x,y) such that 0 ≤ x ≤ 1 and ,where s(x) = the distance from x to the nearest integer.
+blancmange曲线是点（x，y）的集合，使得0≤x≤1，并且其中s（x）=从x到最接近的整数的距离。
 
-The area under the blancmange curve is equal to ½, shown in pink in the diagram below.
+blancmange曲线下面积等于½，如下图所示为粉红色。
 
-Let C be the circle with centre (¼,½) and radius ¼, shown in black in the diagram.
+设C为中心（¼，½）和半径¼的圆，在图中以黑色显示。
 
-What area under the blancmange curve is enclosed by C?Give your answer rounded to eight decimal places in the form 0.abcdefgh
+blancmange曲线下面的哪个区域被C包围？将你的答案四舍五入到小数点后八位的形式为0.abcdefgh
 
 # --hints--
 
-`euler226()` should return 0.11316017.
+`euler226()`应该返回0.11316017。
 
 ```js
 assert.strictEqual(euler226(), 0.11316017);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler226() {
-
-  return true;
-}
-
-euler226();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

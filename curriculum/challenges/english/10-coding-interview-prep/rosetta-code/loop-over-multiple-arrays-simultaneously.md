@@ -3,7 +3,6 @@ id: 5e6dd15004c88cf00d2a78b3
 title: Loop over multiple arrays simultaneously
 challengeType: 5
 forumTopicId: 385279
-dashedName: loop-over-multiple-arrays-simultaneously
 ---
 
 # --description--
@@ -12,15 +11,11 @@ Loop over multiple arrays and create a new array whose $i^{th}$ element is the c
 
 For this example, if you are given this array of arrays:
 
-```js
-[ ["a", "b", "c"], ["A", "B", "C"], [1, 2, 3] ]
-```
+`[ ["a", "b", "c"], ["A", "B", "C"], [1, 2, 3] ]`
 
 the output should be:
 
-```js
-["aA1","bB2","cC3"]
-```
+`["aA1","bB2","cC3"]`
 
 # --instructions--
 

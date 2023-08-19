@@ -3,7 +3,6 @@ id: 587d7b83367417b2b2512b37
 title: Understanding the Differences between the freeCodeCamp and Browser Console
 challengeType: 1
 forumTopicId: 301193
-dashedName: understanding-the-differences-between-the-freecodecamp-and-browser-console
 ---
 
 # --description--
@@ -20,7 +19,7 @@ The freeCodeCamp console is cleared before the tests are run and, to avoid spam,
 
 If you would like to see every log for every test, run the tests, and open the browser console. If you prefer to use the browser console, and want it to mimic the freeCodeCamp console, place `console.clear()` before any other `console` calls, to clear the browser console.
 
-**Note:** `console.log`s inside functions are printed to the freeCodeCamp console whenever those functions are called. This can help debugging functions that are called during testing.
+**Note:** `console.log`s inside functions are printed to the freeCodeCamp console whenever those functions are called, this can help debugging functions that are called during testing.
 
 # --instructions--
 
@@ -33,7 +32,7 @@ You should use `console.clear()` to clear the browser console.
 ```js
 assert(
   __helpers
-    .removeWhiteSpace(code)
+    .removeWhiteSpace(__helpers.removeJSComments(code))
     .match(/console.clear\(\)/)
 );
 ```

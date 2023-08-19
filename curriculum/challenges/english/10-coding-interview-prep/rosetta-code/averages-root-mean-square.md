@@ -3,7 +3,6 @@ id: 594da033de4190850b893874
 title: Averages/Root mean square
 challengeType: 5
 forumTopicId: 302228
-dashedName: averagesroot-mean-square
 ---
 
 # --description--

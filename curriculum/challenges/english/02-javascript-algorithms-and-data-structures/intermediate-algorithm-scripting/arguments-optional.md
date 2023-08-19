@@ -3,7 +3,6 @@ id: a97fd23d9b809dac9921074f
 title: Arguments Optional
 challengeType: 5
 forumTopicId: 14271
-dashedName: arguments-optional
 ---
 
 # --description--
@@ -14,9 +13,7 @@ For example, `addTogether(2, 3)` should return `5`, and `addTogether(2)` should 
 
 Calling this returned function with a single argument will then return the sum:
 
-```js
-var sumTwoAnd = addTogether(2);
-```
+`var sumTwoAnd = addTogether(2);`
 
 `sumTwoAnd(3)` returns `5`.
 
@@ -42,19 +39,19 @@ assert.deepEqual(addTogether(23, 30), 53);
 assert.deepEqual(addTogether(5)(7), 12);
 ```
 
-`addTogether("http://bit.ly/IqT6zt")` should return `undefined`.
+`addTogether("http://bit.ly/IqT6zt")` should return undefined.
 
 ```js
 assert.isUndefined(addTogether('http://bit.ly/IqT6zt'));
 ```
 
-`addTogether(2, "3")` should return `undefined`.
+`addTogether(2, "3")` should return undefined.
 
 ```js
 assert.isUndefined(addTogether(2, '3'));
 ```
 
-`addTogether(2)([3])` should return `undefined`.
+`addTogether(2)([3])` should return undefined.
 
 ```js
 assert.isUndefined(addTogether(2)([3]));

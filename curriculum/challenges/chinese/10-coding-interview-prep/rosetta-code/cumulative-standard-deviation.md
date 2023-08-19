@@ -3,12 +3,11 @@ id: 5a23c84252665b21eecc7e03
 title: Cumulative standard deviation
 challengeType: 5
 forumTopicId: 302240
-dashedName: cumulative-standard-deviation
 ---
 
 # --description--
 
-Write a function that takes an array of numbers as parameter and returns the [standard deviation](https://en.wikipedia.org/wiki/Standard Deviation) of the series.
+Write a function that takes an array of numbers as parameter and returns the [standard deviation](<https://en.wikipedia.org/wiki/Standard Deviation>) of the series.
 
 # --hints--
 

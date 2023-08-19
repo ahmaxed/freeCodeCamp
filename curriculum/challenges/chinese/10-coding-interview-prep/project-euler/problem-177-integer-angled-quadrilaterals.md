@@ -1,40 +1,23 @@
 ---
 id: 5900f41e1000cf542c50ff30
-title: 'Problem 177: Integer angled Quadrilaterals'
+title: 问题177：整数角四边形
 challengeType: 5
-forumTopicId: 301812
-dashedName: problem-177-integer-angled-quadrilaterals
+videoUrl: ''
 ---
 
 # --description--
 
-Let ABCD be a convex quadrilateral, with diagonals AC and BD. At each vertex the diagonal makes an angle with each of the two sides, creating eight corner angles.
+设ABCD为凸四边形，对角线为AC和BD。在每个顶点处，对角线与两侧中的每一侧形成一个角度，从而产生八个角度角。
 
-For example, at vertex A, the two angles are CAD, CAB. We call such a quadrilateral for which all eight corner angles have integer values when measured in degrees an "integer angled quadrilateral". An example of an integer angled quadrilateral is a square, where all eight corner angles are 45°. Another example is given by DAC = 20°, BAC = 60°, ABD = 50°, CBD = 30°, BCA = 40°, DCA = 30°, CDB = 80°, ADB = 50°. What is the total number of non-similar integer angled quadrilaterals? Note: In your calculations you may assume that a calculated angle is integral if it is within a tolerance of 10-9 of an integer value.
+例如，在顶点A处，两个角度是CAD，CAB。我们称之为四边形，当以“整角四边形”度数度量时，所有八个角度角都具有整数值。整数角度四边形的示例是正方形，其中所有八个角度角都是45°。另一个例子是DAC = 20°，BAC = 60°，ABD = 50°，CBD = 30°，BCA = 40°，DCA = 30°，CDB = 80°，ADB = 50°。非相似整数角度四边形的总数是多少？注意：在计算中，如果计算出的角度在整数值的10-9范围内，则可以假定计算出的角度是整数。
 
 # --hints--
 
-`euler177()` should return 129325.
+`euler177()`应返回129325。
 
 ```js
 assert.strictEqual(euler177(), 129325);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler177() {
-
-  return true;
-}
-
-euler177();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

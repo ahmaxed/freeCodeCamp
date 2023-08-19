@@ -3,7 +3,6 @@ id: 594810f028c0303b75339acc
 title: ABC Problem
 challengeType: 5
 forumTopicId: 302220
-dashedName: abc-problem
 ---
 
 # --description--

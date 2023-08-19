@@ -3,7 +3,6 @@ id: 5e6decd8ec8d7db960950d1c
 title: LU decomposition
 challengeType: 5
 forumTopicId: 385280
-dashedName: lu-decomposition
 ---
 
 # --description--

@@ -1,31 +1,27 @@
 ---
 id: 587d8247367417b2b2512c39
-title: >-
-  Mitigate the Risk of Cross Site Scripting (XSS) Attacks with helmet.xssFilter()
+title: 使用 helmet.xssFilter() 降低跨站点脚本（XSS）攻击的风险
 challengeType: 2
 forumTopicId: 301583
-dashedName: mitigate-the-risk-of-cross-site-scripting-xss-attacks-with-helmet-xssfilter
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-infosec) 的基础上进行开发。你也可以从 [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/) 上克隆。
 
-Cross-site scripting (XSS) is a frequent type of attack where malicious scripts are injected into vulnerable pages, with the purpose of stealing sensitive data like session cookies, or passwords.
+跨站脚本攻击（XSS）是一种比较常见的攻击手段，通过给页面注入恶意脚本来获取用户的 session cookie 和密码等信息。
 
-The basic rule to lower the risk of an XSS attack is simple: “Never trust user’s input”. As a developer you should always sanitize all the input coming from the outside. This includes data coming from forms, GET query urls, and even from POST bodies. Sanitizing means that you should find and encode the characters that may be dangerous e.g. &lt;, >.
+防止这类型的攻击也非常简单：“永远不要相信用户的输入”。作为一名开发人员，你一定要对所有外部的输入进行审查，其中包括来自表单、GET 请求的 URL、POST 请求主体的内容等。审核的意思是，你需要查找并给有潜在风险的字符进行编码，比如 &lt; 和 >
 
-Modern browsers can help mitigating the risk by adopting better software strategies. Often these are configurable via http headers.
+现代浏览器中已经存在有效的策略来应对这一类问题。通常是通过配置 HTTP 请求的 header 来实现。
 
-The X-XSS-Protection HTTP header is a basic protection. The browser detects a potential injected script using a heuristic filter. If the header is enabled, the browser changes the script code, neutralizing it. It still has limited support.
+HTTP header 的 X-XSS-Protection 字段就可以为我们提供最基本的保护。浏览器通过启发式过滤法则来检测有潜在风险的注入脚本，如果这个 header 字段被启用，浏览器就会改变脚本中存在风险的代码，从而使恶意代码不再生效。
 
-# --instructions--
-
-Use `helmet.xssFilter()` to sanitize input sent to your server.
+但是浏览器对这个功能的支持十分有限。
 
 # --hints--
 
-helmet.xssFilter() middleware should be mounted correctly
+应正确加载 helmet.xssFilter() 中间件
 
 ```js
 (getUserInput) =>
@@ -42,10 +38,3 @@ helmet.xssFilter() middleware should be mounted correctly
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

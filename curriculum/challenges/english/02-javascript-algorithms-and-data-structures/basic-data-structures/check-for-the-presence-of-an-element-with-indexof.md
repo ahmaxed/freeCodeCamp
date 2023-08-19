@@ -3,7 +3,6 @@ id: 587d7b7b367417b2b2512b14
 title: Check For The Presence of an Element With indexOf()
 challengeType: 1
 forumTopicId: 301154
-dashedName: check-for-the-presence-of-an-element-with-indexof
 ---
 
 # --description--
@@ -15,12 +14,10 @@ For example:
 ```js
 let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
 
-fruits.indexOf('dates');
-fruits.indexOf('oranges');
-fruits.indexOf('pears');
+fruits.indexOf('dates'); // returns -1
+fruits.indexOf('oranges'); // returns 2
+fruits.indexOf('pears'); // returns 1, the first index at which the element exists
 ```
-
-`indexOf('dates')` returns `-1`, `indexOf('oranges')` returns `2`, and `indexOf('pears')` returns `1` (the first index at which each element exists).
 
 # --instructions--
 

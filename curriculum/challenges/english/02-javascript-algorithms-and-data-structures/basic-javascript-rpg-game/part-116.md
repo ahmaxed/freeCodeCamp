@@ -2,7 +2,6 @@
 id: 5d80d67021b11cdaa3f6b167
 title: Part 116
 challengeType: 0
-dashedName: part-116
 ---
 
 # --description--

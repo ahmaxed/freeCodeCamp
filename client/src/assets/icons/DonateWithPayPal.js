@@ -1,15 +1,12 @@
 /* eslint-disable max-len */
 import React, { Fragment } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const propTypes = {};
 
 function DonateWithPayPal(props) {
-  const { t } = useTranslation();
-
   return (
     <Fragment>
-      <span className='sr-only'>{t('icons.donate')}</span>
+      <span className='sr-only'>Donate with PayPal</span>
       <svg
         height={31}
         version='1.1'
@@ -46,7 +43,7 @@ function DonateWithPayPal(props) {
             fontSize={25}
           >
             <tspan x='44.2924805' y={19}>
-              {t('icons.donate')}
+              Donate with PayPal
             </tspan>
           </text>
         </g>

@@ -3,7 +3,6 @@ id: 5900f5411000cf542c510052
 title: 'Problem 467: Superinteger'
 challengeType: 5
 forumTopicId: 302142
-dashedName: problem-467-superinteger
 ---
 
 # --description--

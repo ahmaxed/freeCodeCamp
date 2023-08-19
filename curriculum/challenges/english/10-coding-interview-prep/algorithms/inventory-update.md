@@ -3,7 +3,6 @@ id: a56138aff60341a09ed6c480
 title: Inventory Update
 challengeType: 5
 forumTopicId: 16019
-dashedName: inventory-update
 ---
 
 # --description--

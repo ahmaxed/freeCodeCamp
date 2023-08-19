@@ -1,50 +1,33 @@
 ---
 id: 5900f47f1000cf542c50ff91
-title: 'Problem 274: Divisibility Multipliers'
+title: 问题274：可分性乘数
 challengeType: 5
-forumTopicId: 301924
-dashedName: problem-274-divisibility-multipliers
+videoUrl: ''
 ---
 
 # --description--
 
-For each integer p > 1 coprime to 10 there is a positive divisibility multiplier m &lt; p which preserves divisibility by p for the following function on any positive integer, n:
+对于每个整数p> 1互质到10，有一个正的可分性乘数m &lt;p，它对任何正整数n的后续函数保持p的可除性。
 
-f(n) = (all but the last digit of n) + (the last digit of n) \* m
+f（n）=（除了n的最后一位以外的所有数字）+（n的最后一位）\* m
 
-That is, if m is the divisibility multiplier for p, then f(n) is divisible by p if and only if n is divisible by p.
+也就是说，如果m是p的可分数乘数，则当且仅当n可被p整除时，f（n）可被p整除。
 
-(When n is much larger than p, f(n) will be less than n and repeated application of f provides a multiplicative divisibility test for p.)
+（当n远大于p时，f（n）将小于n，并且f的重复应用为p提供乘法可除性测试。）
 
-For example, the divisibility multiplier for 113 is 34.
+例如，113的可分性乘数是34。
 
-f(76275) = 7627 + 5 *34 = 7797 : 76275 and 7797 are both divisible by 113f(12345) = 1234 + 5* 34 = 1404 : 12345 and 1404 are both not divisible by 113
+f（76275）= 7627 + 5 *34 = 7797：76275和7797都可以被113f（12345）= 1234 + 5* 34 = 1404：12345和1404整除都不能被113整除
 
-The sum of the divisibility multipliers for the primes that are coprime to 10 and less than 1000 is 39517. What is the sum of the divisibility multipliers for the primes that are coprime to 10 and less than 107?
+对于10和小于1000互质的素数的可除性乘数的总和是39517.对于10和小于107互质的素数的可除数乘数的总和是多少？
 
 # --hints--
 
-`euler274()` should return 1601912348822.
+`euler274()`应该返回1601912348822。
 
 ```js
 assert.strictEqual(euler274(), 1601912348822);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler274() {
-
-  return true;
-}
-
-euler274();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

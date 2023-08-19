@@ -1,15 +1,12 @@
 /* eslint-disable max-len */
 import React, { Fragment } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const propTypes = {};
 
 function Cup(props) {
-  const { t } = useTranslation();
-
   return (
     <Fragment>
-      <span className='sr-only'>{t('icons.gold-cup')}</span>
+      <span className='sr-only'>Gold Cup</span>
       <svg
         height={200}
         version='1.1'
@@ -18,7 +15,7 @@ function Cup(props) {
         xmlns='http://www.w3.org/2000/svg'
         {...props}
       >
-        <title>{t('icons.gold-cup')}</title>
+        <title>Gold Cup</title>
         <g fill='none' fillRule='evenodd'>
           <g transform='translate(-14)'>
             <g transform='translate(20)'>

@@ -1,50 +1,33 @@
 ---
 id: 5900f5431000cf542c510055
-title: 'Problem 470: Super Ramvok'
+title: 问题470：超级拉姆沃克
 challengeType: 5
-forumTopicId: 302146
-dashedName: problem-470-super-ramvok
+videoUrl: ''
 ---
 
 # --description--
 
-Consider a single game of Ramvok:
+考虑一下Ramvok的单一游戏：
 
-Let t represent the maximum number of turns the game lasts. If t = 0, then the game ends immediately. Otherwise, on each turn i, the player rolls a die. After rolling, if i &lt; t the player can either stop the game and receive a prize equal to the value of the current roll, or discard the roll and try again next turn. If i = t, then the roll cannot be discarded and the prize must be accepted. Before the game begins, t is chosen by the player, who must then pay an up-front cost ct for some constant c. For c = 0, t can be chosen to be infinite (with an up-front cost of 0). Let R(d, c) be the expected profit (i.e. net gain) that the player receives from a single game of optimally-played Ramvok, given a fair d-sided die and cost constant c. For example, R(4, 0.2) = 2.65. Assume that the player has sufficient funds for paying any/all up-front costs.
+设t表示游戏持续的最大转弯次数。如果t = 0，则游戏立即结束。否则，在每个回合i，玩家掷骰子。在滚动之后，如果玩家可以停止游戏并获得等于当前滚动值的奖励，或者丢弃滚动并在下一轮再试一次。如果i = t，则不能丢弃卷筒并且必须接受奖品。在比赛开始之前，t由玩家选择，然后玩家必须为某些常数c支付前期成本ct。对于c = 0，可以选择t为无穷大（前期成本为0）。设R（d，c）是玩家从单次最佳玩法Ramvok游戏中获得的预期利润（即净收益），给定公平的d-die模具和成本常数c。例如，R（4,0.2）= 2.65。假设玩家有足够的资金支付任何/所有前期费用。
 
-Now consider a game of Super Ramvok:
+现在考虑一个超级拉姆沃克游戏：
 
-In Super Ramvok, the game of Ramvok is played repeatedly, but with a slight modification. After each game, the die is altered. The alteration process is as follows: The die is rolled once, and if the resulting face has its pips visible, then that face is altered to be blank instead. If the face is already blank, then it is changed back to its original value. After the alteration is made, another game of Ramvok can begin (and during such a game, at each turn, the die is rolled until a face with a value on it appears). The player knows which faces are blank and which are not at all times. The game of Super Ramvok ends once all faces of the die are blank.
+在超级拉姆沃克，拉姆沃克的比赛是反复播放，但略有修改。每场比赛后，骰子都会被改变。改变过程如下：模具滚动一次，如果得到的面部有可见的点，则该面被改为空白。如果面部已经是空白，则会将其更改回原始值。在进行改变之后，可以开始另一场Ramvok游戏（并且在这样的游戏中，在每个回合中，掷骰子被滚动直到出现具有其值的面部）。玩家知道哪些面是空白的，哪些面不是。一旦模具的所有面都空白，超级拉姆沃克的游戏结束。
 
-Let S(d, c) be the expected profit that the player receives from an optimally-played game of Super Ramvok, given a fair d-sided die to start (with all sides visible), and cost constant c. For example, S(6, 1) = 208.3.
+设S（d，c）是玩家从Super Ramvok最佳玩游戏中获得的预期利润，给出一个公平的d-side模具开始（所有边都可见），并且成本常数c。例如，S（6,1）= 208.3。
 
-Let F(n) = ∑4≤d≤n ∑0≤c≤n S(d, c).
+设F（n）=Σ4≤d≤nΣ0≤c≤nS（d，c）。
 
-Calculate F(20), rounded to the nearest integer.
+计算F（20），四舍五入到最接近的整数。
 
 # --hints--
 
-`euler470()` should return 147668794.
+`euler470()`应该返回147668794。
 
 ```js
 assert.strictEqual(euler470(), 147668794);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler470() {
-
-  return true;
-}
-
-euler470();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -4,7 +4,6 @@ title: Style Multiple Elements with a CSS Class
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cRkVbsQ'
 forumTopicId: 18311
-dashedName: style-multiple-elements-with-a-css-class
 ---
 
 # --description--

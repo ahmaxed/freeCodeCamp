@@ -3,7 +3,6 @@ id: 587d7fb2367417b2b2512bf5
 title: Get Route Parameter Input from the Client
 challengeType: 2
 forumTopicId: 301513
-dashedName: get-route-parameter-input-from-the-client
 ---
 
 # --description--
@@ -53,6 +52,8 @@ Test 2 : Your echo server should repeat words correctly
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

@@ -3,7 +3,6 @@ id: 5cc0bd7a49b71cb96132e54c
 title: Use Recursion to Create a Range of Numbers
 challengeType: 1
 forumTopicId: 301180
-dashedName: use-recursion-to-create-a-range-of-numbers
 ---
 
 # --description--
@@ -26,7 +25,9 @@ Your code should not use any loop syntax (`for` or `while` or higher order funct
 
 ```js
 assert(
-  !code.match(/for|while|forEach|map|filter|reduce/g)
+  !__helpers
+    .removeJSComments(code)
+    .match(/for|while|forEach|map|filter|reduce/g)
 );
 ```
 
@@ -34,7 +35,9 @@ assert(
 
 ```js
 assert(
-  rangeOfNumbers.toString().match(/rangeOfNumbers\s*\(.+\)/)
+  __helpers
+    .removeJSComments(rangeOfNumbers.toString())
+    .match(/rangeOfNumbers\s*\(.+\)/)
 );
 ```
 

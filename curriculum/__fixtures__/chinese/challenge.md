@@ -2,7 +2,7 @@
 id: bd7123c8c441eddfaeb5bdef
 title: 向HTML Elements说你好
 challengeType: 0
-videoUrl: 'https://scrimba.com/p/pVMPUv/cE8Gpt2'
+videoUrl: ''
 forumTopicId: 18276
 ---
 
@@ -35,12 +35,7 @@ tests:
 
 ```html
 <h1>Hello</h1>
-<!-- Add your code below this line -->
-<!-- Add your code above this line -->
-<style>
-  /* change code below this line */
-  /* change code above this line */
-</style>
+
 ```
 
 </div>
@@ -52,7 +47,7 @@ tests:
 ## Solution
 <section id='solution'>
 
-```html
-<h1>Hello World</h1>
+```js
+// solution required
 ```
 </section>

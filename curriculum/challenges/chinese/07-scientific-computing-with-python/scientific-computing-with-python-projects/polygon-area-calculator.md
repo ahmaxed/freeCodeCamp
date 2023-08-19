@@ -1,15 +1,13 @@
 ---
 id: 5e444147903586ffb414c94f
-title: Polygon Area Calculator
 challengeType: 10
-dashedName: polygon-area-calculator
 ---
 
 # --description--
 
 In this project you will use object oriented programming to create a Rectangle class and a Square class. The Square class should be a subclass of Rectangle and inherit methods and attributes.
 
-You can access [the full project description and starter code on Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-polygon-area-calculator).
+You can access [the full project description and starter code on repl.it](https://repl.it/@freeCodeCamp/fcc-shape-calculator).
 
 After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
 
@@ -22,7 +20,7 @@ We are still developing the interactive instructional part of the Python curricu
   <li>
     <a href='https://www.freecodecamp.org/news/learn-python-basics-in-depth-video-course/'>Learn Python Video Course</a> (2 hours)
   </li>
-</ul>
+<ul>
 
 # --hints--
 
@@ -34,10 +32,3 @@ It should create a Rectangle class and Square class and pass all tests.
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions,
-  because they would need to be tested against a full working project.
-  Please check our contributing guidelines to learn more.
-*/
-```

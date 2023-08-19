@@ -1,42 +1,25 @@
 ---
 id: 5900f4c81000cf542c50ffdb
-title: 'Problem 348: Sum of a square and a cube'
+title: 问题348：正方形和立方体的总和
 challengeType: 5
-forumTopicId: 302007
-dashedName: problem-348-sum-of-a-square-and-a-cube
+videoUrl: ''
 ---
 
 # --description--
 
-Many numbers can be expressed as the sum of a square and a cube. Some of them in more than one way.
+许多数字可以表示为正方形和立方体的总和。其中一些不止一种。
 
-Consider the palindromic numbers that can be expressed as the sum of a square and a cube, both greater than 1, in exactly 4 different ways. For example, 5229225 is a palindromic number and it can be expressed in exactly 4 different ways: 22852 + 203 22232 + 663 18102 + 1253 11972 + 1563
+考虑可以用4种不同方式表示为正方形和立方体之和的回文数，均大于1。例如，5229225是一个回文数字，它可以用4种不同的方式表示：22852 + 203 22232 + 663 18102 + 1253 11972 + 1563
 
-Find the sum of the five smallest such palindromic numbers.
+找出五个最小的这种回文数的总和。
 
 # --hints--
 
-`euler348()` should return 1004195061.
+`euler348()`应返回1004195061。
 
 ```js
 assert.strictEqual(euler348(), 1004195061);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler348() {
-
-  return true;
-}
-
-euler348();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

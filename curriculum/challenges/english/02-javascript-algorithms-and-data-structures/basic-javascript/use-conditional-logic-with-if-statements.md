@@ -4,7 +4,6 @@ title: Use Conditional Logic with If Statements
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cy87mf3'
 forumTopicId: 18348
-dashedName: use-conditional-logic-with-if-statements
 ---
 
 # --description--
@@ -26,17 +25,15 @@ function test (myCondition) {
   }
   return "It was false";
 }
-test(true);
-test(false);
+test(true);  // returns "It was true"
+test(false); // returns "It was false"
 ```
 
-`test(true)` returns the string `It was true`, and `test(false)` returns the string `It was false`.
-
-When `test` is called with a value of `true`, the `if` statement evaluates `myCondition` to see if it is `true` or not. Since it is `true`, the function returns `It was true`. When we call `test` with a value of `false`, `myCondition` is *not* `true` and the statement in the curly braces is not executed and the function returns `It was false`.
+When `test` is called with a value of `true`, the `if` statement evaluates `myCondition` to see if it is `true` or not. Since it is `true`, the function returns `"It was true"`. When we call `test` with a value of `false`, `myCondition` is *not* `true` and the statement in the curly braces is not executed and the function returns `"It was false"`.
 
 # --instructions--
 
-Create an `if` statement inside the function to return `Yes, that was true` if the parameter `wasThatTrue` is `true` and return `No, that was false` otherwise.
+Create an `if` statement inside the function to return `"Yes, that was true"` if the parameter `wasThatTrue` is `true` and return `"No, that was false"` otherwise.
 
 # --hints--
 
@@ -58,13 +55,13 @@ assert(typeof trueOrFalse(true) === 'string');
 assert(typeof trueOrFalse(false) === 'string');
 ```
 
-`trueOrFalse(true)` should return the string `Yes, that was true`
+`trueOrFalse(true)` should return "Yes, that was true"
 
 ```js
 assert(trueOrFalse(true) === 'Yes, that was true');
 ```
 
-`trueOrFalse(false)` should return the string `No, that was false`
+`trueOrFalse(false)` should return "No, that was false"
 
 ```js
 assert(trueOrFalse(false) === 'No, that was false');

@@ -3,7 +3,6 @@ id: 587d7b89367417b2b2512b4b
 title: Use Destructuring Assignment to Assign Variables from Arrays
 challengeType: 1
 forumTopicId: 301213
-dashedName: use-destructuring-assignment-to-assign-variables-from-arrays
 ---
 
 # --description--
@@ -16,19 +15,15 @@ Destructuring an array lets us do exactly that:
 
 ```js
 const [a, b] = [1, 2, 3, 4, 5, 6];
-console.log(a, b);
+console.log(a, b); // 1, 2
 ```
-
-The console will display the values of `a` and `b` as `1, 2`.
 
 The variable `a` is assigned the first value of the array, and `b` is assigned the second value of the array. We can also access the value at any index in an array with destructuring by using commas to reach the desired index:
 
 ```js
 const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
-console.log(a, b, c);
+console.log(a, b, c); // 1, 2, 5
 ```
-
-The console will display the values of `a`, `b`, and `c` as `1, 2, 5`.
 
 # --instructions--
 
@@ -36,19 +31,19 @@ Use destructuring assignment to swap the values of `a` and `b` so that `a` recei
 
 # --hints--
 
-The value of `a` should be `6`, after swapping.
+Value of `a` should be 6, after swapping.
 
 ```js
 assert(a === 6);
 ```
 
-The value of `b` should be `8`, after swapping.
+Value of `b` should be 8, after swapping.
 
 ```js
 assert(b === 8);
 ```
 
-You should use array destructuring to swap `a` and `b`.
+You should use array destructuring to swap a and b.
 
 ```js
 assert(/\[\s*(\w)\s*,\s*(\w)\s*\]\s*=\s*\[\s*\2\s*,\s*\1\s*\]/g.test(code));

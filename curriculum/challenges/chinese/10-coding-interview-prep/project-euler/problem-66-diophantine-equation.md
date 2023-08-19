@@ -1,64 +1,21 @@
 ---
 id: 5900f3ae1000cf542c50fec1
-title: 'Problem 66: Diophantine equation'
+title: 问题66：丢番图方程
 challengeType: 5
-forumTopicId: 302178
-dashedName: problem-66-diophantine-equation
+videoUrl: ''
 ---
 
 # --description--
 
-Consider quadratic Diophantine equations of the form:
-
-<div style='text-align: center;'>x<sup>2</sup> – Dy<sup>2</sup> = 1</div>
-
-For example, when D=13, the minimal solution in x is 649<sup>2</sup> – 13×180<sup>2</sup> = 1.
-
-It can be assumed that there are no solutions in positive integers when D is square.
-
-By finding minimal solutions in x for D = {2, 3, 5, 6, 7}, we obtain the following:
-
-<div style='margin-left: 2em;'>
-  3<sup>2</sup> – 2×2<sup>2</sup> = 1<br>
-  2<sup>2</sup> – 3×1<sup>2</sup> = 1<br>
-  <strong><span style='color: red;'>9</span></strong><sup>2</sup> – 5×4<sup>2</sup> = 1<br>
-  5<sup>2</sup> – 6×2<sup>2</sup> = 1<br>
-  8<sup>2</sup> – 7×3<sup>2</sup> = 1<br>
-</div>
-
-Hence, by considering minimal solutions in `x` for D ≤ 7, the largest `x` is obtained when D=5.
-
-Find the value of D ≤ 1000 in minimal solutions of `x` for which the largest value of `x` is obtained.
+考虑形式的二次丢番图方程：x2 - Dy2 = 1例如，当D = 13时，x中的最小解是6492 - 13×1802 = 1.可以假设当D是正整数时没有解广场。通过在D中找到D = {2,3,5,6,7}的最小解，我们得到以下结果：32 - 2×22 = 1 22 - 3×12 = 192 - 5×42 = 1 52 - 6× 22 = 1 82 - 7×32 = 1因此，通过考虑D中对于D≤7的最小解，当D = 5时获得最大的x。在x的最小解中找到D≤1000的值，其中获得x的最大值。
 
 # --hints--
 
-`diophantineEquation()` should return a number.
+`euler66()`应返回661。
 
 ```js
-assert(typeof diophantineEquation() === 'number');
-```
-
-`diophantineEquation()` should return 661.
-
-```js
-assert.strictEqual(diophantineEquation(), 661);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function diophantineEquation() {
-
-  return true;
-}
-
-diophantineEquation();
+assert.strictEqual(euler66(), 661);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

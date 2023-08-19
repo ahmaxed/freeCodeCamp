@@ -3,7 +3,6 @@ id: 5900f3d21000cf542c50fee4
 title: 'Problem 101: Optimum polynomial'
 challengeType: 5
 forumTopicId: 301725
-dashedName: problem-101-optimum-polynomial
 ---
 
 # --description--

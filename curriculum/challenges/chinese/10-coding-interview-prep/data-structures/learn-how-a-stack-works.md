@@ -1,50 +1,39 @@
 ---
 id: 587d8250367417b2b2512c5e
-title: Learn how a Stack Works
+title: 了解堆栈的工作原理
 challengeType: 1
-forumTopicId: 301705
-dashedName: learn-how-a-stack-works
+videoUrl: ''
 ---
 
 # --description--
 
-You are probably familiar with stack of books on your table. You have likely used the undo feature of a text editor. You are also probably used to hitting the back button on your phone to go back to the previous view in your app.
-
-You know what they all have in common? They all store the data in a way so that you can traverse backwards.
-
-The topmost book in the stack was the one that was put there last. If you remove that book from your stack's top, you would expose the book that was put there before the last book and so on.
-
-If you think about it, in all the above examples, you are getting <dfn>Last-In-First-Out</dfn> type of service. We will try to mimic this with our code.
-
-This data storage scheme is called a <dfn>Stack</dfn>. In particular, we would have to implement the `push()` method that pushes JavaScript objects at the top of the stack; and `pop()` method, that removes the JavaScript object that's at the top of the stack at the current moment.
+你可能熟悉桌子上的一摞书。您可能已使用文本编辑器的撤消功能。您也可能习惯按手机上的后退按钮返回应用中的上一个视图。你知道他们都有什么共同之处吗？它们都以某种方式存储数据，以便您可以向后遍历。堆栈中最顶层的书是最后放在那里的书。如果您从堆栈的顶部删除该书，则会显示在最后一本书之前放置的书籍，依此类推。如果你考虑一下，在上面的所有例子中，你都会获得<dfn>Last-In-First-Out</dfn>服务。我们将尝试使用我们的代码来模仿它。该数据存储方案称为<dfn>堆栈</dfn> 。特别是，我们必须实现将JavaScript对象推送到堆栈顶部的`push()`方法;和`pop()`方法，它删除当前位于堆栈顶部的JavaScript对象。
 
 # --instructions--
 
-Here we have a stack of homework assignments represented as an array: `"BIO12"` is at the base, and `"PSY44"` is at the top of the stack.
-
-Modify the given array and treat it like a `stack` using the JavaScript methods mentioned above. Remove the top element `"PSY44"` from the stack. Then add `"CS50"` to be the new top element of the stack.
+这里我们有一堆作为数组表示的家庭作业： `"BIO12"`位于基础， `"PSY44"`位于堆栈的顶部。修改给定的数组，并使用上面提到的JavaScript方法将其视为`stack` 。从堆栈中删除顶部元素`"PSY44"` 。然后添加`"CS50"`作为堆栈的新顶部元素。
 
 # --hints--
 
-`homeworkStack` should only contain 4 elements.
+`homeworkStack`应该只包含4个元素。
 
 ```js
 assert(homeworkStack.length === 4);
 ```
 
-The last element in `homeworkStack` should be `"CS50"`.
+`homeworkStack`的最后一个元素应该是`"CS50"` 。
 
 ```js
 assert(homeworkStack[3] === 'CS50');
 ```
 
-`homeworkStack` should not contain `"PSY44"`.
+`homeworkStack`不应包含`"PSY44"` 。
 
 ```js
 assert(homeworkStack.indexOf('PSY44') === -1);
 ```
 
-The initial declaration of the `homeworkStack` should not be changed.
+不应更改`homeworkStack`的初始声明。
 
 ```js
 assert(
@@ -55,17 +44,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-var homeworkStack = ["BIO12","HIS80","MAT122","PSY44"];
-// Only change code below this line
-```
-
 # --solutions--
 
-```js
-// solution required
-```

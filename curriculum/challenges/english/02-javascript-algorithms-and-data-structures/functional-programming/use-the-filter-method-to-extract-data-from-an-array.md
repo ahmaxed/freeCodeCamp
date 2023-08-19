@@ -3,7 +3,6 @@ id: 587d7b8f367417b2b2512b63
 title: Use the filter Method to Extract Data from an Array
 challengeType: 1
 forumTopicId: 18179
-dashedName: use-the-filter-method-to-extract-data-from-an-array
 ---
 
 # --description--
@@ -24,14 +23,12 @@ const users = [
 ];
 
 const usersUnder30 = users.filter(user => user.age < 30);
-console.log(usersUnder30); 
+console.log(usersUnder30); // [ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ]
 ```
-
-The console would display the value `[ { name: 'Amy', age: 20 }, { name: 'camperCat', age: 10 } ]`.
 
 # --instructions--
 
-The variable `watchList` holds an array of objects with information on several movies. Use a combination of `filter` and `map` on `watchList` to assign a new array of objects with only `title` and `rating` keys. The new array should only include objects where `imdbRating` is greater than or equal to 8.0. Note that the `rating` values are saved as strings in the object and you may need to convert them into numbers to perform mathematical operations on them.
+The variable `watchList` holds an array of objects with information on several movies. Use a combination of `filter` and `map` on `watchList` to assign a new array of objects with only `title` and `rating` keys. The new array should only include objects where `imdbRating` is greater than or equal to 8.0. Note that the rating values are saved as strings in the object and you may need to convert them into numbers to perform mathematical operations on them.
 
 # --hints--
 
@@ -46,7 +43,7 @@ assert(
 Your code should use the `filter` method.
 
 ```js
-assert(code.match(/\s*\.\s*filter/g));
+assert(code.match(/\.filter/g));
 ```
 
 Your code should not use a `for` loop.
@@ -82,7 +79,7 @@ var watchList = [
     "Genre": "Action, Adventure, Crime",
     "Director": "Christopher Nolan",
     "Writer": "Christopher Nolan",
-    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
     "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
     "Language": "English, Japanese, French",
     "Country": "USA, UK",
@@ -208,7 +205,7 @@ var watchList = [
     "Genre": "Action, Adventure, Crime",
     "Director": "Christopher Nolan",
     "Writer": "Christopher Nolan",
-    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
     "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
     "Language": "English, Japanese, French",
     "Country": "USA, UK",

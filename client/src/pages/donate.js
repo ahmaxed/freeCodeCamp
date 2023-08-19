@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { Grid, Row, Col, Alert } from '@freecodecamp/react-bootstrap';
-import { withTranslation } from 'react-i18next';
 
 import { Spacer, Loader } from '../components/helpers';
 import DonateForm from '../components/Donation/DonateForm';
@@ -21,8 +20,7 @@ import CampersImage from '../components/landing/components/CampersImage';
 const propTypes = {
   executeGA: PropTypes.func,
   isDonating: PropTypes.bool,
-  showLoading: PropTypes.bool.isRequired,
-  t: PropTypes.func.isRequired
+  showLoading: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = createSelector(
@@ -42,7 +40,7 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-class DonatePage extends Component {
+export class DonatePage extends Component {
   constructor(...props) {
     super(...props);
     this.state = {
@@ -62,7 +60,7 @@ class DonatePage extends Component {
     });
   }
 
-  handleProcessing(duration, amount, action) {
+  handleProcessing(duration, amount, action = 'stripe button click') {
     this.props.executeGA({
       type: 'event',
       data: {
@@ -75,7 +73,7 @@ class DonatePage extends Component {
   }
 
   render() {
-    const { showLoading, isDonating, t } = this.props;
+    const { showLoading, isDonating } = this.props;
 
     if (showLoading) {
       return <Loader fullScreen={true} />;
@@ -83,7 +81,7 @@ class DonatePage extends Component {
 
     return (
       <Fragment>
-        <Helmet title={`${t('donate.title')} | freeCodeCamp.org`} />
+        <Helmet title='Support our nonprofit | freeCodeCamp.org' />
         <Grid className='donate-page-wrapper'>
           <Spacer />
           <Row>
@@ -92,16 +90,19 @@ class DonatePage extends Component {
                 <Row>
                   <Col className={'text-center'} xs={12}>
                     {isDonating ? (
-                      <h2>{t('donate.thank-you')}</h2>
+                      <h2>Thank you for your support</h2>
                     ) : (
-                      <h2>{t('donate.help-more')}</h2>
+                      <h2>Help us do more</h2>
                     )}
                     <Spacer />
                   </Col>
                 </Row>
                 {isDonating ? (
                   <Alert>
-                    <p>{t('donate.thank-you-2')}</p>
+                    <p>
+                      Thank you for being a supporter of freeCodeCamp. You
+                      currently have a recurring donation.
+                    </p>
                     <br />
                     <DonationOptionsAlertText />
                   </Alert>
@@ -137,4 +138,4 @@ DonatePage.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(DonatePage));
+)(DonatePage);

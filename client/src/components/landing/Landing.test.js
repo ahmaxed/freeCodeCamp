@@ -1,11 +1,9 @@
-/* global expect jest */
+/* global expect */
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 
-import IndexPage from '../../pages';
+import { IndexPage } from '../../pages';
 import mockChallengeNodes from '../../__mocks__/challenge-nodes';
-
-jest.mock('../../analytics');
 
 describe('<Landing />', () => {
   it('renders when visiting index page and logged out', () => {

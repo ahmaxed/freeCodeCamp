@@ -1,46 +1,29 @@
 ---
 id: 5900f4a71000cf542c50ffb9
-title: 'Problem 314: The Mouse on the Moon'
+title: 问题314：月球上的老鼠
 challengeType: 5
-forumTopicId: 301970
-dashedName: problem-314-the-mouse-on-the-moon
+videoUrl: ''
 ---
 
 # --description--
 
-The moon has been opened up, and land can be obtained for free, but there is a catch. You have to build a wall around the land that you stake out, and building a wall on the moon is expensive. Every country has been allotted a 500 m by 500 m square area, but they will possess only that area which they wall in. 251001 posts have been placed in a rectangular grid with 1 meter spacing. The wall must be a closed series of straight lines, each line running from post to post.
+月亮已经打开，可以免费获得土地，但是有一个陷阱。您必须在放样的土地周围建造一堵墙，在月球上建造一堵墙很昂贵。每个国家都被分配了500 m x 500 m平方的面积，但它们仅拥有其围墙所在的区域。 251001个帖子已放置在1米间隔的矩形网格中。墙必须是一系列闭合的直线，每条直线都在柱子之间延伸。
 
-The bigger countries of course have built a 2000 m wall enclosing the entire 250 000 m2 area. The Duchy of Grand Fenwick, has a tighter budget, and has asked you (their Royal Programmer) to compute what shape would get best maximum enclosed-area/wall-length ratio.
+当然，较大的国家/地区建造了2000 m的围墙，将整个250 000 m2的区域封闭起来。大芬维克公国（Duchy of Grand Fenwick）的预算较为紧张，并已要求您（他们的皇家程序员）计算出哪种形状会获得最佳的最大封闭面积/墙长比。
 
-You have done some preliminary calculations on a sheet of paper. For a 2000 meter wall enclosing the 250 000 m2 area the enclosed-area/wall-length ratio is 125. Although not allowed , but to get an idea if this is anything better: if you place a circle inside the square area touching the four sides the area will be equal to π*2502 m2 and the perimeter will be π*500 m, so the enclosed-area/wall-length ratio will also be 125.
+您已经在一张纸上进行了一些初步的计算。 对于封闭25万平方米的2000米墙， 封闭区域/墙长比为125。 尽管不允许，但要弄清楚是否更好：如果在正方形区域内放置一个圆圈，使其接触四边，则该区域将等于π*2502 m2，周长将为π* 500 m，因此封闭区域/墙长比也将为125。
 
-However, if you cut off from the square four triangles with sides 75 m, 75 m and 75√2 m the total area becomes 238750 m2 and the perimeter becomes 1400+300√2 m. So this gives an enclosed-area/wall-length ratio of 130.87, which is significantly better.
+但是，如果从正方形切下边长为75 m，75 m和75√2m的四个三角形，则总面积将变为238750 m2，周长将变为1400 +300√2m。因此，得出的封闭区域/壁长比为130.87，这要好得多。
 
-Find the maximum enclosed-area/wall-length ratio. Give your answer rounded to 8 places behind the decimal point in the form abc.defghijk.
+找到最大的封闭区域/墙长比。 以abc.defghijk的形式将答案四舍五入到小数点后8位。
 
 # --hints--
 
-`euler314()` should return 132.52756426.
+`euler314()`应该返回132.52756426。
 
 ```js
 assert.strictEqual(euler314(), 132.52756426);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler314() {
-
-  return true;
-}
-
-euler314();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

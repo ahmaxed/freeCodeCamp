@@ -1,46 +1,29 @@
 ---
 id: 5900f4a51000cf542c50ffb7
-title: 'Problem 312: Cyclic paths on Sierpiński graphs'
+title: 问题312：Sierpiński图上的循环路径
 challengeType: 5
-forumTopicId: 301968
-dashedName: problem-312-cyclic-paths-on-sierpiski-graphs
+videoUrl: ''
 ---
 
 # --description--
 
-\- A Sierpiński graph of order-1 (S1) is an equilateral triangle.
+\-1阶（S1）的Sierpiński图是等边三角形。
 
-\- Sn+1 is obtained from Sn by positioning three copies of Sn so that every pair of copies has one common corner.
+\-通过将Sn的三个副本放置在Sn上，从而使每对副本都有一个公共角，从而从Sn中获得Sn +1。
 
-Let C(n) be the number of cycles that pass exactly once through all the vertices of Sn. For example, C(3) = 8 because eight such cycles can be drawn on S3, as shown below:
+令C（n）为恰好一次通过Sn的所有顶点的循环数。 例如，C（3）= 8，因为可以在S3上绘制八个这样的循环，如下所示：
 
-It can also be verified that : C(1) = C(2) = 1 C(5) = 71328803586048 C(10 000) mod 108 = 37652224 C(10 000) mod 138 = 617720485
+也可以验证： C（1）= C（2）= 1 C（5）= 71328803586048 C（10,000）mod 108 = 37652224 C（10,000）模138 = 617720485
 
-Find C(C(C(10 000))) mod 138.
+求C（C（C（10,000））mod 138。
 
 # --hints--
 
-`euler312()` should return 324681947.
+`euler312()`应该返回324681947。
 
 ```js
 assert.strictEqual(euler312(), 324681947);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler312() {
-
-  return true;
-}
-
-euler312();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

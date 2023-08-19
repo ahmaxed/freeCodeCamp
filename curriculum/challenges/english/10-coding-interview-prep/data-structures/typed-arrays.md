@@ -3,16 +3,13 @@ id: 587d8253367417b2b2512c6a
 title: Typed Arrays
 challengeType: 1
 forumTopicId: 301716
-dashedName: typed-arrays
 ---
 
 # --description--
 
 Arrays are JavaScript objects that can hold a lot of different elements.
 
-```js
-var complexArr = [1, 5, "2", "Word", {"name": "James"}];
-```
+`var complexArr = [1, 5, "2", "Word", {"name": "James"}];`
 
 Basically what happens in the background is that your browser will automatically give the right amount of memory space for that array. It will also change as needed if you add or remove data.
 

@@ -1,7 +1,7 @@
 ---
 title: Introduction to the How Neural Networks Work Lectures
 block: How Neural Networks Work
-superBlock: Machine Learning with Python
+superBlock: Data Analysis with Python
 ---
 ## Introduction to the How Neural Networks Work Challenges
 

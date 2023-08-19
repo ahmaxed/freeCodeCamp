@@ -1,48 +1,31 @@
 ---
 id: 5900f4d21000cf542c50ffe5
-title: 'Problem 358: Cyclic numbers'
+title: 问题358：循环数
 challengeType: 5
-forumTopicId: 302018
-dashedName: problem-358-cyclic-numbers
+videoUrl: ''
 ---
 
 # --description--
 
-A cyclic number with n digits has a very interesting property:
+具有n位数字的循环数具有一个非常有趣的属性：
 
-When it is multiplied by 1, 2, 3, 4, ... n, all the products have exactly the same digits, in the same order, but rotated in a circular fashion!
+当乘以1、2、3、4，... n时，所有乘积都具有完全相同的数字，并且顺序相同，但是以循环方式旋转！
 
-The smallest cyclic number is the 6-digit number 142857 : 142857 × 1 = 142857 142857 × 2 = 285714 142857 × 3 = 428571 142857 × 4 = 571428 142857 × 5 = 714285 142857 × 6 = 857142
+最小的循环数是6位数字142857： 142857×1 = 142857 142857×2 = 285714 142857×3 = 428571 142857×4 = 571428 142857×5 = 714285 142857×6 = 857142
 
-The next cyclic number is 0588235294117647 with 16 digits : 0588235294117647 × 1 = 0588235294117647 0588235294117647 × 2 = 1176470588235294 0588235294117647 × 3 = 1764705882352941 ... 0588235294117647 × 16 = 9411764705882352
+下一个循环号是16位数字0588235294117647： 0588235294117647×1 = 0588235294117647 0588235294117647×2 = 1176470588235294 0588235294117647×3 = 1764705882352941 ... 0588235294117647×16 = 9411764705882352
 
-Note that for cyclic numbers, leading zeros are important.
+请注意，对于循环数，前导零很重要。
 
-There is only one cyclic number for which, the eleven leftmost digits are 00000000137 and the five rightmost digits are 56789 (i.e., it has the form 00000000137...56789 with an unknown number of digits in the middle). Find the sum of all its digits.
+只有一个循环数，其最左边的11个数字为00000000137，最右边的5个数字为56789（即其形式为00000000137 ... 56789，中间是未知数字）。 查找所有数字的总和。
 
 # --hints--
 
-`euler358()` should return 3284144505.
+`euler358()`应返回3284144505。
 
 ```js
 assert.strictEqual(euler358(), 3284144505);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler358() {
-
-  return true;
-}
-
-euler358();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

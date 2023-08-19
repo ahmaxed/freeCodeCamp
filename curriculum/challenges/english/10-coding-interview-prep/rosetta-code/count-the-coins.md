@@ -3,7 +3,6 @@ id: 59713bd26bdeb8a594fb9413
 title: Count the coins
 challengeType: 5
 forumTopicId: 302238
-dashedName: count-the-coins
 ---
 
 # --description--
@@ -30,7 +29,7 @@ There are four types of common coins in [US](https://en.wikipedia.org/wiki/Unite
 
 # --instructions--
 
-Implement a function to determine how many ways there are to make change for a given input, `cents`, that represents an amount of US pennies using these common coins.
+Implement a function to determine how many ways there are to make change for a dollar using these common coins (1 dollar = 100 cents)
 
 # --hints--
 
@@ -40,22 +39,10 @@ Implement a function to determine how many ways there are to make change for a g
 assert(typeof countCoins === 'function');
 ```
 
-`countCoins(15)` should return `6`.
+`countCoins()` should return 242.
 
 ```js
-assert.equal(countCoins(15), 6);
-```
-
-`countCoins(85)` shouls return `163`.
-
-```js
-assert.equal(countCoins(85), 163);
-```
-
-`countCoins(100)` should return `242`.
-
-```js
-assert.equal(countCoins(100), 242);
+assert.equal(countCoins(), 242);
 ```
 
 # --seed--
@@ -63,7 +50,7 @@ assert.equal(countCoins(100), 242);
 ## --seed-contents--
 
 ```js
-function countCoins(cents) {
+function countCoins() {
 
   return true;
 }
@@ -72,11 +59,12 @@ function countCoins(cents) {
 # --solutions--
 
 ```js
-function countCoins(cents) {
+function countCoins() {
+  let t = 100;
   const operands = [1, 5, 10, 25];
-  const targetsLength = cents + 1;
+  const targetsLength = t + 1;
   const operandsLength = operands.length;
-  const t = [1];
+  t = [1];
 
   for (let a = 0; a < operandsLength; a++) {
     for (let b = 1; b < targetsLength; b++) {

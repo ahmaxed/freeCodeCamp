@@ -4,14 +4,13 @@ title: 访问嵌套数组
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cLeGDtZ'
 forumTopicId: 16160
-dashedName: accessing-nested-arrays
 ---
 
 # --description--
 
-在之前的挑战中，我们学习了在对象中嵌套对象和数组。 与访问嵌套对象类似，数组的方括号可以用来对嵌套数组进行链式访问。
+正如我们在前面的例子所见，对象可以嵌套对象和数组。与访问嵌套对象一样，用中括号操作符同样可以访问嵌套数组。
 
-下面是访问嵌套数组的例子：
+下面是如何访问嵌套数组的例子：
 
 ```js
 var ourPets = [
@@ -32,94 +31,27 @@ var ourPets = [
     ]
   }
 ];
-ourPets[0].names[1];
-ourPets[1].names[0];
+ourPets[0].names[1]; // "Fluffy"
+ourPets[1].names[0]; // "Spot"
 ```
-
-`ourPets[0].names[1]` 应该是字符串 `Fluffy`， 并且 `ourPets[1].names[0]` 应该是字符串 `Spot`。
 
 # --instructions--
 
-使用对象的点号和数组的方括号从变量 `myPlants` 检索出第二棵树。
+使用点操作符和中括号操作符来检索变量`myPlants`的第二棵树。
 
 # --hints--
 
-`secondTree` 应该等于字符串 `pine`。
+`secondTree`应该等于 "pine"。
 
 ```js
 assert(secondTree === 'pine');
 ```
 
-你的代码应该使用点号和方括号访问 `myPlants`。
+使用点操作符和中括号操作符来检索变量`myPlants`。
 
 ```js
 assert(/=\s*myPlants\[1\].list\[1\]/.test(code));
 ```
 
-# --seed--
-
-## --after-user-code--
-
-```js
-(function(x) {
-  if(typeof x != 'undefined') {
-    return "secondTree = " + x;
-  }
-  return "secondTree is undefined";
-})(secondTree);
-```
-
-## --seed-contents--
-
-```js
-// Setup
-var myPlants = [
-  {
-    type: "flowers",
-    list: [
-      "rose",
-      "tulip",
-      "dandelion"
-    ]
-  },
-  {
-    type: "trees",
-    list: [
-      "fir",
-      "pine",
-      "birch"
-    ]
-  }
-];
-
-// Only change code below this line
-
-var secondTree = ""; // Change this line
-```
-
 # --solutions--
 
-```js
-var myPlants = [
-  {
-    type: "flowers",
-    list: [
-      "rose",
-      "tulip",
-      "dandelion"
-    ]
-  },
-  {
-    type: "trees",
-    list: [
-      "fir",
-      "pine",
-      "birch"
-    ]
-  }
-];
-
-// Only change code below this line
-
-var secondTree = myPlants[1].list[1];
-```

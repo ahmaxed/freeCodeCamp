@@ -3,12 +3,11 @@ id: 587d824b367417b2b2512c4b
 title: Use the Triple Equals to Assert Strict Equality
 challengeType: 2
 forumTopicId: 301610
-dashedName: use-the-triple-equals-to-assert-strict-equality
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 `strictEqual()` compares objects using `===`.
 
@@ -99,6 +98,8 @@ You should choose the correct method for the fourth assertion - `strictEqual` vs
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

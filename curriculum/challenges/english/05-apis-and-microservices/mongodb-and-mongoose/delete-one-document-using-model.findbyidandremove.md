@@ -3,7 +3,6 @@ id: 587d7fb8367417b2b2512c10
 title: Delete One Document Using model.findByIdAndRemove
 challengeType: 2
 forumTopicId: 301539
-dashedName: delete-one-document-using-model-findbyidandremove
 ---
 
 # --description--
@@ -41,6 +40,8 @@ Deleting an item should succeed
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

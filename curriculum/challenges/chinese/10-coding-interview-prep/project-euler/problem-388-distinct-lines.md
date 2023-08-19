@@ -1,44 +1,27 @@
 ---
 id: 5900f4f11000cf542c510002
-title: 'Problem 388: Distinct Lines'
+title: 问题388：不同的线条
 challengeType: 5
-forumTopicId: 302052
-dashedName: problem-388-distinct-lines
+videoUrl: ''
 ---
 
 # --description--
 
-Consider all lattice points (a,b,c) with 0 ≤ a,b,c ≤ N.
+考虑所有格点（a，b，c），其中0≤a，b，c≤N。
 
-From the origin O(0,0,0) all lines are drawn to the other lattice points. Let D(N) be the number of distinct such lines.
+从原点O（0,0,0）开始，所有线都被绘制到其他格点。设D（N）是不同的这种线的数量。
 
-You are given that D(1 000 000) = 831909254469114121.
+您被给予D（1 000 000）= 831909254469114121。
 
-Find D(1010). Give as your answer the first nine digits followed by the last nine digits.
+找到D（1010）。将前9位数字后跟最后9位数字作为答案。
 
 # --hints--
 
-`euler388()` should return 831907372805130000.
+`euler388()`应该返回831907372805130000。
 
 ```js
 assert.strictEqual(euler388(), 831907372805130000);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler388() {
-
-  return true;
-}
-
-euler388();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

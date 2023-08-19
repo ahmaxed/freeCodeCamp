@@ -1,50 +1,29 @@
 ---
 id: 5900f4481000cf542c50ff5a
-title: 'Problem 219: Skew-cost coding'
+title: 问题219：偏差成本编码
 challengeType: 5
-forumTopicId: 301861
-dashedName: problem-219-skew-cost-coding
+videoUrl: ''
 ---
 
 # --description--
 
-Let A and B be bit strings (sequences of 0's and 1's).
+设A和B为位串（0和1的序列）。如果A等于B的最左边长度（A）位，则A被称为B的前缀。例如，00110是001101001的前缀，但不是00111或100110的前缀。
 
-If A is equal to the leftmost length(A) bits of B, then A is said to be a prefix of B.
+大小为n的无前缀代码是n个不同位串的集合，因此没有字符串是任何其他字符串的前缀。例如，这是一个大小为6的无前缀代码：
 
-For example, 00110 is a prefix of 001101001, but not of 00111 or 100110.
+0000,0001,001,01,10,11
 
-A prefix-free code of size n is a collection of n distinct bit strings such that no string is a prefix of any other. For example, this is a prefix-free code of size 6:
+现在假设发送'0'位需要一分钱，而传输'1'需要4便士。然后，上面显示的无前缀代码的总成本是35便士，这恰好是所讨论的偏斜定价方案可能最便宜的。简而言之，我们写Cost（6）= 35。
 
-0000, 0001, 001, 01, 10, 11
-
-Now suppose that it costs one penny to transmit a '0' bit, but four pence to transmit a '1'. Then the total cost of the prefix-free code shown above is 35 pence, which happens to be the cheapest possible for the skewed pricing scheme in question. In short, we write Cost(6) = 35.
-
-What is Cost(109) ?
+什么是成本（109）？
 
 # --hints--
 
-`euler219()` should return 64564225042.
+`euler219()`应返回64564225042。
 
 ```js
 assert.strictEqual(euler219(), 64564225042);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler219() {
-
-  return true;
-}
-
-euler219();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

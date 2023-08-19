@@ -3,7 +3,6 @@ id: 5900f48d1000cf542c50ffa0
 title: 'Problem 289: Eulerian Cycles'
 challengeType: 5
 forumTopicId: 301940
-dashedName: problem-289-eulerian-cycles
 ---
 
 # --description--

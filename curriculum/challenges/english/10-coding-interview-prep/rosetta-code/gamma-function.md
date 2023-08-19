@@ -3,7 +3,6 @@ id: 5a23c84252665b21eecc7e76
 title: Gamma function
 challengeType: 5
 forumTopicId: 302271
-dashedName: gamma-function
 ---
 
 # --description--

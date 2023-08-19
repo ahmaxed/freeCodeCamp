@@ -1,48 +1,23 @@
 ---
 id: 5900f4311000cf542c50ff43
-title: 'Problem 195: Inscribed circles of triangles with one angle of 60 degrees'
+title: 问题195：内切三角形的圆形，一个角度为60度
 challengeType: 5
-forumTopicId: 301833
-dashedName: problem-195-inscribed-circles-of-triangles-with-one-angle-of-60-degrees
+videoUrl: ''
 ---
 
 # --description--
 
-Let's call an integer sided triangle with exactly one angle of 60 degrees a 60-degree triangle.
+让我们称一个整数边三角形，其中一个角度为60度，一个60度的三角形。设r是这样的60度三角形的内切圆的半径。有1234个60度三角形，其中r≤100。设T（n）是60度三角形的数量，其中r≤n，因此T（100）= 1234，T（1000）= 22767，和T（ 10000）= 359912。
 
-Let r be the radius of the inscribed circle of such a 60-degree triangle.
-
-There are 1234 60-degree triangles for which r ≤ 100.
-
-Let T(n) be the number of 60-degree triangles for which r ≤ n, so
-
-T(100) = 1234, T(1000) = 22767, and T(10000) = 359912.
-
-Find T(1053779).
+找到T（1053779）。
 
 # --hints--
 
-`euler195()` should return 75085391.
+`euler195()`应返回75085391。
 
 ```js
 assert.strictEqual(euler195(), 75085391);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler195() {
-
-  return true;
-}
-
-euler195();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

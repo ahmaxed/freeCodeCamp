@@ -3,7 +3,6 @@ id: 5900f5271000cf542c51003a
 title: 'Problem 443: GCD sequence'
 challengeType: 5
 forumTopicId: 302115
-dashedName: problem-443-gcd-sequence
 ---
 
 # --description--

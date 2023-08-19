@@ -1,48 +1,31 @@
 ---
 id: 5900f5381000cf542c51004b
-title: 'Problem 460: An ant on the move'
+title: 问题460：移动中的蚂蚁
 challengeType: 5
-forumTopicId: 302135
-dashedName: problem-460-an-ant-on-the-move
+videoUrl: ''
 ---
 
 # --description--
 
-On the Euclidean plane, an ant travels from point A(0, 1) to point B(d, 1) for an integer d.
+在欧几里得平面上，蚂蚁从点A（0,1）行进到点B（d，1）得到整数d。
 
-In each step, the ant at point (x0, y0) chooses one of the lattice points (x1, y1) which satisfy x1 ≥ 0 and y1 ≥ 1 and goes straight to (x1, y1) at a constant velocity v. The value of v depends on y0 and y1 as follows: If y0 = y1, the value of v equals y0. If y0 ≠ y1, the value of v equals (y1 - y0) / (ln(y1) - ln(y0)).
+在每个步骤中，点（x0，y0）处的蚂蚁选择满足x1≥0且y1≥1的格点（x1，y1）之一，并以恒定速度v直接到（x1，y1）。 v取决于y0和y1如下：如果y0 = y1，则v的值等于y0。如果y0≠y1，则v的值等于（y1-y0）/（ln（y1）-ln（y0））。
 
-The left image is one of the possible paths for d = 4. First the ant goes from A(0, 1) to P1(1, 3) at velocity (3 - 1) / (ln(3) - ln(1)) ≈ 1.8205. Then the required time is sqrt(5) / 1.8205 ≈ 1.2283. From P1(1, 3) to P2(3, 3) the ant travels at velocity 3 so the required time is 2 / 3 ≈ 0.6667. From P2(3, 3) to B(4, 1) the ant travels at velocity (1 - 3) / (ln(1) - ln(3)) ≈ 1.8205 so the required time is sqrt(5) / 1.8205 ≈ 1.2283. Thus the total required time is 1.2283 + 0.6667 + 1.2283 = 3.1233.
+左图是d = 4的可能路径之一。首先，蚂蚁以速度（3 - 1）/（ln（3） - ln（1）从A（0,1）到达P1（1,3） ）≈1.8205。然后所需的时间是sqrt（5）/1.8205≈1.2283。从P1（1,3）到P2（3,3），蚂蚁以速度3行进，因此所需时间为2 /3≈0.6667。从P2（3,3）到B（4,1），蚂蚁以速度（1 - 3）/（ln（1） - ln（3））≈1.8205，所以需要的时间是sqrt（5）/ 1.8205 ...“抓鸟”英语词典1.2283。因此总的所需时间是1.2283 + 0.6667 + 1.2283 = 3.1233。
 
-The right image is another path. The total required time is calculated as 0.98026 + 1 + 0.98026 = 2.96052. It can be shown that this is the quickest path for d = 4.
+正确的形象是另一条道路。总的所需时间计算为0.98026 + 1 + 0.98026 = 2.96052。可以证明这是d = 4的最快路径。
 
-Let F(d) be the total required time if the ant chooses the quickest path. For example, F(4) ≈ 2.960516287. We can verify that F(10) ≈ 4.668187834 and F(100) ≈ 9.217221972.
+如果蚂蚁选择最快的路径，则让F（d）成为所需的总时间。例如，F（4）≈2.960516287。我们可以验证F（10）≈4.6668787834和F（100）≈9.217221972。
 
-Find F(10000). Give your answer rounded to nine decimal places.
+找到F（10000）。将您的答案四舍五入到小数点后九位。
 
 # --hints--
 
-`euler460()` should return 18.420738199.
+`euler460()`应该返回18.420738199。
 
 ```js
 assert.strictEqual(euler460(), 18.420738199);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler460() {
-
-  return true;
-}
-
-euler460();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

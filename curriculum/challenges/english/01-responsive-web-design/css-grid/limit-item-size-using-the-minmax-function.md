@@ -4,7 +4,6 @@ title: Limit Item Size Using the minmax Function
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pByETK/cD97RTv'
 forumTopicId: 301131
-dashedName: limit-item-size-using-the-minmax-function
 ---
 
 # --description--

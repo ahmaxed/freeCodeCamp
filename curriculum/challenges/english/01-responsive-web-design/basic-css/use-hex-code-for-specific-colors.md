@@ -4,7 +4,6 @@ title: Use Hex Code for Specific Colors
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c8W9mHM'
 forumTopicId: 18350
-dashedName: use-hex-code-for-specific-colors
 ---
 
 # --description--

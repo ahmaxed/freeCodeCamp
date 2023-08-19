@@ -1,59 +1,21 @@
 ---
 id: 5900f3ca1000cf542c50fedc
-title: 'Problem 93: Arithmetic expressions'
+title: 问题93：算术表达式
 challengeType: 5
-forumTopicId: 302210
-dashedName: problem-93-arithmetic-expressions
+videoUrl: ''
 ---
 
 # --description--
 
-By using each of the digits from the set, {1, 2, 3, 4}, exactly once, and making use of the four arithmetic operations (+, −, \*, /) and brackets/parentheses, it is possible to form different positive integer targets.
-
-For example,
-
-<div style='margin-left: 4em;'>
-  8 = (4 * (1 + 3)) / 2<br>
-  14 = 4 * (3 + 1 / 2)<br>
-  19 = 4 * (2 + 3) − 1<br>
-  36 = 3 * 4 * (2 + 1)
-</div>
-
-Note that concatenations of the digits, like 12 + 34, are not allowed.
-
-Using the set, {1, 2, 3, 4}, it is possible to obtain thirty-one different target numbers of which 36 is the maximum, and each of the numbers 1 to 28 can be obtained before encountering the first non-expressible number.
-
-Find the set of four distinct digits, `a` &lt; `b` &lt; `c` &lt; `d`, for which the longest set of consecutive positive integers, 1 to `n`, can be obtained, giving your answer as a string: `abcd`.
+通过使用集合中的每个数字{1,2,3,4}，恰好一次，并利用四个算术运算（+， - ，\*，/）和括号/括号，可以形成不同的正整数目标。例如，8 =（4 \*（1 + 3））/ 2 14 = 4 \*（3 + 1/2）19 = 4 \*（2 + 3） - 1 36 = 3 \* 4 \*（2 + 1）注数字的连接，如12 + 34，是不允许的。使用集合{1,2,3,4}，可以获得31个不同的目标数，其中36个是最大的，并且在遇到第一个不可表达之前可以获得数字1到28中的每一个。数。找到四个不同数字的集合，a &lt;b &lt;c &lt;d，可以获得最长的一组连续正整数，1到n，给出你的答案字符串：abcd。
 
 # --hints--
 
-`arithmeticExpressions()` should return a number.
+`euler93()`应返回1258。
 
 ```js
-assert(typeof arithmeticExpressions() === 'number');
-```
-
-`arithmeticExpressions()` should return 1258.
-
-```js
-assert.strictEqual(arithmeticExpressions(), 1258);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function arithmeticExpressions() {
-
-  return true;
-}
-
-arithmeticExpressions();
+assert.strictEqual(euler93(), 1258);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

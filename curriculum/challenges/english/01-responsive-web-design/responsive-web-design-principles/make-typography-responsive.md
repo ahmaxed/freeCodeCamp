@@ -4,7 +4,6 @@ title: Make Typography Responsive
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pzrPu4/crzN7T8'
 forumTopicId: 301141
-dashedName: make-typography-responsive
 ---
 
 # --description--
@@ -15,11 +14,9 @@ The four different viewport units are:
 
 <ul><li><code>vw</code> (viewport width): <code>10vw</code> would be 10% of the viewport's width.</li><li><code>vh</code> (viewport height): <code>3vh</code> would be 3% of the viewport's height.</li><li><code>vmin</code> (viewport minimum): <code>70vmin</code> would be 70% of the viewport's smaller dimension (height or width).</li><li><code>vmax</code> (viewport maximum): <code>100vmax</code> would be 100% of the viewport's bigger dimension (height or width).</li></ul>
 
-Here is an example that sets a `body` tag to 30% of the viewport's width.
+Here is an example that sets a body tag to 30% of the viewport's width.
 
-```css
-body { width: 30vw; }
-```
+`body { width: 30vw; }`
 
 # --instructions--
 
@@ -30,21 +27,13 @@ Set the `width` of the `h2` tag to 80% of the viewport's width and the `width` o
 Your `h2` tag should have a `width` of 80vw.
 
 ```js
-assert(
-  __helpers
-    .removeCssComments(code)
-    .match(/h2\s*?{\s*?width:\s*?80vw;\s*?}/g)
-);
+assert(code.match(/h2\s*?{\s*?width:\s*?80vw;\s*?}/g));
 ```
 
 Your `p` tag should have a `width` of 75vmin.
 
 ```js
-assert(
-  __helpers
-    .removeCssComments(code)
-    .match(/p\s*?{\s*?width:\s*?75vmin;\s*?}/g)
-);
+assert(code.match(/p\s*?{\s*?width:\s*?75vmin;\s*?}/g));
 ```
 
 # --seed--

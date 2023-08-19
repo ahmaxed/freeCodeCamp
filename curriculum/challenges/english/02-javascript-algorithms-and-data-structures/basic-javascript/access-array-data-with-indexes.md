@@ -4,7 +4,6 @@ title: Access Array Data with Indexes
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cBZQbTz'
 forumTopicId: 16158
-dashedName: access-array-data-with-indexes
 ---
 
 # --description--
@@ -19,13 +18,12 @@ Array indexes are written in the same bracket notation that strings use, except 
 
 ```js
 var array = [50,60,70];
-array[0];
-var data = array[1];
+array[0]; // equals 50
+var data = array[1];  // equals 60
 ```
 
-`array[0]` is now `50`, and `data` has the value `60`.
-
-**Note:** There shouldn't be any spaces between the array name and the square brackets, like `array [0]`. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+**Note**  
+There shouldn't be any spaces between the array name and the square brackets, like `array [0]`. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
 
 # --instructions--
 
@@ -76,9 +74,10 @@ if(typeof myArray !== "undefined" && typeof myData !== "undefined"){(function(y,
 ## --seed-contents--
 
 ```js
+// Setup
 var myArray = [50,60,70];
 
-
+// Only change code below this line
 ```
 
 # --solutions--

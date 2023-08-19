@@ -11,10 +11,10 @@ test('<BlockSaveButton /> snapshot', () => {
   expect(container).toMatchSnapshot();
 });
 
-test('Button text should default to the correct translation key', () => {
+test('Button text should default to "Save"', () => {
   const { getByRole } = render(<BlockSaveButton />);
 
-  expect(getByRole('button')).toHaveTextContent('buttons.save');
+  expect(getByRole('button')).toHaveTextContent('Save');
 });
 
 test('Button text should match "children"', () => {

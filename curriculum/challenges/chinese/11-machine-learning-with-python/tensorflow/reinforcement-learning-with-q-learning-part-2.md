@@ -1,9 +1,7 @@
 ---
 id: 5e8f2f13c4cdbe86b5c72da4
-title: 'Reinforcement Learning With Q-Learning: Part 2'
 challengeType: 11
 videoId: DX7hJuaUZ7o
-dashedName: reinforcement-learning-with-q-learning-part-2
 ---
 
 # --question--
@@ -23,4 +21,9 @@ The agent will always try to maximize its reward for the current state/action, l
 ## --video-solution--
 
 2
+
+# --hints--
+
+
+# --solutions--
 

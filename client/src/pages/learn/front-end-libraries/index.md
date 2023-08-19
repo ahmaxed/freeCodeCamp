@@ -1,6 +1,6 @@
 ---
 title: Front End Libraries
-superBlock: front-end-libraries
+superBlock: Front End Libraries
 ---
 ## Introduction to Front End Libraries
 

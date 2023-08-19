@@ -3,7 +3,6 @@ id: 587d7fb2367417b2b2512bf8
 title: Get Data from POST Requests
 challengeType: 2
 forumTopicId: 301511
-dashedName: get-data-from-post-requests
 ---
 
 # --description--
@@ -66,6 +65,8 @@ Test 2 : Your API endpoint should respond with the correct name
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

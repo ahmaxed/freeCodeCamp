@@ -3,12 +3,11 @@ id: 587d824d367417b2b2512c54
 title: Use Regular Expressions to Test a String
 challengeType: 2
 forumTopicId: 301608
-dashedName: use-regular-expressions-to-test-a-string
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 `match()` asserts that the actual value matches the second argument regular expression.
 
@@ -67,6 +66,8 @@ You should choose the correct method for the second assertion - `match` vs. `not
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

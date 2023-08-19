@@ -3,12 +3,11 @@ id: 58a25bcff9fc0f352b528e7e
 title: Hash and Compare Passwords Synchronously
 challengeType: 2
 forumTopicId: 301579
-dashedName: hash-and-compare-passwords-synchronously
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-bcrypt), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-bcrypt), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/).
 
 Hashing synchronously is just as easy to do but can cause lag if using it server side with a high cost or with hashing done very often. Hashing with this method is as easy as calling
 
@@ -54,6 +53,8 @@ Sync hash should be generated and correctly compared.
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

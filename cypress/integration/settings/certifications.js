@@ -5,8 +5,9 @@ import '@testing-library/cypress/add-commands';
 describe('Settings certifications area', () => {
   before(() => {
     cy.exec('npm run seed');
-    cy.login();
-    cy.visit('/settings');
+    cy.visit('/');
+    cy.contains("Get started (it's free)").click({ force: true });
+    cy.contains('Update my account settings').click({ force: true });
   });
 
   describe('initially', () => {
@@ -36,8 +37,8 @@ describe('Settings certifications area', () => {
     describe('after isHonest', () => {
       beforeEach(() => {
         cy.visit('/');
-        cy.login();
-        cy.visit('/settings');
+        cy.contains("Get started (it's free)").click({ force: true });
+        cy.contains('Update my account settings').click({ force: true });
       });
 
       it('Should render "You have accepted our Academic Honesty Policy." button after clicking "Agree"', () => {

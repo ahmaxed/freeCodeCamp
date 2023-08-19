@@ -4,7 +4,6 @@ title: Manipulating Complex Objects
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/c9yNMfR'
 forumTopicId: 18208
-dashedName: manipulating-complex-objects
 ---
 
 # --description--
@@ -29,7 +28,7 @@ var ourMusic = [
 ];
 ```
 
-This is an array which contains one object inside. The object has various pieces of <dfn>metadata</dfn> about an album. It also has a nested `formats` array. If you want to add more album records, you can do this by adding records to the top level array. Objects hold data in a property, which has a key-value format. In the example above, `"artist": "Daft Punk"` is a property that has a key of `artist` and a value of `Daft Punk`. [JavaScript Object Notation](http://www.json.org/) or `JSON` is a related data interchange format used to store data.
+This is an array which contains one object inside. The object has various pieces of <dfn>metadata</dfn> about an album. It also has a nested `"formats"` array. If you want to add more album records, you can do this by adding records to the top level array. Objects hold data in a property, which has a key-value format. In the example above, `"artist": "Daft Punk"` is a property that has a key of `"artist"` and a value of `"Daft Punk"`. [JavaScript Object Notation](http://www.json.org/) or `JSON` is a related data interchange format used to store data.
 
 ```json
 {
@@ -45,7 +44,8 @@ This is an array which contains one object inside. The object has various pieces
 }
 ```
 
-**Note:** You will need to place a comma after every object in the array, unless it is the last object in the array.
+**Note**  
+You will need to place a comma after every object in the array, unless it is the last object in the array.
 
 # --instructions--
 
@@ -65,63 +65,59 @@ assert(Array.isArray(myMusic));
 assert(myMusic.length > 1);
 ```
 
-The elements in the `myMusic` array should be objects
+`myMusic[1]` should be an object
 
 ```js
-myMusic.forEach(object => {assert.typeOf(object, 'object')})
+assert(typeof myMusic[1] === 'object');
 ```
 
-Your object in `myMusic` should have at least 4 properties
+`myMusic[1]` should have at least 4 properties
 
 ```js
-myMusic.forEach(object => {assert(Object.keys(object).length > 3); });
+assert(Object.keys(myMusic[1]).length > 3);
 ```
 
-Your object in `myMusic` should contain the property `artist` which is a string
+`myMusic[1]` should contain an `artist` property which is a string
 
 ```js
-myMusic.forEach(object => {
-  assert.containsAllKeys(object, ['artist']);
-  assert.typeOf(object.artist, 'string')
-})
+assert(
+  myMusic[1].hasOwnProperty('artist') && typeof myMusic[1].artist === 'string'
+);
 ```
 
-Your object in `myMusic` should contain the property `title` which is a string
+`myMusic[1]` should  contain a `title` property which is a string
 
 ```js
-myMusic.forEach(object => {
-  assert.containsAllKeys(object, ['title']);
-  assert.typeOf(object.title, 'string')
-})
+assert(
+  myMusic[1].hasOwnProperty('title') && typeof myMusic[1].title === 'string'
+);
 ```
 
-Your object in `myMusic` should contain the property `release_year` which is a number
+`myMusic[1]` should contain a `release_year` property which is a number
 
 ```js
-myMusic.forEach(object => {
-  assert.containsAllKeys(object, ['release_year']);
-  assert.typeOf(object.release_year, 'number')
-})
+assert(
+  myMusic[1].hasOwnProperty('release_year') &&
+    typeof myMusic[1].release_year === 'number'
+);
 ```
 
-Your object in `myMusic` should contain a `formats` property which is an array
+`myMusic[1]` should contain a `formats` property which is an array
 
 ```js
-myMusic.forEach(object => {
-  assert.containsAllKeys(object, ['formats']);
-  assert.typeOf(object.formats, 'array')
-})
+assert(
+  myMusic[1].hasOwnProperty('formats') && Array.isArray(myMusic[1].formats)
+);
 ```
 
 `formats` should be an array of strings with at least two elements
 
 ```js
-myMusic.forEach(object => {
-  object.formats.forEach(format => {
-    assert.typeOf(format, 'string')
-  });
-  assert.isAtLeast(object.formats.length, 2)
-})
+assert(
+  myMusic[1].formats.every(function (item) {
+    return typeof item === 'string';
+  }) && myMusic[1].formats.length > 1
+);
 ```
 
 # --seed--
@@ -147,6 +143,7 @@ var myMusic = [
     ],
     "gold": true
   }
+  // Add a record here
 ];
 ```
 

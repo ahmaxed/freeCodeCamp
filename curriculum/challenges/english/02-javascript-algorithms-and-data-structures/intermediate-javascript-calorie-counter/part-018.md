@@ -2,22 +2,17 @@
 id: 5ddb965c65d27e1512d44dab
 title: Part 18
 challengeType: 0
-dashedName: part-18
 ---
 
 # --description--
 
 The `reduce()` method takes a callback function with at least two arguments, an accumulator and a current value:
 
-```js
-function(accumulator, currentValue) { /* code to run */ }
-```
+`function(accumulator, currentValue) { /* code to run */ }`
 
 or using arrow functions:
 
-```js
-(accumulator, currentValue) => { /* code to run */ }
-```
+`(accumulator, currentValue) => { /* code to run */ }`
 
 Insert the above callback function as an argument in the `.reduce()` method.
 

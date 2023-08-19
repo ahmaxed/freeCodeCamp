@@ -3,7 +3,6 @@ id: 5a24c314108439a4d4036152
 title: Use const for Action Types
 challengeType: 6
 forumTopicId: 301450
-dashedName: use-const-for-action-types
 ---
 
 # --description--
@@ -117,7 +116,9 @@ The action creators and the reducer should reference the `LOGIN` and `LOGOUT` co
 ## --seed-contents--
 
 ```js
+// Change code below this line
 
+// Change code above this line
 
 const defaultState = {
   authenticated: false
@@ -126,11 +127,13 @@ const defaultState = {
 const authReducer = (state = defaultState, action) => {
 
   switch (action.type) {
-    case 'LOGIN': 
+
+    case 'LOGIN':
       return {
         authenticated: true
       }
-    case 'LOGOUT': 
+
+    case 'LOGOUT':
       return {
         authenticated: false
       }

@@ -3,7 +3,6 @@ id: 587d8254367417b2b2512c70
 title: Create and Add to Sets in ES6
 challengeType: 1
 forumTopicId: 301636
-dashedName: create-and-add-to-sets-in-es6
 ---
 
 # --description--
@@ -12,21 +11,15 @@ Now that you have worked through ES5, you are going to perform something similar
 
 To create a new empty set:
 
-```js
-var set = new Set();
-```
+`var set = new Set();`
 
 You can create a set with a value:
 
-```js
-var set = new Set(1);
-```
+`var set = new Set(1);`
 
 You can create a set with an array:
 
-```js
-var set = new Set([1, 2, 3]);
-```
+`var set = new Set([1, 2, 3]);`
 
 Once you have created a set, you can add the values you wish using the `add` method:
 

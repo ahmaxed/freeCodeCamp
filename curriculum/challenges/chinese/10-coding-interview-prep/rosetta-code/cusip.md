@@ -3,7 +3,6 @@ id: 5a23c84252665b21eecc7e05
 title: CUSIP
 challengeType: 5
 forumTopicId: 302241
-dashedName: cusip
 ---
 
 # --description--

@@ -3,7 +3,6 @@ id: 5900f52d1000cf542c510040
 title: 'Problem 449: Chocolate covered candy'
 challengeType: 5
 forumTopicId: 302121
-dashedName: problem-449-chocolate-covered-candy
 ---
 
 # --description--

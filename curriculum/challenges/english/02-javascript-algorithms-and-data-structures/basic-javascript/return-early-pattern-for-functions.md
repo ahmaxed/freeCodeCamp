@@ -4,7 +4,6 @@ title: Return Early Pattern for Functions
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cQe39Sq'
 forumTopicId: 18272
-dashedName: return-early-pattern-for-functions
 ---
 
 # --description--
@@ -22,7 +21,7 @@ function myFun() {
 myFun();
 ```
 
-The above will display the string `Hello` in the console, and return the string `World`. The string `byebye` will never display in the console, because the function exits at the `return` statement.
+The above outputs "Hello" to the console, returns "World", but `"byebye"` is never output, because the function exits at the `return` statement.
 
 # --instructions--
 

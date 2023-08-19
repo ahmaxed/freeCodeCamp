@@ -1,46 +1,29 @@
 ---
 id: 5900f48a1000cf542c50ff9c
-title: 'Problem 285: Pythagorean odds'
+title: 问题285：毕达哥拉斯赔率
 challengeType: 5
-forumTopicId: 301936
-dashedName: problem-285-pythagorean-odds
+videoUrl: ''
 ---
 
 # --description--
 
-Albert chooses a positive integer k, then two real numbers a, b are randomly chosen in the interval \[0,1] with uniform distribution.
+Albert选择一个正整数k，然后在区间\[0,1]中以均匀分布随机选择两个实数a，b。
 
-The square root of the sum (k·a+1)2 + (k·b+1)2 is then computed and rounded to the nearest integer. If the result is equal to k, he scores k points; otherwise he scores nothing.
+然后计算和（k·a + 1）2 +（k·b + 1）2的平方根并四舍五入为最接近的整数。 如果结果等于k，他得分为k分； 否则他什么也没得分。
 
-For example, if k = 6, a = 0.2 and b = 0.85, then (k·a+1)2 + (k·b+1)2 = 42.05. The square root of 42.05 is 6.484... and when rounded to the nearest integer, it becomes 6. This is equal to k, so he scores 6 points.
+例如，如果k ＝ 6，a ＝ 0.2，b ＝ 0.85，则（k·a + 1）2 ＋+（k·b + 1）2 ＝ 42.05。 42.05的平方根是6.484 ...，四舍五入到最接近的整数后，它变为6。 这等于k，因此他得到6分。
 
-It can be shown that if he plays 10 turns with k = 1, k = 2, ..., k = 10, the expected value of his total score, rounded to five decimal places, is 10.20914.
+可以看出，如果他以k = 1，k = 2，...，k = 10进行10圈，则他的总得分的期望值四舍五入到小数点后五位。
 
-If he plays 105 turns with k = 1, k = 2, k = 3, ..., k = 105, what is the expected value of his total score, rounded to five decimal places?
+如果他以k = 1，k = 2，k = 3，...，k = 105进行105转，他的总得分的期望值是多少，四舍五入到小数点后五位？
 
 # --hints--
 
-`euler285()` should return 157055.80999.
+`euler285()`应该返回157055.80999。
 
 ```js
 assert.strictEqual(euler285(), 157055.80999);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler285() {
-
-  return true;
-}
-
-euler285();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -1,19 +1,14 @@
 ---
 id: 5e9a093a74c4063ca6f7c15f
-title: Data Cleaning Duplicates
 challengeType: 11
 videoId: kj7QqjXhH6A
-dashedName: data-cleaning-duplicates
 ---
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
-
 More resources:
 
--   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/data-cleaning-rmotr-freecodecamp)
--   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+\- [Notebook](https://notebooks.ai/rmotr-curriculum/data-cleaning-rmotr-freecodecamp-fd76fa59)
 
 # --question--
 
@@ -36,4 +31,9 @@ contain a duplicate, where the value for the row contains either the first or se
 ## --video-solution--
 
 2
+
+# --hints--
+
+
+# --solutions--
 

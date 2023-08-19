@@ -1,44 +1,21 @@
 ---
 id: 5900f3e51000cf542c50fef8
-title: 'Problem 121: Disc game prize fund'
+title: 问题121：光盘游戏奖金
 challengeType: 5
-forumTopicId: 301748
-dashedName: problem-121-disc-game-prize-fund
+videoUrl: ''
 ---
 
 # --description--
 
-A bag contains one red disc and one blue disc. In a game of chance a player takes a disc at random and its colour is noted. After each turn the disc is returned to the bag, an extra red disc is added, and another disc is taken at random.
-
-The player pays £1 to play and wins if they have taken more blue discs than red discs at the end of the game.
-
-If the game is played for four turns, the probability of a player winning is exactly 11/120, and so the maximum prize fund the banker should allocate for winning in this game would be £10 before they would expect to incur a loss. Note that any payout will be a whole number of pounds and also includes the original £1 paid to play the game, so in the example given the player actually wins £9.
-
-Find the maximum prize fund that should be allocated to a single game in which fifteen turns are played.
+一个包包含一个红色圆盘和一个蓝色圆盘。在有机会的游戏中，玩家随机拍摄光盘并记录其颜色。每次转动后，光盘返回到包中，添加一个额外的红色光盘，随机拍摄另一张光盘。如果玩家在游戏结束时拍摄的红色光盘多于红色光盘，则玩家可以支付1英镑玩游戏并获胜。如果游戏进行了四轮比赛，那么玩家获胜的概率恰好是11/120，因此银行家在这场比赛中应该分配的最高奖金将是10英镑，然后才会产生损失。请注意，任何支付都将是一个整数磅，并且还包括为玩游戏而支付的原始£1，因此在给出的示例中，玩家实际上赢得了9英镑。找到应该分配给单个游戏的最大奖金，其中玩15个回合。
 
 # --hints--
 
-`euler121()` should return 2269.
+`euler121()`应返回2269。
 
 ```js
 assert.strictEqual(euler121(), 2269);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler121() {
-
-  return true;
-}
-
-euler121();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

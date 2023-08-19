@@ -1,79 +1,51 @@
 ---
 id: 596fda99c69f779975a1b67d
-title: Count occurrences of a substring
+title: 计算子字符串的出现次数
 challengeType: 5
-forumTopicId: 302237
-dashedName: count-occurrences-of-a-substring
+videoUrl: ''
 ---
 
 # --description--
 
-Create a function, or show a built-in function, to count the number of non-overlapping occurrences of a substring inside a string.
+任务：
 
-The function should take two arguments:
+创建函数或显示内置函数，以计算字符串中子字符串的非重叠出现次数。
 
-<ul>
-  <li>the first argument being the string to search, and</li>
-  <li>the second a substring to be searched for.</li>
-</ul>
+该函数应该有两个参数：
 
-It should return an integer count.
+第一个参数是要搜索的字符串，第二个参数是要搜索的子字符串。
 
-The matching should yield the highest number of non-overlapping matches.
+它应该返回一个整数计数。
 
-In general, this essentially means matching from left-to-right or right-to-left.
+匹配应产生最多数量的非重叠匹配。
+
+通常，这实质上意味着从左到右或从右到左匹配。
 
 # --hints--
 
-`countSubstring` should be a function.
+`countSubstring`是一个函数。
 
 ```js
 assert(typeof countSubstring === 'function');
 ```
 
-`countSubstring("the three truths", "th")` should return `3`.
+`countSubstring("the three truths", "th")`应该返回`3` 。
 
 ```js
 assert.equal(countSubstring(testCases[0], searchString[0]), results[0]);
 ```
 
-`countSubstring("ababababab", "abab")` should return `2`.
+`countSubstring("ababababab", "abab")`应返回`2` 。
 
 ```js
 assert.equal(countSubstring(testCases[1], searchString[1]), results[1]);
 ```
 
-`countSubstring("abaabba*bbaba*bbab", "a*b")` should return `2`.
+`countSubstring("abaabba*bbaba*bbab", "a*b")`应返回`2` 。
 
 ```js
 assert.equal(countSubstring(testCases[2], searchString[2]), results[2]);
 ```
 
-# --seed--
-
-## --after-user-code--
-
-```js
-const testCases = ['the three truths', 'ababababab', 'abaabba*bbaba*bbab'];
-const searchString = ['th', 'abab', 'a*b'];
-const results = [3, 2, 2];
-```
-
-## --seed-contents--
-
-```js
-function countSubstring(str, subStr) {
-
-  return true;
-}
-```
-
 # --solutions--
 
-```js
-function countSubstring(str, subStr) {
-  const escapedSubStr = subStr.replace(/[.+*?^$[\]{}()|/]/g, '\\$&');
-  const matches = str.match(new RegExp(escapedSubStr, 'g'));
-  return matches ? matches.length : 0;
-}
-```

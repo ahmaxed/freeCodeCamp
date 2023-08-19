@@ -1,46 +1,29 @@
 ---
 id: 5900f4381000cf542c50ff4a
-title: 'Problem 203: Squarefree Binomial Coefficients'
+title: 问题203：无平方二项系数
 challengeType: 5
-forumTopicId: 301844
-dashedName: problem-203-squarefree-binomial-coefficients
+videoUrl: ''
 ---
 
 # --description--
 
-The binomial coefficients nCk can be arranged in triangular form, Pascal's triangle, like this:
+二项式系数nCk可以以三角形排列，Pascal的三角形，如下所示：
 
 111121133114641151010511615201561172135352171 .........
 
-It can be seen that the first eight rows of Pascal's triangle contain twelve distinct numbers: 1, 2, 3, 4, 5, 6, 7, 10, 15, 20, 21 and 35.
+可以看出Pascal三角形的前八行包含十二个不同的数字：1,2,3,4,5,6,7,10,15,20,21和35。
 
-A positive integer n is called squarefree if no square of a prime divides n. Of the twelve distinct numbers in the first eight rows of Pascal's triangle, all except 4 and 20 are squarefree. The sum of the distinct squarefree numbers in the first eight rows is 105.
+如果没有素数的平方除n，则正整数n称为squarefree。在Pascal三角形的前八行中的十二个不同数字中，除了4和20之外的所有数字都是无方形的。前八行中不同的无平方数字的总和为105。
 
-Find the sum of the distinct squarefree numbers in the first 51 rows of Pascal's triangle.
+找到Pascal三角形的前51行中不同的无平方数字的总和。
 
 # --hints--
 
-`euler203()` should return 34029210557338.
+`euler203()`应该返回34029210557338。
 
 ```js
 assert.strictEqual(euler203(), 34029210557338);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler203() {
-
-  return true;
-}
-
-euler203();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

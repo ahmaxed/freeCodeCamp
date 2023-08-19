@@ -4,7 +4,6 @@ title: Finding a Remainder in JavaScript
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cWP24Ub'
 forumTopicId: 18184
-dashedName: finding-a-remainder-in-javascript
 ---
 
 # --description--
@@ -20,7 +19,8 @@ In mathematics, a number can be checked to be even or odd by checking the remain
 
 <blockquote>17 % 2 = 1 (17 is Odd)<br>48 % 2 = 0 (48 is Even)</blockquote>
 
-**Note:** The <dfn>remainder</dfn> operator is sometimes incorrectly referred to as the modulus operator. It is very similar to modulus, but does not work properly with negative numbers.
+**Note**  
+The <dfn>remainder</dfn> operator is sometimes incorrectly referred to as the "modulus" operator. It is very similar to modulus, but does not work properly with negative numbers.
 
 # --instructions--
 

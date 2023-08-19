@@ -5,18 +5,14 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import { withTranslation } from 'react-i18next';
-import { createSelector } from 'reselect';
 
 import { ChallengeNode } from '../../../../redux/propTypes';
 import {
   challengeMounted,
-  isChallengeCompletedSelector,
   updateChallengeMeta,
   openModal,
   updateSolutionFormValues
 } from '../../redux';
-
 import { getGuideUrl } from '../../utils';
 
 import LearnLayout from '../../../../components/layouts/Learn';
@@ -29,13 +25,7 @@ import CompletionModal from '../../components/CompletionModal';
 import HelpModal from '../../components/HelpModal';
 import Hotkeys from '../../components/Hotkeys';
 
-const mapStateToProps = createSelector(
-  isChallengeCompletedSelector,
-  isChallengeCompleted => ({
-    isChallengeCompleted
-  })
-);
-
+const mapStateToProps = () => ({});
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
@@ -52,21 +42,15 @@ const propTypes = {
   data: PropTypes.shape({
     challengeNode: ChallengeNode
   }),
-  isChallengeCompleted: PropTypes.bool,
   openCompletionModal: PropTypes.func.isRequired,
   pageContext: PropTypes.shape({
     challengeMeta: PropTypes.object
   }),
-  t: PropTypes.func.isRequired,
   updateChallengeMeta: PropTypes.func.isRequired,
   updateSolutionFormValues: PropTypes.func.isRequired
 };
 
-class Project extends Component {
-  constructor() {
-    super();
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+export class Project extends Component {
   componentDidMount() {
     const {
       challengeMounted,
@@ -111,12 +95,6 @@ class Project extends Component {
     }
   }
 
-  handleSubmit({ isShouldCompletionModalOpen }) {
-    if (isShouldCompletionModalOpen) {
-      this.props.openCompletionModal();
-    }
-  }
-
   render() {
     const {
       data: {
@@ -125,17 +103,13 @@ class Project extends Component {
           fields: { blockName },
           forumTopicId,
           title,
-          description,
-          superBlock,
-          block,
-          translationPending
+          description
         }
       },
-      isChallengeCompleted,
+      openCompletionModal,
       pageContext: {
-        challengeMeta: { nextChallengePath, prevChallengePath }
+        challengeMeta: { introPath, nextChallengePath, prevChallengePath }
       },
-      t,
       updateSolutionFormValues
     } = this.props;
 
@@ -144,30 +118,22 @@ class Project extends Component {
     return (
       <Hotkeys
         innerRef={c => (this._container = c)}
+        introPath={introPath}
         nextChallengePath={nextChallengePath}
         prevChallengePath={prevChallengePath}
       >
         <LearnLayout>
-          <Helmet
-            title={`${blockNameTitle} | ${t('learn.learn')} | freeCodeCamp.org`}
-          />
+          <Helmet title={`${blockNameTitle} | Learn | freeCodeCamp.org`} />
           <Grid>
             <Row>
               <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={12}>
                 <Spacer />
-                <ChallengeTitle
-                  block={block}
-                  isCompleted={isChallengeCompleted}
-                  superBlock={superBlock}
-                  translationPending={translationPending}
-                >
-                  {title}
-                </ChallengeTitle>
+                <ChallengeTitle>{blockNameTitle}</ChallengeTitle>
                 <ChallengeDescription description={description} />
                 <SolutionForm
                   challengeType={challengeType}
                   description={description}
-                  onSubmit={this.handleSubmit}
+                  onSubmit={openCompletionModal}
                   updateSolutionForm={updateSolutionFormValues}
                 />
                 <ProjectToolPanel
@@ -176,11 +142,7 @@ class Project extends Component {
                 <br />
                 <Spacer />
               </Col>
-              <CompletionModal
-                block={block}
-                blockName={blockName}
-                superBlock={superBlock}
-              />
+              <CompletionModal blockName={blockName} />
               <HelpModal />
             </Row>
           </Grid>
@@ -196,7 +158,7 @@ Project.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(Project));
+)(Project);
 
 export const query = graphql`
   query ProjectChallenge($slug: String!) {
@@ -206,9 +168,6 @@ export const query = graphql`
       description
       challengeType
       helpCategory
-      superBlock
-      block
-      translationPending
       fields {
         blockName
         slug

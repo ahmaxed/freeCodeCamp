@@ -3,7 +3,6 @@ id: 5a23c84252665b21eecc7e82
 title: Greatest common divisor
 challengeType: 5
 forumTopicId: 302277
-dashedName: greatest-common-divisor
 ---
 
 # --description--

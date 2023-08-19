@@ -4,7 +4,6 @@ title: Global vs. Local Scope in Functions
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/c2QwKH2'
 forumTopicId: 18194
-dashedName: global-vs--local-scope-in-functions
 ---
 
 # --description--
@@ -21,11 +20,11 @@ function myFun() {
 }
 ```
 
-The function `myFun` will return the string `Head` because the `local` version of the variable is present.
+The function `myFun` will return `"Head"` because the `local` version of the variable is present.
 
 # --instructions--
 
-Add a local variable to `myOutfit` function to override the value of `outerWear` with the string `sweater`.
+Add a local variable to `myOutfit` function to override the value of `outerWear` with `"sweater"`.
 
 # --hints--
 
@@ -35,7 +34,7 @@ You should not change the value of the global `outerWear`.
 assert(outerWear === 'T-Shirt');
 ```
 
-`myOutfit` should return the string `sweater`.
+`myOutfit` should return `"sweater"`.
 
 ```js
 assert(myOutfit() === 'sweater');

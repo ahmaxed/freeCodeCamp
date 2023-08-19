@@ -4,7 +4,6 @@ title: Inherit CSS Variables
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cyLZZhZ'
 forumTopicId: 301088
-dashedName: inherit-css-variables
 ---
 
 # --description--

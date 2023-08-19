@@ -1,46 +1,29 @@
 ---
 id: 5900f4cb1000cf542c50ffde
-title: 'Problem 351: Hexagonal orchards'
+title: 问题351：六角形果园
 challengeType: 5
-forumTopicId: 302011
-dashedName: problem-351-hexagonal-orchards
+videoUrl: ''
 ---
 
 # --description--
 
-A hexagonal orchard of order n is a triangular lattice made up of points within a regular hexagon with side n. The following is an example of a hexagonal orchard of order 5:
+n阶六角形果园是由正六边形中具有边n的点构成的三角形格子。以下是5阶六角形果园的示例：
 
-Highlighted in green are the points which are hidden from the center by a point closer to it. It can be seen that for a hexagonal orchard of order 5, 30 points are hidden from the center.
+以绿色突出显示的是通过靠近它的点从中心隐藏的点。可以看出，对于5阶六角形果园，中心隐藏了30个点。
 
-Let H(n) be the number of points hidden from the center in a hexagonal orchard of order n.
+设H（n）是在n阶六角形果园中从中心隐藏的点数。
 
-H(5) = 30. H(10) = 138. H(1 000) = 1177848.
+H（5）= 30.H（10）= 138.H（1 000）= 1177848。
 
-Find H(100 000 000).
+找H（100 000 000）。
 
 # --hints--
 
-`euler351()` should return 11762187201804552.
+`euler351()`应该返回11762187201804552。
 
 ```js
 assert.strictEqual(euler351(), 11762187201804552);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler351() {
-
-  return true;
-}
-
-euler351();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

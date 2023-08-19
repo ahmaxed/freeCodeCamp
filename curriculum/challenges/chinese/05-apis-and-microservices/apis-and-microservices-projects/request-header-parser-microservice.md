@@ -1,36 +1,21 @@
 ---
 id: bd7158d8c443edefaeb5bdff
-title: 请求头解析器微服务
+title: 请求头解析器
 challengeType: 4
 forumTopicId: 301507
-dashedName: request-header-parser-microservice
 ---
 
 # --description--
 
-构建一个 JavaScript 的全栈应用，在功能上与这个应用相似：<https://request-header-parser-microservice.freecodecamp.rocks/>。 可以采用下面的一种方式完成这个挑战：
+构建一个功能类似于 <https://dandelion-roar.glitch.me/> 的 JavaScript 全栈应用。
 
--   克隆 [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-headerparser/) 并在本地完成项目。
--   使用 [repl.it 初始化项目](https://repl.it/github/freeCodeCamp/boilerplate-project-headerparser) 来完成项目。
--   使用你选择的网站生成器来完成项目， 并确保包含了我们 GitHub 仓库的所有文件。
+在开发这个项目时，我们推荐你在 [Glitch](https://glitch.com/) 上编码。编码完成之后，你可以把应用主页的链接复制到屏幕的输入框中，测试你的代码是否能通过项目需求。当然你也可以基于其他的平台来完成自己的项目，只要提供一个公开的主页便于我们测试就行。
 
-当完成本项目，请确认有一个正常运行的 demo 可以公开访问。 然后将 URL 提交到 `Solution Link` 中。 此外，还可以将项目的源码提交到 `GitHub Link` 中。
+参考示例：你可以通过 [这个链接](https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-headerparser/) 访问在 Glitch 上的项目，或者从 GitHub 上 clone [这个仓库的代码](https://github.com/freeCodeCamp/boilerplate-project-headerparser/)。如果你使用 Glitch，请记住将项目链接保存到妥当的地方。
 
 # --hints--
 
-提交自己的项目，而不是示例的 URL。
-
-```js
-(getUserInput) => {
-  assert(
-    !/.*\/request-header-parser-microservice\.freecodecamp\.rocks/.test(
-      getUserInput('url')
-    )
-  );
-};
-```
-
-向 `/api/whoami` 发送请求，返回一个 JSON 对象，这个JSON 对象应该含有存放 IP 地址的 `ipaddress` 键中。
+我可以获得浏览器的IP地址、语言和操作系统信息。
 
 ```js
 (getUserInput) =>
@@ -42,7 +27,7 @@ dashedName: request-header-parser-microservice
   );
 ```
 
-向 `/api/whoami` 发送请求，返回一个 JSON 对象，这个 JSON 对象应该含有存放语言首选项的 `language` 键。
+首选语言应该在 `language` 键里返回。
 
 ```js
 (getUserInput) =>
@@ -54,7 +39,7 @@ dashedName: request-header-parser-microservice
   );
 ```
 
-向 `/api/whoami` 发送请求，返回一个 JSON 对象，这个 JSON 对象应该含有存放（发送请求的）软件的 `software` 键。
+software 应该在 `software`  键里返回。
 
 ```js
 (getUserInput) =>
@@ -68,10 +53,3 @@ dashedName: request-header-parser-microservice
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

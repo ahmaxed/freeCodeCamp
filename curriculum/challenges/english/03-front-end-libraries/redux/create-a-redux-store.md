@@ -3,7 +3,6 @@ id: 5a24c314108439a4d403614b
 title: Create a Redux Store
 challengeType: 6
 forumTopicId: 301439
-dashedName: create-a-redux-store
 ---
 
 # --description--
@@ -24,13 +23,13 @@ Declare a `store` variable and assign it to the `createStore()` method, passing 
 
 # --hints--
 
-The Redux store should exist.
+The redux store should exist.
 
 ```js
 assert(typeof store.getState === 'function');
 ```
 
-The Redux store should have a value of 5 for the state.
+The redux store should have a value of 5 for the state.
 
 ```js
 assert(store.getState() === 5);

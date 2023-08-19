@@ -1,42 +1,25 @@
 ---
 id: 5900f4941000cf542c50ffa7
-title: 'Problem 296: Angular Bisector and Tangent'
+title: 问题296：角平分线和切线
 challengeType: 5
-forumTopicId: 301948
-dashedName: problem-296-angular-bisector-and-tangent
+videoUrl: ''
 ---
 
 # --description--
 
-Given is an integer sided triangle ABC with BC ≤ AC ≤ AB.k is the angular bisector of angle ACB.m is the tangent at C to the circumscribed circle of ABC.n is a line parallel to m through B.
+给定一个整数边三角形ABC，其中BC≤AC≤AB.k是角度ACB的角平分线.m是C与ABC外接圆的切线.n是一条平行于m到B的线。
 
-The intersection of n and k is called E.
+n和k的交集称为E。
 
-How many triangles ABC with a perimeter not exceeding 100 000 exist such that BE has integral length?
+存在多少个周长不超过100000的三角形ABC，使得BE具有整数长度？
 
 # --hints--
 
-`euler296()` should return 1137208419.
+`euler296()`应该返回1137208419。
 
 ```js
 assert.strictEqual(euler296(), 1137208419);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler296() {
-
-  return true;
-}
-
-euler296();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

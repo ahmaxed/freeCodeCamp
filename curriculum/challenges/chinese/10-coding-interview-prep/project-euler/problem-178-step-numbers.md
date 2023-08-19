@@ -1,46 +1,23 @@
 ---
 id: 5900f41e1000cf542c50ff31
-title: 'Problem 178: Step Numbers'
+title: 问题178：步骤编号
 challengeType: 5
-forumTopicId: 301813
-dashedName: problem-178-step-numbers
+videoUrl: ''
 ---
 
 # --description--
 
-Consider the number 45656.
+考虑数字45656.可以看出，45656的每对连续数字的差值为1。每对连续数字的差值为1的数字称为步数。 pandigital数字包含从0到9的每个十进制数字至少一次。
 
-It can be seen that each pair of consecutive digits of 45656 has a difference of one.
-
-A number for which every pair of consecutive digits has a difference of one is called a step number.
-
-A pandigital number contains every decimal digit from 0 to 9 at least once.
-
-How many pandigital step numbers less than 1040 are there?
+有多少pandigital步数小于1040？
 
 # --hints--
 
-`euler178()` should return 126461847755.
+`euler178()`应该返回126461847755。
 
 ```js
 assert.strictEqual(euler178(), 126461847755);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler178() {
-
-  return true;
-}
-
-euler178();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

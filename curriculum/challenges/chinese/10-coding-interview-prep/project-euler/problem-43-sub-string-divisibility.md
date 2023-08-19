@@ -1,41 +1,38 @@
 ---
 id: 5900f3971000cf542c50feaa
-title: 'Problem 43: Sub-string divisibility'
+title: 问题43：子串可分性
 challengeType: 5
-forumTopicId: 302100
-dashedName: problem-43-sub-string-divisibility
+videoUrl: ''
 ---
 
 # --description--
 
-The number, 1406357289, is a 0 to 9 pandigital number because it is made up of each of the digits 0 to 9 in some order, but it also has a rather interesting sub-string divisibility property.
+数字1406357289是0到9的全数字，因为它是由0到9的每个数字以某种顺序组成的，但是它也具有相当有趣的子字符串可除性。
 
-Let d<sub>1</sub> be the 1<sup>st</sup> digit, d<sub>2</sub> be the 2<sup>nd</sup> digit, and so on. In this way, we note the following:
+令d1为第一位数，d2为第二位数，依此类推。 这样，我们注意以下几点：
 
-<ul>
-  <li>d<sub>2</sub>d<sub>3</sub>d<sub>4</sub> = 406 is divisible by 2</li>
-  <li>d<sub>3</sub>d<sub>4</sub>d<sub>5</sub> = 063 is divisible by 3</li>
-  <li>d<sub>4</sub>d<sub>5</sub>d<sub>6</sub> = 635 is divisible by 5</li>
-  <li>d<sub>5</sub>d<sub>6</sub>d<sub>7</sub> = 357 is divisible by 7</li>
-  <li>d<sub>6</sub>d<sub>7</sub>d<sub>8</sub> = 572 is divisible by 11</li>
-  <li>d<sub>7</sub>d<sub>8</sub>d<sub>9</sub> = 728 is divisible by 13</li>
-  <li>d<sub>8</sub>d<sub>9</sub>d<sub>10</sub> = 289 is divisible by 17</li>
-</ul>
+d2d3d4 = 406可被2整除
 
-Find the numbers of all 0 to 9 pandigital numbers with this property.
+d3d4d5 = 063被3整除
+
+d4d5d6 = 635可被5整除
+
+d5d6d7 = 357可被7整除
+
+d6d7d8 = 572被11整除
+
+d7d8d9 = 728被13整除
+
+d8d9d10 = 289被17整除
+
+使用此属性查找所有0到9个泛数字的数字。
 
 # --hints--
 
-`substringDivisibility()` should return an array.
+`substringDivisibility()`应该返回[1430952867, 1460357289, 1406357289, 4130952867, 4160357289, 4106357289]。
 
 ```js
-assert(Array.isArray(substringDivisibility()));
-```
-
-`substringDivisibility()` should return [ 1430952867, 1460357289, 1406357289, 4130952867, 4160357289, 4106357289 ].
-
-```js
-assert.sameMembers(substringDivisibility(), [
+assert.deepEqual(substringDivisibility(), [
   1430952867,
   1460357289,
   1406357289,
@@ -45,31 +42,5 @@ assert.sameMembers(substringDivisibility(), [
 ]);
 ```
 
-You should not copy and return the array.
-
-```js
-assert(
-  !code.match(
-      /(1430952867)|(1460357289)|(1406357289)|(4130952867)|(4160357289)|(4106357289)/
-    )
-);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function substringDivisibility() {
-
-  return [];
-}
-
-substringDivisibility();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

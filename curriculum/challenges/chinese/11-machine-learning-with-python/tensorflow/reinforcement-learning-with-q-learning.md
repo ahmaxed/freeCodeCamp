@@ -1,9 +1,7 @@
 ---
 id: 5e8f2f13c4cdbe86b5c72da3
-title: Reinforcement Learning With Q-Learning
 challengeType: 11
 videoId: Cf7DSU0gVb4
-dashedName: reinforcement-learning-with-q-learning
 ---
 
 # --question--
@@ -27,4 +25,9 @@ habitat, agent, state, action, and punishment.
 ## --video-solution--
 
 2
+
+# --hints--
+
+
+# --solutions--
 

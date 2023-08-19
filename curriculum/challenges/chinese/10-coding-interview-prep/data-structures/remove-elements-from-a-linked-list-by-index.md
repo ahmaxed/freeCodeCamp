@@ -1,41 +1,33 @@
 ---
 id: 587d8251367417b2b2512c65
-title: Remove Elements from a Linked List by Index
+title: 按索引从链接列表中删除元素
 challengeType: 1
-forumTopicId: 301711
-dashedName: remove-elements-from-a-linked-list-by-index
+videoUrl: ''
 ---
 
 # --description--
 
-Before we move on to another data structure, let's get a couple of last bits of practice with linked lists.
-
-Let's write a `removeAt` method that removes the `element` at a given `index`. The method should be called `removeAt(index)`. To remove an `element` at a certain `index`, we'll need to keep a running count of each node as we move along the linked list.
-
-A common technique used to iterate through the elements of a linked list involves a <dfn>'runner'</dfn>, or sentinel, that 'points' at the nodes that your code is comparing. In our case, starting at the `head` of our list, we start with a `currentIndex` variable that starts at `0`. The `currentIndex` should increment by one for each node we pass.
-
-Just like our `remove(element)` method, which [we covered in a previous lesson](/learn/coding-interview-prep/data-structures/remove-elements-from-a-linked-list), we need to be careful not to orphan the rest of our list when we remove the node in our `removeAt(index)` method. We keep our nodes contiguous by making sure that the node that has reference to the removed node has a reference to the next node.
+在我们继续讨论另一个数据结构之前，让我们先了解链接列表的最后几点练习。让我们编写一个`removeAt`方法，删除给定`index`处的`element` 。该方法应该称为`removeAt(index)` 。要删除某个`index`处的`element` ，我们需要在沿着链表移动时保持每个节点的运行计数。用于遍历链表的元素的常用技术涉及<dfn>“转轮”</dfn>或“哨兵”，它们“指向”代码所比较的节点。在我们的情况下，开始于`head`我们的名单中，我们先从一个`currentIndex`始于变量`0` 。对于我们传递的每个节点， `currentIndex`应该增加1。就像我们的`remove(element)`方法一样，当我们在removeAt（index）方法中删除节点时，我们需要注意不要孤立列表的其余部分。我们通过确保引用已删除节点的节点具有对下一节点的引用来保持节点连续。
 
 # --instructions--
 
-Write a `removeAt(index)` method that removes and returns a node at a given `index`. The method should return `null` if the given `index` is either negative, or greater than or equal to the `length` of the linked list.
-
-**Note:** Remember to keep count of the `currentIndex`.
+编写`removeAt(index)`方法，删除并返回给定`index`处的节点。如果给定`index`为负数，或者大于或等于链表`length` ，则该方法应返回`null` 。注意请记住保持`currentIndex`计数。
 
 # --hints--
 
-Your `LinkedList` class should have a `removeAt` method.
+您的`LinkedList`类应该有一个`removeAt`方法。
 
 ```js
 assert(
   (function () {
     var test = new LinkedList();
     return typeof test.removeAt === 'function';
-  })()
+  })(),
+  'Your <code>LinkedList</code> class should have a <code>removeAt</code> method.'
 );
 ```
 
-Your `removeAt` method should reduce the `length` of the linked list by one.
+您的`removeAt`方法应该减少链表的`length`
 
 ```js
 assert(
@@ -46,43 +38,12 @@ assert(
     test.add('kitten');
     test.removeAt(1);
     return test.size() === 2;
-  })()
+  })(),
+  'Your <code>removeAt</code> method should reduce the <code>length</code> of the linked list'
 );
 ```
 
-Your `removeAt` method should remove the element at the specified index from the linked list.
-
-```js
-assert(
-  (function () {
-    var test = new LinkedList();
-    test.add('cat');
-    test.add('dog');
-    test.add('kitten');
-    test.add('bird');
-    test.removeAt(1);
-    return (
-      JSON.stringify(test.head()) ===
-      '{"element":"cat","next":{"element":"kitten","next":{"element":"bird","next":null}}}'
-    );
-  })()
-);
-```
-
-When only one element is present in the linked list, your `removeAt` method should remove and return the element at specified index, and reduce the length of the linked list.
-
-```js
-assert(
-  (function () {
-    var test = new LinkedList();
-    test.add('cat');
-    var removedItem = test.removeAt(0);
-    return test.head() === null && test.size() === 0 && removedItem === 'cat';
-  })()
-);
-```
-
-Your `removeAt` method should return the element of the removed node.
+您的`removeAt`方法还应该返回已删除节点的元素。
 
 ```js
 assert(
@@ -92,11 +53,12 @@ assert(
     test.add('dog');
     test.add('kitten');
     return test.removeAt(1) === 'dog';
-  })()
+  })(),
+  'Your <code>removeAt</code> method should also return the element of the removed node.'
 );
 ```
 
-Your `removeAt` method should return `null` and the linked list should not change if the given index is less than `0`.
+如果给定索引小于`0`则`removeAt`方法也应返回`null`
 
 ```js
 assert(
@@ -105,17 +67,13 @@ assert(
     test.add('cat');
     test.add('dog');
     test.add('kitten');
-    var removedItem = test.removeAt(-1);
-    return (
-      removedItem === null &&
-      JSON.stringify(test.head()) ===
-        '{"element":"cat","next":{"element":"dog","next":{"element":"kitten","next":null}}}'
-    );
-  })()
+    return test.removeAt(-1) === null;
+  })(),
+  'Your <code>removeAt</code> method should also return <code>null</code> if the given index is less than <code>0</code>'
 );
 ```
 
-Your `removeAt` method should return `null` and the linked list should not change if the given index is greater than or equal to the `length` of the list.
+如果给定索引等于或大于链表的`length` ，则`removeAt`方法也应返回`null` 。
 
 ```js
 assert(
@@ -124,119 +82,11 @@ assert(
     test.add('cat');
     test.add('dog');
     test.add('kitten');
-    var removedItem = test.removeAt(3);
-    return (
-      removedItem === null &&
-      JSON.stringify(test.head()) ===
-        '{"element":"cat","next":{"element":"dog","next":{"element":"kitten","next":null}}}'
-    );
-  })()
+    return test.removeAt(3) === null;
+  })(),
+  'Your <code>removeAt</code> method should also return <code>null</code> if the given index is equal or more than the <code>length</code> of the linked list.'
 );
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function LinkedList() {
-  var length = 0;
-  var head = null;
-
-  var Node = function(element){
-    this.element = element;
-    this.next = null;
-  };
-
-  this.size = function(){
-    return length;
-  };
-
-  this.head = function(){
-    return head;
-  };
-
-  this.add = function(element){
-    var node = new Node(element);
-    if(head === null){
-      head = node;
-    } else {
-      var currentNode = head;
-
-      while(currentNode.next){
-        currentNode  = currentNode.next;
-      }
-
-      currentNode.next = node;
-    }
-
-    length++;
-  };
-
-  // Only change code below this line
-
-  // Only change code above this line
-}
 ```
 
 # --solutions--
 
-```js
-function LinkedList() {
-  var length = 0;
-  var head = null;
-
-  var Node = function (element) {
-    this.element = element;
-    this.next = null;
-  };
-
-  this.size = function () {
-    return length;
-  };
-
-  this.head = function () {
-    return head;
-  };
-
-  this.add = function (element) {
-    var node = new Node(element);
-    if (head === null) {
-      head = node;
-    } else {
-      var currentNode = head;
-
-      while (currentNode.next) {
-        currentNode = currentNode.next;
-      }
-
-      currentNode.next = node;
-    }
-
-    length++;
-  };
-
-  this.removeAt = function (index) {
-    var currentNode = head;
-    var previous = head;
-    var count = 0;
-    if (index >= length || index < 0) {
-      return null;
-    }
-    if (index === 0) {
-      var removed = head.element;
-      head = currentNode.next;
-    } else {
-      while (count < index) {
-        previous = currentNode;
-        currentNode = currentNode.next;
-        count++;
-      }
-      var removed = previous.next.element;
-      previous.next = currentNode.next;
-    }
-    length--;
-    return removed;
-  };
-}
-```

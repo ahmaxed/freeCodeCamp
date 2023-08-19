@@ -1,33 +1,16 @@
 ---
 id: bd7158d8c442eddfaeb5bd10
-title: Show the Local Weather
+title: 显示当地天气
 challengeType: 3
-forumTopicId: 302368
-dashedName: show-the-local-weather
+videoUrl: ''
 ---
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/bELRjV>.
+**目标：** 构建一个功能类似于此的[CodePen.io](https://codepen.io)应用程序： [https](https://codepen.io/freeCodeCamp/full/bELRjV) **：** [//codepen.io/freeCodeCamp/full/bELRjV](https://codepen.io) 。 **规则＃1：** 不要查看示例项目的代码。自己搞清楚。 **规则＃2：** 完成以下[用户故事](https://en.wikipedia.org/wiki/User_story) 。使用您需要的任何库或API。给它你自己的个人风格。 **用户故事：** 我可以在当前位置看到天气。 **用户故事：** 根据天气情况，我可以看到不同的图标或背景图像（例如雪山，炎热的沙漠）。 **用户故事：** 我可以按一个按钮在华氏温度和摄氏温度之间切换。 **注意：** 许多Internet浏览器现在需要HTTP Secure（ `https://` ）连接才能通过HTML5 Geolocation获取用户的语言环境。因此，我们建议使用HTML5 Geolocation获取用户位置，然后使用freeCodeCamp Weather API <https://fcc-weather-api.glitch.me> ，该API使用HTTP安全连接进行天气预报。此外，请务必通过`https://`连接到[CodePen.io](https://codepen.io) 。如果卡住，请记得使用[Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck-coding/19514) 。完成后，单击“我已完成此挑战”按钮并包含指向CodePen的链接。您可以通过Facebook上的朋友分享您的项目反馈。
 
-**Rule #1:** Don't look at the example project's code. Figure it out for yourself.
+# --hints--
 
-**Rule #2:** Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
-
-**User Story:** I can see the weather in my current location.
-
-**User Story:** I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.
-
-**User Story:** I can push a button to toggle between Fahrenheit and Celsius.
-
-**Note:** Many internet browsers now require an HTTP Secure (`https://`) connection to obtain a user's locale via HTML5 Geolocation. For this reason, we recommend using HTML5 Geolocation to get user location and then use the freeCodeCamp Weather API <https://weather-proxy.freecodecamp.rocks/> which uses an HTTP Secure connection for the weather. Also, be sure to connect to [CodePen.io](https://codepen.io) via `https://`.
-
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
-
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 
-```js
-// solution required
-```

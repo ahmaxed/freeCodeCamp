@@ -1,48 +1,31 @@
 ---
 id: 5900f4d31000cf542c50ffe6
-title: 'Problem 359: Hilbert''s New Hotel'
+title: 问题359：希尔伯特的新酒店
 challengeType: 5
-forumTopicId: 302019
-dashedName: problem-359-hilberts-new-hotel
+videoUrl: ''
 ---
 
 # --description--
 
-An infinite number of people (numbered 1, 2, 3, etc.) are lined up to get a room at Hilbert's newest infinite hotel. The hotel contains an infinite number of floors (numbered 1, 2, 3, etc.), and each floor contains an infinite number of rooms (numbered 1, 2, 3, etc.).
+无数人（编号1,2,3等）排成一列，在希尔伯特最新的无限酒店找到一个房间。酒店包含无限数量的楼层（编号为1,2,3等），每层楼包含无限数量的房间（编号为1,2,3等）。
 
-Initially the hotel is empty. Hilbert declares a rule on how the nth person is assigned a room: person n gets the first vacant room in the lowest numbered floor satisfying either of the following: the floor is empty the floor is not empty, and if the latest person taking a room in that floor is person m, then m + n is a perfect square
+最初酒店是空的。希尔伯特宣布了关于如何为第n人分配房间的规则：人员在最低编号的楼层中获得满足以下任一项的第一个空置房间：楼层是空的，楼层不是空的，以及最新的人是否占用房间在那个楼层是人m，那么m + n是一个完美的正方形
 
-Person 1 gets room 1 in floor 1 since floor 1 is empty. Person 2 does not get room 2 in floor 1 since 1 + 2 = 3 is not a perfect square. Person 2 instead gets room 1 in floor 2 since floor 2 is empty. Person 3 gets room 2 in floor 1 since 1 + 3 = 4 is a perfect square.
+由于1楼空了，1号人员在1楼获得1号房间。由于1 + 2 = 3不是完美的正方形，因此人2在1楼没有得到2号房间。由于2楼是空的，因此人2在2楼获得1号房间。人3在1楼获得2号房，因为1 + 3 = 4是一个完美的广场。
 
-Eventually, every person in the line gets a room in the hotel.
+最终，该线路中的每个人都在酒店获得一个房间。
 
-Define P(f, r) to be n if person n occupies room r in floor f, and 0 if no person occupies the room. Here are a few examples: P(1, 1) = 1 P(1, 2) = 3 P(2, 1) = 2 P(10, 20) = 440 P(25, 75) = 4863 P(99, 100) = 19454
+如果人n占据楼层f中的房间r，则将P（f，r）定义为n，如果没有人占用房间，则定义为0。以下是一些例子：P（1,1）= 1 P（1,2）= 3 P（2,1）= 2 P（10,20）= 440 P（25,75）= 4863 P（99， 100）= 19454
 
-Find the sum of all P(f, r) for all positive f and r such that f × r = 71328803586048 and give the last 8 digits as your answer.
+找到所有正f和r的所有P（f，r）之和，使得f×r = 71328803586048，并将最后8位数作为答案。
 
 # --hints--
 
-`euler359()` should return 40632119.
+`euler359()`应该返回40632119。
 
 ```js
 assert.strictEqual(euler359(), 40632119);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler359() {
-
-  return true;
-}
-
-euler359();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

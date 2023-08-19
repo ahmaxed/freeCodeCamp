@@ -3,7 +3,6 @@ id: 587d7dad367417b2b2512b78
 title: Use a Constructor to Create Objects
 challengeType: 1
 forumTopicId: 18233
-dashedName: use-a-constructor-to-create-objects
 ---
 
 # --description--
@@ -15,26 +14,25 @@ function Bird() {
   this.name = "Albert";
   this.color  = "blue";
   this.numLegs = 2;
+  // "this" inside the constructor always refers to the object being created
 }
 
 let blueBird = new Bird();
 ```
 
-**NOTE:** `this` inside the constructor always refers to the object being created.
-
 Notice that the `new` operator is used when calling a constructor. This tells JavaScript to create a new instance of `Bird` called `blueBird`. Without the `new` operator, `this` inside the constructor would not point to the newly created object, giving unexpected results. Now `blueBird` has all the properties defined inside the `Bird` constructor:
 
 ```js
-blueBird.name;
-blueBird.color;
-blueBird.numLegs;
+blueBird.name; // => Albert
+blueBird.color; // => blue
+blueBird.numLegs; // => 2
 ```
 
 Just like any other object, its properties can be accessed and modified:
 
 ```js
 blueBird.name = 'Elvira';
-blueBird.name;
+blueBird.name; // => Elvira
 ```
 
 # --instructions--

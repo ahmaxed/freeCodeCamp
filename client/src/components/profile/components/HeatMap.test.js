@@ -44,14 +44,14 @@ describe('<HeatMap/>', () => {
   it('calculates the correct longest streak', () => {
     const { getByTestId } = render(<HeatMap {...props} />);
     expect(getByTestId('longest-streak').textContent).toContain(
-      'profile.longest-streak'
+      'Longest Streak: 2'
     );
   });
 
   it('calculates the correct current streak', () => {
     const { getByTestId } = render(<HeatMap {...props} />);
     expect(getByTestId('current-streak').textContent).toContain(
-      'profile.current-streak'
+      'Current Streak: 1'
     );
   });
 });

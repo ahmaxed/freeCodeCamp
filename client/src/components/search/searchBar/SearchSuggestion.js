@@ -11,11 +11,15 @@ const Suggestion = ({ hit, handleMouseEnter, handleMouseLeave }) => {
           ? 'fcc_suggestion_footer fcc_suggestion_item'
           : 'fcc_suggestion_item'
       }
-      href={hit.url}
+      href={
+        dropdownFooter
+          ? `https://www.freecodecamp.org/news/search/?query=${encodeURIComponent(
+              hit.query
+            )}`
+          : hit.url
+      }
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      rel='noopener noreferrer'
-      target='_blank'
     >
       <span className='hit-name'>
         {dropdownFooter ? (

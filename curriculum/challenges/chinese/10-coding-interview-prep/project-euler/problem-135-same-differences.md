@@ -1,44 +1,21 @@
 ---
 id: 5900f3f31000cf542c50ff06
-title: 'Problem 135: Same differences'
+title: 问题135：同样的差异
 challengeType: 5
-forumTopicId: 301763
-dashedName: problem-135-same-differences
+videoUrl: ''
 ---
 
 # --description--
 
-Given the positive integers, x, y, and z, are consecutive terms of an arithmetic progression, the least value of the positive integer, n, for which the equation, x2 − y2 − z2 = n, has exactly two solutions is n = 27:
-
-342 − 272 − 202 = 122 − 92 − 62 = 27
-
-It turns out that n = 1155 is the least value which has exactly ten solutions.
-
-How many values of n less than one million have exactly ten distinct solutions?
+给定正整数，x，y和z是算术级数的连续项，正整数n的最小值，其中等式x2-y2-z2 = n，恰好有两个解是n = 27：342 - 272 - 202 = 122 - 92 - 62 = 27事实证明，n = 1155是具有正好十个解的最小值。 n不到一百万的多少个值有十个不同的解？
 
 # --hints--
 
-`euler135()` should return 4989.
+`euler135()`应该返回4989。
 
 ```js
 assert.strictEqual(euler135(), 4989);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler135() {
-
-  return true;
-}
-
-euler135();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

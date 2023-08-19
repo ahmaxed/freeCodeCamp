@@ -3,7 +3,6 @@ id: 597b2b2a2702b44414742771
 title: Factorial
 challengeType: 5
 forumTopicId: 302263
-dashedName: factorial
 ---
 
 # --description--

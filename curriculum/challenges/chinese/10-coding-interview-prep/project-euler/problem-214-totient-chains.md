@@ -1,48 +1,29 @@
 ---
 id: 5900f4421000cf542c50ff55
-title: 'Problem 214: Totient Chains'
+title: 问题214个欧拉链
 challengeType: 5
-forumTopicId: 301856
-dashedName: problem-214-totient-chains
+videoUrl: ''
 ---
 
 # --description--
 
-Let φ be Euler's totient function, i.e. for a natural number n,
+设φ是欧拉的函数，即对于自然数n，φ（n）是k的数，1≤k≤n，gcd（k，n）= 1。
 
-φ(n) is the number of k, 1 ≤ k ≤ n, for which gcd(k,n) = 1.
+通过迭代φ，每个正整数产生以1结尾的数字递减的链。例如，如果我们从5开始，则生成序列5,4,2,1。以下列出了长度为4的所有链条：
 
-By iterating φ, each positive integer generates a decreasing chain of numbers ending in 1. E.g. if we start with 5 the sequence 5,4,2,1 is generated. Here is a listing of all chains with length 4:
+5,4,2,1 7,6,2,1 8,4,2,1 9,6,2,1 10,4,2,1 12,4,2,1 14,6,2,1 18 ，6,2,1
 
-5,4,2,1 7,6,2,1 8,4,2,1 9,6,2,1 10,4,2,1 12,4,2,1 14,6,2,1 18,6,2,1
+这些链中只有两个以素数开头，它们的总和为12。
 
-Only two of these chains start with a prime, their sum is 12.
-
-What is the sum of all primes less than 40000000 which generate a chain of length 25?
+所有小于40000000的素数的总和是多少，它产生一个长度为25的链？
 
 # --hints--
 
-`euler214()` should return 1677366278943.
+`euler214()`应该返回1677366278943。
 
 ```js
 assert.strictEqual(euler214(), 1677366278943);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler214() {
-
-  return true;
-}
-
-euler214();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

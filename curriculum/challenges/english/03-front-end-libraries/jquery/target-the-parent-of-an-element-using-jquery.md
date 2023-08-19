@@ -3,7 +3,6 @@ id: bad87fee1348bd9aed308826
 title: Target the Parent of an Element Using jQuery
 challengeType: 6
 forumTopicId: 18321
-dashedName: target-the-parent-of-an-element-using-jquery
 ---
 
 # --description--
@@ -16,9 +15,7 @@ jQuery has a function called `parent()` that allows you to access the parent of 
 
 Here's an example of how you would use the `parent()` function if you wanted to give the parent element of the `left-well` element a background color of blue:
 
-```js
-$("#left-well").parent().css("background-color", "blue")
-```
+`$("#left-well").parent().css("background-color", "blue")`
 
 Give the parent of the `#target1` element a background-color of red.
 

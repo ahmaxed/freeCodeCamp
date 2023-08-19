@@ -2,7 +2,6 @@
 id: 5f45a276c093334f0f6e9df4
 title: Part 75
 challengeType: 0
-dashedName: part-75
 ---
 
 # --description--

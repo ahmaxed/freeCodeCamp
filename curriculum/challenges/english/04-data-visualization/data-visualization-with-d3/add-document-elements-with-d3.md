@@ -3,7 +3,6 @@ id: 587d7fa6367417b2b2512bc2
 title: Add Document Elements with D3
 challengeType: 6
 forumTopicId: 301474
-dashedName: add-document-elements-with-d3
 ---
 
 # --description--
@@ -12,11 +11,9 @@ D3 has several methods that let you add and change elements in your document.
 
 The `select()` method selects one element from the document. It takes an argument for the name of the element you want and returns an HTML node for the first element in the document that matches the name. Here's an example:
 
-```js
-const anchor = d3.select("a");
-```
+`const anchor = d3.select("a");`
 
-The above example finds the first anchor tag on the page and saves an HTML node for it in the variable `anchor`. You can use the selection with other methods. The `d3` part of the example is a reference to the D3 object, which is how you access D3 methods.
+The above example finds the first anchor tag on the page and saves an HTML node for it in the variable `anchor`. You can use the selection with other methods. The "d3" part of the example is a reference to the D3 object, which is how you access D3 methods.
 
 Two other useful methods are `append()` and `text()`.
 
@@ -36,7 +33,7 @@ D3 allows you to chain several methods together with periods to perform a number
 
 # --instructions--
 
-Use the `select` method to select the `body` tag in the document. Then `append` an `h1` tag to it, and add the text `Learning D3` into the `h1` element.
+Use the `select` method to select the `body` tag in the document. Then `append` an `h1` tag to it, and add the text "Learning D3" into the `h1` element.
 
 # --hints--
 
@@ -46,7 +43,7 @@ The `body` should have one `h1` element.
 assert($('body').children('h1').length == 1);
 ```
 
-The `h1` element should have the text `Learning D3` in it.
+The `h1` element should have the text "Learning D3" in it.
 
 ```js
 assert($('h1').text() == 'Learning D3');

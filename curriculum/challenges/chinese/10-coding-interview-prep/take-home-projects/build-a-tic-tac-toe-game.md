@@ -1,29 +1,16 @@
 ---
 id: bd7158d8c442eedfaeb5bd1c
-title: Build a Tic Tac Toe Game
+title: 建立一个Tic Tac Toe游戏
 challengeType: 3
-forumTopicId: 302358
-dashedName: build-a-tic-tac-toe-game
+videoUrl: ''
 ---
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/KzXQgy/>.
+**目标：** 构建一个功能类似于此的[CodePen.io](https://codepen.io)应用程序： [https](https://codepen.io/freeCodeCamp/full/KzXQgy/) **：** [//codepen.io/freeCodeCamp/full/KzXQgy/](https://codepen.io) 。完成以下[用户故事](https://en.wikipedia.org/wiki/User_story) 。使用您需要的任何库或API。给它你自己的个人风格。 **用户故事：** 我可以用电脑玩Tic Tac Toe游戏。 **用户故事：** 我的游戏一旦结束就会重置，所以我可以再玩一次。 **用户故事：** 我可以选择是否要播放为X或O.如果卡住，请记得使用[Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck-coding/19514) 。完成后，单击“我已完成此挑战”按钮并包含指向CodePen的链接。您可以通过Facebook上的朋友分享您的项目反馈。
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+# --hints--
 
-**User Story:** I can play a game of Tic Tac Toe with the computer.
-
-**User Story:** My game will reset as soon as it's over so I can play again.
-
-**User Story:** I can choose whether I want to play as X or O.
-
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
-
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 
-```js
-// solution required
-```

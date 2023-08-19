@@ -2,7 +2,6 @@
 id: 5f769541be494f25449b292f
 title: Part 34
 challengeType: 0
-dashedName: part-34
 ---
 
 # --description--

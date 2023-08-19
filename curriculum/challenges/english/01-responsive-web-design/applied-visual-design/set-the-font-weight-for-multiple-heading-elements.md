@@ -4,7 +4,6 @@ title: Set the font-weight for Multiple Heading Elements
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/crVWRHq'
 forumTopicId: 301069
-dashedName: set-the-font-weight-for-multiple-heading-elements
 ---
 
 # --description--

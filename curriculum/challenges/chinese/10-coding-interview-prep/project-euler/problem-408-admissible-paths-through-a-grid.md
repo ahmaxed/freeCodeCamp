@@ -1,46 +1,27 @@
 ---
 id: 5900f5091000cf542c51001b
-title: 'Problem 408: Admissible paths through a grid'
+title: 问题408：通过网格的可允许路径
 challengeType: 5
-forumTopicId: 302076
-dashedName: problem-408-admissible-paths-through-a-grid
+videoUrl: ''
 ---
 
 # --description--
 
-Let's call a lattice point (x, y) inadmissible if x, y and x + y are all positive perfect squares.
+如果x，y和x + y都是正的正方形，那么我们称格子点（x，y）是不允许的。例如，（9,16）是不允许的，而（0,4），（3,1）和（9,4）则不允许。
 
-For example, (9, 16) is inadmissible, while (0, 4), (3, 1) and (9, 4) are not.
+考虑从点（x1，y1）到点（x2，y2）的路径，仅使用北或东的单位步长。如果其中间点都不允许，我们可以称这样的路径是可以接受的。
 
-Consider a path from point (x1, y1) to point (x2, y2) using only unit steps north or east. Let's call such a path admissible if none of its intermediate points are inadmissible.
+令P（n）是从（0,0）到（n，n）的可允许路径的数量。可以证实P（5）= 252，P（16）= 596994440和P（1000）mod 1 000 000 007 = 341920854。
 
-Let P(n) be the number of admissible paths from (0, 0) to (n, n). It can be verified that P(5) = 252, P(16) = 596994440 and P(1000) mod 1 000 000 007 = 341920854.
-
-Find P(10 000 000) mod 1 000 000 007.
+求P（10 000 000）mod 1 000 000 007。
 
 # --hints--
 
-`euler408()` should return 299742733.
+`euler408()`应该返回299742733。
 
 ```js
 assert.strictEqual(euler408(), 299742733);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler408() {
-
-  return true;
-}
-
-euler408();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

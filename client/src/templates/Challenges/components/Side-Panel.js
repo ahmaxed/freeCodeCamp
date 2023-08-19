@@ -22,16 +22,14 @@ const mapStateToProps = createSelector(
 );
 
 const propTypes = {
-  block: PropTypes.string,
   description: PropTypes.string,
   guideUrl: PropTypes.string,
   instructions: PropTypes.string,
   isChallengeCompleted: PropTypes.bool,
+  section: PropTypes.string,
   showToolPanel: PropTypes.bool,
-  superBlock: PropTypes.string,
   tests: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string,
-  translationPending: PropTypes.bool.isRequired,
   videoUrl: PropTypes.string
 };
 
@@ -40,17 +38,14 @@ export class SidePanel extends Component {
     const MathJax = global.MathJax;
     const mathJaxMountPoint = document.querySelector('#mathjax');
     const mathJaxChallenge =
-      this.props.block === 'rosetta-code' ||
-      this.props.block === 'project-euler';
+      this.props.section === 'rosetta-code' ||
+      this.props.section === 'project-euler';
     if (MathJax) {
       // Configure MathJax when it's loaded and
       // users navigate from another challenge
       MathJax.Hub.Config({
         tex2jax: {
-          inlineMath: [
-            ['$', '$'],
-            ['\\(', '\\)']
-          ],
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
           processEscapes: true,
           processClass: 'rosetta-code|project-euler'
         }
@@ -68,33 +63,26 @@ export class SidePanel extends Component {
 
   render() {
     const {
-      block,
       title,
       description,
       instructions,
       isChallengeCompleted,
       guideUrl,
       tests,
+      section,
       showToolPanel,
-      superBlock,
-      translationPending,
       videoUrl
     } = this.props;
     return (
       <div className='instructions-panel' role='complementary' tabIndex='-1'>
         <div>
-          <ChallengeTitle
-            block={block}
-            isCompleted={isChallengeCompleted}
-            superBlock={superBlock}
-            translationPending={translationPending}
-          >
+          <ChallengeTitle isCompleted={isChallengeCompleted}>
             {title}
           </ChallengeTitle>
           <ChallengeDescription
-            block={block}
             description={description}
             instructions={instructions}
+            section={section}
           />
         </div>
         {showToolPanel && <ToolPanel guideUrl={guideUrl} videoUrl={videoUrl} />}

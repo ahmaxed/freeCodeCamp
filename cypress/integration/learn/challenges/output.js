@@ -15,27 +15,30 @@ const locations = {
 
 const defaultOutput = `
 /**
-* Your test output will go here
+* Your test output will go here.
 */`;
 
 const runningOutput = '// running tests';
 const finishedOutput = '// tests completed';
 
-describe('Classic challenge', function () {
-  before(() => {
+describe('Classic challenge', function() {
+  it('renders', () => {
     cy.visit(locations.index);
-  });
 
-  it('renders the default output text', () => {
     cy.title().should(
       'eq',
       'Learn Basic HTML and HTML5: Say Hello to HTML Elements |' +
         ' freeCodeCamp.org'
     );
+  });
+
+  it('renders the default output text', () => {
+    cy.visit(locations.index);
     cy.get(selectors.defaultOutput).contains(defaultOutput);
   });
 
   it('shows test output when the tests are run', () => {
+    cy.visit(locations.index);
     // first wait for the editor to load
     cy.get(selectors.editor, { timeout: 15000 });
     cy.get(selectors.runTestsButton)
@@ -48,10 +51,9 @@ describe('Classic challenge', function () {
   });
 
   it('shows test output when the tests are triggered by the keyboard', () => {
+    cy.visit(locations.index);
     // first wait for the editor to load
-    cy.get(selectors.editor, {
-      timeout: 15000
-    });
+    cy.get(selectors.editor, { timeout: 15000 });
     cy.get(selectors.hotkeys)
       .focus()
       .type('{ctrl}{enter}')

@@ -4,7 +4,6 @@ title: Add Borders Around Your Elements
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c2MvnHZ'
 forumTopicId: 16630
-dashedName: add-borders-around-your-elements
 ---
 
 # --description--
@@ -29,9 +28,7 @@ Create a class called `thick-green-border`. This class should add a 10px, solid,
 
 Remember that you can apply multiple classes to an element using its `class` attribute, by separating each class name with a space. For example:
 
-```html
-<img class="class1 class2">
-```
+`<img class="class1 class2">`
 
 # --hints--
 

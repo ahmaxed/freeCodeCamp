@@ -4,7 +4,6 @@ title: Make an Image Responsive
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pzrPu4/cz763UD'
 forumTopicId: 301140
-dashedName: make-an-image-responsive
 ---
 
 # --description--

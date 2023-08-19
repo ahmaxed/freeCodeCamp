@@ -1,100 +1,73 @@
 ---
 id: 5900f3ac1000cf542c50febf
-title: 'Problem 64: Odd period square roots'
+title: 问题64：奇数期平方根
 challengeType: 5
-forumTopicId: 302176
-dashedName: problem-64-odd-period-square-roots
+videoUrl: ''
 ---
 
 # --description--
 
-All square roots are periodic when written as continued fractions and can be written in the form:
+所有平方根都是周期性的，当写为连续分数时，可以写成以下形式：
 
-$\\displaystyle \\quad \\quad \\sqrt{N}=a_0+\\frac 1 {a_1+\\frac 1 {a_2+ \\frac 1 {a3+ \\dots}}}$
+√N= a0 + 1
 
-For example, let us consider $\\sqrt{23}:$:
+a1 + 1
 
-$\\quad \\quad \\sqrt{23}=4+\\sqrt{23}-4=4+\\frac 1 {\\frac 1 {\\sqrt{23}-4}}=4+\\frac 1 {1+\\frac{\\sqrt{23}-3}7}$
+a2 + 1
 
-If we continue we would get the following expansion:
+a3 + ......
 
-$\\displaystyle \\quad \\quad \\sqrt{23}=4+\\frac 1 {1+\\frac 1 {3+ \\frac 1 {1+\\frac 1 {8+ \\dots}}}}$
+例如，让我们考虑√23：
 
-The process can be summarized as follows:
+√23= 4 +√23 - 4 = 4 + 1 = 4 + 1
 
-$\\quad \\quad a_0=4, \\frac 1 {\\sqrt{23}-4}=\\frac {\\sqrt{23}+4} 7=1+\\frac {\\sqrt{23}-3} 7$
+1√23-4
 
-$\\quad \\quad a_1=1, \\frac 7 {\\sqrt{23}-3}=\\frac {7(\\sqrt{23}+3)} {14}=3+\\frac {\\sqrt{23}-3} 2$
+1 +√23 - 37
 
-$\\quad \\quad a_2=3, \\frac 2 {\\sqrt{23}-3}=\\frac {2(\\sqrt{23}+3)} {14}=1+\\frac {\\sqrt{23}-4} 7$
+如果我们继续，我们将得到以下扩展：
 
-$\\quad \\quad a_3=1, \\frac 7 {\\sqrt{23}-4}=\\frac {7(\\sqrt{23}+4)} 7=8+\\sqrt{23}-4$
+√23= 4 + 1
 
-$\\quad \\quad a_4=8, \\frac 1 {\\sqrt{23}-4}=\\frac {\\sqrt{23}+4} 7=1+\\frac {\\sqrt{23}-3} 7$
+1 + 1
 
-$\\quad \\quad a_5=1, \\frac 7 {\\sqrt{23}-3}=\\frac {7 (\\sqrt{23}+3)} {14}=3+\\frac {\\sqrt{23}-3} 2$
+3 + 1
 
-$\\quad \\quad a_6=3, \\frac 2 {\\sqrt{23}-3}=\\frac {2(\\sqrt{23}+3)} {14}=1+\\frac {\\sqrt{23}-4} 7$
+1 + 1
 
-$\\quad \\quad a_7=1, \\frac 7 {\\sqrt{23}-4}=\\frac {7(\\sqrt{23}+4)} {7}=8+\\sqrt{23}-4$
+8 + ......
 
-It can be seen that the sequence is repeating. For conciseness, we use the notation $\\sqrt{23}=\[4;(1,3,1,8)]$, to indicate that the block (1,3,1,8) repeats indefinitely.
+该过程可归纳如下：
 
-The first ten continued fraction representations of (irrational) square roots are:
+a0 = 4，
 
-$\\quad \\quad \\sqrt{2}=\[1;(2)]$, period = 1
+1√23-4=√23+ 47 = 1 +√23-37a1 = 1，
 
-$\\quad \\quad \\sqrt{3}=\[1;(1,2)]$, period = 2
+7√23-3= 7（√23+ 3）14 = 3 +√23-32a2= 3，
 
-$\\quad \\quad \\sqrt{5}=\[2;(4)]$, period = 1
+2√23-3= 2（√23+ 3）14 = 1 +√23-47a3 = 1，
 
-$\\quad \\quad \\sqrt{6}=\[2;(2,4)]$, period = 2
+7√23-4= 7（√23+ 4）7 = 8 +√23-4a4= 8，
 
-$\\quad \\quad \\sqrt{7}=\[2;(1,1,1,4)]$, period = 4
+1√23-4=√23+ 47 = 1 +√23-37a5 = 1，
 
-$\\quad \\quad \\sqrt{8}=\[2;(1,4)]$, period = 2
+7√23-3= 7（√23+ 3）14 = 3 +√23-32a6= 3，
 
-$\\quad \\quad \\sqrt{10}=\[3;(6)]$, period = 1
+2√23-3= 2（√23+ 3）14 = 1 +√23-47a7 = 1，
 
-$\\quad \\quad \\sqrt{11}=\[3;(3,6)]$, period = 2
+7√23-4= 7（√23+ 4）7 = 8 +√23-4
 
-$\\quad \\quad \\sqrt{12}=\[3;(2,6)]$, period = 2
+可以看出序列是重复的。为简明起见，我们使用符号√23= \[4;（1,3,1,8）]来表示块（1,3,1,8）无限重复。
 
-$\\quad \\quad \\sqrt{13}=\[3;(1,1,1,1,6)]$, period = 5
-
-Exactly four continued fractions, for $N \\le 13$, have an odd period.
-
-How many continued fractions for $N \\le 10\\,000$ have an odd period?
+（无理）平方根的前十个连续分数表示为：√2= \[1;（2）]，周期=1√3= \[1;（1,2）]，周期=2√5= \[2; （4）]，期间=1√6= \[2;（2,4）]，期间=2√7= \[2;（1,1,1,4）]，期间=4√8= \[2; （1,4）]，期间=2√10= \[3;（6）]，期间=1√11= \[3;（3,6）]，期间=2√12= \[3;（2,6 ）]，period =2√13= \[3;（1,1,1,1,6）]，period = 5对于N≤13，恰好四个连续分数具有奇数周期。 N≤10000的连续分数有多少个奇数周期？
 
 # --hints--
 
-`oddPeriodSqrts()` should return a number.
+`euler64()`应返回1322。
 
 ```js
-assert(typeof oddPeriodSqrts() === 'number');
-```
-
-`oddPeriodSqrts()` should return 1322.
-
-```js
-assert.strictEqual(oddPeriodSqrts(), 1322);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function oddPeriodSqrts() {
-
-  return true;
-}
-
-oddPeriodSqrts();
+assert.strictEqual(euler64(), 1322);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

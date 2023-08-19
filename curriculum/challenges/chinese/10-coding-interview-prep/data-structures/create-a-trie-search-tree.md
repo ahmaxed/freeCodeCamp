@@ -1,22 +1,17 @@
 ---
 id: 587d8259367417b2b2512c84
-title: Create a Trie Search Tree
+title: 创建Trie搜索树
 challengeType: 1
-forumTopicId: 301634
-dashedName: create-a-trie-search-tree
+videoUrl: ''
 ---
 
 # --description--
 
-Here we will move on from binary search trees and take a look at another type of tree structure called a trie. A trie is an ordered search tree commonly used to hold strings, or more generically associative arrays or dynamic datasets in which the keys are strings. They are very good at storing sets of data when many keys will have overlapping prefixes, for example, all the words in a dictionary. Unlike a binary tree, nodes are not associated with actual values. Instead, the path to a node represents a specific key. For instance, if we wanted to store the string code in a trie, we would have four nodes, one for each letter: c — o — d — e. Following that path through all these nodes will then create code as a string — that path is the key we stored. Then, if we wanted to add the string coding, it would share the first three nodes of code before branching away after the d. In this way, large datasets can be stored very compactly. In addition, search can be very quick because it is effectively limited to the length of the string you are storing. Furthermore, unlike binary trees a node can store any number of child nodes. As you might have guessed from the above example, some metadata is commonly stored at nodes that hold the end of a key so that on later traversals that key can still be retrieved. For instance, if we added codes in our example above we would need some way to know that the e in code represents the end of a key that was previously entered. Otherwise, this information would effectively be lost when we add codes.
-
-# --instructions--
-
-Let's create a trie to store words. It will accept words through an `add` method and store these in a trie data structure. It will also allow us to query if a given string is a word with an `isWord` method, and retrieve all the words entered into the trie with a `print` method. `isWord` should return a boolean value and print should return an array of all these words as string values. In order for us to verify that this data structure is implemented correctly, we've provided a `Node` structure for each node in the tree. Each node will be an object with a `keys` property which is a JavaScript Map object. This will hold the individual letters that are valid keys of each node. We've also created an `end` property on the nodes that can be set to `true` if the node represents the termination of a word.
+在这里，我们将继续从二叉搜索树开始，看看另一种称为trie的树结构。 trie是一种常用于保存字符串的有序搜索树，或者更通用的关联数组或其中键是字符串的动态数据集。当许多键具有重叠前缀时，它们非常擅长存储数据集，例如，字典中的所有单词。与二叉树不同，节点不与实际值相关联。相反，节点的路径表示特定的键。例如，如果我们想将字符串代码存储在trie中，我们将有四个节点，每个字母对应一个节点：c - o - d - e。然后，通过所有这些节点的路径将创建代码作为字符串 - 该路径是我们存储的密钥。然后，如果我们想要添加字符串编码，它将在d之后分支之前共享前三个代码节点。通过这种方式，可以非常紧凑地存储大型数据集。此外，搜索可以非常快，因为它实际上限于您存储的字符串的长度。此外，与二叉树不同，节点可以存储任意数量的子节点。正如您可能从上面的示例中猜到的那样，一些元数据通常存储在保存密钥结尾的节点上，以便在以后的遍历中仍可以检索密钥。例如，如果我们在上面的示例中添加了代码，我们需要某种方式来知道代码中的e代表先前输入的密钥的结尾。否则，当我们添加代码时，这些信息将会丢失。说明：让我们创建一个存储单词的trie。它将通过add方法接受单词并将它们存储在trie数据结构中。它还允许我们查询给定字符串是否是带有isWord方法的单词，并使用print方法检索输入到trie中的所有单词。 isWord应该返回一个布尔值，print应该将所有这些单词的数组作为字符串值返回。为了让我们验证这个数据结构是否正确实现，我们为树中的每个节点提供了一个Node结构。每个节点都是一个具有keys属性的对象，该属性是JavaScript Map对象。这将保存作为每个节点的有效密钥的各个字母。我们还在节点上创建了一个end属性，如果节点表示单词的终止，则可以将其设置为true。
 
 # --hints--
 
-The Trie should have an add method.
+Trie有一个add方法。
 
 ```js
 assert(
@@ -32,7 +27,7 @@ assert(
 );
 ```
 
-The Trie should have a print method.
+Trie有一种打印方法。
 
 ```js
 assert(
@@ -48,7 +43,7 @@ assert(
 );
 ```
 
-The Trie should have an isWord method.
+Trie有一个isWord方法。
 
 ```js
 assert(
@@ -64,7 +59,7 @@ assert(
 );
 ```
 
-The print method should return all items added to the trie as strings in an array.
+print方法将添加到trie的所有项目作为数组中的字符串返回。
 
 ```js
 assert(
@@ -93,7 +88,7 @@ assert(
 );
 ```
 
-The isWord method should return true only for words added to the trie and false for all other words.
+isWord方法仅对添加到trie的单词返回true，对所有其他单词返回false。
 
 ```js
 assert(
@@ -121,31 +116,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
-var Node = function() {
-  this.keys = new Map();
-  this.end = false;
-  this.setEnd = function() {
-    this.end = true;
-  };
-  this.isEnd = function() {
-    return this.end;
-  };
-};
-var Trie = function() {
-  // Only change code below this line
-
-  // Only change code above this line
-};
-```
-
 # --solutions--
 
-```js
-// solution required
-```

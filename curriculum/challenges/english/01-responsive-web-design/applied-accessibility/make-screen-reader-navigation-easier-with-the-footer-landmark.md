@@ -4,7 +4,6 @@ title: Make Screen Reader Navigation Easier with the footer Landmark
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/crVrDh8'
 forumTopicId: 301022
-dashedName: make-screen-reader-navigation-easier-with-the-footer-landmark
 ---
 
 # --description--

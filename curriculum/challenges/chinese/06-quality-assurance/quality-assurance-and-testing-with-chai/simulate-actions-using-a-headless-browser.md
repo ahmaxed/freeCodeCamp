@@ -1,69 +1,108 @@
 ---
-id: 587d824f367417b2b2512c5c
-title: 使用无头浏览器模拟操作
+id: 5f8884f4c46685731aabfc41
+title: Simulate Actions Using a Headless Browser
 challengeType: 2
-dashedName: simulate-actions-using-a-headless-browser
 ---
 
 # --description--
 
-请注意，本项目在[这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
-
-在接下来的挑战中，我们将使用名为 “Headless Browser（无头浏览器）” 的设备模拟人与页面的交互。
-
-无头浏览器是没有图形用户界面的 Web 浏览器。 这种工具对于测试网页特别有用，因为它能够以与浏览器相同的方式呈现和理解 HTML、CSS 和 JavaScript。
-
-针对这些挑战，我们使用 Zombie.JS。 它是一个轻量级浏览器，完全基于 JS，而不需要额外的二进制文件来安装。 这个功能使我们可以在 Repl.it 等环境中使用它。 还有许多其他（更强大的）选择。
-
-Mocha 允许你在实际测试之前准备一些代码运行的基础。 这可能有助于例如在数据库中创建项目，用于连续测试。
-
-使用无头浏览器，在进行实际测试之前，我们需要**访问**我们将要检查的页面。 `suiteSetup` “hook” 仅在套件启动时执行。 其他不同的钩子类型可以在每次测试之前、每次测试之后或者在套件的末尾执行。 更多信息请参阅 Mocha 文档。
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 # --instructions--
 
-在 `tests/2_functional-tests.js`中，紧接着 `Browser` 声明之后，将你的项目 URL 添加到变量的 `site` 属性：
+Within `tests/2_functional-tests.js`, in the `'submit "surname" : "Vespucci" - write your e2e test...'` test (`// #6`), automate filling-in and submitting the form from scratch:
 
-```js
-Browser.site = 'https://sincere-cone.gomix.me'; // Your URL here
-```
+1.  Fill in the form with the `surname` of `Vespucci`
+2.  Submit it pressing `'submit'` button
 
-如果你在本地环境中测试，则替换上面的代码为：
+Within the callback:
 
-```js
-Browser.localhost('example.com', process.env.PORT || 3000);
-```
+1.  assert that status is `200`
+2.  assert that the text inside the element `span#name` is `'Amerigo'`
+3.  assert that the text inside the element `span#surname` is `'Vespucci'`
+4.  assert that the element(s) `span#dates` exist and their count is `1`
 
-在 `tests/2_functional-tests.js` 中，在 `'Functional Tests with Zombie.js'` 套件的底部，使用以下代码实例化一个新的 `Browser` 对象：
-
-```js
-const browser = new Browser();
-```
-
-然后，通过以下代码，使用 `suiteSetup` 钩子把 `browser` 指向 `/` 路由：
-
-```js
-suiteSetup(function(done) {
-  return browser.visit('/', done);
-});
-```
+Do not forget to to remove the `assert.fail()` call.
 
 # --hints--
 
-应通过所有测试。
+All tests should pass.
 
 ```js
 (getUserInput) =>
-  $.get(getUserInput('url') + '/_api/get-tests?type=functional').then(
+  $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=6').then(
     (data) => {
-      data.slice(0, 4).forEach((test) => {
-        assert.equal(test.state, 'passed');
-      })
+      assert.equal(data.state, 'passed');
     },
     (xhr) => {
       throw new Error(xhr.responseText);
     }
   );
 ```
+
+You should assert that the headless browser request succeeded.
+
+```js
+(getUserInput) =>
+  $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=6').then(
+    (data) => {
+      assert.equal(data.assertions[0].method, 'browser.success');
+    },
+    (xhr) => {
+      throw new Error(xhr.responseText);
+    }
+  );
+```
+
+You should assert that the text inside the element 'span#name' is 'Amerigo'.
+
+```js
+(getUserInput) =>
+  $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=6').then(
+    (data) => {
+      assert.equal(data.assertions[1].method, 'browser.text');
+      assert.match(data.assertions[1].args[0], /('|")span#name\1/);
+      assert.match(data.assertions[1].args[1], /('|")Amerigo\1/);
+    },
+    (xhr) => {
+      throw new Error(xhr.responseText);
+    }
+  );
+```
+
+You should assert that the text inside the element 'span#surname' is 'Vespucci'.
+
+```js
+(getUserInput) =>
+  $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=6').then(
+    (data) => {
+      assert.equal(data.assertions[2].method, 'browser.text');
+      assert.match(data.assertions[2].args[0], /('|")span#surname\1/);
+      assert.match(data.assertions[2].args[1], /('|")Vespucci\1/);
+    },
+    (xhr) => {
+      throw new Error(xhr.responseText);
+    }
+  );
+```
+
+You should assert that the element 'span#dates' exist and its count is 1.
+
+```js
+(getUserInput) =>
+  $.get(getUserInput('url') + '/_api/get-tests?type=functional&n=6').then(
+    (data) => {
+      assert.equal(data.assertions[3].method, 'browser.element');
+      assert.match(data.assertions[3].args[0], /('|")span#dates\1/);
+      assert.equal(data.assertions[3].args[1], 1);
+    },
+    (xhr) => {
+      throw new Error(xhr.responseText);
+    }
+  );
+```
+
+# --seed--
 
 # --solutions--
 

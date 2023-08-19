@@ -2,7 +2,6 @@
 id: 5d792533ed00e75d129e1b18
 title: Part 13
 challengeType: 0
-dashedName: part-13
 ---
 
 # --description--

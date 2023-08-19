@@ -1,46 +1,29 @@
 ---
 id: 5900f4931000cf542c50ffa4
-title: 'Problem 293: Pseudo-Fortunate Numbers'
+title: 问题293：伪幸运数
 challengeType: 5
-forumTopicId: 301945
-dashedName: problem-293-pseudo-fortunate-numbers
+videoUrl: ''
 ---
 
 # --description--
 
-An even positive integer N will be called admissible, if it is a power of 2 or its distinct prime factors are consecutive primes.
+如果偶数正整数N是2的幂或它的不同质数因子是连续质数，则称该数为偶数。
 
-The first twelve admissible numbers are 2,4,6,8,12,16,18,24,30,32,36,48.
+前十二个允许的数字是2,4,6,8,12,16,18,24,30,32,36,48。
 
-If N is admissible, the smallest integer M > 1 such that N+M is prime, will be called the pseudo-Fortunate number for N.
+如果允许N，则最小的整数M> 1，使得N + M为质数，将被称为N的伪幸运数。
 
-For example, N=630 is admissible since it is even and its distinct prime factors are the consecutive primes 2,3,5 and 7. The next prime number after 631 is 641; hence, the pseudo-Fortunate number for 630 is M=11. It can also be seen that the pseudo-Fortunate number for 16 is 3.
+例如，N = 630是可接受的，因为它是偶数，并且其不同的素数因子是连续的素数2,3,5和7。 631之后的下一个质数是641； 因此，630的伪幸运数为M = 11。 还可以看到，16的伪幸运数字是3。
 
-Find the sum of all distinct pseudo-Fortunate numbers for admissible numbers N less than 109.
+找到所有小于109的允许数字N的所有唯一伪幸运数字之和。
 
 # --hints--
 
-`euler293()` should return 2209.
+`euler293()`应该返回2209。
 
 ```js
 assert.strictEqual(euler293(), 2209);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler293() {
-
-  return true;
-}
-
-euler293();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

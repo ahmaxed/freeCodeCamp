@@ -1,44 +1,27 @@
 ---
 id: 5900f5311000cf542c510043
-title: 'Problem 452: Long Products'
+title: 问题452：长期产品
 challengeType: 5
-forumTopicId: 302125
-dashedName: problem-452-long-products
+videoUrl: ''
 ---
 
 # --description--
 
-Define F(m,n) as the number of n-tuples of positive integers for which the product of the elements doesn't exceed m.
+将F（m，n）定义为元素的乘积不超过m的n个正整数的元组数。
 
-F(10, 10) = 571.
+F（10，10）= 571。
 
-F(106, 106) mod 1 234 567 891 = 252903833.
+F（106，106）mod 1234567891 = 252903833。
 
-Find F(109, 109) mod 1 234 567 891.
+找出F（109，109）mod 1234567891。
 
 # --hints--
 
-`euler452()` should return 345558983.
+`euler452()`应该返回345558983。
 
 ```js
 assert.strictEqual(euler452(), 345558983);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler452() {
-
-  return true;
-}
-
-euler452();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

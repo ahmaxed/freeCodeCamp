@@ -23,9 +23,9 @@ Some community members also develop on Windows 10 natively with Git for Windows 
 
 | Prerequisite                  | Version | Notes                                                                |
 | ----------------------------- | ------- | -------------------------------------------------------------------- |
-| [Node.js](http://nodejs.org)  | `14.x`  | [LTS Schedule](https://github.com/nodejs/Release#release-schedule)   |
+| [Node.js](http://nodejs.org)  | `12.x`  | [LTS Schedule](https://github.com/nodejs/Release#release-schedule)   |
 | npm (comes bundled with Node) | `6.x`   | Does not have LTS releases, we use the version bundled with Node LTS |
-| [MongoDB Community Server](https://docs.mongodb.com/manual/administration/install-community/) | `4.0.x`   | [Release Notes](https://docs.mongodb.com/v4.0/release-notes/) |
+| [MongoDB Community Server](https://docs.mongodb.com/manual/administration/install-community/) | `3.6`   | [Release Notes](https://docs.mongodb.com/manual/release-notes/), Note: We are currently on `3.6`, an [upgrade is planned](https://github.com/freeCodeCamp/freeCodeCamp/issues/18275). |
 
 > [!DANGER]
 > If you have a different version, please install the recommended version. We can only support installation issues for recommended versions. See [troubleshooting](#troubleshooting) for details.
@@ -68,7 +68,7 @@ This is essential, as it allows you to work on your own copy of freeCodeCamp on 
 > [!TIP]
 > The main repository at `https://github.com/freeCodeCamp/freeCodeCamp` is often referred to as the `upstream` repository.
 >
-> Your fork at `https://github.com/YOUR_USER_NAME/freeCodeCamp` is often referred to as the `origin` repository. `YOUR_USER_NAME` would be replaced with your GitHub username.
+> Your fork at `https://github.com/YOUR_USER_NAME/freeCodeCamp` is often referred to as the `origin` repository.
 
 **Follow these steps to fork the `https://github.com/freeCodeCamp/freeCodeCamp` repository:**
 
@@ -76,25 +76,19 @@ This is essential, as it allows you to work on your own copy of freeCodeCamp on 
 
 2. Click the "Fork" Button in the upper right-hand corner of the interface ([More Details Here](https://help.github.com/articles/fork-a-repo/))
 
-3. After the repository has been forked, you will be taken to your copy of the freeCodeCamp repository at `https://github.com/YOUR_USER_NAME/freeCodeCamp` (`YOUR_USER_NAME` would be replaced with your GitHub user name.)
+3. After the repository has been forked, you will be taken to your copy of the freeCodeCamp repository at `https://github.com/YOUR_USER_NAME/freeCodeCamp`
 
 <details>
    <summary>
       How to fork freeCodeCamp on GitHub (screenshot)
    </summary>
    <br>
-   <img src="https://raw.githubusercontent.com/freeCodeCamp/freeCodeCamp/main/docs/images/github/how-to-fork-freeCodeCamp.gif" alt="How to fork freeCodeCamp on GitHub">
+   <img src="https://raw.githubusercontent.com/freeCodeCamp/freeCodeCamp/master/docs/images/github/how-to-fork-freeCodeCamp.gif" alt="How to fork freeCodeCamp on GitHub">
 </details>
 
 ## Clone your fork from GitHub
 
-[Cloning](https://help.github.com/articles/cloning-a-repository/) is where you **download** a copy of a repository from a `remote` location that is either owned by you or by someone else. In your case, this remote location is your `fork` of freeCodeCamp's repository that should be available at `https://github.com/YOUR_USER_NAME/freeCodeCamp`. (`YOUR_USER_NAME` would be replaced with your GitHub user name.)
-
-> [!WARNING]
-> If you are working on a WSL2 Linux Distro, you might get performance and stability issues by running this project in a folder which is shared between Windows and WSL2 (e.g. `/mnt/c/Users/`).
-> Therefore we recommend to clone this repo into a folder which is mainly used by your WSL2 Linux Distro and not directly shared with Windows (e.g. `~/PROJECTS/`).
->
-> See [this GitHub Issue](https://github.com/freeCodeCamp/freeCodeCamp/issues/40632) for further Information about this problem.
+[Cloning](https://help.github.com/articles/cloning-a-repository/) is where you **download** a copy of a repository from a `remote` location that is either owned by you or by someone else. In your case, this remote location is your `fork` of freeCodeCamp's repository that should be available at `https://github.com/YOUR_USER_NAME/freeCodeCamp`.
 
 Run these commands on your local machine:
 
@@ -138,7 +132,7 @@ You need a reference from your local clone to the `upstream` repository in addit
    git remote -v
    ```
 
-   The output should look something like below (replacing `YOUR_USER_NAME` with your GitHub username):
+   The output should look something like below:
 
    ```console
    origin    https://github.com/YOUR_USER_NAME/freeCodeCamp.git (fetch)
@@ -268,7 +262,7 @@ You can now make changes to files and commit your changes to your local clone of
 
 Follow these steps:
 
-1. Validate that you are on the `main` branch:
+1. Validate that you are on the `master` branch:
 
    ```console
    git status
@@ -277,26 +271,26 @@ Follow these steps:
    You should get an output like this:
 
    ```console
-   On branch main
-   Your branch is up-to-date with 'origin/main'.
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
 
    nothing to commit, working directory clean
    ```
 
-   If you are not on main or your working directory is not clean, resolve any outstanding files/commits and checkout `main`:
+   If you are not on master or your working directory is not clean, resolve any outstanding files/commits and checkout `master`:
 
    ```console
-   git checkout main
+   git checkout master
    ```
 
-2. Sync the latest changes from the freeCodeCamp upstream `main` branch to your local main branch:
+2. Sync the latest changes from the freeCodeCamp upstream `master` branch to your local master branch:
 
    > [!WARNING]
-   > If you have any outstanding pull request that you made from the `main` branch of your fork, you will lose them at the end of this step.
+   > If you have any outstanding pull request that you made from the `master` branch of your fork, you will lose them at the end of this step.
    >
-   > You should ensure your pull request is merged by a moderator before performing this step. To avoid this scenario, you should **always** work on a branch other than the `main`.
+   > You should ensure your pull request is merged by a moderator before performing this step. To avoid this scenario, you should **always** work on a branch other than the `master`.
 
-   This step **will sync the latest changes** from the main repository of freeCodeCamp. It is important that you rebase your branch on top of the latest `upstream/main` as often as possible to avoid conflicts later.
+   This step **will sync the latest changes** from the main repository of freeCodeCamp. It is important that you rebase your branch on top of the latest `upstream/master` as often as possible to avoid conflicts later.
 
    Update your local copy of the freeCodeCamp upstream repository:
 
@@ -304,31 +298,31 @@ Follow these steps:
    git fetch upstream
    ```
 
-   Hard reset your main branch with the freeCodeCamp main:
+   Hard reset your master branch with the freeCodeCamp master:
 
    ```console
-   git reset --hard upstream/main
+   git reset --hard upstream/master
    ```
 
-   Push your main branch to your origin to have a clean history on your fork on GitHub:
+   Push your master branch to your origin to have a clean history on your fork on GitHub:
 
    ```console
-   git push origin main --force
+   git push origin master --force
    ```
 
-   You can validate your current main matches the upstream/main by performing a diff:
+   You can validate your current master matches the upstream/master by performing a diff:
 
    ```console
-   git diff upstream/main
+   git diff upstream/master
    ```
 
    The resulting output should be empty.
 
 3. Create a fresh new branch:
 
-   Working on a separate branch for each issue helps you keep your local work copy clean. You should never work on the `main`. This will soil your copy of freeCodeCamp and you may have to start over with a fresh clone or fork.
+   Working on a separate branch for each issue helps you keep your local work copy clean. You should never work on the `master`. This will soil your copy of freeCodeCamp and you may have to start over with a fresh clone or fork.
 
-   Check that you are on `main` as explained previously, and branch off from there:
+   Check that you are on `master` as explained previously, and branch off from there:
 
    ```console
    git checkout -b fix/update-guide-for-xyz
@@ -364,9 +358,9 @@ Follow these steps:
    On branch feat/documentation
    Your branch is up to date with 'upstream/feat/documentation'.
 
-   Changes were not staged for commit:
+   Changes not staged for commit:
    (use "git add/rm <file>..." to update what will be committed)
-   (use "git checkout -- <file>..." to discard changes in the working directory)
+   (use "git checkout -- <file>..." to discard changes in working directory)
 
        modified:   CONTRIBUTING.md
        modified:   docs/README.md
@@ -442,7 +436,7 @@ Follow these steps:
 
    You can learn more about why you should use conventional commits [here](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#why-use-conventional-commits).
 
-9. If you realize that you need to edit a file or update the commit message after making a commit you can do so after editing the files with:
+9. If you realise that you need to edit a file or update the commit message after making a commit you can do so after editing the files with:
 
    ```console
    git commit --amend
@@ -483,9 +477,9 @@ A quick reference to the commands that you will need when working locally.
 
 ### Issues with installing the recommended prerequisites
 
-We regularly develop on the latest or most popular operating systems like macOS 10.15 or later, Ubuntu 18.04 or later, and Windows 10 (with WSL2).
+We regularly develop on the latest or most popular operating systems like macOS 10.15 or later, Ubuntu 18.04 or later and Windows 10 (with WSL2).
 
-It is recommended to research your specific issue on resources such as Google, Stack Overflow, and Stack Exchange. There is a good chance that someone has faced the same issue and there is already an answer to your specific query.
+It is recommended to research your specific issue on resources such as Google, Stack Overflow and Stack Exchange. There is a good chance that someone has faced the same issue and there is already an answer to your specific query.
 
 If you are on a different OS and/or are still running into issues, see [getting help](#getting-help).
 
@@ -493,7 +487,7 @@ If you are on a different OS and/or are still running into issues, see [getting 
 >
 > Please avoid creating GitHub issues for prerequisite issues. They are out of the scope of this project.
 
-### Issues with the UI, Fonts, build errors, etc.
+### Issues with the UI, Fonts, build errors etc.
 
 If you face issues with the UI, Fonts or see builds errors a cleanup can be useful:
 
@@ -514,7 +508,7 @@ npm run clean-and-develop
 
 If you continue to face issues with the build, cleaning up the workspace is recommend.
 
-Use `git clean` in interactive mode:
+Use `git clean` in interative mode:
 
 ```
 git clean -ifdX
@@ -528,14 +522,14 @@ git clean -ifdX
    <img src="https://user-images.githubusercontent.com/1884376/94270515-ca579400-ff5d-11ea-8ff1-152cade31654.gif" alt="How to clean git untracked files">
 </details>
 
-### Issues with API, login, Challenge Submissions, etc.
+### Issues with API, Login, Challenge Submissions, etc.
 
 If you can't sign in, and instead you see a banner with an error message that it will be reported to freeCodeCamp, please double-check that your local port `3000` is not in use by a different program.
 
 **On Linux / macOS / WSL on Windows - From Terminal:**
 
 ```console
-netstat -a | grep "3000"
+netstat -ab | grep "3000"
 
 tcp4    0   0    0.0.0.0:3000           DESKTOP      LISTEN
 ```
@@ -552,10 +546,10 @@ TCP    0.0.0.0:3000           DESKTOP      LISTENING
 
 If you get errors while installing the dependencies, please make sure that you are not in a restricted network or your firewall settings do not prevent you from accessing resources.
 
-The first time setup can take a while depending on your network bandwidth. Be patient, and if you are still stuck we recommend using GitPod instead of an offline setup.
+The first time setup can take a while depending on your network bandwidth. Be patient, and if you are still stuck we recommed using GitPod instead of an offline setup.
 
 ## Getting Help
 
-If you are stuck and need help, feel free to ask questions on the ['Contributors' category on our forum](https://forum.freecodecamp.org/c/contributors) or [the contributors chat room](https://chat.freecodecamp.org/channel/contributors).
+If you are stuck and need help, feel free to ask questions on the ['Contributors' category on our forum](https://forum.freecodecamp.org/c/contributors) or [the contributors chat room](https://chat.freecodecamp.org/contributors).
 
 There might be an error in the console of your browser or in Bash / Terminal / Command Line that will help identify the problem. Provide this error message in your problem description so others can more easily identify the issue and help you find a resolution.

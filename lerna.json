@@ -2,31 +2,16 @@
   "packages": [
     "api-server",
     "client",
-    "client/plugins/fcc-source-challenges",
-    "client/plugins/gatsby-remark-node-identity",
+    "client/plugins/*",
     "curriculum",
-    "tools/challenge-helper-scripts",
-    "tools/challenge-parser",
-    "tools/contributor",
-    "tools/contributor/dashboard-app/client",
-    "tools/contributor/dashboard-app/server",
-    "tools/contributor/lib/",
-    "tools/contributor/one-off-scripts",
-    "tools/crowdin",
+    "tools/challenge-md-parser",
+    "tools/challenge-md-parser/mdx",
+    "tools/scripts/seed",
     "tools/scripts/build",
-    "tools/scripts/seed"
+    "tools/scripts/formatter",
+    "tools/scripts/formatter/fcc-md-to-gfm",
+    "tools/formatter",
+    "tools/challenge-helper-scripts"
   ],
-  "command": {
-    "bootstrap": {
-      "ignore": [
-        "tools/contributor",
-        "tools/contributor/dashboard-app/client",
-        "tools/contributor/dashboard-app/server",
-        "tools/contributor/lib/",
-        "tools/contributor/one-off-scripts",
-        "tools/crowdin"
-      ]
-    }
-  },
   "version": "independent"
 }

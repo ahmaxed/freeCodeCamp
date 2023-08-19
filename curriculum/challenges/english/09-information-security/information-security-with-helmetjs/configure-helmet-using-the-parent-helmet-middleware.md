@@ -3,16 +3,15 @@ id: 587d8249367417b2b2512c40
 title: Configure Helmet Using the ‘parent’ helmet() Middleware
 challengeType: 2
 forumTopicId: 301575
-dashedName: configure-helmet-using-the-parent-helmet-middleware
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
 
 `app.use(helmet())` will automatically include all the middleware introduced above, except `noCache()`, and `contentSecurityPolicy()`, but these can be enabled if necessary. You can also disable or configure any other middleware individually, using a configuration object.
 
-**Example:**
+<h3>Example:</h3>
 
 ```js
 app.use(helmet({
@@ -38,6 +37,8 @@ no tests - it's a descriptive challenge
 ```js
 assert(true);
 ```
+
+# --seed--
 
 # --solutions--
 

@@ -3,22 +3,21 @@ id: 587d824d367417b2b2512c54
 title: 使用正则表达式测试字符串
 challengeType: 2
 forumTopicId: 301608
-dashedName: use-regular-expressions-to-test-a-string
 ---
 
 # --description--
 
-请注意，本项目在[这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
 
 `match()` 断言一个值匹配一个正则表达式（第二个参数）。
 
 # --instructions--
 
-在 `tests/1_unit-tests.js` 中，`Strings` 套件里标有 `#15` 的测试下，将每个 `assert` 改成 `assert.match` 或 `assert.notMatch` 方法，通过测试（结果应该返回 `true`）。 不要修改传给断言的参数。
+使用 `assert.match()` 让所有测试通过。
 
 # --hints--
 
-应通过所有测试。
+不应有未通过的测试
 
 ```js
 (getUserInput) =>
@@ -32,7 +31,7 @@ dashedName: use-regular-expressions-to-test-a-string
   );
 ```
 
-应该为第一个断言选择正确的方法：`match` 或 `notMatch`。
+请选择正确的断言—match 或 notMatch
 
 ```js
 (getUserInput) =>
@@ -41,7 +40,7 @@ dashedName: use-regular-expressions-to-test-a-string
       assert.equal(
         data.assertions[0].method,
         'match',
-        "'# name:John Doe, age:35' matches the regex"
+        "'# name: John Doe, age: 35' matches the regex"
       );
     },
     (xhr) => {
@@ -50,7 +49,7 @@ dashedName: use-regular-expressions-to-test-a-string
   );
 ```
 
-应该为第二个断言选择正确的方法：`match` 或 `notMatch`。
+请选择正确的断言—match 或 notMatch
 
 ```js
 (getUserInput) =>
@@ -59,7 +58,7 @@ dashedName: use-regular-expressions-to-test-a-string
       assert.equal(
         data.assertions[1].method,
         'notMatch',
-        "'# name:Paul Smith III, age:twenty-four' does not match the regex (the age must be numeric)"
+        "'# name: Paul Smith III, age: twenty-four' does not match the regex (the age must be numeric)"
       );
     },
     (xhr) => {
@@ -70,10 +69,3 @@ dashedName: use-regular-expressions-to-test-a-string
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

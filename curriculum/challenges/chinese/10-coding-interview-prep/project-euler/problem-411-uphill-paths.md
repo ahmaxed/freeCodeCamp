@@ -1,46 +1,29 @@
 ---
 id: 5900f5081000cf542c510019
-title: 'Problem 411: Uphill paths'
+title: 问题411：上坡路径
 challengeType: 5
-forumTopicId: 302080
-dashedName: problem-411-uphill-paths
+videoUrl: ''
 ---
 
 # --description--
 
-Let n be a positive integer. Suppose there are stations at the coordinates (x, y) = (2i mod n, 3i mod n) for 0 ≤ i ≤ 2n. We will consider stations with the same coordinates as the same station.
+设n是正整数。假设坐标（x，y）=（2i mod n，3i mod n）的站点为0≤i≤2n。我们将考虑与同一站点具有相同坐标的站点。
 
-We wish to form a path from (0, 0) to (n, n) such that the x and y coordinates never decrease. Let S(n) be the maximum number of stations such a path can pass through.
+我们希望形成从（0,0）到（n，n）的路径，使得x和y坐标永不减少。设S（n）是路径可以通过的最大站数。
 
-For example, if n = 22, there are 11 distinct stations, and a valid path can pass through at most 5 stations. Therefore, S(22) = 5. The case is illustrated below, with an example of an optimal path:
+例如，如果n = 22，则有11个不同的站，并且有效路径最多可以通过5个站。因此，S（22）= 5.下面举例说明了一个最佳路径的例子：
 
-It can also be verified that S(123) = 14 and S(10000) = 48.
+还可以证实S（123）= 14并且S（10000）= 48。
 
-Find ∑ S(k5) for 1 ≤ k ≤ 30.
+求1Σk≤30，ΣS（k5）。
 
 # --hints--
 
-`euler411()` should return 9936352.
+`euler411()`应返回9936352。
 
 ```js
 assert.strictEqual(euler411(), 9936352);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler411() {
-
-  return true;
-}
-
-euler411();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

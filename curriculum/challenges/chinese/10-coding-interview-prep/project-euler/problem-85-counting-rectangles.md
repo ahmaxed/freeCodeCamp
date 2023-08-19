@@ -1,48 +1,23 @@
 ---
 id: 5900f3c11000cf542c50fed4
-title: 'Problem 85: Counting rectangles'
+title: 问题85：计算矩形
 challengeType: 5
-forumTopicId: 302199
-dashedName: problem-85-counting-rectangles
+videoUrl: ''
 ---
 
 # --description--
 
-By counting carefully it can be seen that a rectangular grid measuring 3 by 2 contains eighteen rectangles:
+通过仔细计数可以看出，3×2的矩形网格包含十八个矩形：
 
-<img class="img-responsive center-block" alt="a diagram of the different rectangles found within a 3 by 2 rectangular grid" src="https://cdn-media-1.freecodecamp.org/project-euler/counting-rectangles.png" style="background-color: white; padding: 10px;" />
-
-Although there exists no rectangular grid that contains exactly two million rectangles, find the area of the grid with the nearest solution.
+虽然不存在包含正好两百万个矩形的矩形网格，但是找到最近解的网格区域。
 
 # --hints--
 
-`countingRectangles()` should return a number.
+`euler85()`应该返回2772。
 
 ```js
-assert(typeof countingRectangles() === 'number');
-```
-
-`countingRectangles()` should return 2772.
-
-```js
-assert.strictEqual(countingRectangles(), 2772);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function countingRectangles() {
-
-  return true;
-}
-
-countingRectangles();
+assert.strictEqual(euler85(), 2772);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

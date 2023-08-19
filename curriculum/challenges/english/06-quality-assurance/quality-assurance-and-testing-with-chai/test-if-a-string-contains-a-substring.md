@@ -3,12 +3,11 @@ id: 587d824d367417b2b2512c53
 title: Test if a String Contains a Substring
 challengeType: 2
 forumTopicId: 301597
-dashedName: test-if-a-string-contains-a-substring
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 `include()` and `notInclude()` work for strings too! `include()` asserts that the actual string contains the expected substring.
 
@@ -67,6 +66,8 @@ You should choose the correct method for the second assertion - `include` vs. `n
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

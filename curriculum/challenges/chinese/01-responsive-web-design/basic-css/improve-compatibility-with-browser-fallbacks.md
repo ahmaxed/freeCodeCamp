@@ -4,24 +4,23 @@ title: 通过浏览器降级提高兼容性
 challengeType: 0
 videoUrl: ''
 forumTopicId: 301087
-dashedName: improve-compatibility-with-browser-fallbacks
 ---
 
 # --description--
 
-使用 CSS 时可能会遇到浏览器兼容性问题。 提供浏览器降级方案来避免潜在的问题会显得很重要。
+使用 CSS 时可能会遇到浏览器兼容性问题。提供浏览器降级方案来避免潜在的问题就显得很重要。
 
-当浏览器解析页面的 CSS 时，会自动忽视不能识别或者不支持的属性。 举个例子，如果使用 CSS 变量来指定站点的背景色，IE 浏览器由于不支持 CSS 变量而会忽略背景色。 此时，浏览器会尝试使用其它值。 但如果没有找到其它值，则会使用默认值，也就是没有背景色。
+当浏览器解析页面的 CSS 时，会自动忽视不能识别或者不支持的属性。举个栗子，如果使用 CSS 变量来指定站点的背景色， IE 浏览器由于不支持 CSS 变量会忽视背景色。因此，浏览器会使用其它值。如果没有找到其它值，会使用默认值，也就是没有背景色。
 
-这意味着如果想提供浏览器降级方案，在声明之前提供另一个更宽泛的值即可。 这样老旧的浏览器会降级使用这个方案，新的浏览器会在后面的声明里覆盖降级方案。
+这意味着如果想提供浏览器降级方案，在声明之前提供另一个更宽泛的值即可。这样老旧的浏览器会降级使用这个方案，新的浏览器会在后面的声明里覆盖降级方案。
 
 # --instructions--
 
-我们使用了 CSS 变量来定义 `.red-box` 的背景色。 现在，我们通过在现有的声明之前添加另一个 `background` 声明，并将它的值设置为 `red`，来提升浏览器的兼容性。
+看来已经使用了变量做为 `.red-box` class 的背景色。来通过在存在的声明前添加其它的值为 red 的 `background` 声明来提高浏览器的兼容性。
 
 # --hints--
 
-`.red-box` 规则应在现有的 `background` 声明之前有一个 `background` 的备用属性，其值为 `red`。
+`.red-box` 应该通过在存在的 `background` 声明前添加其它的值为 red 的`background` 来提供降级。
 
 ```js
 assert(
@@ -33,38 +32,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```html
-<style>
-  :root {
-    --red-color: red;
-  }
-  .red-box {
-
-    background: var(--red-color);
-    height: 200px;
-    width:200px;
-  }
-</style>
-<div class="red-box"></div>
-```
-
 # --solutions--
 
-```html
-<style>
-  :root {
-    --red-color: red;
-  }
-  .red-box {
-    background: red;
-    background: var(--red-color);
-    height: 200px;
-    width:200px;
-  }
-</style>
-<div class="red-box"></div>
-```

@@ -4,7 +4,6 @@ title: Use Media Queries to Create Responsive Layouts
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pByETK/cMbqeHk'
 forumTopicId: 301138
-dashedName: use-media-queries-to-create-responsive-layouts
 ---
 
 # --description--

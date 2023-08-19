@@ -10,7 +10,7 @@ class MongoIds {
   }
   check(id, title) {
     try {
-      schema.validate(id);
+      Joi.validate(id, schema);
     } catch {
       throw new Error(`Expected a valid ObjectId for ${title}, but got ${id}`);
     }

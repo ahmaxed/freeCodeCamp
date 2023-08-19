@@ -4,7 +4,6 @@ title: Style the HTML Body Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cB77PHW'
 forumTopicId: 18313
-dashedName: style-the-html-body-element
 ---
 
 # --description--

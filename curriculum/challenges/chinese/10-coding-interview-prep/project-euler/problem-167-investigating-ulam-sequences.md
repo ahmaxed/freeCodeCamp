@@ -1,48 +1,21 @@
 ---
 id: 5900f4141000cf542c50ff26
-title: 'Problem 167: Investigating Ulam sequences'
+title: 问题167：研究Ulam序列
 challengeType: 5
-forumTopicId: 301801
-dashedName: problem-167-investigating-ulam-sequences
+videoUrl: ''
 ---
 
 # --description--
 
-For two positive integers a and b, the Ulam sequence U(a,b) is defined by U(a,b)1 = a, U(a,b)2 = b and for k > 2,
-
-U(a,b)k is the smallest integer greater than U(a,b)(k-1) which can be written in exactly one way as the sum of two distinct previous members of U(a,b).
-
-For example, the sequence U(1,2) begins with
-
-1, 2, 3 = 1 + 2, 4 = 1 + 3, 6 = 2 + 4, 8 = 2 + 6, 11 = 3 + 8;
-
-5 does not belong to it because 5 = 1 + 4 = 2 + 3 has two representations as the sum of two previous members, likewise 7 = 1 + 6 = 3 + 4.
-
-Find ∑U(2,2n+1)k for 2 ≤ n ≤10, where k = 1011.
+对于两个正整数a和b，Ulam序列U（a，b）由U（a，b）1 = a，U（a，b）2 = b定义，对于k> 2，U（a，b） ）k是大于U（a，b）（k-1）的最小整数，它可以用一种方式写成U（a，b）的两个不同的先前成员的总和。例如，序列U（1,2）以1,2,3 = 1 + 2,4 = 1 + 3,6 = 2 + 4,8 = 2 + 6,11 = 3 + 8开始; 5不属于它，因为5 = 1 + 4 = 2 + 3有两个表示作为前两个成员的总和，同样7 = 1 + 6 = 3 + 4.找到ΣU（2,2n + 1）k为2≤n≤10，其中k = 1011。
 
 # --hints--
 
-`euler167()` should return 3916160068885.
+`euler167()`应该返回3916160068885。
 
 ```js
 assert.strictEqual(euler167(), 3916160068885);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler167() {
-
-  return true;
-}
-
-euler167();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

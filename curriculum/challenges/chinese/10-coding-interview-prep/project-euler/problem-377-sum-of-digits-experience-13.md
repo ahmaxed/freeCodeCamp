@@ -1,46 +1,25 @@
 ---
 id: 5900f4e51000cf542c50fff8
-title: 'Problem 377: Sum of digits, experience 13'
+title: 问题377：数字之和，经验13
 challengeType: 5
-forumTopicId: 302039
-dashedName: problem-377-sum-of-digits-experience-13
+videoUrl: ''
 ---
 
 # --description--
 
-There are 16 positive integers that do not have a zero in their digits and that have a digital sum equal to 5, namely:
+有16个正整数，它们的数字没有零，并且数字和等于5，即：5,14,23,32,41,113,122,131,212,221,311,1112， 1121年，1211年，2111年和1111年。他们的总和是17891。
 
-5, 14, 23, 32, 41, 113, 122, 131, 212, 221, 311, 1112, 1121, 1211, 2111 and 11111.
+设f（n）为所有正整数的和，它们的数字不为零，数字和等于n。
 
-Their sum is 17891.
-
-Let f(n) be the sum of all positive integers that do not have a zero in their digits and have a digital sum equal to n.
-
-Find $\\displaystyle \\sum\_{i=1}^{17} f(13^i)$. Give the last 9 digits as your answer.
+找到$ \\ displaystyle \\ sum\_ {i = 1} ^ {17} f（13 ^ i）$。将最后9位数字作为答案。
 
 # --hints--
 
-`euler377()` should return 732385277.
+`euler377()`应该返回732385277。
 
 ```js
 assert.strictEqual(euler377(), 732385277);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler377() {
-
-  return true;
-}
-
-euler377();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -3,7 +3,6 @@ id: 587d8255367417b2b2512c74
 title: Create a Priority Queue Class
 challengeType: 1
 forumTopicId: 301630
-dashedName: create-a-priority-queue-class
 ---
 
 # --description--
@@ -12,15 +11,11 @@ In this challenge you will be creating a Priority Queue. A Priority Queue is a s
 
 For instance, let’s imagine we have a priority queue with three items:
 
-```js
-[['kitten', 2], ['dog', 2], ['rabbit', 2]]
-```
+`[['kitten', 2], ['dog', 2], ['rabbit', 2]]`
 
 Here the second value (an integer) represents item priority. If we enqueue `['human', 1]` with a priority of `1` (assuming lower priorities are given precedence) it would then be the first item to be dequeued. The collection would look like this:
 
-```js
-[['human', 1], ['kitten', 2], ['dog', 2], ['rabbit', 2]]
-```
+`[['human', 1], ['kitten', 2], ['dog', 2], ['rabbit', 2]]`.
 
 We’ve started writing a `PriorityQueue` in the code editor. You will need to add an `enqueue` method for adding items with a priority, a `dequeue` method for removing and returning items, a `size` method to return the number of items in the queue, a `front` method to return the element at the front of the queue, and finally an `isEmpty` method that will return `true` if the queue is empty or `false` if it is not.
 

@@ -1,60 +1,25 @@
 ---
 id: 5900f3ba1000cf542c50fecd
-title: 'Problem 78: Coin partitions'
+title: 问题78：硬币分区
 challengeType: 5
-forumTopicId: 302191
-dashedName: problem-78-coin-partitions
+videoUrl: ''
 ---
 
 # --description--
 
-Let p(n) represent the number of different ways in which n coins can be separated into piles. For example, five coins can be separated into piles in exactly seven different ways, so p(5)=7.
+设p（n）表示n个硬币可以分成桩的不同方式的数量。例如，五个硬币可以用七种不同的方式分成几堆，所以p（5）= 7。
 
-<div style='text-align: center;'>
+OOOOO OOOO O OOO OO OOO O O OO OO O O O O O O O O O O O O O O O O O O O O O O O O O
 
-| Coin piles        |
-| ----------------- |
-| OOOOO             |
-| OOOO   O          |
-| OOO   OO          |
-| OOO   O   O       |
-| OO   OO   O       |
-| OO   O   O   O    |
-| O   O   O   O   O |
-
-</div>
-
-Find the least value of `n` for which p(`n`) is divisible by one million.
+找到n的最小值，p（n）可以被一百万整除。
 
 # --hints--
 
-`coinPartitions()` should return a number.
+`euler78()`应返回55374。
 
 ```js
-assert(typeof coinPartitions() === 'number');
-```
-
-`coinPartitions()` should return 55374.
-
-```js
-assert.strictEqual(coinPartitions(), 55374);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function coinPartitions() {
-
-  return true;
-}
-
-coinPartitions();
+assert.strictEqual(euler78(), 55374);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

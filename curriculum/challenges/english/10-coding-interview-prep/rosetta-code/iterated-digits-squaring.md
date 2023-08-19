@@ -3,7 +3,6 @@ id: 5a23c84252665b21eecc7ec1
 title: Iterated digits squaring
 challengeType: 5
 forumTopicId: 302291
-dashedName: iterated-digits-squaring
 ---
 
 # --description--

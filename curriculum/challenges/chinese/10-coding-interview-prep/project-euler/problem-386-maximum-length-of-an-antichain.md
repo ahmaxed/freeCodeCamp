@@ -1,46 +1,29 @@
 ---
 id: 5900f4ef1000cf542c510001
-title: 'Problem 386: Maximum length of an antichain'
+title: 问题386：反链的最大长度
 challengeType: 5
-forumTopicId: 302050
-dashedName: problem-386-maximum-length-of-an-antichain
+videoUrl: ''
 ---
 
 # --description--
 
-Let n be an integer and S(n) be the set of factors of n.
+令n为整数，S（n）为n的因子集。
 
-A subset A of S(n) is called an antichain of S(n) if A contains only one element or if none of the elements of A divides any of the other elements of A.
+如果A仅包含一个元素，或者如果A的元素中没有一个除以A的任何其他元素，则S（n）的子集A被称为S（n）的反共。
 
-For example: S(30) = {1, 2, 3, 5, 6, 10, 15, 30} {2, 5, 6} is not an antichain of S(30). {2, 3, 5} is an antichain of S(30).
+例如：S（30）= {1,2,3,5,6,10,15,30} {2,5,6}不是S（30）的反链。 {2,3,5}是S（30）的反链。
 
-Let N(n) be the maximum length of an antichain of S(n).
+设N（n）为S（n）的反链的最大长度。
 
-Find ΣN(n) for 1 ≤ n ≤ 108
+找ΣN（n）为1≤n≤108
 
 # --hints--
 
-`euler386()` should return 528755790.
+`euler386()`应该返回528755790。
 
 ```js
 assert.strictEqual(euler386(), 528755790);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler386() {
-
-  return true;
-}
-
-euler386();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

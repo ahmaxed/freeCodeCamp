@@ -1,46 +1,27 @@
 ---
 id: 5900f4621000cf542c50ff75
-title: 'Problem 246: Tangents to an ellipse'
+title: 问题246：切线到椭圆
 challengeType: 5
-forumTopicId: 301893
-dashedName: problem-246-tangents-to-an-ellipse
+videoUrl: ''
 ---
 
 # --description--
 
-A definition for an ellipse is:
+椭圆的定义是：给定一个圆心c，其中心为M，半径为r，点G为d（G，M）
 
-Given a circle c with centre M and radius r and a point G such that d(G,M)
+椭圆点的构造如下所示。
 
-The construction of the points of the ellipse is shown below.
+给定的是M（-2000,1500）和G（8000,1500）。给定也是具有中心M和半径15000的圆c。与G和c等距的点的轨迹形成椭圆e。从外部的点P开始，绘制两个切线t1和t2到椭圆。让t1和t2接触椭圆的点为R和S.
 
-Given are the points M(-2000,1500) and G(8000,1500). Given is also the circle c with centre M and radius 15000. The locus of the points that are equidistant from G and c form an ellipse e. From a point P outside e the two tangents t1 and t2 to the ellipse are drawn. Let the points where t1 and t2 touch the ellipse be R and S.
-
-For how many lattice points P is angle RPS greater than 45 degrees?
+对于多少格点P，角度RPS是否大于45度？
 
 # --hints--
 
-`euler246()` should return 810834388.
+`euler246()`应该返回810834388。
 
 ```js
 assert.strictEqual(euler246(), 810834388);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler246() {
-
-  return true;
-}
-
-euler246();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

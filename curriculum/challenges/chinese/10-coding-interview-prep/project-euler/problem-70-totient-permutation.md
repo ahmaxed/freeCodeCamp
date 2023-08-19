@@ -1,48 +1,21 @@
 ---
 id: 5900f3b21000cf542c50fec5
-title: 'Problem 70: Totient permutation'
+title: 问题70欧拉置换
 challengeType: 5
-forumTopicId: 302183
-dashedName: problem-70-totient-permutation
+videoUrl: ''
 ---
 
 # --description--
 
-Euler's Totient function, φ(`n`) \[sometimes called the phi function], is used to determine the number of positive numbers less than or equal to `n` which are relatively prime to `n`. For example, as 1, 2, 4, 5, 7, and 8, are all less than nine and relatively prime to nine, φ(9)=6. The number 1 is considered to be relatively prime to every positive number, so φ(1)=1.
-
-Interestingly, φ(87109)=79180, and it can be seen that 87109 is a permutation of 79180.
-
-Find the value of `n`, 1 &lt; `n` &lt; 10<sup>7</sup>, for which φ(`n`) is a permutation of `n` and the ratio `n`/φ(`n`) produces a minimum.
+Euler的Totient函数φ（n）\[有时称为phi函数]用于确定小于或等于n的正数的数量，它们是n的相对素数。例如，如1,2,4,5,7和8都小于9且相对素数为9，φ（9）= 6.数字1被认为是每个正数的相对素数，所以φ（1）= 1。有趣的是，φ（87109）= 79180，可以看出87109是79180的置换。找到n的值，1 &lt;n &lt;107，其中φ（n）是n的置换和比率n / φ（n）产生最小值。
 
 # --hints--
 
-`totientPermutation()` should return a number.
+`euler70()`应该返回8319823。
 
 ```js
-assert(typeof totientPermutation() === 'number');
-```
-
-`totientPermutation()` should return 8319823.
-
-```js
-assert.strictEqual(totientPermutation(), 8319823);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function totientPermutation() {
-
-  return true;
-}
-
-totientPermutation();
+assert.strictEqual(euler70(), 8319823);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

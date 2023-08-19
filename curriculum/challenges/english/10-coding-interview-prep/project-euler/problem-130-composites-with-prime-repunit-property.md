@@ -3,7 +3,6 @@ id: 5900f3ee1000cf542c50ff00
 title: 'Problem 130: Composites with prime repunit property'
 challengeType: 5
 forumTopicId: 301758
-dashedName: problem-130-composites-with-prime-repunit-property
 ---
 
 # --description--

@@ -1,64 +1,25 @@
 ---
 id: 5900f3b11000cf542c50fec4
-title: 'Problem 69: Totient maximum'
+title: 问题69大欧拉
 challengeType: 5
-forumTopicId: 302181
-dashedName: problem-69-totient-maximum
+videoUrl: ''
 ---
 
 # --description--
 
-Euler's Totient function, φ(`n`) \[sometimes called the phi function], is used to determine the number of numbers less than `n` which are relatively prime to `n`. For example, as 1, 2, 4, 5, 7, and 8, are all less than nine and relatively prime to nine, φ(9)=6.
+Euler的Totient函数φ（n）\[有时称为phi函数]用于确定小于n的数字的数量，这些数字是n的相对素数。例如，如1,2,4,5,7和8都小于9且相对于9，φ（9）= 6。
 
-<div style='margin-left: 4em;'>
+n相对素数φ（n）n /φ（n）2 1 1 2 3 1,2 2 1.5 4 1,3 2 2 5 1,2,3,4 4 1.25 6 1,5 2 3 7 1,2， 3,4,5,6 6 1.1666 ... 8 1,3,5,7 4 2 9 1,2,4,5,7,8 6 1.5 10 1,3,7,9 4 2.5
 
-| !!crwdBlockTags_15_sgaTkcolBdwrc!! | Relatively Prime | φ(!!crwdBlockTags_16_sgaTkcolBdwrc!!) |!!crwdBlockTags_17_sgaTkcolBdwrc!!/φ(!!crwdBlockTags_18_sgaTkcolBdwrc!!) |
-| ------------ | ---------------- | --------------- | ---------------------------- |
-| 2            | 1                | 1               | 2                            |
-| 3            | 1,2              | 2               | 1.5                          |
-| 4            | 1,3              | 2               | 2                            |
-| 5            | 1,2,3,4          | 4               | 1.25                         |
-| 6            | 1,5              | 2               | 3                            |
-| 7            | 1,2,3,4,5,6      | 6               | 1.1666...                    |
-| 8            | 1,3,5,7          | 4               | 2                            |
-| 9            | 1,2,4,5,7,8      | 6               | 1.5                          |
-| 10           | 1,3,7,9          | 4               | 2.5                          |
-
-</div>
-
-It can be seen that `n`=6 produces a maximum `n`/φ(`n`) for `n` ≤ 10.
-
-Find the value of `n` ≤ 1,000,000 for which n/φ(`n`) is a maximum.
+可以看出，对于n≤10，n = 6产生最大n /φ（n）。找到n≤1,000,000的值，其中n /φ（n）是最大值。
 
 # --hints--
 
-`totientMaximum()` should return a number.
+`euler69()`应该返回510510。
 
 ```js
-assert(typeof totientMaximum() === 'number');
-```
-
-`totientMaximum()` should return 510510.
-
-```js
-assert.strictEqual(totientMaximum(), 510510);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function totientMaximum() {
-
-  return true;
-}
-
-totientMaximum();
+assert.strictEqual(euler69(), 510510);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

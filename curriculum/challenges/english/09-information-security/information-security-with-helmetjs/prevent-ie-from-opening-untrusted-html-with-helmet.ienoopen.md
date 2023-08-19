@@ -3,12 +3,11 @@ id: 587d8248367417b2b2512c3b
 title: Prevent IE from Opening Untrusted HTML with helmet.ieNoOpen()
 challengeType: 2
 forumTopicId: 301584
-dashedName: prevent-ie-from-opening-untrusted-html-with-helmet-ienoopen
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
 
 Some web applications will serve untrusted HTML for download. Some versions of Internet Explorer by default open those HTML files in the context of your site. This means that an untrusted HTML page could start doing bad things in the context of your pages. This middleware sets the X-Download-Options header to noopen. This will prevent IE users from executing downloads in the trusted site’s context.
 
@@ -32,6 +31,8 @@ helmet.ieNoOpen() middleware should be mounted correctly
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

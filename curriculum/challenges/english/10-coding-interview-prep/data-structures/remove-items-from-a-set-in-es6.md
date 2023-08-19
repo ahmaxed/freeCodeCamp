@@ -3,7 +3,6 @@ id: 587d8254367417b2b2512c71
 title: Remove items from a set in ES6
 challengeType: 1
 forumTopicId: 301713
-dashedName: remove-items-from-a-set-in-es6
 ---
 
 # --description--
@@ -12,9 +11,7 @@ Let's practice removing items from an ES6 Set using the `delete` method.
 
 First, create an ES6 Set:
 
-```js
-var set = new Set([1,2,3]);
-```
+`var set = new Set([1,2,3]);`
 
 Now remove an item from your Set with the `delete` method.
 

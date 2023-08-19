@@ -4,7 +4,6 @@ title: Divide the Grid Into an Area Template
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pByETK/cLLpGAy'
 forumTopicId: 301130
-dashedName: divide-the-grid-into-an-area-template
 ---
 
 # --description--
@@ -26,7 +25,7 @@ Place the area template so that the cell labeled `advert` becomes an empty cell.
 
 # --hints--
 
-`container` class should have a `grid-template-areas` property similar to the preview but with`.` instead of the `advert` area.
+`container` class should have a `grid-template-areas` property similar to the preview but has `.` instead of the `advert` area.
 
 ```js
 assert(

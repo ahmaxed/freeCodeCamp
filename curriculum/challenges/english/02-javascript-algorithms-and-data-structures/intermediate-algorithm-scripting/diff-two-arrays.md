@@ -3,14 +3,14 @@ id: a5de63ebea8dbee56860f4f2
 title: Diff Two Arrays
 challengeType: 5
 forumTopicId: 16008
-dashedName: diff-two-arrays
 ---
 
 # --description--
 
 Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
 
-**Note:** You can return the array with its elements in any order.
+**Note**  
+You can return the array with its elements in any order.
 
 # --hints--
 

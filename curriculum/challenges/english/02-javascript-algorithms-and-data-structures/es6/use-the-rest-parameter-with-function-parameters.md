@@ -3,7 +3,6 @@ id: 587d7b88367417b2b2512b47
 title: Use the Rest Parameter with Function Parameters
 challengeType: 1
 forumTopicId: 301221
-dashedName: use-the-rest-parameter-with-function-parameters
 ---
 
 # --description--
@@ -16,11 +15,9 @@ Check out this code:
 function howMany(...args) {
   return "You have passed " + args.length + " arguments.";
 }
-console.log(howMany(0, 1, 2));
-console.log(howMany("string", null, [1, 2, 3], { }));
+console.log(howMany(0, 1, 2)); // You have passed 3 arguments.
+console.log(howMany("string", null, [1, 2, 3], { })); // You have passed 4 arguments.
 ```
-
-The console would display the strings `You have passed 3 arguments.` and `You have passed 4 arguments.`.
 
 The rest parameter eliminates the need to check the `args` array and allows us to apply `map()`, `filter()` and `reduce()` on the parameters array.
 
@@ -54,7 +51,7 @@ The result of `sum()` should be 0
 assert(sum() === 0);
 ```
 
-`sum` should be an arrow function which uses the rest parameter syntax (`...`) on the `args` parameter.
+The `sum` function should use the `...` rest parameter on the `args` parameter.
 
 ```js
 assert(__helpers.removeWhiteSpace(code).match(/sum=\(\.\.\.args\)=>/));

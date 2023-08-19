@@ -4,7 +4,6 @@ title: Use the flex-direction Property to Make a Row
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVaDAv/cBEkbfJ'
 forumTopicId: 301110
-dashedName: use-the-flex-direction-property-to-make-a-row
 ---
 
 # --description--
@@ -21,7 +20,7 @@ Add the CSS property `flex-direction` to the `#box-container` element, and give 
 
 # --hints--
 
-The `#box-container` element should have a `flex-direction` property set to `row-reverse`.
+The `#box-container` element should have a `flex-direction` property set to row-reverse.
 
 ```js
 assert($('#box-container').css('flex-direction') == 'row-reverse');

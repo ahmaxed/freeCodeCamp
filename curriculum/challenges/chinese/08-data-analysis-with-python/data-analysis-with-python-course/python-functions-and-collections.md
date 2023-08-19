@@ -1,19 +1,14 @@
 ---
 id: 5e9a093a74c4063ca6f7c166
-title: Python Functions and Collections
 challengeType: 11
 videoId: NzpU17ZVlUw
-dashedName: python-functions-and-collections
 ---
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
-
 More resources:
 
--   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/ds-content-python-under-10-minutes)
--   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+\- [Notebook](https://notebooks.ai/rmotr-curriculum/python-under-10-minutes-15addcb2)
 
 # --question--
 
@@ -36,4 +31,9 @@ Tuples are unordered.
 ## --video-solution--
 
 1
+
+# --hints--
+
+
+# --solutions--
 

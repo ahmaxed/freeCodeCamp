@@ -7,7 +7,6 @@ import qs from 'query-string';
 import { navigate } from 'gatsby';
 import Media from 'react-responsive';
 import algoliasearch from 'algoliasearch/lite';
-import { newsIndex } from '../../utils/algolia-locale-setup';
 
 import {
   isSearchDropdownEnabledSelector,
@@ -15,11 +14,9 @@ import {
   toggleSearchDropdown,
   updateSearchQuery
 } from './redux';
-import envData from '../../../../config/env.json';
+import { algoliaAppId, algoliaAPIKey } from '../../../config/env.json';
 
 import { createSelector } from 'reselect';
-
-const { algoliaAppId, algoliaAPIKey } = envData;
 
 const DEBOUNCE_TIME = 100;
 
@@ -131,7 +128,7 @@ class InstantSearchRoot extends Component {
     const MAX_MOBILE_HEIGHT = 768;
     return (
       <InstantSearch
-        indexName={newsIndex}
+        indexName='news'
         onSearchStateChange={this.onSearchStateChange}
         searchClient={searchClient}
         searchState={{ query }}

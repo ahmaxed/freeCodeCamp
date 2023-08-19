@@ -3,7 +3,6 @@ id: 5900f4071000cf542c50ff19
 title: 'Problem 154: Exploring Pascal''s pyramid'
 challengeType: 5
 forumTopicId: 301785
-dashedName: problem-154-exploring-pascals-pyramid
 ---
 
 # --description--

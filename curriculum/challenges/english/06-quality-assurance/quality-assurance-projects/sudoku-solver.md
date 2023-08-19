@@ -2,7 +2,6 @@
 id: 5e601bf95ac9d0ecd8b94afd
 title: Sudoku Solver
 challengeType: 4
-dashedName: sudoku-solver
 ---
 
 # --description--
@@ -10,21 +9,18 @@ dashedName: sudoku-solver
 Build a full stack JavaScript app that is functionally similar to this: <https://sudoku-solver.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
 
 -   Clone [this GitHub repo](https://github.com/freecodecamp/boilerplate-project-sudoku-solver) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-sudoku-solver) to complete your project.
+-   Use [our repl.it starter project](https://repl.it/github/freeCodeCamp/boilerplate-project-sudoku-solver) to complete your project.
 -   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 
 When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
 
 # --instructions--
 
-- All puzzle logic can go into `/controllers/sudoku-solver.js`
-  - The `validate` function should take a given puzzle string and check it to see if it has 81 valid characters for the input.
-  - The `check` functions should be validating against the *current* state of the board.
-  - The `solve` function should handle solving any given valid puzzle string, not just the test inputs and solutions. You are expected to write out the logic to solve this.
-- All routing logic can go into `/routes/api.js`
-- See the `puzzle-strings.js` file in `/controllers` for some sample puzzles your application should solve
-- To run the challenge tests on this page, set `NODE_ENV` to `test` without quotes in the `.env` file
-- To run the tests in the console, use the command `npm run test`. To open the Replit console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell"
+-   All puzzle logic can go into `/controllers/sudoku-solver.js`
+-   All routing logic can go into `/routes/api.js`
+-   See the `puzzle-strings.js` file in `/controllers` for some sample puzzles your application should solve
+-   To run the challenge tests on this page, set `NODE_ENV` to `test` without quotes in the `.env` file
+-   To run the tests in the console, use the command `npm run test`. To open the Repl.it console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell"
 
 Write the following tests in `tests/1_unit-tests.js`:
 
@@ -39,7 +35,7 @@ Write the following tests in `tests/1_unit-tests.js`:
 -   Logic handles an invalid region (3x3 grid) placement
 -   Valid puzzle strings pass the solver
 -   Invalid puzzle strings fail the solver
--   Solver returns the the expected solution for an incomplete puzzle
+-   Solver returns the the expected solution for an incomplete puzzzle
 
 Write the following tests in `tests/2_functional-tests.js`
 
@@ -202,25 +198,6 @@ async (getUserInput) => {
 };
 ```
 
-If `value` submitted to `/api/check` is already placed in `puzzle` on that `coordinate`, the returned value will be an object containing a `valid` property with `true` if `value` is not conflicting.
-
-```js
-async (getUserInput) => {
-  const input =
-  '..9..5.1.85.4....2432......1...69.83.9.....6.62.71...9......1945....4.37.4.3..6..';
-  const coordinate = 'C3';
-  const value = '2';
-  const data = await fetch(getUserInput('url') + '/api/check', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ puzzle: input, coordinate, value })
-  });
-  const parsed = await data.json();
-  assert.property(parsed, 'valid');
-  assert.isTrue(parsed.valid);
-};
-```
-
 If the puzzle submitted to `/api/check` contains values which are not numbers or periods, the returned value will be `{ error: 'Invalid characters in puzzle' }`
 
 ```js
@@ -241,7 +218,7 @@ async (getUserInput) => {
 };
 ```
 
-If the puzzle submitted to `/api/check` is greater or less than 81 characters, the returned value will be `{ error: 'Expected puzzle to be 81 characters long' }`
+If the puzzle submitted to `/api/check` is greater or less than 81 characters, the returned value will be `{ error&#58; 'Expected puzzle to be 81 characters long' }`
 
 ```js
 async (getUserInput) => {
@@ -366,6 +343,8 @@ async (getUserInput) => {
   }
 };
 ```
+
+# --seed--
 
 # --solutions--
 

@@ -1,44 +1,27 @@
 ---
 id: 5900f4a11000cf542c50ffb4
-title: 'Problem 309: Integer Ladders'
+title: 问题309：整数阶梯
 challengeType: 5
-forumTopicId: 301963
-dashedName: problem-309-integer-ladders
+videoUrl: ''
 ---
 
 # --description--
 
-In the classic "Crossing Ladders" problem, we are given the lengths x and y of two ladders resting on the opposite walls of a narrow, level street. We are also given the height h above the street where the two ladders cross and we are asked to find the width of the street (w).
+在经典的“穿越梯子”问题中，我们得到了两个梯子的长度x和y，它们位于一条狭窄的水平街道的相对壁上。 我们还给出了两个梯子交叉的街道上方的高度h，并要求我们找到街道的宽度（w）。
 
-Here, we are only concerned with instances where all four variables are positive integers. For example, if x = 70, y = 119 and h = 30, we can calculate that w = 56.
+在这里，我们仅关注所有四个变量均为正整数的实例。 例如，如果x = 70，y = 119，h = 30，我们可以计算出w = 56。
 
-In fact, for integer values x, y, h and 0 &lt; x &lt; y &lt; 200, there are only five triplets (x,y,h) producing integer solutions for w: (70, 119, 30), (74, 182, 21), (87, 105, 35), (100, 116, 35) and (119, 175, 40).
+实际上，对于x，y，h和0 &lt;x &lt;y &lt;200的整数，只有五个三元组（x，y，h）产生w的整数解： （70、119、30），（74、182、21），（87、105、35），（100、116、35）和（119、175、40）。
 
-For integer values x, y, h and 0 &lt; x &lt; y &lt; 1 000 000, how many triplets (x,y,h) produce integer solutions for w?
+对于整数值x，y，h和0 &lt;x &lt;y &lt;1 000 000，有多少个三元组（x，y，h）产生w的整数解？
 
 # --hints--
 
-`euler309()` should return 210139.
+`euler309()`应该返回210139。
 
 ```js
 assert.strictEqual(euler309(), 210139);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler309() {
-
-  return true;
-}
-
-euler309();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

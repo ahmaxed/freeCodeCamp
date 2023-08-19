@@ -1,48 +1,31 @@
 ---
 id: 5900f53e1000cf542c510051
-title: 'Problem 466: Distinct terms in a multiplication table'
+title: 问题466：乘法表中的不同术语
 challengeType: 5
-forumTopicId: 302141
-dashedName: problem-466-distinct-terms-in-a-multiplication-table
+videoUrl: ''
 ---
 
 # --description--
 
-Let P(m,n) be the number of distinct terms in an m×n multiplication table.
+令P（m，n）为m×n乘法表中的不同项的数量。
 
-For example, a 3×4 multiplication table looks like this:
+例如，3×4乘法表如下所示：
 
-× 12341 12342 24683 36912
+×12341 12342 24683 36912
 
-There are 8 distinct terms {1,2,3,4,6,8,9,12}, therefore P(3,4) = 8.
+有8个不同的术语{1,2,3,4,6,8,9,12}，因此P（3,4）= 8。
 
-You are given that: P(64,64) = 1263, P(12,345) = 1998, and P(32,1015) = 13826382602124302.
+给出：P（64,64）= 1263，P（12,345）= 1998，P（32,1015）= 13826382602124302。
 
-Find P(64,1016).
+求P（64,1016）。
 
 # --hints--
 
-`euler466()` should return 258381958195474750.
+`euler466()`应该返回258381958195474750。
 
 ```js
 assert.strictEqual(euler466(), 258381958195474750);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler466() {
-
-  return true;
-}
-
-euler466();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

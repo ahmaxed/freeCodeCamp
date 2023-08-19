@@ -1,87 +1,49 @@
 ---
 id: 5951ed8945deab770972ae56
-title: Towers of Hanoi
+title: 河内的塔
 challengeType: 5
-forumTopicId: 302341
-dashedName: towers-of-hanoi
+videoUrl: ''
 ---
 
 # --description--
 
-Solve the [Towers of Hanoi](https://en.wikipedia.org/wiki/Towers_of_Hanoi "wp: Towers_of_Hanoi") problem.
+任务：
 
-Your solution should accept the number of discs as the first parameters, and three string used to identify each of the three stacks of discs, for example `towerOfHanoi(4, 'A', 'B', 'C')`. The function should return an array of arrays containing the list of moves, source -> destination.
+解决[河内塔](https://en.wikipedia.org/wiki/Towers_of_Hanoi "wp：Towers_of_Hanoi")问题。
 
-For example, the array `[['A', 'C'], ['B', 'A']]` indicates that the 1st move was to move a disc from stack A to C, and the 2nd move was to move a disc from stack B to A.
-
-<p></p>
+您的解决方案应该接受光盘数量作为第一个参数，并使用三个字符串来识别三个光盘堆栈中的每一个，例如`towerOfHanoi(4, 'A', 'B', 'C')` 。该函数应该返回一个包含移动列表的数组数组，source - > destination。例如，数组`[['A', 'C'], ['B', 'A']]`表示第一个移动是将光盘从堆栈A移动到C，第二个移动是移动一个从堆栈B到A的光盘
 
 # --hints--
 
-`towerOfHanoi` should be a function.
+`towerOfHanoi`是一个功能。
 
 ```js
 assert(typeof towerOfHanoi === 'function');
 ```
 
-`towerOfHanoi(3, ...)` should return 7 moves.
+`towerOfHanoi(3, ...)` 应该返回7招。
 
 ```js
 assert(res3.length === 7);
 ```
 
-`towerOfHanoi(3, 'A', 'B', 'C')` should return `[['A','B'], ['A','C'], ['B','C'], ['A','B'], ['C','A'], ['C','B'], ['A','B']]`.
+`towerOfHanoi(3, "A", "B", "C")`应返回\[[“A”，“B”]，[“A”，“C”]，[“B”，“C”]，[ “A”， “B”]，[ “C”， “A”]，[ “C”， “B”]，[ “A”， “B”]]“）。
 
 ```js
 assert.deepEqual(towerOfHanoi(3, 'A', 'B', 'C'), res3Moves);
 ```
 
-`towerOfHanoi(5, "X", "Y", "Z")` 10th move should be Y -> X.
+`towerOfHanoi(5, "X", "Y", "Z")`第10 `towerOfHanoi(5, "X", "Y", "Z")`应为Y  - > X.
 
 ```js
 assert.deepEqual(res5[9], ['Y', 'X']);
 ```
 
-`towerOfHanoi(7, 'A', 'B', 'C')` first ten moves should be `[['A','B'], ['A','C'], ['B','C'], ['A','B'], ['C','A'], ['C','B'], ['A','B'], ['A','C'], ['B','C'], ['B','A']]`
+`towerOfHanoi(7, "A", "B", "C")`前十个动作是\[[“A”，“B”]，[“A”，“C”]，[“B”，“C”][ “A”， “B”]，[ “C”， “A”]，[ “C”， “B”]，[ “A”， “B”]，[ “A”， “C”][ “B”， “C”]，[ “B”， “A”]]“）。
 
 ```js
 assert.deepEqual(towerOfHanoi(7, 'A', 'B', 'C').slice(0, 10), res7First10Moves);
 ```
 
-# --seed--
-
-## --after-user-code--
-
-```js
-const res3 = towerOfHanoi(3, 'A', 'B', 'C');
-const res3Moves = [['A', 'B'], ['A', 'C'], ['B', 'C'], ['A', 'B'], ['C', 'A'], ['C', 'B'], ['A', 'B']];
-const res5 = towerOfHanoi(5, 'X', 'Y', 'Z');
-const res7First10Moves = [['A', 'B'], ['A', 'C'], ['B', 'C'], ['A', 'B'], ['C', 'A'], ['C', 'B'], ['A', 'B'], ['A', 'C'], ['B', 'C'], ['B', 'A']];
-```
-
-## --seed-contents--
-
-```js
-function towerOfHanoi(n, a, b, c) {
-
-  return [[]];
-}
-```
-
 # --solutions--
 
-```js
-function towerOfHanoi(n, a, b, c) {
-  const res = [];
-  towerOfHanoiHelper(n, a, c, b, res);
-  return res;
-}
-
-function towerOfHanoiHelper(n, a, b, c, res) {
-  if (n > 0) {
-    towerOfHanoiHelper(n - 1, a, c, b, res);
-    res.push([a, c]);
-    towerOfHanoiHelper(n - 1, b, a, c, res);
-  }
-}
-```

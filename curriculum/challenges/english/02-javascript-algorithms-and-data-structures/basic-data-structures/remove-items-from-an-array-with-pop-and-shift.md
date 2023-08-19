@@ -3,7 +3,6 @@ id: 587d78b2367417b2b2512b0f
 title: Remove Items from an Array with pop() and shift()
 challengeType: 1
 forumTopicId: 301165
-dashedName: remove-items-from-an-array-with-pop-and-shift
 ---
 
 # --description--
@@ -16,23 +15,19 @@ Let's take a look:
 let greetings = ['whats up?', 'hello', 'see ya!'];
 
 greetings.pop();
-```
+// now equals ['whats up?', 'hello']
 
-`greetings` would have the value `['whats up?', 'hello']`.
-
-```js
 greetings.shift();
+// now equals ['hello']
 ```
-
-`greetings` would have the value `['hello']`.
 
 We can also return the value of the removed element with either method like this:
 
 ```js
 let popped = greetings.pop();
+// returns 'hello'
+// greetings now equals []
 ```
-
-`greetings` would have the value `[]`, and `popped` would have the value `hello`.
 
 # --instructions--
 

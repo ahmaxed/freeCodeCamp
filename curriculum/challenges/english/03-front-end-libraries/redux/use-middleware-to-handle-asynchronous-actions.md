@@ -3,7 +3,6 @@ id: 5a24c314108439a4d4036156
 title: Use Middleware to Handle Asynchronous Actions
 challengeType: 6
 forumTopicId: 301451
-dashedName: use-middleware-to-handle-asynchronous-actions
 ---
 
 # --description--
@@ -40,7 +39,7 @@ assert(receivedData('data').type === RECEIVED_DATA);
 assert(typeof asyncDataReducer === 'function');
 ```
 
-Dispatching the `requestingData` action creator should update the store `state` property of fetching to `true`.
+Dispatching the requestingData action creator should update the store `state` property of fetching to `true`.
 
 ```js
 assert(

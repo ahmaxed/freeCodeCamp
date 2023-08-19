@@ -1,12 +1,9 @@
 import React, { Fragment } from 'react';
-import { useTranslation } from 'react-i18next';
 
 function Spacer(props) {
-  const { t } = useTranslation();
-
   return (
     <Fragment>
-      <span className='sr-only'>{t('icons.spacer')}</span>
+      <span className='sr-only'>Passed</span>
       <svg
         className='tick'
         height='50'
@@ -16,7 +13,7 @@ function Spacer(props) {
         {...props}
       >
         <g>
-          <title>{t('icons.spacer')}</title>
+          <title>Spacer</title>
           <rect fillOpacity='0' height='200' paddingtop='5' width='200' />
         </g>
       </svg>

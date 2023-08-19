@@ -1,48 +1,31 @@
 ---
 id: 5900f4b21000cf542c50ffc5
-title: 'Problem 326: Modulo Summations'
+title: 问题326：模数汇总
 challengeType: 5
-forumTopicId: 301983
-dashedName: problem-326-modulo-summations
+videoUrl: ''
 ---
 
 # --description--
 
-Let an be a sequence recursively defined by: .
+设一个递归定义的序列：。
 
-So the first 10 elements of an are: 1,1,0,3,0,3,5,4,1,9.
+因此，前10个元素是：1,1,0,3,0,3,5,4,1,9。
 
-Let f(N,M) represent the number of pairs (p,q) such that:
+设f（N，M）表示对（p，q）的数量，使得：
 
-It can be seen that f(10,10)=4 with the pairs (3,3), (5,5), (7,9) and (9,10).
+可以看出f（10,10）= 4，对（3,3），（5,5），（7,9）和（9,10）。
 
-You are also given that f(104,103)=97158.
+你也得到f（104,103）= 97158。
 
-Find f(1012,106).
+求f（1012,106）。
 
 # --hints--
 
-`euler326()` should return 1966666166408794400.
+`euler326()`应该返回1966666166408794400。
 
 ```js
 assert.strictEqual(euler326(), 1966666166408794400);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler326() {
-
-  return true;
-}
-
-euler326();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

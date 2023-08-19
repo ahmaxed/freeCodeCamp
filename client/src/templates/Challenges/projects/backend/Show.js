@@ -5,7 +5,6 @@ import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import { withTranslation } from 'react-i18next';
 
 import {
   executeChallenge,
@@ -14,7 +13,6 @@ import {
   consoleOutputSelector,
   initConsole,
   initTests,
-  isChallengeCompletedSelector,
   updateChallengeMeta,
   updateSolutionFormValues
 } from '../../redux';
@@ -47,13 +45,11 @@ const propTypes = {
   id: PropTypes.string,
   initConsole: PropTypes.func.isRequired,
   initTests: PropTypes.func.isRequired,
-  isChallengeCompleted: PropTypes.bool,
   isSignedIn: PropTypes.bool,
   output: PropTypes.arrayOf(PropTypes.string),
   pageContext: PropTypes.shape({
     challengeMeta: PropTypes.object
   }),
-  t: PropTypes.func.isRequired,
   tests: PropTypes.array,
   title: PropTypes.string,
   updateChallengeMeta: PropTypes.func.isRequired,
@@ -63,12 +59,10 @@ const propTypes = {
 const mapStateToProps = createSelector(
   consoleOutputSelector,
   challengeTestsSelector,
-  isChallengeCompletedSelector,
   isSignedInSelector,
-  (output, tests, isChallengeCompleted, isSignedIn) => ({
+  (output, tests, isSignedIn) => ({
     tests,
     output,
-    isChallengeCompleted,
     isSignedIn
   })
 );
@@ -82,12 +76,11 @@ const mapDispatchToActions = {
   updateSolutionFormValues
 };
 
-class BackEnd extends Component {
+export class BackEnd extends Component {
   constructor(props) {
     super(props);
     this.state = {};
     this.updateDimensions = this.updateDimensions.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -153,10 +146,6 @@ class BackEnd extends Component {
     challengeMounted(challengeMeta.id);
   }
 
-  handleSubmit({ isShouldCompletionModalOpen }) {
-    this.props.executeChallenge(isShouldCompletionModalOpen);
-  }
-
   render() {
     const {
       data: {
@@ -166,19 +155,15 @@ class BackEnd extends Component {
           forumTopicId,
           title,
           description,
-          instructions,
-          translationPending,
-          superBlock,
-          block
+          instructions
         }
       },
-      isChallengeCompleted,
       output,
       pageContext: {
-        challengeMeta: { nextChallengePath, prevChallengePath }
+        challengeMeta: { introPath, nextChallengePath, prevChallengePath }
       },
-      t,
       tests,
+      executeChallenge,
       updateSolutionFormValues
     } = this.props;
 
@@ -187,32 +172,24 @@ class BackEnd extends Component {
     return (
       <Hotkeys
         innerRef={c => (this._container = c)}
+        introPath={introPath}
         nextChallengePath={nextChallengePath}
         prevChallengePath={prevChallengePath}
       >
         <LearnLayout>
-          <Helmet
-            title={`${blockNameTitle} | ${t('learn.learn')} | freeCodeCamp.org`}
-          />
+          <Helmet title={`${blockNameTitle} | Learn | freeCodeCamp.org`} />
           <Grid>
             <Row>
               <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={12}>
                 <Spacer />
-                <ChallengeTitle
-                  block={block}
-                  isCompleted={isChallengeCompleted}
-                  superBlock={superBlock}
-                  translationPending={translationPending}
-                >
-                  {title}
-                </ChallengeTitle>
+                <ChallengeTitle>{blockNameTitle}</ChallengeTitle>
                 <ChallengeDescription
                   description={description}
                   instructions={instructions}
                 />
                 <SolutionForm
                   challengeType={challengeType}
-                  onSubmit={this.handleSubmit}
+                  onSubmit={executeChallenge}
                   updateSolutionForm={updateSolutionFormValues}
                 />
                 <ProjectToolPanel
@@ -222,7 +199,7 @@ class BackEnd extends Component {
                 <Output
                   defaultOutput={`/**
 *
-* ${t('learn.test-output')}
+* Test output will go here
 *
 *
 */`}
@@ -233,11 +210,7 @@ class BackEnd extends Component {
                 <TestSuite tests={tests} />
                 <Spacer />
               </Col>
-              <CompletionModal
-                block={block}
-                blockName={blockName}
-                superBlock={superBlock}
-              />
+              <CompletionModal blockName={blockName} />
               <HelpModal />
             </Row>
           </Grid>
@@ -253,7 +226,7 @@ BackEnd.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToActions
-)(withTranslation()(BackEnd));
+)(BackEnd);
 
 export const query = graphql`
   query BackendChallenge($slug: String!) {
@@ -264,9 +237,6 @@ export const query = graphql`
       instructions
       challengeType
       helpCategory
-      superBlock
-      block
-      translationPending
       fields {
         blockName
         slug

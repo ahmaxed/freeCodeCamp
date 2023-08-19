@@ -3,18 +3,17 @@ id: 587d824b367417b2b2512c49
 title: Test for Truthiness
 challengeType: 2
 forumTopicId: 301596
-dashedName: test-for-truthiness
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 `isTrue()` will test for the boolean value `true` and `isNotTrue()` will pass when given anything but the boolean value of `true`.
 
 ```js
 assert.isTrue(true, 'this will pass with the boolean value true');
-assert.isTrue('true', 'this will NOT pass with the string value "true"');
+assert.isTrue('true', 'this will NOT pass with the string value 'true');
 assert.isTrue(1, 'this will NOT pass with the number value 1');
 ```
 
@@ -89,6 +88,8 @@ You should choose the correct method for the third assertion - `isTrue` vs. `isN
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

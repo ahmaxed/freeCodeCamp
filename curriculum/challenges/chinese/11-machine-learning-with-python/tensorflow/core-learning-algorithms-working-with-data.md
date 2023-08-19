@@ -1,9 +1,7 @@
 ---
 id: 5e8f2f13c4cdbe86b5c72d8a
-title: 'Core Learning Algorithms: Working with Data'
 challengeType: 11
 videoId: u85IOSsJsPI
-dashedName: core-learning-algorithms-working-with-data
 ---
 
 # --question--
@@ -27,4 +25,9 @@ By default, shows the first five rows or entries in a data frame.
 ## --video-solution--
 
 3
+
+# --hints--
+
+
+# --solutions--
 

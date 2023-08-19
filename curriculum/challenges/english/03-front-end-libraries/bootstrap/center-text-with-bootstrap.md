@@ -3,7 +3,6 @@ id: bad87fee1348bd8acde08812
 title: Center Text with Bootstrap
 challengeType: 0
 forumTopicId: 16771
-dashedName: center-text-with-bootstrap
 ---
 
 # --description--
@@ -12,9 +11,7 @@ Now that we're using Bootstrap, we can center our heading element to make it loo
 
 Remember that you can add several classes to the same element by separating each of them with a space, like this:
 
-```html
-<h2 class="red-text text-center">your text</h2>
-```
+`<h2 class="red-text text-center">your text</h2>`
 
 # --hints--
 

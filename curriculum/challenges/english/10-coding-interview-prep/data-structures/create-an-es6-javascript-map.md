@@ -3,7 +3,6 @@ id: 587d825b367417b2b2512c8d
 title: Create an ES6 JavaScript Map
 challengeType: 1
 forumTopicId: 301635
-dashedName: create-an-es6-javascript-map
 ---
 
 # --description--
@@ -33,7 +32,6 @@ assert(myMap.get('freeCodeCamp') === 'Awesome!');
 ## --seed-contents--
 
 ```js
-
 ```
 
 # --solutions--

@@ -1,50 +1,25 @@
 ---
 id: 5900f3db1000cf542c50feee
-title: 'Problem 111: Primes with runs'
+title: 问题111：运行的Primes
 challengeType: 5
-forumTopicId: 301736
-dashedName: problem-111-primes-with-runs
+videoUrl: ''
 ---
 
 # --description--
 
-Considering 4-digit primes containing repeated digits it is clear that they cannot all be the same: 1111 is divisible by 11, 2222 is divisible by 22, and so on. But there are nine 4-digit primes containing three ones:
+考虑到包含重复数字的4位数素数，很明显它们不能全部相同：1111可被11整除，2222可被22整除，依此类推。但是有九个4位数的素数包含三个素数：1117,1151,1171,1181,1511,1811,2111,4111,8111我们将说M（n，d）表示n-的最大重复数位数。数字素数，其中d是重复数字，N（n，d）表示这些素数的数量，S（n，d）表示这些素数的总和。所以M（4,1）= 3是4位数的素数的最大重复位数，其中一个是重复的数字，有N（4,1）= 9个这样的素数，这些素数的总和是S （4,1）= 22275.事实证明，对于d = 0，只能使M（4,0）= 2个重复数字，但是存在N（4,0）= 13个这样的情况。同样地，我们获得了4位素数的以下结果。
 
-1117, 1151, 1171, 1181, 1511, 1811, 2111, 4111, 8111
+数字，d M（4，d）N（4，d）S（4，d）0 2 13 67061 1 3 9 22275 2 3 1 2221 3 3 12 46214 4 3 2 8888 5 3 1 5557 6 3 1 6661 7 3 9 57863 8 3 1 8887 9 3 7 48073
 
-We shall say that M(n, d) represents the maximum number of repeated digits for an n-digit prime where d is the repeated digit, N(n, d) represents the number of such primes, and S(n, d) represents the sum of these primes.
-
-So M(4, 1) = 3 is the maximum number of repeated digits for a 4-digit prime where one is the repeated digit, there are N(4, 1) = 9 such primes, and the sum of these primes is S(4, 1) = 22275. It turns out that for d = 0, it is only possible to have M(4, 0) = 2 repeated digits, but there are N(4, 0) = 13 such cases.
-
-In the same way we obtain the following results for 4-digit primes.
-
-Digit, d M(4, d) N(4, d) S(4, d) 0 2 13 67061 1 3 9 22275 2 3 1 2221 3 3 12 46214 4 3 2 8888 5 3 1 5557 6 3 1 6661 7 3 9 57863 8 3 1 8887 9 3 7 48073
-
-For d = 0 to 9, the sum of all S(4, d) is 273700. Find the sum of all S(10, d).
+对于d = 0到9，所有S（4，d）的总和是273700.求所有S（10，d）的总和。
 
 # --hints--
 
-`euler111()` should return 612407567715.
+`euler111()`应返回612407567715。
 
 ```js
 assert.strictEqual(euler111(), 612407567715);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler111() {
-
-  return true;
-}
-
-euler111();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

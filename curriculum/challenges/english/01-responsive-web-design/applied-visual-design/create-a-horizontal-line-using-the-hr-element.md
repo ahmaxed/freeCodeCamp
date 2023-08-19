@@ -4,7 +4,6 @@ title: Create a Horizontal Line Using the hr Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c3bR8t7'
 forumTopicId: 301049
-dashedName: create-a-horizontal-line-using-the-hr-element
 ---
 
 # --description--

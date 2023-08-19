@@ -4,38 +4,35 @@ title: 给表单添加提交按钮
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVMPUv/cp2Nkhz'
 forumTopicId: 16627
-dashedName: add-a-submit-button-to-a-form
 ---
 
 # --description--
 
-让我们来给表单添加一个 `submit`（提交）按钮。 点击提交按钮时，表单中的数据将会被发送到 `action` 属性指定的 URL 上。
+让我们来给表单添加一个`submit`提交按钮，当点击提交按钮时，表单中的数据将会被发送到`action`属性指定的 URL 上。
 
 例如：
 
-```html
-<button type="submit">this button submits the form</button>
-```
+`<button type="submit">this button submits the form</button>`
 
 # --instructions--
 
-在 `form` 的底部创建一个按钮，按钮的类型为 `submit`，文本为 `Submit`。
+在表单的底部创建一个`button`按钮，按钮的`type`属性值为`submit`，文本为`提交`。
 
 # --hints--
 
-你的 `form` 里面应该有一个 `button`。
+表单内部应该有一个按钮。
 
 ```js
 assert($('form').children('button').length > 0);
 ```
 
-按钮的 `type` 属性值应为 `submit`。
+按钮的`type`属性值应该为`submit`。
 
 ```js
 assert($('button').attr('type') === 'submit');
 ```
 
-提交按钮的文本应为 `Submit` 。
+提交按钮的文本应该为`提交`。
 
 ```js
 assert(
@@ -45,7 +42,7 @@ assert(
 );
 ```
 
-`button` 元素应有结束标签。
+确保按钮有结束标记。
 
 ```js
 assert(
@@ -55,59 +52,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```html
-<h2>CatPhotoApp</h2>
-<main>
-  <p>Click here to view more <a href="#">cat photos</a>.</p>
-
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-
-  <p>Things cats love:</p>
-  <ul>
-    <li>cat nip</li>
-    <li>laser pointers</li>
-    <li>lasagna</li>
-  </ul>
-  <p>Top 3 things cats hate:</p>
-  <ol>
-    <li>flea treatment</li>
-    <li>thunder</li>
-    <li>other cats</li>
-  </ol>
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <input type="text" placeholder="cat photo URL">
-  </form>
-</main>
-```
-
 # --solutions--
 
-```html
-<h2>CatPhotoApp</h2>
-<main>
-  <p>Click here to view more <a href="#">cat photos</a>.</p>
-
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-
-  <p>Things cats love:</p>
-  <ul>
-    <li>cat nip</li>
-    <li>laser pointers</li>
-    <li>lasagna</li>
-  </ul>
-  <p>Top 3 things cats hate:</p>
-  <ol>
-    <li>flea treatment</li>
-    <li>thunder</li>
-    <li>other cats</li>
-  </ol>
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
-    <input type="text" placeholder="cat photo URL">
-    <button type="submit">Submit</button>
-  </form>
-</main>
-```

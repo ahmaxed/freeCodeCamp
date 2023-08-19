@@ -3,7 +3,6 @@ id: 594810f028c0303b75339ad7
 title: Zhang-Suen thinning algorithm
 challengeType: 5
 forumTopicId: 302347
-dashedName: zhang-suen-thinning-algorithm
 ---
 
 # --description--
@@ -70,9 +69,11 @@ Obviously the boundary pixels of the image cannot have the full eight neighbours
   <li>Define $B(P1)$ = the number of black pixel neighbours of P1. ( = sum(P2 .. P9) )</li>
 </ul>
 
-**Step 1:**
+<h3>Step 1:</h3>
 
-All pixels are tested and pixels satisfying all the following conditions (simultaneously) are just noted at this stage. <ol>
+All pixels are tested and pixels satisfying all the following conditions (simultaneously) are just noted at this stage.
+
+  <ol>
     <li>The pixel is black and has eight neighbours</li>
     <li>$2 <= B(P1) <= 6$</li>
     <li>$A(P1) = 1$</li>
@@ -82,19 +83,21 @@ All pixels are tested and pixels satisfying all the following conditions (simult
 
 After iterating over the image and collecting all the pixels satisfying all step 1 conditions, all these condition satisfying pixels are set to white.
 
-**Step 2:**
+<h3>Step 2:</h3>
 
-All pixels are again tested and pixels satisfying all the following conditions are just noted at this stage. <ol>
+All pixels are again tested and pixels satisfying all the following conditions are just noted at this stage.
+
+  <ol>
     <li>The pixel is black and has eight neighbours</li>
     <li>$2 <= B(P1) <= 6$</li>
     <li>$A(P1) = 1$</li>
     <li>At least one of <strong>P2, P4 and P8</strong> is white</li>
     <li>At least one of <strong>P2, P6 and P8</strong> is white</li>
   </ol>
-
+  
 After iterating over the image and collecting all the pixels satisfying all step 2 conditions, all these condition satisfying pixels are again set to white.
 
-**Iteration:**
+<h3>Iteration:</h3>
 
 If any pixels were set in this round of either step 1 or step 2 then all steps are repeated until no image pixels are so changed.
 

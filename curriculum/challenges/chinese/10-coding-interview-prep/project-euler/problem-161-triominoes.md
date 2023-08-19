@@ -1,46 +1,27 @@
 ---
 id: 5900f40d1000cf542c50ff20
-title: 'Problem 161: Triominoes'
+title: 问题161：Triominoes
 challengeType: 5
-forumTopicId: 301795
-dashedName: problem-161-triominoes
+videoUrl: ''
 ---
 
 # --description--
 
-A triomino is a shape consisting of three squares joined via the edges.
+三角形是由三个通过边缘连接的正方形组成的形状。有两种基本形式：
 
-There are two basic forms:
+如果考虑所有可能的方向，则有六个：
 
-If all possible orientations are taken into account there are six:
+任何n×m网格的nxm可以被3整除，可以用三角形平铺。如果我们考虑通过反射或从另一个平铺旋转获得的倾斜不同，有41种方式可以使用三角形平铺2乘9的网格：
 
-Any n by m grid for which nxm is divisible by 3 can be tiled with triominoes. If we consider tilings that can be obtained by reflection or rotation from another tiling as different there are 41 ways a 2 by 9 grid can be tiled with triominoes:
-
-In how many ways can a 9 by 12 grid be tiled in this way by triominoes?
+有多少种方式可以通过三角形以这种方式平铺9乘12的网格？
 
 # --hints--
 
-`euler161()` should return 20574308184277972.
+`euler161()`应该返回20574308184277972。
 
 ```js
 assert.strictEqual(euler161(), 20574308184277972);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler161() {
-
-  return true;
-}
-
-euler161();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

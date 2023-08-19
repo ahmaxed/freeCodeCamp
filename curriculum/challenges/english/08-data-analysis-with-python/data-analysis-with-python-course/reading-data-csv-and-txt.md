@@ -3,7 +3,6 @@ id: 5e9a093a74c4063ca6f7c162
 title: Reading Data CSV and TXT
 challengeType: 11
 videoId: ViGEv0zOzUk
-dashedName: reading-data-csv-and-txt
 ---
 
 # --description--

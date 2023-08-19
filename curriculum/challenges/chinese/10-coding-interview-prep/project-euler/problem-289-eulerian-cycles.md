@@ -1,48 +1,31 @@
 ---
 id: 5900f48d1000cf542c50ffa0
-title: 'Problem 289: Eulerian Cycles'
+title: 问题289：欧拉循环
 challengeType: 5
-forumTopicId: 301940
-dashedName: problem-289-eulerian-cycles
+videoUrl: ''
 ---
 
 # --description--
 
-Let C(x,y) be a circle passing through the points (x, y), (x, y+1), (x+1, y) and (x+1, y+1).
+令C（x，y）为穿过点（x，y），（x，y + 1），（x + 1，y）和（x + 1，y + 1）的圆。
 
-For positive integers m and n, let E(m,n) be a configuration which consists of the m·n circles: { C(x,y): 0 ≤ x &lt; m, 0 ≤ y &lt; n, x and y are integers }
+对于正整数m和n，令E（m，n）为由m·n个圆组成的配置： {C（x，y）：0≤x &lt;m，0≤y &lt;n，x和y是整数}
 
-An Eulerian cycle on E(m,n) is a closed path that passes through each arc exactly once. Many such paths are possible on E(m,n), but we are only interested in those which are not self-crossing: A non-crossing path just touches itself at lattice points, but it never crosses itself.
+E（m，n）上的欧拉循环是一条闭合路径，它恰好通过每个圆弧一次。 E（m，n）上可能有许多这样的路径，但是我们只对那些不会自交叉的路径感兴趣： 非相交路径仅在格点处触碰自身，但从未相交。
 
-The image below shows E(3,3) and an example of an Eulerian non-crossing path.
+下图显示了E（3,3）和一个欧拉非交叉路径的示例。
 
-Let L(m,n) be the number of Eulerian non-crossing paths on E(m,n). For example, L(1,2) = 2, L(2,2) = 37 and L(3,3) = 104290.
+令L（m，n）为E（m，n）上的欧拉非交叉路径数。 例如，L（1,2）= 2，L（2,2）= 37，L（3,3）= 104290。
 
-Find L(6,10) mod 1010.
+找出L（6,10）mod 1010。
 
 # --hints--
 
-`euler289()` should return 6567944538.
+`euler289()`应该返回6567944538。
 
 ```js
 assert.strictEqual(euler289(), 6567944538);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler289() {
-
-  return true;
-}
-
-euler289();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

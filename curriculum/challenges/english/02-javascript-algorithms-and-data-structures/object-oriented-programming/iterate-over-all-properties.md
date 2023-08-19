@@ -3,12 +3,11 @@ id: 587d7daf367417b2b2512b7d
 title: Iterate Over All Properties
 challengeType: 1
 forumTopicId: 301320
-dashedName: iterate-over-all-properties
 ---
 
 # --description--
 
-You have now seen two kinds of properties: <dfn>own properties</dfn> and `prototype` properties. Own properties are defined directly on the object instance itself. And `prototype` properties are defined on the `prototype`.
+You have now seen two kinds of properties: `own` properties and `prototype` properties. `Own` properties are defined directly on the object instance itself. And `prototype` properties are defined on the `prototype`.
 
 ```js
 function Bird(name) {
@@ -20,7 +19,7 @@ Bird.prototype.numLegs = 2; // prototype property
 let duck = new Bird("Donald");
 ```
 
-Here is how you add `duck`'s own properties to the array `ownProps` and `prototype` properties to the array `prototypeProps`:
+Here is how you add `duck`'s `own` properties to the array `ownProps` and `prototype` properties to the array `prototypeProps`:
 
 ```js
 let ownProps = [];
@@ -34,28 +33,26 @@ for (let property in duck) {
   }
 }
 
-console.log(ownProps);
-console.log(prototypeProps);
+console.log(ownProps); // prints ["name"]
+console.log(prototypeProps); // prints ["numLegs"]
 ```
-
-`console.log(ownProps)` would display `["name"]` in the console, and `console.log(prototypeProps)` would display `["numLegs"]`.
 
 # --instructions--
 
-Add all of the own properties of `beagle` to the array `ownProps`. Add all of the `prototype` properties of `Dog` to the array `prototypeProps`.
+Add all of the `own` properties of `beagle` to the array `ownProps`. Add all of the `prototype` properties of `Dog` to the array `prototypeProps`.
 
 # --hints--
 
-The `ownProps` array should only contain `name`.
+The `ownProps` array should include `"name"`.
 
 ```js
-assert.deepEqual(ownProps, ['name']);
+assert(ownProps.indexOf('name') !== -1);
 ```
 
-The `prototypeProps` array should only contain `numLegs`.
+The `prototypeProps` array should include `"numLegs"`.
 
 ```js
-assert.deepEqual(prototypeProps, ['numLegs']);
+assert(prototypeProps.indexOf('numLegs') !== -1);
 ```
 
 You should solve this challenge without using the built in method `Object.keys()`.

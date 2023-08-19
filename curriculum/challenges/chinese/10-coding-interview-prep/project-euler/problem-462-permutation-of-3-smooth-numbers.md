@@ -1,52 +1,30 @@
 ---
 id: 5900f53b1000cf542c51004d
-title: 'Problem 462: Permutation of 3-smooth numbers'
+title: 问题462：3个平滑数的排列
 challengeType: 5
-forumTopicId: 302137
-dashedName: problem-462-permutation-of-3-smooth-numbers
+videoUrl: ''
 ---
 
 # --description--
 
-<!-- TODO use MathJax -->
+3平滑数是没有素数因子大于3的整数。对于整数N，我们将S（N）定义为小于或等于N的3平滑数的集合。例如，S（20）= {1,2,3,4,6,8,9,12,16,18}。
 
-A 3-smooth number is an integer which has no prime factor larger than 3. For an integer N, we define S(N) as the set of 3-smooth numbers less than or equal to N . For example, S(20) = { 1, 2, 3, 4, 6, 8, 9, 12, 16, 18 }.
+我们将F（N）定义为S（N）的排列数，其中每个元素都在其所有适当的除数之后。
 
-We define F(N) as the number of permutations of S(N) in which each element comes after all of its proper divisors.
+这是N = 20的可能排列之一。
 
-This is one of the possible permutations for N = 20.
+-   1,2,4,3,9,8,16,6,18,12。这不是有效的排列，因为12在它的除数6之前出现。
+-   1,2,4,3,9,8,12,16,6,18。
 
--   1, 2, 4, 3, 9, 8, 16, 6, 18, 12.
-
-This is not a valid permutation because 12 comes before its divisor 6.
-
--   1, 2, 4, 3, 9, 8, 12, 16, 6, 18.
-
-We can verify that F(6) = 5, F(8) = 9, F(20) = 450 and F(1000) ≈ 8.8521816557e21. Find F(1018). Give as your answer its scientific notation rounded to ten digits after the decimal point. When giving your answer, use a lowercase e to separate mantissa and exponent. E.g. if the answer is 112,233,445,566,778,899 then the answer format would be 1.1223344557e17.
+我们可以验证F（6）= 5，F（8）= 9，F（20）= 450和F（1000）≈8.8521816557e21。找到F（1018）。给出你的答案，它的科学记数在小数点后四舍五入到十位数。在给出答案时，使用小写e来分隔尾数和指数。例如，如果答案是112,233,445,566,778,899，则答案格式为1.1223344557e17。
 
 # --hints--
 
-`euler462()` should return Infinity.
+`euler462()`应返回Infinity。
 
 ```js
 assert.strictEqual(euler462(), Infinity);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler462() {
-
-  return true;
-}
-
-euler462();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

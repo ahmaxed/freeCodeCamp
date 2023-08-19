@@ -1,56 +1,31 @@
 ---
 id: 5900f4b41000cf542c50ffc7
-title: 'Problem 328: Lowest-cost Search'
+title: 问题328：成本最低的搜索
 challengeType: 5
-forumTopicId: 301985
-dashedName: problem-328-lowest-cost-search
+videoUrl: ''
 ---
 
 # --description--
 
-We are trying to find a hidden number selected from the set of integers {1, 2, ..., n} by asking questions.
+我们试图通过提问来找到从整数集{1,2，...，n}中选择的隐藏数字。我们要求的每个数字（问题）的成本等于所要求的数字，我们得到三个可能的答案之一：“您的猜测低于隐藏的数字”，或“是的，就是它！”或“您的猜测是高于隐藏号码“。给定n的值，最优策略最小化了最坏情况下的总成本（即所有问题的总和）。例如
 
-Each number (question) we ask, has a cost equal to the number asked and we get one of three possible answers: "Your guess is lower than the hidden number", or
+如果n = 3，我们能做的最好的就是问号码“2”。答案将立即引导我们找到隐藏号码（总费用= 2）。
 
-"Yes, that's it!", or
+如果n = 8，我们可能决定使用“二分搜索”类型的策略：我们的第一个问题是“4”，如果隐藏数字高于4，我们将需要一个或两个额外的问题。让我们的第二个问题是“6”。如果隐藏数字仍高于6，我们将需要第三个问题以区分7和8.因此，我们的第三个问题将是“7”，这个最坏情况的总成本将是4 + 6 + 7 = 17。
 
-"Your guess is higher than the hidden number".
+通过将“5”作为我们的第一个问题，我们可以大大改善n = 8的最坏情况成本。如果我们被告知隐藏的数字高于5，我们的第二个问题将是“7”，那么我们将确定隐藏的数字是什么（总成本为5 + 7 = 12）。如果我们被告知隐藏号码低于5，我们的第二个问题将是“3”，如果隐藏号码低于3，我们的第三个问题将是“1”，总成本为5 + 3 + 1 = 9。自12> 9以来，该策略的最坏情况成本为12.这比我们之前使用“二元搜索”策略所取得的成本更好;它也优于或等于任何其他策略。所以，事实上，我们刚刚描述了n = 8的最优策略。
 
-Given the value of n, an optimal strategy minimizes the total cost (i.e. the sum of all the questions asked) for the worst possible case. E.g.
+假设C（n）是通过n的最优策略实现的最坏情况成本，如上所述。因此，C（1）= 0，C（2）= 1，C（3）= 2，C（8）= 12.类似地，C（100）= 400，C（n）= 17575。
 
-If n=3, the best we can do is obviously to ask the number "2". The answer will immediately lead us to find the hidden number (at a total cost = 2).
-
-If n=8, we might decide to use a "binary search" type of strategy: Our first question would be "4" and if the hidden number is higher than 4 we will need one or two additional questions. Let our second question be "6". If the hidden number is still higher than 6, we will need a third question in order to discriminate between 7 and 8. Thus, our third question will be "7" and the total cost for this worst-case scenario will be 4+6+7=17.
-
-We can improve considerably the worst-case cost for n=8, by asking "5" as our first question. If we are told that the hidden number is higher than 5, our second question will be "7", then we'll know for certain what the hidden number is (for a total cost of 5+7=12). If we are told that the hidden number is lower than 5, our second question will be "3" and if the hidden number is lower than 3 our third question will be "1", giving a total cost of 5+3+1=9. Since 12>9, the worst-case cost for this strategy is 12. That's better than what we achieved previously with the "binary search" strategy; it is also better than or equal to any other strategy. So, in fact, we have just described an optimal strategy for n=8.
-
-Let C(n) be the worst-case cost achieved by an optimal strategy for n, as described above. Thus C(1) = 0, C(2) = 1, C(3) = 2 and C(8) = 12. Similarly, C(100) = 400 and C(n) = 17575.
-
-Find C(n).
+找到C（n）。
 
 # --hints--
 
-`euler328()` should return 260511850222.
+`euler328()`应返回260511850222。
 
 ```js
 assert.strictEqual(euler328(), 260511850222);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler328() {
-
-  return true;
-}
-
-euler328();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -4,7 +4,6 @@ title: Adjust the Color of Various Elements to Complementary Colors
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cWmPpud'
 forumTopicId: 301033
-dashedName: adjust-the-color-of-various-elements-to-complementary-colors
 ---
 
 # --description--

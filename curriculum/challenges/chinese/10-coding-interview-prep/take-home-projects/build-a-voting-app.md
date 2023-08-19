@@ -1,37 +1,16 @@
 ---
 id: bd7158d8c443eddfaeb5bdef
-title: Build a Voting App
+title: 建立一个投票应用程序
 challengeType: 4
-forumTopicId: 302359
-dashedName: build-a-voting-app
+videoUrl: ''
 ---
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://voting-app.freecodecamp.rocks/>. Use a site builder of your choice to complete the project.
+**目标：** 构建一个功能类似于此的完整堆栈JavaScript应用程序： [https](https://fcc-voting-arthow4n.herokuapp.com/) ： [//fcc-voting-arthow4n.herokuapp.com/](https://fcc-voting-arthow4n.herokuapp.com/)并将其部署到Heroku。请注意，对于每个项目，您应该创建一个新的GitHub存储库和一个新的Heroku项目。如果您不记得如何执行此操作，请重新访问[https://freecodecamp.com/challenges/get-set-for-our-dynamic-web-application-projects](/challenges/get-set-for-our-dynamic-web-application-projects) 。以下是您应该为此项目实现的特定用户故事： **用户故事：** 作为经过身份验证的用户，我可以保留我的民意调查，然后再回来访问它们。 **用户故事：** 作为经过身份验证的用户，我可以与朋友分享我的民意调查。 **用户故事：** 作为经过身份验证的用户，我可以看到我的民意调查的汇总结果。 **用户故事：** 作为经过身份验证的用户，我可以删除我认为不再需要的民意调查。 **用户故事：** 作为经过身份验证的用户，我可以创建包含任意数量项目的民意调查。 **用户故事：** 作为未经身份验证或经过身份验证的用户，我可以查看并对每个人的民意调查进行投票。 **用户故事：** 作为未经身份验证或经过身份验证的用户，我可以以图表形式查看民意调查的结果。 （这可以使用Chart.js或Google Charts实现。） **用户故事：** 作为经过身份验证的用户，如果我不喜欢民意调查中的选项，我可以创建一个新选项。完成这些用户故事的实现后，单击“我已完成此挑战”按钮，然后输入GitHub存储库和在Heroku上运行的实时应用程序的URL。您可以通过Facebook上的朋友分享您的项目反馈。
 
-Here are the specific user stories you should implement for this project:
+# --hints--
 
-**User Story:** As an authenticated user, you can keep my polls and come back later to access them.
-
-**User Story:** As an authenticated user, you can share my polls with my friends.
-
-**User Story:** As an authenticated user, you can see the aggregate results of my polls.
-
-**User Story:** As an authenticated user, you can delete polls that I decide I don't want anymore.
-
-**User Story:** As an authenticated user, you can create a poll with any number of possible items.
-
-**User Story:** As an unauthenticated or authenticated user, you can see and vote on everyone's polls.
-
-**User Story:** As an unauthenticated or authenticated user, you can see the results of polls in chart form. (This could be implemented using Chart.js or Google Charts.)
-
-**User Story:** As an authenticated user, if you don't like the options on a poll, you can create a new option.
-
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
 
 # --solutions--
 
-```js
-// solution required
-```

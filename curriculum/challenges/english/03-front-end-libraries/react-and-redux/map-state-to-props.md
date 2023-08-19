@@ -3,7 +3,6 @@ id: 5a24c314108439a4d4036145
 title: Map State to Props
 challengeType: 6
 forumTopicId: 301433
-dashedName: map-state-to-props
 ---
 
 # --description--

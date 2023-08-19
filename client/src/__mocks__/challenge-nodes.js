@@ -1,4 +1,4 @@
-const mockChallengeNodes = [
+export default [
   {
     fields: {
       slug: '/super-block-one/block-a/challenge-one',
@@ -8,7 +8,7 @@ const mockChallengeNodes = [
     block: 'block-a',
     title: 'Challenge One',
     isPrivate: false,
-    superBlock: 'super-block-one',
+    superBlock: 'Super Block One',
     dashedName: 'challenge-one'
   },
   {
@@ -20,7 +20,7 @@ const mockChallengeNodes = [
     block: 'block-a',
     title: 'Challenge Two',
     isPrivate: false,
-    superBlock: 'super-block-one',
+    superBlock: 'Super Block One',
     dashedName: 'challenge-two'
   },
   {
@@ -32,7 +32,7 @@ const mockChallengeNodes = [
     block: 'block-b',
     title: 'Challenge One',
     isPrivate: false,
-    superBlock: 'super-block-one',
+    superBlock: 'Super Block One',
     dashedName: 'challenge-one'
   },
   {
@@ -45,7 +45,7 @@ const mockChallengeNodes = [
     block: 'block-b',
     title: 'Challenge Two',
     isPrivate: false,
-    superBlock: 'super-block-one',
+    superBlock: 'Super Block One',
     dashedName: 'challenge-two'
   },
   {
@@ -57,7 +57,7 @@ const mockChallengeNodes = [
     block: 'block-c',
     title: 'Challenge One',
     isPrivate: true,
-    superBlock: 'super-block-one',
+    superBlock: 'Super Block One',
     dashedName: 'challenge-one'
   },
   {
@@ -69,7 +69,7 @@ const mockChallengeNodes = [
     block: 'block-a',
     title: 'Challenge One',
     isPrivate: false,
-    superBlock: 'super-block-two',
+    superBlock: 'Super Block Two',
     dashedName: 'challenge-one'
   },
   {
@@ -81,7 +81,7 @@ const mockChallengeNodes = [
     block: 'block-a',
     title: 'Challenge Two',
     isPrivate: false,
-    superBlock: 'super-block-two',
+    superBlock: 'Super Block Two',
     dashedName: 'challenge-two'
   },
   {
@@ -93,7 +93,7 @@ const mockChallengeNodes = [
     block: 'block-b',
     title: 'Challenge One',
     isPrivate: false,
-    superBlock: 'super-block-two',
+    superBlock: 'Super Block Two',
     dashedName: 'challenge-one'
   },
   {
@@ -105,7 +105,7 @@ const mockChallengeNodes = [
     block: 'block-b',
     title: 'Challenge Two',
     isPrivate: false,
-    superBlock: 'super-block-two',
+    superBlock: 'Super Block Two',
     dashedName: 'challenge-two'
   },
   {
@@ -117,7 +117,7 @@ const mockChallengeNodes = [
     block: 'block-a',
     title: 'Challenge One',
     isPrivate: false,
-    superBlock: 'super-block-three',
+    superBlock: 'Super Block Three',
     dashedName: 'challenge-one'
   },
   {
@@ -129,9 +129,7 @@ const mockChallengeNodes = [
     block: 'block-c',
     title: 'Challenge Two',
     isPrivate: false,
-    superBlock: 'super-block-three',
+    superBlock: 'Super Block Three',
     dashedName: 'challenge-two'
   }
 ];
-
-export default mockChallengeNodes;

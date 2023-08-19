@@ -4,7 +4,6 @@ title: Manipulate Arrays With unshift()
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/ckNDESv'
 forumTopicId: 18239
-dashedName: manipulate-arrays-with-unshift
 ---
 
 # --description--
@@ -17,11 +16,10 @@ Example:
 
 ```js
 var ourArray = ["Stimpson", "J", "cat"];
-ourArray.shift();
+ourArray.shift(); // ourArray now equals ["J", "cat"]
 ourArray.unshift("Happy");
+// ourArray now equals ["Happy", "J", "cat"]
 ```
-
-After the `shift`, `ourArray` would have the value `["J", "cat"]`. After the `unshift`, `ourArray` would have the value `["Happy", "J", "cat"]`.
 
 # --instructions--
 
@@ -29,7 +27,7 @@ Add `["Paul",35]` to the beginning of the `myArray` variable using `unshift()`.
 
 # --hints--
 
-`myArray` should now have `[["Paul", 35], ["dog", 3]]`.
+`myArray` should now have \[["Paul", 35], ["dog", 3]].
 
 ```js
 assert(

@@ -3,7 +3,6 @@ id: 5a24c314108439a4d4036143
 title: Extract State Logic to Redux
 challengeType: 6
 forumTopicId: 301429
-dashedName: extract-state-logic-to-redux
 ---
 
 # --description--
@@ -12,7 +11,7 @@ Now that you finished the React component, you need to move the logic it's perfo
 
 # --instructions--
 
-First, define an action type `ADD` and set it to a const `ADD`. Next, define an action creator `addMessage()` which creates the action to add a message. You'll need to pass a `message` to this action creator and include the message in the returned `action`.
+First, define an action type 'ADD' and set it to a const `ADD`. Next, define an action creator `addMessage()` which creates the action to add a message. You'll need to pass a `message` to this action creator and include the message in the returned `action`.
 
 Then create a reducer called `messageReducer()` that handles the state for the messages. The initial state should equal an empty array. This reducer should add a message to the array of messages held in state, or return the current state. Finally, create your Redux store and pass it the reducer.
 

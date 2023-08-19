@@ -3,7 +3,6 @@ id: 5ea281203167d2b0bdefca00
 title: Ludic numbers
 challengeType: 5
 forumTopicId: 385282
-dashedName: ludic-numbers
 ---
 
 # --description--

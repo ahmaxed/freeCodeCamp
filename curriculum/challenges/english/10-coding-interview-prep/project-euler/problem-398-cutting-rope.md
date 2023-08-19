@@ -3,7 +3,6 @@ id: 5900f4fa1000cf542c51000d
 title: 'Problem 398: Cutting rope'
 challengeType: 5
 forumTopicId: 302063
-dashedName: problem-398-cutting-rope
 ---
 
 # --description--

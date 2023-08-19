@@ -3,7 +3,6 @@ id: 5900f3901000cf542c50fea3
 title: 'Problem 36: Double-base palindromes'
 challengeType: 5
 forumTopicId: 302020
-dashedName: problem-36-double-base-palindromes
 ---
 
 # --description--

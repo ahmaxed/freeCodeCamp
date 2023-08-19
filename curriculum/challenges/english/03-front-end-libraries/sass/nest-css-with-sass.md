@@ -3,7 +3,6 @@ id: 587d7dbd367417b2b2512bb5
 title: Nest CSS with Sass
 challengeType: 0
 forumTopicId: 301457
-dashedName: nest-css-with-sass
 ---
 
 # --description--

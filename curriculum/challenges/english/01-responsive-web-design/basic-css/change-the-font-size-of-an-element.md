@@ -4,7 +4,6 @@ title: Change the Font Size of an Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c3bvDc8'
 forumTopicId: 16777
-dashedName: change-the-font-size-of-an-element
 ---
 
 # --description--

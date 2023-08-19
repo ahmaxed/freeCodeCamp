@@ -6,8 +6,6 @@ title: >-
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c437as3'
 forumTopicId: 301011
-dashedName: >-
-  avoid-colorblindness-issues-by-carefully-choosing-colors-that-convey-information
 ---
 
 # --description--

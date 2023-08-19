@@ -1,4 +1,4 @@
-import { has } from 'lodash-es';
+import { has } from 'lodash';
 
 import standardErrorMessage from './standardErrorMessage';
 import reportedErrorMessage from './reportedErrorMessage';
@@ -33,14 +33,16 @@ export function handle400Error(e, options = { redirectTo: '/' }) {
       return {
         ...flash,
         type: 'warn',
-        message: 'flash.not-authorized'
+        message: 'You are not authorised to continue on this route'
       };
     }
     case 404: {
       return {
         ...flash,
         type: 'info',
-        message: 'flash.could-not-find'
+        message:
+          "We couldn't find what you were looking for. " +
+          'Please check and try again'
       };
     }
     default: {

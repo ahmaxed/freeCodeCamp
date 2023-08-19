@@ -4,22 +4,17 @@ title: Compound Assignment With Augmented Division
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/c2QvKT2'
 forumTopicId: 16659
-dashedName: compound-assignment-with-augmented-division
 ---
 
 # --description--
 
 The `/=` operator divides a variable by another number.
 
-```js
-myVar = myVar / 5;
-```
+`myVar = myVar / 5;`
 
 Will divide `myVar` by `5`. This can be rewritten as:
 
-```js
-myVar /= 5;
-```
+`myVar /= 5;`
 
 # --instructions--
 

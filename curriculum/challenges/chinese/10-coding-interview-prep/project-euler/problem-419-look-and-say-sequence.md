@@ -1,58 +1,41 @@
 ---
 id: 5900f5101000cf542c510022
-title: 'Problem 419: Look and say sequence'
+title: 问题419：先说顺序
 challengeType: 5
-forumTopicId: 302088
-dashedName: problem-419-look-and-say-sequence
+videoUrl: ''
 ---
 
 # --description--
 
-The look and say sequence goes 1, 11, 21, 1211, 111221, 312211, 13112221, 1113213211, ...
+外观序列依次为1，11，21，1211，111221，312211，13112221，1113213211，...
 
-The sequence starts with 1 and all other members are obtained by describing the previous member in terms of consecutive digits.
+该序列以1开头，并且所有其他成员都是通过用连续数字描述前一个成员而获得的。
 
-It helps to do this out loud:
+大声地这样做有助于：
 
-1 is 'one one' → 11
+1是“一个”→11
 
-11 is 'two ones' → 21
+11是“两个”→21
 
-21 is 'one two and one one' → 1211
+21是“一二一一”→1211
 
-1211 is 'one one, one two and two ones' → 111221
+1211是\`\`一一，一二和二一''→111221
 
-111221 is 'three ones, two twos and one one' → 312211
+111221是“三，二，二，一”→312211
 
 ...
 
-Define A(n), B(n) and C(n) as the number of ones, twos and threes in the n'th element of the sequence respectively. One can verify that A(40) = 31254, B(40) = 20259 and C(40) = 11625.
+将A（n），B（n）和C（n）分别定义为序列的第n个元素中的1、2和3的数目。 可以验证A（40）= 31254，B（40）= 20259和C（40）= 11625。
 
-Find A(n), B(n) and C(n) for n = 1012. Give your answer modulo 230 and separate your values for A, B and C by a comma. E.g. for n = 40 the answer would be 31254,20259,11625
+找到n（1012）的A（n），B（n）和C（n）。 给您的答案模块230，并用逗号分隔A，B和C的值。 例如 对于n = 40，答案将是31254,20259,11625
 
 # --hints--
 
-`euler419()` should return 998567458, 1046245404, 43363922.
+`euler419()`应该返回998567458, 1046245404, 43363922。
 
 ```js
 assert.strictEqual(euler419(), 998567458, 1046245404, 43363922);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler419() {
-
-  return true;
-}
-
-euler419();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

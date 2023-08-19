@@ -3,7 +3,6 @@ id: 587d7fa8367417b2b2512bc9
 title: Update the Height of an Element Dynamically
 challengeType: 6
 forumTopicId: 301493
-dashedName: update-the-height-of-an-element-dynamically
 ---
 
 # --description--
@@ -16,65 +15,63 @@ The previous challenges covered how to display data from an array and how to add
 
 Recall the format to set a style using a callback function:
 
-```js
-selection.style("cssProperty", (d) => d)
-```
+`selection.style("cssProperty", (d) => d)`
 
 # --instructions--
 
-Add the `style()` method to the code in the editor to set the `height` property for each element. Use a callback function to return the value of the data point with the string `px` added to it.
+Add the `style()` method to the code in the editor to set the `height` property for each element. Use a callback function to return the value of the data point with the string "px" added to it.
 
 # --hints--
 
-The first `div` should have a `height` of `12` pixels.
+The first `div` should have a `height` of 12 pixels.
 
 ```js
 assert($('div').eq(0)[0].style.height === '12px');
 ```
 
-The second `div` should have a `height` of `31` pixels.
+The second `div` should have a `height` of 31 pixels.
 
 ```js
 assert($('div').eq(1)[0].style.height === '31px');
 ```
 
-The third `div` should have a `height` of `22` pixels.
+The third `div` should have a `height` of 22 pixels.
 
 ```js
 assert($('div').eq(2)[0].style.height === '22px');
 ```
 
-The fourth `div` should have a `height` of `17` pixels.
+The fourth `div` should have a `height` of 17 pixels.
 
 ```js
 assert($('div').eq(3)[0].style.height === '17px');
 ```
 
-The fifth `div` should have a `height` of `25` pixels.
+The fifth `div` should have a `height` of 25 pixels.
 
 ```js
 assert($('div').eq(4)[0].style.height === '25px');
 ```
 
-The sixth `div` should have a `height` of `18` pixels.
+The sixth `div` should have a `height` of 18 pixels.
 
 ```js
 assert($('div').eq(5)[0].style.height === '18px');
 ```
 
-The seventh `div` should have a `height` of `29` pixels.
+The seventh `div` should have a `height` of 29 pixels.
 
 ```js
 assert($('div').eq(6)[0].style.height === '29px');
 ```
 
-The eighth `div` should have a `height` of `14` pixels.
+The eighth `div` should have a `height` of 14 pixels.
 
 ```js
 assert($('div').eq(7)[0].style.height === '14px');
 ```
 
-The ninth `div` should have a `height` of `9` pixels.
+The ninth `div` should have a `height` of 9 pixels.
 
 ```js
 assert($('div').eq(8)[0].style.height === '9px');

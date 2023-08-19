@@ -3,7 +3,6 @@ id: 5900f4a61000cf542c50ffb8
 title: 'Problem 313: Sliding game'
 challengeType: 5
 forumTopicId: 301969
-dashedName: problem-313-sliding-game
 ---
 
 # --description--

@@ -1,14 +1,11 @@
 import React, { Fragment } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const propTypes = {};
 
 function Heart(props) {
-  const { t } = useTranslation();
-
   return (
     <Fragment>
-      <span className='sr-only'>{t('icons.heart')}</span>
+      <span className='sr-only'>Heart</span>
       <svg
         height={184}
         version='1.1'

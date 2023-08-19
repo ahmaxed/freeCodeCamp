@@ -4,7 +4,6 @@ title: Use Bracket Notation to Find the Nth Character in a String
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cWPVJua'
 forumTopicId: 18343
-dashedName: use-bracket-notation-to-find-the-nth-character-in-a-string
 ---
 
 # --description--
@@ -17,10 +16,8 @@ Example:
 
 ```js
 var firstName = "Ada";
-var secondLetterOfFirstName = firstName[1];
+var secondLetterOfFirstName = firstName[1]; // secondLetterOfFirstName is "d"
 ```
-
-`secondLetterOfFirstName` would have a value of the string `d`.
 
 # --instructions--
 

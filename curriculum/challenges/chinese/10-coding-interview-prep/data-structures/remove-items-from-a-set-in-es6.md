@@ -1,35 +1,26 @@
 ---
 id: 587d8254367417b2b2512c71
-title: Remove items from a set in ES6
+title: 从ES6中的集中删除项目
 challengeType: 1
-forumTopicId: 301713
-dashedName: remove-items-from-a-set-in-es6
+videoUrl: ''
 ---
 
 # --description--
 
-Let's practice removing items from an ES6 Set using the `delete` method.
+让我们使用`delete`方法练习从ES6集中`delete` 。首先，创建一个ES6 Set `var set = new Set([1,2,3]);`现在使用`delete`方法从Set中删除一个项目。
 
-First, create an ES6 Set:
-
-`var set = new Set([1,2,3]);`
-
-Now remove an item from your Set with the `delete` method.
-
-```js
-set.delete(1);
-console.log([...set]) // should return [ 2, 3 ]
-```
+> set.delete（1）;  
+> console.log（\[... set]）//应该返回\[2,3]
+>
+> >
 
 # --instructions--
 
-Now, create a set with the integers 1, 2, 3, 4, & 5.
-
-Remove the values 2 and 5, and then return the set.
+现在，创建一个整数为1,2,3,4和5的集合。删除值2和5，然后返回集合。
 
 # --hints--
 
-Your Set should contain the values 1, 3, & 4
+您的集应包含值1,3和4
 
 ```js
 assert(
@@ -40,23 +31,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function checkSet(){
-   var set = null;
-   return set;
-}
-```
-
 # --solutions--
 
-```js
-function checkSet(){
-var set = new Set([1,2,3,4,5]);
-set.delete(2);
-set.delete(5);
-return set;}
-```

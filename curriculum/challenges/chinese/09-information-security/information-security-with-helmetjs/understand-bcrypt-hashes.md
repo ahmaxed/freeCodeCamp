@@ -1,30 +1,27 @@
 ---
 id: 58a25bcef9fc0f352b528e7c
-title: Understand BCrypt Hashes
+title: 了解 BCrypt 的哈希加密
 challengeType: 2
 forumTopicId: 301586
-dashedName: understand-bcrypt-hashes
 ---
 
 # --description--
 
-For the following challenges, you will be working with a new starter project that is different from the previous one. You can find the new starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-bcrypt), or clone it from [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/).
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-infosec) 的基础上进行开发。你也可以从 [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/) 上克隆。
 
-BCrypt hashes are very secure. A hash is basically a fingerprint of the original data- always unique. This is accomplished by feeding the original data into an algorithm and returning a fixed length result. To further complicate this process and make it more secure, you can also *salt* your hash. Salting your hash involves adding random data to the original data before the hashing process which makes it even harder to crack the hash.
+BCrypt 哈希非常安全。哈希其实就是原数据的加密形式，结果唯一；通过把原始数据放进哈希算法然后返回固定长度的字符串实现。为了让这个过程更加复杂和安全，你还可以加你的哈希添加 *盐*。加盐其实就是给在哈希算法执行前给源数据添加随机的字符串数据，这会让破解哈希结果更加复杂
 
-BCrypt hashes will always looks like `$2a$13$ZyprE5MRw2Q3WpNOGZWGbeG7ADUre1Q8QO.uUUtcbqloU0yvzavOm` which does have a structure. The first small bit of data `$2a` is defining what kind of hash algorithm was used. The next portion `$13` defines the *cost*. Cost is about how much power it takes to compute the hash. It is on a logarithmic scale of 2^cost and determines how many times the data is put through the hashing algorithm. For example, at a cost of 10 you are able to hash 10 passwords a second on an average computer, however at a cost of 15 it takes 3 seconds per hash... and to take it further, at a cost of 31 it would takes multiple days to complete a hash. A cost of 12 is considered very secure at this time. The last portion of your hash `$ZyprE5MRw2Q3WpNOGZWGbeG7ADUre1Q8QO.uUUtcbqloU0yvzavOm`, looks like one large string of numbers, periods, and letters but it is actually two separate pieces of information. The first 22 characters is the salt in plain text, and the rest is the hashed password!
+BCrypt 的哈希结果会是这样 `$2a$13$ZyprE5MRw2Q3WpNOGZWGbeG7ADUre1Q8QO.uUUtcbqloU0yvzavOm`。它遵循固定的结构，前面一小节 `$2a` 说明了该哈希采用什么算法。下一部分 `$13` 定义了 *cost*。cost 就是生成此哈希结果所用到的资源数量级；它是 2^cost 的对数，可以表说单位时间内数据放入哈希算法的次数。举个例子，cost 为 10 的意思就是说你能够在一个普通的计算机上每秒钟计算出 10 个密码的哈希结果。然而，如果 cost 为 15，那计算每个哈希结果就要 3 秒钟。再举例子，如果 cost 是 31，那每次哈希运算需要话费好几天才能完成。通常 cost 为 12 的哈希运算就已经足够安全。哈希结果的最后一部分 `$ZyprE5MRw2Q3WpNOGZWGbeG7ADUre1Q8QO.uUUtcbqloU0yvzavOm` 看起来像是由随机数字、点和字母组成的字符串，但实际上它有两部分内容。前面 22 个字符是加入的盐，剩下的就是加密过的密码！
 
 # --instructions--
 
-To begin using BCrypt, add it as a dependency in your project and require it as 'bcrypt' in your server.
+要开始使用 BCrypt, 只需将它添加到你的依赖列表，然后在你的服务器引入 'bcrypt'。
 
-Add all your code for these lessons in the `server.js` file between the code we have started you off with. Do not change or delete the code we have added for you.
-
-Submit your page when you think you've got it right.
+请在完成挑战后提交你的页面。
 
 # --hints--
 
-BCrypt should be a dependency.
+应添加 BCyrpt 至依赖列表
 
 ```js
 (getUserInput) =>
@@ -43,7 +40,7 @@ BCrypt should be a dependency.
   );
 ```
 
-BCrypt should be properly required.
+应正确引入 BCrypt
 
 ```js
 (getUserInput) =>
@@ -63,10 +60,3 @@ BCrypt should be properly required.
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

@@ -4,7 +4,6 @@ title: Set the id of an Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cN6MEc2'
 forumTopicId: 18279
-dashedName: set-the-id-of-an-element
 ---
 
 # --description--
@@ -17,9 +16,7 @@ There are several benefits to using `id` attributes: You can use an `id` to styl
 
 Here's an example of how you give your `h2` element the id of `cat-photo-app`:
 
-```html
-<h2 id="cat-photo-app">
-```
+`<h2 id="cat-photo-app">`
 
 # --instructions--
 

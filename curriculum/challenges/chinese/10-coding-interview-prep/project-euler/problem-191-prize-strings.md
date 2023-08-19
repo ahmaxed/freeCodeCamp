@@ -1,46 +1,29 @@
 ---
 id: 5900f42b1000cf542c50ff3e
-title: 'Problem 191: Prize Strings'
+title: 问题191：奖品串
 challengeType: 5
-forumTopicId: 301829
-dashedName: problem-191-prize-strings
+videoUrl: ''
 ---
 
 # --description--
 
-A particular school offers cash rewards to children with good attendance and punctuality. If they are absent for three consecutive days or late on more than one occasion then they forfeit their prize.
+特定学校为出勤和准时良好的儿童提供现金奖励。如果他们连续三天缺席或者不止一次缺席，那么他们将丧失奖品。
 
-During an n-day period a trinary string is formed for each child consisting of L's (late), O's (on time), and A's (absent).
+在n天期间，为每个孩子形成三个字符串，包括L's（晚），O（按时）和A'（缺席）。
 
-Although there are eighty-one trinary strings for a 4-day period that can be formed, exactly forty-three strings would lead to a prize:
+虽然可以形成为期4天的八十三个三弦组，但恰好有四十三个弦可以获得奖品：
 
-OOOO OOOA OOOL OOAO OOAA OOAL OOLO OOLA OAOO OAOA OAOL OAAO OAAL OALO OALA OLOO OLOA OLAO OLAA AOOO AOOA AOOL AOAO AOAA AOAL AOLO AOLA AAOO AAOA AAOL AALO AALA ALOO ALOA ALAO ALAA LOOO LOOA LOAO LOAA LAOO LAOA LAAO
+OOOO OOOA OOOL OOAO OOAA OOAL OOLO OOLA OAOO OAOA OAOL OAAO OAAL OALO OALA OLOO OLOA OLAO OLAA AOOO AOOA AOOL AOAO AOAA AOO AOLA AOLA AAOO AAOA AAOL AALO AALA ALOO ALOA ALAO ALAA LOOO LOOA LOAO LOAA LAOO LAOA LAAO
 
-How many "prize" strings exist over a 30-day period?
+在30天内存在多少“奖品”字符串？
 
 # --hints--
 
-`euler191()` should return 1918080160.
+`euler191()`应该返回1918080160。
 
 ```js
 assert.strictEqual(euler191(), 1918080160);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler191() {
-
-  return true;
-}
-
-euler191();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

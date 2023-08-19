@@ -3,7 +3,6 @@ id: 5895f70df9fc0f352b528e69
 title: How to Use Passport Strategies
 challengeType: 2
 forumTopicId: 301555
-dashedName: how-to-use-passport-strategies
 ---
 
 # --description--
@@ -67,6 +66,8 @@ A POST request to /login should correctly redirect to /.
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

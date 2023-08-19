@@ -3,7 +3,6 @@ id: 587d7db1367417b2b2512b86
 title: Reset an Inherited Constructor Property
 challengeType: 1
 forumTopicId: 301324
-dashedName: reset-an-inherited-constructor-property
 ---
 
 # --description--
@@ -16,14 +15,14 @@ Here's an example:
 function Bird() { }
 Bird.prototype = Object.create(Animal.prototype);
 let duck = new Bird();
-duck.constructor
+duck.constructor // function Animal(){...}
 ```
 
 But `duck` and all instances of `Bird` should show that they were constructed by `Bird` and not `Animal`. To do so, you can manually set `Bird's` constructor property to the `Bird` object:
 
 ```js
 Bird.prototype.constructor = Bird;
-duck.constructor
+duck.constructor // function Bird(){...}
 ```
 
 # --instructions--

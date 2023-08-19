@@ -4,7 +4,6 @@ title: Use a custom CSS Variable
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cM989ck'
 forumTopicId: 301090
-dashedName: use-a-custom-css-variable
 ---
 
 # --description--

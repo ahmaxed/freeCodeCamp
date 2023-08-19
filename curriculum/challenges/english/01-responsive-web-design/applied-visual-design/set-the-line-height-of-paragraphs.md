@@ -4,7 +4,6 @@ title: Set the line-height of Paragraphs
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/crVWdcv'
 forumTopicId: 301070
-dashedName: set-the-line-height-of-paragraphs
 ---
 
 # --description--

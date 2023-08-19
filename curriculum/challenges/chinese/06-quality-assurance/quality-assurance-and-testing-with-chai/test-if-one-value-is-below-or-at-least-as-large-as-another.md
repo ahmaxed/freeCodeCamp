@@ -3,20 +3,21 @@ id: 587d824c367417b2b2512c4e
 title: 测试一个值是否小于或等于另一个值
 challengeType: 2
 forumTopicId: 301606
-dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
 ---
 
 # --description--
 
-请注意，本项目在[这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
 
 # --instructions--
 
-在 `tests/1_unit-tests.js` 中，在 `Comparisons` 套件里标有 `#9` 的测试中，将每个 `assert` 改成 `assert.isBelow` 或 `assert.isAtLeast` 方法，让测试通过（结果应该返回 `true`）。 不要修改传给断言的参数。
+Use `assert.isBelow()` (i.e. less than) or `assert.isAtLeast()` (i.e. greater than or equal) to make the tests pass.
+
+使用 `assert.isBelow()`（小于）或 `assert.isAtLeast()`（大于等于）让所有测试通过。
 
 # --hints--
 
-应通过所有测试。
+不应有未通过的测试
 
 ```js
 (getUserInput) =>
@@ -30,7 +31,7 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
   );
 ```
 
-应该为第一个断言选择正确的方法：`isBelow` 或 `isAtLeast`。
+请选择正确的断言—isBelow 或 isAtLeast
 
 ```js
 (getUserInput) =>
@@ -48,7 +49,7 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
   );
 ```
 
-应该为第二个断言选择正确的方法：`isBelow` 或 `isAtLeast`。
+请选择正确的断言—isBelow 或 isAtLeast
 
 ```js
 (getUserInput) =>
@@ -66,7 +67,7 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
   );
 ```
 
-应该为第三个断言选择正确的方法：`isBelow` 或 `isAtLeast`。
+请选择正确的断言—isBelow 或 isAtLeast
 
 ```js
 (getUserInput) =>
@@ -80,7 +81,7 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
   );
 ```
 
-应该为第四个断言选择正确的方法：`isBelow` 或 `isAtLeast`。
+请选择正确的断言—isBelow 或 isAtLeast
 
 ```js
 (getUserInput) =>
@@ -100,10 +101,3 @@ dashedName: test-if-one-value-is-below-or-at-least-as-large-as-another
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

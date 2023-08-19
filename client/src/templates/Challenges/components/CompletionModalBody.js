@@ -2,13 +2,10 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import BezierEasing from 'bezier-easing';
 import GreenPass from '../../../assets/icons/GreenPass';
-import { withTranslation } from 'react-i18next';
 
 const propTypes = {
-  block: PropTypes.string,
-  completedPercent: PropTypes.number,
-  superBlock: PropTypes.string,
-  t: PropTypes.func.isRequired
+  blockName: PropTypes.string,
+  completedPercent: PropTypes.number
 };
 
 export class CompletionModalBody extends PureComponent {
@@ -59,8 +56,7 @@ export class CompletionModalBody extends PureComponent {
   }
 
   render() {
-    const { block, completedPercent, superBlock, t } = this.props;
-    const blockTitle = t(`intro:${superBlock}.blocks.${block}.title`);
+    const { blockName, completedPercent } = this.props;
 
     return (
       <>
@@ -75,21 +71,17 @@ export class CompletionModalBody extends PureComponent {
           />
         </div>
         <div className='completion-block-details'>
-          <div className='completion-block-name'>{blockTitle}</div>
+          <div className='completion-block-name'>{blockName}</div>
           <div className='progress-bar-wrap'>
             <div className='progress-bar-background'>
-              {t('learn.percent-complete', {
-                percent: this.state.shownPercent
-              })}
+              {this.state.shownPercent}% complete
             </div>
             <div
               className='progress-bar-percent'
               style={{ width: this.state.shownPercent + '%' }}
             >
               <div className='progress-bar-foreground'>
-                {t('learn.percent-complete', {
-                  percent: this.state.shownPercent
-                })}
+                {this.state.shownPercent}% complete
               </div>
             </div>
           </div>
@@ -102,4 +94,4 @@ export class CompletionModalBody extends PureComponent {
 CompletionModalBody.displayName = 'CompletionModalBody';
 CompletionModalBody.propTypes = propTypes;
 
-export default withTranslation()(CompletionModalBody);
+export default CompletionModalBody;

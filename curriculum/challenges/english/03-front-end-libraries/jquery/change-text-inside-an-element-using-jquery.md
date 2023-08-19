@@ -3,7 +3,6 @@ id: 564944c91be2204b269d51e3
 title: Change Text Inside an Element Using jQuery
 challengeType: 6
 forumTopicId: 16773
-dashedName: change-text-inside-an-element-using-jquery
 ---
 
 # --description--
@@ -14,9 +13,7 @@ jQuery has a function called `.html()` that lets you add HTML tags and text with
 
 Here's how you would rewrite and emphasize the text of our heading:
 
-```js
-$("h3").html("<em>jQuery Playground</em>");
-```
+`$("h3").html("<em>jQuery Playground</em>");`
 
 jQuery also has a similar function called `.text()` that only alters text without adding tags. In other words, this function will not evaluate any HTML tags passed to it, but will instead treat it as the text you want to replace the existing content with.
 

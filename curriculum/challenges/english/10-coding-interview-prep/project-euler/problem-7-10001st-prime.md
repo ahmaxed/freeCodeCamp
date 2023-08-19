@@ -3,7 +3,6 @@ id: 5900f3731000cf542c50fe86
 title: 'Problem 7: 10001st prime'
 challengeType: 5
 forumTopicId: 302182
-dashedName: problem-7-10001st-prime
 ---
 
 # --description--

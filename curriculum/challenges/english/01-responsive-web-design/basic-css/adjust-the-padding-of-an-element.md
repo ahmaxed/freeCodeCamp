@@ -4,7 +4,6 @@ title: Adjust the Padding of an Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cED8ZC2'
 forumTopicId: 301083
-dashedName: adjust-the-padding-of-an-element
 ---
 
 # --description--

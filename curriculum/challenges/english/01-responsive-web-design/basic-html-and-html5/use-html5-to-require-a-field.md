@@ -4,7 +4,6 @@ title: Use HTML5 to Require a Field
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVMPUv/cMd4EcQ'
 forumTopicId: 18360
-dashedName: use-html5-to-require-a-field
 ---
 
 # --description--
@@ -36,7 +35,7 @@ assert($('input').prop('required'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -50,7 +49,7 @@ assert($('input').prop('required'));
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
     <input type="text" placeholder="cat photo URL">
     <button type="submit">Submit</button>
   </form>
@@ -64,7 +63,7 @@ assert($('input').prop('required'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
   
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
   
   <p>Things cats love:</p>
   <ul>
@@ -78,7 +77,7 @@ assert($('input').prop('required'));
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
     <input type="text" required placeholder="cat photo URL">
     <button type="submit">Submit</button>
   </form>

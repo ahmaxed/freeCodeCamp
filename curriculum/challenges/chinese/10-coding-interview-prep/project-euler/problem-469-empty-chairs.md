@@ -1,46 +1,25 @@
 ---
 id: 5900f5411000cf542c510053
-title: 'Problem 469: Empty chairs'
+title: 问题469：空椅子
 challengeType: 5
-forumTopicId: 302144
-dashedName: problem-469-empty-chairs
+videoUrl: ''
 ---
 
 # --description--
 
-In a room N chairs are placed around a round table.
+在一个房间里，N个椅子摆放在圆桌旁。骑士一个接一个地进入房间，随意选择一把可用的空椅子。为了拥有足够的肘部空间，骑士总是在彼此之间留下至少一把空座椅。
 
-Knights enter the room one by one and choose at random an available empty chair.
+当没有任何合适的椅子时，确定空椅子的分数C.我们还将E（N）定义为C的期望值。我们可以验证E（4）= 1/2和E（6）= 5/9。
 
-To have enough elbow room the knights always leave at least one empty chair between each other.
-
-When there aren't any suitable chairs left, the fraction C of empty chairs is determined. We also define E(N) as the expected value of C. We can verify that E(4) = 1/2 and E(6) = 5/9.
-
-Find E(1018). Give your answer rounded to fourteen decimal places in the form 0.abcdefghijklmn.
+找到E（1018）。将答案四舍五入到小数点后十四位，形式为0.abcdefghijklmn。
 
 # --hints--
 
-`euler469()` should return 0.56766764161831.
+`euler469()`应该返回0.56766764161831。
 
 ```js
 assert.strictEqual(euler469(), 0.56766764161831);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler469() {
-
-  return true;
-}
-
-euler469();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

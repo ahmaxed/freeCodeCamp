@@ -1,6 +1,6 @@
 ---
 title: Data Visualization
-superBlock: data-visualization
+superBlock: Data Visualization
 ---
 ## Introduction to Data Visualization
 

@@ -3,7 +3,6 @@ id: 5a24c314108439a4d4036170
 title: Create a Stateful Component
 challengeType: 6
 forumTopicId: 301391
-dashedName: create-a-stateful-component
 ---
 
 # --description--
@@ -14,7 +13,7 @@ You create state in a React component by declaring a `state` property on the com
 
 ```jsx
 this.state = {
-
+  // describe your state here
 }
 ```
 

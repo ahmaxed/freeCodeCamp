@@ -8,7 +8,7 @@ import {
   overSome,
   partial,
   stubTrue
-} from 'lodash-es';
+} from 'lodash';
 
 import protect from '@freecodecamp/loop-protect';
 
@@ -17,9 +17,7 @@ import createWorker from '../utils/worker-executor';
 
 // the config files are created during the build, but not before linting
 // eslint-disable-next-line import/no-unresolved
-import sassData from '../../../../../config/client/sass-compile.json';
-
-const { filename: sassCompile } = sassData;
+import { filename as sassCompile } from '../../../../config/sass-compile';
 
 const protectTimeout = 100;
 const testProtectTimeout = 1500;
@@ -61,6 +59,7 @@ async function loadBabel() {
 }
 
 async function loadPresetEnv() {
+  if (babelOptionsJSBase && babelOptionsJSBase.presets) return;
   /* eslint-disable no-inline-comments */
   if (!presetEnv)
     presetEnv = await import(
@@ -82,11 +81,11 @@ async function loadPresetEnv() {
 }
 
 async function loadPresetReact() {
+  if (presetReact) return;
   /* eslint-disable no-inline-comments */
-  if (!presetReact)
-    presetReact = await import(
-      /* webpackChunkName: "@babel/preset-react" */ '@babel/preset-react'
-    );
+  presetReact = await import(
+    /* webpackChunkName: "@babel/preset-react" */ '@babel/preset-react'
+  );
   if (!presetEnv)
     presetEnv = await import(
       /* webpackChunkName: "@babel/preset-env" */ '@babel/preset-env'
@@ -201,7 +200,7 @@ async function transformScript(element) {
   });
 }
 
-const transformHtml = async function (file) {
+const transformHtml = async function(file) {
   const div = document.createElement('div');
   div.innerHTML = file.contents;
   await Promise.all([transformSASS(div), transformScript(div)]);

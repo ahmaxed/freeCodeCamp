@@ -5,7 +5,6 @@ challengeType: 6
 forumTopicId: 18264
 required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: remove-classes-from-an-element-with-jquery
 ---
 
 # --description--
@@ -14,9 +13,7 @@ In the same way you can add classes to an element with jQuery's `addClass()` fun
 
 Here's how you would do this for a specific button:
 
-```js
-$("#target2").removeClass("btn-default");
-```
+`$("#target2").removeClass("btn-default");`
 
 Let's remove the `btn-default` class from all of our `button` elements.
 

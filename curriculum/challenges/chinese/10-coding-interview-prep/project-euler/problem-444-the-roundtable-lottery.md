@@ -1,53 +1,36 @@
 ---
 id: 5900f52a1000cf542c51003b
-title: 'Problem 444: The Roundtable Lottery'
+title: 问题444：圆桌会议彩票
 challengeType: 5
-forumTopicId: 302116
-dashedName: problem-444-the-roundtable-lottery
+videoUrl: ''
 ---
 
 # --description--
 
-A group of p people decide to sit down at a round table and play a lottery-ticket trading game. Each person starts off with a randomly-assigned, unscratched lottery ticket. Each ticket, when scratched, reveals a whole-pound prize ranging anywhere from £1 to £p, with no two tickets alike. The goal of the game is for each person to maximize his ticket winnings upon leaving the game.
+一群人决定坐在圆桌旁玩彩票交易游戏。每个人都是从随机分配的未经批准的彩票开始的。每张票都被划伤，显示全票奖金从1英镑到1英镑不等，没有两张票。游戏的目标是让每个人在离开游戏时最大化他的奖金。
 
-An arbitrary person is chosen to be the first player. Going around the table, each player has only one of two options:
+选择任意人作为第一个玩家。围绕桌子，每个玩家只有两个选项之一：
 
-1.  The player can scratch his ticket and reveal its worth to everyone at the table.
-2.  The player can trade his unscratched ticket for a previous player's scratched ticket, and then leave the game with that ticket. The previous player then scratches his newly-acquired ticket and reveals its worth to everyone at the table.
+1.  玩家可以抓住他的票，并向桌上的每个人透露其价值。
+2.  玩家可以将他未击中的门票换成先前玩家划伤的门票，然后将该门票留给游戏。之前的玩家随后抓住了他新买的机票，并向桌上的每个人展示了它的价值。
 
-The game ends once all tickets have been scratched. All players still remaining at the table must leave with their currently-held tickets.
+所有门票都被划伤后游戏结束。仍然留在桌上的所有玩家必须带着他们当前持有的门票。
 
-Assume that each player uses the optimal strategy for maximizing the expected value of his ticket winnings.
+假设每个玩家使用最优策略来最大化他的票奖金的期望值。
 
-Let E(p) represent the expected number of players left at the table when the game ends in a game consisting of p players (e.g. E(111) = 5.2912 when rounded to 5 significant digits).
+设E（p）表示当游戏在由p个玩家组成的游戏中结束时留在桌旁的玩家的预期数量（例如当舍入到5个有效数字时E（111）= 5.2912）。
 
-Let S1(N) = E(p) Let Sk(N) = Sk-1(p) for k > 1
+设S1（N）= E（p）令Sk（N）= Sk-1（p），其中k> 1
 
-Find S20(1014) and write the answer in scientific notation rounded to 10 significant digits. Use a lowercase e to separate mantissa and exponent (e.g. S3(100) = 5.983679014e5).
+找到S20（1014）并用科学记数法将答案写成10位有效数字。使用小写e来分隔尾数和指数（例如S3（100）= 5.983679014e5）。
 
 # --hints--
 
-`euler444()` should return 1.200856722e+263.
+`euler444()`应该返回1.200856722e+263。
 
 ```js
 assert.strictEqual(euler444(), 1.200856722e263);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler444() {
-
-  return true;
-}
-
-euler444();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

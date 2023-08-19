@@ -4,7 +4,6 @@ title: Decrease the Opacity of an Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c7aKqu4'
 forumTopicId: 301055
-dashedName: decrease-the-opacity-of-an-element
 ---
 
 # --description--

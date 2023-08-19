@@ -3,7 +3,6 @@ id: 5900f3881000cf542c50fe9b
 title: 'Problem 28: Number spiral diagonals'
 challengeType: 5
 forumTopicId: 301930
-dashedName: problem-28-number-spiral-diagonals
 ---
 
 # --description--

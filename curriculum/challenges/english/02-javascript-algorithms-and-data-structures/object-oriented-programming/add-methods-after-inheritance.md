@@ -3,7 +3,6 @@ id: 587d7db1367417b2b2512b87
 title: Add Methods After Inheritance
 challengeType: 1
 forumTopicId: 301315
-dashedName: add-methods-after-inheritance
 ---
 
 # --description--
@@ -34,15 +33,13 @@ Now instances of `Bird` will have both `eat()` and `fly()` methods:
 
 ```js
 let duck = new Bird();
-duck.eat();
-duck.fly();
+duck.eat(); // prints "nom nom nom"
+duck.fly(); // prints "I'm flying!"
 ```
-
-`duck.eat()` would display the string `nom nom nom` in the console, and `duck.fly()` would display the string `I'm flying!`.
 
 # --instructions--
 
-Add all necessary code so the `Dog` object inherits from `Animal` and the `Dog`'s `prototype` constructor is set to `Dog`. Then add a `bark()` method to the `Dog` object so that `beagle` can both `eat()` and `bark()`. The `bark()` method should print `Woof!` to the console.
+Add all necessary code so the `Dog` object inherits from `Animal` and the `Dog's` `prototype` constructor is set to Dog. Then add a `bark()` method to the `Dog` object so that `beagle` can both `eat()` and `bark()`. The `bark()` method should print "Woof!" to the console.
 
 # --hints--
 
@@ -76,7 +73,7 @@ The constructor for `beagle` should be set to `Dog`.
 assert(beagle.constructor === Dog);
 ```
 
-`beagle.eat()` should log the string `nom nom nom`
+`beagle.eat()` should log `"nom nom nom"`
 
 ```js
 console.log = function (msg) {
@@ -85,7 +82,7 @@ console.log = function (msg) {
 assert.throws(() => beagle.eat(), 'nom nom nom');
 ```
 
-`beagle.bark()` should log the string `Woof!`
+`beagle.bark()` should log `"Woof!"`
 
 ```js
 console.log = function (msg) {

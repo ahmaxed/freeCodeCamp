@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { createSelector } from 'reselect';
 import Helmet from 'react-helmet';
 import fontawesome from '@fortawesome/fontawesome';
-import { withTranslation } from 'react-i18next';
 
 import {
   fetchUser,
@@ -45,6 +44,30 @@ fontawesome.config = {
   autoAddCss: false
 };
 
+const metaKeywords = [
+  'javascript',
+  'js',
+  'website',
+  'web',
+  'development',
+  'free',
+  'code',
+  'camp',
+  'course',
+  'courses',
+  'html',
+  'css',
+  'react',
+  'redux',
+  'api',
+  'front',
+  'back',
+  'end',
+  'learn',
+  'tutorial',
+  'programming'
+];
+
 const propTypes = {
   children: PropTypes.node.isRequired,
   executeGA: PropTypes.func,
@@ -63,7 +86,6 @@ const propTypes = {
   removeFlashMessage: PropTypes.func.isRequired,
   showFooter: PropTypes.bool,
   signedInUserName: PropTypes.string,
-  t: PropTypes.func.isRequired,
   theme: PropTypes.string,
   useTheme: PropTypes.bool,
   user: PropTypes.object
@@ -135,14 +157,13 @@ class DefaultLayout extends Component {
       isSignedIn,
       removeFlashMessage,
       showFooter = true,
-      t,
       theme = 'default',
       user,
       useTheme = true
     } = this.props;
 
     return (
-      <div className='page-wrapper'>
+      <Fragment>
         <Helmet
           bodyAttributes={{
             class: useTheme
@@ -152,9 +173,11 @@ class DefaultLayout extends Component {
           meta={[
             {
               name: 'description',
-              content: t('metaTags:description')
+              content: `Learn to code at home. Build projects. Earn certifications. Since 2014,
+                 more than 40,000 freeCodeCamp.org graduates have gotten jobs at tech
+                 companies including Google, Apple, Amazon, and Microsoft.`
             },
-            { name: 'keywords', content: t('metaTags:keywords') }
+            { name: 'keywords', content: metaKeywords.join(', ') }
           ]}
         >
           <link
@@ -202,17 +225,17 @@ class DefaultLayout extends Component {
           <style>{fontawesome.dom.css()}</style>
         </Helmet>
         <WithInstantSearch>
+          <Header fetchState={fetchState} user={user} />
           <div className={`default-layout`}>
-            <Header fetchState={fetchState} user={user} />
             <OfflineWarning isOnline={isOnline} isSignedIn={isSignedIn} />
             {hasMessage && flashMessage ? (
               <Flash flashMessage={flashMessage} onClose={removeFlashMessage} />
             ) : null}
             {children}
+            {showFooter && <Footer />}
           </div>
-          {showFooter && <Footer />}
         </WithInstantSearch>
-      </div>
+      </Fragment>
     );
   }
 }
@@ -223,4 +246,4 @@ DefaultLayout.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(DefaultLayout));
+)(DefaultLayout);

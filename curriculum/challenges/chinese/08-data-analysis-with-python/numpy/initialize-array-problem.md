@@ -1,9 +1,7 @@
 ---
 id: 5e9a0a8e09c5df3cc3600ed6
-title: Initialize Array Problem
 challengeType: 11
 videoId: 0jGfH8BPfOk
-dashedName: initialize-array-problem
 ---
 
 # --question--
@@ -13,33 +11,20 @@ dashedName: initialize-array-problem
 What is another way to produce the following array?
 
 ```py
-[[0. 0. 0. 0. 0. 0. 0.]
-[0. 1. 1. 1. 1. 1. 0.]
-[0. 1. 1. 1. 1. 1. 0.]
-[0. 1. 1. 5. 1. 1. 0.]
-[0. 1. 1. 1. 1. 1. 0.]
-[0. 1. 1. 1. 1. 1. 0.]
-[0. 0. 0. 0. 0. 0. 0.]]
+[[1. 1. 1. 1. 1.]
+[1. 0. 0. 0. 1.]
+[1. 0. 9. 0. 1.]
+[1. 0. 0. 0. 1.]
+[1. 1. 1. 1. 1.]]
 ```
 
 ## --answers--
 
 ```py
-output = np.ones((7, 7))
+output = np.ones((5, 5))
 
-z = np.zeros((5, 5))
-z[2, 2] = 5
-
-output[1:1, -1:-1] = z
-```
-
----
-
-```py
-output = np.zeros((7,7))
-
-z = np.ones((5, 5))
-z[2, 2] = 5
+z = np.zeros((3, 3))
+z[1, 1] = 9
 
 output[1:-1, 1:-1] = z
 ```
@@ -47,15 +32,31 @@ output[1:-1, 1:-1] = z
 ---
 
 ```py
-output = np.ones((7, 7))
+output = np.ones((5, 5))
 
-z = np.zeros((5, 5))
-z[3, 3] = 5
+z = np.zeros((3, 3))
+z[1, 1] = 9
 
-output[1:-1, 1:-1] = z
+output[1:3, 1:3] = z
+```
+
+---
+
+```py
+output = np.ones((5, 5))
+
+z = np.zeros((3, 3))
+z[1, 1] = 9
+
+output[4:1, 4:1] = z
 ```
 
 ## --video-solution--
 
-2
+1
+
+# --hints--
+
+
+# --solutions--
 

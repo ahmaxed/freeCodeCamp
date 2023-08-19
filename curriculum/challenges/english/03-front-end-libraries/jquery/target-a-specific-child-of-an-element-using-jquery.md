@@ -5,7 +5,6 @@ challengeType: 6
 forumTopicId: 18315
 required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: target-a-specific-child-of-an-element-using-jquery
 ---
 
 # --description--
@@ -18,9 +17,7 @@ jQuery uses CSS Selectors to target elements. The `target:nth-child(n)` CSS sele
 
 Here's how you would give the third element in each well the bounce class:
 
-```js
-$(".target:nth-child(3)").addClass("animated bounce");
-```
+`$(".target:nth-child(3)").addClass("animated bounce");`
 
 Make the second child in each of your well elements bounce. You must select the elements' children with the `target` class.
 

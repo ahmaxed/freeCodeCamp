@@ -1,33 +1,17 @@
 ---
 id: 5e601c775ac9d0ecd8b94aff
-title: Secure Real Time Multiplayer Game
 challengeType: 4
-dashedName: secure-real-time-multiplayer-game
 ---
 
 # --description--
 
-Develop a 2D real time multiplayer game using the HTML Canvas API and [Socket.io](https://socket.io/) that is functionally similar to this: <https://secure-real-time-multiplayer-game.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
+Develop a 2D real time multiplayer game using the HTML Canvas API and [Socket.io](https://socket.io/) that is functionally similar to this: <https://thread-valley-lipstick.glitch.me/>.
 
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game/) and complete your project locally.
--   Use [our repl.it starter project](https://repl.it/github/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
+Working on this project will involve you writing your code on Glitch on our starter project. After completing this project you can copy your public glitch url (to the homepage of your app) into this screen to test it! Optionally you may choose to write your project on another platform but it must be publicly visible for our testing.
 
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
+Start this project on Glitch using [this link](https://glitch.com/edit/#!/remix/clone-from-repo?REPO_URL=https://github.com/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game/) or clone [this repository](https://github.com/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game) on GitHub! If you use Glitch, remember to save the link to your project somewhere safe!
 
 # --hints--
-
-You can provide your own project, not the example URL.
-
-```js
-(getUserInput) => {
-  assert(
-    !/.*\/secure-real-time-multiplayer-game\.freecodecamp\.rocks/.test(
-      getUserInput('url')
-    )
-  );
-};
-```
 
 Multiple players can connect to a server and play.
 
@@ -139,10 +123,3 @@ The headers say that the site is powered by "PHP 7.4.3" even though it isn't (as
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions,
-  because they would need to be tested against a full working project.
-  Please check our contributing guidelines to learn more.
-*/
-```

@@ -3,7 +3,6 @@ id: afcc8d540bea9ea2669306b6
 title: Repeat a String Repeat a String
 challengeType: 5
 forumTopicId: 16041
-dashedName: repeat-a-string-repeat-a-string
 ---
 
 # --description--
@@ -12,37 +11,37 @@ Repeat a given string `str` (first argument) for `num` times (second argument). 
 
 # --hints--
 
-`repeatStringNumTimes("*", 3)` should return the string `***`.
+`repeatStringNumTimes("*", 3)` should return `"***"`.
 
 ```js
 assert(repeatStringNumTimes('*', 3) === '***');
 ```
 
-`repeatStringNumTimes("abc", 3)` should return the string `abcabcabc`.
+`repeatStringNumTimes("abc", 3)` should return `"abcabcabc"`.
 
 ```js
 assert(repeatStringNumTimes('abc', 3) === 'abcabcabc');
 ```
 
-`repeatStringNumTimes("abc", 4)` should return the string `abcabcabcabc`.
+`repeatStringNumTimes("abc", 4)` should return `"abcabcabcabc"`.
 
 ```js
 assert(repeatStringNumTimes('abc', 4) === 'abcabcabcabc');
 ```
 
-`repeatStringNumTimes("abc", 1)` should return the string `abc`.
+`repeatStringNumTimes("abc", 1)` should return `"abc"`.
 
 ```js
 assert(repeatStringNumTimes('abc', 1) === 'abc');
 ```
 
-`repeatStringNumTimes("*", 8)` should return the string `********`.
+`repeatStringNumTimes("*", 8)` should return `"********"`.
 
 ```js
 assert(repeatStringNumTimes('*', 8) === '********');
 ```
 
-`repeatStringNumTimes("abc", -2)` should return an empty string (`""`).
+`repeatStringNumTimes("abc", -2)` should return `""`.
 
 ```js
 assert(repeatStringNumTimes('abc', -2) === '');

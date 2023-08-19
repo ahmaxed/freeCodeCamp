@@ -3,7 +3,6 @@ id: bd7158d8c442eddfaeb5bd1c
 title: Build a Simon Game
 challengeType: 3
 forumTopicId: 302357
-dashedName: build-a-simon-game
 ---
 
 # --description--
@@ -33,6 +32,11 @@ Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use 
 When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
 
 You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+
+# --hints--
+
+
+# --seed--
 
 # --solutions--
 

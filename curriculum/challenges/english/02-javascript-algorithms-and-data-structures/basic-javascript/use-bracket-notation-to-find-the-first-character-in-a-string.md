@@ -4,25 +4,22 @@ title: Use Bracket Notation to Find the First Character in a String
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/ca8JwhW'
 forumTopicId: 18341
-dashedName: use-bracket-notation-to-find-the-first-character-in-a-string
 ---
 
 # --description--
 
-<dfn>Bracket notation</dfn> is a way to get a character at a specific index within a string.
+<dfn>Bracket notation</dfn> is a way to get a character at a specific `index` within a string.
 
 Most modern programming languages, like JavaScript, don't start counting at 1 like humans do. They start at 0. This is referred to as <dfn>Zero-based</dfn> indexing.
 
-For example, the character at index 0 in the word `Charles` is `C`. So if `var firstName = "Charles"`, you can get the value of the first letter of the string by using `firstName[0]`.
+For example, the character at index 0 in the word "Charles" is "C". So if `var firstName = "Charles"`, you can get the value of the first letter of the string by using `firstName[0]`.
 
 Example:
 
 ```js
 var firstName = "Charles";
-var firstLetter = firstName[0];
+var firstLetter = firstName[0]; // firstLetter is "C"
 ```
-
-`firstLetter` would have a value of the string `C`.
 
 # --instructions--
 

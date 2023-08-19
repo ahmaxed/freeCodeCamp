@@ -1,46 +1,25 @@
 ---
 id: 5900f5481000cf542c51005a
-title: 'Problem 475: Music festival'
+title: 问题475：音乐节
 challengeType: 5
-forumTopicId: 302152
-dashedName: problem-475-music-festival
+videoUrl: ''
 ---
 
 # --description--
 
-12n musicians participate at a music festival. On the first day, they form 3n quartets and practice all day.
+12n音乐家参加音乐节。在第一天，他们形成3n四重奏并整日练习。这是一场灾难。在一天结束时，所有音乐家都决定再也不会同意与他们四重奏的任何成员一起玩。在第二天，他们形成4n三人组，每个音乐家都避开他以前的四重奏伙伴。
 
-It is a disaster. At the end of the day, all musicians decide they will never again agree to play with any member of their quartet.
+设f（12n）是在12n音乐家中组织三人组合的方式。给出f（12）= 576和f（24）mod 1 000 000 007 = 509089824。
 
-On the second day, they form 4n trios, each musician avoiding his previous quartet partners.
-
-Let f(12n) be the number of ways to organize the trios amongst the 12n musicians. You are given f(12) = 576 and f(24) mod 1 000 000 007 = 509089824.
-
-Find f(600) mod 1 000 000 007.
+求f（600）mod 1 000 000 007。
 
 # --hints--
 
-`euler475()` should return 75780067.
+`euler475()`应返回75780067。
 
 ```js
 assert.strictEqual(euler475(), 75780067);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler475() {
-
-  return true;
-}
-
-euler475();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

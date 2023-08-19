@@ -1,40 +1,23 @@
 ---
 id: 5900f4e11000cf542c50fff3
-title: 'Problem 372: Pencils of rays'
+title: 问题372：光线笔
 challengeType: 5
-forumTopicId: 302034
-dashedName: problem-372-pencils-of-rays
+videoUrl: ''
 ---
 
 # --description--
 
-Let R(M, N) be the number of lattice points (x, y) which satisfy M
+令R（M，N）为满足M的格点（x，y）的数量
 
-Note: represents the floor function.
+注意：代表楼层功能。
 
 # --hints--
 
-`euler372()` should return 301450082318807040.
+`euler372()`应该返回301450082318807040。
 
 ```js
 assert.strictEqual(euler372(), 301450082318807040);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler372() {
-
-  return true;
-}
-
-euler372();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

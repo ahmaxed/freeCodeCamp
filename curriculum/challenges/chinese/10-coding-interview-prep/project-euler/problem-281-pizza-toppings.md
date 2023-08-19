@@ -1,44 +1,27 @@
 ---
 id: 5900f4861000cf542c50ff98
-title: 'Problem 281: Pizza Toppings'
+title: 问题281：比萨馅料
 challengeType: 5
-forumTopicId: 301932
-dashedName: problem-281-pizza-toppings
+videoUrl: ''
 ---
 
 # --description--
 
-You are given a pizza (perfect circle) that has been cut into m·n equal pieces and you want to have exactly one topping on each slice.
+您将得到一个比萨饼（完美的圆），该比萨饼已被切成等份的m·n，并且您想在每个切片上精确地放一个馅料。
 
-Let f(m,n) denote the number of ways you can have toppings on the pizza with m different toppings (m ≥ 2), using each topping on exactly n slices (n ≥ 1). Reflections are considered distinct, rotations are not.
+令f（m，n）表示在披萨上放置m种不同配料（m≥2）的方法，将每个配料恰好放在n个切片上（n≥1）。 反射被认为是不同的，旋转没有。
 
-Thus, for instance, f(2,1) = 1, f(2,2) = f(3,1) = 2 and f(3,2) = 16. f(3,2) is shown below:
+因此，例如，f（2,1）= 1，f（2,2）= f（3,1）= 2和f（3,2）= 16.f（3,2）如下所示：
 
-Find the sum of all f(m,n) such that f(m,n) ≤ 1015.
+找出所有f（m，n）的总和，使f（m，n）≤1015。
 
 # --hints--
 
-`euler281()` should return 1485776387445623.
+`euler281()`应该返回1485776387445623。
 
 ```js
 assert.strictEqual(euler281(), 1485776387445623);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler281() {
-
-  return true;
-}
-
-euler281();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

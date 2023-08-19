@@ -1,15 +1,13 @@
 ---
 id: 5e46f7e5ac417301a38fb928
-title: Mean-Variance-Standard Deviation Calculator
 challengeType: 10
-dashedName: mean-variance-standard-deviation-calculator
 ---
 
 # --description--
 
 Create a function that uses Numpy to output the mean, variance, and standard deviation of the rows, columns, and elements in a 3 x 3 matrix.
 
-You can access [the full project description and starter code on Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mean-variance-standard-deviation-calculator).
+You can access [the full project description and starter code on repl.it](https://repl.it/@freeCodeCamp/fcc-mean-var-std).
 
 After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
 
@@ -25,8 +23,3 @@ It should pass all Python tests.
 
 # --solutions--
 
-```py
-  # Python challenges don't need solutions,
-  # because they would need to be tested against a full working project.
-  # Please check our contributing guidelines to learn more.
-```

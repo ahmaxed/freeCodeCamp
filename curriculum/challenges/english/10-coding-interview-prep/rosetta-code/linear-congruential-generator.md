@@ -3,14 +3,13 @@ id: 5e4ce2f5ac708cc68c1df261
 title: Linear congruential generator
 challengeType: 5
 forumTopicId: 385266
-dashedName: linear-congruential-generator
 ---
 
 # --description--
 
 The [linear congruential generator](<https://en.wikipedia.org/wiki/linear congruential generator>) is a very simple example of a [random number generator](<http://rosettacode.org/wiki/random number generator>). All linear congruential generators use this formula:
 
-$$r_{n + 1} = (a \times r_n + c) \bmod m$$
+$$r\_{n + 1} = a \\times r_n + c \\pmod m$$
 
 Where:
 

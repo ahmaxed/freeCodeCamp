@@ -1,26 +1,23 @@
 ---
 id: 587d8247367417b2b2512c36
-title: Install and Require Helmet
+title: 安装和引入 Helmet
 challengeType: 2
 forumTopicId: 301581
-dashedName: install-and-require-helmet
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-infosec) 的基础上进行开发。你也可以从 [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/) 上克隆。
 
-Helmet helps you secure your Express apps by setting various HTTP headers.
+Helmet 通过配置不同的 HTTP header 信息来使你的 Express 应用更加安全。
 
 # --instructions--
 
-All your code for these lessons goes in the `myApp.js` file between the lines of code we have started you off with. Do not change or delete the code we have added for you.
-
-Install Helmet version `3.21.3`, then require it.
+安装版本号为 `3.21.3` 的 Helmet，并引入它。
 
 # --hints--
 
-`helmet` version `3.21.3` should be in `package.json`
+`package.json` 中应存在版本号为 `3.21.3` 的 `helmet` 依赖项
 
 ```js
 (getUserInput) =>
@@ -37,10 +34,3 @@ Install Helmet version `3.21.3`, then require it.
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

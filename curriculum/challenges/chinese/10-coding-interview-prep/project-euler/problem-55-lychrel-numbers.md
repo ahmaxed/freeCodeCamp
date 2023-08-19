@@ -1,113 +1,45 @@
 ---
 id: 5900f3a31000cf542c50feb6
-title: 'Problem 55: Lychrel numbers'
+title: 问题55：Lychrel数字
 challengeType: 5
-forumTopicId: 302166
-dashedName: problem-55-lychrel-numbers
+videoUrl: ''
 ---
 
 # --description--
 
-If we take 47, reverse and add, 47 + 74 = 121, which is palindromic.
-
-Not all numbers produce palindromes so quickly. For example,
-
-<div style="margin-left: 4em;">
-  349 + 943 = 1292,<br>
-  1292 + 2921 = 4213<br>
-  4213 + 3124 = 7337<br>
-</div>
-
-That is, 349 took three iterations to arrive at a palindrome.
-
-Although no one has proved it yet, it is thought that some numbers, like 196, never produce a palindrome. A number that never forms a palindrome through the reverse and add process is called a Lychrel number. Due to the theoretical nature of these numbers, and for the purpose of this problem, we shall assume that a number is Lychrel until proven otherwise. In addition you are given that for every number below ten-thousand, it will either (i) become a palindrome in less than fifty iterations, or, (ii) no one, with all the computing power that exists, has managed so far to map it to a palindrome. In fact, 10677 is the first number to be shown to require over fifty iterations before producing a palindrome: 4668731596684224866951378664 (53 iterations, 28-digits).
-
-Surprisingly, there are palindromic numbers that are themselves Lychrel numbers; the first example is 4994.
-
-How many Lychrel numbers are there below `num`?
-
-**Note:** Wording was modified slightly on 24 April 2007 to emphasize the theoretical nature of Lychrel numbers.
+如果我们采取47，反向并添加，47 + 74 = 121，这是回文。并非所有数字都如此迅速地产生回文。例如，349 + 943 = 1292,1292 + 2921 = 4213 4213 + 3124 = 7337也就是说，349进行了三次迭代以到达回文。虽然还没有人证明这一点，但据认为有些数字，如196，从未产生回文。通过反向和添加过程从不形成回文的数字称为Lychrel数。由于这些数字的理论性质，并且出于这个问题的目的，我们将假设一个数字是Lychrel，直到证明不是这样。另外，对于每万个低于一万的数字，你将得到（i）在不到五十次迭代中成为回文，或者（ii）没有一个，具有所有存在的计算能力，到目前为止已经管理到将它映射到回文结构。事实上，10677是第一个在产生回文之前需要超过50次迭代的数字：4668731596684224866951378664（53次迭代，28位数）。令人惊讶的是，有一些回文数字本身就是Lychrel数字;第一个例子是4994.有多少Lychrel数字在`num`以下？注：2007年4月24日略微修改了措辞，以强调Lychrel数的理论性质。
 
 # --hints--
 
-`countLychrelNumbers(1000)` should return a number.
-
-```js
-assert(typeof countLychrelNumbers(1000) === 'number');
-```
-
-`countLychrelNumbers(1000)` should return 13.
+`countLychrelNumbers(1000)`应该返回13。
 
 ```js
 assert.strictEqual(countLychrelNumbers(1000), 13);
 ```
 
-`countLychrelNumbers(3243)` should return 39.
-
-```js
-assert.strictEqual(countLychrelNumbers(3243), 39);
-```
-
-`countLychrelNumbers(5000)` should return 76.
+`countLychrelNumbers(5000)`应该返回76。
 
 ```js
 assert.strictEqual(countLychrelNumbers(5000), 76);
 ```
 
-`countLychrelNumbers(7654)` should return 140.
-
-```js
-assert.strictEqual(countLychrelNumbers(7654), 140);
-```
-
-`countLychrelNumbers(10000)` should return 249.
+`countLychrelNumbers(10000)`应该返回249。
 
 ```js
 assert.strictEqual(countLychrelNumbers(10000), 249);
 ```
 
-# --seed--
-
-## --seed-contents--
+你的函数应该计算所有Lychrel数。
 
 ```js
-function countLychrelNumbers(num) {
+assert.strictEqual(countLychrelNumbers(3243), 39);
+```
 
-  return true;
-}
+您的函数应该通过所有测试用例。
 
-countLychrelNumbers(10000);
+```js
+assert.strictEqual(countLychrelNumbers(7654), 140);
 ```
 
 # --solutions--
 
-```js
-const countLychrelNumbers = (size) => {
-  const numReverse = (num) => {
-    return Number(num.toString().split('').reverse().join(''));
-  };
-  const isPalin = (num) => {
-    if (numReverse(num) === num) {
-      return true;
-    }
-    return false;
-  };
-  let total = 0;
-  for (let i = 1; i < size; i++) {
-    let loopCount = 1;
-    let sum = i;
-    while (loopCount < 50) {
-      sum = sum + numReverse(sum);
-      if (isPalin(sum)) {
-        break;
-      } else {
-        loopCount++;
-      }
-    }
-    if (loopCount === 50) {
-      total++;
-    }
-  }
-  return total;
-}
-```

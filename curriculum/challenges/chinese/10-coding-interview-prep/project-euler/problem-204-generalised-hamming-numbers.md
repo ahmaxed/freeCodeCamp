@@ -1,46 +1,29 @@
 ---
 id: 5900f4381000cf542c50ff4b
-title: 'Problem 204: Generalised Hamming Numbers'
+title: 问题204：广义汉明数
 challengeType: 5
-forumTopicId: 301845
-dashedName: problem-204-generalised-hamming-numbers
+videoUrl: ''
 ---
 
 # --description--
 
-A Hamming number is a positive number which has no prime factor larger than 5.
+海明数是一个正数，其素数不大于5。
 
-So the first few Hamming numbers are 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15.
+因此，前几个汉明数是1、2、3、4、5、6、8、9、10、12、15。
 
-There are 1105 Hamming numbers not exceeding 108.
+有1105个汉明数字不超过108。
 
-We will call a positive number a generalised Hamming number of type n, if it has no prime factor larger than n. Hence the Hamming numbers are the generalised Hamming numbers of type 5.
+如果没有素数大于n的正数，我们将其称为n型广义汉明数。 因此，汉明数是类型5的广义汉明数。
 
-How many generalised Hamming numbers of type 100 are there which don't exceed 109?
+有多少个类型为100的广义汉明数不超过109？
 
 # --hints--
 
-`euler204()` should return 2944730.
+`euler204()`应返回2944730。
 
 ```js
 assert.strictEqual(euler204(), 2944730);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler204() {
-
-  return true;
-}
-
-euler204();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

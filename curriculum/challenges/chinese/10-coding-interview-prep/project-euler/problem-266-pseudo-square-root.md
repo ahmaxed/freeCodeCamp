@@ -1,46 +1,23 @@
 ---
 id: 5900f4771000cf542c50ff89
-title: 'Problem 266: Pseudo Square Root'
+title: 问题266：伪平方根
 challengeType: 5
-forumTopicId: 301915
-dashedName: problem-266-pseudo-square-root
+videoUrl: ''
 ---
 
 # --description--
 
-The divisors of 12 are: 1,2,3,4,6 and 12.
+12的除数是：1,2,3,4,6和12. 12的最大除数不超过12的平方根是3.我们将称为整数n的最大除数，它不超过n的伪平方根（PSR）的平方根。可以看出PSR（3102）= 47。
 
-The largest divisor of 12 that does not exceed the square root of 12 is 3.
-
-We shall call the largest divisor of an integer n that does not exceed the square root of n the pseudo square root (PSR) of n.
-
-It can be seen that PSR(3102)=47.
-
-Let p be the product of the primes below 190. Find PSR(p) mod 1016.
+设p是190以下质数的乘积。求PSR（p）mod 1016。
 
 # --hints--
 
-`euler266()` should return 1096883702440585.
+`euler266()`应该返回1096883702440585。
 
 ```js
 assert.strictEqual(euler266(), 1096883702440585);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler266() {
-
-  return true;
-}
-
-euler266();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

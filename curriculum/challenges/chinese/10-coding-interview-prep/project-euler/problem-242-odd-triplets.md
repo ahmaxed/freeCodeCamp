@@ -1,44 +1,27 @@
 ---
 id: 5900f45f1000cf542c50ff71
-title: 'Problem 242: Odd Triplets'
+title: 问题242：奇数三胞胎
 challengeType: 5
-forumTopicId: 301889
-dashedName: problem-242-odd-triplets
+videoUrl: ''
 ---
 
 # --description--
 
-Given the set {1,2,...,n}, we define f(n,k) as the number of its k-element subsets with an odd sum of elements. For example, f(5,3) = 4, since the set {1,2,3,4,5} has four 3-element subsets having an odd sum of elements, i.e.: {1,2,4}, {1,3,5}, {2,3,4} and {2,4,5}.
+给定集合{1,2，...，n}，我们将f（n，k）定义为具有奇数元素之和的k元素子集的数量。例如，f（5,3）= 4，因为集合{1,2,3,4,5}有四个3元素子集具有奇数元素，即：{1,2,4}，{ 1,3,5}，{2,3,4}和{2,4,5}。
 
-When all three values n, k and f(n,k) are odd, we say that they make an odd-triplet \[n,k,f(n,k)].
+当所有三个值n，k和f（n，k）都是奇数时，我们说它们产生奇数三元组\[n，k，f（n，k）]。
 
-There are exactly five odd-triplets with n ≤ 10, namely: \[1,1,f(1,1) = 1], \[5,1,f(5,1) = 3], \[5,5,f(5,5) = 1], \[9,1,f(9,1) = 5] and \[9,9,f(9,9) = 1].
+正好有五个奇数三元组，n≤10，即：\[1,1，f（1,1）= 1]，\[5,1，f（5,1）= 3]，\[5,5，f （5,5）= 1]，\[9,1，f（9,1）= 5]和\[9,9，f（9,9）= 1]。
 
-How many odd-triplets are there with n ≤ 1012 ?
+n≤1012，有多少奇数三胞胎？
 
 # --hints--
 
-`euler242()` should return 997104142249036700.
+`euler242()`应该返回997104142249036700。
 
 ```js
 assert.strictEqual(euler242(), 997104142249036700);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler242() {
-
-  return true;
-}
-
-euler242();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

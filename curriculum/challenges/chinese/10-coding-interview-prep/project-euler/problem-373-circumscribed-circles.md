@@ -1,46 +1,27 @@
 ---
 id: 5900f4e11000cf542c50fff4
-title: 'Problem 373: Circumscribed Circles'
+title: 问题373：外接圆圈
 challengeType: 5
-forumTopicId: 302035
-dashedName: problem-373-circumscribed-circles
+videoUrl: ''
 ---
 
 # --description--
 
-Every triangle has a circumscribed circle that goes through the three vertices.
+每个三角形都有一个穿过三个顶点的外接圆。考虑所有整数边三角形，其外接圆的半径也是整数。
 
-Consider all integer sided triangles for which the radius of the circumscribed circle is integral as well.
+设S（n）是半径不超过n的所有这些三角形的外接圆的半径之和。
 
-Let S(n) be the sum of the radii of the circumscribed circles of all such triangles for which the radius does not exceed n.
+S（100）= 4950并且S（1200）= 1653605。
 
-S(100)=4950 and S(1200)=1653605.
-
-Find S(107).
+找到S（107）。
 
 # --hints--
 
-`euler373()` should return 727227472448913.
+`euler373()`应该返回727227472448913。
 
 ```js
 assert.strictEqual(euler373(), 727227472448913);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler373() {
-
-  return true;
-}
-
-euler373();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

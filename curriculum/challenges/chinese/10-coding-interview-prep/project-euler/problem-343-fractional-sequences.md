@@ -1,56 +1,29 @@
 ---
 id: 5900f4c41000cf542c50ffd6
-title: 'Problem 343: Fractional Sequences'
+title: 问题343：分数序列
 challengeType: 5
-forumTopicId: 302002
-dashedName: problem-343-fractional-sequences
+videoUrl: ''
 ---
 
 # --description--
 
-For any positive integer k, a finite sequence ai of fractions xi/yi is defined by:
+对于任何正整数k，分数xi / yi的有限序列ai由以下定义：a1 = 1 / k且ai =（xi-1 + 1）/（yi-1-1）减少到最低项i> 1 。当ai达到某个整数n时，序列停止。 （即，当yi = 1时。）定义f（k）= n。例如，对于k = 20：
 
-a1 = 1/k and
+1/20→2/19→3/18 = 1/6→2/5→3/4→4/3→5/2→6/1 = 6
 
-ai = (xi-1+1)/(yi-1-1) reduced to lowest terms for i>1.
+所以f（20）= 6。
 
-When ai reaches some integer n, the sequence stops. (That is, when yi=1.)
+对于1≤k≤100，f（1）= 1，f（2）= 2，f（3）= 1且Σf（k3）= 118937。
 
-Define f(k) = n.
-
-For example, for k = 20:
-
-1/20 → 2/19 → 3/18 = 1/6 → 2/5 → 3/4 → 4/3 → 5/2 → 6/1 = 6
-
-So f(20) = 6.
-
-Also f(1) = 1, f(2) = 2, f(3) = 1 and Σf(k3) = 118937 for 1 ≤ k ≤ 100.
-
-Find Σf(k3) for 1 ≤ k ≤ 2×106.
+找Σf（k3）为1≤k≤2×106。
 
 # --hints--
 
-`euler343()` should return 269533451410884200.
+`euler343()`应该返回269533451410884200。
 
 ```js
 assert.strictEqual(euler343(), 269533451410884200);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler343() {
-
-  return true;
-}
-
-euler343();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

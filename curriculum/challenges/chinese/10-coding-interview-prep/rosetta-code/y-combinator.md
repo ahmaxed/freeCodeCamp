@@ -1,87 +1,51 @@
 ---
 id: 594810f028c0303b75339ad5
-title: Y combinator
+title: 和组合
 challengeType: 5
-forumTopicId: 302345
-dashedName: y-combinator
+videoUrl: ''
 ---
 
 # --description--
 
-In strict [functional programming](https://en.wikipedia.org/wiki/Functional programming "wp: functional programming") and the [lambda calculus](https://en.wikipedia.org/wiki/lambda calculus "wp: lambda calculus"), functions (lambda expressions) don't have state and are only allowed to refer to arguments of enclosing functions. This rules out the usual definition of a recursive function wherein a function is associated with the state of a variable and this variable's state is used in the body of the function. The [Y combinator](https://mvanier.livejournal.com/2897.html) is itself a stateless function that, when applied to another stateless function, returns a recursive version of the function. The Y combinator is the simplest of the class of such functions, called [fixed-point combinators](https://en.wikipedia.org/wiki/Fixed-point combinator "wp: fixed-point combinator").
-
-# --instructions--
-
-Define the stateless Y combinator function and use it to compute [factorial](https://en.wikipedia.org/wiki/Factorial "wp: factorial"). The `factorial(N)` function is already given to you. **See also:**
-
-<ul>
-  <li><a href="https://vimeo.com/45140590" target="_blank">Jim Weirich: Adventures in Functional Programming</a>.</li>
-</ul>
+<p>在严格的<a href='https://en.wikipedia.org/wiki/Functional programming' title='wp：函数式编程'>函数编程</a>和<a href='https://en.wikipedia.org/wiki/lambda calculus' title='wp：lambda演算'>lambda演算中</a> ，函数（lambda表达式）没有状态，只允许引用封闭函数的参数。这排除了递归函数的通常定义，其中函数与变量的状态相关联，并且该变量的状态在函数体中使用。 </p><p> <a href='http://mvanier.livejournal.com/2897.html'>Y组合</a>器本身是一个无状态函数，当应用于另一个无状态函数时，它返回函数的递归版本。 Y组合器是这类函数中最简单的一种，称为<a href='https://en.wikipedia.org/wiki/Fixed-point combinator' title='wp：定点组合器'>定点组合器</a> 。 </p>任务： <pre> <code>Define the stateless Y combinator function and use it to compute &#x3C;a href="https://en.wikipedia.org/wiki/Factorial" title="wp: factorial">factorial&#x3C;/a>.</code> </pre><p> <code>factorial(N)</code>功能已经给你了。另见<a href='http://vimeo.com/45140590'>Jim Weirich：功能编程中的冒险</a> 。 </p>
 
 # --hints--
 
-Y should return a function.
+Y必须返回一个函数
 
 ```js
 assert.equal(typeof Y((f) => (n) => n), 'function');
 ```
 
-factorial(1) should return 1.
+factorial（1）必须返回1。
 
 ```js
 assert.equal(factorial(1), 1);
 ```
 
-factorial(2) should return 2.
+factorial（2）必须返回2。
 
 ```js
 assert.equal(factorial(2), 2);
 ```
 
-factorial(3) should return 6.
+factorial（3）必须返回6。
 
 ```js
 assert.equal(factorial(3), 6);
 ```
 
-factorial(4) should return 24.
+factorial（4）必须返回24。
 
 ```js
 assert.equal(factorial(4), 24);
 ```
 
-factorial(10) should return 3628800.
+factorial（10）必须返回3628800。
 
 ```js
 assert.equal(factorial(10), 3628800);
 ```
 
-# --seed--
-
-## --after-user-code--
-
-```js
-var factorial = Y(f => n => (n > 1 ? n * f(n - 1) : 1));
-```
-
-## --seed-contents--
-
-```js
-function Y(f) {
-  return function() {
-
-  };
-}
-
-var factorial = Y(function(f) {
-  return function (n) {
-    return n > 1 ? n * f(n - 1) : 1;
-  };
-});
-```
-
 # --solutions--
 
-```js
-var Y = f => (x => x(x))(y => f(x => y(y)(x)));
-```

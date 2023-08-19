@@ -3,7 +3,6 @@ id: 5900f5021000cf542c510015
 title: 'Problem 406: Guessing Game'
 challengeType: 5
 forumTopicId: 302074
-dashedName: problem-406-guessing-game
 ---
 
 # --description--

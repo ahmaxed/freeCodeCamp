@@ -3,7 +3,6 @@ id: 5a24c314108439a4d403618d
 title: Render React on the Server with renderToString
 challengeType: 6
 forumTopicId: 301407
-dashedName: render-react-on-the-server-with-rendertostring
 ---
 
 # --description--

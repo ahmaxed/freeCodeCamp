@@ -1,44 +1,27 @@
 ---
 id: 5900f4c11000cf542c50ffd3
-title: 'Problem 341: Golomb''s self-describing sequence'
+title: 问题341：Golomb的自我描述序列
 challengeType: 5
-forumTopicId: 302000
-dashedName: problem-341-golombs-self-describing-sequence
+videoUrl: ''
 ---
 
 # --description--
 
-The Golomb's self-describing sequence {G(n)} is the only nondecreasing sequence of natural numbers such that n appears exactly G(n) times in the sequence. The values of G(n) for the first few n are
+Golomb的自描述序列{G（n）}是唯一的非递减自然数序列，因此n在序列中恰好出现G（n）次。前几个n的G（n）值是
 
-n123456789101112131415…G(n)122334445556666…
+n123456789101112131415 ... G（n）的122334445556666 ...
 
-You are given that G(103) = 86, G(106) = 6137. You are also given that ΣG(n3) = 153506976 for 1 ≤ n &lt; 103.
+给出G（103）= 86，G（106）= 6137.对于1≤n&lt;103，还给出ΣG（n3）= 153506976。
 
-Find ΣG(n3) for 1 ≤ n &lt; 106.
+找到ΣG（n3）为1≤n&lt;106。
 
 # --hints--
 
-`euler341()` should return 56098610614277016.
+`euler341()`应该返回56098610614277016。
 
 ```js
 assert.strictEqual(euler341(), 56098610614277016);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler341() {
-
-  return true;
-}
-
-euler341();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

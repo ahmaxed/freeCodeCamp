@@ -1,46 +1,29 @@
 ---
 id: 5900f49f1000cf542c50ffb1
-title: 'Problem 306: Paper-strip Game'
+title: 问题306：纸条游戏
 challengeType: 5
-forumTopicId: 301960
-dashedName: problem-306-paper-strip-game
+videoUrl: ''
 ---
 
 # --description--
 
-The following game is a classic example of Combinatorial Game Theory:
+以下游戏是组合博弈论的经典示例：
 
-Two players start with a strip of n white squares and they take alternate turns. On each turn, a player picks two contiguous white squares and paints them black. The first player who cannot make a move loses.
+两名玩家从n个白色方块开始，轮流交替进行。 在每个回合中，玩家选择两个连续的白色方块并将其涂成黑色。 第一个无法移动的玩家输了。
 
-If n = 1, there are no valid moves, so the first player loses automatically. If n = 2, there is only one valid move, after which the second player loses. If n = 3, there are two valid moves, but both leave a situation where the second player loses. If n = 4, there are three valid moves for the first player; she can win the game by painting the two middle squares. If n = 5, there are four valid moves for the first player (shown below in red); but no matter what she does, the second player (blue) wins.
+如果n = 1，则没有有效的移动，因此第一个玩家会自动失败。 如果n = 2，则只有一招有效，此后第二名玩家输了。 如果n = 3，则有两个有效的举动，但都留下第二个玩家输掉的情况。 如果n = 4，则第一个玩家有3个有效动作；她可以通过绘制两个中间方块来赢得比赛。 如果n = 5，则第一个玩家有四次有效移动（下面以红色显示）；但无论她做什么，第二名玩家（蓝色）都会获胜。
 
-So, for 1 ≤ n ≤ 5, there are 3 values of n for which the first player can force a win. Similarly, for 1 ≤ n ≤ 50, there are 40 values of n for which the first player can force a win.
+因此，对于1≤n≤5，有3个n值，第一位玩家可以对其施加强制胜利。 类似地，对于1≤n≤50，第一个玩家可以强制取胜的n值为40。
 
-For 1 ≤ n ≤ 1 000 000, how many values of n are there for which the first player can force a win?
+对于1≤n≤1 000 000，第一个玩家可以强制赢得多少n值？
 
 # --hints--
 
-`euler306()` should return 852938.
+`euler306()`应该返回852938。
 
 ```js
 assert.strictEqual(euler306(), 852938);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler306() {
-
-  return true;
-}
-
-euler306();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

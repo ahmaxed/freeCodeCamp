@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { Link } from 'gatsby';
 import Spinner from 'react-spinkit';
-import { useTranslation } from 'react-i18next';
 
 import { isSignedInSelector, userFetchStateSelector } from '../../../redux';
 import Login from './Login';
@@ -28,8 +27,6 @@ const propTypes = {
 
 function UserState(props) {
   const { isSignedIn, showLoading, disableSettings } = props;
-  const { t } = useTranslation();
-
   if (disableSettings) {
     return <Login />;
   }
@@ -46,7 +43,7 @@ function UserState(props) {
   }
   return isSignedIn ? (
     <Link className='top-right-nav-link' to='/settings'>
-      {t('buttons.settings')}
+      Settings
     </Link>
   ) : (
     <Login />

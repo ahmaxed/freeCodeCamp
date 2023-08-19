@@ -4,12 +4,11 @@ title: Make Elements Only Visible to a Screen Reader by Using Custom CSS
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cJ8QGkhJ'
 forumTopicId: 301020
-dashedName: make-elements-only-visible-to-a-screen-reader-by-using-custom-css
 ---
 
 # --description--
 
-Have you noticed that all of the applied accessibility challenges so far haven't used any CSS? This shows the importance of using a logical document outline and semantically meaningful tags around your content before introducing the visual design aspect.
+Have you noticed that all of the applied accessibility challenges so far haven't used any CSS? This is to show the importance of a logical document outline, and using semantically meaningful tags around your content before introducing the visual design aspect.
 
 However, CSS's magic can also improve accessibility on your page when you want to visually hide content meant only for screen readers. This happens when information is in a visual format (like a chart), but screen reader users need an alternative presentation (like a table) to access the data. CSS is used to position the screen reader-only elements off the visual area of the browser window.
 
@@ -35,29 +34,29 @@ Here's an example of the CSS rules that accomplish this:
 
 # --instructions--
 
-Camper Cat created a really cool stacked bar chart for his training page, and put the data into a table for his visually impaired users. The table already has an `sr-only` class, but the CSS rules aren't filled in yet. Give the `position` an `absolute` value, the `left` a `-10000px` value, and the `width` and `height` both `1px` values.
+Camper Cat created a really cool stacked bar chart for his training page, and put the data into a table for his visually impaired users. The table already has an `sr-only` class, but the CSS rules aren't filled in yet. Give the `position` an absolute value, the `left` a -10000px value, and the `width` and `height` both 1px values.
 
 # --hints--
 
-Your code should set the `position` property of the `sr-only` class to a value of `absolute`.
+Your code should set the `position` property of the `sr-only` class to a value of absolute.
 
 ```js
 assert($('.sr-only').css('position') == 'absolute');
 ```
 
-Your code should set the `left` property of the `sr-only` class to a value of `-10000px`.
+Your code should set the `left` property of the `sr-only` class to a value of -10000px.
 
 ```js
 assert($('.sr-only').css('left') == '-10000px');
 ```
 
-Your code should set the `width` property of the `sr-only` class to a value of `1` pixel.
+Your code should set the `width` property of the `sr-only` class to a value of 1 pixel.
 
 ```js
 assert(code.match(/width:\s*?1px/gi));
 ```
 
-Your code should set the `height` property of the `sr-only` class to a value of `1` pixel.
+Your code should set the `height` property of the `sr-only` class to a value of 1 pixel.
 
 ```js
 assert(code.match(/height:\s*?1px/gi));

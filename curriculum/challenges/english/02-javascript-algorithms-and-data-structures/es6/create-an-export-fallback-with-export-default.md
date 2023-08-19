@@ -3,7 +3,6 @@ id: 587d7b8c367417b2b2512b58
 title: Create an Export Fallback with export default
 challengeType: 1
 forumTopicId: 301199
-dashedName: create-an-export-fallback-with-export-default
 ---
 
 # --description--
@@ -15,16 +14,16 @@ There is another `export` syntax you need to know, known as <dfn>export default<
 Below are examples using `export default`:
 
 ```js
+// named function
 export default function add(x, y) {
   return x + y;
 }
 
+// anonymous function
 export default function(x, y) {
   return x + y;
 }
 ```
-
-The first is a named function, and the second is an anonymous function.
 
 Since `export default` is used to declare a fallback value for a module or file, you can only have one value be a default export in each module or file. Additionally, you cannot use `export default` with `var`, `let`, or `const`
 
@@ -34,7 +33,7 @@ The following function should be the fallback value for the module. Please add t
 
 # --hints--
 
-Your code should use an `export` fallback.
+Your code should use `export` fallback.
 
 ```js
 assert(

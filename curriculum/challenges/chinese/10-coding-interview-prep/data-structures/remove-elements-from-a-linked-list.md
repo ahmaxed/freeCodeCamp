@@ -1,41 +1,33 @@
 ---
 id: 587d8251367417b2b2512c63
-title: Remove Elements from a Linked List
+title: 从链接列表中删除元素
 challengeType: 1
-forumTopicId: 301712
-dashedName: remove-elements-from-a-linked-list
+videoUrl: ''
 ---
 
 # --description--
 
-The next important method that any implementation of a linked list will need is a `remove` method. This method should take the element we want to remove as an argument, and then search the list to find and remove the node that contains that element.
-
-Whenever we remove a node from a linked list, it's important that we don't accidentally orphan the rest of the list in doing so. Recall that every node's `next` property points to the node that follows it in the list. If we're removing the middle element, say, we'll want to make sure that we have a connection from that element's previous node's `next` property to the middle element's `next` property (which is the next node in the list!)
-
-This might sound really confusing, so let's return to the conga line example so we have a good conceptual model. Picture yourself in a conga line, and the person directly in front of you leaves the line. The person who just left the line no longer has her hands on anyone in line--and you no longer have your hands on the person that left. You step forward and put your hands on next person you see.
-
-If the element we wish to remove is the `head` element, we reassign the `head` to the second node of the linked list.
+链接列表的任何实现所需的下一个重要方法是`remove`方法。此方法应将要删除的元素作为参数，然后搜索列表以查找并删除包含该元素的节点。每当我们从链表中删除一个节点时，重要的是我们不要意外地孤立列表的其余部分。回想一下，每个节点的`next`属性都指向列表中跟随它的节点。如果我们删除中间元素，比如说，我们要确保我们从该元素的前一个节点的`next`属性到中间元素的`next`属性（这是列表中的下一个节点）的连接！这可能听起来真的很混乱，所以让我们回到康加线的例子，这样我们就有了一个很好的概念模型。想象自己在康加舞线上，直接在你面前的人离开了这条线。刚离开生产线的人不再将手放在任何人身上 - 而且你不再把手放在离开的人身上。你向前走，把你的手放在你看到的下一个人身上。如果我们要删除的元素是`head`元素，我们将`head`重新分配给链表的第二个节点。
 
 # --instructions--
 
-Write a `remove` method that takes an element and removes it from the linked list.
-
-**Note:** The `length` of the list should decrease by one every time an element is removed from the linked list.
+编写一个`remove`方法，该方法接受一个元素并将其从链表中删除。注意每次从链接列表中删除元素时，列表的`length`应减少一。
 
 # --hints--
 
-Your `LinkedList` class should have a `remove` method.
+您的`LinkedList`类应该有一个`remove`方法。
 
 ```js
 assert(
   (function () {
     var test = new LinkedList();
     return typeof test.remove === 'function';
-  })()
+  })(),
+  'Your <code>LinkedList</code> class should have a <code>remove</code> method.'
 );
 ```
 
-Your `remove` method should reassign `head` to the second node when the first node is removed.
+`remove`第一个节点时， `remove`方法应重新分配`head`到第二个节点。
 
 ```js
 assert(
@@ -45,11 +37,12 @@ assert(
     test.add('dog');
     test.remove('cat');
     return test.head().element === 'dog';
-  })()
+  })(),
+  'Your <code>remove</code> method should reassign <code>head</code> to the second node when the first node is removed.'
 );
 ```
 
-Your `remove` method should decrease the `length` of the linked list by one for every node removed.
+对于每个删除的节点，您的`remove`方法应该将链表的`length`减少一个。
 
 ```js
 assert(
@@ -57,31 +50,14 @@ assert(
     var test = new LinkedList();
     test.add('cat');
     test.add('dog');
-    test.add('hamster');
     test.remove('cat');
-    test.remove('fish');
-    return test.size() === 2;
-  })()
+    return test.size() === 1;
+  })(),
+  'Your <code>remove</code> method should decrease the <code>length</code> of the linked list by one for every node removed.'
 );
 ```
 
-Your `remove` method should reassign the reference of the previous node of the removed node to the removed node's `next` reference.
-
-```js
-assert(
-  (function () {
-    var test = new LinkedList();
-    test.add('cat');
-    test.add('dog');
-    test.add('snake');
-    test.add('kitten');
-    test.remove('snake');
-    return test.head().next.next.element === 'kitten';
-  })()
-);
-```
-
-Your `remove` method should not change the linked list if the element does not exist in the linked list.
+您的`remove`方法应该将已删除节点的上`next`节点的引用重新分配给已删除节点的`next`引用。
 
 ```js
 assert(
@@ -90,121 +66,12 @@ assert(
     test.add('cat');
     test.add('dog');
     test.add('kitten');
-    test.remove('elephant');
-    return (
-      JSON.stringify(test.head()) ===
-      '{"element":"cat","next":{"element":"dog","next":{"element":"kitten","next":null}}}'
-    );
-  })()
+    test.remove('dog');
+    return test.head().next.element === 'kitten';
+  })(),
+  'Your <code>remove</code> method should reassign the reference of the previous node of the removed node to the removed node&apos;s <code>next</code> reference.'
 );
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function LinkedList() {
-  var length = 0;
-  var head = null;
-
-  var Node = function(element){
-    this.element = element;
-    this.next = null;
-  };
-
-  this.size = function(){
-    return length;
-  };
-
-  this.head = function(){
-    return head;
-  };
-
-  this.add = function(element){
-    var node = new Node(element);
-    if(head === null){
-        head = node;
-    } else {
-      var currentNode = head;
-
-      while(currentNode.next){
-        currentNode  = currentNode.next;
-      }
-
-      currentNode.next = node;
-    }
-
-    length++;
-  };
-
-  this.remove = function(element){
-    // Only change code below this line
-
-    // Only change code above this line
-  };
-}
 ```
 
 # --solutions--
 
-```js
-function LinkedList() {
-  var length = 0;
-  var head = null;
-
-  var Node = function(element){
-    this.element = element;
-    this.next = null;
-  };
-
-  this.size = function(){
-    return length;
-  };
-
-  this.head = function(){
-    return head;
-  };
-
-  this.add = function(element){
-    var node = new Node(element);
-    if(head === null){
-        head = node;
-    } else {
-        var currentNode = head;
-
-        while(currentNode.next){
-            currentNode  = currentNode.next;
-        }
-
-        currentNode.next = node;
-    }
-
-    length++;
-  };
-
-  this.remove = function(element){
-    if (head === null) {
-      return;
-    }
-    var previous;
-    var currentNode = head;
-
-    while (currentNode.next !== null && currentNode.element !== element) {
-      previous = currentNode;
-      currentNode = currentNode.next;
-    }
-
-    if (currentNode.next === null && currentNode.element !== element) {
-      return;
-    }
-    else if (previous) {
-      previous.next = currentNode.next;
-    } else {
-      head = currentNode.next;
-    }
-
-    length--;
-  };
-} 
-```

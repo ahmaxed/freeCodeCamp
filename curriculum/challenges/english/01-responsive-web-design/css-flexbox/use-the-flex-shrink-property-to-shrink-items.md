@@ -4,7 +4,6 @@ title: Use the flex-shrink Property to Shrink Items
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVaDAv/cd3PBfr'
 forumTopicId: 301113
-dashedName: use-the-flex-shrink-property-to-shrink-items
 ---
 
 # --description--

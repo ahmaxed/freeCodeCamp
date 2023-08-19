@@ -4,16 +4,13 @@ title: Compound Assignment With Augmented Addition
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cDR6LCb'
 forumTopicId: 16661
-dashedName: compound-assignment-with-augmented-addition
 ---
 
 # --description--
 
 In programming, it is common to use assignments to modify the contents of a variable. Remember that everything to the right of the equals sign is evaluated first, so we can say:
 
-```js
-myVar = myVar + 5;
-```
+`myVar = myVar + 5;`
 
 to add `5` to `myVar`. Since this is such a common pattern, there are operators which do both a mathematical operation and assignment in one step.
 
@@ -22,10 +19,8 @@ One such operator is the `+=` operator.
 ```js
 var myVar = 1;
 myVar += 5;
-console.log(myVar);
+console.log(myVar); // Returns 6
 ```
-
-`6` would be displayed in the console.
 
 # --instructions--
 

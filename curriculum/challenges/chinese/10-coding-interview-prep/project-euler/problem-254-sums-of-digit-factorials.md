@@ -1,48 +1,31 @@
 ---
 id: 5900f46b1000cf542c50ff7d
-title: 'Problem 254: Sums of Digit Factorials'
+title: 问题254：数字因子的总和
 challengeType: 5
-forumTopicId: 301902
-dashedName: problem-254-sums-of-digit-factorials
+videoUrl: ''
 ---
 
 # --description--
 
-Define f(n) as the sum of the factorials of the digits of n. For example, f(342) = 3! + 4! + 2! = 32.
+将f（n）定义为n的数字的阶乘的总和。例如，f（342）= 3！ + 4！ + 2！ = 32。
 
-Define sf(n) as the sum of the digits of f(n). So sf(342) = 3 + 2 = 5.
+将sf（n）定义为f（n）的数字之和。所以sf（342）= 3 + 2 = 5。
 
-Define g(i) to be the smallest positive integer n such that sf(n) = i. Though sf(342) is 5, sf(25) is also 5, and it can be verified that g(5) is 25.
+将g（i）定义为最小的正整数n，使得sf（n）= i。虽然sf（342）是5，但sf（25）也是5，并且可以证实g（5）是25。
 
-Define sg(i) as the sum of the digits of g(i). So sg(5) = 2 + 5 = 7.
+将sg（i）定义为g（i）的数字之和。所以sg（5）= 2 + 5 = 7。
 
-Further, it can be verified that g(20) is 267 and ∑ sg(i) for 1 ≤ i ≤ 20 is 156.
+此外，可以证实g（20）是267并且1≤i≤20的Σsg（i）是156。
 
-What is ∑ sg(i) for 1 ≤ i ≤ 150?
+什么是Σsg（i）1≤i≤150？
 
 # --hints--
 
-`euler254()` should return 8184523820510.
+`euler254()`应该返回8184523820510。
 
 ```js
 assert.strictEqual(euler254(), 8184523820510);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler254() {
-
-  return true;
-}
-
-euler254();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

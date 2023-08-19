@@ -4,7 +4,6 @@ title: Quoting Strings with Single Quotes
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cbQmnhM'
 forumTopicId: 18260
-dashedName: quoting-strings-with-single-quotes
 ---
 
 # --description--
@@ -26,14 +25,11 @@ However, this becomes a problem if you need to use the outermost quotes within i
 
 ```js
 goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
-badStr = 'Finn responds, "Let's go!"';
+badStr = 'Finn responds, "Let's go!"'; // Throws an error
 ```
 
-Here `badStr` will throw an error.
-
-In the <dfn>goodStr</dfn> above, you can use both quotes safely by using the backslash `\` as an escape character.
-
-**Note:** The backslash `\` should not be confused with the forward slash `/`. They do not do the same thing.
+In the <dfn>goodStr</dfn> above, you can use both quotes safely by using the backslash `\` as an escape character. **Note**  
+The backslash `\` should not be confused with the forward slash `/`. They do not do the same thing.
 
 # --instructions--
 
@@ -43,7 +39,7 @@ Right now, the `<a>` tag in the string uses double quotes everywhere. You will n
 
 # --hints--
 
-You should remove all the backslashes (`\`).
+You should remove all the `backslashes` (`\`).
 
 ```js
 assert(

@@ -3,7 +3,6 @@ id: 587d7dbd367417b2b2512bb4
 title: Store Data with Sass Variables
 challengeType: 0
 forumTopicId: 301460
-dashedName: store-data-with-sass-variables
 ---
 
 # --description--
@@ -17,11 +16,8 @@ Here are a couple examples:
 ```scss
 $main-fonts: Arial, sans-serif;
 $headings-color: green;
-```
 
-And to use the variables:
-
-```scss
+//To use variables:
 h1 {
   font-family: $main-fonts;
   color: $headings-color;
@@ -32,11 +28,11 @@ One example where variables are useful is when a number of elements need to be t
 
 # --instructions--
 
-Create a variable `$text-color` and set it to `red`. Then change the value of the `color` property for the `.blog-post` and `h2` to the `$text-color` variable.
+Create a variable `$text-color` and set it to red. Then change the value of the `color` property for the `.blog-post` and `h2` to the `$text-color` variable.
 
 # --hints--
 
-Your code should have a Sass variable declared for `$text-color` with a value of `red`.
+Your code should have a Sass variable declared for `$text-color` with a value of red.
 
 ```js
 assert(code.match(/\$text-color:\s*?red;/g));

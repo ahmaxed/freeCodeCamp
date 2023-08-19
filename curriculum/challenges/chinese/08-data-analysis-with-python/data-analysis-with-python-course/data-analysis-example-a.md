@@ -1,19 +1,14 @@
 ---
 id: 5e9a093a74c4063ca6f7c14d
-title: Data Analysis Example A
 challengeType: 11
 videoId: nVAaxZ34khk
-dashedName: data-analysis-example-a
 ---
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
-
 More resources:
 
--   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/FreeCodeCamp-Pandas-Real-Life-Example)
--   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+\- [Notebook](https://notebooks.ai/rmotr-curriculum/freecodecamp-pandas-real-life-example-24fa5bf8)
 
 # --question--
 
@@ -40,4 +35,9 @@ How many columns the source data had before loading.
 ## --video-solution--
 
 2
+
+# --hints--
+
+
+# --solutions--
 

@@ -1,48 +1,21 @@
 ---
 id: 5900f39f1000cf542c50feb2
-title: 'Problem 51: Prime digit replacements'
+title: 问题51：主要数字替换
 challengeType: 5
-forumTopicId: 302162
-dashedName: problem-51-prime-digit-replacements
+videoUrl: ''
 ---
 
 # --description--
 
-By replacing the 1st digit of the 2-digit number \*3, it turns out that six of the nine possible values: 13, 23, 43, 53, 73, and 83, are all prime.
-
-By replacing the 3rd and 4th digits of 56\*\*3 with the same digit, this 5-digit number is the first example having seven primes among the ten generated numbers, yielding the family: 56003, 56113, 56333, 56443, 56663, 56773, and 56993. Consequently 56003, being the first member of this family, is the smallest prime with this property.
-
-Find the smallest prime which, by replacing part of the number (not necessarily adjacent digits) with the same digit, is part of an eight prime value family.
+通过替换2位数\* 3的第1位，可以看出9个可能值中的6个：13,23,43,53,73和83都是素数。通过用相同的数字替换56 \*\* 3的第3和第4位数字，这个5位数字是在10个生成的数字中具有7个素数的第一个例子，产生该族：56003,56113,56333,56443,56663,56773因此56003，作为这个家族的第一个成员，是拥有这个属性的最小的素数。找到最小的素数，通过用相同的数字替换部分数字（不一定是相邻的数字），它是8个素数值族的一部分。
 
 # --hints--
 
-`primeDigitReplacements()` should return a number.
+`euler51()`应返回121313。
 
 ```js
-assert(typeof primeDigitReplacements() === 'number');
-```
-
-`primeDigitReplacements()` should return 121313.
-
-```js
-assert.strictEqual(primeDigitReplacements(), 121313);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function primeDigitReplacements() {
-
-  return true;
-}
-
-primeDigitReplacements();
+assert.strictEqual(euler51(), 121313);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

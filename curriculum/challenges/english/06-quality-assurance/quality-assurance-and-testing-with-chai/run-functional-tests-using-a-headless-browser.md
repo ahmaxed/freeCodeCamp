@@ -3,12 +3,11 @@ id: 587d8250367417b2b2512c5d
 title: Run Functional Tests using a Headless Browser
 challengeType: 2
 forumTopicId: 301595
-dashedName: run-functional-tests-using-a-headless-browser
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 In the HTML main view we provided a input form. It sends data to the `PUT /travellers` endpoint that we used above with an Ajax request. When the request successfully completes, the client code appends a `<div>` containing the info returned by the call to the DOM. Here is an example of how to interact with this form:
 
@@ -31,7 +30,7 @@ Then, once a response is received from the AJAX request, a few assertions are ma
 1.  The status of the response is `200`
 2.  The text within the `<span id='name'></span>` element matches `'Marco'`
 3.  The text within the `<span id='surname'></span>` element matches `'Polo'`
-4.  There is `1` `<span id='dates'></span>` element.
+4.  The there is `1` `<span id='dates'></span>` element.
 
 Finally, the `done` callback is invoked, which is needed due to the asynchronous test.
 
@@ -49,7 +48,7 @@ Within the callback:
 3.  assert that the text inside the element `span#surname` is `'Colombo'`
 4.  assert that the element(s) `span#dates` exist and their count is `1`
 
-Do not forget to remove the `assert.fail()` call.
+Do not forget to to remove the `assert.fail()` call.
 
 # --hints--
 
@@ -128,6 +127,8 @@ You should assert that the element 'span#dates' exist and its count is 1.
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

@@ -3,7 +3,6 @@ id: 5a24c314108439a4d4036189
 title: Change Inline CSS Conditionally Based on Component State
 challengeType: 6
 forumTopicId: 301380
-dashedName: change-inline-css-conditionally-based-on-component-state
 ---
 
 # --description--

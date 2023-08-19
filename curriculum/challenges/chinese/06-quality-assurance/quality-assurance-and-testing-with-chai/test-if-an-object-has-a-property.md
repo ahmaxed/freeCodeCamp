@@ -3,22 +3,21 @@ id: 587d824e367417b2b2512c55
 title: 测试对象是否具有某个属性
 challengeType: 2
 forumTopicId: 301604
-dashedName: test-if-an-object-has-a-property
 ---
 
 # --description--
 
-请注意，本项目在[这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
 
 `property` 断言一个对象含有给定属性。
 
 # --instructions--
 
-在 `tests/1_unit-tests.js` 中，`Objects` 套件里标有 `#16` 的测试下，将每个 `assert` 改成 `assert.property` 或 `assert.notProperty` 方法，通过测试（结果应该返回 `true`）。 不要修改传给断言的参数。
+使用 `assert.property()` 或者 `assert.notProperty()` 让所有测试通过。
 
 # --hints--
 
-应通过所有测试。
+不应有未通过的测试
 
 ```js
 (getUserInput) =>
@@ -32,7 +31,7 @@ dashedName: test-if-an-object-has-a-property
   );
 ```
 
-应该为第一个断言选择正确的方法：`property` 或 `notProperty`。
+请选择正确的断言—property 或 notProperty
 
 ```js
 (getUserInput) =>
@@ -50,7 +49,7 @@ dashedName: test-if-an-object-has-a-property
   );
 ```
 
-应该为第二个断言选择正确的方法：`property` 或 `notProperty`。
+请选择正确的断言—property 或 notProperty
 
 ```js
 (getUserInput) =>
@@ -68,7 +67,7 @@ dashedName: test-if-an-object-has-a-property
   );
 ```
 
-应该为第三个断言选择正确的方法：`property` 或 `notProperty`。
+请选择正确的断言—property 或 notProperty
 
 ```js
 (getUserInput) =>
@@ -84,10 +83,3 @@ dashedName: test-if-an-object-has-a-property
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

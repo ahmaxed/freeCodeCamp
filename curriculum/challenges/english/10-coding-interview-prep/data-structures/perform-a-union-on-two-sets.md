@@ -3,7 +3,6 @@ id: 587d8253367417b2b2512c6c
 title: Perform a Union on Two Sets
 challengeType: 1
 forumTopicId: 301708
-dashedName: perform-a-union-on-two-sets
 ---
 
 # --description--
@@ -25,7 +24,7 @@ assert(
 );
 ```
 
-The union of a Set containing values ["a", "b", "c"] and a Set containing values ["c", "d"] should return a new Set containing values ["a", "b", "c", "d"].
+The union of `["a", "b", "c"]` and `["c", "d"]` should return `["a", "b", "c", "d"]`.
 
 ```js
 assert(
@@ -67,12 +66,12 @@ class Set {
   }
   // This method will return all the values in the set
   values() {
-    return Object.values(this.dictionary);
+    return Object.keys(this.dictionary);
   }
   // This method will add an element to the set
   add(element) {
     if (!this.has(element)) {
-      this.dictionary[element] = element;
+      this.dictionary[element] = true;
       this.length++;
       return true;
     }
@@ -113,12 +112,12 @@ class Set {
   }
 
   values() {
-    return Object.values(this.dictionary);
+    return Object.keys(this.dictionary);
   }
 
   add(element) {
     if (!this.has(element)) {
-      this.dictionary[element] = element;
+      this.dictionary[element] = true;
       this.length++;
       return true;
     }

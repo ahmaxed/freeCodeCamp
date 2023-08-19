@@ -3,7 +3,6 @@ id: 5a24c314108439a4d4036181
 title: Introducing Inline Styles
 challengeType: 6
 forumTopicId: 301395
-dashedName: introducing-inline-styles
 ---
 
 # --description--
@@ -14,23 +13,19 @@ If you import styles from a stylesheet, it isn't much different at all. You appl
 
 You apply inline styles to JSX elements similar to how you do it in HTML, but with a few JSX differences. Here's an example of an inline style in HTML:
 
-```jsx
-<div style="color: yellow; font-size: 16px">Mellow Yellow</div>
-```
+`<div style="color: yellow; font-size: 16px">Mellow Yellow</div>`
 
 JSX elements use the `style` attribute, but because of the way JSX is transpiled, you can't set the value to a `string`. Instead, you set it equal to a JavaScript `object`. Here's an example:
 
-```jsx
-<div style={{color: "yellow", fontSize: 16}}>Mellow Yellow</div>
-```
+`<div style={{color: "yellow", fontSize: 16}}>Mellow Yellow</div>`
 
-Notice how we camelCase the `fontSize` property? This is because React will not accept kebab-case keys in the style object. React will apply the correct property name for us in the HTML.
+Notice how we camelCase the "fontSize" property? This is because React will not accept kebab-case keys in the style object. React will apply the correct property name for us in the HTML.
 
 # --instructions--
 
-Add a `style` attribute to the `div` in the code editor to give the text a color of red and font size of `72px`.
+Add a `style` attribute to the `div` in the code editor to give the text a color of red and font size of 72px.
 
-Note that you can optionally set the font size to be a number, omitting the units `px`, or write it as `72px`.
+Note that you can optionally set the font size to be a number, omitting the units "px", or write it as "72px".
 
 # --hints--
 

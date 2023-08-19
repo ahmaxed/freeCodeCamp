@@ -1,19 +1,14 @@
 ---
 id: 5e9a093a74c4063ca6f7c156
-title: Numpy Boolean Arrays
 challengeType: 11
 videoId: N1ttsMmcVMM
-dashedName: numpy-boolean-arrays
 ---
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
-
 More resources:
 
--   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/freecodecamp-intro-to-numpy)
--   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+\- [Notebook](https://notebooks.ai/rmotr-curriculum/freecodecamp-intro-to-numpy-6c285b74)
 
 # --question--
 
@@ -54,4 +49,9 @@ print(a <= 3)
 ## --video-solution--
 
 4
+
+# --hints--
+
+
+# --solutions--
 

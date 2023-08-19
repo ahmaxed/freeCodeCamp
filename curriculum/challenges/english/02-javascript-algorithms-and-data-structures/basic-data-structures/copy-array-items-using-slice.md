@@ -3,7 +3,6 @@ id: 587d7b7a367417b2b2512b12
 title: Copy Array Items Using slice()
 challengeType: 1
 forumTopicId: 301158
-dashedName: copy-array-items-using-slice
 ---
 
 # --description--
@@ -14,15 +13,15 @@ The next method we will cover is `slice()`. Rather than modifying an array, `sli
 let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
 
 let todaysWeather = weatherConditions.slice(1, 3);
+// todaysWeather equals ['snow', 'sleet'];
+// weatherConditions still equals ['rain', 'snow', 'sleet', 'hail', 'clear']
 ```
-
-`todaysWeather` would have the value `['snow', 'sleet']`, while `weatherConditions` would still have `['rain', 'snow', 'sleet', 'hail', 'clear']`.
 
 In effect, we have created a new array by extracting elements from an existing array.
 
 # --instructions--
 
-We have defined a function, `forecast`, that takes an array as an argument. Modify the function using `slice()` to extract information from the argument array and return a new array that contains the string elements `warm` and `sunny`.
+We have defined a function, `forecast`, that takes an array as an argument. Modify the function using `slice()` to extract information from the argument array and return a new array that contains the elements `'warm'` and `'sunny'`.
 
 # --hints--
 

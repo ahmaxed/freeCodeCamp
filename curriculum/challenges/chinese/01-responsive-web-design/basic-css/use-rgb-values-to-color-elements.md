@@ -4,30 +4,25 @@ title: 使用 RGB 值为元素上色
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cRkp2fr'
 forumTopicId: 18369
-dashedName: use-rgb-values-to-color-elements
 ---
 
 # --description--
 
-`RGB` 值是在 CSS 中表示颜色的另一种方法。
+另一种可以在 CSS 中表示颜色的方法是使用 RGB 值。
 
-黑色的 `RGB` 值：
+黑色的 RGB 值声明如下：
 
-```css
-rgb(0, 0, 0)
-```
+`rgb(0, 0, 0)`
 
-白色的 `RGB` 值：
+白色的 RGB 值声明如下：
 
-```css
-rgb(255, 255, 255)
-```
+`rgb(255, 255, 255)`
 
-RGB 值与我们之前学到的十六进制编码不同。`RGB` 值不需要用到 6 位十六进制数字，而只需要指定每种颜色的亮度大小，数值范围从 0 到 255。
+RGB 不像十六进制编码，并不需要用到 6 位十六进制数字。在 RGB 里，你只需要指定每种颜色的亮度大小，从 0 到 255。
 
-如果我们稍微计算一下，就不难发现这两种表示方式本质上是等价的。在十六进制编码中，我们用两个十六进制数表示一个颜色；这样，每种颜色都有 16 \* 16（即 256）种可能。 所以，`RGB` 从零开始计算，与十六进制代码的值的数量完全相同。
+在数学的角度来看，如果将十六进制的一种颜色的两位数字相乘，16 乘以 16 也等于 256。所以，从 0 到 255 计算的 RGB 值的具有十六进制编码相同的颜色可能性。
 
-下面是通过使用 RGB 值设置背景颜色为橘色的例子：`body`。
+下面是通过使用 RGB 值设置背景颜色为橘色的例子：
 
 ```css
 body {
@@ -37,40 +32,21 @@ body {
 
 # --instructions--
 
-请用 RGB 值 `rgb(0, 0, 0)` 替换 `body` 元素背景颜色的十六进制编码。
+让我们用`rgb(0, 0, 0)`的 RGB 值替换`body`元素背景颜色的十六进制编码。
 
 # --hints--
 
-`body` 元素的背景颜色应该是黑色。
+`body`元素的背景颜色应该是黑色的。
 
 ```js
 assert($('body').css('background-color') === 'rgb(0, 0, 0)');
 ```
 
-您应该使用 `rgb` 给您的 `body` 元素黑色背景。
+`body`元素的背景颜色的黑色值应该为`RGB`值。
 
 ```js
 assert(code.match(/rgb\s*\(\s*0\s*,\s*0\s*,\s*0\s*\)/gi));
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```html
-<style>
-  body {
-    background-color: #F00;
-  }
-</style>
-```
-
 # --solutions--
 
-```html
-<style>
-  body {
-    background-color: rgb(0, 0, 0);
-  }
-</style>
-```

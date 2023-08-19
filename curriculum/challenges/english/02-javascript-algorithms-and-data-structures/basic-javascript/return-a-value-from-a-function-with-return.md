@@ -4,7 +4,6 @@ title: Return a Value from a Function with Return
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cy87wue'
 forumTopicId: 18271
-dashedName: return-a-value-from-a-function-with-return
 ---
 
 # --description--
@@ -17,16 +16,14 @@ We can pass values into a function with <dfn>arguments</dfn>. You can use a `ret
 function plusThree(num) {
   return num + 3;
 }
-var answer = plusThree(5);
+var answer = plusThree(5); // 8
 ```
-
-`answer` has the value `8`.
 
 `plusThree` takes an <dfn>argument</dfn> for `num` and returns a value equal to `num + 3`.
 
 # --instructions--
 
-Create a function `timesFive` that accepts one argument, multiplies it by `5`, and returns the new value.
+Create a function `timesFive` that accepts one argument, multiplies it by `5`, and returns the new value. See the last line in the editor for an example of how you can test your `timesFive` function.
 
 # --hints--
 
@@ -59,7 +56,6 @@ assert(timesFive(0) === 0);
 ## --seed-contents--
 
 ```js
-
 ```
 
 # --solutions--

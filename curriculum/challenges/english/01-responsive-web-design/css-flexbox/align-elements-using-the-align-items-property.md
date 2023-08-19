@@ -4,7 +4,6 @@ title: Align Elements Using the align-items Property
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVaDAv/c8aggtk'
 forumTopicId: 301101
-dashedName: align-elements-using-the-align-items-property
 ---
 
 # --description--

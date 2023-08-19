@@ -4,12 +4,11 @@ title: Golf Code
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/c9ykNUR'
 forumTopicId: 18195
-dashedName: golf-code
 ---
 
 # --description--
 
-In the game of [golf](https://en.wikipedia.org/wiki/Golf), each hole has a `par`, meaning, the average number of `strokes` a golfer is expected to make in order to sink the ball in the hole to complete the play. Depending on how far above or below `par` your `strokes` are, there is a different nickname.
+In the game of [golf](https://en.wikipedia.org/wiki/Golf) each hole has a `par` meaning the average number of `strokes` a golfer is expected to make in order to sink the ball in a hole to complete the play. Depending on how far above or below `par` your `strokes` are, there is a different nickname.
 
 Your function will be passed `par` and `strokes` arguments. Return the correct string according to this table which lists the strokes in order of priority; top (highest) to bottom (lowest):
 
@@ -19,67 +18,67 @@ Your function will be passed `par` and `strokes` arguments. Return the correct s
 
 # --hints--
 
-`golfScore(4, 1)` should return the string `Hole-in-one!`
+`golfScore(4, 1)` should return "Hole-in-one!"
 
 ```js
 assert(golfScore(4, 1) === 'Hole-in-one!');
 ```
 
-`golfScore(4, 2)` should return the string `Eagle`
+`golfScore(4, 2)` should return "Eagle"
 
 ```js
 assert(golfScore(4, 2) === 'Eagle');
 ```
 
-`golfScore(5, 2)` should return the string `Eagle`
+`golfScore(5, 2)` should return "Eagle"
 
 ```js
 assert(golfScore(5, 2) === 'Eagle');
 ```
 
-`golfScore(4, 3)` should return the string `Birdie`
+`golfScore(4, 3)` should return "Birdie"
 
 ```js
 assert(golfScore(4, 3) === 'Birdie');
 ```
 
-`golfScore(4, 4)` should return the string `Par`
+`golfScore(4, 4)` should return "Par"
 
 ```js
 assert(golfScore(4, 4) === 'Par');
 ```
 
-`golfScore(1, 1)` should return the string `Hole-in-one!`
+`golfScore(1, 1)` should return "Hole-in-one!"
 
 ```js
 assert(golfScore(1, 1) === 'Hole-in-one!');
 ```
 
-`golfScore(5, 5)` should return the string `Par`
+`golfScore(5, 5)` should return "Par"
 
 ```js
 assert(golfScore(5, 5) === 'Par');
 ```
 
-`golfScore(4, 5)` should return the string `Bogey`
+`golfScore(4, 5)` should return "Bogey"
 
 ```js
 assert(golfScore(4, 5) === 'Bogey');
 ```
 
-`golfScore(4, 6)` should return the string `Double Bogey`
+`golfScore(4, 6)` should return "Double Bogey"
 
 ```js
 assert(golfScore(4, 6) === 'Double Bogey');
 ```
 
-`golfScore(4, 7)` should return the string `Go Home!`
+`golfScore(4, 7)` should return "Go Home!"
 
 ```js
 assert(golfScore(4, 7) === 'Go Home!');
 ```
 
-`golfScore(5, 9)` should return the string `Go Home!`
+`golfScore(5, 9)` should return "Go Home!"
 
 ```js
 assert(golfScore(5, 9) === 'Go Home!');

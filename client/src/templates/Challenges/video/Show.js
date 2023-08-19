@@ -9,7 +9,6 @@ import Helmet from 'react-helmet';
 import YouTube from 'react-youtube';
 import { createSelector } from 'reselect';
 import { ObserveKeys } from 'react-hotkeys';
-import { withTranslation } from 'react-i18next';
 
 // Local Utilities
 import PrismFormatted from '../components/PrismFormatted';
@@ -62,13 +61,12 @@ const propTypes = {
   pageContext: PropTypes.shape({
     challengeMeta: PropTypes.object
   }),
-  t: PropTypes.func.isRequired,
   updateChallengeMeta: PropTypes.func.isRequired,
   updateSolutionFormValues: PropTypes.func.isRequired
 };
 
 // Component
-class Project extends Component {
+export class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -160,18 +158,14 @@ class Project extends Component {
           fields: { blockName },
           title,
           description,
-          superBlock,
-          block,
-          translationPending,
           videoId,
           question: { text, answers, solution }
         }
       },
       openCompletionModal,
       pageContext: {
-        challengeMeta: { nextChallengePath, prevChallengePath }
+        challengeMeta: { introPath, nextChallengePath, prevChallengePath }
       },
-      t,
       isChallengeCompleted
     } = this.props;
 
@@ -182,23 +176,17 @@ class Project extends Component {
           this.handleSubmit(solution, openCompletionModal);
         }}
         innerRef={c => (this._container = c)}
+        introPath={introPath}
         nextChallengePath={nextChallengePath}
         prevChallengePath={prevChallengePath}
       >
         <LearnLayout>
-          <Helmet
-            title={`${blockNameTitle} | ${t('learn.learn')} | freeCodeCamp.org`}
-          />
+          <Helmet title={`${blockNameTitle} | Learn | freeCodeCamp.org`} />
           <Grid>
             <Row>
               <Spacer />
-              <ChallengeTitle
-                block={block}
-                isCompleted={isChallengeCompleted}
-                superBlock={superBlock}
-                translationPending={translationPending}
-              >
-                {title}
+              <ChallengeTitle isCompleted={isChallengeCompleted}>
+                {blockNameTitle}
               </ChallengeTitle>
 
               <Col lg={10} lgOffset={1} md={10} mdOffset={1}>
@@ -234,7 +222,7 @@ class Project extends Component {
                       rel='noopener noreferrer'
                       target='_blank'
                     >
-                      {t('learn.add-subtitles')}
+                      Help improve or add subtitles
                     </a>
                     .
                   </i>
@@ -251,7 +239,7 @@ class Project extends Component {
                       // index should be fine as a key:
                       <label className='video-quiz-option-label' key={index}>
                         <input
-                          aria-label={t('aria.answer')}
+                          aria-label='Answer'
                           checked={this.state.selectedOption === index}
                           className='video-quiz-input-hidden'
                           name='quiz'
@@ -279,9 +267,11 @@ class Project extends Component {
                   }}
                 >
                   {this.state.showWrong ? (
-                    <span>{t('learn.wrong-answer')}</span>
+                    <span>
+                      Sorry, that's not the right answer. Give it another try?
+                    </span>
                   ) : (
-                    <span>{t('learn.check-answer')}</span>
+                    <span>Click the button below to check your answer.</span>
                   )}
                 </div>
                 <Spacer />
@@ -293,15 +283,11 @@ class Project extends Component {
                     this.handleSubmit(solution, openCompletionModal)
                   }
                 >
-                  {t('buttons.check-answer')}
+                  Check your answer
                 </Button>
                 <Spacer size={2} />
               </Col>
-              <CompletionModal
-                block={block}
-                blockName={blockName}
-                superBlock={superBlock}
-              />
+              <CompletionModal blockName={blockName} />
             </Row>
           </Grid>
         </LearnLayout>
@@ -316,7 +302,7 @@ Project.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(Project));
+)(Project);
 
 export const query = graphql`
   query VideoChallenge($slug: String!) {
@@ -326,8 +312,6 @@ export const query = graphql`
       description
       challengeType
       helpCategory
-      superBlock
-      block
       fields {
         blockName
         slug
@@ -337,7 +321,6 @@ export const query = graphql`
         answers
         solution
       }
-      translationPending
     }
   }
 `;

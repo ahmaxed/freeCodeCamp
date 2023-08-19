@@ -3,7 +3,6 @@ id: ab306dbdcc907c7ddfc30830
 title: Steamroller
 challengeType: 5
 forumTopicId: 16079
-dashedName: steamroller
 ---
 
 # --description--

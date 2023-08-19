@@ -1,54 +1,29 @@
 ---
 id: 5900f4da1000cf542c50ffed
-title: 'Problem 366: Stone Game III'
+title: 问题366：石头游戏III
 challengeType: 5
-forumTopicId: 302027
-dashedName: problem-366-stone-game-iii
+videoUrl: ''
 ---
 
 # --description--
 
-Two players, Anton and Bernhard, are playing the following game.
+安东和伯恩哈德两位球员正在参加以下比赛。有一堆n块石头。第一个玩家可以移除任何正数的石头，但不是整个堆。此后，每个玩家可以移除最多两倍于他的对手在之前移动时所用的石头数量。移除最后一块石头的玩家获胜。
 
-There is one pile of n stones.
+例如，n = 5如果第一个玩家获得的不仅仅是一块石头，那么下一个玩家将能够获得所有剩余的石头。如果第一个玩家拿走一块石头，留下四块石头，他的对手也将拿走一块石头，留下三块石头。第一个玩家不能拿全部三个，因为他最多可以拿2x1 = 2个宝石。所以让我们说他也拿走了一块石头，留下了2.第二名球员可以拿下剩下的两块石头并获胜。所以5对于第一个玩家来说是一个失败的位置。对于一些获胜位置，第一个玩家可能有多个可能的移动。例如，当n = 17时，第一个玩家可以移除一个或四个宝石。
 
-The first player may remove any positive number of stones, but not the whole pile.
+设M（n）是第一个玩家在第一个回合的胜利位置可以获得的最大结石数，M（n）= 0表示任何其他位置。
 
-Thereafter, each player may remove at most twice the number of stones his opponent took on the previous move.
+n≤100的ΣM（n）为728。
 
-The player who removes the last stone wins.
-
-E.g. n=5 If the first player takes anything more than one stone the next player will be able to take all remaining stones. If the first player takes one stone, leaving four, his opponent will take also one stone, leaving three stones. The first player cannot take all three because he may take at most 2x1=2 stones. So let's say he takes also one stone, leaving 2. The second player can take the two remaining stones and wins. So 5 is a losing position for the first player. For some winning positions there is more than one possible move for the first player. E.g. when n=17 the first player can remove one or four stones.
-
-Let M(n) be the maximum number of stones the first player can take from a winning position at his first turn and M(n)=0 for any other position.
-
-∑M(n) for n≤100 is 728.
-
-Find ∑M(n) for n≤1018. Give your answer modulo 108.
+找到ΣM（n）为n≤1018。给你的答案模数108。
 
 # --hints--
 
-`euler366()` should return 88351299.
+`euler366()`应该返回88351299。
 
 ```js
 assert.strictEqual(euler366(), 88351299);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler366() {
-
-  return true;
-}
-
-euler366();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

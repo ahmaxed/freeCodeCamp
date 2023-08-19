@@ -3,7 +3,6 @@ id: 5a23c84252665b21eecc7eb1
 title: Identity matrix
 challengeType: 5
 forumTopicId: 302290
-dashedName: identity-matrix
 ---
 
 # --description--

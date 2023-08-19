@@ -1,42 +1,25 @@
 ---
 id: 5900f4c01000cf542c50ffd2
-title: 'Problem 339: Peredur fab Efrawg'
+title: 问题339：Peredur fab Efrawg
 challengeType: 5
-forumTopicId: 301997
-dashedName: problem-339-peredur-fab-efrawg
+videoUrl: ''
 ---
 
 # --description--
 
-"And he came towards a valley, through which ran a river; and the borders of the valley were wooded, and on each side of the river were level meadows. And on one side of the river he saw a flock of white sheep, and on the other a flock of black sheep. And whenever one of the white sheep bleated, one of the black sheep would cross over and become white; and when one of the black sheep bleated, one of the white sheep would cross over and become black."en.wikisource.org
+“他走向一个山谷，河流穿过河谷;山谷的边界是树木繁茂的，河的两边是平坦的草地。河的一边，他看到一群白羊，另一只黑羊。每当一只白羊咩咩叫，其中一只黑羊就会越过白色;当其中一只黑羊咩咩叫的时候，其中一只白羊会越过黑羊“en.wikisource.org
 
-Initially each flock consists of n sheep. Each sheep (regardless of colour) is equally likely to be the next sheep to bleat. After a sheep has bleated and a sheep from the other flock has crossed over, Peredur may remove a number of white sheep in order to maximize the expected final number of black sheep. Let E(n) be the expected final number of black sheep if Peredur uses an optimal strategy.
+最初每群由n只绵羊组成。每只绵羊（不论颜色）同样可能是下一只咩咩咩的绵羊。在一只绵羊咩咩叫，另一只羊的羊群已经越过之后，Peredur可能会移走一些白羊，以便最大化预期的最终黑羊数量。如果Peredur使用最优策略，则让E（n）成为预期的最终黑羊数量。
 
-You are given that E(5) = 6.871346 rounded to 6 places behind the decimal point. Find E(10 000) and give your answer rounded to 6 places behind the decimal point.
+给出E（5）= 6.871346舍入到小数点后面的6位。找到E（10 000）并将您的答案四舍五入到小数点后面的6位。
 
 # --hints--
 
-`euler339()` should return 19823.542204.
+`euler339()`应返回19823.542204。
 
 ```js
 assert.strictEqual(euler339(), 19823.542204);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler339() {
-
-  return true;
-}
-
-euler339();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

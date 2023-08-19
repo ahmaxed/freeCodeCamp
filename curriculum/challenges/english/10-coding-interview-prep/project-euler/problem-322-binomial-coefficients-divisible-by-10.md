@@ -3,7 +3,6 @@ id: 5900f4af1000cf542c50ffc1
 title: 'Problem 322: Binomial coefficients divisible by 10'
 challengeType: 5
 forumTopicId: 301979
-dashedName: problem-322-binomial-coefficients-divisible-by-10
 ---
 
 # --description--

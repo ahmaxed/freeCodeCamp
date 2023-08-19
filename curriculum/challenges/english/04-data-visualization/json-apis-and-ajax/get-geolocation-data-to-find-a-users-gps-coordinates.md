@@ -3,7 +3,6 @@ id: 587d7faf367417b2b2512be8
 title: Get Geolocation Data to Find A User's GPS Coordinates
 challengeType: 6
 forumTopicId: 18188
-dashedName: get-geolocation-data-to-find-a-users-gps-coordinates
 ---
 
 # --description--
@@ -52,7 +51,7 @@ Your code should use `position.coords.longitude` to display the user's longitudi
 assert(code.match(/position\.coords\.longitude/g));
 ```
 
-You should display the user's position within the `div` element with `id="data"`.
+You should display the user's position within the `data` div element.
 
 ```js
 assert(

@@ -3,7 +3,6 @@ id: 59622f89e4e137560018a40e
 title: Hofstadter Figure-Figure sequences
 challengeType: 5
 forumTopicId: 302286
-dashedName: hofstadter-figure-figure-sequences
 ---
 
 # --description--

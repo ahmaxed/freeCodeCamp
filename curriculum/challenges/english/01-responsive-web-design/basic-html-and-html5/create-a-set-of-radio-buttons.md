@@ -3,7 +3,6 @@ id: bad87fee1348bd9aedf08834
 title: Create a Set of Radio Buttons
 challengeType: 0
 forumTopicId: 16822
-dashedName: create-a-set-of-radio-buttons
 ---
 
 # --description--
@@ -24,14 +23,7 @@ Here's an example of a radio button:
 </label>
 ```
 
-It is considered best practice to set a `for` attribute on the `label` element, with a value that matches the value of the `id` attribute of the `input` element. This allows assistive technologies to create a linked relationship between the label and the related `input` element. For example:
-
-```html
-<input id="indoor" type="radio" name="indoor-outdoor">
-<label for="indoor">Indoor</label>
-```
-
-We can also nest the `input` element within the `label` tags:
+It is considered best practice to set a `for` attribute on the `label` element, with a value that matches the value of the `id` attribute of the `input` element. This allows assistive technologies to create a linked relationship between the label and the child `input` element. For example:
 
 ```html
 <label for="indoor"> 
@@ -45,7 +37,7 @@ Add a pair of radio buttons to your form, each nested in its own `label` element
 
 # --hints--
 
-Your page should have two `radio` button elements.
+Your page should have two radio button elements.
 
 ```js
 assert($('input[type="radio"]').length > 1);
@@ -108,7 +100,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -122,7 +114,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
     <input type="text" placeholder="cat photo URL" required>
     <button type="submit">Submit</button>
   </form>
@@ -136,7 +128,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
   
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
   
   <p>Things cats love:</p>
   <ul>
@@ -150,7 +142,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
    <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
     <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
     <input type="text" placeholder="cat photo URL" required>

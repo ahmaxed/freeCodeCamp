@@ -3,7 +3,6 @@ id: 5900f5461000cf542c510058
 title: 'Problem 473: Phigital number base'
 challengeType: 5
 forumTopicId: 302150
-dashedName: problem-473-phigital-number-base
 ---
 
 # --description--

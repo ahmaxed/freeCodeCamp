@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Media } from '@freecodecamp/react-bootstrap';
-import { useTranslation } from 'react-i18next';
 
 import { FullWidthRow } from '../../helpers';
 
@@ -20,19 +19,18 @@ const propTypes = {
 };
 
 function Portfolio({ portfolio = [] }) {
-  const { t } = useTranslation();
   if (!portfolio.length) {
     return null;
   }
   return (
     <FullWidthRow>
-      <h2 className='text-center'>{t('profile.portfolio')}</h2>
+      <h2 className='text-center'>Portfolio</h2>
       {portfolio.map(({ title, url, image, description, id }) => (
         <Media key={id}>
           <Media.Left align='middle'>
             {image && (
               <img
-                alt={t('profile.screen-shot', { title: title })}
+                alt={`A screen shot of ${title}`}
                 className='portfolio-screen-shot'
                 src={image}
               />

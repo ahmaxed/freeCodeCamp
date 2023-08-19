@@ -4,7 +4,6 @@ title: Accessing Nested Objects
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cRnRnfa'
 forumTopicId: 16161
-dashedName: accessing-nested-objects
 ---
 
 # --description--
@@ -26,11 +25,9 @@ var ourStorage = {
     "bottom drawer": "soda"
   }
 };
-ourStorage.cabinet["top drawer"].folder2;
-ourStorage.desk.drawer;
+ourStorage.cabinet["top drawer"].folder2;  // "secrets"
+ourStorage.desk.drawer; // "stapler"
 ```
-
-`ourStorage.cabinet["top drawer"].folder2` would be the string `secrets`, and `ourStorage.desk.drawer` would be the string `stapler`.
 
 # --instructions--
 
@@ -38,7 +35,7 @@ Access the `myStorage` object and assign the contents of the `glove box` propert
 
 # --hints--
 
-`gloveBoxContents` should equal the string `maps`.
+`gloveBoxContents` should equal "maps".
 
 ```js
 assert(gloveBoxContents === 'maps');
@@ -66,6 +63,7 @@ assert(/=\s*myStorage\.car\.inside\[\s*("|')glove box\1\s*\]/g.test(code));
 ## --seed-contents--
 
 ```js
+// Setup
 var myStorage = {
   "car": {
     "inside": {
@@ -78,7 +76,7 @@ var myStorage = {
   }
 };
 
-var gloveBoxContents = undefined;
+var gloveBoxContents = undefined; // Change this line
 ```
 
 # --solutions--

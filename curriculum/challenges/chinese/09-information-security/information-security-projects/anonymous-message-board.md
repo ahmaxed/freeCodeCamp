@@ -1,135 +1,83 @@
 ---
 id: 587d824a367417b2b2512c45
-title: Anonymous Message Board
+title: 匿名留言板
 challengeType: 4
-forumTopicId: 301568
-dashedName: anonymous-message-board
+videoUrl: ''
 ---
 
 # --description--
 
-Build a full stack JavaScript app that is functionally similar to this: <https://anonymous-message-board.freecodecamp.rocks/>.
-
-Working on this project will involve you writing your code using one of the following methods:
-
--   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-messageboard/) and complete your project locally.
--   Use [our repl.it starter project](https://repl.it/github/freeCodeCamp/boilerplate-project-messageboard) to complete your project.
--   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
-
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your projects source code in the `GitHub Link` field.
-
-# --instructions--
-
-1.  Set `NODE_ENV` to test without quotes when ready to write tests and DB to your databases connection string (in `.env`)
-2.  Recommended to create controllers/handlers and handle routing in `routes/api.js`
-3.  You will add any security features to `server.js`
-
-Write the following tests in `tests/2_functional-tests.js`:
-
--   Creating a new thread: POST request to `/api/threads/{board}`
--   Viewing the 10 most recent threads with 3 replies each: GET request to `/api/threads/{board}`
--   Deleting a thread with the incorrect password: DELETE request to `/api/threads/{board}` with an invalid `delete_password`
--   Deleting a thread with the correct password: DELETE request to `/api/threads/{board}` with a valid `delete_password`
--   Reporting a thread: PUT request to `/api/threads/{board}`
--   Creating a new reply: POST request to `/api/replies/{board}`
--   Viewing a single thread with all replies: GET request to `/api/replies/{board}`
--   Deleting a reply with the incorrect password: DELETE request to `/api/threads/{board}` with an invalid `delete_password`
--   Deleting a reply with the correct password: DELETE request to `/api/threads/{board}` with a valid `delete_password`
--   Reporting a reply: PUT request to `/api/replies/{board}`
+构建一个功能类似于此的完整堆栈JavaScript应用程序： <https://spiky-well-vein.glitch.me/> 。在这个项目上工作将涉及您在我们的入门项目上在Glitch上编写代码。完成此项目后，您可以将公共故障网址（到应用程序的主页）复制到此屏幕进行测试！您可以选择在另一个平台上编写项目，但必须公开显示我们的测试。使用[此链接](https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-messageboard/)在Glitch上启动此项目或在GitHub上克隆[此存储库](https://github.com/freeCodeCamp/boilerplate-project-messageboard/) ！如果您使用Glitch，请记住将项目链接保存到安全的地方！
 
 # --hints--
 
-You can provide your own project, not the example URL.
-
-```js
-(getUserInput) => {
-  assert(
-    !/.*\/anonymous-message-board\.freecodecamp\.rocks/.test(
-      getUserInput('url')
-    )
-  );
-};
-```
-
-Only allow your site to be loaded in an iFrame on your own pages.
-
-```js
-async (getUserInput) => {
-  const data = await fetch(getUserInput('url') + '/_api/app-info');
-  const parsed = await data.json();
-  assert.isTrue(parsed.headers['x-frame-options']?.includes('SAMEORIGIN'));
-};
-```
-
-Do not allow DNS prefetching.
-
-```js
-async (getUserInput) => {
-  const data = await fetch(getUserInput('url') + '/_api/app-info');
-  const parsed = await data.json();
-  assert.isTrue(parsed.headers['x-dns-prefetch-control']?.includes('off'));
-};
-```
-
-Only allow your site to send the referrer for your own pages.
-
-```js
-async (getUserInput) => {
-  const data = await fetch(getUserInput('url') + '/_api/app-info');
-  const parsed = await data.json();
-  assert.isTrue(parsed.headers['referrer-policy']?.includes('same-origin'));
-};
-```
-
-You can send a POST request to `/api/threads/{board}` with form data including `text` and `delete_password`. The saved database record will have at least the fields `_id`, `text`, `created_on`(date & time), `bumped_on`(date & time, starts same as `created_on`), `reported` (boolean), `delete_password`, & `replies` (array).
+只允许您的网站加载到您自己网页上的iFrame中。
 
 ```js
 
 ```
 
-You can send a POST request to `/api/replies/{board}` with form data including `text`, `delete_password`, & `thread_id`. This will update the `bumped_on` date to the comment's date. In the thread's `replies` array, an object will be saved with at least the properties `_id`, `text`, `created_on`, `delete_password`, & `reported`.
+不允许DNS预取。
 
 ```js
 
 ```
 
-You can send a GET request to `/api/threads/{board}`. Returned will be an array of the most recent 10 bumped threads on the board with only the most recent 3 replies for each. The `reported` and `delete_password` fields will not be sent to the client.
+只允许您的网站为您自己的网页发送引荐来源。
 
 ```js
 
 ```
 
-You can send a GET request to `/api/replies/{board}?thread_id={thread_id}`. Returned will be the entire thread with all its replies, also excluding the same fields from the client as the previous test.
+我可以通过将表单数据文本和deletepassword*传递给/api/threads/ {board}将一个帖子发布到一个特定的留言板。（推荐res.redirect到电路板页面/ b / {board}）保存的至少是\_id，text ，createdon*（日期和时间），bumpedon*（日期和时间，与created_on相同），报告（布尔值），deletepassword*和回复（数组）。
 
 ```js
 
 ```
 
-You can send a DELETE request to `/api/threads/{board}` and pass along the `thread_id` & `delete_password` to delete the thread. Returned will be the string `incorrect password` or `success`.
+我可以通过将表单数据文本，deletepassword*和threadid*传递给/ api / replies / {board}来对特定板上的线程发送回复，并且还会将bumped*on日期更新到注释日期。（推荐res.redirect到thread page / b / {board} / {thread_id}）在线程的回复数组中将保存\_id，text，createdon*，deletepassword\_，并报告。
 
 ```js
 
 ```
 
-You can send a DELETE request to `/api/replies/{board}` and pass along the `thread_id`, `reply_id`, & `delete_password`. Returned will be the string `incorrect password` or `success`. On success, the text of the `reply_id` will be changed to `[deleted]`.
+我可以在电路板上获取最近10个凸起线程的数组，其中最近只有来自/ api / threads / {board}的3个回复。 report和deletepasswords\_字段不会发送到客户端。
 
 ```js
 
 ```
 
-You can send a PUT request to `/api/threads/{board}` and pass along the `thread_id`. Returned will be the string `success`. The `reported` value of the `thread_id` will be changed to `true`.
+我可以使用/ api / replies / {board}的所有回复获取整个帖子吗？thread_id = {thread_id}。同样隐藏客户端应该看到的相同字段。
 
 ```js
 
 ```
 
-You can send a PUT request to `/api/replies/{board}` and pass along the `thread_id` & `reply_id`. Returned will be the string `success`. The `reported` value of the `reply_id` will be changed to `true`.
+如果我向/ api / threads / {board}发送DELETE请求并传递threadid*＆deletepassword*，我可以完全删除一个线程。 （文字回复将是“密码不正确”或“成功”）
 
 ```js
 
 ```
 
-All 10 functional tests are complete and passing.
+如果我向/ api / replies / {board}发送DELETE请求并传递threadid*，replyid*和deletepassword\_，我可以删除帖子（只是将文本更改为“[已删除]”而不是像线程一样完全删除）。 （文字回复将是“密码不正确”或“成功”）
+
+```js
+
+```
+
+我可以通过向/ api / threads / {board}发送PUT请求并传递threadid\_来报告一个线程并将其报告值更改为true。 （文字回复将是“成功”）
+
+```js
+
+```
+
+我可以通过向/ api / replies / {board}发送PUT请求并传递threadid*＆replyid*来报告回复并将其报告值更改为true。 （文字回复将是“成功”）
+
+```js
+
+```
+
+完整的功能测试，完全测试路线和通过。
 
 ```js
 
@@ -137,10 +85,3 @@ All 10 functional tests are complete and passing.
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

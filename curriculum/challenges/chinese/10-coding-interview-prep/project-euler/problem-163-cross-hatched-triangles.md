@@ -1,40 +1,23 @@
 ---
 id: 5900f40f1000cf542c50ff22
-title: 'Problem 163: Cross-hatched triangles'
+title: 问题163：阴影线三角形
 challengeType: 5
-forumTopicId: 301797
-dashedName: problem-163-cross-hatched-triangles
+videoUrl: ''
 ---
 
 # --description--
 
-Consider an equilateral triangle in which straight lines are drawn from each vertex to the middle of the opposite side, such as in the size 1 triangle in the sketch below.
+考虑等边三角形，其中从每个顶点到相对侧的中间绘制直线，例如在下面草图中的1号三角形中。
 
-Sixteen triangles of either different shape or size or orientation or location can now be observed in that triangle. Using size 1 triangles as building blocks, larger triangles can be formed, such as the size 2 triangle in the above sketch. One-hundred and four triangles of either different shape or size or orientation or location can now be observed in that size 2 triangle. It can be observed that the size 2 triangle contains 4 size 1 triangle building blocks. A size 3 triangle would contain 9 size 1 triangle building blocks and a size n triangle would thus contain n2 size 1 triangle building blocks. If we denote T(n) as the number of triangles present in a triangle of size n, then T(1) = 16 T(2) = 104 Find T(36).
+现在可以在该三角形中观察到具有不同形状或大小或方向或位置的十六个三角形。使用大小为1的三角形作为构建块，可以形成更大的三角形，例如上面草图中的大小为2的三角形。现在可以在该尺寸2三角形中观察到具有不同形状或尺寸或方向或位置的一百四十个三角形。可以观察到，2号三角形包含4个1号三角形构造块。大小为3的三角形将包含9个大小为1的三角形构建块，因此大小为n的三角形将包含n2个大小为1的三角形构建块。如果我们将T（n）表示为大小为n的三角形中存在的三角形的数量，则T（1）= 16 T（2）= 104 Find T（36）。
 
 # --hints--
 
-`euler163()` should return 343047.
+`euler163()`应返回343047。
 
 ```js
 assert.strictEqual(euler163(), 343047);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler163() {
-
-  return true;
-}
-
-euler163();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

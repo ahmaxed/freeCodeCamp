@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
 
 import './offline-warning.css';
 
@@ -11,9 +10,7 @@ const propTypes = {
   isSignedIn: PropTypes.bool.isRequired
 };
 function OfflineWarning({ isOnline, isSignedIn }) {
-  const { t } = useTranslation();
   const [showWarning, setShowWarning] = React.useState(false);
-
   if (!isSignedIn || isOnline) {
     clearTimeout(id);
     if (showWarning) setShowWarning(false);
@@ -22,13 +19,15 @@ function OfflineWarning({ isOnline, isSignedIn }) {
   }
 
   function timeout() {
-    id = setTimeout(function () {
+    id = setTimeout(function() {
       setShowWarning(true);
     }, delayInMilliSeconds);
   }
 
   return showWarning ? (
-    <div className='offline-warning alert-info'>{t('misc.offline')}</div>
+    <div className='offline-warning alert-info'>
+      You appear to be offline, your progress may not be being saved.
+    </div>
   ) : null;
 }
 

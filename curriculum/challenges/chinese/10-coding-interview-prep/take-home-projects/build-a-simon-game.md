@@ -1,41 +1,16 @@
 ---
 id: bd7158d8c442eddfaeb5bd1c
-title: Build a Simon Game
+title: 建立一个西蒙游戏
 challengeType: 3
-forumTopicId: 302357
-dashedName: build-a-simon-game
+videoUrl: ''
 ---
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: [https://codepen.io/freeCodeCamp/full/obYBjE](https://codepen.io/Em-Ant/full/QbRyqq/).
+**目标：** 构建一个功能类似于此的[CodePen.io](https://codepen.io)应用程序： [https](https://codepen.io/Em-Ant/full/QbRyqq/) **：** [//codepen.io/freeCodeCamp/full/obYBjE](https://codepen.io) 。完成以下[用户故事](https://en.wikipedia.org/wiki/User_story) 。使用您需要的任何库或API。给它你自己的个人风格。 **用户故事：** 我看到一系列随机按钮。 **用户故事：** 每当我正确输入一系列按钮时，我会看到同一系列的按钮按下，但还有一个额外的步骤。 **用户故事：** 当按下一系列按钮时，以及当我亲自按下按钮时，我都会听到与每个按钮相对应的声音。 **用户故事：** 如果我按下了错误的按钮，我会收到通知，告知我已经这样做了，然后再按一系列按钮开始提醒我模式，这样我就可以再试一次。 **用户故事：** 我可以看到当前按钮按下的步数。 **用户故事：** 如果我想重新启动，我可以点击一个按钮来执行此操作，游戏将返回一个步骤。 **用户故事：** 我可以在严格的模式下玩，如果我按下按钮错误，它会通知我我已经这样做了，并且游戏重新开始按下一系列按钮。 **用户故事：** 我可以通过一系列正确的20个步骤来赢得游戏。我被告知我的胜利，然后比赛重新开始。 **提示：** 在这里**，**您可以使用每个按钮的MP3： `https://s3.amazonaws.com/freecodecamp/simonSound1.mp3` ， `https://s3.amazonaws.com/freecodecamp/simonSound2.mp3` ， `https://s3.amazonaws.com/freecodecamp/simonSound3.mp3` ， `https://s3.amazonaws.com/freecodecamp/simonSound4.mp3` 。如果卡住，请记得使用[Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck-coding/19514) 。完成后，单击“我已完成此挑战”按钮并包含指向CodePen的链接。您可以通过Facebook上的朋友分享您的项目反馈。
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+# --hints--
 
-**User Story:** I am presented with a random series of button presses.
-
-**User Story:** Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.
-
-**User Story:** I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.
-
-**User Story:** If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.
-
-**User Story:** I can see how many steps are in the current series of button presses.
-
-**User Story:** If I want to restart, I can hit a button to do so, and the game will return to a single step.
-
-**User Story:** I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.
-
-**User Story:** I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
-
-**Hint:** Here are mp3s you can use for each button: `https://s3.amazonaws.com/freecodecamp/simonSound1.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound2.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound3.mp3`, `https://s3.amazonaws.com/freecodecamp/simonSound4.mp3`.
-
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
-
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 
-```js
-// solution required
-```

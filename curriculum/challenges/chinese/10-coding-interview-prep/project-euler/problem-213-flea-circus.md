@@ -1,42 +1,23 @@
 ---
 id: 5900f4411000cf542c50ff54
-title: 'Problem 213: Flea Circus'
+title: 问题213：跳蚤马戏团
 challengeType: 5
-forumTopicId: 301855
-dashedName: problem-213-flea-circus
+videoUrl: ''
 ---
 
 # --description--
 
-A 30×30 grid of squares contains 900 fleas, initially one flea per square.
+一个30×30的正方形网格包含900个跳蚤，最初是每平方一个跳蚤。当响铃响起时，每个跳蚤随机跳到相邻的广场（通常有4种可能，除了网格边缘或角落处的跳蚤）。
 
-When a bell is rung, each flea jumps to an adjacent square at random (usually 4 possibilities, except for fleas on the edge of the grid or at the corners).
-
-What is the expected number of unoccupied squares after 50 rings of the bell? Give your answer rounded to six decimal places.
+在响铃50次后，预计的未占用方格数量是多少？将您的答案四舍五入到小数点后六位。
 
 # --hints--
 
-`euler213()` should return 330.721154.
+`euler213()`应返回330.721154。
 
 ```js
 assert.strictEqual(euler213(), 330.721154);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler213() {
-
-  return true;
-}
-
-euler213();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

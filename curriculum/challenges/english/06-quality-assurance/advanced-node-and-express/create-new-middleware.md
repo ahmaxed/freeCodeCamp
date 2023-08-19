@@ -3,7 +3,6 @@ id: 5895f70df9fc0f352b528e6a
 title: Create New Middleware
 challengeType: 2
 forumTopicId: 301551
-dashedName: create-new-middleware
 ---
 
 # --description--
@@ -75,6 +74,8 @@ A Get request to /profile should correctly redirect to / since we are not authen
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

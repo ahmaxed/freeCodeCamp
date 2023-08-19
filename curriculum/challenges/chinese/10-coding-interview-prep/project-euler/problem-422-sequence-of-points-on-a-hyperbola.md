@@ -1,46 +1,29 @@
 ---
 id: 5900f5131000cf542c510025
-title: 'Problem 422: Sequence of points on a hyperbola'
+title: 问题422：双曲线上的点序列
 challengeType: 5
-forumTopicId: 302092
-dashedName: problem-422-sequence-of-points-on-a-hyperbola
+videoUrl: ''
 ---
 
 # --description--
 
-Let H be the hyperbola defined by the equation 12x2 + 7xy - 12y2 = 625.
+假设H是由等式12x2 + 7xy-12y2 = 625定义的双曲线。
 
-Next, define X as the point (7, 1). It can be seen that X is in H.
+接下来，将X定义为点（7，1）。 可以看出X在H中。
 
-Now we define a sequence of points in H, {Pi : i ≥ 1}, as: P1 = (13, 61/4). P2 = (-43/6, -4). For i > 2, Pi is the unique point in H that is different from Pi-1 and such that line PiPi-1 is parallel to line Pi-2X. It can be shown that Pi is well-defined, and that its coordinates are always rational. You are given that P3 = (-19/2, -229/24), P4 = (1267/144, -37/12) and P7 = (17194218091/143327232, 274748766781/1719926784).
+现在，我们将H中的点序列{Pi：i≥1}定义为： P1 =（13，61/4）。 P2 =（-43/6，-4）。 对于i> 2，Pi是H中与Pi-1不同的唯一点，因此线PiPi-1与线Pi-2X平行。 可以证明Pi是定义明确的，并且其坐标始终是有理的。 您得到P3 =（-19/2，-229/24），P4 =（1267/144，-37/12）和P7 =（17194218091/143327232，274748766781/1719926784）。
 
-Find Pn for n = 1114 in the following format:If Pn = (a/b, c/d) where the fractions are in lowest terms and the denominators are positive, then the answer is (a + b + c + d) mod 1 000 000 007.
+用以下格式找到n = 1114的Pn：如果Pn =（a / b，c / d），其中分数是最低项，而分母是正数，则答案是（a + b + c + d）mod 1 000 007。
 
-For n = 7, the answer would have been: 806236837.
+对于n = 7，答案应该是：806236837。
 
 # --hints--
 
-`euler422()` should return 92060460.
+`euler422()`应该返回92060460。
 
 ```js
 assert.strictEqual(euler422(), 92060460);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler422() {
-
-  return true;
-}
-
-euler422();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

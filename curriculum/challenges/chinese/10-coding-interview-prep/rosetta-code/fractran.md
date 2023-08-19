@@ -1,81 +1,53 @@
 ---
 id: 5a7dad05be01840e1778a0d1
 title: Fractran
-challengeType: 5
-forumTopicId: 302270
-dashedName: fractran
+challengeType: 3
+videoUrl: ''
 ---
 
 # --description--
 
-[FRACTRAN](https://en.wikipedia.org/wiki/FRACTRAN "wp: FRACTRAN") is a Turing-complete esoteric programming language invented by the mathematician [John Horton Conway](https://en.wikipedia.org/wiki/John Horton Conway "wp: John Horton Conway").
-
-A FRACTRAN program is an ordered list of positive fractions $P = (f_1, f_2, \\ldots, f_m)$, together with an initial positive integer input $n$.
-
-The program is run by updating the integer $n$ as follows:
-
-<ul>
-  <li>for the first fraction, $f_i$, in the list for which $nf_i$ is an integer, replace $n$ with $nf_i$ ;</li>
-  <li>repeat this rule until no fraction in the list produces an integer when multiplied by $n$, then halt.</li>
-</ul>
-
-Conway gave a program for primes in FRACTRAN:
-
-$\\dfrac{17}{91}$, $\\dfrac{78}{85}$, $\\dfrac{19}{51}$, $\\dfrac{23}{38}$, $\\dfrac{29}{33}$, $\\dfrac{77}{29}$, $\\dfrac{95}{23}$, $\\dfrac{77}{19}$, $\\dfrac{1}{17}$, $\\dfrac{11}{13}$, $\\dfrac{13}{11}$, $\\dfrac{15}{14}$, $\\dfrac{15}{2}$, $\\dfrac{55}{1}$
-
-Starting with $n=2$, this FRACTRAN program will change $n$ to $15=2\\times (\\frac{15}{2})$, then $825=15\\times (\\frac{55}{1})$, generating the following sequence of integers:
-
-$2$, $15$, $825$, $725$, $1925$, $2275$, $425$, $390$, $330$, $290$, $770$, $\\ldots$
-
-After 2, this sequence contains the following powers of 2:
-
-$2^2=4$, $2^3=8$, $2^5=32$, $2^7=128$, $2^{11}=2048$, $2^{13}=8192$, $2^{17}=131072$, $2^{19}=524288$, $\\ldots$
-
-which are the prime powers of 2.
-
-# --instructions--
-
-Write a function that takes a fractran program as a string parameter and returns the first 10 numbers of the program as an array. If the result does not have 10 numbers then return the numbers as is.
+<div class='rosetta'><p class='rosetta__paragraph'> <span class='rosetta__text--bold'><a class='rosetta__link--wiki' href='https://en.wikipedia.org/wiki/FRACTRAN' title='wp：FRACTRAN'>FRACTRAN</a></span>是由数学家<a class='rosetta__link--wiki' href='https://en.wikipedia.org/wiki/John Horton Conway' title='wp：John Horton Conway'>John Horton Conway</a>发明的图灵完备的深奥编程语言。 </p><br><p class='rosetta__paragraph'> FRACTRAN程序是正分数$ P =（f_1，f_2，\ ldots，f_m）$的有序列表，以及初始正整数输入$ n $。 </p><br><p class='rosetta__paragraph'>该程序通过更新整数$ n $来运行，如下所示： </p><br><ul class='rosetta__unordered-list'><li class='rosetta__list-item--unordered'>对于第一个分数$ f_i $，在$ nf_i $为整数的列表中，用$ nf_i $替换$ n $; </li><li class='rosetta__list-item--unordered'>重复此规则，直到列表中没有分数乘以$ n $时产生整数，然后停止。 </li></ul><br><p class='rosetta__paragraph'>康威为FRACTRAN提供了素数计划： </p><br><p class='rosetta__paragraph'> <span class='rosetta__text--indented'>$ 17/91 $，$ 78/85 $，$ 19/51 $，$ 23/38 $，$ 29/33 $，$ 77/29 $，$ 95/23 $，$ 77/19 $，$ 1/17 $，$ 11/13 $， $ 13/11 $ $，$ 15/14 $，$ 15/2 $，$ 55/1 $</span> </p><br><p class='rosetta__paragraph'>从$ n = 2 $开始，此FRACTRAN程序将$ n $更改为$ 15 = 2 \ times（15/2）$，然后$ 825 = 15 \ times（55/1）$，生成以下整数序列： </p><br><p class='rosetta__paragraph'> <span class='rosetta__text--indented'>$ 2 $，$ 15 $，$ 825 $，$ 725 $，$ 1925 $，$ 2275 $，$ 425 $，$ 390 $，$ 330 $，$ 290 $，$ 770 $，$ \ ldots $</span> </p><br><p class='rosetta__paragraph'> 2之后，此序列包含以下2的幂： </p><br><p class='rosetta__paragraph'> <span class='rosetta__text--indented'>$ 2 ^ 2 = 4 $，$ 2 ^ 3 = 8 $，$ 2 ^ 5 = 32 $，$ 2 ^ 7 = 128 $，$ 2 ^ {11} = 2048 $，$ 2 ^ {13} = 8192 $，$ 2 ^ {17 } = 131072 $，$ 2 ^ {19} = 524288 $，$ \ ldots $</span> </p><br><p class='rosetta__paragraph'>这是2的主要权力。 </p><br><dl class='rosetta__description-list'><dt class='rosetta__description-title'>任务： </dt></dl><p class='rosetta__paragraph'>编写一个函数，将fractran程序作为字符串参数，并将程序的前10个数字作为数组返回。如果结果没有10个数字，则按原样返回数字。 </p></div>
 
 # --hints--
 
-`fractran` should be a function.
+`fractran`应该是一个功能。
 
 ```js
 assert(typeof fractran == 'function');
 ```
 
-`fractran("3/2, 1/3")` should return an array.
+`fractran(""+tests[0]+"")`应该返回一个数组。
 
 ```js
 assert(Array.isArray(fractran('3/2, 1/3')));
 ```
 
-`fractran("3/2, 1/3")` should return `[ 2, 3, 1 ]`.
+`fractran(""+tests[0]+"")`应返回`"+JSON.stringify(results[0])+"` 。
 
 ```js
 assert.deepEqual(fractran('3/2, 1/3'), [2, 3, 1]);
 ```
 
-`fractran("3/2, 5/3, 1/5")` should return `[ 2, 3, 5, 1 ]`.
+`fractran(""+tests[1]+"")`应返回`"+JSON.stringify(results[1])+"` 。
 
 ```js
 assert.deepEqual(fractran('3/2, 5/3, 1/5'), [2, 3, 5, 1]);
 ```
 
-`fractran("3/2, 6/3")` should return `[ 2, 3, 6, 9, 18, 27, 54, 81, 162, 243 ]`.
+`fractran(""+tests[2]+"")`应返回`"+JSON.stringify(results[2])+"` 。
 
 ```js
 assert.deepEqual(fractran('3/2, 6/3'), [2, 3, 6, 9, 18, 27, 54, 81, 162, 243]);
 ```
 
-`fractran("2/7, 7/2")` should return `[ 2, 7, 2, 7, 2, 7, 2, 7, 2, 7 ]`.
+`fractran(""+tests[3]+"")`应返回`"+JSON.stringify(results[3])+"` 。
 
 ```js
 assert.deepEqual(fractran('2/7, 7/2'), [2, 7, 2, 7, 2, 7, 2, 7, 2, 7]);
 ```
 
-`fractran("17/91, 78/85, 19/51, 23/38, 29/33, 77/29, 95/23, 77/19, 1/17, 11/13, 13/11, 15/14, 15/2, 55/1")` should return `[ 2, 15, 825, 725, 1925, 2275, 425, 390, 330, 290 ]`.
+`fractran(""+tests[4]+"")`应返回`"+JSON.stringify(results[4])+"` 。
 
 ```js
 assert.deepEqual(
@@ -86,54 +58,5 @@ assert.deepEqual(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function fractran(progStr) {
-
-}
-```
-
 # --solutions--
 
-```js
-function fractran(progStr){
-  var num = new Array();
-  var den = new Array();
-  var val ;
-  var out="";
-  function compile(prog){
-    var regex = /\s*(\d*)\s*\/\s*(\d*)\s*(.*)/m;
-    while(regex.test(prog)){
-      num.push(regex.exec(prog)[1]);
-      den.push(regex.exec(prog)[2]);
-      prog = regex.exec(prog)[3];
-    }
-  }
-
-  function step(val){
-    var i=0;
-    while(i<den.length && val%den[i] != 0) i++;
-    return num[i]*val/den[i];
-  }
-
-  var seq=[]
-
-  function exec(val){
-    var i = 0;
-    while(val && i<limit){
-      seq.push(val)
-      val = step(val);
-      i ++;
-    }
-  }
-
-  // Main
-  compile(progStr);
-  var limit = 10;
-  exec(2);
-  return seq;
-}
-```

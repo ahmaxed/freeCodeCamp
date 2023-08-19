@@ -4,7 +4,6 @@ title: Change the Color of Text
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cRkVmSm'
 forumTopicId: 16775
-dashedName: change-the-color-of-text
 ---
 
 # --description--
@@ -17,9 +16,7 @@ The property that is responsible for the color of an element's text is the `colo
 
 Here's how you would set your `h2` element's text color to blue:
 
-```html
-<h2 style="color: blue;">CatPhotoApp</h2>
-```
+`<h2 style="color: blue;">CatPhotoApp</h2>`
 
 Note that it is a good practice to end inline `style` declarations with a `;` .
 

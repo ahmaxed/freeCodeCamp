@@ -2,43 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert, Button } from '@freecodecamp/react-bootstrap';
 import Spinner from 'react-spinkit';
-import { useTranslation } from 'react-i18next';
 
 import './Donation.css';
 
 const propTypes = {
   error: PropTypes.string,
   processing: PropTypes.bool,
-  redirecting: PropTypes.bool,
   reset: PropTypes.func.isRequired,
   success: PropTypes.bool
 };
 
-function DonateCompletion({
-  processing,
-  reset,
-  success,
-  redirecting,
-  error = null
-}) {
+function DonateCompletion({ processing, reset, success, error = null }) {
   /* eslint-disable no-nested-ternary */
-  const { t } = useTranslation();
-  const style =
-    processing || redirecting ? 'info' : success ? 'success' : 'danger';
-  const heading = redirecting
-    ? `${t('donate.redirecting')}`
-    : processing
-    ? `${t('donate.processing')}`
+  const style = processing ? 'info' : success ? 'success' : 'danger';
+  const heading = processing
+    ? 'We are processing your donation.'
     : success
-    ? `${t('donate.thank-you')}`
-    : `${t('donate.error')}`;
+    ? 'Thank you for being a supporter.'
+    : 'Something went wrong with your donation.';
   return (
     <Alert bsStyle={style} className='donation-completion'>
       <h4>
         <b>{heading}</b>
       </h4>
       <div className='donation-completion-body'>
-        {(processing || redirecting) && (
+        {processing && (
           <Spinner
             className='user-state-spinner'
             color='#0a0a23'
@@ -48,8 +36,10 @@ function DonateCompletion({
         )}
         {success && (
           <div>
-            <p>{t('donate.free-tech')}</p>
-            <p>{t('donate.no-halo')}</p>
+            <p>
+              Your donations will support free technology education for people
+              all over the world.
+            </p>
           </div>
         )}
         {error && <p>{error}</p>}
@@ -58,7 +48,7 @@ function DonateCompletion({
         {error && (
           <div>
             <Button bsStyle='primary' onClick={reset}>
-              {t('buttons.try-again')}
+              Try again
             </Button>
           </div>
         )}

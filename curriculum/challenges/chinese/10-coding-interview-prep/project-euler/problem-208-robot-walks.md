@@ -1,42 +1,25 @@
 ---
 id: 5900f43f1000cf542c50ff51
-title: 'Problem 208: Robot Walks'
+title: 问题208：机器人走路
 challengeType: 5
-forumTopicId: 301849
-dashedName: problem-208-robot-walks
+videoUrl: ''
 ---
 
 # --description--
 
-A robot moves in a series of one-fifth circular arcs (72°), with a free choice of a clockwise or an anticlockwise arc for each step, but no turning on the spot.
+机器人以一系列五分之一圆弧（72°）移动，每个步骤可自由选择顺时针或逆时针弧，但不能转动现场。
 
-One of 70932 possible closed paths of 25 arcs starting northward is
+从北向南开始的70932条可能的闭合路径之一是
 
-Given that the robot starts facing North, how many journeys of 70 arcs in length can it take that return it, after the final arc, to its starting position? (Any arc may be traversed multiple times.)
+鉴于机器人开始面向北方，在最终弧线之后，可以将多少70个弧长的行程返回到其起始位置？ （任何弧都可以多次遍历。）
 
 # --hints--
 
-`euler208()` should return 331951449665644800.
+`euler208()`应该返回331951449665644800。
 
 ```js
 assert.strictEqual(euler208(), 331951449665644800);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler208() {
-
-  return true;
-}
-
-euler208();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

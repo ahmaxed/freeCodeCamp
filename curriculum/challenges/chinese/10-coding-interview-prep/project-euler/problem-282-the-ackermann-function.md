@@ -1,42 +1,25 @@
 ---
 id: 5900f4861000cf542c50ff99
-title: 'Problem 282: The Ackermann function'
+title: 问题282：阿克曼函数
 challengeType: 5
-forumTopicId: 301933
-dashedName: problem-282-the-ackermann-function
+videoUrl: ''
 ---
 
 # --description--
 
-For non-negative integers m, n, the Ackermann function A(m, n) is defined as follows:
+对于非负整数m，n，Ackermann函数A（m，n）定义如下：
 
-For example A(1, 0) = 2, A(2, 2) = 7 and A(3, 4) = 125.
+例如A（1，0）= 2，A（2，2）= 7和A（3，4）= 125。
 
-Find A(n, n) and give your answer mod 148.
+找到A（n，n）并给出答案mod 148。
 
 # --hints--
 
-`euler282()` should return 1098988351.
+`euler282()`应该返回1098988351。
 
 ```js
 assert.strictEqual(euler282(), 1098988351);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler282() {
-
-  return true;
-}
-
-euler282();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

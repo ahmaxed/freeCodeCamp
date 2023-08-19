@@ -1,54 +1,21 @@
 ---
 id: 5900f3b91000cf542c50fecc
-title: 'Problem 77: Prime summations'
+title: 问题77：总结
 challengeType: 5
-forumTopicId: 302190
-dashedName: problem-77-prime-summations
+videoUrl: ''
 ---
 
 # --description--
 
-It is possible to write ten as the sum of primes in exactly five different ways:
-
-<div style='margin-left: 4em;'>
-  7 + 3<br>
-  5 + 5<br>
-  5 + 3 + 2<br>
-  3 + 3 + 2 + 2<br>
-  2 + 2 + 2 + 2 + 2<br>
-</div>
-
-What is the first value which can be written as the sum of primes in over five thousand different ways?
+可以用五种不同的方式将十个作为素数之和：7 + 3 5 + 5 5 + 3 + 2 3 + 3 + 2 + 2 2 + 2 + 2 + 2 + 2第一个值是多少可以用五千多种不同的方式写成素数之和？
 
 # --hints--
 
-`primeSummations()` should return a number.
+`euler77()`应该返回71。
 
 ```js
-assert(typeof primeSummations() === 'number');
-```
-
-`primeSummations()` should return 71.
-
-```js
-assert.strictEqual(primeSummations(), 71);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function primeSummations() {
-
-  return true;
-}
-
-primeSummations();
+assert.strictEqual(euler77(), 71);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

@@ -3,12 +3,11 @@ id: 5a23c84252665b21eecc8004
 title: Sorting algorithms/Cocktail sort
 challengeType: 5
 forumTopicId: 302312
-dashedName: sorting-algorithmscocktail-sort
 ---
 
 # --description--
 
-The cocktail shaker sort is an improvement on the [Bubble Sort](https://rosettacode.org/wiki/Bubble Sort). The improvement is basically that values "bubble" both directions through the array, because on each iteration the cocktail shaker sort bubble sorts once forwards and once backwards. Pseudocode for the algorithm (from [wikipedia](https://en.wikipedia.org/wiki/Cocktail sort)):
+The cocktail shaker sort is an improvement on the [Bubble Sort](<https://rosettacode.org/wiki/Bubble Sort>). The improvement is basically that values "bubble" both directions through the array, because on each iteration the cocktail shaker sort bubble sorts once forwards and once backwards. Pseudocode for the algorithm (from [wikipedia](<https://en.wikipedia.org/wiki/Cocktail sort>)):
 
 <pre><b>function</b> <i>cocktailSort</i>( A : list of sortable items )
   <b>do</b>

@@ -1,46 +1,25 @@
 ---
 id: 5900f3fa1000cf542c50ff0c
-title: 'Problem 140: Modified Fibonacci golden nuggets'
+title: 问题140：改进的斐波那契金块
 challengeType: 5
-forumTopicId: 301769
-dashedName: problem-140-modified-fibonacci-golden-nuggets
+videoUrl: ''
 ---
 
 # --description--
 
-Consider the infinite polynomial series AG(x) = xG1 + x2G2 + x3G3 + ..., where Gk is the kth term of the second order recurrence relation Gk = Gk−1 + Gk−2, G1 = 1 and G2 = 4; that is, 1, 4, 5, 9, 14, 23, ... .
+考虑无穷多项式系列AG（x）= xG1 + x2G2 + x3G3 + ...，其中Gk是二阶递归关系的第k项，Gk = Gk-1 + Gk-2，G1 = 1，G2 = 4;也就是说，1,4,5,9,14,23 ......对于这个问题，我们将关注x的值，其中AG（x）是正整数。前五个自然数的x的相应值如下所示。
 
-For this problem we shall be concerned with values of x for which AG(x) is a positive integer.
+xAG（x）（√5-1）/ 41 2/52（√22-2）/ 63（√137-5）/ 144 1/25
 
-The corresponding values of x for the first five natural numbers are shown below.
-
-xAG(x) (√5−1)/41 2/52 (√22−2)/63 (√137−5)/144 1/25
-
-We shall call AG(x) a golden nugget if x is rational, because they become increasingly rarer; for example, the 20th golden nugget is 211345365. Find the sum of the first thirty golden nuggets.
+如果x是理性的，我们将称AG（x）为金块，因为它们变得越来越稀少;例如，第20个金块是211345365.找到前30个金块的总和。
 
 # --hints--
 
-`euler140()` should return 5673835352990.
+`euler140()`应该返回5673835352990。
 
 ```js
 assert.strictEqual(euler140(), 5673835352990);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler140() {
-
-  return true;
-}
-
-euler140();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

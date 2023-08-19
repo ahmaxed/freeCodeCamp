@@ -3,7 +3,6 @@ id: 587d7fb5367417b2b2512c01
 title: Manage npm Dependencies By Understanding Semantic Versioning
 challengeType: 2
 forumTopicId: 301529
-dashedName: manage-npm-dependencies-by-understanding-semantic-versioning
 ---
 
 # --description--
@@ -61,6 +60,8 @@ In the dependencies section of your package.json file, change the `version` of m
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 
