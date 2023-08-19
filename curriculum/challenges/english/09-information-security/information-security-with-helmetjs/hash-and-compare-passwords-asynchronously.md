@@ -3,11 +3,12 @@ id: 58a25bcff9fc0f352b528e7d
 title: Hash and Compare Passwords Asynchronously
 challengeType: 2
 forumTopicId: 301578
+dashedName: hash-and-compare-passwords-asynchronously
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-bcrypt), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/).
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-bcrypt), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-bcrypt/).
 
 As hashing is designed to be computationally intensive, it is recommended to do so asynchronously on your server as to avoid blocking incoming connections while you hash. All you have to do to hash a password asynchronous is call
 
@@ -68,8 +69,6 @@ Async hash should be generated and correctly compared.
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

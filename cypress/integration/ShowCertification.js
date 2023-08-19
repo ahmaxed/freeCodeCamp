@@ -1,11 +1,10 @@
 /* global cy */
 
-describe('A certification,', function() {
-  describe('while viewing your own,', function() {
+describe('A certification,', function () {
+  describe('while viewing your own,', function () {
     before(() => {
-      cy.visit('/');
-      cy.contains("Get started (it's free)").click({ force: true });
-      cy.contains('Update my account settings').click({ force: true });
+      cy.login();
+      cy.visit('/settings');
 
       // set user settings to public to claim a cert
       cy.get('label:contains(Public)>input').each(el => {
@@ -51,7 +50,7 @@ describe('A certification,', function() {
         .click({ force: true });
     });
 
-    it('should render a LinkedIn button', function() {
+    it('should render a LinkedIn button', function () {
       cy.contains('Add this certification to my LinkedIn profile')
         .should('have.attr', 'href')
         .and(
@@ -61,7 +60,7 @@ describe('A certification,', function() {
         );
     });
 
-    it('should render a Twitter button', function() {
+    it('should render a Twitter button', function () {
       cy.contains('Share this certification on Twitter').should(
         'have.attr',
         'href',
@@ -78,20 +77,21 @@ describe('A certification,', function() {
     });
   });
 
-  describe("while viewing someone else's,", function() {
+  describe("while viewing someone else's,", function () {
     before(() => {
       cy.go('back');
-      cy.contains('Sign me out of freeCodeCamp').click({ force: true });
+      cy.get('.toggle-button-nav').click();
+      cy.get('.nav-list').contains('Sign out').click();
       cy.visit('/certification/developmentuser/legacy-front-end');
     });
 
-    it('should not render a LinkedIn button', function() {
+    it('should not render a LinkedIn button', function () {
       cy.contains('Add this certification to my LinkedIn profile').should(
         'not.exist'
       );
     });
 
-    it('should not render a Twitter button', function() {
+    it('should not render a Twitter button', function () {
       cy.contains('Share this certification on Twitter').should('not.exist');
     });
   });

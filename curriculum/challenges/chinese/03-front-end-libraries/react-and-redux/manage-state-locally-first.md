@@ -3,23 +3,24 @@ id: 5a24c314108439a4d4036142
 title: 首先在本地管理状态
 challengeType: 6
 forumTopicId: 301431
+dashedName: manage-state-locally-first
 ---
 
 # --description--
 
-这一关的任务是完成`DisplayMessages`组件的创建。
+这一关的任务是完成 `DisplayMessages` 组件的创建。
 
 # --instructions--
 
-首先，在`render()`方法中，让组件渲染`input`、`button`、`ul`三个元素。`input`元素的改变会触发`handleChange()`方法。此外，`input`元素会渲染组件状态中`input`的值。点击按钮`button`需触发`submitMessage()`方法。
+首先，在 `render()` 方法中，让组件渲染 `input`、`button`、`ul` 三个元素。 `input` 元素的改变会触发 `handleChange()` 方法。 此外，`input` 元素会渲染组件状态中 `input` 的值。 点击按钮 `button` 需触发 `submitMessage()` 方法。
 
-接着，写出这两种方法。`handleChange()`方法会更新`input`为用户正在输入的内容。`submitMessage()`方法把当前存储在`input`的消息与本地状态的`messages`数组连接起来，并清除`input`的值。
+接着，写出这两种方法。 `handleChange()` 方法会更新 `input` 为用户正在输入的内容。 `submitMessage()` 方法把当前存储在 `input` 的消息与本地状态的 `messages` 数组连接起来，并清除 `input` 的值。
 
-最后，在`ul`中展示`messages`数组，其中每个元素内容需放到`li`元素内。
+最后，在 `ul` 中展示 `messages` 数组，其中每个元素内容需放到 `li` 元素内。
 
 # --hints--
 
-`DisplayMessages`组件的初始状态应是`{ input: "", messages: [] }`。
+`DisplayMessages` 组件的初始状态应是 `{ input: "", messages: [] }`。
 
 ```js
 assert(
@@ -35,7 +36,7 @@ assert(
 );
 ```
 
-`DisplayMessages`组件应渲染含`h2`、`button`、`ul`、`li`四个子元素的`div`。
+`DisplayMessages` 组件应渲染含 `h2`、`button`、`ul`、`li` 四个子元素的`div`
 
 ```js
 async () => {
@@ -57,13 +58,13 @@ async () => {
 };
 ```
 
-`input`元素应渲染本地状态中的`input`值。
+`.map` 应该用于 `messages` 数组。
 
 ```js
 assert(code.match(/this\.state\.messages\.map/g));
 ```
 
-调用`handleChange`方法时应更新状态中的`input`值为当前输入。
+`input` 元素应渲染本地状态中的 `input` 值。
 
 ```js
 async () => {
@@ -82,7 +83,7 @@ async () => {
 };
 ```
 
-单击`Add message`按钮应调用`submitMessage`方法，添加当前`输入`到状态中的`消息`数组。
+调用 `handleChange` 方法时应更新状态中的 `input` 值为当前输入。
 
 ```js
 async () => {
@@ -105,7 +106,7 @@ async () => {
 };
 ```
 
-`submitMessage`方法应清除当前输入。
+单击 `Add message` 按钮应调用 `submitMessage` 方法，添加当前 `input` 到状态中的 `messages` 数组。
 
 ```js
 async () => {
@@ -148,7 +149,7 @@ async () => {
 };
 ```
 
-The `submitMessage` method should clear the current input.
+`submitMessage` 方法应清除当前输入。
 
 ```js
 async () => {
@@ -175,5 +176,85 @@ async () => {
 };
 ```
 
+# --seed--
+
+## --after-user-code--
+
+```jsx
+ReactDOM.render(<DisplayMessages />, document.getElementById('root'))
+```
+
+## --seed-contents--
+
+```jsx
+class DisplayMessages extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: '',
+      messages: []
+    }
+  }
+  // Add handleChange() and submitMessage() methods here
+
+  render() {
+    return (
+      <div>
+        <h2>Type in a new Message:</h2>
+        { /* Render an input, button, and ul below this line */ }
+
+        { /* Change code above this line */ }
+      </div>
+    );
+  }
+};
+```
+
 # --solutions--
 
+```jsx
+class DisplayMessages extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: '',
+      messages: []
+    }
+ this.handleChange = this.handleChange.bind(this);
+   this.submitMessage = this.submitMessage.bind(this);
+ }
+  handleChange(event) {
+    this.setState({
+      input: event.target.value
+    });
+  }
+  submitMessage() {
+    this.setState((state) => {
+      const currentMessage = state.input;
+      return {
+        input: '',
+        messages: state.messages.concat(currentMessage)
+      };  
+    });
+  }
+  render() {
+    return (
+      <div>
+        <h2>Type in a new Message:</h2>
+        <input
+          value={this.state.input}
+          onChange={this.handleChange}/><br/>
+        <button onClick={this.submitMessage}>Submit</button>
+        <ul>
+          {this.state.messages.map( (message, idx) => {
+              return (
+                 <li key={idx}>{message}</li>
+              )
+            })
+          }
+        </ul>
+      </div>
+    );
+  }
+};
+```

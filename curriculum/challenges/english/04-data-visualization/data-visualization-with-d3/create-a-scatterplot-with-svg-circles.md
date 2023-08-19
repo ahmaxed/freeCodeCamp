@@ -3,6 +3,7 @@ id: 587d7fab367417b2b2512bd7
 title: Create a Scatterplot with SVG Circles
 challengeType: 6
 forumTopicId: 301484
+dashedName: create-a-scatterplot-with-svg-circles
 ---
 
 # --description--
@@ -15,8 +16,7 @@ SVG has a `circle` tag to create the circle shape. It works a lot like the `rect
 
 Use the `data()`, `enter()`, and `append()` methods to bind `dataset` to new `circle` elements that are appended to the SVG canvas.
 
-**Note**  
-The circles won't be visible because we haven't set their attributes yet. We'll do that in the next challenge.
+**Note:** The circles won't be visible because we haven't set their attributes yet. We'll do that in the next challenge.
 
 # --hints--
 

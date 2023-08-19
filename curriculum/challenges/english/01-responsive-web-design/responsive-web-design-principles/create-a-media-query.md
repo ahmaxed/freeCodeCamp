@@ -4,6 +4,7 @@ title: Create a Media Query
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pzrPu4/cqwKrtm'
 forumTopicId: 301139
+dashedName: create-a-media-query
 ---
 
 # --description--
@@ -14,11 +15,15 @@ Media Queries consist of a media type, and if that media type matches the type o
 
 Here's an example of a media query that returns the content when the device's width is less than or equal to 100px:
 
-`@media (max-width: 100px) { /* CSS Rules */ }`
+```css
+@media (max-width: 100px) { /* CSS Rules */ }
+```
 
 and the following media query returns the content when the device's height is more than or equal to 350px:
 
-`@media (min-height: 350px) { /* CSS Rules */ }`
+```css
+@media (min-height: 350px) { /* CSS Rules */ }
+```
 
 Remember, the CSS inside the media query is applied only if the media type matches that of the device being used.
 

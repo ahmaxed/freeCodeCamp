@@ -1,5 +1,5 @@
 import { createAction, handleActions } from 'redux-actions';
-import { uniqBy } from 'lodash';
+import { uniqBy } from 'lodash-es';
 import store from 'store';
 
 import { createTypes, createAsyncTypes } from '../utils/createTypes';
@@ -31,6 +31,7 @@ export const defaultFetchState = {
 };
 
 export const defaultDonationFormState = {
+  redirecting: false,
   processing: false,
   success: false,
   error: ''
@@ -38,7 +39,7 @@ export const defaultDonationFormState = {
 
 const initialState = {
   appUsername: '',
-  canRequestBlockDonation: false,
+  recentlyClaimedBlock: null,
   canRequestProgressDonation: true,
   completionCount: 0,
   currentChallengeId: store.get(CURRENT_CHALLENGE_KEY),
@@ -55,7 +56,6 @@ const initialState = {
   },
   sessionMeta: { activeDonations: 0 },
   showDonationModal: false,
-  isBlockDonationModal: false,
   isOnline: true,
   donationFormState: {
     ...defaultDonationFormState
@@ -82,7 +82,6 @@ export const types = createTypes(
     'updateDonationFormState',
     ...createAsyncTypes('fetchUser'),
     ...createAsyncTypes('addDonation'),
-    ...createAsyncTypes('postChargeStripe'),
     ...createAsyncTypes('fetchProfileForUser'),
     ...createAsyncTypes('acceptTerms'),
     ...createAsyncTypes('showCert'),
@@ -151,12 +150,6 @@ export const addDonation = createAction(types.addDonation);
 export const addDonationComplete = createAction(types.addDonationComplete);
 export const addDonationError = createAction(types.addDonationError);
 
-export const postChargeStripe = createAction(types.postChargeStripe);
-export const postChargeStripeComplete = createAction(
-  types.postChargeStripeComplete
-);
-export const postChargeStripeError = createAction(types.postChargeStripeError);
-
 export const fetchProfileForUser = createAction(types.fetchProfileForUser);
 export const fetchProfileForUserComplete = createAction(
   types.fetchProfileForUserComplete
@@ -187,10 +180,8 @@ export const isDonatingSelector = state => userSelector(state).isDonating;
 export const isOnlineSelector = state => state[ns].isOnline;
 export const isSignedInSelector = state => !!state[ns].appUsername;
 export const isDonationModalOpenSelector = state => state[ns].showDonationModal;
-export const canRequestBlockDonationSelector = state =>
-  state[ns].canRequestBlockDonation;
-export const isBlockDonationModalSelector = state =>
-  state[ns].isBlockDonationModal;
+export const recentlyClaimedBlockSelector = state =>
+  state[ns].recentlyClaimedBlock;
 export const donationFormStateSelector = state => state[ns].donationFormState;
 export const signInLoadingSelector = state =>
   userFetchStateSelector(state).pending;
@@ -201,13 +192,13 @@ export const shouldRequestDonationSelector = state => {
   const completionCount = completionCountSelector(state);
   const canRequestProgressDonation = state[ns].canRequestProgressDonation;
   const isDonating = isDonatingSelector(state);
-  const canRequestBlockDonation = canRequestBlockDonationSelector(state);
+  const recentlyClaimedBlock = recentlyClaimedBlockSelector(state);
 
   // don't request donation if already donating
   if (isDonating) return false;
 
   // a block has been completed
-  if (canRequestBlockDonation) return true;
+  if (recentlyClaimedBlock) return true;
 
   // a donation has already been requested
   if (!canRequestProgressDonation) return false;
@@ -265,81 +256,81 @@ export const certificatesByNameSelector = username => state => {
       {
         show: isRespWebDesignCert,
         title: 'Responsive Web Design Certification',
-        showURL: 'responsive-web-design'
+        certSlug: 'responsive-web-design'
       },
       {
         show: isJsAlgoDataStructCert,
         title: 'JavaScript Algorithms and Data Structures Certification',
-        showURL: 'javascript-algorithms-and-data-structures'
+        certSlug: 'javascript-algorithms-and-data-structures'
       },
       {
         show: isFrontEndLibsCert,
         title: 'Front End Libraries Certification',
-        showURL: 'front-end-libraries'
+        certSlug: 'front-end-libraries'
       },
       {
         show: is2018DataVisCert,
         title: 'Data Visualization Certification',
-        showURL: 'data-visualization'
+        certSlug: 'data-visualization'
       },
       {
         show: isApisMicroservicesCert,
         title: 'APIs and Microservices Certification',
-        showURL: 'apis-and-microservices'
+        certSlug: 'apis-and-microservices'
       },
       {
         show: isQaCertV7,
         title: ' Quality Assurance Certification',
-        showURL: 'quality-assurance-v7'
+        certSlug: 'quality-assurance-v7'
       },
       {
         show: isInfosecCertV7,
         title: 'Information Security Certification',
-        showURL: 'information-security-v7'
+        certSlug: 'information-security-v7'
       },
       {
         show: isSciCompPyCertV7,
         title: 'Scientific Computing with Python Certification',
-        showURL: 'scientific-computing-with-python-v7'
+        certSlug: 'scientific-computing-with-python-v7'
       },
       {
         show: isDataAnalysisPyCertV7,
         title: 'Data Analysis with Python Certification',
-        showURL: 'data-analysis-with-python-v7'
+        certSlug: 'data-analysis-with-python-v7'
       },
       {
         show: isMachineLearningPyCertV7,
         title: 'Machine Learning with Python Certification',
-        showURL: 'machine-learning-with-python-v7'
+        certSlug: 'machine-learning-with-python-v7'
       }
     ],
     legacyCerts: [
       {
         show: isFrontEndCert,
         title: 'Front End Certification',
-        showURL: 'legacy-front-end'
+        certSlug: 'legacy-front-end'
       },
       {
         show: isBackEndCert,
         title: 'Back End Certification',
-        showURL: 'legacy-back-end'
+        certSlug: 'legacy-back-end'
       },
       {
         show: isDataVisCert,
         title: 'Data Visualization Certification',
-        showURL: 'legacy-data-visualization'
+        certSlug: 'legacy-data-visualization'
       },
       {
         show: isInfosecQaCert,
         title: 'Information Security and Quality Assurance Certification',
         // Keep the current public profile cert slug
-        showURL: 'information-security-and-quality-assurance'
+        certSlug: 'information-security-and-quality-assurance'
       },
       {
         show: isFullStackCert,
         title: 'Full Stack Certification',
         // Keep the current public profile cert slug
-        showURL: 'full-stack'
+        certSlug: 'full-stack'
       }
     ]
   };
@@ -393,10 +384,12 @@ export const reducer = handleActions(
         }
       };
     },
-    [types.allowBlockDonationRequests]: state => ({
-      ...state,
-      canRequestBlockDonation: true
-    }),
+    [types.allowBlockDonationRequests]: (state, { payload }) => {
+      return {
+        ...state,
+        recentlyClaimedBlock: payload
+      };
+    },
     [types.updateDonationFormState]: (state, { payload }) => ({
       ...state,
       donationFormState: { ...state.donationFormState, ...payload }
@@ -421,29 +414,6 @@ export const reducer = handleActions(
       };
     },
     [types.addDonationError]: (state, { payload }) => ({
-      ...state,
-      donationFormState: { ...defaultDonationFormState, error: payload }
-    }),
-    [types.postChargeStripe]: state => ({
-      ...state,
-      donationFormState: { ...defaultDonationFormState, processing: true }
-    }),
-    [types.postChargeStripeComplete]: state => {
-      const { appUsername } = state;
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          [appUsername]: {
-            ...state.user[appUsername],
-            isDonating: true
-          }
-        },
-
-        donationFormState: { ...defaultDonationFormState, success: true }
-      };
-    },
-    [types.postChargeStripeError]: (state, { payload }) => ({
       ...state,
       donationFormState: { ...defaultDonationFormState, error: payload }
     }),
@@ -522,14 +492,13 @@ export const reducer = handleActions(
       ...state,
       showDonationModal: false
     }),
-    [types.openDonationModal]: (state, { payload }) => ({
+    [types.openDonationModal]: state => ({
       ...state,
-      showDonationModal: true,
-      isBlockDonationModal: payload
+      showDonationModal: true
     }),
     [types.preventBlockDonationRequests]: state => ({
       ...state,
-      canRequestBlockDonation: false
+      recentlyClaimedBlock: null
     }),
     [types.preventProgressDonationRequests]: state => ({
       ...state,

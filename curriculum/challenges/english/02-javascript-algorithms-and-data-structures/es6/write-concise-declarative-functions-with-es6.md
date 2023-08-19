@@ -3,6 +3,7 @@ id: 587d7b8b367417b2b2512b50
 title: Write Concise Declarative Functions with ES6
 challengeType: 1
 forumTopicId: 301224
+dashedName: write-concise-declarative-functions-with-es6
 ---
 
 # --description--
@@ -18,7 +19,7 @@ const person = {
 };
 ```
 
-With ES6, You can remove the `function` keyword and colon altogether when defining functions in objects. Here's an example of this syntax:
+With ES6, you can remove the `function` keyword and colon altogether when defining functions in objects. Here's an example of this syntax:
 
 ```js
 const person = {
@@ -38,7 +39,7 @@ Refactor the function `setGear` inside the object `bicycle` to use the shorthand
 Traditional function expression should not be used.
 
 ```js
-(getUserInput) => assert(!__helpers.removeJSComments(code).match(/function/));
+(getUserInput) => assert(!code.match(/function/));
 ```
 
 `setGear` should be a declarative function.

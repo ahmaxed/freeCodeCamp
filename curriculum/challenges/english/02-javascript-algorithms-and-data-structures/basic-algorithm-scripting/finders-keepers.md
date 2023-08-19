@@ -3,6 +3,7 @@ id: a6e40f1041b06c996f7b2406
 title: Finders Keepers
 challengeType: 5
 forumTopicId: 16016
+dashedName: finders-keepers
 ---
 
 # --description--
@@ -11,7 +12,7 @@ Create a function that looks through an array `arr` and returns the first elemen
 
 # --hints--
 
-`findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })` should return 8.
+`findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; })` should return `8`.
 
 ```js
 assert.strictEqual(
@@ -22,7 +23,7 @@ assert.strictEqual(
 );
 ```
 
-`findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })` should return undefined.
+`findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; })` should return `undefined`.
 
 ```js
 assert.strictEqual(

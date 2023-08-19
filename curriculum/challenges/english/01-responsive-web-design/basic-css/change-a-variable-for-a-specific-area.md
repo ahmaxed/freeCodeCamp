@@ -4,6 +4,7 @@ title: Change a variable for a specific area
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cdRwbuW'
 forumTopicId: 301085
+dashedName: change-a-variable-for-a-specific-area
 ---
 
 # --description--
@@ -22,9 +23,18 @@ The `penguin` class should reassign the `--penguin-belly` variable to `white`.
 
 ```js
 assert(
-  code.match(/.penguin\s*?{[\s\S]*--penguin-belly\s*?:\s*?white\s*?;[\s\S]*}/gi)
+  code.match(/\.penguin\s*?{[\s\S]*--penguin-belly\s*?:\s*?white\s*?;[\s\S]*}/gi)
 );
 ```
+
+The `penguin` class should not contain the `background-color` property
+
+```js
+assert(
+  code.match(/^((?!background-color\s*?:\s*?)[\s\S])*$/g)
+);
+``` 
+
 
 # --seed--
 

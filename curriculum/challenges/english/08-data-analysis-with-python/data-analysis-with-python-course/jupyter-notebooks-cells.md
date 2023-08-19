@@ -3,6 +3,7 @@ id: 5e9a093a74c4063ca6f7c150
 title: Jupyter Notebooks Cells
 challengeType: 11
 videoId: 5PPegAs9aLA
+dashedName: jupyter-notebooks-cells
 ---
 
 # --description--
@@ -13,27 +14,25 @@ More resources:
 
 -   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/ds-content-interactive-jupyterlab-tutorial)
 -   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
--   [Twitter Cheat Sheet](https://twitter.com/rmotr_com/status/1122176794696847361)
 
 # --question--
 
 ## --text--
 
-Which cells are responsible for rich display?
+What are the three main types of Jupyter Notebook Cell?
 
 ## --answers--
 
-Code Cells
+Code, Markdown, and Python
 
 ---
 
-Markdown Cells
+Code, Markdown, and Raw
 
 ---
 
-Raw Cells
+Markdown, Python, and Raw
 
 ## --video-solution--
 
-1
-
+2

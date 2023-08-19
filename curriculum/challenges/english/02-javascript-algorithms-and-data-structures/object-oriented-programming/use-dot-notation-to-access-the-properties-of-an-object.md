@@ -3,6 +3,7 @@ id: 587d7dac367417b2b2512b74
 title: Use Dot Notation to Access the Properties of an Object
 challengeType: 1
 forumTopicId: 301333
+dashedName: use-dot-notation-to-access-the-properties-of-an-object
 ---
 
 # --description--
@@ -15,10 +16,9 @@ let duck = {
   numLegs: 2
 };
 console.log(duck.name);
-// This prints "Aflac" to the console
 ```
 
-Dot notation is used on the object name, `duck`, followed by the name of the property, `name`, to access the value of "Aflac".
+Dot notation is used on the object name, `duck`, followed by the name of the property, `name`, to access the value of `Aflac`.
 
 # --instructions--
 

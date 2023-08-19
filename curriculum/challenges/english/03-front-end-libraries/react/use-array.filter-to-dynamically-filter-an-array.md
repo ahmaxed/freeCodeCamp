@@ -3,13 +3,16 @@ id: 5a24c314108439a4d403618c
 title: Use Array.filter() to Dynamically Filter an Array
 challengeType: 6
 forumTopicId: 301416
+dashedName: use-array-filter-to-dynamically-filter-an-array
 ---
 
 # --description--
 
 The `map` array method is a powerful tool that you will use often when working with React. Another method related to `map` is `filter`, which filters the contents of an array based on a condition, then returns a new array. For example, if you have an array of users that all have a property `online` which can be set to `true` or `false`, you can filter only those users that are online by writing:
 
-`let onlineUsers = users.filter(user => user.online);`
+```js
+let onlineUsers = users.filter(user => user.online);
+```
 
 # --instructions--
 
@@ -26,7 +29,7 @@ assert.strictEqual(
 );
 ```
 
-`MyComponent`'s state should be initialized to an array of six users.")
+`MyComponent`'s state should be initialized to an array of six users.
 
 ```js
 assert(
@@ -80,7 +83,7 @@ assert(
 })();
 ```
 
-`MyComponent` should render `li` elements that contain the username of each online user.
+`MyComponent` should render `li` elements that contain the `username` of each online user.
 
 ```js
 (() => {

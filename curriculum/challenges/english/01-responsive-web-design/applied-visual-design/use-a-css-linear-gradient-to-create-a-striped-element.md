@@ -4,6 +4,7 @@ title: Use a CSS Linear Gradient to Create a Striped Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c6bmQh2'
 forumTopicId: 301072
+dashedName: use-a-css-linear-gradient-to-create-a-striped-element
 ---
 
 # --description--
@@ -16,7 +17,9 @@ In the example demonstrated in the code editor, the gradient starts with the col
 
 For this example, it helps to think about the color stops as pairs where every two colors blend together.
 
-`0px [yellow -- blend -- blue] 40px [green -- blend -- red] 80px`
+```css
+0px [yellow -- blend -- blue] 40px [green -- blend -- red] 80px
+```
 
 If every two color stop values are the same color, the blending isn't noticeable because it's between the same color, followed by a hard transition to the next color, so you end up with stripes.
 

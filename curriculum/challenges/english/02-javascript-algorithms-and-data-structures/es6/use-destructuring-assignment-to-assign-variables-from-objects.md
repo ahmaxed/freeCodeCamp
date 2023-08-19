@@ -3,6 +3,7 @@ id: 587d7b89367417b2b2512b49
 title: Use Destructuring Assignment to Assign Variables from Objects
 challengeType: 1
 forumTopicId: 301215
+dashedName: use-destructuring-assignment-to-assign-variables-from-objects
 ---
 
 # --description--
@@ -19,10 +20,9 @@ Here's how you can give new variable names in the assignment:
 
 ```js
 const { name: userName, age: userAge } = user;
-// userName = 'John Doe', userAge = 34
 ```
 
-You may read it as "get the value of `user.name` and assign it to a new variable named `userName`" and so on.
+You may read it as "get the value of `user.name` and assign it to a new variable named `userName`" and so on. The value of `userName` would be the string `John Doe`, and the value of `userAge` would be the number `34`.
 
 # --instructions--
 

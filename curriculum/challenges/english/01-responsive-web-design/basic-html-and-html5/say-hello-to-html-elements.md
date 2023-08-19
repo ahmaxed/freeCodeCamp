@@ -4,6 +4,7 @@ title: Say Hello to HTML Elements
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVMPUv/cE8Gpt2'
 forumTopicId: 18276
+dashedName: say-hello-to-html-elements
 ---
 
 # --description--
@@ -18,11 +19,15 @@ Most HTML elements have an opening tag and a closing tag.
 
 Opening tags look like this:
 
-`<h1>`
+```html
+<h1>
+```
 
 Closing tags look like this:
 
-`</h1>`
+```html
+</h1>
+```
 
 The only difference between opening and closing tags is the forward slash after the opening bracket of a closing tag.
 
@@ -30,11 +35,11 @@ Each challenge has tests you can run at any time by clicking the "Run tests" but
 
 # --instructions--
 
-To pass the test on this challenge, change your `h1` element's text to say "Hello World".
+To pass the test on this challenge, change your `h1` element's text to say `Hello World`.
 
 # --hints--
 
-Your `h1` element should have the text "Hello World".
+Your `h1` element should have the text `Hello World`.
 
 ```js
 assert.isTrue(/hello(\s)+world/gi.test($('h1').text()));

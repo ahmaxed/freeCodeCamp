@@ -3,6 +3,7 @@ id: 587d7dbb367417b2b2512bac
 title: Remove Whitespace from Start and End
 challengeType: 1
 forumTopicId: 301362
+dashedName: remove-whitespace-from-start-and-end
 ---
 
 # --description--
@@ -17,10 +18,10 @@ Write a regex and use the appropriate string methods to remove whitespace at the
 
 # --hints--
 
-`result` should equal to `"Hello, World!"`
+`result` should be equal to the string `Hello, World!`
 
 ```js
-assert(result == 'Hello, World!');
+assert(result === 'Hello, World!');
 ```
 
 Your solution should not use the `String.prototype.trim()` method.
@@ -29,10 +30,10 @@ Your solution should not use the `String.prototype.trim()` method.
 assert(!code.match(/\.?[\s\S]*?trim/));
 ```
 
-The `result` variable should not be set equal to a string.
+The `result` variable should not directly be set to a string
 
 ```js
-assert(!code.match(/result\s*=\s*".*?"/));
+assert(!code.match(/result\s*=\s*["'`].*?["'`]/));
 ```
 
 # --seed--

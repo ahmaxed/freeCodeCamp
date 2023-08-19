@@ -3,6 +3,7 @@ id: 587d7dbb367417b2b2512baa
 title: Reuse Patterns Using Capture Groups
 challengeType: 1
 forumTopicId: 301364
+dashedName: reuse-patterns-using-capture-groups
 ---
 
 # --description--
@@ -18,15 +19,17 @@ The example below matches any word that occurs twice separated by a space:
 ```js
 let repeatStr = "regex regex";
 let repeatRegex = /(\w+)\s\1/;
-repeatRegex.test(repeatStr); // Returns true
-repeatStr.match(repeatRegex); // Returns ["regex regex", "regex"]
+repeatRegex.test(repeatStr);
+repeatStr.match(repeatRegex);
 ```
+
+The `test` call would return `true`, and the `match` call would return `["regex regex", "regex"]`.
 
 Using the `.match()` method on a string will return an array with the string it matches, along with its capture group.
 
 # --instructions--
 
-Use capture groups in `reRegex` to match numbers that are repeated only three times in a string, each separated by a space.
+Use capture groups in `reRegex` to match a string that consists of only the same number repeated exactly three times separated by single spaces.
 
 # --hints--
 
@@ -42,52 +45,43 @@ Your regex should reuse a capture group twice.
 assert(reRegex.source.match(/\\1|\\2/g).length >= 2);
 ```
 
-Your regex should have two spaces separating the three numbers.
-
-```js
-assert(
-  reRegex.source.match(/ |\\s/g).length === 2 ||
-    reRegex.source.match(/\(\\s\)(?=.*\\(1|2))/g)
-);
-```
-
-Your regex should match `"42 42 42"`.
+Your regex should match the string `42 42 42`.
 
 ```js
 assert(reRegex.test('42 42 42'));
 ```
 
-Your regex should match `"100 100 100"`.
+Your regex should match the string `100 100 100`.
 
 ```js
 assert(reRegex.test('100 100 100'));
 ```
 
-Your regex should not match `"42 42 42 42"`.
+Your regex should not match the string `42 42 42 42`.
 
 ```js
 assert.equal('42 42 42 42'.match(reRegex.source), null);
 ```
 
-Your regex should not match `"42 42"`.
+Your regex should not match the string `42 42`.
 
 ```js
 assert.equal('42 42'.match(reRegex.source), null);
 ```
 
-Your regex should not match `"101 102 103"`.
+Your regex should not match the string `101 102 103`.
 
 ```js
 assert(!reRegex.test('101 102 103'));
 ```
 
-Your regex should not match `"1 2 3"`.
+Your regex should not match the string `1 2 3`.
 
 ```js
 assert(!reRegex.test('1 2 3'));
 ```
 
-Your regex should match `"10 10 10"`.
+Your regex should match the string `10 10 10`.
 
 ```js
 assert(reRegex.test('10 10 10'));

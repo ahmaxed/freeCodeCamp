@@ -3,21 +3,24 @@ id: 587d824b367417b2b2512c48
 title: 使用 Assert.isOk() 和 Assert.isNotOK()
 challengeType: 2
 forumTopicId: 301607
+dashedName: use-assert-isok-and-assert-isnotok
 ---
 
 # --description--
 
-请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
+请注意，本项目在[这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
 
-`isOk()` 用来测试值是否为 `truthy`；`isNotOk()` 用来测试值是否为 `falsy`。 如果你想了解更多关于 truthy 和 falsy 值的内容，请参阅 [Falsy Bouncer](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/falsy-bouncer) 这道挑战题目。
+`isOk()` 用来测试值是否为真值，`isNotOk()` 用来测试值是否为假值。
+
+可以在[过滤数组中的假值](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/falsy-bouncer)这个挑战中了解更多关于真值和假值的信息。
 
 # --instructions--
 
-使用 `assert.isOk()` 或 `assert.isNotOk()` 让测试通过。
+在 `tests/1_unit-tests.js` 中，`Basic Assertions` 套件中标注为 `#3` 的测试下，修改每个 `assert` 为 `assert.isOk()` 或 `assert.isNotOk()`，通过测试（结果应为 `true`）。 不要修改传入断言的参数。
 
 # --hints--
 
-不应有未通过的测试
+应通过所有测试。
 
 ```js
 (getUserInput) =>
@@ -31,7 +34,7 @@ forumTopicId: 301607
   );
 ```
 
-请选择正确的断言—isOk 或 isNotOk
+应该第一个断言选择正确的方法：`isOk` 或 `isNotOk`。
 
 ```js
 (getUserInput) =>
@@ -45,7 +48,7 @@ forumTopicId: 301607
   );
 ```
 
-请选择正确的断言—isOk 或 isNotOk
+应该第二个断言选择正确的方法：`isOk` 或 `isNotOk`。
 
 ```js
 (getUserInput) =>
@@ -59,7 +62,7 @@ forumTopicId: 301607
   );
 ```
 
-请选择正确的断言—isOk 或 isNotOk
+应该第三个断言选择正确的方法：`isOk` 或 `isNotOk`。
 
 ```js
 (getUserInput) =>
@@ -75,3 +78,10 @@ forumTopicId: 301607
 
 # --solutions--
 
+```js
+/**
+  Backend challenges don't need solutions, 
+  because they would need to be tested against a full working project. 
+  Please check our contributing guidelines to learn more.
+*/
+```

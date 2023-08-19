@@ -3,11 +3,12 @@ id: 587d824c367417b2b2512c4d
 title: Compare the Properties of Two Elements
 challengeType: 2
 forumTopicId: 301588
+dashedName: compare-the-properties-of-two-elements
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 # --instructions--
 
@@ -96,8 +97,6 @@ You should choose the correct method for the fourth assertion - `isAbove` vs. `i
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

@@ -3,6 +3,7 @@ id: 587d7b7d367417b2b2512b1c
 title: Check if an Object has a Property
 challengeType: 1
 forumTopicId: 301155
+dashedName: check-if-an-object-has-a-property
 ---
 
 # --description--
@@ -12,8 +13,9 @@ Now we can add, modify, and remove keys from objects. But what if we just wanted
 ```js
 users.hasOwnProperty('Alan');
 'Alan' in users;
-// both return true
 ```
+
+Both of these would return `true`.
 
 # --instructions--
 

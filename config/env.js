@@ -1,22 +1,26 @@
 const path = require('path');
-const fs = require('fs');
 
-// PIPELINE_ENV  is 'true' in the build pipeline
-if (process.env.PIPELINE_ENV !== 'true') {
-  const envPath = path.resolve(__dirname, '../.env');
-  if (!fs.existsSync(envPath)) {
-    throw Error('.env not found, please copy sample.env to .env.');
+const envPath = path.resolve(__dirname, '../.env');
+const { error } = require('dotenv').config({ path: envPath });
+
+if (error) {
+  if (process.env.FREECODECAMP_NODE_ENV === 'development') {
+    console.warn('.env not found, please copy sample.env to .env');
+  } else {
+    console.warn(`.env not found. If env vars are not being set another way,
+this could be a problem.`);
   }
-  require('dotenv').config({ path: envPath });
 }
 
 const {
-  HOME_LOCATION: home,
-  API_LOCATION: api,
-  FORUM_LOCATION: forum,
-  NEWS_LOCATION: news,
-  LOCALE: locale,
-  STRIPE_PUBLIC_KEY: stripePublicKey,
+  HOME_LOCATION: homeLocation,
+  API_LOCATION: apiLocation,
+  FORUM_LOCATION: forumLocation,
+  NEWS_LOCATION: newsLocation,
+  RADIO_LOCATION: radioLocation,
+  CLIENT_LOCALE: clientLocale,
+  CURRICULUM_LOCALE: curriculumLocale,
+  SHOW_LOCALE_DROPDOWN_MENU: showLocaleDropdownMenu,
   ALGOLIA_APP_ID: algoliaAppId,
   ALGOLIA_API_KEY: algoliaAPIKey,
   PAYPAL_CLIENT_ID: paypalClientId,
@@ -25,20 +29,21 @@ const {
 } = process.env;
 
 const locations = {
-  homeLocation: home,
-  apiLocation: api,
-  forumLocation: forum,
-  newsLocation: news
+  homeLocation,
+  apiLocation,
+  forumLocation,
+  newsLocation,
+  radioLocation: !radioLocation
+    ? 'https://coderadio.freecodecamp.org'
+    : radioLocation
 };
 
 module.exports = Object.assign(locations, {
-  locale,
+  clientLocale,
+  curriculumLocale,
+  showLocaleDropdownMenu: showLocaleDropdownMenu === 'true',
   deploymentEnv,
   environment: process.env.FREECODECAMP_NODE_ENV || 'development',
-  stripePublicKey:
-    !stripePublicKey || stripePublicKey === 'pk_from_stripe_dashboard'
-      ? null
-      : stripePublicKey,
   algoliaAppId:
     !algoliaAppId || algoliaAppId === 'app_id_from_algolia_dashboard'
       ? null

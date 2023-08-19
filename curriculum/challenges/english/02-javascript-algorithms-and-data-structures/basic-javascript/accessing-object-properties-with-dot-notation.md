@@ -4,6 +4,7 @@ title: Accessing Object Properties with Dot Notation
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cGryJs8'
 forumTopicId: 16164
+dashedName: accessing-object-properties-with-dot-notation
 ---
 
 # --description--
@@ -19,10 +20,11 @@ var myObj = {
   prop1: "val1",
   prop2: "val2"
 };
-var prop1val = myObj.prop1; // val1
-var prop2val = myObj.prop2; // val2
+var prop1val = myObj.prop1;
+var prop2val = myObj.prop2;
 ```
 
+`prop1val` would have a value of the string `val1`, and `prop2val` would have a value of the string `val2`.
 # --instructions--
 
 Read in the property values of `testObj` using dot notation. Set the variable `hatValue` equal to the object's property `hat` and set the variable `shirtValue` equal to the object's property `shirt`.
@@ -35,7 +37,7 @@ Read in the property values of `testObj` using dot notation. Set the variable `h
 assert(typeof hatValue === 'string');
 ```
 
-The value of `hatValue` should be `"ballcap"`
+The value of `hatValue` should be the string `ballcap`
 
 ```js
 assert(hatValue === 'ballcap');
@@ -47,7 +49,7 @@ assert(hatValue === 'ballcap');
 assert(typeof shirtValue === 'string');
 ```
 
-The value of `shirtValue` should be `"jersey"`
+The value of `shirtValue` should be the string `jersey`
 
 ```js
 assert(shirtValue === 'jersey');

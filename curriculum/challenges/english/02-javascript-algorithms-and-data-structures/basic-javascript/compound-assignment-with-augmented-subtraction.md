@@ -4,17 +4,22 @@ title: Compound Assignment With Augmented Subtraction
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/c2Qv7AV'
 forumTopicId: 16660
+dashedName: compound-assignment-with-augmented-subtraction
 ---
 
 # --description--
 
 Like the `+=` operator, `-=` subtracts a number from a variable.
 
-`myVar = myVar - 5;`
+```js
+myVar = myVar - 5;
+```
 
 will subtract `5` from `myVar`. This can be rewritten as:
 
-`myVar -= 5;`
+```js
+myVar -= 5;
+```
 
 # --instructions--
 

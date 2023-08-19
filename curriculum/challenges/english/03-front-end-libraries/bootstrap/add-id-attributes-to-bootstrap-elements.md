@@ -3,6 +3,7 @@ id: bad87fee1348bd9aec908853
 title: Add id Attributes to Bootstrap Elements
 challengeType: 0
 forumTopicId: 16639
+dashedName: add-id-attributes-to-bootstrap-elements
 ---
 
 # --description--
@@ -15,7 +16,9 @@ Let's give a unique id to each of our `div` elements of class `well`.
 
 Remember that you can give an element an id like this:
 
-`<div class="well" id="center-well">`
+```html
+<div class="well" id="center-well">
+```
 
 Give the well on the left the id of `left-well`. Give the well on the right the id of `right-well`.
 

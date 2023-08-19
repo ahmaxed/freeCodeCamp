@@ -1,7 +1,6 @@
 import React, { Component, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import format from 'date-fns/format';
-import { reverse, sortBy } from 'lodash';
+import { reverse, sortBy } from 'lodash-es';
 import {
   Button,
   Modal,
@@ -10,11 +9,12 @@ import {
   MenuItem
 } from '@freecodecamp/react-bootstrap';
 import { useStaticQuery, graphql } from 'gatsby';
+import { withTranslation } from 'react-i18next';
 
 import './timeline.css';
 import TimelinePagination from './TimelinePagination';
 import { FullWidthRow, Link } from '../../helpers';
-import SolutionViewer from '../../settings/SolutionViewer';
+import SolutionViewer from '../../SolutionViewer/SolutionViewer';
 import {
   getCertIds,
   getPathFromID,
@@ -23,6 +23,13 @@ import {
 
 import { maybeUrlRE } from '../../../utils';
 import CertificationIcon from '../../../assets/icons/CertificationIcon';
+
+import { langCodes } from '../../../../../config/i18n/all-langs';
+import envData from '../../../../../config/env.json';
+
+const { clientLocale } = envData;
+
+const localeCode = langCodes[clientLocale];
 
 // Items per page in timeline.
 const ITEMS_PER_PAGE = 15;
@@ -42,6 +49,7 @@ const propTypes = {
       )
     })
   ),
+  t: PropTypes.func.isRequired,
   username: PropTypes.string
 };
 
@@ -91,6 +99,7 @@ class TimelineInner extends Component {
   }
 
   renderViewButton(id, files, githubLink, solution) {
+    const { t } = this.props;
     if (files && files.length) {
       return (
         <Button
@@ -100,7 +109,7 @@ class TimelineInner extends Component {
           id={`btn-for-${id}`}
           onClick={() => this.viewSolution(id, solution, files)}
         >
-          Show Code
+          {t('buttons.show-code')}
         </Button>
       );
     } else if (githubLink) {
@@ -119,7 +128,7 @@ class TimelineInner extends Component {
               rel='noopener noreferrer'
               target='_blank'
             >
-              Front End
+              {t('buttons.frontend')}
             </MenuItem>
             <MenuItem
               bsStyle='primary'
@@ -127,7 +136,7 @@ class TimelineInner extends Component {
               rel='noopener noreferrer'
               target='_blank'
             >
-              Back End
+              {t('buttons.backend')}
             </MenuItem>
           </DropdownButton>
         </div>
@@ -143,7 +152,7 @@ class TimelineInner extends Component {
           rel='noopener noreferrer'
           target='_blank'
         >
-          View
+          {t('buttons.view')}
         </Button>
       );
     } else {
@@ -175,7 +184,11 @@ class TimelineInner extends Component {
         <td>{this.renderViewButton(id, files, githubLink, solution)}</td>
         <td className='text-center'>
           <time dateTime={completedDate.toISOString()}>
-            {format(completedDate, 'MMMM d, y')}
+            {completedDate.toLocaleString([localeCode, 'en-US'], {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric'
+            })}
           </time>
         </td>
       </tr>
@@ -228,6 +241,7 @@ class TimelineInner extends Component {
       idToNameMap,
       username,
       sortedTimeline,
+      t,
       totalPages = 1
     } = this.props;
     const { solutionToView: id, solutionOpen, pageNo = 1 } = this.state;
@@ -236,19 +250,19 @@ class TimelineInner extends Component {
 
     return (
       <FullWidthRow>
-        <h2 className='text-center'>Timeline</h2>
+        <h2 className='text-center'>{t('profile.timeline')}</h2>
         {completedMap.length === 0 ? (
           <p className='text-center'>
-            No challenges have been completed yet.&nbsp;
-            <Link to='/learn'>Get started here.</Link>
+            {t('profile.none-completed')}&nbsp;
+            <Link to='/learn'>{t('profile.get-started')}</Link>
           </p>
         ) : (
           <Table condensed={true} striped={true}>
             <thead>
               <tr>
-                <th>Challenge</th>
-                <th>Solution</th>
-                <th className='text-center'>Completed</th>
+                <th>{t('profile.challenge')}</th>
+                <th>{t('settings.labels.solution')}</th>
+                <th className='text-center'>{t('profile.completed')}</th>
               </tr>
             </thead>
             <tbody>
@@ -278,7 +292,7 @@ class TimelineInner extends Component {
               />
             </Modal.Body>
             <Modal.Footer>
-              <Button onClick={this.closeSolution}>Close</Button>
+              <Button onClick={this.closeSolution}>{t('buttons.close')}</Button>
             </Modal.Footer>
           </Modal>
         )}
@@ -324,9 +338,17 @@ function useIdToNameMap() {
       certPath: getPathFromID(id)
     });
   }
-  edges.forEach(({ node: { id, title, fields: { slug } } }) => {
-    idToNameMap.set(id, { challengeTitle: title, challengePath: slug });
-  });
+  edges.forEach(
+    ({
+      node: {
+        id,
+        title,
+        fields: { slug }
+      }
+    }) => {
+      idToNameMap.set(id, { challengeTitle: title, challengePath: slug });
+    }
+  );
   return idToNameMap;
 }
 
@@ -357,4 +379,4 @@ Timeline.propTypes = propTypes;
 
 Timeline.displayName = 'Timeline';
 
-export default Timeline;
+export default withTranslation()(Timeline);

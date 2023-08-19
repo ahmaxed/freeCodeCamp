@@ -3,6 +3,7 @@ id: 5a24c314108439a4d4036183
 title: Use Advanced JavaScript in React Render Method
 challengeType: 6
 forumTopicId: 301415
+dashedName: use-advanced-javascript-in-react-render-method
 ---
 
 # --description--
@@ -13,7 +14,7 @@ You can also write JavaScript directly in your `render` methods, before the `ret
 
 # --instructions--
 
-In the code provided, the `render` method has an array that contains 20 phrases to represent the answers found in the classic 1980's Magic Eight Ball toy. The button click event is bound to the `ask` method, so each time the button is clicked a random number will be generated and stored as the `randomIndex` in state. On line 52, delete the string `"change me!"` and reassign the `answer` const so your code randomly accesses a different index of the `possibleAnswers` array each time the component updates. Finally, insert the `answer` const inside the `p` tags.
+In the code provided, the `render` method has an array that contains 20 phrases to represent the answers found in the classic 1980's Magic Eight Ball toy. The button click event is bound to the `ask` method, so each time the button is clicked a random number will be generated and stored as the `randomIndex` in state. On line 52, delete the string `change me!` and reassign the `answer` const so your code randomly accesses a different index of the `possibleAnswers` array each time the component updates. Finally, insert the `answer` const inside the `p` tags.
 
 # --hints--
 

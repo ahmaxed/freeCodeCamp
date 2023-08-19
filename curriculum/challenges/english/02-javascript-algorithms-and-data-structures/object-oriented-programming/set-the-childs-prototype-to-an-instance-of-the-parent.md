@@ -3,6 +3,7 @@ id: 587d7db1367417b2b2512b85
 title: Set the Child's Prototype to an Instance of the Parent
 challengeType: 1
 forumTopicId: 301325
+dashedName: set-the-childs-prototype-to-an-instance-of-the-parent
 ---
 
 # --description--
@@ -19,7 +20,7 @@ Remember that the `prototype` is like the "recipe" for creating an object. In a 
 
 ```js
 let duck = new Bird("Donald");
-duck.eat(); // prints "nom nom nom"
+duck.eat();
 ```
 
 `duck` inherits all of `Animal`'s properties, including the `eat` method.

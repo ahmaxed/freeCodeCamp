@@ -1,23 +1,24 @@
 ---
 id: 587d824f367417b2b2512c59
-title: 使用 Chai-HTTP 进行 API 功能测试 (2)
+title: 使用 Chai-HTTP II 在 API 端上运行功能测试
 challengeType: 2
 forumTopicId: 301592
+dashedName: run-functional-tests-on-api-endpoints-using-chai-http-ii
 ---
 
 # --description--
 
-请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
+请注意，本项目在[这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)的基础上进行开发。 你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
 
 # --instructions--
 
-测试 status 和 `text.response`。替换 `assert.fail()` 使测试通过。
+在 `tests/2_functional-tests.js` 中，修改 `'Test GET /hello with your name'` 测试（`// #2`），对 `status` 和 `text` 断言。
 
-请把 name 的值添加到 query 结尾：`?name=<your_name>`，后端将会返回 `'hello <your_name>'`。
+在查询中发送 name，将 `?name=<your_name>` 添加到路由。 端点响应 `'hello <your_name>'`。
 
 # --hints--
 
-不应有未通过的测试
+应通过所有测试。
 
 ```js
 (getUserInput) =>
@@ -31,7 +32,7 @@ forumTopicId: 301592
   );
 ```
 
-你需要测试 'res.status' 是否为 200
+应测试 “res.status” 是否为 200。
 
 ```js
 (getUserInput) =>
@@ -47,7 +48,7 @@ forumTopicId: 301592
   );
 ```
 
-你需要测试 'res.text' 是否为 'hello Guest'
+应测试 “res.text“ 是否为 ”hello Guest“。
 
 ```js
 (getUserInput) =>
@@ -65,3 +66,10 @@ forumTopicId: 301592
 
 # --solutions--
 
+```js
+/**
+  Backend challenges don't need solutions, 
+  because they would need to be tested against a full working project. 
+  Please check our contributing guidelines to learn more.
+*/
+```

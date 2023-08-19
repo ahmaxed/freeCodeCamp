@@ -1,11 +1,9 @@
 // this exists purely to redirect legacy challenge paths to /learn
 import React from 'react';
 import { Router } from '@reach/router';
-import { navigate } from 'gatsby';
+import { navigate, withPrefix } from 'gatsby';
 
-import createRedirect from '../components/createRedirect';
-
-const RedirectToLearn = createRedirect('/learn');
+import toLearnPath from '../utils/to-learn-path';
 
 const Redirect = props => {
   if (typeof window !== 'undefined') {
@@ -15,22 +13,14 @@ const Redirect = props => {
 };
 
 const Challenges = () => (
-  <Router basepath='/challenges'>
+  <Router basepath={withPrefix('/challenges')}>
     <Redirect path='/:superBlock/' />
     <Redirect path='/:superBlock/:block/' />
     <Redirect path='/:superBlock/:block/:challenge' />
-    <RedirectToLearn default={true} />
+    <Redirect default={true} />
   </Router>
 );
 
 Challenges.displayName = 'Challenges';
-
-export function toLearnPath({ superBlock, block, challenge }) {
-  let path = '/learn';
-  if (superBlock) path += `/${superBlock}`;
-  if (block) path += `/${block}`;
-  if (challenge) path += `/${challenge}`;
-  return path;
-}
 
 export default Challenges;

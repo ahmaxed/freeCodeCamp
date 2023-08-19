@@ -3,11 +3,12 @@ id: 587d824c367417b2b2512c4f
 title: Test if a Value Falls within a Specific Range
 challengeType: 2
 forumTopicId: 301598
+dashedName: test-if-a-value-falls-within-a-specific-range
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 ```javascript
 .approximately(actual, expected, delta, [message])
@@ -74,8 +75,6 @@ You should choose the correct range for the second assertion - `approximately(ac
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

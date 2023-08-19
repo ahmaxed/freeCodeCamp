@@ -3,6 +3,7 @@ id: bad87fee1348bd9aed708826
 title: Remove an Element Using jQuery
 challengeType: 6
 forumTopicId: 18262
+dashedName: remove-an-element-using-jquery
 ---
 
 # --description--
@@ -11,7 +12,7 @@ Now let's remove an HTML element from your page using jQuery.
 
 jQuery has a function called `.remove()` that will remove an HTML element entirely
 
-Remove element `target4` from the page by using the `.remove()` function.
+Remove the `#target4` element from the page by using the `.remove()` function.
 
 # --hints--
 

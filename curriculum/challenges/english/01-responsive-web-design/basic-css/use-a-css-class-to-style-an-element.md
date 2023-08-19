@@ -4,6 +4,7 @@ title: Use a CSS Class to Style an Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c2MvDtV'
 forumTopicId: 18337
+dashedName: use-a-css-class-to-style-an-element
 ---
 
 # --description--
@@ -20,13 +21,13 @@ Here's an example CSS class declaration:
 </style>
 ```
 
-You can see that we've created a CSS class called `blue-text` within the `<style>` tag. You can apply a class to an HTML element like this: `<h2 class="blue-text">CatPhotoApp</h2>` Note that in your CSS `style` element, class names start with a period. In your HTML elements' class attribute, the class name does not include the period.
+You can see that we've created a CSS class called `blue-text` within the `<style>` tag. You can apply a class to an HTML element like this: `<h2 class="blue-text">CatPhotoApp</h2>`. Note that in your CSS `style` element, class names start with a period. In your HTML elements' class attribute, the class name does not include the period.
 
 # --instructions--
 
 Inside your `style` element, change the `h2` selector to `.red-text` and update the color's value from `blue` to `red`.
 
-Give your `h2` element the `class` attribute with a value of `'red-text'`.
+Give your `h2` element the `class` attribute with a value of `red-text`.
 
 # --hints--
 
@@ -42,7 +43,7 @@ Your `h2` element should have the class `red-text`.
 assert($('h2').hasClass('red-text'));
 ```
 
-Your stylesheet should declare a `red-text` class and have its color set to red.
+Your stylesheet should declare a `red-text` class and have its color set to `red`.
 
 ```js
 assert(code.match(/\.red-text\s*\{\s*color\s*:\s*red;\s*\}/g));

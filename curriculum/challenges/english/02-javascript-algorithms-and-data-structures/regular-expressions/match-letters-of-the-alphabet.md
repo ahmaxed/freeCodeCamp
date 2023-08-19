@@ -3,6 +3,7 @@ id: 587d7db5367417b2b2512b96
 title: Match Letters of the Alphabet
 challengeType: 1
 forumTopicId: 301354
+dashedName: match-letters-of-the-alphabet
 ---
 
 # --description--
@@ -18,17 +19,18 @@ let catStr = "cat";
 let batStr = "bat";
 let matStr = "mat";
 let bgRegex = /[a-e]at/;
-catStr.match(bgRegex); // Returns ["cat"]
-batStr.match(bgRegex); // Returns ["bat"]
-matStr.match(bgRegex); // Returns null
+catStr.match(bgRegex);
+batStr.match(bgRegex);
+matStr.match(bgRegex);
 ```
+
+In order, the three `match` calls would return the values `["cat"]`, `["bat"]`, and `null`.
 
 # --instructions--
 
 Match all the letters in the string `quoteSample`.
 
-**Note**  
-Be sure to match both upper- and lowercase **letters**.\*\*\*\*
+**Note**: Be sure to match both uppercase and lowercase letters.
 
 # --hints--
 

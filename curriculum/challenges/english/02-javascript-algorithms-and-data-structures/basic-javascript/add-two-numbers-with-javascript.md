@@ -4,6 +4,7 @@ title: Add Two Numbers with JavaScript
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cM2KBAG'
 forumTopicId: 16650
+dashedName: add-two-numbers-with-javascript
 ---
 
 # --description--
@@ -17,8 +18,10 @@ JavaScript uses the `+` symbol as an addition operator when placed between two n
 **Example:**
 
 ```js
-myVar = 5 + 10; // assigned 15
+myVar = 5 + 10;
 ```
+
+`myVar` now has the value `15`.
 
 # --instructions--
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { kebabCase } from 'lodash';
+import { kebabCase } from 'lodash-es';
+import normalizeUrl from 'normalize-url';
 import PropTypes from 'prop-types';
 import {
   Alert,
@@ -10,6 +11,13 @@ import {
   HelpBlock
 } from '@freecodecamp/react-bootstrap';
 import { Field } from 'react-final-form';
+import {
+  editorValidator,
+  localhostValidator,
+  composeValidators,
+  fCCValidator,
+  httpValidator
+} from './FormValidators';
 
 const propTypes = {
   formFields: PropTypes.arrayOf(
@@ -18,6 +26,7 @@ const propTypes = {
   ).isRequired,
   options: PropTypes.shape({
     ignored: PropTypes.arrayOf(PropTypes.string),
+    isEditorLinkAllowed: PropTypes.bool,
     placeholders: PropTypes.objectOf(PropTypes.string),
     required: PropTypes.arrayOf(PropTypes.string),
     types: PropTypes.objectOf(PropTypes.string)
@@ -30,9 +39,35 @@ function FormFields(props) {
     ignored = [],
     placeholders = {},
     required = [],
-    types = {}
+    types = {},
+    isEditorLinkAllowed = false,
+    isLocalLinkAllowed = false
   } = options;
 
+  const nullOrWarning = (value, error, isURL, name) => {
+    let validationError;
+    if (value && isURL) {
+      try {
+        normalizeUrl(value, { stripWWW: false });
+      } catch (err) {
+        validationError = err.message;
+      }
+    }
+    const validationWarning = composeValidators(
+      name === 'githubLink' || isEditorLinkAllowed ? null : editorValidator,
+      fCCValidator,
+      httpValidator,
+      isLocalLinkAllowed ? null : localhostValidator
+    )(value);
+    const message = error || validationError || validationWarning;
+    return message ? (
+      <HelpBlock>
+        <Alert bsStyle={error || validationError ? 'danger' : 'info'}>
+          {message}
+        </Alert>
+      </HelpBlock>
+    ) : null;
+  };
   return (
     <div>
       {formFields
@@ -44,6 +79,7 @@ function FormFields(props) {
               const type = name in types ? types[name] : 'text';
               const placeholder =
                 name in placeholders ? placeholders[name] : '';
+              const isURL = types[name] === 'url';
               return (
                 <Col key={key} xs={12}>
                   <FormGroup>
@@ -61,11 +97,7 @@ function FormFields(props) {
                       type={type}
                       value={value}
                     />
-                    {error && !pristine ? (
-                      <HelpBlock>
-                        <Alert bsStyle='danger'>{error}</Alert>
-                      </HelpBlock>
-                    ) : null}
+                    {nullOrWarning(value, !pristine && error, isURL, name)}
                   </FormGroup>
                 </Col>
               );

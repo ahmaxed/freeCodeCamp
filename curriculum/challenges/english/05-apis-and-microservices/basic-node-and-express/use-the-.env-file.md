@@ -3,6 +3,7 @@ id: 587d7fb1367417b2b2512bf2
 title: Use the .env File
 challengeType: 2
 forumTopicId: 301521
+dashedName: use-the--env-file
 ---
 
 # --description--
@@ -15,7 +16,11 @@ The environment variables are accessible from the app as `process.env.VAR_NAME`.
 
 Let's add an environment variable as a configuration option.
 
-Store the variable `MESSAGE_STYLE=uppercase` in the `.env` file. Then tell the GET `/json` route handler that you created in the last challenge to transform the response object’s message to uppercase if `process.env.MESSAGE_STYLE` equals `uppercase`. The response object should become `{"message": "HELLO JSON"}`.
+Create a `.env` file in the root of your project directory, and store the variable `MESSAGE_STYLE=uppercase` in it.
+
+Then, in the `/json` GET route handler you created in the last challenge, transform the response object's message to uppercase if `process.env.MESSAGE_STYLE` equals `uppercase`. The response object should either be `{"message": "Hello json"}` or `{"message": "HELLO JSON"}`, depending on the `MESSAGE_STYLE` value.
+
+**Note:** If you are using Replit, you cannot create a `.env` file. Instead, use the built-in <dfn>SECRETS</dfn> tab to add the variable.
 
 # --hints--
 
@@ -35,8 +40,6 @@ The response of the endpoint `/json` should change according to the environment 
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

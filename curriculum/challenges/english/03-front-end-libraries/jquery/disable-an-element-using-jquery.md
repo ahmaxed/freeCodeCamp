@@ -3,6 +3,7 @@ id: bad87fee1348bd9aed808826
 title: Disable an Element Using jQuery
 challengeType: 6
 forumTopicId: 17563
+dashedName: disable-an-element-using-jquery
 ---
 
 # --description--
@@ -15,7 +16,9 @@ jQuery has a function called `.prop()` that allows you to adjust the properties 
 
 Here's how you would disable all buttons:
 
-`$("button").prop("disabled", true);`
+```js
+$("button").prop("disabled", true);
+```
 
 Disable only the `target1` button.
 

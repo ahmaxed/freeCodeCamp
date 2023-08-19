@@ -3,6 +3,7 @@ id: 587d7dbe367417b2b2512bb8
 title: Use @if and @else to Add Logic To Your Styles
 challengeType: 0
 forumTopicId: 301463
+dashedName: use-if-and-else-to-add-logic-to-your-styles
 ---
 
 # --description--
@@ -56,7 +57,7 @@ Your code should declare a mixin named `border-stroke` which has a parameter nam
 assert(code.match(/@mixin\s+?border-stroke\s*?\(\s*?\$val\s*?\)\s*?{/gi));
 ```
 
-Your mixin should have an `@if` statement to check if `$val` is light, and to set the `border` to 1px solid black.
+Your mixin should have an `@if` statement to check if `$val` is `light`, and to set the `border` to `1px solid black`.
 
 ```js
 assert(
@@ -66,7 +67,7 @@ assert(
 );
 ```
 
-Your mixin should have an `@else if` statement to check if `$val` is medium, and to set the `border` to 3px solid black.
+Your mixin should have an `@else if` statement to check if `$val` is `medium`, and to set the `border` to `3px solid black`.
 
 ```js
 assert(
@@ -76,7 +77,7 @@ assert(
 );
 ```
 
-Your mixin should have an `@else if` statement to check if `$val` is heavy, and to set the `border` to 6px solid black.
+Your mixin should have an `@else if` statement to check if `$val` is `heavy`, and to set the `border` to `6px solid black`.
 
 ```js
 assert(
@@ -86,7 +87,7 @@ assert(
 );
 ```
 
-Your mixin should have an `@else` statement to set the `border` to none.
+Your mixin should have an `@else` statement to set the `border` to `none`.
 
 ```js
 assert(code.match(/@else\s*?{\s*?border\s*?:\s*?none\s*?;\s*?}/gi));

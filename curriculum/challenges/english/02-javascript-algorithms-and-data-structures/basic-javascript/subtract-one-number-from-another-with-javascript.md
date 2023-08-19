@@ -4,6 +4,7 @@ title: Subtract One Number from Another with JavaScript
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cP3yQtk'
 forumTopicId: 18314
+dashedName: subtract-one-number-from-another-with-javascript
 ---
 
 # --description--
@@ -15,9 +16,10 @@ JavaScript uses the `-` symbol for subtraction.
 **Example**
 
 ```js
-myVar = 12 - 6; // assigned 6
+myVar = 12 - 6;
 ```
 
+`myVar` would have the value `6`.
 # --instructions--
 
 Change the `0` so the difference is `12`.

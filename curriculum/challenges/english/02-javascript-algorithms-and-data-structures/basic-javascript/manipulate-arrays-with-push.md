@@ -4,6 +4,7 @@ title: Manipulate Arrays With push()
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cnqmVtJ'
 forumTopicId: 18237
+dashedName: manipulate-arrays-with-push
 ---
 
 # --description--
@@ -17,12 +18,12 @@ Examples:
 ```js
 var arr1 = [1,2,3];
 arr1.push(4);
-// arr1 is now [1,2,3,4]
 
 var arr2 = ["Stimpson", "J", "cat"];
 arr2.push(["happy", "joy"]);
-// arr2 now equals ["Stimpson", "J", "cat", ["happy", "joy"]]
 ```
+
+`arr1` now has the value `[1, 2, 3, 4]` and `arr2` has the value `["Stimpson", "J", "cat", ["happy", "joy"]]`.
 
 # --instructions--
 

@@ -4,13 +4,14 @@ title: 通过变量访问对象属性
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cnQyKur'
 forumTopicId: 16165
+dashedName: accessing-object-properties-with-variables
 ---
 
 # --description--
 
-中括号操作符的另一个使用方式是访问赋值给变量的属性。当你需要遍历对象的属性列表或访问查找表（lookup tables）时，这种方式极为有用。
+对对象上使用方括号表示法，还可以访问对象上作为变量值存储的属性。 当你需要遍历对象的所有属性，或者根据一个变量的值查找对应的属性值时，这种写法尤其适用。
 
-这有一个使用变量来访问属性的例子：
+以下是一个使用变量来访问属性的例子：
 
 ```js
 var dogs = {
@@ -18,10 +19,12 @@ var dogs = {
 };
 var myDog = "Hunter";
 var myBreed = dogs[myDog];
-console.log(myBreed); // "Doberman"
+console.log(myBreed);
 ```
 
-使用此概念的另一种方法是在程序执行期间动态收集属性名称，如下所示：
+字符串 `Doberman` 将会出现在控制台中。
+
+使用这一概念的另一种情况是：属性的名字是在程序运行期间动态收集得到的。如下所示：
 
 ```js
 var someObj = {
@@ -31,53 +34,88 @@ function propPrefix(str) {
   var s = "prop";
   return s + str;
 }
-var someProp = propPrefix("Name"); // someProp now holds the value 'propName'
-console.log(someObj[someProp]); // "John"
+var someProp = propPrefix("Name");
+console.log(someObj[someProp]);
 ```
 
-提示：当我们通过变量名访问属性的时候，不需要给变量名包裹引号。因为实际上我们使用的是变量的值，而不是变量的名称。
+`someProp` 的值将为字符串 `propName`，并且字符串 `John` 将会出现在控制台中。
+
+注意，当使用变量名访问属性时，我们*没有*使用引号包裹它，因为我们正在使用的是变量的*值*，而不是变量的*名字*。
 
 # --instructions--
 
-使用变量`playerNumber`，通过中括号操作符找到`testObj`中`playerNumber`为`16`的值。然后把名字赋给变量`player`。
+将变量 `playerNumber` 设置为 `16`。 然后，使用该变量查找玩家的名字，并将其赋值给`player`。
 
 # --hints--
 
-`playerNumber`应该是一个数字。
+`playerNumber` 应该是一个数字
 
 ```js
 assert(typeof playerNumber === 'number');
 ```
 
-变量`player`应该是一个字符串。
+变量 `player` 应该是一个字符串
 
 ```js
 assert(typeof player === 'string');
 ```
 
-`player`点值应该是 "Montana"。
+`player` 的值应该为字符串 `Montana`
 
 ```js
 assert(player === 'Montana');
 ```
 
-你应该使用中括号访问`testObj`。
+你应该使用方括号访问 `testObj`
 
 ```js
 assert(/testObj\s*?\[.*?\]/.test(code));
 ```
 
-你不应该直接将`Montana`赋给`player`。
+你不应该直接将值 `Montana` 赋给变量 `player`。
 
 ```js
 assert(!code.match(/player\s*=\s*"|\'\s*Montana\s*"|\'\s*;/gi));
 ```
 
-你应该在中括号中使用`playerNumber`变量。
+你应该在你的方括号内使用变量 `playerNumber`。
 
 ```js
 assert(/testObj\s*?\[\s*playerNumber\s*\]/.test(code));
 ```
 
+# --seed--
+
+## --after-user-code--
+
+```js
+if(typeof player !== "undefined"){(function(v){return v;})(player);}
+```
+
+## --seed-contents--
+
+```js
+// Setup
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+// Only change code below this line
+
+var playerNumber;       // Change this line
+var player = testObj;   // Change this line
+```
+
 # --solutions--
 
+```js
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+var playerNumber = 16;
+var player = testObj[playerNumber];
+```

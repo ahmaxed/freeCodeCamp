@@ -3,11 +3,12 @@ id: 587d824b367417b2b2512c47
 title: Test if a Variable or Function is Defined
 challengeType: 2
 forumTopicId: 301602
+dashedName: test-if-a-variable-or-function-is-defined
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 # --instructions--
 
@@ -82,8 +83,6 @@ You should choose the correct method for the third assertion - `isDefined` vs. `
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

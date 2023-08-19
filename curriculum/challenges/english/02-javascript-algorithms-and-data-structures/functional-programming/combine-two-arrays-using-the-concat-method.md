@@ -3,6 +3,7 @@ id: 587d7da9367417b2b2512b66
 title: Combine Two Arrays Using the concat Method
 challengeType: 1
 forumTopicId: 301229
+dashedName: combine-two-arrays-using-the-concat-method
 ---
 
 # --description--
@@ -11,8 +12,9 @@ forumTopicId: 301229
 
 ```js
 [1, 2, 3].concat([4, 5, 6]);
-// Returns a new array [1, 2, 3, 4, 5, 6]
 ```
+
+The returned array would be `[1, 2, 3, 4, 5, 6]`.
 
 # --instructions--
 

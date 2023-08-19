@@ -4,6 +4,7 @@ title: Create Flexible Layouts Using auto-fit
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pByETK/c3dPph8'
 forumTopicId: 301127
+dashedName: create-flexible-layouts-using-auto-fit
 ---
 
 # --description--
@@ -18,7 +19,7 @@ In the second grid, use `auto-fit` with `repeat` to fill the grid with columns t
 
 # --hints--
 
-`container2` class should have a `grid-template-columns` property with `repeat` and `auto-fit` that will fill the grid with columns that have a minimum width of `60px` and maximum of `1fr`.
+`container2` class should have a `grid-template-columns` property with `repeat` and `auto-fit` that will fill the grid with columns that have a minimum width of `60px` and a maximum of `1fr`.
 
 ```js
 assert(

@@ -3,6 +3,7 @@ id: bad87fee1348bd9aec908846
 title: Create a Bootstrap Headline
 challengeType: 0
 forumTopicId: 16812
+dashedName: create-a-bootstrap-headline
 ---
 
 # --description--
@@ -56,6 +57,7 @@ assert.isTrue(/jquery(\s)+playground/gi.test($('h3').text()));
 ## --seed-contents--
 
 ```html
+
 ```
 
 # --solutions--

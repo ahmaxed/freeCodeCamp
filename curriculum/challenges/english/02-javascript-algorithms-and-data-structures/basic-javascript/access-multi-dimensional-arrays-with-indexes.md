@@ -4,6 +4,7 @@ title: Access Multi-Dimensional Arrays With Indexes
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/ckND4Cq'
 forumTopicId: 16159
+dashedName: access-multi-dimensional-arrays-with-indexes
 ---
 
 # --description--
@@ -19,13 +20,14 @@ var arr = [
   [7,8,9],
   [[10,11,12], 13, 14]
 ];
-arr[3]; // equals [[10,11,12], 13, 14]
-arr[3][0]; // equals [10,11,12]
-arr[3][0][1]; // equals 11
+arr[3];
+arr[3][0];
+arr[3][0][1];
 ```
 
-**Note**  
-There shouldn't be any spaces between the array name and the square brackets, like `array [0][0]` and even this `array [0] [0]` is not allowed. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
+`arr[3]` is `[[10, 11, 12], 13, 14]`, `arr[3][0]` is `[10, 11, 12]`, and `arr[3][0][1]` is `11`.
+
+**Note:** There shouldn't be any spaces between the array name and the square brackets, like `array [0][0]` and even this `array [0] [0]` is not allowed. Although JavaScript is able to process this correctly, this may confuse other programmers reading your code.
 
 # --instructions--
 
@@ -56,10 +58,8 @@ if(typeof myArray !== "undefined"){(function(){return "myData: " + myData + " my
 ## --seed-contents--
 
 ```js
-// Setup
 var myArray = [[1,2,3], [4,5,6], [7,8,9], [[10,11,12], 13, 14]];
 
-// Only change code below this line
 var myData = myArray[0][0];
 ```
 

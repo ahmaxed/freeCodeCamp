@@ -3,6 +3,7 @@ id: 5a24c314108439a4d403617e
 title: Add Event Listeners
 challengeType: 6
 forumTopicId: 301377
+dashedName: add-event-listeners
 ---
 
 # --description--
@@ -30,7 +31,7 @@ assert(
 );
 ```
 
-A keydown listener should be attached to the document in `componentDidMount`.
+A `keydown` listener should be attached to the document in `componentDidMount`.
 
 ```js
 assert(
@@ -46,7 +47,7 @@ assert(
 );
 ```
 
-The keydown listener should be removed from the document in `componentWillUnmount`.
+The `keydown` listener should be removed from the document in `componentWillUnmount`.
 
 ```js
 assert(

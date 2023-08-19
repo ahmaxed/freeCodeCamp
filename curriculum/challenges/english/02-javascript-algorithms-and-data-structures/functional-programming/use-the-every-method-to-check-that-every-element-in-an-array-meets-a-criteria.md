@@ -3,6 +3,7 @@ id: 587d7dab367417b2b2512b6e
 title: Use the every Method to Check that Every Element in an Array Meets a Criteria
 challengeType: 1
 forumTopicId: 301312
+dashedName: use-the-every-method-to-check-that-every-element-in-an-array-meets-a-criteria
 ---
 
 # --description--
@@ -16,8 +17,9 @@ var numbers = [1, 5, 8, 0, 10, 11];
 numbers.every(function(currentValue) {
   return currentValue < 10;
 });
-// Returns false
 ```
+
+The `every` method would return `false` here.
 
 # --instructions--
 

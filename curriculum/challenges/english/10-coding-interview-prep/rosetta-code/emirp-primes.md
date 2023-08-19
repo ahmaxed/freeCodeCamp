@@ -3,6 +3,7 @@ id: 599d0ba974141b0f508b37d5
 title: Emirp primes
 challengeType: 5
 forumTopicId: 302253
+dashedName: emirp-primes
 ---
 
 # --description--
@@ -81,7 +82,7 @@ assert.deepEqual(emirps([7700, 8000], true), [
 ]);
 ```
 
-`emirps([7700,8000],true)` should return `11`
+`emirps([7700,8000],false)` should return `11`
 
 ```js
 assert.deepEqual(emirps([7700, 8000], false), 11);

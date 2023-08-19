@@ -3,6 +3,7 @@ id: 587d7b84367417b2b2512b34
 title: Use typeof to Check the Type of a Variable
 challengeType: 1
 forumTopicId: 18374
+dashedName: use-typeof-to-check-the-type-of-a-variable
 ---
 
 # --description--
@@ -12,11 +13,13 @@ You can use `typeof` to check the data structure, or type, of a variable. This i
 Here are some examples using `typeof`:
 
 ```js
-console.log(typeof ""); // outputs "string"
-console.log(typeof 0); // outputs "number"
-console.log(typeof []); // outputs "object"
-console.log(typeof {}); // outputs "object"
+console.log(typeof "");
+console.log(typeof 0);
+console.log(typeof []);
+console.log(typeof {});
 ```
+
+In order, the console will display the strings `string`, `number`, `object`, and `object`.
 
 JavaScript recognizes six primitive (immutable) data types: `Boolean`, `Null`, `Undefined`, `Number`, `String`, and `Symbol` (new with ES6) and one type for mutable items: `Object`. Note that in JavaScript, arrays are technically a type of object.
 

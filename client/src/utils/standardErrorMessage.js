@@ -1,4 +1,6 @@
-export default {
+const standardErrorMessage = {
   type: 'danger',
-  message: 'Something went wrong, please check and try again'
+  message: 'flash.went-wrong'
 };
+
+export default standardErrorMessage;

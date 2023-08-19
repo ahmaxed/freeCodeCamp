@@ -2,31 +2,43 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Alert, Button } from '@freecodecamp/react-bootstrap';
 import Spinner from 'react-spinkit';
+import { useTranslation } from 'react-i18next';
 
 import './Donation.css';
 
 const propTypes = {
   error: PropTypes.string,
   processing: PropTypes.bool,
+  redirecting: PropTypes.bool,
   reset: PropTypes.func.isRequired,
   success: PropTypes.bool
 };
 
-function DonateCompletion({ processing, reset, success, error = null }) {
+function DonateCompletion({
+  processing,
+  reset,
+  success,
+  redirecting,
+  error = null
+}) {
   /* eslint-disable no-nested-ternary */
-  const style = processing ? 'info' : success ? 'success' : 'danger';
-  const heading = processing
-    ? 'We are processing your donation.'
+  const { t } = useTranslation();
+  const style =
+    processing || redirecting ? 'info' : success ? 'success' : 'danger';
+  const heading = redirecting
+    ? `${t('donate.redirecting')}`
+    : processing
+    ? `${t('donate.processing')}`
     : success
-    ? 'Thank you for being a supporter.'
-    : 'Something went wrong with your donation.';
+    ? `${t('donate.thank-you')}`
+    : `${t('donate.error')}`;
   return (
     <Alert bsStyle={style} className='donation-completion'>
       <h4>
         <b>{heading}</b>
       </h4>
       <div className='donation-completion-body'>
-        {processing && (
+        {(processing || redirecting) && (
           <Spinner
             className='user-state-spinner'
             color='#0a0a23'
@@ -36,10 +48,8 @@ function DonateCompletion({ processing, reset, success, error = null }) {
         )}
         {success && (
           <div>
-            <p>
-              Your donations will support free technology education for people
-              all over the world.
-            </p>
+            <p>{t('donate.free-tech')}</p>
+            <p>{t('donate.no-halo')}</p>
           </div>
         )}
         {error && <p>{error}</p>}
@@ -48,7 +58,7 @@ function DonateCompletion({ processing, reset, success, error = null }) {
         {error && (
           <div>
             <Button bsStyle='primary' onClick={reset}>
-              Try again
+              {t('buttons.try-again')}
             </Button>
           </div>
         )}

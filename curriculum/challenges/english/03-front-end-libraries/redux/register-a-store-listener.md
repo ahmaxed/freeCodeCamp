@@ -3,6 +3,7 @@ id: 5a24c314108439a4d4036153
 title: Register a Store Listener
 challengeType: 6
 forumTopicId: 301446
+dashedName: register-a-store-listener
 ---
 
 # --description--
@@ -31,7 +32,13 @@ assert(
 There should be a listener function subscribed to the store using `store.subscribe`.
 
 ```js
-(getUserInput) => assert(getUserInput('index').includes('store.subscribe('));
+(getUserInput) => assert(getUserInput('index').match(/store\s*\.\s*subscribe\(/gm));
+```
+
+The `store.subscribe` should receive a function.
+
+```js
+(getUserInput) => assert(getUserInput('index').match(/(\s*function\s*)|(\s*\(\s*\)\s*=>)/gm)) 
 ```
 
 The callback to `store.subscribe` should also increment the global `count` variable as the store is updated.

@@ -3,6 +3,7 @@ id: 587d7b7d367417b2b2512b1d
 title: Iterate Through the Keys of an Object with a for...in Statement
 challengeType: 1
 forumTopicId: 301162
+dashedName: iterate-through-the-keys-of-an-object-with-a-for---in-statement
 ---
 
 # --description--
@@ -13,15 +14,13 @@ Sometimes you may need to iterate through all the keys within an object. This re
 for (let user in users) {
   console.log(user);
 }
-
-// logs:
-Alan
-Jeff
-Sarah
-Ryan
 ```
 
-In this statement, we defined a variable `user`, and as you can see, this variable was reset during each iteration to each of the object's keys as the statement looped through the object, resulting in each user's name being printed to the console. **NOTE:** Objects do not maintain an ordering to stored keys like arrays do; thus a key's position on an object, or the relative order in which it appears, is irrelevant when referencing or accessing that key.
+This would log `Alan`, `Jeff`, `Sarah`, and `Ryan` - each value on its own line.
+
+In this statement, we defined a variable `user`, and as you can see, this variable was reset during each iteration to each of the object's keys as the statement looped through the object, resulting in each user's name being printed to the console.
+
+**NOTE:** Objects do not maintain an ordering to stored keys like arrays do; thus a key's position on an object, or the relative order in which it appears, is irrelevant when referencing or accessing that key.
 
 # --instructions--
 
@@ -48,7 +47,7 @@ The function `countOnline` should use a `for in` statement to iterate through th
 ```js
 assert(
   code.match(
-    /for\s*\(\s*(var|let|const)\s+[a-zA-Z_$]\w*\s+in\s+[a-zA-Z_$]\w*\s*\)\s*{/
+    /for\s*\(\s*(var|let|const)\s+[a-zA-Z_$]\w*\s+in\s+[a-zA-Z_$]\w*\s*\)/
   )
 );
 ```

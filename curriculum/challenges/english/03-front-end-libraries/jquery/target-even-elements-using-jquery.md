@@ -5,6 +5,7 @@ challengeType: 6
 forumTopicId: 18318
 required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+dashedName: target-even-elements-using-jquery
 ---
 
 # --description--
@@ -15,7 +16,9 @@ Note that jQuery is zero-indexed which means the first element in a selection ha
 
 Here's how you would target all the odd elements with class `target` and give them classes:
 
-`$(".target:odd").addClass("animated shake");`
+```js
+$(".target:odd").addClass("animated shake");
+```
 
 Try selecting all the even `target` elements and giving them the classes of `animated` and `shake`. Remember that **even** refers to the position of elements with a zero-based system in mind.
 

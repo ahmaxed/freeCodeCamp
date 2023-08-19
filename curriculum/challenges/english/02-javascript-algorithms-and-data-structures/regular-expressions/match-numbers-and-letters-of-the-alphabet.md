@@ -3,6 +3,7 @@ id: 587d7db5367417b2b2512b97
 title: Match Numbers and Letters of the Alphabet
 challengeType: 1
 forumTopicId: 301356
+dashedName: match-numbers-and-letters-of-the-alphabet
 ---
 
 # --description--
@@ -16,7 +17,6 @@ Also, it is possible to combine a range of letters and numbers in a single chara
 ```js
 let jennyStr = "Jenny8675309";
 let myRegex = /[a-z0-9]/ig;
-// matches all letters and numbers in jennyStr
 jennyStr.match(myRegex);
 ```
 

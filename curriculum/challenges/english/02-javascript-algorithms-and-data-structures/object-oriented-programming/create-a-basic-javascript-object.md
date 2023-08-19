@@ -3,6 +3,7 @@ id: 587d7dac367417b2b2512b73
 title: Create a Basic JavaScript Object
 challengeType: 1
 forumTopicId: 301317
+dashedName: create-a-basic-javascript-object
 ---
 
 # --description--
@@ -22,7 +23,7 @@ let duck = {
 };
 ```
 
-This `duck` object has two property/value pairs: a `name` of "Aflac" and a `numLegs` of 2.
+This `duck` object has two property/value pairs: a `name` of `Aflac` and a `numLegs` of 2.
 
 # --instructions--
 
@@ -36,13 +37,13 @@ Create a `dog` object with `name` and `numLegs` properties, and set them to a st
 assert(typeof dog === 'object');
 ```
 
-`dog` should have a `name` property set to a `string`.
+`dog` should have a `name` property set to a string.
 
 ```js
 assert(typeof dog.name === 'string');
 ```
 
-`dog` should have a `numLegs` property set to a `number`.
+`dog` should have a `numLegs` property set to a number.
 
 ```js
 assert(typeof dog.numLegs === 'number');

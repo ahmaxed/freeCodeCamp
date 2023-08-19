@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Row, Button } from '@freecodecamp/react-bootstrap';
+import { Grid, Row } from '@freecodecamp/react-bootstrap';
 import Helmet from 'react-helmet';
 import Link from '../helpers/Link';
+import { useTranslation } from 'react-i18next';
 
 import { CurrentChallengeLink, FullWidthRow, Spacer } from '../helpers';
 import Camper from './components/Camper';
@@ -10,7 +11,6 @@ import HeatMap from './components/HeatMap';
 import Certifications from './components/Certifications';
 import Portfolio from './components/Portfolio';
 import Timeline from './components/TimeLine';
-import { apiLocation } from '../../../config/env.json';
 
 const propTypes = {
   isSessionUser: PropTypes.bool,
@@ -50,20 +50,14 @@ const propTypes = {
   })
 };
 
-function renderMessage(isSessionUser, username) {
+function renderMessage(isSessionUser, username, t) {
   return isSessionUser ? (
     <Fragment>
       <FullWidthRow>
-        <h2 className='text-center'>
-          You have not made your portfolio public.
-        </h2>
+        <h2 className='text-center'>{t('profile.you-not-public')}</h2>
       </FullWidthRow>
       <FullWidthRow>
-        <p className='alert alert-info'>
-          You need to change your privacy setting in order for your portfolio to
-          be seen by others. This is a preview of how your portfolio will look
-          when made public.
-        </p>
+        <p className='alert alert-info'>{t('profile.you-change-privacy')}</p>
       </FullWidthRow>
       <Spacer />
     </Fragment>
@@ -71,18 +65,17 @@ function renderMessage(isSessionUser, username) {
     <Fragment>
       <FullWidthRow>
         <h2 className='text-center' style={{ overflowWrap: 'break-word' }}>
-          {username} has not made their portfolio public.
+          {t('profile.username-not-public', { username: username })}
         </h2>
       </FullWidthRow>
       <FullWidthRow>
         <p className='alert alert-info'>
-          {username} needs to change their privacy setting in order for you to
-          view their portfolio.
+          {t('profile.username-change-privacy', { username: username })}
         </p>
       </FullWidthRow>
       <Spacer />
       <FullWidthRow>
-        <CurrentChallengeLink>Take me to the Challenges</CurrentChallengeLink>
+        <CurrentChallengeLink>{t('buttons.take-me')}</CurrentChallengeLink>
       </FullWidthRow>
       <Spacer />
     </Fragment>
@@ -157,6 +150,7 @@ function renderProfile(user) {
 }
 
 function Profile({ user, isSessionUser }) {
+  const { t } = useTranslation();
   const {
     profileUI: { isLocked = true },
     username
@@ -165,33 +159,17 @@ function Profile({ user, isSessionUser }) {
   return (
     <Fragment>
       <Helmet>
-        <title>Profile | freeCodeCamp.org</title>
+        <title>{t('buttons.profile')} | freeCodeCamp.org</title>
       </Helmet>
       <Spacer />
       <Grid>
-        {isSessionUser ? (
-          <FullWidthRow className='button-group'>
-            <Link className='btn btn-lg btn-primary btn-block' to='/settings'>
-              Update my account settings
-            </Link>
-            <Button
-              block={true}
-              bsSize='lg'
-              bsStyle='primary'
-              className='btn-invert'
-              href={`${apiLocation}/signout`}
-            >
-              Sign me out of freeCodeCamp
-            </Button>
-          </FullWidthRow>
-        ) : null}
         <Spacer />
-        {isLocked ? renderMessage(isSessionUser, username) : null}
+        {isLocked ? renderMessage(isSessionUser, username, t) : null}
         {!isLocked || isSessionUser ? renderProfile(user) : null}
         {isSessionUser ? null : (
           <Row className='text-center'>
             <Link to={`/user/${username}/report-user`}>
-              Flag This User's Account for Abuse
+              {t('buttons.flag-user')}
             </Link>
           </Row>
         )}

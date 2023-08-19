@@ -3,11 +3,12 @@ id: 5f8884f4c46685731aabfc41
 title: Run Functional Tests Using a Headless Browser II
 challengeType: 2
 forumTopicId: 301594
+dashedName: run-functional-tests-using-a-headless-browser-ii
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 # --instructions--
 
@@ -102,8 +103,6 @@ You should assert that the element 'span#dates' exist and its count is 1.
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

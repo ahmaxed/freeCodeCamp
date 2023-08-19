@@ -3,6 +3,7 @@ id: 5a24c314108439a4d403616e
 title: Access Props Using this.props
 challengeType: 6
 forumTopicId: 301375
+dashedName: access-props-using-this-props
 ---
 
 # --description--
@@ -52,7 +53,7 @@ assert(
 );
 ```
 
-The `tempPassword` prop of `ReturnTempPassword` should be equal to a string of at least `8` characters.
+The `tempPassword` prop of `ReturnTempPassword` should be equal to a string of at least 8 characters.
 
 ```js
 assert(

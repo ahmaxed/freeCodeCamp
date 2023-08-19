@@ -4,6 +4,7 @@ title: Make Screen Reader Navigation Easier with the header Landmark
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cB76vtv'
 forumTopicId: 301023
+dashedName: make-screen-reader-navigation-easier-with-the-header-landmark
 ---
 
 # --description--
@@ -12,7 +13,7 @@ The next HTML5 element that adds semantic meaning and improves accessibility is 
 
 `header` shares the embedded landmark feature you saw with `main`, allowing assistive technologies to quickly navigate to that content.
 
-**Note:** The `header` is meant for use in the `body` tag of your HTML document. This is different than the `head` element, which contains the page's title, meta information, etc.
+**Note:** The `header` is meant for use in the `body` tag of your HTML document. It is different than the `head` element, which contains the page's title, meta information, etc.
 
 # --instructions--
 

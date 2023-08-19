@@ -3,6 +3,7 @@ id: 587d7db2367417b2b2512b89
 title: Use a Mixin to Add Common Behavior Between Unrelated Objects
 challengeType: 1
 forumTopicId: 301331
+dashedName: use-a-mixin-to-add-common-behavior-between-unrelated-objects
 ---
 
 # --description--
@@ -39,9 +40,11 @@ flyMixin(plane);
 Here `bird` and `plane` are passed into `flyMixin`, which then assigns the `fly` function to each object. Now `bird` and `plane` can both fly:
 
 ```js
-bird.fly(); // prints "Flying, wooosh!"
-plane.fly(); // prints "Flying, wooosh!"
+bird.fly();
+plane.fly();
 ```
+
+The console would display the string `Flying, wooosh!` twice, once for each `.fly()` call.
 
 Note how the mixin allows for the same `fly` method to be reused by unrelated objects `bird` and `plane`.
 

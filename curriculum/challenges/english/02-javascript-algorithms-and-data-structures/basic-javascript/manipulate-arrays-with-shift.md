@@ -4,6 +4,7 @@ title: Manipulate Arrays With shift()
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cRbVETW'
 forumTopicId: 18238
+dashedName: manipulate-arrays-with-shift
 ---
 
 # --description--
@@ -17,8 +18,9 @@ Example:
 ```js
 var ourArray = ["Stimpson", "J", ["cat"]];
 var removedFromOurArray = ourArray.shift();
-// removedFromOurArray now equals "Stimpson" and ourArray now equals ["J", ["cat"]].
 ```
+
+`removedFromOurArray` would have a value of the string `Stimpson`, and `ourArray` would have `["J", ["cat"]]`.
 
 # --instructions--
 

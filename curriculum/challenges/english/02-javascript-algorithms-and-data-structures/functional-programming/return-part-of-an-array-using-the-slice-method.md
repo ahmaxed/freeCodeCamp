@@ -3,6 +3,7 @@ id: 587d7b90367417b2b2512b65
 title: Return Part of an Array Using the slice Method
 challengeType: 1
 forumTopicId: 301239
+dashedName: return-part-of-an-array-using-the-slice-method
 ---
 
 # --description--
@@ -14,8 +15,9 @@ Here's an example:
 ```js
 var arr = ["Cat", "Dog", "Tiger", "Zebra"];
 var newArray = arr.slice(1, 3);
-// Sets newArray to ["Dog", "Tiger"]
 ```
+
+`newArray` would have the value `["Dog", "Tiger"]`.
 
 # --instructions--
 

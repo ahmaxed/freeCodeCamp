@@ -2,13 +2,14 @@
 id: 5e44412c903586ffb414c94c
 title: Arithmetic Formatter
 challengeType: 10
+dashedName: arithmetic-formatter
 ---
 
 # --description--
 
 Create a function that receives a list of strings that are arithmetic problems and returns the problems arranged vertically and side-by-side.
 
-You can access [the full project description and starter code on Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-arithmetic-formatter).
+You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-arithmetic-formatter).
 
 After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
 
@@ -30,8 +31,6 @@ It should correctly format an arithmetic problem and pass all tests.
 ```js
 
 ```
-
-# --seed--
 
 # --solutions--
 

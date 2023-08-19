@@ -3,6 +3,7 @@ id: 587d7b85367417b2b2512b39
 title: Catch Missing Open and Closing Parenthesis After a Function Call
 challengeType: 1
 forumTopicId: 301185
+dashedName: catch-missing-open-and-closing-parenthesis-after-a-function-call
 ---
 
 # --description--
@@ -15,9 +16,11 @@ The variables in the following example are different:
 function myFunction() {
   return "You rock!";
 }
-let varOne = myFunction; // set to equal a function
-let varTwo = myFunction(); // set to equal the string "You rock!"
+let varOne = myFunction;
+let varTwo = myFunction();
 ```
+
+Here `varOne` is the function `myFunction`, and `varTwo` is the string `You rock!`.
 
 # --instructions--
 

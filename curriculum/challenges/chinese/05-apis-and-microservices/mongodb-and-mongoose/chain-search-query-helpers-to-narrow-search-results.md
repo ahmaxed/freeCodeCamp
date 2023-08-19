@@ -1,21 +1,22 @@
 ---
 id: 587d7fb9367417b2b2512c12
-title: 通过链式调用搜索查询辅助函数来缩小搜索结果
+title: 通过链式调用辅助查询函数来缩小搜索结果
 challengeType: 2
 forumTopicId: 301533
+dashedName: chain-search-query-helpers-to-narrow-search-results
 ---
 
 # --description--
 
-如果不给 `Model.find()`（或者别的搜索方法）的最后一个参数传入回调函数, 查询将不会执行。你可以将查询条件存储在变量中供以后使用，我们也可以通过链式调用这类变量来构建新的查询字段。实际的数据库操作会在最终调用 `.exec()` 方法时执行。需要注意的是，你必须给 `exec()` 传一个回调方法。Mongoose 为我们提供了许多查询辅助函数, 这里我们使用最著名的一种。
+如果不给 `Model.find()`（或者别的搜索方法）的最后一个参数传入回调函数, 查询将不会执行。 可以将查询条件存储在变量中供以后使用， 也可以通过链式调用这类变量来构建新的查询字段。 实际的数据库操作会在最后调用 `.exec()` 方法时执行。 必须把回调函数传给最后一个方法。 Mongoose 提供了许多辅助查询函数, 这里使用最常见的一种。
 
 # --instructions--
 
-找出喜欢 `burrito` 的人并按 `name` 进行排序。同时，我们需要隐藏他们的 `age` 属性。结果应限制在两个 document 内。请链式调用 `.find()`、`.sort()`、`.limit()` 和 `.select()`。最后调用 `.exec()`，并传入给它传入 `done(err, data)` 回调函数。
+修改 `queryChain` 函数来查询喜欢 `foodToSearch` 食物的人。 同时，需要将查询结果按 `name` 属性排序， 查询结果应限制在两个 document 内，并隐藏 age 属性。 请链式调用 `.find()`、`.sort()`、`.limit()` 和 `.select()`，并在最后调用 `.exec()`， 并将 `done(err, data)` 回调函数传入 `exec()`。
 
 # --hints--
 
-链接查询辅助函数应该成功
+应该成功地链式调用辅助查询函数。
 
 ```js
 (getUserInput) =>
@@ -66,3 +67,10 @@ forumTopicId: 301533
 
 # --solutions--
 
+```js
+/**
+  Backend challenges don't need solutions, 
+  because they would need to be tested against a full working project. 
+  Please check our contributing guidelines to learn more.
+*/
+```

@@ -4,6 +4,7 @@ title: Passing Values to Functions with Arguments
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cy8rahW'
 forumTopicId: 18254
+dashedName: passing-values-to-functions-with-arguments
 ---
 
 # --description--
@@ -18,7 +19,7 @@ function testFun(param1, param2) {
 }
 ```
 
-Then we can call `testFun`: `testFun("Hello", "World");` We have passed two arguments, `"Hello"` and `"World"`. Inside the function, `param1` will equal "Hello" and `param2` will equal "World". Note that you could call `testFun` again with different arguments and the parameters would take on the value of the new arguments.
+Then we can call `testFun` like this: `testFun("Hello", "World");`. We have passed two string arguments, `Hello` and `World`. Inside the function, `param1` will equal the string `Hello` and `param2` will equal the string `World`. Note that you could call `testFun` again with different arguments and the parameters would take on the value of the new arguments.
 
 # --instructions--
 
@@ -106,6 +107,7 @@ if (typeof functionWithArgs !== "function") {
 ## --seed-contents--
 
 ```js
+
 ```
 
 # --solutions--

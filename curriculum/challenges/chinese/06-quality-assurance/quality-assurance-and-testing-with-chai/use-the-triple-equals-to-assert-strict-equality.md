@@ -3,21 +3,22 @@ id: 587d824b367417b2b2512c4b
 title: 用三个等号断言严格相等
 challengeType: 2
 forumTopicId: 301610
+dashedName: use-the-triple-equals-to-assert-strict-equality
 ---
 
 # --description--
 
-请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
+请注意，本项目在[这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
 
 `strictEqual()` 使用 `===` 比较对象。
 
 # --instructions--
 
-使用 `assert.strictEqual()` 或 `assert.notStrictEqual()` 让所有测试通过。
+在 `tests/1_unit-tests.js` 中，在 `Equality` 套件里标有 `#6` 的测试下，将每个 `assert` 改为 `assert.strictEqual` 或 `assert.notStrictEqual`，让测试通过（应该返回 `true`）。 不要修改传给断言的参数。
 
 # --hints--
 
-不应有未通过的测试
+应通过所有测试。
 
 ```js
 (getUserInput) =>
@@ -31,7 +32,7 @@ forumTopicId: 301610
   );
 ```
 
-请选择正确的断言—strictEqual 或 notStrictEqual
+应该为第一个断言选择正确的方法：`strictEqual` 或 `notStrictEqual`。
 
 ```js
 (getUserInput) =>
@@ -49,7 +50,7 @@ forumTopicId: 301610
   );
 ```
 
-请选择正确的断言—strictEqual 或 notStrictEqual
+应该为第二个断言选择正确的方法：`strictEqual` 或 `notStrictEqual`。
 
 ```js
 (getUserInput) =>
@@ -63,7 +64,7 @@ forumTopicId: 301610
   );
 ```
 
-请选择正确的断言—strictEqual 或 notStrictEqual
+应该为第三个断言选择正确的方法：`strictEqual` 或 `notStrictEqual`。
 
 ```js
 (getUserInput) =>
@@ -81,7 +82,7 @@ forumTopicId: 301610
   );
 ```
 
-请选择正确的断言—strictEqual 或 notStrictEqual
+应该为第四个断言选择正确的方法：`strictEqual` 或 `notStrictEqual`。
 
 ```js
 (getUserInput) =>
@@ -101,3 +102,10 @@ forumTopicId: 301610
 
 # --solutions--
 
+```js
+/**
+  Backend challenges don't need solutions, 
+  because they would need to be tested against a full working project. 
+  Please check our contributing guidelines to learn more.
+*/
+```

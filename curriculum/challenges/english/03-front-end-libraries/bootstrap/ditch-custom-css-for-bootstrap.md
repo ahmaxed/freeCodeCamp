@@ -3,6 +3,7 @@ id: bad87fee1347bd9aedf08845
 title: Ditch Custom CSS for Bootstrap
 challengeType: 0
 forumTopicId: 17565
+dashedName: ditch-custom-css-for-bootstrap
 ---
 
 # --description--
@@ -15,17 +16,17 @@ Delete the `.red-text`, `p`, and `.smaller-image` CSS declarations from your `st
 
 Then delete the `p` element that contains a dead link. Then remove the `red-text` class from your `h2` element and replace it with the `text-primary` Bootstrap class.
 
-Finally, remove the "smaller-image" class from your first `img` element and replace it with the `img-responsive` class.
+Finally, remove the `smaller-image` class from your first `img` element and replace it with the `img-responsive` class.
 
 # --hints--
 
-Your h2 element should no longer have the class `red-text`.
+Your `h2` element should no longer have the class `red-text`.
 
 ```js
 assert(!$('h2').hasClass('red-text'));
 ```
 
-Your h2 element should now have the class `text-primary`.
+Your `h2` element should now have the class `text-primary`.
 
 ```js
 assert($('h2').hasClass('text-primary'));

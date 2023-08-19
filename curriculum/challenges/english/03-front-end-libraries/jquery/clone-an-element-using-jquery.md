@@ -3,6 +3,7 @@ id: bad87fee1348bd9aed508826
 title: Clone an Element Using jQuery
 challengeType: 6
 forumTopicId: 16780
+dashedName: clone-an-element-using-jquery
 ---
 
 # --description--
@@ -13,7 +14,9 @@ jQuery has a function called `clone()` that makes a copy of an element.
 
 For example, if we wanted to copy `target2` from our `left-well` to our `right-well`, we would use:
 
-`$("#target2").clone().appendTo("#right-well");`
+```js
+$("#target2").clone().appendTo("#right-well");
+```
 
 Did you notice this involves sticking two jQuery functions together? This is called <dfn>function chaining</dfn> and it's a convenient way to get things done with jQuery.
 

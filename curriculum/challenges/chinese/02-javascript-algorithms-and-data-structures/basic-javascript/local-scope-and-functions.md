@@ -4,45 +4,83 @@ title: 局部作用域和函数
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cd62NhM'
 forumTopicId: 18227
+dashedName: local-scope-and-functions
 ---
 
 # --description--
 
-在一个函数内声明的变量，以及该函数的参数都是局部变量，意味着它们只在该函数内可见。
+在一个函数内声明的变量，以及该函数的参数都具有局部（<dfn>local</dfn>）作用域。 这意味着它们只在该函数内可见。
 
-这是在函数`myTest`内声明局部变量`loc`的例子：
+这是在函数 `myTest` 内声明局部变量 `loc` 的例子：
 
 ```js
 function myTest() {
   var loc = "foo";
   console.log(loc);
 }
-myTest(); // logs "foo"
-console.log(loc); // loc is not defined
+myTest();
+console.log(loc);
 ```
 
-在函数外，`loc`是未定义的。
+`myTest()` 函数调用将在控制台中显示字符串 `foo`。 `console.log(loc)` 行会产生一个错误，因为 `loc` 没有定义在函数之外。
 
 # --instructions--
 
-在函数`myFunction`内部声明一个局部变量`myVar`，并删除外部的 console.log。
+编辑器有两个 `console.log` 来帮助您了解正在发生的事情。 检查控制台的代码输出以查看它是如何改变的。 在 `myLocalScope` 中声明一个本地变量 `myVar` 并运行测试。
 
-**提示：**  
-如果你遇到了问题，可以先尝试刷新页面。
+**注意：** 控制台仍将显示 `ReferenceError: myVar is not defined`，但这不会导致测试失败。
 
 # --hints--
 
-未找到全局的`myVar`变量。
+不应该包含全局的 `myVar` 变量。
 
 ```js
-assert(typeof myVar === 'undefined');
+function declared() {
+  myVar;
+}
+assert.throws(declared, ReferenceError);
 ```
 
-需要定义局部的`myVar`变量。
+需要定义局部的 `myVar` 变量。
 
 ```js
-assert(/var\s+myVar/.test(code));
+assert(
+  /functionmyLocalScope\(\)\{.*(var|let|const)myVar[\s\S]*}/.test(
+    __helpers.removeWhiteSpace(code)
+  )
+);
+```
+
+# --seed--
+
+## --seed-contents--
+
+```js
+function myLocalScope() {
+
+  // Only change code below this line
+
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+console.log('outside myLocalScope', myVar);
 ```
 
 # --solutions--
 
+```js
+function myLocalScope() {
+
+  // Only change code below this line
+  var myVar;
+  console.log('inside myLocalScope', myVar);
+}
+myLocalScope();
+
+// Run and check the console
+// myVar is not defined outside of myLocalScope
+console.log('outside myLocalScope', myVar);
+```

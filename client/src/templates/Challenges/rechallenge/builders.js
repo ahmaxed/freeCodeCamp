@@ -6,7 +6,7 @@ import {
   partial,
   stubTrue,
   template as _template
-} from 'lodash';
+} from 'lodash-es';
 
 import {
   compileHeadTail,
@@ -43,11 +43,7 @@ const padContentWithCssCatch = partial(compileHeadTail, cssCatch);
 export const jsToHtml = cond([
   [
     matchesProperty('ext', 'js'),
-    flow(
-      padContentWithJsCatch,
-      wrapInScript,
-      setExtToHTML
-    )
+    flow(padContentWithJsCatch, wrapInScript, setExtToHTML)
   ],
   [stubTrue, identity]
 ]);
@@ -55,11 +51,7 @@ export const jsToHtml = cond([
 export const cssToHtml = cond([
   [
     matchesProperty('ext', 'css'),
-    flow(
-      padContentWithCssCatch,
-      wrapInStyle,
-      setExtToHTML
-    )
+    flow(padContentWithCssCatch, wrapInStyle, setExtToHTML)
   ],
   [stubTrue, identity]
 ]);

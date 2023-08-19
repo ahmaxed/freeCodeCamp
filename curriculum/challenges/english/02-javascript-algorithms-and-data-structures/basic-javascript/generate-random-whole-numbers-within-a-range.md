@@ -4,6 +4,7 @@ title: Generate Random Whole Numbers within a Range
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cm83yu6'
 forumTopicId: 18187
+dashedName: generate-random-whole-numbers-within-a-range
 ---
 
 # --description--
@@ -14,7 +15,9 @@ To do this, we'll define a minimum number `min` and a maximum number `max`.
 
 Here's the formula we'll use. Take a moment to read it and try to understand what this code is doing:
 
-`Math.floor(Math.random() * (max - min + 1)) + min`
+```js
+Math.floor(Math.random() * (max - min + 1)) + min
+```
 
 # --instructions--
 

@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { Button, Modal } from '@freecodecamp/react-bootstrap';
+import { useTranslation } from 'react-i18next';
 
 import { isResetModalOpenSelector, closeModal, resetChallenge } from '../redux';
 import { executeGA } from '../../../redux';
@@ -17,12 +18,9 @@ const propTypes = {
   reset: PropTypes.func.isRequired
 };
 
-const mapStateToProps = createSelector(
-  isResetModalOpenSelector,
-  isOpen => ({
-    isOpen
-  })
-);
+const mapStateToProps = createSelector(isResetModalOpenSelector, isOpen => ({
+  isOpen
+}));
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
@@ -39,6 +37,7 @@ function withActions(...fns) {
 }
 
 function ResetModal({ reset, close, isOpen }) {
+  const { t } = useTranslation();
   if (isOpen) {
     executeGA({ type: 'modal', data: '/reset-modal' });
   }
@@ -51,16 +50,13 @@ function ResetModal({ reset, close, isOpen }) {
       show={isOpen}
     >
       <Modal.Header className='reset-modal-header' closeButton={true}>
-        <Modal.Title className='text-center'>Reset this lesson?</Modal.Title>
+        <Modal.Title className='text-center'>{t('learn.reset')}</Modal.Title>
       </Modal.Header>
       <Modal.Body className='reset-modal-body'>
         <div className='text-center'>
+          <p>{t('learn.reset-warn')}</p>
           <p>
-            Are you sure you wish to reset this lesson? The editors and tests
-            will be reset.
-          </p>
-          <p>
-            <em>This cannot be undone</em>.
+            <em>{t('learn.reset-warn-2')}</em>.
           </p>
         </div>
       </Modal.Body>
@@ -71,7 +67,7 @@ function ResetModal({ reset, close, isOpen }) {
           bsStyle='danger'
           onClick={withActions(reset, close)}
         >
-          Reset this Lesson
+          {t('buttons.reset-lesson')}
         </Button>
       </Modal.Footer>
     </Modal>
@@ -81,7 +77,4 @@ function ResetModal({ reset, close, isOpen }) {
 ResetModal.displayName = 'ResetModal';
 ResetModal.propTypes = propTypes;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ResetModal);
+export default connect(mapStateToProps, mapDispatchToProps)(ResetModal);

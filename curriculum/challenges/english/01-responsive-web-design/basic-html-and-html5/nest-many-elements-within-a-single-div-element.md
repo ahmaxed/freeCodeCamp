@@ -4,6 +4,7 @@ title: Nest Many Elements within a Single div Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVMPUv/cNW4kC3'
 forumTopicId: 18246
+dashedName: nest-many-elements-within-a-single-div-element
 ---
 
 # --description--
@@ -16,7 +17,7 @@ Just like any other non-self-closing element, you can open a `div` element with 
 
 # --instructions--
 
-Nest your "Things cats love" and "Things cats hate" lists all within a single `div` element.
+Nest your "Things cats love" and "Top 3 things cats hate" lists all within a single `div` element.
 
 Hint: Try putting your opening `div` tag above your "Things cats love" `p` element and your closing `div` tag after your closing `ol` tag so that both of your lists are within one `div`.
 
@@ -58,7 +59,7 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -73,7 +74,7 @@ assert(
     <li>other cats</li>
   </ol>
 
-  <form action="https://freecatphotoapp.com/submit-cat-photo">
+  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
     <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
     <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
     <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>
@@ -92,7 +93,7 @@ assert(
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
   
-  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
   <div>
     <p>Things cats love:</p>
     <ul>
@@ -107,7 +108,7 @@ assert(
       <li>other cats</li>
     </ol>
   </div>
-  <form action="https://freecatphotoapp.com/submit-cat-photo">
+  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
     <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
     <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
     <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>

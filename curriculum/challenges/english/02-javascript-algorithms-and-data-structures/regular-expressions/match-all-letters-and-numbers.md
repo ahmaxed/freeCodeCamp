@@ -3,6 +3,7 @@ id: 587d7db7367417b2b2512b9f
 title: Match All Letters and Numbers
 challengeType: 1
 forumTopicId: 301346
+dashedName: match-all-letters-and-numbers
 ---
 
 # --description--
@@ -16,11 +17,13 @@ let longHand = /[A-Za-z0-9_]+/;
 let shortHand = /\w+/;
 let numbers = "42";
 let varNames = "important_var";
-longHand.test(numbers); // Returns true
-shortHand.test(numbers); // Returns true
-longHand.test(varNames); // Returns true
-shortHand.test(varNames); // Returns true
+longHand.test(numbers);
+shortHand.test(numbers);
+longHand.test(varNames);
+shortHand.test(varNames);
 ```
+
+All four of these `test` calls would return `true`.
 
 These shortcut character classes are also known as <dfn>shorthand character classes</dfn>.
 
@@ -42,7 +45,7 @@ Your regex should use the shorthand character `\w` to match all characters which
 assert(/\\w/.test(alphabetRegexV2.source));
 ```
 
-Your regex should find 31 alphanumeric characters in `"The five boxing wizards jump quickly."`
+Your regex should find 31 alphanumeric characters in the string `The five boxing wizards jump quickly.`
 
 ```js
 assert(
@@ -50,7 +53,7 @@ assert(
 );
 ```
 
-Your regex should find 32 alphanumeric characters in `"Pack my box with five dozen liquor jugs."`
+Your regex should find 32 alphanumeric characters in the string `Pack my box with five dozen liquor jugs.`
 
 ```js
 assert(
@@ -59,7 +62,7 @@ assert(
 );
 ```
 
-Your regex should find 30 alphanumeric characters in `"How vexingly quick daft zebras jump!"`
+Your regex should find 30 alphanumeric characters in the string `How vexingly quick daft zebras jump!`
 
 ```js
 assert(
@@ -67,7 +70,7 @@ assert(
 );
 ```
 
-Your regex should find 36 alphanumeric characters in `"123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ."`
+Your regex should find 36 alphanumeric characters in the string `123 456 7890 ABC def GHI jkl MNO pqr STU vwx YZ.`
 
 ```js
 assert(

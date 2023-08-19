@@ -2,11 +2,13 @@
 
 Read our ["How to Contribute to Open Source Guide"](https://github.com/freeCodeCamp/how-to-contribute-to-open-source). It's a comprehensive reference for first-timer-friendly projects. And it includes a lot of open source contribution tips.
 
-### Can I translate freeCodeCamp's curriculum?
+### Can I translate freeCodeCamp's resources?
 
-Yes. We will roll out the tools for translating freeCodeCamp's curriculum soon. 
+Yes - You can contribute to any of the 30+ languages we have enabled on our translation platform.
 
-Eventually, we intend to localize freeCodeCamp into several major world languages, starting with: Arabic, Chinese, Hindi, Portuguese, Russian, and Spanish.
+We have the user contributed translations live in Chinese (中文) and Spanish (Español). We intend to localize freeCodeCamp into several major world languages. You can read all about this in our [announcement here](https://www.freecodecamp.org/news/world-language-translation-effort).
+
+If you are interested in contributing to translations please makes sure you [read this guide](/how-to-translate-files) first.
 
 ### How can I report a new bug?
 
@@ -44,7 +46,7 @@ Please do create an issue if you want to discuss bigger aspects of the codebase 
 
 ### How can I get an issue assigned to me?
 
-We typically do not assign issues to anyone other than long-time contributors.  Instead, we follow the below policy to be fair to everyone:
+We typically do not assign issues to anyone other than long-time contributors. Instead, we follow the below policy to be fair to everyone:
 
 1. We are most likely to merge the first pull request that addresses the issue.
 2. In the case of multiple contributors opening a pull request for the same issue at around the same time, we will give priority to the pull request that best addresses the issue. Some of the things we consider:
@@ -60,23 +62,26 @@ We typically do not assign issues to anyone other than long-time contributors.  
 **Feel free to ask for help in:**
 
 - The `Contributors` category of [our community forum](https://forum.freecodecamp.org/c/contributors).
-- The `#Contributors` channel on [our chat server](https://chat.freecodecamp.org/contributors).
+- The `#Contributors` channel on [our chat server](https://chat.freecodecamp.org/channel/contributors).
 
 We are excited to help you contribute to any of the topics that you would like to work on. If you ask us questions on the related issue threads, we will be glad to clarify. Be sure to search for your question before posting a new one.
 
 Thanks in advance for being polite and patient. Remember – this community is run mainly by volunteers.
 
-**Additional Assistance:**
+### Additional Assistance
 
-If you have queries about the stack, architecture of the codebase, feel free to reach out to our staff dev team:
+If you have queries about the stack, architecture of the codebase, translations, or anything else feel free to reach out to our staff.
 
 | Staff                 | Send message on Forum                                                        |
 | :-------------------- | :--------------------------------------------------------------------------- |
-| Mrugesh Mohapatra     | [@raisedadead](https://forum.freecodecamp.org/u/raisedadead)                 |
 | Ahmad Abdolsaheb      | [@abdolsa](https://forum.freecodecamp.org/u/abdolsa)                         |
 | Kristofer Koishigawa  | [@scissorsneedfoodtoo](https://forum.freecodecamp.org/u/scissorsneedfoodtoo) |
-| Tom Mondloc           | [@moT01](https://forum.freecodecamp.org/u/moT01)                             |
+| Miya Liu              | [@miyaliu](https://chinese.freecodecamp.org/forum/u/miyaliu)                 |
+| Mrugesh Mohapatra     | [@raisedadead](https://forum.freecodecamp.org/u/raisedadead)                 |
+| Nicholas Carrigan     | [@nhcarrigan](https://forum.freecodecamp.org/u/nhcarrigan)                   |
 | Oliver Eyton-Williams | [@ojeytonwilliams](https://forum.freecodecamp.org/u/ojeytonwilliams)         |
-| Randell Dawson        | [@RandellDawson](https://forum.freecodecamp.org/u/randelldawson)             |
+| Rafael D Hernandez    | [@RafaelHernandez](https://forum.freecodecamp.org/u/rafaelhernandez)         |
+| Shaun Hamilton        | [@sky020](https://forum.freecodecamp.org/u/sky020)                          |
+| Tom Mondloc           | [@moT01](https://forum.freecodecamp.org/u/moT01)                             |
 
 **You can email our developer staff at: `dev[at]freecodecamp.org`**

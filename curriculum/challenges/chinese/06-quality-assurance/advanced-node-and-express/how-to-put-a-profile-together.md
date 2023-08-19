@@ -3,17 +3,28 @@ id: 5895f70ef9fc0f352b528e6b
 title: 如何将 Profile 放在一起
 challengeType: 2
 forumTopicId: 301554
+dashedName: how-to-put-a-profile-together
 ---
 
 # --description--
 
-现在，只有通过验证的用户才能进入 */profile* 页面，这样我们就可以在页面上使用 'req.user' 里的信息了。
+现在，我们能确保访问 `/profile` 页面的用户都是经过验证的，这样我们就可以在页面上使用 `req.user` 里的信息了。
 
-请在变量中包含 *username* 键，值为 'req.user.username'，并通过 render 方法传给 profile 页面。然后在 'profile.pug' 页面，添加这行 `h2.center#welcome Welcome, #{username}!` 代码来创建 class 为 `center`、id 为 `welcome` 且文本内容为 'Welcome, ' 后加用户名的 h2 元素。
+传递一个包含属性 `username` 且属性值为 `req.user.username` 的对象，作为 profile 页面的 render 方法的第二个参数。 然后在 `profile.pug`页面，将下面的代码添加到现有的 `h1` 元素下方，处在同一级别的缩进。
 
-以及，请在 profile 里添加 */logout* 链接，后续会用于处理用户退出登录的逻辑：`a(href='/logout') Logout`
+```pug
+h2.center#welcome Welcome, #{username}!
+```
 
-完成上述要求后，你可以在下方提交你的页面链接。如果你遇到了问题，可以参考 [这里](https://gist.github.com/camperbot/136b3ad611cc80b41cab6f74bb460f6a) 的答案。
+这样就创建了一个 `h2` 元素，具有 '`center`' class，和包含文本 '`Welcome,`' 的 id '`welcome`'，以及 username（用户名）。
+
+另外，在 `profile.pug` 中，添加一个指向 `/logout` 路由的链接，它将托管一个未认证用户的逻辑。
+
+```pug
+a(href='/logout') Logout
+```
+
+完成上述要求后，请提交你的页面链接。 如果你遇到了问题，可以参考[这里](https://gist.github.com/camperbot/136b3ad611cc80b41cab6f74bb460f6a)的答案。
 
 # --hints--
 
@@ -37,3 +48,10 @@ forumTopicId: 301554
 
 # --solutions--
 
+```js
+/**
+  Backend challenges don't need solutions, 
+  because they would need to be tested against a full working project. 
+  Please check our contributing guidelines to learn more.
+*/
+```

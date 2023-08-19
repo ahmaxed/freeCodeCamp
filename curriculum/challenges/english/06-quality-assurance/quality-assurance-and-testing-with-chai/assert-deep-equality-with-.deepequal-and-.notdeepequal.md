@@ -3,11 +3,12 @@ id: 587d824c367417b2b2512c4c
 title: Assert Deep Equality with .deepEqual and .notDeepEqual
 challengeType: 2
 forumTopicId: 301587
+dashedName: assert-deep-equality-with--deepequal-and--notdeepequal
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 `deepEqual()` asserts that two objects are deep equal.
 
@@ -66,8 +67,6 @@ You should choose the correct method for the second assertion - `deepEqual` vs. 
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

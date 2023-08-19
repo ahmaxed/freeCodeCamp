@@ -4,15 +4,18 @@ title: Check Radio Buttons and Checkboxes by Default
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVMPUv/cWk3Qh6'
 forumTopicId: 301094
+dashedName: check-radio-buttons-and-checkboxes-by-default
 ---
 
 # --description--
 
 You can set a checkbox or radio button to be checked by default using the `checked` attribute.
 
-To do this, just add the word "checked" to the inside of an input element. For example:
+To do this, just add the word `checked` to the inside of an input element. For example:
 
-`<input type="radio" name="test-name" checked>`
+```html
+<input type="radio" name="test-name" checked>
+```
 
 # --instructions--
 
@@ -41,7 +44,7 @@ assert($('input[type="checkbox"]').prop('checked'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -55,7 +58,7 @@ assert($('input[type="checkbox"]').prop('checked'));
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <form action="https://freecatphotoapp.com/submit-cat-photo">
+  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
     <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor"> Indoor</label>
     <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
     <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving"> Loving</label>
@@ -74,7 +77,7 @@ assert($('input[type="checkbox"]').prop('checked'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -88,7 +91,7 @@ assert($('input[type="checkbox"]').prop('checked'));
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <form action="https://freecatphotoapp.com/submit-cat-photo">
+  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
     <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
     <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
     <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving" checked> Loving</label>

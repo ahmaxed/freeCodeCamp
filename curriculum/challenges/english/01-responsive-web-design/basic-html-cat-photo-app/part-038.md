@@ -2,13 +2,14 @@
 id: 7cf9b03d81a65668421804c3
 title: Part 38
 challengeType: 0
+dashedName: part-38
 ---
 
 # --description--
 
 In order for a form's data to be accessed by the locaton specified in the `action` attribute, you must give the text field a `name` attribute and assign it a value to represent the data being submitted. For example, you could use the following syntax for an email address text field: `<input type="text" name="email">`.
 
-Add the `name` attribute with the value `catphoto` to your text field.
+Add the `name` attribute with the value `catphotourl` to your text field.
 
 # --hints--
 

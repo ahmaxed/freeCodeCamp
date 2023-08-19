@@ -3,6 +3,7 @@ id: 587d7db7367417b2b2512b9c
 title: Find One or More Criminals in a Hunt
 challengeType: 1
 forumTopicId: 301343
+dashedName: find-one-or-more-criminals-in-a-hunt
 ---
 
 # --description--
@@ -35,28 +36,28 @@ Write a greedy regex that finds one or more criminals within a group of other pe
 
 # --hints--
 
-Your regex should match one criminal (`C`) in `"C"`
+Your regex should match one criminal (`C`) in the string `C`
 
 ```js
 assert('C'.match(reCriminals) && 'C'.match(reCriminals)[0] == 'C');
 ```
 
-Your regex should match two criminals (`CC`) in `"CC"`
+Your regex should match two criminals (`CC`) in the string `CC`
 
 ```js
 assert('CC'.match(reCriminals) && 'CC'.match(reCriminals)[0] == 'CC');
 ```
 
-Your regex should match three criminals (`CCC`) in `"P1P5P4CCCP2P6P3"`
+Your regex should match three criminals (`CCC`) in the string `P1P5P4CCCcP2P6P3`.
 
 ```js
 assert(
-  'P1P5P4CCCP2P6P3'.match(reCriminals) &&
-    'P1P5P4CCCP2P6P3'.match(reCriminals)[0] == 'CCC'
+  'P1P5P4CCCcP2P6P3'.match(reCriminals) &&
+    'P1P5P4CCCcP2P6P3'.match(reCriminals)[0] == 'CCC'
 );
 ```
 
-Your regex should match five criminals (`CCCCC`) in `"P6P2P7P4P5CCCCCP3P1"`
+Your regex should match five criminals (`CCCCC`) in the string `P6P2P7P4P5CCCCCP3P1`
 
 ```js
 assert(
@@ -65,19 +66,19 @@ assert(
 );
 ```
 
-Your regex should not match any criminals in `""`
+Your regex should not match any criminals in the empty string `""`
 
 ```js
 assert(!reCriminals.test(''));
 ```
 
-Your regex should not match any criminals in `"P1P2P3"`
+Your regex should not match any criminals in the string `P1P2P3`
 
 ```js
 assert(!reCriminals.test('P1P2P3'));
 ```
 
-Your regex should match fifty criminals (`CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC`) in `"P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3"`.
+Your regex should match fifty criminals (`CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC`) in the string `P2P1P5P4CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCP3`.
 
 ```js
 assert(

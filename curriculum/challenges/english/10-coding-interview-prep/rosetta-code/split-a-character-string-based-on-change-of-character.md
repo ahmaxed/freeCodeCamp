@@ -3,6 +3,7 @@ id: 5a23c84252665b21eecc801d
 title: Split a character string based on change of character
 challengeType: 5
 forumTopicId: 302322
+dashedName: split-a-character-string-based-on-change-of-character
 ---
 
 # --description--
@@ -10,13 +11,13 @@ forumTopicId: 302322
 Split a (character) string into comma (plus a blank) delimited strings based on a change of character (left to right). Blanks should be treated as any other character (except they are problematic to display clearly). The same applies to commas. For instance, the string:
 
 <pre>
-"gHHH5YY++///\"
+"gHHH5YY++///\\"
 </pre>
 
 should be split as:
 
 <pre>
-["g", "HHH", "5", "YY", "++", "///", "\" ];
+["g", "HHH", "5", "YY", "++", "///", "\\" ];
 </pre>
 
 # --hints--
@@ -79,7 +80,7 @@ assert.deepEqual(split('sssmmmaaammmaaat'), [
 ]);
 ```
 
-`split("gHHH5YY++///\")` should return `["g", "HHH", "5", "YY", "++", "///", "\\"]`.
+`split("gHHH5YY++///\\")` should return `["g", "HHH", "5", "YY", "++", "///", "\\"]`.
 
 ```js
 assert.deepEqual(split('gHHH5YY++///\\'), [

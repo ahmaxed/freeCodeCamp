@@ -5,7 +5,9 @@ import { bindActionCreators } from 'redux';
 import { createSelector } from 'reselect';
 import { SearchBox } from 'react-instantsearch-dom';
 import { HotKeys, ObserveKeys } from 'react-hotkeys';
-import { isEqual } from 'lodash';
+import { isEqual } from 'lodash-es';
+import { withTranslation } from 'react-i18next';
+import { searchPageUrl } from '../../../utils/algolia-locale-setup';
 
 import {
   isSearchDropdownEnabledSelector,
@@ -23,6 +25,7 @@ const propTypes = {
   innerRef: PropTypes.object,
   isDropdownEnabled: PropTypes.bool,
   isSearchFocused: PropTypes.bool,
+  t: PropTypes.func.isRequired,
   toggleSearchDropdown: PropTypes.func.isRequired,
   toggleSearchFocused: PropTypes.func.isRequired,
   updateSearchQuery: PropTypes.func.isRequired
@@ -42,8 +45,6 @@ const mapDispatchToProps = dispatch =>
     { toggleSearchDropdown, toggleSearchFocused, updateSearchQuery },
     dispatch
   );
-
-const placeholder = 'Search 6,000+ tutorials';
 
 export class SearchBar extends Component {
   constructor(props) {
@@ -116,9 +117,7 @@ export class SearchBar extends Component {
     // are hits besides the footer
     return query && hits.length > 1
       ? window.location.assign(
-          `https://www.freecodecamp.org/news/search/?query=${encodeURIComponent(
-            query
-          )}`
+          `${searchPageUrl}?query=${encodeURIComponent(query)}`
         )
       : false;
   }
@@ -173,15 +172,16 @@ export class SearchBar extends Component {
   };
 
   render() {
-    const { isDropdownEnabled, isSearchFocused, innerRef } = this.props;
+    const { isDropdownEnabled, isSearchFocused, innerRef, t } = this.props;
     const { index } = this.state;
+    const placeholder = t('search.placeholder');
 
     return (
       <div className='fcc_searchBar' data-testid='fcc_searchBar' ref={innerRef}>
         <HotKeys handlers={this.keyHandlers} keyMap={this.keyMap}>
           <div className='fcc_search_wrapper'>
             <label className='fcc_sr_only' htmlFor='fcc_instantsearch'>
-              Search
+              {t('search.label')}
             </label>
             <ObserveKeys except={['Space']}>
               <SearchBox
@@ -214,4 +214,4 @@ SearchBar.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SearchBar);
+)(withTranslation()(SearchBar));

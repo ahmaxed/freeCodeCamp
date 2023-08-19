@@ -3,6 +3,7 @@ id: 587d825a367417b2b2512c8a
 title: Insert an Element into a Max Heap
 challengeType: 1
 forumTopicId: 301703
+dashedName: insert-an-element-into-a-max-heap
 ---
 
 # --description--
@@ -13,13 +14,17 @@ While binary heaps may be implemented as tree structures with nodes that contain
 
 For instance, consider this array representation of a binary min heap:
 
-`[ 6, 22, 30, 37, 63, 48, 42, 76 ]`
+```js
+[ 6, 22, 30, 37, 63, 48, 42, 76 ]
+```
 
 The root node is the first element, `6`. Its children are `22` and `30`. If we look at the relationship between the array indices of these values, for index `i` the children are `2 * i + 1` and `2 * i + 2`. Similarly, the element at index `0` is the parent of these two children at indices `1` and `2`. More generally, we can find the parent of a node at any index with the following: `Math.floor((i - 1) / 2)`. These patterns will hold true as the binary tree grows to any size. Finally, we can make a slight adjustment to make this arithmetic even easier by skipping the first element in the array. Doing this creates the following relationship for any element at a given index `i`:
 
 Example array representation:
 
-`[ null, 6, 22, 30, 37, 63, 48, 42, 76 ]`
+```js
+[ null, 6, 22, 30, 37, 63, 48, 42, 76 ]
+```
 
 An element's left child: `i * 2`
 

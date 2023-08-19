@@ -5,6 +5,7 @@ challengeType: 6
 forumTopicId: 18317
 required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+dashedName: target-elements-by-id-using-jquery
 ---
 
 # --description--
@@ -19,7 +20,9 @@ Then use jQuery's `.addClass()` function to add the classes `animated` and `fade
 
 Here's how you'd make the `button` element with the id `target6` fade out:
 
-`$("#target6").addClass("animated fadeOut")`.
+```js
+$("#target6").addClass("animated fadeOut");
+```
 
 # --hints--
 

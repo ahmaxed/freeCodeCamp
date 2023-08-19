@@ -4,11 +4,12 @@ title: Accessing Nested Arrays
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cLeGDtZ'
 forumTopicId: 16160
+dashedName: accessing-nested-arrays
 ---
 
 # --description--
 
-As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, Array bracket notation can be chained to access nested arrays.
+As we have seen in earlier examples, objects can contain both nested objects and nested arrays. Similar to accessing nested objects, array bracket notation can be chained to access nested arrays.
 
 Here is an example of how to access a nested array:
 
@@ -31,17 +32,19 @@ var ourPets = [
     ]
   }
 ];
-ourPets[0].names[1]; // "Fluffy"
-ourPets[1].names[0]; // "Spot"
+ourPets[0].names[1];
+ourPets[1].names[0];
 ```
+
+`ourPets[0].names[1]` would be the string `Fluffy`, and `ourPets[1].names[0]` would be the string `Spot`.
 
 # --instructions--
 
-Retrieve the second tree from the variable `myPlants` using object dot and array bracket notation.
+Using dot and bracket notation, set the variable `secondTree` to the second item in the `trees` list from the `myPlants` object.
 
 # --hints--
 
-`secondTree` should equal "pine".
+`secondTree` should equal the string `pine`.
 
 ```js
 assert(secondTree === 'pine');
@@ -69,7 +72,6 @@ assert(/=\s*myPlants\[1\].list\[1\]/.test(code));
 ## --seed-contents--
 
 ```js
-// Setup
 var myPlants = [
   {
     type: "flowers",
@@ -89,9 +91,7 @@ var myPlants = [
   }
 ];
 
-// Only change code below this line
-
-var secondTree = ""; // Change this line
+var secondTree = "";
 ```
 
 # --solutions--
@@ -115,8 +115,6 @@ var myPlants = [
     ]
   }
 ];
-
-// Only change code below this line
 
 var secondTree = myPlants[1].list[1];
 ```

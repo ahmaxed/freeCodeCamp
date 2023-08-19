@@ -4,27 +4,34 @@ title: 使用 push() 操作数组
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cnqmVtJ'
 forumTopicId: 18237
+dashedName: manipulate-arrays-with-push
 ---
 
 # --description--
 
-一个简单的方法将数据添加到一个数组的末尾是通过`push()`函数。
+一个将数据添加到数组末尾的简单方法是 `push()` 函数。
 
-`.push()`接受一个或多个参数，并把它“推”入到数组的末尾。
+`.push()` 接受一个或多个参数（<dfn>parameters</dfn>），并把它压入到数组的末尾。
+
+示例：
 
 ```js
-var arr = [1,2,3];
-arr.push(4);
-// arr is now [1,2,3,4]
+var arr1 = [1,2,3];
+arr1.push(4);
+
+var arr2 = ["Stimpson", "J", "cat"];
+arr2.push(["happy", "joy"]);
 ```
+
+`arr1` 现在值为 `[1, 2, 3, 4]`，`arr2` 值为 `["Stimpson", "J", "cat", ["happy", "joy"]]`。
 
 # --instructions--
 
-把`["dog", 3]`“推”入到`myArray`变量的末尾。
+把`["dog", 3]` 压入到 `myArray` 变量的末尾。
 
 # --hints--
 
-`myArray`应该等于`[["John", 23], ["cat", 2], ["dog", 3]]`。
+`myArray` 现在应该等于 `[["John", 23], ["cat", 2], ["dog", 3]]`。
 
 ```js
 assert(
@@ -45,5 +52,26 @@ assert(
 );
 ```
 
+# --seed--
+
+## --after-user-code--
+
+```js
+(function(z){return 'myArray = ' + JSON.stringify(z);})(myArray);
+```
+
+## --seed-contents--
+
+```js
+// Setup
+var myArray = [["John", 23], ["cat", 2]];
+
+// Only change code below this line
+```
+
 # --solutions--
 
+```js
+var myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog",3]);
+```

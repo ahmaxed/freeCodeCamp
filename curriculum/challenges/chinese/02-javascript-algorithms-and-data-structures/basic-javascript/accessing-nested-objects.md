@@ -4,13 +4,14 @@ title: 访问嵌套对象
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cRnRnfa'
 forumTopicId: 16161
+dashedName: accessing-nested-objects
 ---
 
 # --description--
 
-通过串联起来的点操作符或中括号操作符来访问对象的嵌套属性。
+我们可以通过连续使用点号表示法和方括号表示法来访问对象的嵌套属性。
 
-下面是一个嵌套的对象：
+这是一个嵌套对象：
 
 ```js
 var ourStorage = {
@@ -25,27 +26,74 @@ var ourStorage = {
     "bottom drawer": "soda"
   }
 };
-ourStorage.cabinet["top drawer"].folder2;  // "secrets"
-ourStorage.desk.drawer; // "stapler"
+ourStorage.cabinet["top drawer"].folder2;
+ourStorage.desk.drawer;
 ```
+
+`ourStorage.cabinet["top drawer"].folder2` 将会是字符串 `secrets`，并且 `ourStorage.desk.drawer` 将会是字符串 `stapler`。
 
 # --instructions--
 
-读取`myStorage`对象，将`glove box`属性的内容赋值给变量`gloveBoxContents`。在适用的地方使用点操作符来访问属性，否则使用中括号操作符。
+访问 `myStorage` 对象并将 `glove box` 属性的内容赋值给 `gloveBoxContents` 变量。 在可能的情况下，对所有的属性使用点号，否则使用方括号。
 
 # --hints--
 
-`gloveBoxContents`应该等于"maps"。
+`gloveBoxContents` 应该等于字符串 `maps`。
 
 ```js
 assert(gloveBoxContents === 'maps');
 ```
 
-应使用点操作符和中括号操作符来访问`myStorage`。
+你的代码应该使用点号和方括号来访问 `myStorage`。
 
 ```js
 assert(/=\s*myStorage\.car\.inside\[\s*("|')glove box\1\s*\]/g.test(code));
 ```
 
+# --seed--
+
+## --after-user-code--
+
+```js
+(function(x) { 
+  if(typeof x != 'undefined') { 
+    return "gloveBoxContents = " + x;
+  }
+  return "gloveBoxContents is undefined";
+})(gloveBoxContents);
+```
+
+## --seed-contents--
+
+```js
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = undefined;
+```
+
 # --solutions--
 
+```js
+var myStorage = {
+  "car":{
+    "inside":{
+      "glove box":"maps",
+      "passenger seat":"crumbs"
+    },
+    "outside":{
+      "trunk":"jack"
+    }
+  }
+};
+var gloveBoxContents = myStorage.car.inside["glove box"];
+```

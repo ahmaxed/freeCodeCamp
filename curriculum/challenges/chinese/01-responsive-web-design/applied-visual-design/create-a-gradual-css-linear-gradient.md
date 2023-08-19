@@ -4,30 +4,32 @@ title: 创建一个 CSS 线性渐变
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cg4dpt9'
 forumTopicId: 301047
+dashedName: create-a-gradual-css-linear-gradient
 ---
 
 # --description--
 
-HTML 元素的背景色并不局限于单色。CSS 还提供了颜色过渡，也就是渐变。可以通过 `background` 里面的 `linear-gradient()` 来实现线性渐变，下面是它的语法：
+HTML 元素的背景色并不局限于单色。 CSS 还为我们提供了颜色渐变。 可通过 `background` 里的 `linear-gradient()` 实现线性渐变， 以下是它的语法：
 
-`background: linear-gradient(gradient_direction, 颜色 1, 颜色 2, 颜色 3, ...);`
+```css
+background: linear-gradient(gradient_direction, color 1, color 2, color 3, ...);
+```
 
-第一个参数指定了颜色过渡的方向 - 它的值是角度，90deg 代表垂直渐变，45deg 的渐变角度和反斜杠方向差不多。剩下的参数指定了渐变颜色的顺序：
+第一个参数指定了颜色过渡的方向——它的值是角度，`90deg` 表示垂直渐变（从左到右），`45deg` 表示沿对角线渐变（从左下方到右上方）。 其他参数指定了渐变颜色的顺序：
 
-例子：
+例如：
 
-`background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));`
+```css
+background: linear-gradient(90deg, red, yellow, rgb(204, 204, 255));
+```
 
 # --instructions--
 
-使用 `linear-gradient()` 给 `div` 添加 `background` 渐变色，渐变角度 35deg，从 `#CCFFFF` 过渡到 `#FFCCCC`。
-
-**注意**  
-有很多种方式指定颜色值，如 `rgb()` 或者 `hsl()`。在本关里请使用 hex 颜色码。
+使用 `linear-gradient()` 给 `div` 元素添加 `background` 渐变色，渐变角度为 35 度，从 `#CCFFFF` 过渡到 `#FFCCCC`。
 
 # --hints--
 
-`div` 元素应该有一个指定方向和颜色的 `linear-gradient` `background`渐变色。
+`div` 元素应有一个指定方向和颜色的 `linear-gradient` `background`。
 
 ```js
 assert(
@@ -39,5 +41,36 @@ assert(
 );
 ```
 
+# --seed--
+
+## --seed-contents--
+
+```html
+<style>
+  div {
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+
+  }
+
+</style>
+
+<div></div>
+```
+
 # --solutions--
 
+```html
+<style>
+  div {
+    border-radius: 20px;
+    width: 70%;
+    height: 400px;
+    margin: 50px auto;
+    background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+  }
+</style>
+<div></div>
+```

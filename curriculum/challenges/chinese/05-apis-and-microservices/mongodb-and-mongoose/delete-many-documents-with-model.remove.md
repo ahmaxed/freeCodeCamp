@@ -3,6 +3,7 @@ id: 587d7fb8367417b2b2512c11
 title: 使用 model.remove() 删除多个 document
 challengeType: 2
 forumTopicId: 301538
+dashedName: delete-many-documents-with-model-remove
 ---
 
 # --description--
@@ -11,19 +12,13 @@ forumTopicId: 301538
 
 # --instructions--
 
-如果想要删除所有叫 "Mary" 的人，我们可以使用 `Model.remove()`，并给它传入一个包含 `name` 字段的对象作为查询条件。当然，我们还需要给它传入一个回调函数。
+修改 `removeManyPeople` 函数，使用 `nameToRemove` 删除所有姓名是变量 `Model.remove()` 的人。 给它传入一个带有 `name` 字段的查询 document 和一个回调函数。
 
-**注意：** `Model.remove()` 不会返回被删除的 document，而是会返回一个包含操作结果以及受影响的数据数量的 JSON 对象。不要忘记将它传入 `done()` 回调，因为我们需要在挑战的测试中调用它。
+**注意：** `Model.remove()` 不会返回被删除的 document，而是会返回一个包含操作结果以及受影响的数据数量的 JSON 对象。 不要忘记将它传入 `done()` 回调函数，因为我们需要在挑战的测试中调用它。
 
 # --hints--
 
-Deleting many items at once should succeed
-
-```js
-
-```
-
-应成功地删除多条数据
+应一次性成功删除多条数据
 
 ```js
 (getUserInput) =>
@@ -53,3 +48,10 @@ Deleting many items at once should succeed
 
 # --solutions--
 
+```js
+/**
+  Backend challenges don't need solutions, 
+  because they would need to be tested against a full working project. 
+  Please check our contributing guidelines to learn more.
+*/
+```

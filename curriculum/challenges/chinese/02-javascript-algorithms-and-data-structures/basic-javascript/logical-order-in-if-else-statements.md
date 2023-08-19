@@ -4,11 +4,12 @@ title: if else 语句中的逻辑顺序
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cwNvMUV'
 forumTopicId: 18228
+dashedName: logical-order-in-if-else-statements
 ---
 
 # --description--
 
-`if`、`else if`语句中代码的执行顺序是很重要的。
+`if`、`else if` 语句中的代码顺序是很重要的。
 
 在条件判断语句中，代码的执行顺序是从上到下，所以你需要考虑清楚先执行哪一句，后执行哪一句。
 
@@ -45,9 +46,11 @@ function bar(x) {
 这两个函数看起来几乎一模一样，我们传一个值进去看看它们有什么区别。
 
 ```js
-foo(0) // "Less than one"
-bar(0) // "Less than two"
+foo(0)
+bar(0)
 ```
+
+`foo(0)` 将返回字符串 `Less than one`，`bar(0)` 将返回字符串 `Less than two`。
 
 # --instructions--
 
@@ -55,23 +58,52 @@ bar(0) // "Less than two"
 
 # --hints--
 
-`orderMyLogic(4)`应该返回 "Less than 5"。
+`orderMyLogic(4)` 应该返回字符串 `Less than 5`
 
 ```js
 assert(orderMyLogic(4) === 'Less than 5');
 ```
 
-`orderMyLogic(6)`应该返回 "Less than 10"。
+`orderMyLogic(6)` 应该返回字符串 `Less than 10`
 
 ```js
 assert(orderMyLogic(6) === 'Less than 10');
 ```
 
-`orderMyLogic(11)`应该返回 "Greater than or equal to 10"。
+`orderMyLogic(11)`应该返回 `Greater than or equal to 10`。
 
 ```js
 assert(orderMyLogic(11) === 'Greater than or equal to 10');
 ```
 
+# --seed--
+
+## --seed-contents--
+
+```js
+function orderMyLogic(val) {
+  if (val < 10) {
+    return "Less than 10";
+  } else if (val < 5) {
+    return "Less than 5";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+
+orderMyLogic(7);
+```
+
 # --solutions--
 
+```js
+function orderMyLogic(val) {
+  if(val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+```

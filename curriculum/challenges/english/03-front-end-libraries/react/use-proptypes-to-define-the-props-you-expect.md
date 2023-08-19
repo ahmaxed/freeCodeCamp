@@ -3,6 +3,7 @@ id: 5a24c314108439a4d403616d
 title: Use PropTypes to Define the Props You Expect
 challengeType: 6
 forumTopicId: 301419
+dashedName: use-proptypes-to-define-the-props-you-expect
 ---
 
 # --description--
@@ -11,7 +12,9 @@ React provides useful type-checking features to verify that components receive p
 
 It's considered a best practice to set `propTypes` when you know the type of a prop ahead of time. You can define a `propTypes` property for a component in the same way you defined `defaultProps`. Doing this will check that props of a given key are present with a given type. Here's an example to require the type `function` for a prop called `handleClick`:
 
-`MyComponent.propTypes = { handleClick: PropTypes.func.isRequired }`
+```js
+MyComponent.propTypes = { handleClick: PropTypes.func.isRequired }
+```
 
 In the example above, the `PropTypes.func` part checks that `handleClick` is a function. Adding `isRequired` tells React that `handleClick` is a required property for that component. You will see a warning if that prop isn't provided. Also notice that `func` represents `function`. Among the seven JavaScript primitive types, `function` and `boolean` (written as `bool`) are the only two that use unusual spelling. In addition to the primitive types, there are other types available. For example, you can check that a prop is a React element. Please refer to the [documentation](https://reactjs.org/docs/jsx-in-depth.html#specifying-the-react-element-type) for all of the options.
 

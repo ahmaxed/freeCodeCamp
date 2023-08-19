@@ -3,6 +3,7 @@ id: 587d7b88367417b2b2512b46
 title: Set Default Parameters for Your Functions
 challengeType: 1
 forumTopicId: 301209
+dashedName: set-default-parameters-for-your-functions
 ---
 
 # --description--
@@ -14,11 +15,13 @@ Check out this code:
 ```js
 const greeting = (name = "Anonymous") => "Hello " + name;
 
-console.log(greeting("John")); // Hello John
-console.log(greeting()); // Hello Anonymous
+console.log(greeting("John"));
+console.log(greeting());
 ```
 
-The default parameter kicks in when the argument is not specified (it is undefined). As you can see in the example above, the parameter `name` will receive its default value `"Anonymous"` when you do not provide a value for the parameter. You can add default values for as many parameters as you want.
+The console will display the strings `Hello John` and `Hello Anonymous`.
+
+The default parameter kicks in when the argument is not specified (it is undefined). As you can see in the example above, the parameter `name` will receive its default value `Anonymous` when you do not provide a value for the parameter. You can add default values for as many parameters as you want.
 
 # --instructions--
 

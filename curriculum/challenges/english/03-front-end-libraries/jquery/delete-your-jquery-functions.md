@@ -5,6 +5,7 @@ challengeType: 6
 forumTopicId: 17561
 required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+dashedName: delete-your-jquery-functions
 ---
 
 # --description--
@@ -33,7 +34,7 @@ You should leave your `$(document).ready(function() {` at the beginning of your 
 assert(code.match(/\$\(document\)\.ready\(function\(\)\s?\{/g));
 ```
 
-You should leave your "document ready function" closing `})` intact.
+You should leave the `document.ready` function's closing `})` intact.
 
 ```js
 assert(code.match(/.*\s*\}\);/g));

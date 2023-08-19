@@ -5,6 +5,7 @@ challengeType: 6
 forumTopicId: 16776
 required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
+dashedName: change-the-css-of-an-element-using-jquery
 ---
 
 # --description--
@@ -15,7 +16,9 @@ jQuery has a function called `.css()` that allows you to change the CSS of an el
 
 Here's how we would change its color to blue:
 
-`$("#target1").css("color", "blue");`
+```js
+$("#target1").css("color", "blue");
+```
 
 This is slightly different from a normal CSS declaration, because the CSS property and its value are in quotes, and separated with a comma instead of a colon.
 

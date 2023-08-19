@@ -4,13 +4,16 @@ title: Delete Properties from a JavaScript Object
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cDqKdTv'
 forumTopicId: 17560
+dashedName: delete-properties-from-a-javascript-object
 ---
 
 # --description--
 
 We can also delete properties from objects like this:
 
-`delete ourDog.bark;`
+```js
+delete ourDog.bark;
+```
 
 Example:
 
@@ -39,11 +42,11 @@ After the last line shown above, `ourDog` looks like:
 
 # --instructions--
 
-Delete the `"tails"` property from `myDog`. You may use either dot or bracket notation.
+Delete the `tails` property from `myDog`. You may use either dot or bracket notation.
 
 # --hints--
 
-You should delete the property `"tails"` from `myDog`.
+You should delete the property `tails` from `myDog`.
 
 ```js
 assert(typeof myDog === 'object' && myDog.tails === undefined);

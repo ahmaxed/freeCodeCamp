@@ -3,6 +3,7 @@ id: 587d78b2367417b2b2512b0e
 title: Add Items to an Array with push() and unshift()
 challengeType: 1
 forumTopicId: 301151
+dashedName: add-items-to-an-array-with-push-and-unshift
 ---
 
 # --description--
@@ -16,11 +17,15 @@ let twentyThree = 'XXIII';
 let romanNumerals = ['XXI', 'XXII'];
 
 romanNumerals.unshift('XIX', 'XX');
-// now equals ['XIX', 'XX', 'XXI', 'XXII']
-
-romanNumerals.push(twentyThree);
-// now equals ['XIX', 'XX', 'XXI', 'XXII', 'XXIII']Notice that we can also pass variables, which allows us even greater flexibility in dynamically modifying our array's data.
 ```
+
+`romanNumerals` would have the value `['XIX', 'XX', 'XXI', 'XXII']`.
+
+```js
+romanNumerals.push(twentyThree);
+```
+
+`romanNumerals` would have the value `['XIX', 'XX', 'XXI', 'XXII', 'XXIII']`. Notice that we can also pass variables, which allows us even greater flexibility in dynamically modifying our array's data.
 
 # --instructions--
 

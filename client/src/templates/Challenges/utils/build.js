@@ -10,9 +10,12 @@ import {
 
 // the config files are created during the build, but not before linting
 // eslint-disable-next-line import/no-unresolved
-import { filename as runner } from '../../../../config/frame-runner';
+import frameRunnerData from '../../../../../config/client/frame-runner.json';
 // eslint-disable-next-line import/no-unresolved
-import { filename as testEvaluator } from '../../../../config/test-evaluator';
+import testEvaluatorData from '../../../../../config/client/test-evaluator.json';
+
+const { filename: runner } = frameRunnerData;
+const { filename: testEvaluator } = testEvaluatorData;
 
 const frameRunner = [
   {
@@ -29,7 +32,7 @@ const globalRequires = [
 ];
 
 const applyFunction = fn =>
-  async function(file) {
+  async function (file) {
     try {
       if (file.error) {
         return file;
@@ -103,16 +106,16 @@ const testRunners = {
   [challengeTypes.backend]: getDOMTestRunner,
   [challengeTypes.pythonProject]: getDOMTestRunner
 };
-export function getTestRunner(buildData, { proxyLogger }, document) {
+export function getTestRunner(buildData, runnerConfig, document) {
   const { challengeType } = buildData;
   const testRunner = testRunners[challengeType];
   if (testRunner) {
-    return testRunner(buildData, proxyLogger, document);
+    return testRunner(buildData, runnerConfig, document);
   }
   throw new Error(`Cannot get test runner for challenge type ${challengeType}`);
 }
 
-function getJSTestRunner({ build, sources }, proxyLogger) {
+function getJSTestRunner({ build, sources }, { proxyLogger, removeComments }) {
   const code = {
     contents: sources.index,
     editableContents: sources.editableContents
@@ -122,12 +125,15 @@ function getJSTestRunner({ build, sources }, proxyLogger) {
 
   return (testString, testTimeout, firstTest = true) => {
     return testWorker
-      .execute({ build, testString, code, sources, firstTest }, testTimeout)
+      .execute(
+        { build, testString, code, sources, firstTest, removeComments },
+        testTimeout
+      )
       .on('LOG', proxyLogger).done;
   };
 }
 
-async function getDOMTestRunner(buildData, proxyLogger, document) {
+async function getDOMTestRunner(buildData, { proxyLogger }, document) {
   await new Promise(resolve =>
     createTestFramer(document, resolve, proxyLogger)(buildData)
   );

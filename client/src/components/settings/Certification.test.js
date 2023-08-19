@@ -1,4 +1,4 @@
-/* global expect */
+/* global expect jest */
 
 import React from 'react';
 import { render } from '@testing-library/react';
@@ -6,6 +6,8 @@ import { Provider } from 'react-redux';
 import { createStore } from '../../redux/createStore';
 
 import { CertificationSettings } from './Certification';
+
+jest.mock('../../analytics');
 
 function renderWithRedux(ui) {
   return render(<Provider store={createStore()}>{ui}</Provider>);
@@ -21,7 +23,7 @@ describe('<certification />', () => {
 
     expect(
       container.querySelector('#button-legacy-data-visualization')
-    ).toHaveTextContent('Show Certification');
+    ).toHaveTextContent('buttons.show-cert');
   });
 
   it('Should link show cert button to the claimed legacy cert', () => {
@@ -95,7 +97,7 @@ describe('<certification />', () => {
       <CertificationSettings {...propsForOnlySolution} />
     );
 
-    const button = getByText('Show Code');
+    const button = getByText('buttons.show-code');
     expect(button).toBeInTheDocument();
   });
 });

@@ -1,20 +1,36 @@
 const path = require('path');
-const config = require('./config/env');
-
+const envData = require('../config/env.json');
 const {
   buildChallenges,
   replaceChallengeNode,
   localeChallengesRootDir
 } = require('./utils/buildChallenges');
 
+const { clientLocale, curriculumLocale, homeLocation } = envData;
+
 const curriculumIntroRoot = path.resolve(__dirname, './src/pages');
+const pathPrefix =
+  clientLocale === 'english' || clientLocale === 'chinese'
+    ? ''
+    : '/' + clientLocale;
 
 module.exports = {
+  flags: {
+    DEV_SSR: false
+  },
   siteMetadata: {
     title: 'freeCodeCamp',
-    siteUrl: config.homeLocation
+    siteUrl: homeLocation
   },
+  pathPrefix: pathPrefix,
   plugins: [
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        analyzerMode: 'disabled',
+        generateStatsFile: true
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-postcss',
     {
@@ -34,7 +50,7 @@ module.exports = {
       options: {
         name: 'challenges',
         source: buildChallenges,
-        onSourceChange: replaceChallengeNode(config.locale),
+        onSourceChange: replaceChallengeNode(curriculumLocale),
         curriculumPath: localeChallengesRootDir
       }
     },
@@ -46,37 +62,7 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          'gatsby-remark-fcc-forum-emoji',
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              // Class prefix for <pre> tags containing syntax highlighting;
-              // defaults to 'language-' (eg <pre class="language-js">).
-              // If your site loads Prism into the browser at runtime,
-              // (eg for use with libraries like react-live),
-              // you may use this to prevent Prism from re-processing syntax.
-              // This is an uncommon use-case though;
-              // If you're unsure, it's best to use the default value.
-              classPrefix: 'language-',
-              // This is used to allow setting a language for inline code
-              // (i.e. single backticks) by creating a separator.
-              // This separator is a string and will do no white-space
-              // stripping.
-              // A suggested value for English speakers is the non-ascii
-              // character '›'.
-              inlineCodeMarker: null,
-              // This lets you set up language aliases.  For example,
-              // setting this to '{ sh: "bash" }' will let you use
-              // the language "sh" which will highlight using the
-              // bash highlighter.
-              aliases: {}
-            }
-          }
-        ]
-      }
+      resolve: 'gatsby-transformer-remark'
     },
     {
       resolve: 'gatsby-remark-node-identity',
@@ -104,20 +90,20 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: `gatsby-plugin-advanced-sitemap`,
-      options: {
-        exclude: [
-          `/dev-404-page`,
-          `/404`,
-          `/404.html`,
-          `/offline-plugin-app-shell-fallback`,
-          `/learn`,
-          /(\/)learn(\/)\S*/
-        ],
-        addUncaughtPages: true
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-advanced-sitemap`,
+    //   options: {
+    //     exclude: [
+    //       `/dev-404-page`,
+    //       `/404`,
+    //       `/404.html`,
+    //       `/offline-plugin-app-shell-fallback`,
+    //       `/learn`,
+    //       /(\/)learn(\/)\S*/
+    //     ],
+    //     addUncaughtPages: true
+    //   }
+    // },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

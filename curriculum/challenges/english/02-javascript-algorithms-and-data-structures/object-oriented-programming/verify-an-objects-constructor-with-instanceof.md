@@ -3,6 +3,7 @@ id: 587d7dae367417b2b2512b7a
 title: Verify an Object's Constructor with instanceof
 challengeType: 1
 forumTopicId: 301337
+dashedName: verify-an-objects-constructor-with-instanceof
 ---
 
 # --description--
@@ -18,8 +19,10 @@ let Bird = function(name, color) {
 
 let crow = new Bird("Alexis", "black");
 
-crow instanceof Bird; // => true
+crow instanceof Bird;
 ```
+
+This `instanceof` method would return `true`.
 
 If an object is created without using a constructor, `instanceof` will verify that it is not an instance of that constructor:
 
@@ -30,8 +33,10 @@ let canary = {
   numLegs: 2
 };
 
-canary instanceof Bird; // => false
+canary instanceof Bird;
 ```
+
+This `instanceof` method would return `false`.
 
 # --instructions--
 

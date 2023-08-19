@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Media from 'react-responsive';
+import { withTranslation } from 'react-i18next';
 
 import LearnLayout from '../../../components/layouts/Learn';
 import MultifileEditor from './MultifileEditor';
@@ -23,7 +24,6 @@ import Hotkeys from '../components/Hotkeys';
 import { getGuideUrl } from '../utils';
 import { challengeTypes } from '../../../../utils/challengeTypes';
 import { ChallengeNode } from '../../../redux/propTypes';
-import { dasherize } from '../../../../../utils/slugs';
 import {
   createFiles,
   challengeFilesSelector,
@@ -77,11 +77,11 @@ const propTypes = {
   pageContext: PropTypes.shape({
     challengeMeta: PropTypes.shape({
       id: PropTypes.string,
-      introPath: PropTypes.string,
       nextChallengePath: PropTypes.string,
       prevChallengePath: PropTypes.string
     })
   }),
+  t: PropTypes.func.isRequired,
   tests: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
@@ -160,6 +160,7 @@ class ShowClassic extends Component {
           files,
           fields: { tests },
           challengeType,
+          removeComments,
           helpCategory
         }
       },
@@ -171,6 +172,7 @@ class ShowClassic extends Component {
     updateChallengeMeta({
       ...challengeMeta,
       title,
+      removeComments: removeComments !== false,
       challengeType,
       helpCategory
     });
@@ -205,21 +207,25 @@ class ShowClassic extends Component {
 
   renderInstructionsPanel({ showToolPanel }) {
     const {
-      fields: { blockName },
+      block,
       description,
-      instructions
+      instructions,
+      superBlock,
+      translationPending
     } = this.getChallenge();
 
     const { forumTopicId, title } = this.getChallenge();
     return (
       <SidePanel
+        block={block}
         className='full-height'
         description={description}
         guideUrl={getGuideUrl({ forumTopicId, title })}
         instructions={instructions}
-        section={dasherize(blockName)}
         showToolPanel={showToolPanel}
-        title={this.getBlockNameTitle()}
+        superBlock={superBlock}
+        title={title}
+        translationPending={translationPending}
         videoUrl={this.getVideoUrl()}
       />
     );
@@ -243,12 +249,12 @@ class ShowClassic extends Component {
   }
 
   renderTestOutput() {
-    const { output } = this.props;
+    const { output, t } = this.props;
     return (
       <Output
         defaultOutput={`
 /**
-* Your test output will go here.
+* ${t('learn.test-output')}
 */
 `}
         output={output}
@@ -273,16 +279,19 @@ class ShowClassic extends Component {
 
   render() {
     const {
+      block,
       fields: { blockName },
       forumTopicId,
+      superBlock,
       title
     } = this.getChallenge();
     const {
       executeChallenge,
       pageContext: {
-        challengeMeta: { introPath, nextChallengePath, prevChallengePath }
+        challengeMeta: { nextChallengePath, prevChallengePath }
       },
-      files
+      files,
+      t
     } = this.props;
 
     return (
@@ -290,13 +299,14 @@ class ShowClassic extends Component {
         editorRef={this.editorRef}
         executeChallenge={executeChallenge}
         innerRef={this.containerRef}
-        introPath={introPath}
         nextChallengePath={nextChallengePath}
         prevChallengePath={prevChallengePath}
       >
         <LearnLayout>
           <Helmet
-            title={`Learn ${this.getBlockNameTitle()} | freeCodeCamp.org`}
+            title={`${t(
+              'learn.learn'
+            )} ${this.getBlockNameTitle()} | freeCodeCamp.org`}
           />
           <Media maxWidth={MAX_MOBILE_WIDTH}>
             <MobileLayout
@@ -325,7 +335,11 @@ class ShowClassic extends Component {
               testOutput={this.renderTestOutput()}
             />
           </Media>
-          <CompletionModal blockName={blockName} />
+          <CompletionModal
+            block={block}
+            blockName={blockName}
+            superBlock={superBlock}
+          />
           <HelpModal />
           <VideoModal videoUrl={this.getVideoUrl()} />
           <ResetModal />
@@ -341,7 +355,7 @@ ShowClassic.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ShowClassic);
+)(withTranslation()(ShowClassic));
 
 // TODO: handle jsx (not sure why it doesn't get an editableRegion) EDIT:
 // probably because the dummy challenge didn't include it, so Gatsby couldn't
@@ -349,16 +363,20 @@ export default connect(
 export const query = graphql`
   query ClassicChallenge($slug: String!) {
     challengeNode(fields: { slug: { eq: $slug } }) {
+      block
       title
       description
       instructions
+      removeComments
       challengeType
       helpCategory
       videoUrl
+      superBlock
+      translationPending
       forumTopicId
       fields {
-        slug
         blockName
+        slug
         tests {
           text
           testString

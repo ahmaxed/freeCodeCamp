@@ -4,10 +4,14 @@ import {
   types,
   closeModal,
   challengeFilesSelector,
-  challengeMetaSelector
+  challengeMetaSelector,
+  projectFormValuesSelector
 } from '../redux';
 import { tap, mapTo } from 'rxjs/operators';
-import { forumLocation } from '../../../../../config/env.json';
+import { transformEditorLink } from '../utils';
+import envData from '../../../../../config/env.json';
+
+const { forumLocation } = envData;
 
 function filesToMarkdown(files = {}) {
   const moreThenOneFile = Object.keys(files).length > 1;
@@ -35,7 +39,9 @@ function createQuestionEpic(action$, state$, { window }) {
         navigator: { userAgent },
         location: { href }
       } = window;
-
+      const projectFormValues = Object.entries(
+        projectFormValuesSelector(state)
+      );
       const endingText = dedent(
         `**Your browser information:**
 
@@ -48,8 +54,21 @@ function createQuestionEpic(action$, state$, { window }) {
       );
 
       let textMessage = dedent(
-        `**Tell us what's happening:**\n\n\n\n**Your code so far**
-        ${filesToMarkdown(files)}\n${endingText}`
+        `**Tell us what's happening:**
+        Describe your issue in detail here.
+
+        ${
+          projectFormValues.length
+            ? `**Your project link(s)**\n`
+            : `**Your code so far**`
+        }
+        ${
+          projectFormValues
+            ?.map(([key, val]) => `${key}: ${transformEditorLink(val)}\n`)
+            ?.join('') || filesToMarkdown(files)
+        }
+
+        ${endingText}`
       );
 
       const altTextMessage = dedent(

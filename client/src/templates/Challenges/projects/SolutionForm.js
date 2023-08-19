@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withTranslation } from 'react-i18next';
 
 import { Form } from '../../../components/formHelpers';
 import {
@@ -14,22 +15,8 @@ const propTypes = {
   description: PropTypes.string,
   isSubmitting: PropTypes.bool,
   onSubmit: PropTypes.func.isRequired,
+  t: PropTypes.func.isRequired,
   updateSolutionForm: PropTypes.func.isRequired
-};
-
-// back end challenges and front end projects use a single form field
-const solutionField = [{ name: 'solution', label: 'Solution Link' }];
-const backEndProjectFields = [
-  { name: 'solution', label: 'Solution Link' },
-  { name: 'githubLink', label: 'GitHub Link' }
-];
-
-const options = {
-  types: {
-    solution: 'url',
-    githubLink: 'url'
-  },
-  required: ['solution']
 };
 
 export class SolutionForm extends Component {
@@ -40,15 +27,45 @@ export class SolutionForm extends Component {
   componentDidMount() {
     this.props.updateSolutionForm({});
   }
-  handleSubmit(values) {
-    this.props.updateSolutionForm(values);
-    this.props.onSubmit();
+
+  handleSubmit(validatedValues) {
+    // Do not execute challenge, if errors
+    if (validatedValues.errors.length === 0) {
+      // updates values on store
+      this.props.updateSolutionForm(validatedValues.values);
+      if (validatedValues.invalidValues.length === 0) {
+        this.props.onSubmit({ isShouldCompletionModalOpen: true });
+      } else {
+        this.props.onSubmit({ isShouldCompletionModalOpen: false });
+      }
+    }
   }
+
   render() {
-    const { isSubmitting, challengeType, description } = this.props;
+    const { isSubmitting, challengeType, description, t } = this.props;
+
+    // back end challenges and front end projects use a single form field
+    const solutionField = [
+      { name: 'solution', label: t('learn.solution-link') }
+    ];
+    const backEndProjectFields = [
+      { name: 'solution', label: t('learn.solution-link') },
+      { name: 'githubLink', label: t('learn.github-link') }
+    ];
+
+    const options = {
+      types: {
+        solution: 'url',
+        githubLink: 'url'
+      },
+      required: ['solution'],
+      isEditorLinkAllowed: false,
+      isLocalLinkAllowed: false
+    };
+
     const buttonCopy = isSubmitting
-      ? 'Submit and go to my next challenge'
-      : "I've completed this challenge";
+      ? t('learn.submit-and-go')
+      : t('learn.i-completed');
 
     let formFields = solutionField;
     let solutionLink = 'ex: ';
@@ -63,6 +80,7 @@ export class SolutionForm extends Component {
 
       case backend:
         formFields = solutionField;
+        options.isLocalLinkAllowed = true;
         solutionLink = solutionLink + 'https://project-name.camperbot.repl.co/';
         break;
 
@@ -74,11 +92,12 @@ export class SolutionForm extends Component {
 
       case pythonProject:
         formFields = solutionField;
+        options.isEditorLinkAllowed = true;
         solutionLink =
           solutionLink +
           (description.includes('Colaboratory')
             ? 'https://colab.research.google.com/drive/1i5EmInTWi1RFvFr2_aRXky96YxY6sbWy'
-            : 'https://repl.it/@camperbot/hello');
+            : 'https://replit.com/@camperbot/hello');
         break;
 
       default:
@@ -107,4 +126,4 @@ export class SolutionForm extends Component {
 
 SolutionForm.propTypes = propTypes;
 
-export default SolutionForm;
+export default withTranslation()(SolutionForm);

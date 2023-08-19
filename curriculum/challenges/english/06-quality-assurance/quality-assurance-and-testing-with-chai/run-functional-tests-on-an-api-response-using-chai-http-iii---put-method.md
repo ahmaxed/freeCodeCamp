@@ -3,11 +3,12 @@ id: 587d824f367417b2b2512c5a
 title: Run Functional Tests on an API Response using Chai-HTTP III - PUT method
 challengeType: 2
 forumTopicId: 301590
+dashedName: run-functional-tests-on-an-api-response-using-chai-http-iii---put-method
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 In the next example we'll see how to send data in a request payload (body). We are going to test a PUT request. The `'/travellers'` endpoint accepts a JSON object taking the structure:
 
@@ -127,8 +128,6 @@ You should test for 'res.body.surname' to be 'Colombo'.
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

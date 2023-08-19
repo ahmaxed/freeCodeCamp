@@ -3,11 +3,12 @@ id: 587d824b367417b2b2512c48
 title: Use Assert.isOK and Assert.isNotOK
 challengeType: 2
 forumTopicId: 301607
+dashedName: use-assert-isok-and-assert-isnotok
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 `isOk()` will test for a truthy value, and `isNotOk()` will test for a falsy value.
 
@@ -74,8 +75,6 @@ You should choose the correct method for the third assertion - `isOk` vs. `isNot
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

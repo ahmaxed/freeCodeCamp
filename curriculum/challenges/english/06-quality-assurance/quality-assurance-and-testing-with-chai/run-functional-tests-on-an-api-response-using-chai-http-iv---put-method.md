@@ -3,11 +3,12 @@ id: 587d824f367417b2b2512c5b
 title: Run Functional Tests on an API Response using Chai-HTTP IV - PUT method
 challengeType: 2
 forumTopicId: 301591
+dashedName: run-functional-tests-on-an-api-response-using-chai-http-iv---put-method
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/). This exercise is similar to the preceding one. Look at it for the details.
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/). This exercise is similar to the preceding one. Look at it for the details.
 
 Now that you have seen how it is done, it is your turn to do it from scratch.
 
@@ -111,8 +112,6 @@ You should test for 'res.body.surname' to be 'da Verrazzano'
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

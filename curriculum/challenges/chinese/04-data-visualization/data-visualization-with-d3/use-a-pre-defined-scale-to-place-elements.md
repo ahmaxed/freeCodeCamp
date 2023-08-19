@@ -3,36 +3,37 @@ id: 587d7fac367417b2b2512bde
 title: 使用预定义的比例放置元素
 challengeType: 6
 forumTopicId: 301494
+dashedName: use-a-pre-defined-scale-to-place-elements
 ---
 
 # --description--
 
-当比例尺建立好后，是时候重新映射散点图了。比例尺就像操作函数一样，将 x 和 y 的原数据值变为适合并可在 SVG 画布上正确渲染的值。它们使数据在屏幕的布局区域内部。
+当比例尺建立好后，是时候重新映射散点图了。 比例尺就像操作函数一样，将 `x` 和 `y` 的原数据值变为适合并可在 SVG 画布上正确渲染的值。 它们使数据在屏幕的布局区域内部。
 
-用比例尺函数为 SVG 图形设置坐标属性值。这包括 `rect` 或者 `text` 元素的 `x` 和 `y` 属性，或者 `circles` 的 `cx` 和 `cy`。以下是一个例子：
+用比例尺函数为 SVG 图形设置坐标属性值。 这包括 `rect` 或者 `text` 元素的 `x` 和 `y` 属性，或者 `circles` 的 `cx` 和 `cy`。 以下是一个例子：
 
 ```js
 shape
   .attr("x", (d) => xScale(d[0]))
 ```
 
-比例尺设置图形坐标属性来将数据点放置在 SVG 画布上。当你显示实际数据值时，不用使用比例尺，例如，在提示框或标签中的 `text()` 方法。
+比例尺设置图形坐标属性来将数据点放置在 SVG 画布上。 当你显示实际数据值时，不用使用比例尺，例如，在提示框或标签中的 `text()` 方法。
 
 # --instructions--
 
-使用 `xScale` 和 `yScale` 将 `circle` 和 `text` 图形放置在 SVG 画布上。对于 `circles`，使用比例尺设置 `cx` 和 `cy` 属性，半径为 5 个单位。
+使用 `xScale` 和 `yScale` 将 `circle` 和 `text` 图形放置在 SVG 画布上。 对于 `circles`，使用比例尺设置 `cx` 和 `cy` 属性， 半径为 `5` 个单位。
 
-对于 `text` 元素，使用比例尺设置 `x` 和 `y` 属性。标签应该标注在点的右边，为此，在将 x 数据值传递给 `xScale` 之前要将它加上 10 个单位。
+对于 `text` 元素，使用比例尺设置 `x` 和 `y` 属性。 标签应该标注在点的右边， 为此，在将 `x` 数据值传递给 `xScale` 之前，要给它加上 `10` 个单位。
 
 # --hints--
 
-你应该有 10 个 `circle` 元素。
+应该有 10 个 `circle` 元素。
 
 ```js
 assert($('circle').length == 10);
 ```
 
-在使用比例尺后第一个 `circle` 元素的 `cx` 值应该大约为 91，`cy` 值应该大约为 368。它的 `r` 值应该为 5。
+在使用比例尺后，第一个 `circle` 元素的 `cx` 值应该大约为 `91`，`cy` 值应该大约为 `368`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -42,7 +43,7 @@ assert(
 );
 ```
 
-在使用比例尺后第二个 `circle` 元素的 `cx` 值应该大约为 159，`cy` 值应该大约为 181。它的 `r` 值也应该为 5。
+在使用比例尺后，第二个 `circle` 元素的 `cx` 值应该大约为 `159`，`cy` 值应该大约为 `181`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -52,7 +53,7 @@ assert(
 );
 ```
 
-在使用比例尺后第三个 `circle` 元素的 `cx` 值应该大约为 340，`cy` 值应该大约为 329。它的 `r` 值也应该为 5。
+在使用比例尺后，第三个 `circle` 元素的 `cx` 值应该大约为 `340`，`cy` 值应该大约为 `329`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -62,7 +63,7 @@ assert(
 );
 ```
 
-在使用比例尺后第四个 `circle` 元素的 `cx` 值应该大约为 131，`cy` 值应该大约为 60。它的 `r` 值也应该为 5。
+在使用比例尺后，第四个 `circle` 元素的 `cx` 值应该大约为 `131`，`cy` 值应该大约为 `60`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -72,7 +73,7 @@ assert(
 );
 ```
 
-在使用比例尺后第五个 `circle` 元素的 `cx` 值应该大约为 440，`cy` 值应该大约为 237。它的 `r` 值也应该为 5。
+在使用比例尺后，第五个 `circle` 元素的 `cx` 值应该大约为 `440`，`cy` 值应该大约为 `237`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -82,7 +83,7 @@ assert(
 );
 ```
 
-在使用比例尺后第六个 `circle` 元素的 `cx` 值应该大约为 271，`cy` 值应该大约为 306。它的 `r` 值也应该为 5。
+在使用比例尺后，第六个 `circle` 元素的 `cx` 值应该大约为 `271`，`cy` 值应该大约为 `306`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -92,7 +93,7 @@ assert(
 );
 ```
 
-在使用比例尺后第七个 `circle` 元素的 `cx` 值应该大约为 361，`cy` 值应该大约为 351。它的 `r` 值也应该为 5。
+在使用比例尺后，第七个 `circle` 元素的 `cx` 值应该大约为 `361`，`cy` 值应该大约为 `351`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -102,7 +103,7 @@ assert(
 );
 ```
 
-在使用比例尺后第八个 `circle` 元素的 `cx` 值应该大约为 261，`cy` 值应该大约为 132。它的 `r` 值也应该为 5。
+在使用比例尺后，第八个 `circle` 元素的 `cx` 值应该大约为 `261`，`cy` 值应该大约为 `132`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -112,7 +113,7 @@ assert(
 );
 ```
 
-在使用比例尺后第九个 `circle` 元素的 `cx` 值应该大约为 131，`cy` 值应该大约为 144。它的 `r` 值也应该为 5。
+在使用比例尺后，第九个 `circle` 元素的 `cx` 值应该大约为 `131`，`cy` 值应该大约为 `144`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -122,7 +123,7 @@ assert(
 );
 ```
 
-在使用比例尺后第十个 `circle` 元素的 `cx` 值应该大约为 79，`cy` 值应该大约为 326。它的 `r` 值也应该为 5。
+在使用比例尺后，第十个 `circle` 元素的 `cx` 值应该大约为 `79`，`cy` 值应该大约为 `326`。 它的 `r` 值应为 `5`。
 
 ```js
 assert(
@@ -132,13 +133,13 @@ assert(
 );
 ```
 
-你应该有 10 个 `text` 元素。
+应该有 10 个 `text` 元素。
 
 ```js
 assert($('text').length == 10);
 ```
 
-在使用比例尺后第一个标签的 `x` 值应该大约为 100，`y` 值应该大约为 368。
+在使用比例尺后，第一个标签的 `x` 值应该大约为 `100`，`y` 值应该大约为 `368`。
 
 ```js
 assert(
@@ -147,7 +148,7 @@ assert(
 );
 ```
 
-在使用比例尺后第二个标签的 `x` 值应该大约为 168，`y` 值应该大约为 181。
+在使用比例尺后，第二个标签的 `x` 值应该大约为 `168`，`y` 值应该大约为 `181`。
 
 ```js
 assert(
@@ -156,7 +157,7 @@ assert(
 );
 ```
 
-在使用比例尺后第三个标签的 `x` 值应该大约为 350，`y` 值应该大约为 329。
+在使用比例尺后，第三个标签的 `x` 值应该大约为 `350`，`y` 值应该大约为 `329`。
 
 ```js
 assert(
@@ -165,7 +166,7 @@ assert(
 );
 ```
 
-在使用比例尺后第四个标签的 `x` 值应该大约为 141，`y` 值应该大约为 60。
+在使用比例尺后，第四个标签的 `x` 值应该大约为 `141`，`y` 值应该大约为 `60`。
 
 ```js
 assert(
@@ -174,7 +175,7 @@ assert(
 );
 ```
 
-在使用比例尺后第五个标签的 `x` 值应该大约为 449，`y` 值应该大约为 237。
+在使用比例尺后，第五个标签的 `x` 值应该大约为 `449`，`y` 值应该大约为 `237`。
 
 ```js
 assert(
@@ -183,7 +184,7 @@ assert(
 );
 ```
 
-在使用比例尺后第六个标签的 `x` 值应该大约为 280，`y` 值应该大约为 306。
+在使用比例尺后，第六个标签的 `x` 值应该大约为 `280`，`y` 值应该大约为 `306`。
 
 ```js
 assert(
@@ -192,7 +193,7 @@ assert(
 );
 ```
 
-在使用比例尺后第七个标签的 `x` 值应该大约为 370，`y` 值应该大约为 351。
+在使用比例尺后，第七个标签的 `x` 值应该大约为 `370`，`y` 值应该大约为 `351`。
 
 ```js
 assert(
@@ -201,7 +202,7 @@ assert(
 );
 ```
 
-在使用比例尺后第八个标签的 `x` 值应该大约为 270，`y` 值应该大约为 132。
+在使用比例尺后，第八个标签的 `x` 值应该大约为 `270`，`y` 值应该大约为 `132`。
 
 ```js
 assert(
@@ -210,7 +211,7 @@ assert(
 );
 ```
 
-在使用比例尺后第九个标签的 `x` 值应该大约为 140，`y` 值应该大约为 144。
+在使用比例尺后，第九个标签的 `x` 值应该大约为 `140`，`y` 值应该大约为 `144`。
 
 ```js
 assert(
@@ -219,7 +220,7 @@ assert(
 );
 ```
 
-在使用比例尺后第十个标签的 `x` 值应该大约为 88，`y` 值应该大约为 326。
+在使用比例尺后，第十个标签的 `x` 值应该大约为 `88`，`y` 值应该大约为 `326`。
 
 ```js
 assert(
@@ -228,5 +229,119 @@ assert(
 );
 ```
 
+# --seed--
+
+## --seed-contents--
+
+```html
+<body>
+  <script>
+    const dataset = [
+                  [ 34,     78 ],
+                  [ 109,   280 ],
+                  [ 310,   120 ],
+                  [ 79,   411 ],
+                  [ 420,   220 ],
+                  [ 233,   145 ],
+                  [ 333,   96 ],
+                  [ 222,    333 ],
+                  [ 78,    320 ],
+                  [ 21,   123 ]
+                ];
+
+    const w = 500;
+    const h = 500;
+    const padding = 60;
+
+    const xScale = d3.scaleLinear()
+                     .domain([0, d3.max(dataset, (d) => d[0])])
+                     .range([padding, w - padding]);
+
+    const yScale = d3.scaleLinear()
+                     .domain([0, d3.max(dataset, (d) => d[1])])
+                     .range([h - padding, padding]);
+
+    const svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", w)
+                  .attr("height", h);
+
+    svg.selectAll("circle")
+       .data(dataset)
+       .enter()
+       .append("circle")
+       // Add your code below this line
+
+
+
+       // Add your code above this line
+
+    svg.selectAll("text")
+       .data(dataset)
+       .enter()
+       .append("text")
+       .text((d) =>  (d[0] + ", "
+ + d[1]))
+       // Add your code below this line
+
+
+
+       // Add your code above this line
+  </script>
+</body>
+```
+
 # --solutions--
 
+```html
+<body>
+  <script>
+    const dataset = [
+                  [ 34,     78 ],
+                  [ 109,   280 ],
+                  [ 310,   120 ],
+                  [ 79,   411 ],
+                  [ 420,   220 ],
+                  [ 233,   145 ],
+                  [ 333,   96 ],
+                  [ 222,    333 ],
+                  [ 78,    320 ],
+                  [ 21,   123 ]
+                ];
+
+    const w = 500;
+    const h = 500;
+    const padding = 60;
+
+    const xScale = d3.scaleLinear()
+                     .domain([0, d3.max(dataset, (d) => d[0])])
+                     .range([padding, w - padding]);
+
+    const yScale = d3.scaleLinear()
+                     .domain([0, d3.max(dataset, (d) => d[1])])
+                     .range([h - padding, padding]);
+
+    const svg = d3.select("body")
+                  .append("svg")
+                  .attr("width", w)
+                  .attr("height", h);
+
+    svg.selectAll("circle")
+       .data(dataset)
+       .enter()
+       .append("circle")
+       .attr("cx", (d) => xScale(d[0]))
+       .attr("cy", (d) => yScale(d[1]))
+       .attr("r", 5)
+
+    svg.selectAll("text")
+       .data(dataset)
+       .enter()
+       .append("text")
+       .text((d) =>  (d[0] + ", "
+ + d[1]))
+       .attr("x", (d) => xScale(d[0] + 10))
+       .attr("y", (d) => yScale(d[1]))
+  </script>
+</body>
+```

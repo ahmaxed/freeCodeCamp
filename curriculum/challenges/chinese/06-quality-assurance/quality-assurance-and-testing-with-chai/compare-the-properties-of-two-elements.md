@@ -3,15 +3,16 @@ id: 587d824c367417b2b2512c4d
 title: 比较两个元素的属性
 challengeType: 2
 forumTopicId: 301588
+dashedName: compare-the-properties-of-two-elements
 ---
 
 # --description--
 
-请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。 你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
 
 # --instructions--
 
-使用 `assert.isAbove()`（大于）或者 `assert.isAtMost()`（小于或等于）来让测试通过。
+在 `tests/1_unit-tests.js` 中，在标有 `#8` 的 `Comparisons` 套件里，将每个 `assert` 改成 `assert.isAbove` 或 `assert.isAtMost` 方法，让测试通过（结果应该返回 `true`）。 不要改变传入断言的参数。
 
 # --hints--
 
@@ -29,7 +30,7 @@ forumTopicId: 301588
   );
 ```
 
-请选择正确的断言—isAbove 或 isAtMost
+请为第一个断言选择正确的方法 — `isAbove` 或 `isAtMost`。
 
 ```js
 (getUserInput) =>
@@ -47,7 +48,7 @@ forumTopicId: 301588
   );
 ```
 
-请选择正确的断言—isAbove 或 isAtMost
+请为第二个断言选择正确的方法 — `isAbove` 或 `isAtMost`。
 
 ```js
 (getUserInput) =>
@@ -61,7 +62,7 @@ forumTopicId: 301588
   );
 ```
 
-请选择正确的断言—isAbove 或 isAtMost
+请为第三个断言选择正确的方法 — `isAbove` 或 `isAtMost`。
 
 ```js
 (getUserInput) =>
@@ -79,7 +80,7 @@ forumTopicId: 301588
   );
 ```
 
-请选择正确的断言—isAbove 或 isAtMost
+请为第四个断言选择正确的方法 — `isAbove` 或 `isAtMost`。
 
 ```js
 (getUserInput) =>
@@ -99,3 +100,10 @@ forumTopicId: 301588
 
 # --solutions--
 
+```js
+/**
+  Backend challenges don't need solutions, 
+  because they would need to be tested against a full working project. 
+  Please check our contributing guidelines to learn more.
+*/
+```

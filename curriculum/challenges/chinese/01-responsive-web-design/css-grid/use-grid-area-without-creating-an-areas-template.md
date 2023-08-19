@@ -4,17 +4,18 @@ title: 使用 grid-area 创建区域模板
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pByETK/c6N7VhK'
 forumTopicId: 301135
+dashedName: use-grid-area-without-creating-an-areas-template
 ---
 
 # --description--
 
-你在上一次挑战中学到的`grid-area`属性有另一种使用方式。如果网格中没有定义区域模板，你也可以像这样为它添加一个模板：
+我们在上一次挑战中学到的 `grid-area` 属性还有另一种使用方式。 如果网格中没有定义区域模板，你也可以像这样为它添加一个模板：
 
 ```css
 item1 { grid-area: 1/1/2/4; }
 ```
 
-这里使用了你之前学习的网格线编号来定义网格项的区域。上例中数字代表这些值：
+这里使用了你之前学习的网格线编号来定义网格项的区域。 上例中数字代表这些值：
 
 ```css
 grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at;
@@ -24,11 +25,11 @@ grid-area: horizontal line to start at / vertical line to start at / horizontal 
 
 # --instructions--
 
-请用`grid-area`属性将类为`item5`的元素放置在第 3 条和第 4 条水平网格线及第 1 条和第 4 条水平网格线之间的区域内。
+请用 `grid-area` 属性将 class 为 `item5` 的元素放置在第 3 条和第 4 条水平网格线，以及第 1 条和第 4 条垂直网格线之间的区域内。
 
 # --hints--
 
-`item5`类应该有`grid-area`属性且值为`3/1/4/4`。
+class 为 `item5` 的元素应具有 `grid-area` 属性，且位于水平第三和第四条线、垂直第一和第四条线之间的区域。
 
 ```js
 assert(
@@ -38,5 +39,48 @@ assert(
 );
 ```
 
+# --seed--
+
+## --seed-contents--
+
+```html
+<style>
+  .item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+
+  .item5 {
+    background: PaleGreen;
+    /* Only change code below this line */
+
+
+    /* Only change code above this line */
+  }
+
+  .container {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+</style>
+
+<div class="container">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+</div>
+```
+
 # --solutions--
 
+```html
+<style>.item5 {grid-area: 3/1/4/4;}</style>
+```

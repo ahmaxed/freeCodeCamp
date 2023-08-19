@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connectStateResults, connectHits } from 'react-instantsearch-dom';
-import isEmpty from 'lodash/isEmpty';
+import { isEmpty } from 'lodash-es';
+import { useTranslation } from 'react-i18next';
+import { searchPageUrl } from '../../../utils/algolia-locale-setup';
+
 import Suggestion from './SearchSuggestion';
 import NoHitsSuggestion from './NoHitsSuggestion';
 
@@ -14,26 +17,22 @@ const CustomHits = connectHits(
     selectedIndex,
     handleHits
   }) => {
+    const { t } = useTranslation();
     const noHits = isEmpty(hits);
-    const noHitsTitle = 'No tutorials found';
+    const noHitsTitle = t('search.no-tutorials');
     const footer = [
       {
         objectID: `footer-${searchQuery}`,
         query: searchQuery,
         url: noHits
           ? null
-          : `https://www.freecodecamp.org/news/search/?query=${encodeURIComponent(
-              searchQuery
-            )}`,
-        title: noHits ? noHitsTitle : `See all results for ${searchQuery}`,
+          : `${searchPageUrl}?query=${encodeURIComponent(searchQuery)}`,
+        title: t('search.see-results', { searchQuery: searchQuery }),
         _highlightResult: {
           query: {
-            value: noHits
-              ? noHitsTitle
-              : `
+            value: `
               <ais-highlight-0000000000>
-                See all results for
-                ${searchQuery}
+                ${t('search.see-results', { searchQuery: searchQuery })}
               </ais-highlight-0000000000>
             `
           }

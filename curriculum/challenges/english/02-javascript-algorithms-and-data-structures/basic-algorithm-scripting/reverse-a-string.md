@@ -3,6 +3,7 @@ id: a202eed8fc186c8434cb6d61
 title: Reverse a String
 challengeType: 5
 forumTopicId: 16043
+dashedName: reverse-a-string
 ---
 
 # --description--
@@ -21,19 +22,19 @@ Your result must be a string.
 assert(typeof reverseString('hello') === 'string');
 ```
 
-`reverseString("hello")` should become `"olleh"`.
+`reverseString("hello")` should return the string `olleh`.
 
 ```js
 assert(reverseString('hello') === 'olleh');
 ```
 
-`reverseString("Howdy")` should become `"ydwoH"`.
+`reverseString("Howdy")` should return the string `ydwoH`.
 
 ```js
 assert(reverseString('Howdy') === 'ydwoH');
 ```
 
-`reverseString("Greetings from Earth")` should return `"htraE morf sgniteerG"`.
+`reverseString("Greetings from Earth")` should return the string `htraE morf sgniteerG`.
 
 ```js
 assert(reverseString('Greetings from Earth') === 'htraE morf sgniteerG');

@@ -3,11 +3,12 @@ id: 587d824e367417b2b2512c57
 title: Test if an Object is an Instance of a Constructor
 challengeType: 2
 forumTopicId: 301605
+dashedName: test-if-an-object-is-an-instance-of-a-constructor
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 `#instanceOf` asserts that an object is an instance of a constructor.
 
@@ -102,8 +103,6 @@ You should choose the correct method for the fourth assertion - `instanceOf` vs.
     }
   );
 ```
-
-# --seed--
 
 # --solutions--
 

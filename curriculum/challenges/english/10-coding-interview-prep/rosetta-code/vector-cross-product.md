@@ -3,6 +3,7 @@ id: 594810f028c0303b75339ad2
 title: Vector cross product
 challengeType: 5
 forumTopicId: 302342
+dashedName: vector-cross-product
 ---
 
 # --description--
@@ -15,19 +16,19 @@ Write a function that takes two vectors (arrays) as input and computes their cro
 
 # --hints--
 
-dotProduct should be a function.
+`crossProduct` should be a function.
 
 ```js
 assert.equal(typeof crossProduct, 'function');
 ```
 
-dotProduct() should return null.
+`crossProduct()` should return null.
 
 ```js
 assert.equal(crossProduct(), null);
 ```
 
-crossProduct([1, 2, 3], [4, 5, 6]) should return [-3, 6, -3].
+`crossProduct([1, 2, 3], [4, 5, 6])` should return `[-3, 6, -3]`.
 
 ```js
 assert.deepEqual(res12, exp12);

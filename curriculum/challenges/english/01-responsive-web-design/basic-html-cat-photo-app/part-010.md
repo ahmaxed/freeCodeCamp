@@ -2,11 +2,12 @@
 id: 5dc24614f86c76b9248c6ebd
 title: Part 10
 challengeType: 0
+dashedName: part-10
 ---
 
 # --description--
 
-You can link to another page with the anchor (`a`) element. For example, [](https://www.freecodecamp.org) would link to `freecodecamp.org`.
+You can link to another page with the anchor (`a`) element. For example, `<a href='https://freecodecamp.org'></a>` would link to `freecodecamp.org`.
 
 Add an anchor element after the paragraph that links to `https://freecatphotoapp.com`. At this point, the link won’t show up in the preview.
 

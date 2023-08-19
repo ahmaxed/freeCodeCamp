@@ -4,6 +4,7 @@ title: Generate Random Whole Numbers with JavaScript
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cRn6bfr'
 forumTopicId: 18186
+dashedName: generate-random-whole-numbers-with-javascript
 ---
 
 # --description--
@@ -16,7 +17,9 @@ Remember that `Math.random()` can never quite return a `1` and, because we're ro
 
 Putting everything together, this is what our code looks like:
 
-`Math.floor(Math.random() * 20);`
+```js
+Math.floor(Math.random() * 20);
+```
 
 We are calling `Math.random()`, multiplying the result by 20, then passing the value to `Math.floor()` function to round the value down to the nearest whole number.
 

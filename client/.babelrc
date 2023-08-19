@@ -22,6 +22,7 @@
     ]
   ],
   "plugins": [
+    "preval",
     [
       "@babel/plugin-proposal-class-properties",
       {
@@ -43,10 +44,6 @@
         "react-bootstrap": {
           "transform": "react-bootstrap/lib/${member}",
           "preventFullImport": true
-        },
-        "lodash": {
-          "transform": "lodash/${member}",
-          "preventFullImport": true
         }
       }
     ],
@@ -62,7 +59,9 @@
           "mathml",
           "python",
           "svg",
-          "xml"
+          "xml",
+          "sql",
+          "typescript"
         ],
         "theme": "default",
         "css": true,

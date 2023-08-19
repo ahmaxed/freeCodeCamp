@@ -3,6 +3,7 @@ id: 5a23c84252665b21eecc8000
 title: Sort disjoint sublist
 challengeType: 5
 forumTopicId: 302307
+dashedName: sort-disjoint-sublist
 ---
 
 # --description--
@@ -13,7 +14,9 @@ Make your function work with the following list of values and set of indices:
 
 <code>values: [7, <b>6</b>, 5, 4, 3, 2, <b>1</b>, <b>0</b>]</code>
 
-`indices(0-based): {6, 1, 7}`
+```js
+indices(0-based): {6, 1, 7}
+```
 
 Where the correct result would be:
 
