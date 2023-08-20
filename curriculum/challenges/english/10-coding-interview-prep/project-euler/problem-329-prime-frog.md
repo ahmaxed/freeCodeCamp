@@ -3,7 +3,6 @@ id: 5900f4b51000cf542c50ffc8
 title: 'Problem 329: Prime Frog'
 challengeType: 5
 forumTopicId: 301986
-dashedName: problem-329-prime-frog
 ---
 
 # --description--

@@ -3,7 +3,6 @@ id: 5a23c84252665b21eecc7e06
 title: Cut a rectangle
 challengeType: 5
 forumTopicId: 302242
-dashedName: cut-a-rectangle
 ---
 
 # --description--
@@ -18,7 +17,7 @@ A given rectangle is made from *m* × *n* squares. If *m* and *n* are not both o
     .s2 { fill: #fbf }
     .d { stroke:black; fill:none}
     </style>
-    <defs>  <g id="m">
+    <defs>	<g id="m">
       <g id="h4"><g id="h2">
       <path id="h" d="m0 10h 640" class="g"/>
       <use xlink:href="#h" transform="translate(0,20)"/></g>

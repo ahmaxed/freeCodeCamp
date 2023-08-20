@@ -1,37 +1,16 @@
 ---
 id: bd7155d8c242eddfaeb5bd13
-title: Build a Recipe Box
+title: 建立配方盒
 challengeType: 3
-forumTopicId: 302354
-dashedName: build-a-recipe-box
+videoUrl: ''
 ---
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/dNVazZ/>.
+**目标：** 构建一个功能类似于此的[CodePen.io](https://codepen.io)应用程序： [https](https://codepen.io/freeCodeCamp/full/dNVazZ/) **：** [//codepen.io/freeCodeCamp/full/dNVazZ/](https://codepen.io) 。完成以下[用户故事](https://en.wikipedia.org/wiki/User_story) 。使用您需要的任何库或API。给它你自己的个人风格。 **用户故事：** 我可以创建具有名称和成分的食谱。 **用户故事：** 我可以看到一个索引视图，其中所有配方的名称都是可见的。 **用户故事：** 我可以点击任何这些食谱来查看它。 **用户故事：** 我可以编辑这些食谱。 **用户故事：** 我可以删除这些食谱。 **用户故事：** 我添加的所有新食谱都保存在浏览器的本地存储中。如果我刷新页面，这些配方仍然会在那里。 **提示：** 您应该在CodePen上为本地存储密钥添加前缀，即`_username_recipes`如果卡住，请记住使用[Read-Search-Ask](//github.com/FreeCodeCamp/freecodecamp/wiki/FreeCodeCamp-Get-Help) 。完成后，单击“我已完成此挑战”按钮并包含指向CodePen的链接。您可以通过Facebook上的朋友分享您的项目反馈。
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+# --hints--
 
-**User Story:** I can create recipes that have names and ingredients.
-
-**User Story:** I can see an index view where the names of all the recipes are visible.
-
-**User Story:** I can click into any of those recipes to view it.
-
-**User Story:** I can edit these recipes.
-
-**User Story:** I can delete these recipes.
-
-**User Story:** All new recipes I add are saved in my browser's local storage. If I refresh the page, these recipes will still be there.
-
-**Hint:** You should prefix your local storage keys on CodePen, i.e. `_username_recipes`
-
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
-
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 
-```js
-// solution required
-```

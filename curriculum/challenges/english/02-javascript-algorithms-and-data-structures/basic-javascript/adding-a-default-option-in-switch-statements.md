@@ -4,7 +4,6 @@ title: Adding a Default Option in Switch Statements
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/c3JvVfg'
 forumTopicId: 16653
-dashedName: adding-a-default-option-in-switch-statements
 ---
 
 # --description--
@@ -31,38 +30,38 @@ switch (num) {
 # --instructions--
 
 Write a switch statement to set `answer` for the following conditions:  
-`a` - `apple`  
-`b` - `bird`  
-`c` - `cat`  
-`default` - `stuff`
+`"a"` - "apple"  
+`"b"` - "bird"  
+`"c"` - "cat"  
+`default` - "stuff"
 
 # --hints--
 
-`switchOfStuff("a")` should return the string `apple`
+`switchOfStuff("a")` should have a value of "apple"
 
 ```js
 assert(switchOfStuff('a') === 'apple');
 ```
 
-`switchOfStuff("b")` should return the string `bird`
+`switchOfStuff("b")` should have a value of "bird"
 
 ```js
 assert(switchOfStuff('b') === 'bird');
 ```
 
-`switchOfStuff("c")` should return the string `cat`
+`switchOfStuff("c")` should have a value of "cat"
 
 ```js
 assert(switchOfStuff('c') === 'cat');
 ```
 
-`switchOfStuff("d")` should return the string `stuff`
+`switchOfStuff("d")` should have a value of "stuff"
 
 ```js
 assert(switchOfStuff('d') === 'stuff');
 ```
 
-`switchOfStuff(4)` should return the string `stuff`
+`switchOfStuff(4)` should have a value of "stuff"
 
 ```js
 assert(switchOfStuff(4) === 'stuff');

@@ -1,52 +1,35 @@
 ---
 id: 5900f4cd1000cf542c50ffe0
-title: 'Problem 353: Risky moon'
+title: 问题353：危险的月亮
 challengeType: 5
-forumTopicId: 302013
-dashedName: problem-353-risky-moon
+videoUrl: ''
 ---
 
 # --description--
 
-A moon could be described by the sphere C(r) with centre (0,0,0) and radius r.
+月球可以由球体C（r）描述，其中心（0,0,0）和半径r。
 
-There are stations on the moon at the points on the surface of C(r) with integer coordinates. The station at (0,0,r) is called North Pole station, the station at (0,0,-r) is called South Pole station.
+月球上有C（r）表面点上的整数坐标。 （0,0，r）处的站称为北极站，（0,0，-r）处的站称为南极站。
 
-All stations are connected with each other via the shortest road on the great arc through the stations. A journey between two stations is risky. If d is the length of the road between two stations, (d/(π r))2 is a measure for the risk of the journey (let us call it the risk of the road). If the journey includes more than two stations, the risk of the journey is the sum of risks of the used roads.
+所有车站都通过车站的大弧上最短的道路相互连接。两个站之间的旅程是有风险的。如果d是两个站之间的道路长度，（d /（πr））2是旅程风险的度量（让我们称之为道路风险）。如果旅程包括两个以上的车站，则旅程的风险是使用过的道路的风险总和。
 
-A direct journey from the North Pole station to the South Pole station has the length πr and risk 1. The journey from the North Pole station to the South Pole station via (0,r,0) has the same length, but a smaller risk: (½πr/(πr))2+(½πr/(πr))2=0.5.
+从北极站到南极站的直接旅程长度为πr，风险为1.从北极站到南极站的路程（0，r，0）长度相同，但风险较小：（½πr/（πr））2+（1 /2πr/（πr））2 = 0.5。
 
-The minimal risk of a journey from the North Pole station to the South Pole station on C(r) is M(r).
+从C（r）的北极站到南极站的旅程的最小风险是M（r）。
 
-You are given that M(7)=0.1784943998 rounded to 10 digits behind the decimal point.
+给出M（7）= 0.1784943998四舍五入到小数点后面的10位数。
 
-Find ∑M(2n-1) for 1≤n≤15.
+找到ΣM（2n-1）为1≤n≤15。
 
-Give your answer rounded to 10 digits behind the decimal point in the form a.bcdefghijk.
+将答案四舍五入到小数点后面的10位数，形式为a.bcdefghijk。
 
 # --hints--
 
-`euler353()` should return 1.2759860331.
+`euler353()`应返回1.2759860331。
 
 ```js
 assert.strictEqual(euler353(), 1.2759860331);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler353() {
-
-  return true;
-}
-
-euler353();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

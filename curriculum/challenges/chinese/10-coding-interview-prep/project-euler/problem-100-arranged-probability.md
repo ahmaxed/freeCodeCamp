@@ -1,48 +1,21 @@
 ---
 id: 5900f3d01000cf542c50fee3
-title: 'Problem 100: Arranged probability'
+title: 问题100：安排概率
 challengeType: 5
-forumTopicId: 301724
-dashedName: problem-100-arranged-probability
+videoUrl: ''
 ---
 
 # --description--
 
-If a box contains twenty-one coloured discs, composed of fifteen blue discs and six red discs, and two discs were taken at random, it can be seen that the probability of taking two blue discs, P(BB) = (15/21)×(14/20) = 1/2.
-
-The next such arrangement, for which there is exactly 50% chance of taking two blue discs at random, is a box containing eighty-five blue discs and thirty-five red discs.
-
-By finding the first arrangement to contain over 10<sup>12</sup> = 1,000,000,000,000 discs in total, determine the number of blue discs that the box would contain.
+如果一个盒子包含21个彩色光盘，由15个蓝色光盘和6个红色光盘组成，随机拍摄两张光盘，可以看出拍摄两张蓝色光盘的概率，P（BB）=（15/21） ）×（14/20）= 1/2。下一个这样的安排，其中有50％的机会随机拍摄两张蓝色光盘，是一个包含八十五个蓝色光盘和三十五个红色光盘的盒子。通过找到第一个包含总共超过1012 = 1,000,000,000,000个光盘的布置，确定该盒子将包含的蓝色光盘的数量。
 
 # --hints--
 
-`arrangedProbability()` should return a number.
+`euler100()`应该返回756872327473。
 
 ```js
-assert(typeof arrangedProbability() === 'number');
-```
-
-`arrangedProbability()` should return 756872327473.
-
-```js
-assert.strictEqual(arrangedProbability(), 756872327473);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function arrangedProbability() {
-
-  return true;
-}
-
-arrangedProbability();
+assert.strictEqual(euler100(), 756872327473);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

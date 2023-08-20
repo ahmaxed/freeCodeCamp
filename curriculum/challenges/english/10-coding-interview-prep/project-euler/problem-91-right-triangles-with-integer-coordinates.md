@@ -3,7 +3,6 @@ id: 5900f3c71000cf542c50feda
 title: 'Problem 91: Right triangles with integer coordinates'
 challengeType: 5
 forumTopicId: 302208
-dashedName: problem-91-right-triangles-with-integer-coordinates
 ---
 
 # --description--

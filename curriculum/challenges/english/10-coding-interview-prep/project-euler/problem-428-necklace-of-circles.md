@@ -3,7 +3,6 @@ id: 5900f5191000cf542c51002b
 title: 'Problem 428: Necklace of Circles'
 challengeType: 5
 forumTopicId: 302098
-dashedName: problem-428-necklace-of-circles
 ---
 
 # --description--

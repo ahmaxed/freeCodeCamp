@@ -4,7 +4,6 @@ title: Create a Set of Checkboxes
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVMPUv/cqrkJsp'
 forumTopicId: 16821
-dashedName: create-a-set-of-checkboxes
 ---
 
 # --description--
@@ -21,9 +20,7 @@ It is considered best practice to explicitly define the relationship between a c
 
 Here's an example of a checkbox:
 
-```html
-<label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>
-```
+`<label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>`
 
 # --instructions--
 
@@ -76,7 +73,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
 
   <p>Things cats love:</p>
   <ul>
@@ -90,7 +87,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
     <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
     <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
     <input type="text" placeholder="cat photo URL" required>
@@ -106,7 +103,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
   
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+  <a href="#"><img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
   
   <p>Things cats love:</p>
   <ul>
@@ -120,7 +117,7 @@ assert($('label').parent().get(0).tagName.match('FORM'));
     <li>thunder</li>
     <li>other cats</li>
   </ol>
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+  <form action="https://freecatphotoapp.com/submit-cat-photo">
     <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"> Indoor</label>
     <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
     <label for="playful"><input id="playful" type="checkbox" name="personality">Playful</label>

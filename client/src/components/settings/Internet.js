@@ -9,7 +9,6 @@ import {
   ControlLabel
 } from '@freecodecamp/react-bootstrap';
 import isURL from 'validator/lib/isURL';
-import { withTranslation } from 'react-i18next';
 
 import { maybeUrlRE } from '../../utils';
 
@@ -20,7 +19,6 @@ import BlockSaveButton from '../helpers/form/BlockSaveButton';
 const propTypes = {
   githubProfile: PropTypes.string,
   linkedin: PropTypes.string,
-  t: PropTypes.func.isRequired,
   twitter: PropTypes.string,
   updateInternetSettings: PropTypes.func.isRequired,
   website: PropTypes.string
@@ -67,7 +65,6 @@ class InternetSettings extends Component {
   }
 
   getValidationStateFor(maybeURl = '') {
-    const { t } = this.props;
     if (!maybeURl || !maybeUrlRE.test(maybeURl)) {
       return {
         state: null,
@@ -82,7 +79,9 @@ class InternetSettings extends Component {
     }
     return {
       state: 'error',
-      message: t('validation.invalid-url')
+      message:
+        'We could not validate your URL correctly, ' +
+        'please ensure it is correct'
     };
   }
 
@@ -155,7 +154,6 @@ class InternetSettings extends Component {
     ) : null;
 
   render() {
-    const { t } = this.props;
     const {
       formValues: { githubProfile, linkedin, twitter, website }
     } = this.state;
@@ -182,7 +180,7 @@ class InternetSettings extends Component {
 
     return (
       <Fragment>
-        <SectionHeader>{t('settings.headings.internet')}</SectionHeader>
+        <SectionHeader>Your Internet Presence</SectionHeader>
         <FullWidthRow>
           <form id='internet-presence' onSubmit={this.handleSubmit}>
             <FormGroup
@@ -231,7 +229,7 @@ class InternetSettings extends Component {
               controlId='internet-website'
               validationState={websiteValidation}
             >
-              <ControlLabel>{t('settings.labels.personal')}</ControlLabel>
+              <ControlLabel>Personal Website</ControlLabel>
               <FormControl
                 onChange={this.createHandleChange('website')}
                 placeholder='https://example.com'
@@ -254,4 +252,4 @@ class InternetSettings extends Component {
 InternetSettings.displayName = 'InternetSettings';
 InternetSettings.propTypes = propTypes;
 
-export default withTranslation()(InternetSettings);
+export default InternetSettings;

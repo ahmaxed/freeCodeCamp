@@ -1,54 +1,35 @@
 ---
 id: 5900f4601000cf542c50ff72
-title: 'Problem 244: Sliders'
+title: 问题244：滑块
 challengeType: 5
-forumTopicId: 301891
-dashedName: problem-244-sliders
+videoUrl: ''
 ---
 
 # --description--
 
-You probably know the game Fifteen Puzzle. Here, instead of numbered tiles, we have seven red tiles and eight blue tiles.
+你可能知道游戏Fifteen Puzzle。在这里，我们有7个红色瓷砖和8个蓝色瓷砖，而不是编号瓷砖。移动由方块（左，右，上，下）的大写初始值表示，其中区块滑动，例如从配置（S）开始，通过序列LULUR我们到达配置（E）：
 
-A move is denoted by the uppercase initial of the direction (Left, Right, Up, Down) in which the tile is slid, e.g. starting from configuration (S), by the sequence LULUR we reach the configuration (E):
+（S），（E）
 
-(S), (E)
+对于每个路径，其校验和由（伪代码）计算：
 
-For each path, its checksum is calculated by (pseudocode):
-
-checksum = 0 checksum = (checksum × 243 + m1) mod 100 000 007 checksum = (checksum × 243 + m2) mod 100 000 007 … checksum = (checksum × 243 + mn) mod 100 000 007 where mk is the ASCII value of the kth letter in the move sequence and the ASCII values for the moves are:
+checksum = 0 checksum =（checksum×243 + m1）mod 100 000 007 checksum =（checksum×243 + m2）mod 100 000 007 ... checksum =（checksum×243 + mn）mod 100 000 007其中mk是ASCII值移动序列中的第k个字母和移动的ASCII值为：
 
 L76R82U85D68
 
-For the sequence LULUR given above, the checksum would be 19761398. Now, starting from configuration (S), find all shortest ways to reach configuration (T).
+对于上面给出的序列LULUR，校验和将是19761398.现在，从配置（S）开始，找到达到配置（T）的所有最短路径。
 
-(S), (T)
+（S），（T）
 
-What is the sum of all checksums for the paths having the minimal length?
+具有最小长度的路径的所有校验和的总和是多少？
 
 # --hints--
 
-`euler244()` should return 96356848.
+`euler244()`应该返回96356848。
 
 ```js
 assert.strictEqual(euler244(), 96356848);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler244() {
-
-  return true;
-}
-
-euler244();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

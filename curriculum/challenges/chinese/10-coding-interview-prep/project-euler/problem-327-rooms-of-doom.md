@@ -1,54 +1,37 @@
 ---
 id: 5900f4b31000cf542c50ffc6
-title: 'Problem 327: Rooms of Doom'
+title: 问题327：末日的房间
 challengeType: 5
-forumTopicId: 301984
-dashedName: problem-327-rooms-of-doom
+videoUrl: ''
 ---
 
 # --description--
 
-A series of three rooms are connected to each other by automatic doors.
+一系列三个房间通过自动门相互连接。
 
-Each door is operated by a security card. Once you enter a room the door automatically closes and that security card cannot be used again. A machine at the start will dispense an unlimited number of cards, but each room (including the starting room) contains scanners and if they detect that you are holding more than three security cards or if they detect an unattended security card on the floor, then all the doors will become permanently locked. However, each room contains a box where you may safely store any number of security cards for use at a later stage.
+每扇门都由安全卡操作。进入房间后，门会自动关闭，安全卡不能再次使用。一台机器在开始时将分配无限数量的卡，但每个房间（包括起始室）都包含扫描仪，如果他们检测到您持有三张以上的安全卡，或者如果他们在地板上检测到无人看管的安全卡，那么所有的门都将永久锁定。但是，每个房间都有一个盒子，您可以安全地存放任意数量的安全卡，以便在以后使用。
 
-If you simply tried to travel through the rooms one at a time then as you entered room 3 you would have used all three cards and would be trapped in that room forever!
+如果您只是尝试一次一个地穿过房间，那么当您进入房间3时，您将使用所有三张卡片，并将永远被困在那个房间！
 
-However, if you make use of the storage boxes, then escape is possible. For example, you could enter room 1 using your first card, place one card in the storage box, and use your third card to exit the room back to the start. Then after collecting three more cards from the dispensing machine you could use one to enter room 1 and collect the card you placed in the box a moment ago. You now have three cards again and will be able to travel through the remaining three doors. This method allows you to travel through all three rooms using six security cards in total.
+但是，如果您使用存储箱，则可以进行逃生。例如，您可以使用第一张卡进入房间1，将一张卡放入存储箱，然后使用第三张卡退回到房间。然后在从点胶机收集另外三张牌之后，您可以使用一张进入1号房间并收集刚刚放入盒子中的卡片。你现在又有三张牌，可以通过剩余的三扇门。此方法允许您使用总共六张安全卡通过所有三个房间。
 
-It is possible to travel through six rooms using a total of 123 security cards while carrying a maximum of 3 cards.
+可以使用总共123张安全卡通过六个房间，最多可携带3张卡。
 
-Let C be the maximum number of cards which can be carried at any time. Let R be the number of rooms to travel through. Let M(C,R) be the minimum number of cards required from the dispensing machine to travel through R rooms carrying up to a maximum of C cards at any time.
+设C是任何时候可以携带的最大卡数。设R是要经过的房间数量。设M（C，R）是分配机器在任何时间通过最多携带C卡的R室所需的最小卡数。
 
-For example, M(3,6)=123 and M(4,6)=23.And, ΣM(C,6)=146 for 3 ≤ C ≤ 4.
+例如，M（3,6）= 123并且M（4,6）= 23.并且，对于3≤C≤4，ΣM（C，6）= 146。
 
-You are given that ΣM(C,10)=10382 for 3 ≤ C ≤ 10.
+对于3≤C≤10，给出ΣM（C，10）= 10382。
 
-Find ΣM(C,30) for 3 ≤ C ≤ 40.
+找3ΣC≤40的ΣM（C，30）。
 
 # --hints--
 
-`euler327()` should return 34315549139516.
+`euler327()`应返回34315549139516。
 
 ```js
 assert.strictEqual(euler327(), 34315549139516);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler327() {
-
-  return true;
-}
-
-euler327();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

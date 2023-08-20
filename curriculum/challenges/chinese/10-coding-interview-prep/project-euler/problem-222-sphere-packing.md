@@ -1,40 +1,23 @@
 ---
 id: 5900f44b1000cf542c50ff5d
-title: 'Problem 222: Sphere Packing'
+title: 问题222：球体包装
 challengeType: 5
-forumTopicId: 301865
-dashedName: problem-222-sphere-packing
+videoUrl: ''
 ---
 
 # --description--
 
-What is the length of the shortest pipe, of internal radius 50mm, that can fully contain 21 balls of radii 30mm, 31mm, ..., 50mm?
+什么是最短管道的长度，内径为50毫米，可以完全包含21个半径为30毫米，31毫米，......，50毫米的球？
 
-Give your answer in micrometres (10-6 m) rounded to the nearest integer.
+以微米（10-6米）四舍五入到最接近的整数给出答案。
 
 # --hints--
 
-`euler222()` should return 1590933.
+`euler222()`应该返回1590933。
 
 ```js
 assert.strictEqual(euler222(), 1590933);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler222() {
-
-  return true;
-}
-
-euler222();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

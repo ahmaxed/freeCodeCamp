@@ -1,156 +1,51 @@
 ---
 id: 599d1566a02b571412643b84
-title: Ethiopian multiplication
+title: 埃塞俄比亚的乘法
 challengeType: 5
-forumTopicId: 302257
-dashedName: ethiopian-multiplication
+videoUrl: ''
 ---
 
 # --description--
 
-Ethiopian multiplication is a method of multiplying integers using only addition, doubling, and halving.
-
-**Method:**
-
-<ol>
-  <li>Take two numbers to be multiplied and write them down at the top of two columns</li>
-  <li>In the left-hand column repeatedly halve the last number, discarding any remainders, and write the result below the last in the same column, until you write a value of <code>1</code></li>
-  <li>In the right-hand column repeatedly double the last number and write the result below. stop when you add a result in the same row as where the left hand column shows <code>1</code></li>
-  <li>Examine the table produced and discard any row where the value in the left column is even</li>
-  <li>Sum the values in the right-hand column that remain to produce the result of multiplying the original two numbers together</li>
-</ol>
-
-**For example:** `17 × 34`
-
-<pre>17   34
-</pre>
-
-Halving the first column:
-
-<pre>17   34
-8
-4
-2
-1
-</pre>
-
-Doubling the second column:
-
-<pre>17   34
-8    68
-4   136
-2   272
-1   544
-</pre>
-
-Strike-out rows whose first cell is even:
-
-<pre>17   34
-8    <strike>68</strike>
-4   <strike>136</strike>
-2   <strike>272</strike>
-1   544
-</pre>
-
-Sum the remaining numbers in the right-hand column:
-
-<!-- markdownlint-disable MD003 -->
-
-<pre>17   34
-8    --
-4   ---
-2   ---
-1   544
-   ====
-    578
-</pre>
-
-<!-- markdownlint-enable MD003 -->
-
-So `17` multiplied by `34`, by the Ethiopian method is `578`.
-
-# --instructions--
-
-The task is to define three named functions/methods/procedures/subroutines:
-
-<ol>
-  <li>one to halve an integer,</li>
-  <li>one to double an integer, and</li>
-  <li>one to state if an integer is even</li>
-</ol>
-
-Use these functions to create a function that does Ethiopian multiplication.
-
-<!-- markdownlint-disable MD046-->
+<p>埃塞俄比亚乘法是一种仅使用加法，加倍和减半来乘以整数的方法。 </p><p>方法： </p>取两个数字相乘，然后将它们写在两列的顶部。在左侧列中反复将最后一个数字减半，丢弃任何余数，并将结果写入同一列中的最后一个，直到您写入值1.在右侧列中重复加倍最后一个数字并写入结果如下。在左侧列显示的同一行中添加结果时停止1.检查生成的表并丢弃左列中的值为偶数的任何行。将右侧列中的值相加，以产生将原始两个数相乘的结果<p>例如：17×34 </p><p> 17 34 </p><p>将第一列减半： </p><p> 17 34 </p><p> 8 </p><p> 4 </p><p> 2 </p><p> 1 </p><p>加倍第二列： </p><p> 17 34 </p><p> 8 68 </p><p> 4 136 </p><p> 2 272 </p><p> 1 544 </p><p>第一个单元格为偶数的删除行： </p><p> 17 34 </p><p> 8 <strike>68</strike> </p><p> 4 <strike>136</strike> </p><p> 2 <strike>272</strike> </p><p> 1 544 </p><p>将右侧列中的剩余数字相加： </p><p> 17 34 </p><p> 8  - </p><p> 4 --- </p><p> 2 --- </p><p> 1 544 </p><p> ==== </p><p> 578 </p><p>所以17乘以34，埃塞俄比亚方法是578。 </p>任务： <p>任务是定义三个命名函数/方法/过程/子例程： </p>一个将一个整数减半，一个减半整数，一个整数是偶数。 <p>使用这些函数创建一个执行埃塞俄比亚乘法的函数。 </p>
 
 # --hints--
 
-`eth_mult` should be a function.
+`eth_mult`是一个功能。
 
 ```js
 assert(typeof eth_mult === 'function');
 ```
 
-`eth_mult(17,34)` should return `578`.
+`eth_mult(17,34)`应该返回`578` 。
 
 ```js
 assert.equal(eth_mult(17, 34), 578);
 ```
 
-`eth_mult(23,46)` should return `1058`.
+`eth_mult(23,46)`应该返回`1058` 。
 
 ```js
 assert.equal(eth_mult(23, 46), 1058);
 ```
 
-`eth_mult(12,27)` should return `324`.
+`eth_mult(12,27)`应该返回`324` 。
 
 ```js
 assert.equal(eth_mult(12, 27), 324);
 ```
 
-`eth_mult(56,98)` should return `5488`.
+`eth_mult(56,98)`应该返回`5488` 。
 
 ```js
 assert.equal(eth_mult(56, 98), 5488);
 ```
 
-`eth_mult(63,74)` should return `4662`.
+`eth_mult(63,74)`应该返回`4662` 。
 
 ```js
 assert.equal(eth_mult(63, 74), 4662);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function eth_mult(a, b) {
-
-}
-```
-
 # --solutions--
 
-```js
-function eth_mult(a, b) {
-  let sum = 0; a = [a]; b = [b];
-
-  let half = a => a / 2,
-    double = a => a * 2,
-    is_even = a => a % 2 == 0;
-
-  while (a[0] !== 1) {
-    a.unshift(Math.floor(half(a[0])));
-    b.unshift(double(b[0]));
-  }
-
-  for (let i = a.length - 1; i > 0; i -= 1) {
-    if (!is_even(a[i])) {
-      sum += b[i];
-    }
-  }
-  return sum + b[0];
-}
-```

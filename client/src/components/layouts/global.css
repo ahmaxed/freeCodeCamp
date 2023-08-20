@@ -1,28 +1,12 @@
 html {
-  height: 100%;
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
-  height: 100%;
   font-family: 'Roboto Mono', monospace;
   color: var(--secondary-color);
   background: var(--secondary-background);
-}
-
-#___gatsby {
-  height: 100%;
-}
-
-#gatsby-focus-wrapper {
-  height: 100%;
-}
-
-.page-wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 .btn-cta-big {
@@ -32,20 +16,12 @@ body {
   width: 100%;
 }
 
-/*
-  Row from @freecodecamp/react-bootstrap adds some negative margin which causes
-  a little bit of horizontal overflow on certain pages. This eliminates that
-  for those pages.
-*/
-.overflow-fix {
-  margin-right: 0;
-  margin-left: 0;
-}
-
 .default-layout {
-  flex: 1 0 auto;
   margin-top: var(--header-height, 0px);
   background: var(--secondary-background);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--header-height, 0px));
 }
 
 h1 {
@@ -93,7 +69,7 @@ p {
 }
 
 ::selection {
-  background-color: var(--selection-color);
+  background-color: rgba(var(--highlight-color), 0.3);
 }
 
 @media (max-width: 500px) {
@@ -297,51 +273,13 @@ fieldset[disabled] .btn-primary.focus {
   margin-left: 5px;
 }
 
-.link-btn:hover,
-.link-btn.btn-lg:hover svg {
+.link-btn:hover svg {
   fill: var(--quaternary-background);
-  background-color: var(--secondary-color);
-  color: var(--secondary-background);
-}
-
-.link-btn.btn-lg svg,
-.map-icon,
-.cert-header-icon {
-  flex-shrink: 0;
-  fill: var(--primary-color);
-}
-
-.map-icon {
-  width: 35px;
-  max-height: 45px;
-  margin-right: 20px;
-}
-
-.cert-header-icon {
-  display: block;
-  width: 80px;
-  margin: auto;
 }
 
 @media (min-width: 700px) {
   .link-btn {
     font-size: 1.1rem;
-  }
-  .map-icon {
-    width: 45px;
-    max-height: 55px;
-  }
-  .cert-header-icon {
-    width: 100px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .map-icon {
-    width: 50px;
-  }
-  .cert-header-icon {
-    width: 120px;
   }
 }
 
@@ -388,7 +326,6 @@ code {
   color: var(--tertiary-color);
   border-radius: 0px;
   font-family: 'Roboto Mono', monospace;
-  overflow-wrap: anywhere;
 }
 
 .panel {
@@ -526,7 +463,7 @@ pre {
 .has-success.checkbox label,
 .has-success.radio-inline label,
 .has-success.checkbox-inline label {
-  color: var(--highlight-color);
+  color: rgb(var(--highlight-color));
 }
 
 .has-error .help-block,

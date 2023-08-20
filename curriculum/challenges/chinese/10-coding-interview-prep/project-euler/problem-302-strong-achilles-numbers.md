@@ -1,50 +1,33 @@
 ---
 id: 5900f49b1000cf542c50ffad
-title: 'Problem 302: Strong Achilles Numbers'
+title: 问题302：强阿喀琉斯数
 challengeType: 5
-forumTopicId: 301956
-dashedName: problem-302-strong-achilles-numbers
+videoUrl: ''
 ---
 
 # --description--
 
-A positive integer n is powerful if p2 is a divisor of n for every prime factor p in n.
+如果p2是n中每个素数p的n的因数，则正整数n是有力的。
 
-A positive integer n is a perfect power if n can be expressed as a power of another positive integer.
+如果n可以表示为另一个正整数的幂，则正整数n是理想幂。
 
-A positive integer n is an Achilles number if n is powerful but not a perfect power. For example, 864 and 1800 are Achilles numbers: 864 = 25·33 and 1800 = 23·32·52.
+如果n是强大的，但不是完美的幂，则正整数n是阿喀琉斯数。 例如，864和1800是阿喀琉斯数字：864 = 25·33和1800 = 23·32·52。
 
-We shall call a positive integer S a Strong Achilles number if both S and φ(S) are Achilles numbers.1 For example, 864 is a Strong Achilles number: φ(864) = 288 = 25·32. However, 1800 isn't a Strong Achilles number because: φ(1800) = 480 = 25·31·51.
+如果S和φ（S）都是阿喀琉斯数，我们将正整数S称为强阿喀琉斯数.1 例如，864是强致命弱点数：φ（864）= 288 = 25·32。 但是，1800不是强阿喀琉斯数字，因为：（1800）= 480 = 25·31·51。
 
-There are 7 Strong Achilles numbers below 104 and 656 below 108.
+低于104的有7个强弱点和低于108的656。
 
-How many Strong Achilles numbers are there below 1018?
+1018以下有多少个强阿喀琉斯数字？
 
-1 φ denotes Euler's totient function.
+1φ表示欧拉的拉伸函数。
 
 # --hints--
 
-`euler302()` should return 1170060.
+`euler302()`应该返回1170060。
 
 ```js
 assert.strictEqual(euler302(), 1170060);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler302() {
-
-  return true;
-}
-
-euler302();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

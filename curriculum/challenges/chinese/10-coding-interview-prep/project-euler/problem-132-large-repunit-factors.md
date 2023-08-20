@@ -1,42 +1,21 @@
 ---
 id: 5900f3f11000cf542c50ff03
-title: 'Problem 132: Large repunit factors'
+title: 问题132：大的重新安置因素
 challengeType: 5
-forumTopicId: 301760
-dashedName: problem-132-large-repunit-factors
+videoUrl: ''
 ---
 
 # --description--
 
-A number consisting entirely of ones is called a repunit. We shall define R(k) to be a repunit of length k.
-
-For example, R(10) = 1111111111 = 11×41×271×9091, and the sum of these prime factors is 9414.
-
-Find the sum of the first forty prime factors of R(109).
+完全由1组成的数字称为repunit。我们将R（k）定义为长度k的重新定位。例如，R（10）= 1111111111 = 11×41×271×9091，并且这些素因子的总和是9414.求出R（109）的前40个素因子的总和。
 
 # --hints--
 
-`euler132()` should return 843296.
+`euler132()`应返回843296。
 
 ```js
 assert.strictEqual(euler132(), 843296);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler132() {
-
-  return true;
-}
-
-euler132();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -1,14 +1,13 @@
 ---
 id: a2f1d72d9b908d0bd72bb9f6
-title: 创建一个人员对象
+title: 构造一个 Person 类
 challengeType: 5
 forumTopicId: 16020
-dashedName: make-a-person
 ---
 
 # --description--
 
-用以下方法填充对象构造函数：
+在这道题目中，我们需要写一个构造器（constructor）函数。它只接收一个字符串参数`firstAndLast`，这个参数代表一个英文名的全名（姓和名）。这个构造函数创建出的实例需要具有以下方法：
 
 ```js
 getFirstName()
@@ -19,53 +18,53 @@ setLastName(last)
 setFullName(firstAndLast)
 ```
 
-运行测试以查看每个方法的预期输出。 方法接收一个参数，因此必须要有一个参数，并且其类型应该为字符串。 这些方法必须是与对象交互的唯一可用方法。
+你可以点击 “运行测试”，然后就可以在底下的控制台中看到每个测试用例执行的情况。 方法接收一个字符串格式的参数。 这些方法必须是与对象进行交互的唯一可用方法。 如果你遇到了问题，请点击[帮助](https://forum.freecodecamp.one/t/topic/157)。
 
 # --hints--
 
-`Object.keys(bob).length` 应返回 6。
+`Object.keys(bob).length`应该返回 6。
 
 ```js
 assert.deepEqual(Object.keys(bob).length, 6);
 ```
 
-`bob instanceof Person` 应返回 `true`。
+`bob instanceof Person`应该返回`true`。
 
 ```js
 assert.deepEqual(bob instanceof Person, true);
 ```
 
-`bob.firstName` 应该返回 `undefined`。
+`bob.firstName`应该返回`undefined`。
 
 ```js
 assert.deepEqual(bob.firstName, undefined);
 ```
 
-`bob.lastName` 应该返回 `undefined`。
+`bob.lastName`应该返回`undefined`。
 
 ```js
 assert.deepEqual(bob.lastName, undefined);
 ```
 
-`bob.getFirstName()` 应该返回字符串 `Bob`.
+`bob.getFirstName()`应该返回 'Bob'。
 
 ```js
 assert.deepEqual(bob.getFirstName(), 'Bob');
 ```
 
-`bob.getLastName()` 应该返回字符串 `Ross`.
+`bob.getLastName()`应该返回 'Ross'。
 
 ```js
 assert.deepEqual(bob.getLastName(), 'Ross');
 ```
 
-`bob.getFullName()` 应该返回字符串 `Bob Ross`.
+`bob.getFullName()`应该返回 'Bob Ross'。
 
 ```js
 assert.deepEqual(bob.getFullName(), 'Bob Ross');
 ```
 
-`bob.getFullName()` 应该在 `bob.setFirstName("Haskell")` 之后返回字符串 `Haskell Ross`。
+调用`bob.setFirstName('Haskell')`之后，`bob.getFullName()`应该返回 'Haskell Ross'。
 
 ```js
 assert.strictEqual(
@@ -77,7 +76,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getFullName()` 应该在 `bob.setLastName("Curry")` 之后返回字符串 `Haskell Curry`。
+调用`bob.setLastName('Curry')`之后，`bob.getFullName()`应该返回 'Haskell Curry'。
 
 ```js
 assert.strictEqual(
@@ -90,7 +89,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getFullName()` 应该返回字符串 `Haskell Curry` 之后的 `bob.setFullName("Haskell Curry")`。
+调用`bob.setFullName('Haskell Curry')`之后，`bob.getFullName()`应该返回 'Haskell Curry'。
 
 ```js
 assert.strictEqual(
@@ -102,7 +101,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getFirstName()` 应该返回字符串 `Haskell` 之后的 `bob.setFullName("Haskell Curry")`。
+调用`bob.setFullName('Haskell Curry')`之后，`bob.getFirstName()`应该返回 'Haskell'。
 
 ```js
 assert.strictEqual(
@@ -114,7 +113,7 @@ assert.strictEqual(
 );
 ```
 
-`bob.getLastName()` 应该返回字符串 `Curry` 之后 `bob.setFullName("Haskell Curry")`。
+调用`bob.setFullName('Haskell Curry')`之后，`bob.getLastName()`应该返回 'Curry'。
 
 ```js
 assert.strictEqual(
@@ -126,72 +125,5 @@ assert.strictEqual(
 );
 ```
 
-# --seed--
-
-## --after-user-code--
-
-```js
-if(bob){
-  bob = new Person("Bob Ross");
-}
-```
-
-## --seed-contents--
-
-```js
-var Person = function(firstAndLast) {
-  // Only change code below this line
-  // Complete the method below and implement the others similarly
-  this.getFullName = function() {
-    return "";
-  };
-  return firstAndLast;
-};
-
-var bob = new Person('Bob Ross');
-bob.getFullName();
-```
-
 # --solutions--
 
-```js
-var Person = function(firstAndLast) {
-
-  var firstName, lastName;
-
-  function updateName(str) {
-    firstName = str.split(" ")[0];
-    lastName = str.split(" ")[1];
-  }
-
-  updateName(firstAndLast);
-
-  this.getFirstName = function(){
-    return firstName;
-  };
-
-  this.getLastName = function(){
-    return lastName;
-  };
-
-  this.getFullName = function(){
-    return firstName + " " + lastName;
-  };
-
-  this.setFirstName = function(str){
-    firstName = str;
-  };
-
-
-  this.setLastName = function(str){
-    lastName = str;
-  };
-
-  this.setFullName = function(str){
-    updateName(str);
-  };
-};
-
-var bob = new Person('Bob Ross');
-bob.getFullName();
-```

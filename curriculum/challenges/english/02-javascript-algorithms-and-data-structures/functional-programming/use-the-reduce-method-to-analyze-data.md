@@ -3,7 +3,6 @@ id: 587d7da9367417b2b2512b68
 title: Use the reduce Method to Analyze Data
 challengeType: 1
 forumTopicId: 301313
-dashedName: use-the-reduce-method-to-analyze-data
 ---
 
 # --description--
@@ -26,10 +25,8 @@ const users = [
 ];
 
 const sumOfAges = users.reduce((sum, user) => sum + user.age, 0);
-console.log(sumOfAges);
+console.log(sumOfAges); // 64
 ```
-
-The console would display the value `64`.
 
 In another example, see how an object can be returned containing the names of the users as properties with their ages as values.
 
@@ -44,14 +41,12 @@ const usersObj = users.reduce((obj, user) => {
   obj[user.name] = user.age;
   return obj;
 }, {});
-console.log(usersObj);
+console.log(usersObj); // { John: 34, Amy: 20, camperCat: 10 }
 ```
-
-The console would display the value `{ John: 34, Amy: 20, camperCat: 10 }`.
 
 # --instructions--
 
-The variable `watchList` holds an array of objects with information on several movies. Use `reduce` to find the average IMDB rating of the movies directed by `Christopher Nolan`. Recall from prior challenges how to `filter` data and `map` over it to pull what you need. You may need to create other variables, and return the average rating from `getRating` function. Note that the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations.
+The variable `watchList` holds an array of objects with information on several movies. Use `reduce` to find the average IMDB rating of the movies **directed by Christopher Nolan**. Recall from prior challenges how to `filter` data and `map` over it to pull what you need. You may need to create other variables, and return the average rating from `getRating` function. Note that the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations.
 
 # --hints--
 
@@ -81,7 +76,7 @@ Your code should not use a `for` loop.
 assert(!code.match(/for\s*?\([\s\S]*?\)/g));
 ```
 
-Your code should return the correct output after modifying the `watchList` object.
+Your code should return correct output after modifying the `watchList` object.
 
 ```js
 assert(getRating(watchList.filter((_, i) => i < 1 || i > 2)) === 8.55);
@@ -103,7 +98,7 @@ var watchList = [
     "Genre": "Action, Adventure, Crime",
     "Director": "Christopher Nolan",
     "Writer": "Christopher Nolan",
-    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
     "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
     "Language": "English, Japanese, French",
     "Country": "USA, UK",
@@ -231,7 +226,7 @@ var watchList = [
     "Genre": "Action, Adventure, Crime",
     "Director": "Christopher Nolan",
     "Writer": "Christopher Nolan",
-    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
     "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
     "Language": "English, Japanese, French",
     "Country": "USA, UK",

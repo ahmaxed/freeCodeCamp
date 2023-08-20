@@ -1,48 +1,31 @@
 ---
 id: 5900f4761000cf542c50ff88
-title: 'Problem 265: Binary Circles'
+title: 问题265：二进制圆圈
 challengeType: 5
-forumTopicId: 301914
-dashedName: problem-265-binary-circles
+videoUrl: ''
 ---
 
 # --description--
 
-2N binary digits can be placed in a circle so that all the N-digit clockwise subsequences are distinct.
+2N二进制数字可以放在一个圆圈中，这样所有N位顺时针子序列都是不同的。
 
-For N=3, two such circular arrangements are possible, ignoring rotations:
+对于N = 3，两个这样的圆形布置是可能的，忽略旋转：
 
-For the first arrangement, the 3-digit subsequences, in clockwise order, are: 000, 001, 010, 101, 011, 111, 110 and 100.
+对于第一种布置，顺时针顺序的3位子序列是：000,001,010,101,011,111,110和100。
 
-Each circular arrangement can be encoded as a number by concatenating the binary digits starting with the subsequence of all zeros as the most significant bits and proceeding clockwise. The two arrangements for N=3 are thus represented as 23 and 29: 00010111 2 = 23 00011101 2 = 29
+通过将以全零的子序列开始的二进制数字连接为最高有效位并顺时针进行，可以将每个循环排列编码为数字。因此，N = 3的两种排列表示为23和29：00010111 2 = 23 00011101 2 = 29
 
-Calling S(N) the sum of the unique numeric representations, we can see that S(3) = 23 + 29 = 52.
+调用S（N）唯一数值表示的总和，我们可以看到S（3）= 23 + 29 = 52。
 
-Find S(5).
+找到S（5）。
 
 # --hints--
 
-`euler265()` should return 209110240768.
+`euler265()`应该返回209110240768。
 
 ```js
 assert.strictEqual(euler265(), 209110240768);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler265() {
-
-  return true;
-}
-
-euler265();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -3,7 +3,6 @@ id: 5900f4d41000cf542c50ffe7
 title: 'Problem 360: Scary Sphere'
 challengeType: 5
 forumTopicId: 302021
-dashedName: problem-360-scary-sphere
 ---
 
 # --description--

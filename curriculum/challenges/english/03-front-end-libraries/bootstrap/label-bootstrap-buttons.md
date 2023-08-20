@@ -3,14 +3,13 @@ id: bad87fee1348bd9aec908856
 title: Label Bootstrap Buttons
 challengeType: 0
 forumTopicId: 18222
-dashedName: label-bootstrap-buttons
 ---
 
 # --description--
 
 Just like we labeled our wells, we want to label our buttons.
 
-Give each of your `button` elements text that corresponds to its id selector.
+Give each of your `button` elements text that corresponds to its `id`'s selector.
 
 # --hints--
 

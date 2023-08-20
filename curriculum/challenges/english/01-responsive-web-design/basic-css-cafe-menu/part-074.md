@@ -2,7 +2,6 @@
 id: 5f45a05977e2fa49d9119437
 title: Part 74
 challengeType: 0
-dashedName: part-74
 ---
 
 # --description--

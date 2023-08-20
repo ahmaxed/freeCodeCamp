@@ -1,70 +1,53 @@
 ---
 id: 5900f4051000cf542c50ff18
-title: 'Problem 153: Investigating Gaussian Integers'
+title: 问题153：调查高斯整数
 challengeType: 5
-forumTopicId: 301784
-dashedName: problem-153-investigating-gaussian-integers
+videoUrl: ''
 ---
 
 # --description--
 
-As we all know the equation x2=-1 has no solutions for real x.
+众所周知，方程x2 = -1没有实数x的解。
 
-If we however introduce the imaginary number i this equation has two solutions: x=i and x=-i.
+然而，如果我们引入虚数i，则该等式具有两个解：x = i且x = -i。
 
-If we go a step further the equation (x-3)2=-4 has two complex solutions: x=3+2i and x=3-2i. x=3+2i and x=3-2i are called each others' complex conjugate.
+如果我们更进一步，等式（x-3）2 = -4有两个复数解：x = 3 + 2i和x = 3-2i。 x = 3 + 2i和x = 3-2i被称为彼此的复共轭。
 
-Numbers of the form a+bi are called complex numbers.
+形式a + bi的数字称为复数。
 
-In general a+bi and a−bi are each other's complex conjugate. A Gaussian Integer is a complex number a+bi such that both a and b are integers.
+通常，+ bi和a-bi是彼此的复共轭。高斯整数是复数a + bi，使得a和b都是整数。
 
-The regular integers are also Gaussian integers (with b=0).
+常规整数也是高斯整数（b = 0）。
 
-To distinguish them from Gaussian integers with b ≠ 0 we call such integers "rational integers."
+为了将它们与b≠0的高斯整数区分开来，我们称这样的整数为“有理整数”。
 
-A Gaussian integer is called a divisor of a rational integer n if the result is also a Gaussian integer.
+如果结果也是高斯整数，则高斯整数称为有理整数n的除数。
 
-If for example we divide 5 by 1+2i we can simplify in the following manner:
+例如，如果我们将5除以1 + 2i，我们可以通过以下方式简化：
 
-Multiply numerator and denominator by the complex conjugate of 1+2i: 1−2i.
+通过1 + 2i的复共轭乘以分子和分母：1-2i。
 
-The result is .
+结果是。
 
-So 1+2i is a divisor of 5.
+所以1 + 2i是5的除数。
 
-Note that 1+i is not a divisor of 5 because .
+请注意，1 + i不是5的除数，因为。
 
-Note also that if the Gaussian Integer (a+bi) is a divisor of a rational integer n, then its complex conjugate (a−bi) is also a divisor of n. In fact, 5 has six divisors such that the real part is positive: {1, 1 + 2i, 1 − 2i, 2 + i, 2 − i, 5}.
+还要注意，如果高斯整数（a + bi）是有理整数n的除数，则其复共轭（a-bi）也是n的除数。实际上，5有六个除数，使得实部是正的：{1,1 + 2i，1 - 2i，2 + i，2 - i，5}。
 
-The following is a table of all of the divisors for the first five positive rational integers:
+以下是前五个正整数的所有除数的表：
 
-n Gaussian integer divisors with positive real partSum s(n) of these
+n高斯整数除数，具有正实数partSum s（n）
 
-divisors111 21, 1+i, 1-i, 25 31, 34 41, 1+i, 1-i, 2, 2+2i, 2-2i,413 51, 1+2i, 1-2i, 2+i, 2-i, 512 For divisors with positive real parts, then, we have: . For 1 ≤ n ≤ 105, ∑ s(n)=17924657155. What is ∑ s(n) for 1 ≤ n ≤ 108?
+divisors111 21,1 + i，1-i，25 31,34 41,1 + i，1-i，2,2 + 2i，2-2i，413 51,1 + 2i，1-2i，2 + i， 2-i，512对于具有正实部的除数，那么，我们有：。对于1≤n≤105，Σs（n）= 17924657155。什么是Σs（n）1≤n≤108？
 
 # --hints--
 
-`euler153()` should return 17971254122360636.
+`euler153()`应该返回17971254122360636。
 
 ```js
 assert.strictEqual(euler153(), 17971254122360636);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler153() {
-
-  return true;
-}
-
-euler153();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

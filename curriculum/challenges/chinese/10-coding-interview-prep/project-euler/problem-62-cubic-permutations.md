@@ -1,46 +1,21 @@
 ---
 id: 5900f3aa1000cf542c50febd
-title: 'Problem 62: Cubic permutations'
+title: 问题62：立方排列
 challengeType: 5
-forumTopicId: 302174
-dashedName: problem-62-cubic-permutations
+videoUrl: ''
 ---
 
 # --description--
 
-The cube, 41063625 (345<sup>3</sup>), can be permuted to produce two other cubes: 56623104 (384<sup>3</sup>) and 66430125 (405<sup>3</sup>). In fact, 41063625 is the smallest cube which has exactly three permutations of its digits which are also cube.
-
-Find the smallest cube for which exactly five permutations of its digits are cube.
+可以置换立方体41063625（3453）以产生另外两个立方体：56623104（3843）和66430125（4053）。实际上，41063625是最小的立方体，其正好具有三个排列的数字也是立方体。找到最小的立方体，其数字的五个排列正好是立方体。
 
 # --hints--
 
-`cubicPermutations()` should return a number.
+`euler62()`应该返回127035954683。
 
 ```js
-assert(typeof cubicPermutations() === 'number');
-```
-
-`cubicPermutations()` should return 127035954683.
-
-```js
-assert.strictEqual(cubicPermutations(), 127035954683);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function cubicPermutations() {
-
-  return true;
-}
-
-cubicPermutations();
+assert.strictEqual(euler62(), 127035954683);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

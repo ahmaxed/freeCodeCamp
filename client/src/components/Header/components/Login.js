@@ -3,36 +3,38 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { Button } from '@freecodecamp/react-bootstrap';
-import { useTranslation } from 'react-i18next';
 
 import { isSignedInSelector } from '../../../redux';
-import envData from '../../../../../config/env.json';
+import { apiLocation } from '../../../../config/env.json';
+
+import { gtagReportConversion } from '../../../analytics/gtag';
 
 import './login.css';
 
-const { apiLocation, homeLocation } = envData;
-
-const mapStateToProps = createSelector(isSignedInSelector, isSignedIn => ({
-  isSignedIn
-}));
+const mapStateToProps = createSelector(
+  isSignedInSelector,
+  isSignedIn => ({
+    isSignedIn
+  })
+);
 
 function Login(props) {
-  const { t } = useTranslation();
   const {
     block,
     'data-test-label': dataTestLabel,
     children,
     isSignedIn
   } = props;
-  const href = isSignedIn ? `${homeLocation}/learn` : `${apiLocation}/signin`;
+  const href = isSignedIn ? '/learn' : `${apiLocation}/signin`;
   return (
     <Button
       bsStyle='default'
       className={(block ? 'btn-cta-big btn-block' : '') + ' signup-btn btn-cta'}
       data-test-label={dataTestLabel}
       href={href}
+      onClick={() => gtagReportConversion()}
     >
-      {children || t('buttons.sign-in')}
+      {children || 'Sign In'}
     </Button>
   );
 }

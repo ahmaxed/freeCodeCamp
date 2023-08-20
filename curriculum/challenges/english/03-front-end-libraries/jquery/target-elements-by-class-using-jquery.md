@@ -5,7 +5,6 @@ challengeType: 6
 forumTopicId: 18316
 required:
   - link: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.css'
-dashedName: target-elements-by-class-using-jquery
 ---
 
 # --description--
@@ -22,9 +21,7 @@ Then use jQuery's `.addClass()` function to add the classes `animated` and `shak
 
 For example, you could make all the elements with the class `text-primary` shake by adding the following to your `document ready function`:
 
-```js
-$(".text-primary").addClass("animated shake");
-```
+`$(".text-primary").addClass("animated shake");`
 
 # --hints--
 

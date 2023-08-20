@@ -5,7 +5,6 @@ title: >-
   minimum-sum
 challengeType: 5
 forumTopicId: 301781
-dashedName: problem-150-searching-a-triangular-array-for-a-sub-triangle-having-minimum-sum
 ---
 
 # --description--

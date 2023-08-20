@@ -1,50 +1,21 @@
 ---
 id: 5900f3d71000cf542c50fee9
-title: 'Problem 106: Special subset sums: meta-testing'
+title: 问题106：特殊子集和：元测试
 challengeType: 5
-forumTopicId: 301730
-dashedName: problem-106-special-subset-sums-meta-testing
+videoUrl: ''
 ---
 
 # --description--
 
-Let S(A) represent the sum of elements in set A of size n. We shall call it a special sum set if for any two non-empty disjoint subsets, B and C, the following properties are true:
-
-S(B) ≠ S(C); that is, sums of subsets cannot be equal.
-
-If B contains more elements than C then S(B) > S(C).
-
-For this problem we shall assume that a given set contains n strictly increasing elements and it already satisfies the second rule.
-
-Surprisingly, out of the 25 possible subset pairs that can be obtained from a set for which n = 4, only 1 of these pairs need to be tested for equality (first rule). Similarly, when n = 7, only 70 out of the 966 subset pairs need to be tested.
-
-For n = 12, how many of the 261625 subset pairs that can be obtained need to be tested for equality?
-
-NOTE: This problem is related to Problem 103 and Problem 105.
+设S（A）表示大小为n的集合A中的元素之和。如果对于任何两个非空的不相交子集B和C，我们将其称为特殊和集合，以下属性为真：S（B）≠S（C）;也就是说，子集的总和不能相等。如果B包含的元素多于C，则S（B）> S（C）。对于这个问题，我们假设给定的集合包含n个严格增加的元素，并且它已经满足第二个规则。令人惊讶的是，在可以从n = 4的集合中获得的25个可能的子集对中，仅需要对这些对中的1个进行相等性测试（第一规则）。类似地，当n = 7时，仅需要测试966个子集对中的70个。对于n = 12，可以获得多少261625个子集对需要进行相等性测试？注意：此问题与问题103和问题105有关。
 
 # --hints--
 
-`euler106()` should return 21384.
+`euler106()`应返回21384。
 
 ```js
 assert.strictEqual(euler106(), 21384);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler106() {
-
-  return true;
-}
-
-euler106();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

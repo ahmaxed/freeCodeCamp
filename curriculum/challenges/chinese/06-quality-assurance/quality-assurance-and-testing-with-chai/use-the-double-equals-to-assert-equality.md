@@ -3,22 +3,21 @@ id: 587d824b367417b2b2512c4a
 title: 用两个等号断言相等
 challengeType: 2
 forumTopicId: 301609
-dashedName: use-the-double-equals-to-assert-equality
 ---
 
 # --description--
 
-请注意，本项目在[这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
 
 `equal()` 使用 `==` 比较对象。
 
 # --instructions--
 
-在 `tests/1_unit-tests.js` 中，在 `Equality` 套件里标有 `#5` 的测试里，将每个 `assert` 改为 `assert.equal` 或 `assert.notEqual`，通过测试（应该返回 `true`）。 不要修改传给断言的参数。
+使用 `assert.equal()` 或 `assert.notEqual()` 让所有测试通过。
 
 # --hints--
 
-应通过所有测试。
+不应有未通过的测试
 
 ```js
 (getUserInput) =>
@@ -32,7 +31,7 @@ dashedName: use-the-double-equals-to-assert-equality
   );
 ```
 
-应该为第一个断言选择正确的方法：`equal` 或 `notEqual`。
+请选择正确的断言—equal 或 notEqual
 
 ```js
 (getUserInput) =>
@@ -50,7 +49,7 @@ dashedName: use-the-double-equals-to-assert-equality
   );
 ```
 
-应该为第二个断言选择正确的方法：`equal` 或 `notEqual`。
+请选择正确的断言—equal 或 notEqual
 
 ```js
 (getUserInput) =>
@@ -68,7 +67,7 @@ dashedName: use-the-double-equals-to-assert-equality
   );
 ```
 
-应该为第三个断言选择正确的方法：`equal` 或 `notEqual`。
+请选择正确的断言—equal 或 notEqual
 
 ```js
 (getUserInput) =>
@@ -86,7 +85,7 @@ dashedName: use-the-double-equals-to-assert-equality
   );
 ```
 
-应该为第四个断言选择正确的方法：`equal` 或 `notEqual`。
+请选择正确的断言—equal 或 notEqual
 
 ```js
 (getUserInput) =>
@@ -102,10 +101,3 @@ dashedName: use-the-double-equals-to-assert-equality
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

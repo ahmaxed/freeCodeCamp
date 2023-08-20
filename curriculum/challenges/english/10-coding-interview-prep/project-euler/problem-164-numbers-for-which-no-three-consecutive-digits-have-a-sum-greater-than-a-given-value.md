@@ -5,8 +5,6 @@ title: >-
   than a given value
 challengeType: 5
 forumTopicId: 301798
-dashedName: >-
-  problem-164-numbers-for-which-no-three-consecutive-digits-have-a-sum-greater-than-a-given-value
 ---
 
 # --description--

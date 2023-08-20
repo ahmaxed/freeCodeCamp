@@ -7,20 +7,12 @@ import addDays from 'date-fns/addDays';
 import addMonths from 'date-fns/addMonths';
 import startOfDay from 'date-fns/startOfDay';
 import isEqual from 'date-fns/isEqual';
-import { useTranslation } from 'react-i18next';
 
 import FullWidthRow from '../../helpers/FullWidthRow';
 import Spacer from '../../helpers/Spacer';
 
 import '@freecodecamp/react-calendar-heatmap/dist/styles.css';
 import './heatmap.css';
-
-import { langCodes } from '../../../../../config/i18n/all-langs';
-import envData from '../../../../../config/env.json';
-
-const { clientLocale } = envData;
-
-const localeCode = langCodes[clientLocale];
 
 const propTypes = {
   calendar: PropTypes.object
@@ -31,8 +23,7 @@ const innerPropTypes = {
   currentStreak: PropTypes.number,
   longestStreak: PropTypes.number,
   pages: PropTypes.array,
-  points: PropTypes.number,
-  t: PropTypes.func.isRequired
+  points: PropTypes.number
 };
 
 class HeatMapInner extends Component {
@@ -66,12 +57,12 @@ class HeatMapInner extends Component {
   }
 
   render() {
-    const { calendarData, currentStreak, longestStreak, pages, t } = this.props;
+    const { calendarData, currentStreak, longestStreak, pages } = this.props;
     const { startOfCalendar, endOfCalendar } = pages[this.state.pageIndex];
-    const title = `${startOfCalendar.toLocaleDateString([localeCode, 'en-US'], {
+    const title = `${startOfCalendar.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short'
-    })} - ${endOfCalendar.toLocaleDateString([localeCode, 'en-US'], {
+    })} - ${endOfCalendar.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'short'
     })}`;
@@ -117,22 +108,24 @@ class HeatMapInner extends Component {
           endDate={endOfCalendar}
           startDate={startOfCalendar}
           tooltipDataAttrs={value => {
-            const dateFormatted =
-              value && value.date
-                ? value.date.toLocaleDateString([localeCode, 'en-US'], {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
-                  })
-                : '';
+            let valueCount;
+            if (value && value.count === 1) {
+              valueCount = '1 point';
+            } else if (value && value.count > 1) {
+              valueCount = `${value.count} points`;
+            } else {
+              valueCount = 'No points';
+            }
+            const dateFormatted = value.date
+              ? 'on ' +
+                value.date.toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: 'numeric'
+                })
+              : '';
             return {
-              'data-tip':
-                value && value.count > -1
-                  ? t('profile.points', {
-                      count: value.count,
-                      date: dateFormatted
-                    })
-                  : ''
+              'data-tip': `<b>${valueCount}</b> ${dateFormatted}`
             };
           }}
           values={dataToDisplay}
@@ -143,10 +136,10 @@ class HeatMapInner extends Component {
         <Row>
           <div className='streak-container'>
             <span className='streak' data-testid='longest-streak'>
-              <b>{t('profile.longest-streak')}</b> {longestStreak || 0}
+              <b>Longest Streak:</b> {longestStreak || 0}
             </span>
             <span className='streak' data-testid='current-streak'>
-              <b>{t('profile.current-streak')}</b> {currentStreak || 0}
+              <b>Current Streak:</b> {currentStreak || 0}
             </span>
           </div>
         </Row>
@@ -159,7 +152,6 @@ class HeatMapInner extends Component {
 HeatMapInner.propTypes = innerPropTypes;
 
 const HeatMap = props => {
-  const { t } = useTranslation();
   const { calendar } = props;
 
   /**
@@ -252,7 +244,6 @@ const HeatMap = props => {
       currentStreak={currentStreak}
       longestStreak={longestStreak}
       pages={pages}
-      t={t}
     />
   );
 };

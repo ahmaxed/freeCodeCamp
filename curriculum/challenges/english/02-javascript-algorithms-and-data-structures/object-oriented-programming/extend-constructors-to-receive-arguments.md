@@ -3,12 +3,11 @@ id: 587d7dae367417b2b2512b79
 title: Extend Constructors to Receive Arguments
 challengeType: 1
 forumTopicId: 18235
-dashedName: extend-constructors-to-receive-arguments
 ---
 
 # --description--
 
-The `Bird` and `Dog` constructors from the last challenge worked well. However, notice that all `Birds` that are created with the `Bird` constructor are automatically named Albert, are blue in color, and have two legs. What if you want birds with different values for name and color? It's possible to change the properties of each bird manually but that would be a lot of work:
+The `Bird` and `Dog` constructors from last challenge worked well. However, notice that all `Birds` that are created with the `Bird` constructor are automatically named Albert, are blue in color, and have two legs. What if you want birds with different values for name and color? It's possible to change the properties of each bird manually but that would be a lot of work:
 
 ```js
 let swan = new Bird();
@@ -26,12 +25,12 @@ function Bird(name, color) {
 }
 ```
 
-Then pass in the values as arguments to define each unique bird into the `Bird` constructor: `let cardinal = new Bird("Bruce", "red");` This gives a new instance of `Bird` with `name` and `color` properties set to `Bruce` and `red`, respectively. The `numLegs` property is still set to 2. The `cardinal` has these properties:
+Then pass in the values as arguments to define each unique bird into the `Bird` constructor: `let cardinal = new Bird("Bruce", "red");` This gives a new instance of `Bird` with name and color properties set to Bruce and red, respectively. The `numLegs` property is still set to 2. The `cardinal` has these properties:
 
 ```js
-cardinal.name
-cardinal.color
-cardinal.numLegs
+cardinal.name // => Bruce
+cardinal.color // => red
+cardinal.numLegs // => 2
 ```
 
 The constructor is more flexible. It's now possible to define the properties for each `Bird` at the time it is created, which is one way that JavaScript constructors are so useful. They group objects together based on shared characteristics and behavior and define a blueprint that automates their creation.

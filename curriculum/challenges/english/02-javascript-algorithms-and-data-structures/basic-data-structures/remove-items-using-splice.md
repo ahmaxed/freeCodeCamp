@@ -3,7 +3,6 @@ id: 587d78b2367417b2b2512b10
 title: Remove Items Using splice()
 challengeType: 1
 forumTopicId: 301166
-dashedName: remove-items-using-splice
 ---
 
 # --description--
@@ -16,9 +15,9 @@ Ok, so we've learned how to remove elements from the beginning and end of arrays
 let array = ['today', 'was', 'not', 'so', 'great'];
 
 array.splice(2, 2);
+// remove 2 elements beginning with the 3rd element
+// array now equals ['today', 'was', 'great']
 ```
-
-Here we remove 2 elements, beginning with the third element (at index 2). `array` would have the value `['today', 'was', 'great']`.
 
 `splice()` not only modifies the array it's being called on, but it also returns a new array containing the value of the removed elements:
 
@@ -26,9 +25,8 @@ Here we remove 2 elements, beginning with the third element (at index 2). `array
 let array = ['I', 'am', 'feeling', 'really', 'happy'];
 
 let newArray = array.splice(3, 2);
+// newArray equals ['really', 'happy']
 ```
-
-`newArray` has the value `['really', 'happy']`.
 
 # --instructions--
 

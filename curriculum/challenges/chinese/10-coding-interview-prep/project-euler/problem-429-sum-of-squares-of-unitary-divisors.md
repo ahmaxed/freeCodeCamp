@@ -1,46 +1,29 @@
 ---
 id: 5900f5191000cf542c51002c
-title: 'Problem 429: Sum of squares of unitary divisors'
+title: 问题429：单一除数的平方和
 challengeType: 5
-forumTopicId: 302099
-dashedName: problem-429-sum-of-squares-of-unitary-divisors
+videoUrl: ''
 ---
 
 # --description--
 
-A unitary divisor d of a number n is a divisor of n that has the property gcd(d, n/d) = 1.
+数为n的unit除数d是n的除数，其性质为gcd（d，n / d）= 1。
 
-The unitary divisors of 4! = 24 are 1, 3, 8 and 24.
+4的除数！ = 24是1、3、8和24。
 
-The sum of their squares is 12 + 32 + 82 + 242 = 650.
+它们的平方和是12 + 32 + 82 + 242 = 650。
 
-Let S(n) represent the sum of the squares of the unitary divisors of n. Thus S(4!)=650.
+令S（n）表示n的一元除数的平方和。 因此，S（4！）＝ 650。
 
-Find S(100 000 000!) modulo 1 000 000 009.
+求S（100000000！）取模1000000009。
 
 # --hints--
 
-`euler429()` should return 98792821.
+`euler429()`应该返回98792821。
 
 ```js
 assert.strictEqual(euler429(), 98792821);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler429() {
-
-  return true;
-}
-
-euler429();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

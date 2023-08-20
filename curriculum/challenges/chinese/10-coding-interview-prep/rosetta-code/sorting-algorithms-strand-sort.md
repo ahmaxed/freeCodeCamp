@@ -3,12 +3,11 @@ id: 5a23c84252665b21eecc8013
 title: Sorting algorithms/Strand sort
 challengeType: 5
 forumTopicId: 302319
-dashedName: sorting-algorithmsstrand-sort
 ---
 
 # --description--
 
-Write a function to sort an array using the [Strand sort](https://en.wikipedia.org/wiki/Strand sort). The function should return the sorted array.
+Write a function to sort an array using the [Strand sort](<https://en.wikipedia.org/wiki/Strand sort>). The function should return the sorted array.
 
 This is a way of sorting numbers by extracting shorter sequences of already sorted numbers from an unsorted list.
 

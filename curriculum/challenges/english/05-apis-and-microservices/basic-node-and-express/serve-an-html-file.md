@@ -3,7 +3,6 @@ id: 587d7fb0367417b2b2512bef
 title: Serve an HTML File
 challengeType: 2
 forumTopicId: 301516
-dashedName: serve-an-html-file
 ---
 
 # --description--
@@ -39,6 +38,8 @@ Your app should serve the file views/index.html
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

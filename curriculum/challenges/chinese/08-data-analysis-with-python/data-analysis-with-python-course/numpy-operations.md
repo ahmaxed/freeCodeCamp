@@ -1,19 +1,14 @@
 ---
 id: 5e9a093a74c4063ca6f7c155
-title: Numpy Operations
 challengeType: 11
 videoId: eqSVcJbaPdk
-dashedName: numpy-operations
 ---
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
-
 More resources:
 
--   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/freecodecamp-intro-to-numpy)
--   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+\- [Notebook](https://notebooks.ai/rmotr-curriculum/freecodecamp-intro-to-numpy-6c285b74)
 
 # --question--
 
@@ -47,4 +42,9 @@ a + 20
 ## --video-solution--
 
 2
+
+# --hints--
+
+
+# --solutions--
 

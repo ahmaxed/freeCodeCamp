@@ -1,26 +1,17 @@
 ---
 id: 587d8257367417b2b2512c7d
-title: Find the Minimum and Maximum Height of a Binary Search Tree
+title: 找到二叉搜索树的最小和最大高度
 challengeType: 1
-forumTopicId: 301641
-dashedName: find-the-minimum-and-maximum-height-of-a-binary-search-tree
+videoUrl: ''
 ---
 
 # --description--
 
-In the last challenge we described a scenario in which a tree could become unbalanced. To understand the concept of balance, let's take a look at another tree property: height. Height in a tree represents the distance from the root node to any given leaf node. Different paths in a highly branched tree structure may have different heights, but for a given tree there will be a minimum and maximum height. If the tree is balanced, these values will differ at most by one. This means that in a balanced tree, all the leaf nodes exist within the same level, or if they are not within the same level they are at most one level apart.
-
-The property of balance is important for trees because it is what determines the efficiency of tree operations. As we explained in the last challenge, we face worst case time complexity for heavily unbalanced trees. Self-balancing trees are commonly used to account for this issue in trees with dynamic data sets. Common examples of these include AVL trees, red-black trees, and B-trees. These trees all contain additional internal logic which re-balance the tree when insertions or deletions create a state of imbalance.
-
-**Note:** A similar property to height is depth, which refers to how far a given node is from the root node.
-
-# --instructions--
-
-Write two methods for our binary tree: `findMinHeight` and `findMaxHeight`. These methods should return an integer value for the minimum and maximum height within a given binary tree, respectively. If the node is empty let's assign it a height of `-1` (that's the base case). Finally, add a third method `isBalanced` which returns `true` or `false` depending on whether the tree is balanced or not. You can use the first two methods you just wrote to determine this.
+在最后一个挑战中，我们描述了树可能变得不平衡的情景。为了理解平衡的概念，让我们看看另一个树属性：高度。树中的高度表示从根节点到任何给定叶节点的距离。高度分支的树结构中的不同路径可以具有不同的高度，但是对于给定的树，将具有最小和最大高度。如果树是平衡的，则这些值最多相差一个。这意味着在平衡树中，所有叶节点都存在于同一级别中，或者如果它们不在同一级别内，则它们最多相隔一个级别。平衡的属性对于树很重要，因为它决定了树操作的效率。正如我们在上一次挑战中所解释的那样，我们面临严重不平衡树木的最坏情况时间复杂性。自平衡树通常用于在具有动态数据集的树中解决此问题。这些的常见例子包括AVL树，红黑树和B树。这些树都包含额外的内部逻辑，当插入或删除创建不平衡状态时，它会重新平衡树。注意：与height相似的属性是depth，它指的是给定节点距根节点的距离。说明：为我们的二叉树编写两种方法： `findMinHeight`和`findMaxHeight` 。这些方法应分别返回给定二叉树内最小和最大高度的整数值。如果节点为空，请为其指定高度`-1` （这是基本情况）。最后，添加第三个方法`isBalanced` ，它返回`true`或`false`具体取决于树是否平衡。您可以使用刚才编写的前两种方法来确定这一点。
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+存在`BinarySearchTree`数据结构。
 
 ```js
 assert(
@@ -34,7 +25,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `findMinHeight`.
+二叉搜索树有一个名为`findMinHeight`的方法。
 
 ```js
 assert(
@@ -50,7 +41,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `findMaxHeight`.
+二叉搜索树有一个名为`findMaxHeight`的方法。
 
 ```js
 assert(
@@ -66,7 +57,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `isBalanced`.
+二叉搜索树有一个名为`isBalanced`的方法。
 
 ```js
 assert(
@@ -82,7 +73,7 @@ assert(
 );
 ```
 
-The `findMinHeight` method should return the minimum height of the tree.
+`findMinHeight`方法返回树的最小高度。
 
 ```js
 assert(
@@ -109,7 +100,7 @@ assert(
 );
 ```
 
-The `findMaxHeight` method should return the maximum height of the tree.
+`findMaxHeight`方法返回树的最大高度。
 
 ```js
 assert(
@@ -136,7 +127,7 @@ assert(
 );
 ```
 
-An empty tree should return a height of `-1`.
+空树返回高度`-1` 。
 
 ```js
 assert(
@@ -155,7 +146,7 @@ assert(
 );
 ```
 
-The `isBalanced` method should return `false` if the tree is an unbalanced binary search tree.
+如果树是平衡二叉搜索树，则`isBalanced`方法返回true。
 
 ```js
 assert(
@@ -177,170 +168,10 @@ assert(
     test.add(45);
     test.add(73);
     test.add(8);
-    return test.isBalanced() === false;
+    return !test.isBalanced();
   })()
 );
-```
-
-The `isBalanced` method should return `true` if the tree is a balanced binary search tree.
-
-```js
-assert(
-  (function () {
-    var test = false;
-    if (typeof BinarySearchTree !== 'undefined') {
-      test = new BinarySearchTree();
-    } else {
-      return false;
-    }
-    if (typeof test.isBalanced !== 'function') {
-      return false;
-    }
-    test.add(10);
-    test.add(3);
-    test.add(22);
-    test.add(1);
-    test.add(4);
-    test.add(17);
-    test.add(32);
-    return test.isBalanced() === true;
-  })()
-);
-```
-
-# --seed--
-
-## --after-user-code--
-
-```js
-BinarySearchTree.prototype = Object.assign(
-  BinarySearchTree.prototype,
-  {
-    add: function(value) {
-      function searchTree(node) {
-        if (value < node.value) {
-          if (node.left == null) {
-            node.left = new Node(value);
-            return;
-          } else if (node.left != null) {
-            return searchTree(node.left);
-          }
-        } else if (value > node.value) {
-          if (node.right == null) {
-            node.right = new Node(value);
-            return;
-          } else if (node.right != null) {
-            return searchTree(node.right);
-          }
-        } else {
-          return null;
-        }
-      }
-
-      var node = this.root;
-      if (node == null) {
-        this.root = new Node(value);
-        return;
-      } else {
-        return searchTree(node);
-      }
-    }
-  }
-);
-```
-
-## --seed-contents--
-
-```js
-var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
-function Node(value) {
-  this.value = value;
-  this.left = null;
-  this.right = null;
-}
-function BinarySearchTree() {
-  this.root = null;
-  // Only change code below this line
-
-  // Only change code above this line
-}
 ```
 
 # --solutions--
 
-```js
-var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
-function Node(value) {
-  this.value = value;
-  this.left = null;
-  this.right = null;
-}
-function BinarySearchTree() {
-  this.root = null;
-  // Only change code below this line
-
-  // Only change code above this line
-  this.findMinHeight = function(root = this.root) {
-    // empty tree.
-    if (root === null) {
-      return -1;
-    }
-    // leaf node.
-    if (root.left === null && root.right === null) {
-      return 0;
-    }
-    if (root.left === null) {
-      return this.findMinHeight(root.right) + 1;
-    }
-    if (root.right === null) {
-      return this.findMinHeight(root.left) + 1;
-    }
-    const lHeight = this.findMinHeight(root.left);
-    const rHeight = this.findMinHeight(root.right);
-    return Math.min(lHeight, rHeight) + 1;
-  };
-  this.findMaxHeight = function(root = this.root) {
-    // empty tree.
-    if (root === null) {
-      return -1;
-    }
-    // leaf node.
-    if (root.left === null && root.right === null) {
-      return 0;
-    }
-    if (root.left === null) {
-      return this.findMaxHeight(root.right) + 1;
-    }
-    if (root.right === null) {
-      return this.findMaxHeight(root.left) + 1;
-    }
-    const lHeight = this.findMaxHeight(root.left);
-    const rHeight = this.findMaxHeight(root.right);
-    return Math.max(lHeight, rHeight) + 1;
-  };
-  this.isBalanced = function(root = this.root) {
-    if (root === null) {
-      return true;
-    }
-
-    if (root.left === null && root.right === null) {
-      return true;
-    }
-
-    if (root.left === null) {
-      return this.findMaxHeight(root.right) <= 0;
-    }
-
-    if (root.right === null) {
-      return this.findMaxHeight(root.left) <= 0;
-    }
-
-    const lHeight = this.findMaxHeight(root.left);
-    const rHeight = this.findMaxHeight(root.right);
-    if (Math.abs(lHeight - rHeight) > 1) {
-      return false;
-    }
-    return this.isBalanced(root.left) && this.isBalanced(root.right);
-  };
-}
-```

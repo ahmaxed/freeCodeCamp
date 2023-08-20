@@ -1,44 +1,21 @@
 ---
 id: 5900f3f51000cf542c50ff07
-title: 'Problem 136: Singleton difference'
+title: 问题136：单身人士差异
 challengeType: 5
-forumTopicId: 301764
-dashedName: problem-136-singleton-difference
+videoUrl: ''
 ---
 
 # --description--
 
-The positive integers, x, y, and z, are consecutive terms of an arithmetic progression. Given that n is a positive integer, the equation, x2 − y2 − z2 = n, has exactly one solution when n = 20:
-
-132 − 102 − 72 = 20
-
-In fact there are twenty-five values of n below one hundred for which the equation has a unique solution.
-
-How many values of n less than fifty million have exactly one solution?
+正整数x，y和z是算术级数的连续项。假设n是一个正整数，当n = 20时，方程x2 - y2 - z2 = n恰好有一个解：132 - 102 - 72 = 20实际上有二十五个n低于一百的值，其中方程有一个独特的解决方案。 n小于五千万的有多少个值只有一个解？
 
 # --hints--
 
-`euler136()` should return 2544559.
+`euler136()`应返回2544559。
 
 ```js
 assert.strictEqual(euler136(), 2544559);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler136() {
-
-  return true;
-}
-
-euler136();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

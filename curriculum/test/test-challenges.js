@@ -17,13 +17,6 @@ require('@babel/register')({
   only: [clientPath]
 });
 
-const mockRequire = require('mock-require');
-const lodash = require('lodash');
-
-// lodash-es can't easily be used in node environments, so we just mock it out
-// for the original lodash in testing.
-mockRequire('lodash-es', lodash);
-
 const createPseudoWorker = require('./utils/pseudo-worker');
 const {
   default: createWorker
@@ -31,8 +24,7 @@ const {
 
 const { assert, AssertionError } = require('chai');
 const Mocha = require('mocha');
-
-const { flatten, isEmpty, cloneDeep, isEqual } = lodash;
+const { flatten, isEmpty, cloneDeep } = require('lodash');
 const { getLines } = require('../../utils/get-lines');
 
 const jsdom = require('jsdom');
@@ -52,6 +44,7 @@ const ChallengeTitles = require('./utils/challengeTitles');
 const { challengeSchemaValidator } = require('../schema/challengeSchema');
 const { challengeTypes } = require('../../client/utils/challengeTypes');
 
+const { dasherize } = require('../../utils/slugs');
 const { toSortedArray } = require('../../utils/sort-files');
 
 const { testedLang } = require('../utils');
@@ -67,18 +60,13 @@ const TRANSLATABLE_COMMENTS = getTranslatableComments(
   path.resolve(__dirname, '..', 'dictionaries')
 );
 
-// the config files are created during the build, but not before linting
-// eslint-disable-next-line import/no-unresolved
-const testEvaluator = require('../../config/client/test-evaluator.json')
-  .filename;
-const { inspect } = require('util');
+const testEvaluator = require('../../client/config/test-evaluator').filename;
 
 const commentExtractors = {
   html: require('./utils/extract-html-comments'),
   js: require('./utils/extract-js-comments'),
   jsx: require('./utils/extract-jsx-comments'),
-  css: require('./utils/extract-css-comments'),
-  scriptJs: require('./utils/extract-script-js-comments')
+  css: require('./utils/extract-css-comments')
 };
 
 // rethrow unhandled rejections to make sure the tests exit with -1
@@ -102,7 +90,7 @@ const dom = new jsdom.JSDOM('');
 global.document = dom.window.document;
 
 const oldRunnerFail = Mocha.Runner.prototype.fail;
-Mocha.Runner.prototype.fail = function (test, err) {
+Mocha.Runner.prototype.fail = function(test, err) {
   if (err instanceof AssertionError) {
     const errMessage = String(err.message || '');
     const assertIndex = errMessage.indexOf(': expected');
@@ -207,11 +195,11 @@ async function setup() {
 
   const meta = {};
   for (const challenge of challenges) {
-    const dashedBlockName = challenge.block;
+    const dashedBlockName = dasherize(challenge.block);
     if (!meta[dashedBlockName]) {
-      meta[dashedBlockName] = (
-        await getMetaForBlock(dashedBlockName)
-      ).challengeOrder;
+      meta[dashedBlockName] = (await getMetaForBlock(
+        dashedBlockName
+      )).challengeOrder;
     }
   }
   return {
@@ -232,8 +220,8 @@ function cleanup() {
 }
 
 function runTests(challengeData) {
-  describe('Check challenges', function () {
-    after(function () {
+  describe('Check challenges', function() {
+    after(function() {
       cleanup();
     });
     populateTestsForLang(challengeData);
@@ -263,15 +251,15 @@ function populateTestsForLang({ lang, challenges, meta }) {
   const challengeTitles = new ChallengeTitles();
   const validateChallenge = challengeSchemaValidator();
 
-  describe(`Check challenges (${lang})`, function () {
+  describe(`Check challenges (${lang})`, function() {
     this.timeout(5000);
     challenges.forEach((challenge, id) => {
-      const dashedBlockName = challenge.block;
-      describe(challenge.block || 'No block', function () {
-        describe(challenge.title || 'No title', function () {
+      const dashedBlockName = dasherize(challenge.block);
+      describe(challenge.block || 'No block', function() {
+        describe(challenge.title || 'No title', function() {
           // Note: the title in meta.json are purely for human readability and
           // do not include translations, so we do not validate against them.
-          it('Matches an ID in meta.json', function () {
+          it('Matches an ID in meta.json', function() {
             const index = meta[dashedBlockName].findIndex(
               arr => arr[0] === challenge.id
             );
@@ -283,14 +271,15 @@ function populateTestsForLang({ lang, challenges, meta }) {
             }
           });
 
-          it('Common checks', function () {
+          it('Common checks', function() {
             const result = validateChallenge(challenge);
 
             if (result.error) {
               throw new AssertionError(result.error);
             }
             const { id, title, block, dashedName } = challenge;
-            const pathAndTitle = `${block}/${dashedName}`;
+            const dashedBlock = dasherize(block);
+            const pathAndTitle = `${dashedBlock}/${dashedName}`;
             mongoIds.check(id, title);
             challengeTitles.check(title, pathAndTitle);
           });
@@ -340,7 +329,7 @@ function populateTestsForLang({ lang, challenges, meta }) {
 
               // We get all the actual comments using the appropriate parsers
               if (file.ext === 'html') {
-                const commentTypes = ['css', 'html', 'scriptJs'];
+                const commentTypes = ['css', 'html'];
                 for (let type of commentTypes) {
                   const newComments = commentExtractors[type](file.contents);
                   for (const [key, value] of Object.entries(newComments)) {
@@ -353,22 +342,17 @@ function populateTestsForLang({ lang, challenges, meta }) {
                 comments = commentExtractors[file.ext](file.contents);
               }
 
-              // Then we compare the number of times each comment appears in the
-              // translated text (commentMap) with the number of replacements
-              // made during translation (challenge.__commentCounts). If they
-              // differ, the translation must have gone wrong
-
-              const commentMap = new Map(Object.entries(comments));
-
-              if (isEmpty(challenge.__commentCounts) && isEmpty(commentMap))
-                return;
-
-              if (!isEqual(commentMap, challenge.__commentCounts))
-                throw Error(`Mismatch in ${challenge.title}. Replaced comments:
-${inspect(challenge.__commentCounts)}
-Comments in translated text:
-${inspect(commentMap)}
-`);
+              // Then we compare the number of times a given comment appears
+              // (count) with the number of times the text within it appears
+              // (commentTextCount)
+              for (const [comment, count] of Object.entries(comments)) {
+                const commentTextCount =
+                  file.contents.split(comment).length - 1;
+                if (commentTextCount !== count)
+                  throw Error(
+                    `Translated comment text, ${comment}, should only appear inside comments`
+                  );
+              }
             });
           });
 
@@ -390,9 +374,9 @@ ${inspect(commentMap)}
             return;
           }
 
-          describe('Check tests syntax', function () {
+          describe('Check tests syntax', function() {
             tests.forEach(test => {
-              it(`Check for: ${test.text}`, function () {
+              it(`Check for: ${test.text}`, function() {
                 assert.doesNotThrow(() => new vm.Script(test.testString));
               });
             });
@@ -409,7 +393,7 @@ ${inspect(commentMap)}
               ? buildJSChallenge
               : buildDOMChallenge;
 
-          it('Test suite must fail on the initial contents', async function () {
+          it('Test suite must fail on the initial contents', async function() {
             this.timeout(5000 * tests.length + 1000);
             // suppress errors in the console.
             const oldConsoleError = console.error;
@@ -489,12 +473,10 @@ ${inspect(commentMap)}
             return;
           }
 
-          describe('Check tests against solutions', function () {
+          describe('Check tests against solutions', function() {
             solutions.forEach((solution, index) => {
-              it(`Solution ${
-                index + 1
-              } must pass the tests`, async function () {
-                this.timeout(5000 * tests.length + 2000);
+              it(`Solution ${index + 1} must pass the tests`, async function() {
+                this.timeout(5000 * tests.length + 1000);
                 const testRunner = await createTestRunner(
                   challenge,
                   solution,
@@ -519,7 +501,7 @@ async function createTestRunner(
   buildChallenge,
   solutionFromNext
 ) {
-  const { required = [], template, removeComments } = challenge;
+  const { required = [], template } = challenge;
   // we should avoid modifying challenge, as it gets reused:
   const files = cloneDeep(challenge.files);
 
@@ -533,7 +515,6 @@ async function createTestRunner(
     required,
     template
   });
-
   const code = {
     contents: sources.index,
     editableContents: sources.editableContents
@@ -541,27 +522,20 @@ async function createTestRunner(
 
   const evaluator = await (buildChallenge === buildDOMChallenge
     ? getContextEvaluator(build, sources, code, loadEnzyme)
-    : getWorkerEvaluator(build, sources, code, removeComments));
+    : getWorkerEvaluator(build, sources, code));
 
   return async ({ text, testString }) => {
     try {
       const { pass, err } = await evaluator.evaluate(testString, 5000);
       if (!pass) {
-        throw err;
+        throw new AssertionError(err.message);
       }
     } catch (err) {
-      // add more info to the error so the failing test can be identified.
       text = 'Test text: ' + text;
-      const newMessage = solutionFromNext
+      const message = solutionFromNext
         ? 'Check next step for solution!\n' + text
         : text;
-      // if the stack is missing, the message should be included. Otherwise it
-      // is redundant.
-      err.message = err.stack
-        ? newMessage
-        : `${newMessage}
-      ${err.message}`;
-      throw err;
+      reThrow(err, message);
     }
   };
 }
@@ -582,14 +556,12 @@ async function getContextEvaluator(build, sources, code, loadEnzyme) {
   };
 }
 
-async function getWorkerEvaluator(build, sources, code, removeComments) {
+async function getWorkerEvaluator(build, sources, code) {
   const testWorker = createWorker(testEvaluator, { terminateWorker: true });
   return {
     evaluate: async (testString, timeout) =>
-      await testWorker.execute(
-        { testString, build, code, sources, removeComments },
-        timeout
-      ).done
+      await testWorker.execute({ testString, build, code, sources }, timeout)
+        .done
   };
 }
 
@@ -605,4 +577,14 @@ async function initializeTestRunner(build, sources, code, loadEnzyme) {
     sources,
     loadEnzyme
   );
+}
+
+function reThrow(err, text) {
+  const newMessage = `${text}
+  ${err.message}`;
+  if (err.name === 'AssertionError') {
+    throw new AssertionError(newMessage);
+  } else {
+    throw Error(newMessage);
+  }
 }

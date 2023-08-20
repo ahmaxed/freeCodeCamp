@@ -1,9 +1,7 @@
 ---
 id: 5e7b9f0e0b6c005b0e76f07a
-title: Using Web Services
 challengeType: 11
 videoId: oNl1OVDPGKE
-dashedName: using-web-services
 ---
 
 # --question--
@@ -35,4 +33,9 @@ PHP and TXT
 ## --video-solution--
 
 2
+
+# --hints--
+
+
+# --solutions--
 

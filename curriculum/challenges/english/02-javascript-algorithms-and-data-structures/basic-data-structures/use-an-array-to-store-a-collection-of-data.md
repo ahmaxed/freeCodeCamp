@@ -3,7 +3,6 @@ id: 587d7b7e367417b2b2512b20
 title: Use an Array to Store a Collection of Data
 challengeType: 1
 forumTopicId: 301167
-dashedName: use-an-array-to-store-a-collection-of-data
 ---
 
 # --description--
@@ -13,9 +12,8 @@ The below is an example of the simplest implementation of an array data structur
 ```js
 let simpleArray = ['one', 2, 'three', true, false, undefined, null];
 console.log(simpleArray.length);
+// logs 7
 ```
-
-The `console.log` call displays `7`.
 
 All arrays have a length property, which as shown above, can be very easily accessed with the syntax `Array.length`. A more complex implementation of an array can be seen below. This is known as a <dfn>multi-dimensional array</dfn>, or an array that contains other arrays. Notice that this array also contains JavaScript <dfn>objects</dfn>, which we will examine very closely in our next section, but for now, all you need to know is that arrays are also capable of storing complex objects.
 

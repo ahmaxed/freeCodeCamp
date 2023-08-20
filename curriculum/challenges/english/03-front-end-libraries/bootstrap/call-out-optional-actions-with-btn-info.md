@@ -3,20 +3,19 @@ id: bad87fee1348cd8acef08813
 title: Call out Optional Actions with btn-info
 challengeType: 0
 forumTopicId: 16770
-dashedName: call-out-optional-actions-with-btn-info
 ---
 
 # --description--
 
 Bootstrap comes with several pre-defined colors for buttons. The `btn-info` class is used to call attention to optional actions that the user can take.
 
-Create a new block-level Bootstrap button below your `Like` button with the text `Info`, and add Bootstrap's `btn-info` and `btn-block` classes to it.
+Create a new block-level Bootstrap button below your "Like" button with the text "Info", and add Bootstrap's `btn-info` and `btn-block` classes to it.
 
 Note that these buttons still need the `btn` and `btn-block` classes.
 
 # --hints--
 
-You should create a new `button` element with the text `Info`.
+You should create a new `button` element with the text "Info".
 
 ```js
 assert(new RegExp('info', 'gi').test($('button').text()));

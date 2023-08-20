@@ -1,48 +1,27 @@
 ---
 id: 5900f4c81000cf542c50ffd9
-title: 'Problem 347: Largest integer divisible by two primes'
+title: 问题347：最大整数可被两个素数整除
 challengeType: 5
-forumTopicId: 302006
-dashedName: problem-347-largest-integer-divisible-by-two-primes
+videoUrl: ''
 ---
 
 # --description--
 
-The largest integer ≤ 100 that is only divisible by both the primes 2 and 3 is 96, as 96=32\*3=25\*3.
+只能被素数2和3整除的最大整数≤100是96，因为96 = 32 \* 3 = 25 \* 3。对于两个不同的素数p和q，令M（p，q，N）是最大的正整数≤N，只能被p和q整除，并且如果不存在这样的正整数，则M（p，q，N）= 0。
 
-For two distinct primes p and q let M(p,q,N) be the largest positive integer ≤N only divisible
+例如M（2,3,100）= 96。 M（3,5,100）= 75而不是90因为90可以被2,3和5整除。另外M（2,73,100）= 0因为不存在可以被2和73整除的正整数≤100。
 
-by both p and q and M(p,q,N)=0 if such a positive integer does not exist.
+设S（N）为所有不同M（p，q，N）的和。 S（100）= 2262。
 
-E.g. M(2,3,100)=96. M(3,5,100)=75 and not 90 because 90 is divisible by 2 ,3 and 5. Also M(2,73,100)=0 because there does not exist a positive integer ≤ 100 that is divisible by both 2 and 73.
-
-Let S(N) be the sum of all distinct M(p,q,N). S(100)=2262.
-
-Find S(10 000 000).
+找到S（10 000 000）。
 
 # --hints--
 
-`euler347()` should return 11109800204052.
+`euler347()`应该返回11109800204052。
 
 ```js
 assert.strictEqual(euler347(), 11109800204052);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler347() {
-
-  return true;
-}
-
-euler347();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

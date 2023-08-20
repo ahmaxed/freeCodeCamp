@@ -4,7 +4,6 @@ title: Adjust the Margin of an Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cVJarHW'
 forumTopicId: 16654
-dashedName: adjust-the-margin-of-an-element
 ---
 
 # --description--

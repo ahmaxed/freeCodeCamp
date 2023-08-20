@@ -1,9 +1,7 @@
 ---
 id: 5e7b9f080b6c005b0e76f063
-title: Files as a Sequence
 challengeType: 11
 videoId: cIA0EokbaHE
-dashedName: files-as-a-sequence
 ---
 
 # --description--
@@ -37,4 +35,9 @@ Skips the next block of code.
 ## --video-solution--
 
 3
+
+# --hints--
+
+
+# --solutions--
 

@@ -1,44 +1,21 @@
 ---
 id: 5900f4151000cf542c50ff27
-title: 'Problem 168: Number Rotations'
+title: 问题168：数字轮换
 challengeType: 5
-forumTopicId: 301802
-dashedName: problem-168-number-rotations
+videoUrl: ''
 ---
 
 # --description--
 
-Consider the number 142857. We can right-rotate this number by moving the last digit (7) to the front of it, giving us 714285.
-
-It can be verified that 714285=5×142857.
-
-This demonstrates an unusual property of 142857: it is a divisor of its right-rotation.
-
-Find the last 5 digits of the sum of all integers n, 10 &lt; n &lt; 10100, that have this property.
+考虑数字142857.我们可以通过将最后一个数字（7）移动到它的前面来右旋这个数字，给我们714285.可以验证714285 = 5×142857。这证明了142857的一个不寻常的属性：它是右旋的除数。找到具有此属性的所有整数n，10 &lt;n &lt;10100之和的最后5位数。
 
 # --hints--
 
-`euler168()` should return 59206.
+`euler168()`应返回`euler168()` 。
 
 ```js
 assert.strictEqual(euler168(), 59206);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler168() {
-
-  return true;
-}
-
-euler168();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -1,42 +1,25 @@
 ---
 id: 5900f4de1000cf542c50fff0
-title: 'Problem 369: Badugi'
+title: 问题369：Badugi
 challengeType: 5
-forumTopicId: 302030
-dashedName: problem-369-badugi
+videoUrl: ''
 ---
 
 # --description--
 
-In a standard 52 card deck of playing cards, a set of 4 cards is a Badugi if it contains 4 cards with no pairs and no two cards of the same suit.
+在标准的52张扑克牌中，一套4张牌是Badugi，如果它包含4张没有成对的牌而没有两张相同牌的牌。
 
-Let f(n) be the number of ways to choose n cards with a 4 card subset that is a Badugi. For example, there are 2598960 ways to choose five cards from a standard 52 card deck, of which 514800 contain a 4 card subset that is a Badugi, so f(5) = 514800.
+设f（n）是选择n卡的方式的数量，其中4卡的子集是Badugi。例如，有2598960种方法可以从标准的52卡片组中选择5张卡片，其中514800包含4个卡片子集，这是Badugi，因此f（5）= 514800。
 
-Find ∑f(n) for 4 ≤ n ≤ 13.
+找到Σf（n）为4≤n≤13。
 
 # --hints--
 
-`euler369()` should return 862400558448.
+`euler369()`应该返回862400558448。
 
 ```js
 assert.strictEqual(euler369(), 862400558448);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler369() {
-
-  return true;
-}
-
-euler369();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

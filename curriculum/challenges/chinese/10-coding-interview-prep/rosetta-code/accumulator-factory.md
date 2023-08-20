@@ -1,79 +1,39 @@
 ---
 id: 594810f028c0303b75339ace
-title: Accumulator factory
+title: 蓄能器工厂
 challengeType: 5
-forumTopicId: 302222
-dashedName: accumulator-factory
+videoUrl: ''
 ---
 
 # --description--
 
-A problem posed by [Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_(programmer)) is that of creating a function that takes a single (numeric) argument and which returns another function that is an accumulator. The returned accumulator function in turn also takes a single numeric argument, and returns the sum of all the numeric values passed in so far to that accumulator (including the initial value passed when the accumulator was created).
-
-# --instructions--
-
-Create a function that takes a number $n$ and generates accumulator functions that return the sum of every number ever passed to them.
-
-**Rules:**
-
-Do not use global variables.
-
-**Hint:**
-
-Closures save outer state.
+<p>创建一个带有单个（数字）参数的函数，并返回另一个作为累加器的函数。返回的累加器函数又接受一个数字参数，并返回到目前为止传递给该累加器的所有数值的总和（包括创建累加器时传递的初始值）。 </p><p>规则： </p><p>不要使用全局变量。 </p><p>暗示： </p><p>闭包可以保存外部状态。 </p>
 
 # --hints--
 
-`accumulator` should be a function.
+`accumulator`是一个功能。
 
 ```js
 assert(typeof accumulator === 'function');
 ```
 
-`accumulator(0)` should return a function.
+`accumulator(0)`应该返回一个函数。
 
 ```js
 assert(typeof accumulator(0) === 'function');
 ```
 
-`accumulator(0)(2)` should return a number.
+`accumulator(0)(2)`应该返回一个数字。
 
 ```js
 assert(typeof accumulator(0)(2) === 'number');
 ```
 
-Passing in the values 3, -4, 1.5, and 5 should return 5.5.
+传递值3，-4,1.5和5应返回5.5。
 
 ```js
 assert(testFn(5) === 5.5);
 ```
 
-# --seed--
-
-## --after-user-code--
-
-```js
-const testFn = typeof accumulator(3) === 'function' && accumulator(3);
-if (testFn) {
-  testFn(-4);
-  testFn(1.5);
-}
-```
-
-## --seed-contents--
-
-```js
-function accumulator(sum) {
-
-}
-```
-
 # --solutions--
 
-```js
-function accumulator(sum) {
-  return function(n) {
-    return sum += n;
-  };
-}
-```

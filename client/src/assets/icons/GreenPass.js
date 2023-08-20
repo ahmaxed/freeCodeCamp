@@ -1,12 +1,9 @@
 import React, { Fragment } from 'react';
-import { useTranslation } from 'react-i18next';
 
 function GreenPass(props) {
-  const { t } = useTranslation();
-
   return (
     <Fragment>
-      <span className='sr-only'>{t('icons.passed')}</span>
+      <span className='sr-only'>Passed</span>
       <svg
         height='50'
         viewBox='0 0 200 200'
@@ -15,7 +12,7 @@ function GreenPass(props) {
         {...props}
       >
         <g>
-          <title>{t('icons.passed')}</title>
+          <title>Passed</title>
           <circle
             cx='100'
             cy='99'

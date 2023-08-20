@@ -3,7 +3,6 @@ id: 587d824a367417b2b2512c44
 title: Stock Price Checker
 challengeType: 4
 forumTopicId: 301572
-dashedName: stock-price-checker
 ---
 
 # --description--
@@ -15,7 +14,7 @@ Since all reliable stock price APIs require an API key, we've built a workaround
 Working on this project will involve you writing your code using one of the following methods:
 
 -   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-stockchecker/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-stockchecker) to complete your project.
+-   Use [our repl.it starter project](https://repl.it/github/freeCodeCamp/boilerplate-project-stockchecker) to complete your project.
 -   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 
 When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your projects source code in the `GitHub Link` field.
@@ -62,7 +61,7 @@ async (getUserInput) => {
 };
 ```
 
-You can send a `GET` request to `/api/stock-prices`, passing a NASDAQ stock symbol to a `stock` query parameter. The returned object will contain a property named `stockData`.
+You can send a `GET` request to `/api/stock-prices` with form data containing a NASDAQ stock ticker. Returned will be an object with the property `stockData`.
 
 ```js
 async (getUserInput) => {
@@ -74,7 +73,7 @@ async (getUserInput) => {
 };
 ```
 
-The `stockData` property includes the `stock` symbol as a string, the `price` as a number, and `likes` as a number.
+The `stockData` property includes the `stock` ticker as a string, the `price` as a number, and `likes` as a number.
 
 ```js
 async (getUserInput) => {
@@ -122,6 +121,8 @@ async (getUserInput) => {
   });
 };
 ```
+
+# --seed--
 
 # --solutions--
 

@@ -3,20 +3,19 @@ id: 587d824b367417b2b2512c47
 title: 测试变量或函数是否已定义
 challengeType: 2
 forumTopicId: 301602
-dashedName: test-if-a-variable-or-function-is-defined
 ---
 
 # --description--
 
-请注意，本项目在[这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai)的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 的基础上进行开发。你也可以从 [GitHub](https://repl.it/github/freeCodeCamp/boilerplate-mochachai) 上克隆。
 
 # --instructions--
 
-在 `tests/1_unit-tests.js` 中，`Basic Assertions` 套件中标注为 `#2` 的测试下，修改每个 `assert` 为 `assert.isDefined()` 或 `assert.isUndefined()`，通过测试（结果应为 `true`）。 不要修改传给断言的参数。
+使用 `assert.isDefined()` 或 `assert.isUndefined()` 让测试通过。
 
 # --hints--
 
-应通过所有测试。
+不应有未通过的测试
 
 ```js
 (getUserInput) =>
@@ -30,7 +29,7 @@ dashedName: test-if-a-variable-or-function-is-defined
   );
 ```
 
-应该为第一个断言选择正确的方法：`isDefined` 或 `isUndefined`。
+请选择正确的断言—idDefined 或 idUndefined
 
 ```js
 (getUserInput) =>
@@ -48,7 +47,7 @@ dashedName: test-if-a-variable-or-function-is-defined
   );
 ```
 
-应该为第二个断言选择正确的方法：`isDefined` 或 `isUndefined`。
+请选择正确的断言—idDefined 或 idUndefined
 
 ```js
 (getUserInput) =>
@@ -66,7 +65,7 @@ dashedName: test-if-a-variable-or-function-is-defined
   );
 ```
 
-应该为第三个断言选择正确的方法：`isDefined` 或 `isUndefined`。
+请选择正确的断言—idDefined 或 idUndefined
 
 ```js
 (getUserInput) =>
@@ -86,10 +85,3 @@ dashedName: test-if-a-variable-or-function-is-defined
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

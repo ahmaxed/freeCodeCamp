@@ -3,12 +3,11 @@ id: 587d824e367417b2b2512c58
 title: Run Functional Tests on API Endpoints using Chai-HTTP
 challengeType: 2
 forumTopicId: 301593
-dashedName: run-functional-tests-on-api-endpoints-using-chai-http
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 Mocha allows testing asyncronous operations. There is a small (BIG) difference. Can you spot it?
 
@@ -89,6 +88,8 @@ You should test for 'res.text' == 'hello Guest'
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

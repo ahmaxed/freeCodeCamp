@@ -1,46 +1,29 @@
 ---
 id: 5900f4131000cf542c50ff25
-title: 'Problem 166: Criss Cross'
+title: 问题166：克里斯十字架
 challengeType: 5
-forumTopicId: 301800
-dashedName: problem-166-criss-cross
+videoUrl: ''
 ---
 
 # --description--
 
-A 4x4 grid is filled with digits d, 0 ≤ d ≤ 9.
+4x4网格填充数字d，0≤d≤9。
 
-It can be seen that in the grid
+可以看出，在网格中
 
 6 3 3 0 5 0 4 3 0 7 1 4 1 2 4 5
 
-the sum of each row and each column has the value 12. Moreover the sum of each diagonal is also 12.
+每行和每列的总和值为12.此外，每个对角线的总和也是12。
 
-In how many ways can you fill a 4x4 grid with the digits d, 0 ≤ d ≤ 9 so that each row, each column, and both diagonals have the same sum?
+在多少种方法中，您可以使用数字d，0≤d≤9填充4x4网格，以便每行，每列和两个对角线具有相同的总和？
 
 # --hints--
 
-`euler166()` should return 7130034.
+`euler166()`应返回7130034。
 
 ```js
 assert.strictEqual(euler166(), 7130034);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler166() {
-
-  return true;
-}
-
-euler166();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

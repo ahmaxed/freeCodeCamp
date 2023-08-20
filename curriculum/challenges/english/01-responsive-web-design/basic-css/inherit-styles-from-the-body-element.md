@@ -4,7 +4,6 @@ title: Inherit Styles from the Body Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c9bmdtR'
 forumTopicId: 18204
-dashedName: inherit-styles-from-the-body-element
 ---
 
 # --description--

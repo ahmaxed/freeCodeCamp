@@ -11,38 +11,35 @@ export default function layoutSelector({ element, props }) {
   const {
     location: { pathname }
   } = props;
-
   if (element.type === FourOhFourPage) {
-    return (
-      <DefaultLayout pathname={pathname} showFooter={true}>
-        {element}
-      </DefaultLayout>
-    );
+    return <DefaultLayout pathname={pathname}>{element}</DefaultLayout>;
   }
-  if (/\/certification\//.test(pathname)) {
+  if (/^\/certification(\/.*)*/.test(pathname)) {
     return (
       <CertificationLayout pathname={pathname}>{element}</CertificationLayout>
     );
   }
-
-  const splitPath = pathname.split('/').filter(x => x);
-  const isSuperBlock =
-    (splitPath.length === 2 && splitPath[0]) === 'learn' ||
-    (splitPath.length === 3 && splitPath[1]) === 'learn';
-
-  if (/\/learn\//.test(pathname) && !isSuperBlock) {
+  if (/^\/guide(\/.*)*/.test(pathname)) {
+    console.log('Hitting guide for some reason. Need a redirect.');
+  }
+  if (
+    /^\/learn(\/.*)*/.test(pathname) &&
+    false === /^\/learn\/$|^\/learn$/.test(pathname)
+  ) {
     return (
       <DefaultLayout pathname={pathname} showFooter={false}>
         {element}
       </DefaultLayout>
     );
   }
-
-  return (
-    <DefaultLayout pathname={pathname} showFooter={true}>
-      {element}
-    </DefaultLayout>
-  );
+  if (/^\/donation(\/.*)*|^\/$|^\/donate(\/.*)*/.test(pathname)) {
+    return (
+      <DefaultLayout pathname={pathname} useTheme={false}>
+        {element}
+      </DefaultLayout>
+    );
+  }
+  return <DefaultLayout pathname={pathname}>{element}</DefaultLayout>;
 }
 
 layoutSelector.propTypes = {

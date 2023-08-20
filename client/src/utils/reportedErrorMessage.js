@@ -1,6 +1,6 @@
-const reportedErrorMessage = {
+export default {
   type: 'danger',
-  message: 'flash.not-right'
+  message:
+    'Something is not quite right. A report has been generated and the ' +
+    'freeCodeCamp.org team have been notified.'
 };
-
-export default reportedErrorMessage;

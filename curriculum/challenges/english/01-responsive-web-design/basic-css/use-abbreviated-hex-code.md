@@ -4,7 +4,6 @@ title: Use Abbreviated Hex Code
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cRkpKAm'
 forumTopicId: 18338
-dashedName: use-abbreviated-hex-code
 ---
 
 # --description--

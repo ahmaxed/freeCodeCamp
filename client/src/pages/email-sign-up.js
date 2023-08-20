@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import SectionHeader from '../components/settings/SectionHeader';
 import IntroDescription from '../components/Intro/components/IntroDescription';
-import { withTranslation } from 'react-i18next';
 
 import { Row, Col, Button, Grid } from '@freecodecamp/react-bootstrap';
 import Helmet from 'react-helmet';
@@ -19,8 +18,7 @@ import './email-sign-up.css';
 const propTypes = {
   acceptTerms: PropTypes.func.isRequired,
   acceptedPrivacyTerms: PropTypes.bool,
-  isSignedIn: PropTypes.bool,
-  t: PropTypes.func.isRequired
+  isSignedIn: PropTypes.bool
 };
 
 const mapStateToProps = createSelector(
@@ -50,7 +48,7 @@ class AcceptPrivacyTerms extends Component {
   }
 
   render() {
-    const { acceptedPrivacyTerms, t } = this.props;
+    const { acceptedPrivacyTerms } = this.props;
     if (acceptedPrivacyTerms) {
       return <RedirectToLearn />;
     }
@@ -58,16 +56,22 @@ class AcceptPrivacyTerms extends Component {
     return (
       <Fragment>
         <Helmet>
-          <title>{t('misc.email-signup')} | freeCodeCamp.org</title>
+          <title>Email Sign Up | freeCodeCamp.org</title>
         </Helmet>
         <Grid className='default-page-wrapper email-sign-up'>
-          <SectionHeader>{t('misc.email-signup')}</SectionHeader>
+          <SectionHeader>Email Sign Up</SectionHeader>
           <Row>
             <IntroDescription />
             <Col md={8} mdOffset={2} sm={10} smOffset={1} xs={12}>
-              <strong>{t('misc.quincy')}</strong>
+              <strong>
+                - Quincy Larson, the teacher who founded freeCodeCamp.org
+              </strong>
               <Spacer />
-              <p>{t('misc.email-blast')}</p>
+              <p>
+                By the way, each Friday I send an email with 5 links about
+                programming and computer science. I send these to about 4
+                million people. Would you like me to send this to you, too?
+              </p>
               <Spacer />
             </Col>
 
@@ -79,7 +83,7 @@ class AcceptPrivacyTerms extends Component {
                 className='big-cta-btn'
                 onClick={() => this.onClick(true)}
               >
-                {t('buttons.yes-please')}
+                Yes
               </Button>
               <ButtonSpacer />
             </Col>
@@ -91,7 +95,7 @@ class AcceptPrivacyTerms extends Component {
                 className='big-cta-btn'
                 onClick={() => this.onClick(false)}
               >
-                {t('buttons.no-thanks')}
+                No thanks
               </Button>
               <ButtonSpacer />
             </Col>
@@ -110,4 +114,4 @@ AcceptPrivacyTerms.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(AcceptPrivacyTerms));
+)(AcceptPrivacyTerms);

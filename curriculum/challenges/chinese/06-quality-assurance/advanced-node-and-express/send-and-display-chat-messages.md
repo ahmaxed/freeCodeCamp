@@ -3,12 +3,11 @@ id: 589fc832f9fc0f352b528e79
 title: 发送和显示聊天消息
 challengeType: 2
 forumTopicId: 301562
-dashedName: send-and-display-chat-messages
 ---
 
 # --description--
 
-是时候开始允许用户向服务器发送聊天消息，以向所有客户端发送消息了！ 在 `client.js` 文件里，你应该已经注意到了这段提交消息表单的代码：
+现在，我们可以开始实现聊天室功能了。整体逻辑很简单，只需要获取用户发给服务端的消息，再通过服务端给所有客户端发送信息就可以了。在 client.js 文件里，你应该已经注意到了这段提交表单的代码：
 
 ```js
 $('form').submit(function() {
@@ -16,23 +15,23 @@ $('form').submit(function() {
 });
 ```
 
-在表单提交代码中，需要处理发送（emit）事件，它应该发生在定义 `messageToSend` 之后，以及清除 `#m` 中的文本之前。 我们称这个事件为 `'chat message'`，需发送的数据为 `messageToSend`。
+现在我们需要处理事件的 emit，它应该发生在定义 `messageToSend` 之后，以及清除 `#m` 中的文本之前。我们称这个事件叫 `'chat message'`，需发送的数据叫 `messageToSend`：
 
 ```js
 socket.emit('chat message', messageToSend);
 ```
 
-在服务端，我们需要监听包含 `message` 数据的 `'chat message'` 事件。 当事件发生，我们就通过 `io.emit` 把包含 `name` 和 `message` 的 `'chat message'` 事件发送给所有已连接的 socket。
+在服务端，我们需要监听包含 `message` 的 `'chat message'` 事件。一旦事件发生，我们就通过`io.emit` 把包含 `name` 和 `message` 的 `'chat message'` 事件发送给所有已连接的 socket。
 
-在 `client.js` 中，我们需要监听 `'chat message'` 事件。只要接收到这个事件，就把包含名字和消息的内容（注意：需要在名字后添加冒号）添加到 `#messages`。
+回到客户端，我们需要监听 `'chat message'` 事件。只要接收到这个事件，就把包含名字和消息的内容（注意：需要在名字后添加冒号）通过 `<li>` 添加到 `#messages`。
 
 至此，我们已经完成发送信息到所有客户端的功能。
 
-完成上述要求后，请提交你的页面链接。 如果你遇到了问题，可以参考[这里](https://gist.github.com/camperbot/d7af9864375207e254f73262976d2016)的答案。
+完成上述要求后，你可以在下方提交你的页面链接。如果你遇到了问题，可以参考 [这里](https://gist.github.com/camperbot/d7af9864375207e254f73262976d2016) 的答案。
 
 # --hints--
 
-服务端应监听 `'chat message'`，且应在监听到后发送它。
+服务端应监听 `'chat message'`，且应在监听到后 emit。
 
 ```js
 (getUserInput) =>
@@ -70,10 +69,3 @@ socket.emit('chat message', messageToSend);
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

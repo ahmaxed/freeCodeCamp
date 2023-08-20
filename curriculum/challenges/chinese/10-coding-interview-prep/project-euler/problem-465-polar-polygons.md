@@ -1,52 +1,35 @@
 ---
 id: 5900f53d1000cf542c510050
-title: 'Problem 465: Polar polygons'
+title: 问题465：极地多边形
 challengeType: 5
-forumTopicId: 302140
-dashedName: problem-465-polar-polygons
+videoUrl: ''
 ---
 
 # --description--
 
-The kernel of a polygon is defined by the set of points from which the entire polygon's boundary is visible. We define a polar polygon as a polygon for which the origin is strictly contained inside its kernel.
+多边形的内核由一组点定义，整个多边形的边界是可见的。我们将极坐标多边形定义为多边形，其原点严格包含在其内核中。
 
-For this problem, a polygon can have collinear consecutive vertices. However, a polygon still cannot have self-intersection and cannot have zero area.
+对于此问题，多边形可以具有共线的连续顶点。但是，多边形仍然不能具有自相交，并且不能具有零面积。
 
-For example, only the first of the following is a polar polygon (the kernels of the second, third, and fourth do not strictly contain the origin, and the fifth does not have a kernel at all):
+例如，只有下面的第一个是极多边形（第二个，第三个和第四个的内核不严格包含原点，第五个根本没有内核）：
 
-Notice that the first polygon has three consecutive collinear vertices.
+请注意，第一个多边形有三个连续的共线顶点。
 
-Let P(n) be the number of polar polygons such that the vertices (x, y) have integer coordinates whose absolute values are not greater than n.
+令P（n）为极坐标多边形的数量，使得顶点（x，y）具有绝对值不大于n的整数坐标。
 
-Note that polygons should be counted as different if they have different set of edges, even if they enclose the same area. For example, the polygon with vertices \[(0,0),(0,3),(1,1),(3,0)] is distinct from the polygon with vertices \[(0,0),(0,3),(1,1),(3,0),(1,0)].
+请注意，如果多边形具有不同的边集，即使它们包含相同的区域，也应该计为不同的多边形。例如，具有顶点\[（0,0），（0,3），（1,1），（3,0）]的多边形与具有顶点\[（0,0），（0,3）的多边形不同），（1,1），（3,0），（1,0）]。
 
-For example, P(1) = 131, P(2) = 1648531, P(3) = 1099461296175 and P(343) mod 1 000 000 007 = 937293740.
+例如，P（1）= 131，P（2）= 1648531，P（3）= 1099461296175，P（343）mod 1 000 000 007 = 937293740。
 
-Find P(713) mod 1 000 000 007.
+求P（713）mod 1 000 000 007。
 
 # --hints--
 
-`euler465()` should return 585965659.
+`euler465()`应该返回585965659。
 
 ```js
 assert.strictEqual(euler465(), 585965659);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler465() {
-
-  return true;
-}
-
-euler465();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

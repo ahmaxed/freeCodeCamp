@@ -3,7 +3,6 @@ id: 5951a53863c8a34f02bf1bdc
 title: Closest-pair problem
 challengeType: 5
 forumTopicId: 302232
-dashedName: closest-pair-problem
 ---
 
 # --description--

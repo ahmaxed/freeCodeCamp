@@ -1,34 +1,21 @@
 ---
 id: bd7158d8c443edefaeb5bdef
-title: 时间戳微服务
+title: 时间戳
 challengeType: 4
 forumTopicId: 301508
-dashedName: timestamp-microservice
 ---
 
 # --description--
 
-构建一个 JavaScript 的全栈应用，在功能上与这个应用相似：<https://timestamp-microservice.freecodecamp.rocks/>。 可以采用下面的任意一种方式完成这个挑战：
+构建一个功能类似于 <https://curse-arrow.glitch.me/> 的 JavaScript 全栈应用。
 
--   克隆 [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-timestamp/) 并在本地完成项目。
--   使用 [repl.it 初始化项目](https://repl.it/github/freeCodeCamp/boilerplate-project-timestamp) 来完成项目。
--   使用你选择的网站生成器来完成项目， 并确保包含了我们 GitHub 仓库的所有文件。
+在开发这个项目时，我们推荐你在 [Glitch](https://glitch.com/) 上编码。编码完成之后，你可以把应用主页的链接复制到屏幕的输入框中，测试你的代码是否能通过项目需求。当然你也可以基于其他的平台来完成自己的项目，只要提供一个公开的主页便于我们测试就行。
 
-当完成本项目，请确认有一个正常运行的 demo 可以公开访问。 然后将 URL 提交到 `Solution Link` 中。 此外，还可以将项目的源码提交到 `GitHub Link` 中。
+参考示例：你可以通过 [这个链接](https://glitch.com/#!/import/github/freeCodeCamp/boilerplate-project-timestamp/) 访问在 Glitch 上的项目，或者从 GitHub 上 clone [这个仓库的代码](https://github.com/freeCodeCamp/boilerplate-project-timestamp/)。如果你使用 Glitch，请记住将项目链接保存到妥当的地方。
 
 # --hints--
 
-提交自己的项目，而不是示例的 URL。
-
-```js
-(getUserInput) => {
-  assert(
-    !/.*\/timestamp-microservice\.freecodecamp\.rocks/.test(getUserInput('url'))
-  );
-};
-```
-
-向 `/api/timestamp/:date?` 发送一个带有有效日期的请求，应该很快（在几毫秒内）返回一个 JSON 对象，在这个 JSON 对象内有一个包含输入日期的 Unix 时间戳的 `unix` 键。
+当处理一个有效的日期，返回正确的 unix 时间戳。
 
 ```js
 (getUserInput) =>
@@ -46,7 +33,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-向 `/api/timestamp/:date?` 发送一个带有有效日期的请求，应该返回一个 JSON 对象，在这个 JSON 对象内有一个包含如 `Thu, 01 Jan 1970 00:00:00 GMT` 格式的输入日期的 `utc` 键。
+当处理一个有效的日期， 返回正确的 UTC 字符串。
 
 ```js
 (getUserInput) =>
@@ -64,16 +51,13 @@ dashedName: timestamp-microservice
   );
 ```
 
-向 `/api/timestamp/1451001600000` 发送请求，应该返回 `{ unix: 1451001600000, utc: "Fri, 25 Dec 2015 00:00:00 GMT" }`。
+当处理一个有效的 unix 格式的日期, 返回正确的 unix 时间戳。
 
 ```js
 (getUserInput) =>
-  $.get(getUserInput('url') + '/api/timestamp/1451001600000').then(
+  $.get(getUserInput('url') + '/api/timestamp/1482624000000').then(
     (data) => {
-      assert(
-        data.unix === 1451001600000 &&
-          data.utc === 'Fri, 25 Dec 2015 00:00:00 GMT'
-      );
+      assert.equal(data.unix, 1482624000000);
     },
     (xhr) => {
       throw new Error(xhr.responseText);
@@ -81,24 +65,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-程序能成功处理能被 `new Date(date_string)` 解析的日期。
-
-```js
-(getUserInput) =>
-  $.get(getUserInput('url') + '/api/timestamp/05 October 2011').then(
-    (data) => {
-      assert(
-        data.unix === 1317772800000 &&
-          data.utc === 'Wed, 05 Oct 2011 00:00:00 GMT'
-      );
-    },
-    (xhr) => {
-      throw new Error(xhr.responseText);
-    }
-  );
-```
-
-如果传入的日期是无效的，将返回一个带有结构体 `{ error : "Invalid Date" }` 的对象。
+这个程序应该返回无效日期的预期错误消息
 
 ```js
 (getUserInput) =>
@@ -112,7 +79,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-如果传入的参数是空日期，将返回一个包含当前时间的 `unix` 键的 JSON 对象。
+当处理一个空的日期参数的时候，返回当前时间的 unix 格式。
 
 ```js
 (getUserInput) =>
@@ -127,7 +94,7 @@ dashedName: timestamp-microservice
   );
 ```
 
-如果传入的参数是空日期，将返回一个包含当前时间的 `utc` 键的 JSON 对象。
+当处理一个空的日期参数的时候，返回当前时间的 UTC 格式。
 
 ```js
 (getUserInput) =>
@@ -145,10 +112,3 @@ dashedName: timestamp-microservice
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

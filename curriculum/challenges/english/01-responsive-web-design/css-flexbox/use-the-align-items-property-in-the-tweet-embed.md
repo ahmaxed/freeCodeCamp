@@ -4,7 +4,6 @@ title: Use the align-items Property in the Tweet Embed
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVaDAv/cd3PNfq'
 forumTopicId: 301106
-dashedName: use-the-align-items-property-in-the-tweet-embed
 ---
 
 # --description--
@@ -16,12 +15,6 @@ The last challenge introduced the `align-items` property and gave an example. Th
 Add the CSS property `align-items` to the header's `.follow-btn` element. Set the value to `center`.
 
 # --hints--
-
-Your `.follow-btn` should be rendered on the page. Be sure to turn off any extensions such as ad blockers.
-
-```js
-assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');
-```
 
 The `.follow-btn` element should have the `align-items` property set to a value of `center`.
 

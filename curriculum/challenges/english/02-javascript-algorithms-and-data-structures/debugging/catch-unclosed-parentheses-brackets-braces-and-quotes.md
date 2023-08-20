@@ -3,7 +3,6 @@ id: 587d7b84367417b2b2512b36
 title: 'Catch Unclosed Parentheses, Brackets, Braces and Quotes'
 challengeType: 1
 forumTopicId: 301190
-dashedName: catch-unclosed-parentheses-brackets-braces-and-quotes
 ---
 
 # --description--
@@ -24,7 +23,7 @@ Your code should fix the missing piece of the array.
 assert(code.match(/myArray\s*?=\s*?\[\s*?1\s*?,\s*?2\s*?,\s*?3\s*?\];/g));
 ```
 
-Your code should fix the missing piece of the `.reduce()` method. The console output should show that `Sum of array values is: 6`.
+Your code should fix the missing piece of the `.reduce()` method. The console output should show that "Sum of array values is: 6".
 
 ```js
 assert(arraySum === 6);

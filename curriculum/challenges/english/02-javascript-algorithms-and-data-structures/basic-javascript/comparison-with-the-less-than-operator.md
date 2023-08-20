@@ -4,24 +4,21 @@ title: Comparison with the Less Than Operator
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cNVRWtB'
 forumTopicId: 16789
-dashedName: comparison-with-the-less-than-operator
 ---
 
 # --description--
 
-The less than operator (`<`) compares the values of two numbers. If the number to the left is less than the number to the right, it returns `true`. Otherwise, it returns `false`. Like the equality operator, the less than operator converts data types while comparing.
+The <dfn>less than</dfn> operator (`<`) compares the values of two numbers. If the number to the left is less than the number to the right, it returns `true`. Otherwise, it returns `false`. Like the equality operator, <dfn>less than</dfn> operator converts data types while comparing.
 
 **Examples**
 
 ```js
-2   < 5
-'3' < 7
-5   < 5
-3   < 2
-'8' < 4
+2   < 5  // true
+'3' < 7  // true
+5   < 5  // false
+3   < 2  // false
+'8' < 4  // false
 ```
-
-In order, these expressions would evaluate to `true`, `true`, `false`, `false`, and `false`.
 
 # --instructions--
 
@@ -29,37 +26,37 @@ Add the less than operator to the indicated lines so that the return statements 
 
 # --hints--
 
-`testLessThan(0)` should return the string `Under 25`
+`testLessThan(0)` should return "Under 25"
 
 ```js
 assert(testLessThan(0) === 'Under 25');
 ```
 
-`testLessThan(24)` should return the string `Under 25`
+`testLessThan(24)` should return "Under 25"
 
 ```js
 assert(testLessThan(24) === 'Under 25');
 ```
 
-`testLessThan(25)` should return the string `Under 55`
+`testLessThan(25)` should return "Under 55"
 
 ```js
 assert(testLessThan(25) === 'Under 55');
 ```
 
-`testLessThan(54)` should return the string `Under 55`
+`testLessThan(54)` should return "Under 55"
 
 ```js
 assert(testLessThan(54) === 'Under 55');
 ```
 
-`testLessThan(55)` should return the string `55 or Over`
+`testLessThan(55)` should return "55 or Over"
 
 ```js
 assert(testLessThan(55) === '55 or Over');
 ```
 
-`testLessThan(99)` should return the string `55 or Over`
+`testLessThan(99)` should return "55 or Over"
 
 ```js
 assert(testLessThan(99) === '55 or Over');

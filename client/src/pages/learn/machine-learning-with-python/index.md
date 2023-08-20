@@ -1,6 +1,6 @@
 ---
 title: Machine Learning with Python
-superBlock: machine-learning-with-python
+superBlock: Machine Learning with Python
 ---
 ## Introduction to Machine Learning with Python
 

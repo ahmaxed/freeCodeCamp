@@ -1,9 +1,6 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
 function RedFail() {
-  const { t } = useTranslation();
-
   return (
     <svg
       height='50'
@@ -12,7 +9,7 @@ function RedFail() {
       xmlns='http://www.w3.org/2000/svg'
     >
       <g>
-        <title>{t('icons.fail')}</title>
+        <title>Test failed</title>
         <circle
           cx='100'
           cy='99'

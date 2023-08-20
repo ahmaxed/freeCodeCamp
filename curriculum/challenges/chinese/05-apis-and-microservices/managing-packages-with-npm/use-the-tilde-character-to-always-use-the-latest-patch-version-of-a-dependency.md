@@ -1,16 +1,15 @@
 ---
 id: 587d7fb5367417b2b2512c02
-title: 用波浪号维持依赖项的最新修订号
+title: 用波浪字符始终使用依赖项的最新补丁版本
 challengeType: 2
 forumTopicId: 301532
-dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-dependency
 ---
 
 # --description--
 
-在上一个挑战中，npm 只包含特定版本的依赖包。 如果想让项目各个部分保持相互兼容，锁定依赖包版本是一个行之有效的办法。 但是大多数情况下，我们并不希望错过依赖项的问题修复，因为它们通常包含重要的安全补丁，而且它们理论上也会兼容我们既有的代码。
+在最后一个挑战中，我们告诉 npm 只包含特定版本的依赖包。如果想让项目各个部分保持相互兼容，锁定依赖包版本是一个有效的办法。但是大多数情况下，我们并不希望错过依赖项的问题修复，因为它们通常包含重要的安全补丁，而且它们理论上也会兼容我们既有的代码。
 
-可以在依赖项的版本号前加一个波浪号（`~`），以让 npm 依赖项更新到最新的修订版。 这里有一个允许升级到任何 1.3.x 的例子：
+为了让 npm 依赖项更新到最新的修订版，你可以在依赖包的版本号前加一个波浪符号（~）。在 package.json 中，我们当前的 moment 依赖包更新规则是：仅使用特定版本（2.10.2），但我们想用它最新的 2.10.x 版本。
 
 ```json
 "package": "~1.3.8"
@@ -18,15 +17,15 @@ dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-
 
 # --instructions--
 
-在 package.json 文件中，当前规则是 npm 将 moment 升级到特定版本（2.10.2）。 但是现在，要允许使用最新的 2.10.x 版本。
+在 package.json 文件中，当前有关 npm 如何升级的规则是使用特定版本（2.10.2）。 但是现在，要允许使用最新的2.10.x版本。
 
-在依赖项中，给 moment 的版本号添加波浪号（`~`）前缀，允许 npm 将其更新为最新的修订版。
+在 dependencies 中，给 moment 的版本号添加波浪符号（~）前缀，允许 npm 将其更新为最新的修订版。
 
-**注意：**原来的版本号不用更改。
+请注意，原本的版本号不用更改。
 
 # --hints--
 
-“dependencies”应该包含“moment”
+'dependencies' 应该包含 'moment'。
 
 ```js
 (getUserInput) =>
@@ -45,7 +44,7 @@ dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-
   );
 ```
 
-“moment”的版本号应该是“~2.10.2”
+'moment' 的版本号应该是 '~2.10.2'。
 
 ```js
 (getUserInput) =>
@@ -66,10 +65,3 @@ dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

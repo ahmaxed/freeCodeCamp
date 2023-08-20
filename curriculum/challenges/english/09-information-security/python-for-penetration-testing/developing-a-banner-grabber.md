@@ -3,7 +3,6 @@ id: 5ea9997bbec2e9bc47e94db3
 title: Developing a Banner Grabber
 challengeType: 11
 videoId: CeGW761BIsA
-dashedName: developing-a-banner-grabber
 ---
 
 # --question--

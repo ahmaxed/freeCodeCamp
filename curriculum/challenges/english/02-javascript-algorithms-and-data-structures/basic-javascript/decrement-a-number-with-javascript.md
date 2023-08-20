@@ -4,24 +4,20 @@ title: Decrement a Number with JavaScript
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cM2KeS2'
 forumTopicId: 17558
-dashedName: decrement-a-number-with-javascript
 ---
 
 # --description--
 
 You can easily <dfn>decrement</dfn> or decrease a variable by one with the `--` operator.
 
-```js
-i--;
-```
+`i--;`
 
 is the equivalent of
 
-```js
-i = i - 1;
-```
+`i = i - 1;`
 
-**Note:** The entire line becomes `i--;`, eliminating the need for the equal sign.
+**Note**  
+The entire line becomes `i--;`, eliminating the need for the equal sign.
 
 # --instructions--
 

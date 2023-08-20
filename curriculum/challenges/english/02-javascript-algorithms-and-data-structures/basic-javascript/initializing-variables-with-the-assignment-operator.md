@@ -4,16 +4,13 @@ title: Initializing Variables with the Assignment Operator
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cWJ4Bfb'
 forumTopicId: 301171
-dashedName: initializing-variables-with-the-assignment-operator
 ---
 
 # --description--
 
 It is common to <dfn>initialize</dfn> a variable to an initial value in the same line as it is declared.
 
-```js
-var myVar = 0;
-```
+`var myVar = 0;`
 
 Creates a new variable called `myVar` and assigns it an initial value of `0`.
 
@@ -40,7 +37,6 @@ if(typeof a !== 'undefined') {(function(a){return "a = " + a;})(a);} else { (fun
 ## --seed-contents--
 
 ```js
-
 ```
 
 # --solutions--

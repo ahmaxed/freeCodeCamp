@@ -3,7 +3,6 @@ id: 5900f4d91000cf542c50ffeb
 title: 'Problem 363: Bézier Curves'
 challengeType: 5
 forumTopicId: 302024
-dashedName: problem-363-bzier-curves
 ---
 
 # --description--

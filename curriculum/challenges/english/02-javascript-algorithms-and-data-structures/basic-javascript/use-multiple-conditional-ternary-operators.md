@@ -4,14 +4,13 @@ title: Use Multiple Conditional (Ternary) Operators
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cyWJBT4'
 forumTopicId: 301179
-dashedName: use-multiple-conditional-ternary-operators
 ---
 
 # --description--
 
 In the previous challenge, you used a single conditional operator. You can also chain them together to check for multiple conditions.
 
-The following function uses `if`, `else if`, and `else` statements to check multiple conditions:
+The following function uses if, else if, and else statements to check multiple conditions:
 
 ```js
 function findGreaterOrEqual(a, b) {
@@ -47,7 +46,7 @@ function findGreaterOrEqual(a, b) {
 
 # --instructions--
 
-In the `checkSign` function, use multiple conditional operators - following the recommended format used in `findGreaterOrEqual` - to check if a number is positive, negative or zero. The function should return `positive`, `negative` or `zero`.
+In the `checkSign` function, use multiple conditional operators - following the recommended format used in `findGreaterOrEqual` - to check if a number is positive, negative or zero. The function should return `"positive"`, `"negative"` or `"zero"`.
 
 # --hints--
 
@@ -57,19 +56,19 @@ In the `checkSign` function, use multiple conditional operators - following the 
 assert(/.+?\s*?\?\s*?.+?\s*?:\s*?.+?\s*?\?\s*?.+?\s*?:\s*?.+?/gi.test(code));
 ```
 
-`checkSign(10)` should return the string `positive`. Note that capitalization matters
+`checkSign(10)` should return "positive". Note that capitalization matters
 
 ```js
 assert(checkSign(10) === 'positive');
 ```
 
-`checkSign(-12)` should return the string `negative`. Note that capitalization matters
+`checkSign(-12)` should return "negative". Note that capitalization matters
 
 ```js
 assert(checkSign(-12) === 'negative');
 ```
 
-`checkSign(0)` should return the string `zero`. Note that capitalization matters
+`checkSign(0)` should return "zero". Note that capitalization matters
 
 ```js
 assert(checkSign(0) === 'zero');

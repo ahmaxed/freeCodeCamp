@@ -4,14 +4,13 @@ title: Returning Boolean Values from Functions
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cp62qAQ'
 forumTopicId: 18273
-dashedName: returning-boolean-values-from-functions
 ---
 
 # --description--
 
 You may recall from [Comparison with the Equality Operator](/learn/javascript-algorithms-and-data-structures/basic-javascript/comparison-with-the-equality-operator) that all comparison operators return a boolean `true` or `false` value.
 
-Sometimes people use an `if/else` statement to do a comparison, like this:
+Sometimes people use an if/else statement to do a comparison, like this:
 
 ```js
 function isEqual(a,b) {

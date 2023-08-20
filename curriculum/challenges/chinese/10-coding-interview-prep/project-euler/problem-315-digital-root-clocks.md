@@ -1,58 +1,41 @@
 ---
 id: 5900f4a71000cf542c50ffba
-title: 'Problem 315: Digital root clocks'
+title: 问题315：数字根时钟
 challengeType: 5
-forumTopicId: 301971
-dashedName: problem-315-digital-root-clocks
+videoUrl: ''
 ---
 
 # --description--
 
-Sam and Max are asked to transform two digital clocks into two "digital root" clocks.
+请Sam和Max将两个数字时钟转换为两个“数字根”时钟。
 
-A digital root clock is a digital clock that calculates digital roots step by step.
+数字根时钟是一种逐步计算数字根的数字时钟。
 
-When a clock is fed a number, it will show it and then it will start the calculation, showing all the intermediate values until it gets to the result. For example, if the clock is fed the number 137, it will show: "137" → "11" → "2" and then it will go black, waiting for the next number.
+当时钟输入一个数字时，它将显示它，然后它将开始计算，显示所有中间值，直到得到结果为止。 例如，如果时钟被输入数字137，它将显示：“ 137”→“ 11”→“ 2”，然后它将变黑，等待下一个数字。
 
-Every digital number consists of some light segments: three horizontal (top, middle, bottom) and four vertical (top-left, top-right, bottom-left, bottom-right). Number "1" is made of vertical top-right and bottom-right, number "4" is made by middle horizontal and vertical top-left, top-right and bottom-right. Number "8" lights them all.
+每个数字均由一些亮段组成：三个水平段（顶部，中间，底部）和四个垂直段（左上，右上，左下，右下）。 数字“ 1”由垂直的右上角和右下角构成，数字“ 4”由中间的水平和垂直左上角，右上角和右下角组成。数字“ 8”将它们全部点亮。
 
-The clocks consume energy only when segments are turned on/off. To turn on a "2" will cost 5 transitions, while a "7" will cost only 4 transitions.
+仅当打开/关闭分段时，时钟才消耗能量。 打开“ 2”将花费5个转换，而“ 7”将仅花费4个转换。
 
-Sam and Max built two different clocks.
+山姆和麦克斯建造了两个不同的时钟。
 
-Sam's clock is fed e.g. number 137: the clock shows "137", then the panel is turned off, then the next number ("11") is turned on, then the panel is turned off again and finally the last number ("2") is turned on and, after some time, off. For the example, with number 137, Sam's clock requires:"137" : (2 + 5 + 4) × 2 = 22 transitions ("137" on/off). "11" : (2 + 2) × 2 = 8 transitions ("11" on/off). "2" : (5) × 2 = 10 transitions ("2" on/off).
+山姆的时钟喂食例如数字137：时钟显示“ 137”，然后关闭面板，然后打开下一个数字（“ 11”），然后再次关闭面板，最后打开最后一个数字（“ 2”）并在一段时间后关闭。 例如，对于数字137，Sam的时钟要求：“ 137” ： （2 + 5 + 4）×2 = 22个转换（“ 137”打开/关闭）。 “ 11” ： （2 + 2）×2 = 8个转换（“ 11”开/关）。 “ 2” ： （5）×2 = 10个转换（“ 2”打开/关闭）。
 
-For a grand total of 40 transitions.
+总共进行了40次转换。
 
-Max's clock works differently. Instead of turning off the whole panel, it is smart enough to turn off only those segments that won't be needed for the next number. For number 137, Max's clock requires:"137" : 2 + 5 + 4 = 11 transitions ("137" on) 7 transitions (to turn off the segments that are not needed for number "11"). "11" : 0 transitions (number "11" is already turned on correctly) 3 transitions (to turn off the first "1" and the bottom part of the second "1"; the top part is common with number "2"). "2" : 4 transitions (to turn on the remaining segments in order to get a "2") 5 transitions (to turn off number "2").
+马克斯的时钟工作方式不同。除了关闭整个面板，它还足够聪明，可以仅关闭下一个数字不需要的那些段。 对于数字137，麦克斯的时钟要求：“ 137” ： 2 + 5 + 4 = 11个转换（“ 137”亮） 7个转换（关闭数字“ 11”不需要的段）。 “ 11” ： 0个转换（数字“ 11”已正确打开） 3个转换（关闭第一个“ 1”和第二个“ 1”的底部； 顶部与数字“ 2”相同）。 “ 2” ： 4个转换（打开其余段以获取“ 2”） 5个转换（关闭数字“ 2”）。
 
-For a grand total of 30 transitions.
+总共进行了30次转换。
 
-Of course, Max's clock consumes less power than Sam's one. The two clocks are fed all the prime numbers between A = 107 and B = 2×107. Find the difference between the total number of transitions needed by Sam's clock and that needed by Max's one.
+当然，Max的时钟比Sam的时钟消耗更少的功率。 两个时钟都馈入A = 107和B = 2×107之间的所有素数。 求出Sam的时钟所需的跃迁总数与Max的时钟所需的跃迁总数之间的差。
 
 # --hints--
 
-`euler315()` should return 13625242.
+`euler315()`应该返回13625242。
 
 ```js
 assert.strictEqual(euler315(), 13625242);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler315() {
-
-  return true;
-}
-
-euler315();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

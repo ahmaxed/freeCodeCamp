@@ -3,7 +3,6 @@ id: 589fc832f9fc0f352b528e79
 title: Send and Display Chat Messages
 challengeType: 2
 forumTopicId: 301562
-dashedName: send-and-display-chat-messages
 ---
 
 # --description--
@@ -67,6 +66,8 @@ Client should properly handle and display the new data from event `'chat message
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

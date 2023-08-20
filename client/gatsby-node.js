@@ -1,11 +1,9 @@
 const env = require('../config/env');
-const webpack = require('webpack');
 
 const { createFilePath } = require('gatsby-source-filesystem');
-// TODO: ideally we'd remove lodash and just use lodash-es, but we can't require
-// es modules here.
 const uniq = require('lodash/uniq');
 
+const { dasherize } = require('../utils/slugs');
 const { blockNameify } = require('../utils/block-nameify');
 const {
   createChallengePages,
@@ -22,7 +20,9 @@ exports.onCreateNode = function onCreateNode({ node, actions, getNode }) {
   const { createNodeField } = actions;
   if (node.internal.type === 'ChallengeNode') {
     const { tests = [], block, dashedName, superBlock } = node;
-    const slug = `/learn/${superBlock}/${block}/${dashedName}`;
+    const slug = `/learn/${dasherize(superBlock)}/${dasherize(
+      block
+    )}/${dashedName}`;
     createNodeField({ node, name: 'slug', value: slug });
     createNodeField({ node, name: 'blockName', value: blockNameify(block) });
     createNodeField({ node, name: 'tests', value: tests });
@@ -53,6 +53,15 @@ exports.createPages = function createPages({ graphql, actions, reporter }) {
     }
   }
 
+  if (!env.stripePublicKey) {
+    if (process.env.FREECODECAMP_NODE_ENV === 'production') {
+      throw new Error('Stripe public key is required to start the client!');
+    } else {
+      reporter.info(
+        'Stripe public key missing or invalid. Required for donations.'
+      );
+    }
+  }
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
@@ -122,10 +131,9 @@ exports.createPages = function createPages({ graphql, actions, reporter }) {
           result.data.allChallengeNode.edges.map(
             ({ node: { superBlock } }) => superBlock
           )
-        );
+        ).map(superBlock => blockNameify(superBlock));
 
         // Create intro pages
-        // TODO: Remove allMarkdownRemark (populate from elsewhere)
         result.data.allMarkdownRemark.edges.forEach(edge => {
           const {
             node: { frontmatter, fields }
@@ -177,14 +185,8 @@ exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
     plugins.define({
       HOME_PATH: JSON.stringify(
         process.env.HOME_PATH || 'http://localhost:3000'
-      )
-    }),
-    // We add the shims of the node globals to the global scope
-    new webpack.ProvidePlugin({
-      Buffer: ['buffer', 'Buffer']
-    }),
-    new webpack.ProvidePlugin({
-      process: 'process/browser'
+      ),
+      STRIPE_PUBLIC_KEY: JSON.stringify(process.env.STRIPE_PUBLIC_KEY || '')
     })
   ];
   // The monaco editor relies on some browser only globals so should not be
@@ -194,17 +196,8 @@ exports.onCreateWebpackConfig = ({ stage, plugins, actions }) => {
     newPlugins.push(new MonacoWebpackPlugin());
   }
   actions.setWebpackConfig({
-    resolve: {
-      fallback: {
-        fs: false,
-        path: require.resolve('path-browserify'),
-        assert: require.resolve('assert'),
-        crypto: require.resolve('crypto-browserify'),
-        util: false,
-        buffer: require.resolve('buffer'),
-        stream: require.resolve('stream-browserify'),
-        process: require.resolve('process/browser')
-      }
+    node: {
+      fs: 'empty'
     },
     plugins: newPlugins
   });
@@ -222,6 +215,10 @@ exports.onCreateBabelConfig = ({ actions }) => {
     options: {
       '@freecodecamp/react-bootstrap': {
         transform: '@freecodecamp/react-bootstrap/lib/${member}',
+        preventFullImport: true
+      },
+      lodash: {
+        transform: 'lodash/${member}',
         preventFullImport: true
       }
     }

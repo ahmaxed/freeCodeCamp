@@ -1,52 +1,35 @@
 ---
 id: 5900f4e51000cf542c50fff6
-title: 'Problem 374: Maximum Integer Partition Product'
+title: 问题374：最大整数分区产品
 challengeType: 5
-forumTopicId: 302036
-dashedName: problem-374-maximum-integer-partition-product
+videoUrl: ''
 ---
 
 # --description--
 
-An integer partition of a number n is a way of writing n as a sum of positive integers.
+数字n的整数分区是将n写为正整数之和的方法。
 
-Partitions that differ only in the order of their summands are considered the same. A partition of n into distinct parts is a partition of n in which every part occurs at most once.
+仅按其加数顺序不同的分区被认为是相同的。将n分成不同部分是n的分区，其中每个部分最多出现一次。
 
-The partitions of 5 into distinct parts are: 5, 4+1 and 3+2.
+5个不同部分的分区是：5,4 + 1和3 + 2。
 
-Let f(n) be the maximum product of the parts of any such partition of n into distinct parts and let m(n) be the number of elements of any such partition of n with that product.
+设f（n）是n的任何这种分区的部分到不同部分的最大乘积，并且令m（n）是具有该乘积的n的任何这种分区的元素的数量。
 
-So f(5)=6 and m(5)=2.
+所以f（5）= 6，m（5）= 2。
 
-For n=10 the partition with the largest product is 10=2+3+5, which gives f(10)=30 and m(10)=3. And their product, f(10)·m(10) = 30·3 = 90
+对于n = 10，具有最大乘积的分区是10 = 2 + 3 + 5，其给出f（10）= 30和m（10）= 3。并且他们的产品，f（10）·m（10）= 30·3 = 90
 
-It can be verified that ∑f(n)·m(n) for 1 ≤ n ≤ 100 = 1683550844462.
+可以证实Σf（n）·m（n）对于1≤n≤100= 1683550844462。
 
-Find ∑f(n)·m(n) for 1 ≤ n ≤ 1014. Give your answer modulo 982451653, the 50 millionth prime.
+找到Σf（n）·m（n）为1≤n≤1014。给出你的答案模数982451653，即第5000万个素数。
 
 # --hints--
 
-`euler374()` should return 334420941.
+`euler374()`应该返回334420941。
 
 ```js
 assert.strictEqual(euler374(), 334420941);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler374() {
-
-  return true;
-}
-
-euler374();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

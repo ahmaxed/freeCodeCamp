@@ -3,7 +3,6 @@ id: 5900f3971000cf542c50feaa
 title: 'Problem 43: Sub-string divisibility'
 challengeType: 5
 forumTopicId: 302100
-dashedName: problem-43-sub-string-divisibility
 ---
 
 # --description--
@@ -49,7 +48,11 @@ You should not copy and return the array.
 
 ```js
 assert(
-  !code.match(/(1430952867)|(1460357289)|(1406357289)|(4130952867)|(4160357289)|(4106357289)/)
+  !__helpers
+    .removeJSComments(code)
+    .match(
+      /(1430952867)|(1460357289)|(1406357289)|(4130952867)|(4160357289)|(4106357289)/
+    )
 );
 ```
 

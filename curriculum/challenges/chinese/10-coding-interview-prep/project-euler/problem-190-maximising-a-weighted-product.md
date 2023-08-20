@@ -1,42 +1,25 @@
 ---
 id: 5900f42b1000cf542c50ff3d
-title: 'Problem 190: Maximising a weighted product'
+title: 问题190：最大化加权产品
 challengeType: 5
-forumTopicId: 301828
-dashedName: problem-190-maximising-a-weighted-product
+videoUrl: ''
 ---
 
 # --description--
 
-Let Sm = (x1, x2, ... , xm) be the m-tuple of positive real numbers with x1 + x2 + ... + xm = m for which Pm = x1 \* x22 \* ... \* xmm is maximised.
+令Sm =（x1，x2，...，xm）为正实数的m元组，其中x1 + x2 + ... + xm = m，其中Pm = x1 \* x22 \* ... \* xmm最大化。
 
-For example, it can be verified that \[P10] = 4112 (\[ ] is the integer part function).
+例如，可以验证\[P10] = 4112（\[]是整数部分函数）。
 
-Find Σ\[Pm] for 2 ≤ m ≤ 15.
+求Σ\[Pm]为2≤m≤15。
 
 # --hints--
 
-`euler190()` should return 371048281.
+`euler190()`应该返回371048281。
 
 ```js
 assert.strictEqual(euler190(), 371048281);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler190() {
-
-  return true;
-}
-
-euler190();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

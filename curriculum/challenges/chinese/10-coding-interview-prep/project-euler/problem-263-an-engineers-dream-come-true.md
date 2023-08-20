@@ -1,54 +1,31 @@
 ---
 id: 5900f4741000cf542c50ff86
-title: 'Problem 263: An engineers'' dream come true'
+title: 问题263：工程师“梦想成真
 challengeType: 5
-forumTopicId: 301912
-dashedName: problem-263-an-engineers-dream-come-true
+videoUrl: ''
 ---
 
 # --description--
 
-Consider the number 6. The divisors of 6 are: 1,2,3 and 6.
+考虑数字6. 6的除数是：1,2,3和6.从1到6并且包括6的每个数可以写成6：1 = 1,2 = 2,3 =的不同除数之和1 + 2,4 = 1 + 3,5 = 2 + 3,6 = 6。如果从1到n并且包括n的每个数可以表示为n的不同除数之和，则数n被称为实数。
 
-Every number from 1 up to and including 6 can be written as a sum of distinct divisors of 6:
+一对差异为6的连续素数被称为性感对（因为“性”是拉丁语中的“六”）。第一个性感的是（23,29）。
 
-1=1, 2=2, 3=1+2, 4=1+3, 5=2+3, 6=6.
+我们偶尔会发现一对三对，这意味着三对连续的性感素数对，这样每对的第二个成员就是下一对的第一个成员。
 
-A number n is called a practical number if every number from 1 up to and including n can be expressed as a sum of distinct divisors of n.
+我们将数字n称为：（n-9，n-3），（n-3，n + 3），（n + 3，n + 9）形成三对，数字n-8 ，n-4，n，n + 4和n + 8都是实用的，
 
-A pair of consecutive prime numbers with a difference of six is called a sexy pair (since "sex" is the Latin word for "six"). The first sexy pair is (23, 29).
+工程师的天堂。
 
-We may occasionally find a triple-pair, which means three consecutive sexy prime pairs, such that the second member of each pair is the first member of the next pair.
-
-We shall call a number n such that : (n-9, n-3), (n-3,n+3), (n+3, n+9) form a triple-pair, and the numbers n-8, n-4, n, n+4 and n+8 are all practical,
-
-an engineers’ paradise.
-
-Find the sum of the first four engineers’ paradises.
+找出前四个工程师天堂的总和。
 
 # --hints--
 
-`euler263()` should return 2039506520.
+`euler263()`应该返回2039506520。
 
 ```js
 assert.strictEqual(euler263(), 2039506520);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler263() {
-
-  return true;
-}
-
-euler263();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -3,7 +3,6 @@ id: 5e7b9f690b6c005b0e76f095
 title: Visualizing Data with Python
 challengeType: 11
 videoId: e3lydkH0prw
-dashedName: visualizing-data-with-python
 ---
 
 # --question--

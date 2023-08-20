@@ -1,48 +1,31 @@
 ---
 id: 5900f4e61000cf542c50fff9
-title: 'Problem 378: Triangle Triples'
+title: 问题378：三角形三元组
 challengeType: 5
-forumTopicId: 302040
-dashedName: problem-378-triangle-triples
+videoUrl: ''
 ---
 
 # --description--
 
-Let T(n) be the nth triangle number, so T(n) =
+设T（n）为第n个三角形数，因此T（n）=
 
-n (n+1)2
+n（n + 1）2
 
-.
+。
 
-Let dT(n) be the number of divisors of T(n). E.g.: T(7) = 28 and dT(7) = 6.
+设dT（n）为T（n）的除数。例如：T（7）= 28且dT（7）= 6。
 
-Let Tr(n) be the number of triples (i, j, k) such that 1 ≤ i &lt; j &lt; k ≤ n and dT(i) > dT(j) > dT(k). Tr(20) = 14, Tr(100) = 5772 and Tr(1000) = 11174776.
+令Tr（n）为三元组数（i，j，k），使得1≤i&lt;j &lt;k≤n且dT（i）> dT（j）> dT（k）。 Tr（20）= 14，Tr（100）= 5772，Tr（1000）= 11174776。
 
-Find Tr(60 000 000). Give the last 18 digits of your answer.
+找Tr（60 000 000）。给出答案的最后18位数字。
 
 # --hints--
 
-`euler378()` should return 147534623725724700.
+`euler378()`应该返回147534623725724700。
 
 ```js
 assert.strictEqual(euler378(), 147534623725724700);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler378() {
-
-  return true;
-}
-
-euler378();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

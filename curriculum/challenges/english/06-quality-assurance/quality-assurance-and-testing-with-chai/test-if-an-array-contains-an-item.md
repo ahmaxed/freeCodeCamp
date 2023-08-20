@@ -3,12 +3,11 @@ id: 587d824d367417b2b2512c51
 title: Test if an Array Contains an Item
 challengeType: 2
 forumTopicId: 301603
-dashedName: test-if-an-array-contains-an-item
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 # --instructions--
 
@@ -65,6 +64,8 @@ You should choose the correct method for the second assertion - `include` vs. `n
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

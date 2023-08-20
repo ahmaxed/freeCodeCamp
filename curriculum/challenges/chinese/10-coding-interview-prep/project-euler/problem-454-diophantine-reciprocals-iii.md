@@ -1,44 +1,27 @@
 ---
 id: 5900f5331000cf542c510045
-title: 'Problem 454: Diophantine reciprocals III'
+title: 问题454：丢番图倒数III
 challengeType: 5
-forumTopicId: 302127
-dashedName: problem-454-diophantine-reciprocals-iii
+videoUrl: ''
 ---
 
 # --description--
 
-In the following equation x, y, and n are positive integers. 1/x + 1/y= 1/n
+在下面的等式中，x，y和n是正整数。
 
-<!-- TODO Use MathJax -->
+1x + 1y = 1n
 
-For a limit L we define F(L) as the number of solutions which satisfy x &lt; y ≤ L.
+对于极限L，我们将F（L）定义为满足x &lt;y≤L的解的数量。
 
-We can verify that F(15) = 4 and F(1000) = 1069. Find F(1012).
+我们可以验证F（15）= 4和F（1000）= 1069.找到F（1012）。
 
 # --hints--
 
-`euler454()` should return 5435004633092.
+`euler454()`应该返回5435004633092。
 
 ```js
 assert.strictEqual(euler454(), 5435004633092);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler454() {
-
-  return true;
-}
-
-euler454();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

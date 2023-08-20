@@ -3,7 +3,6 @@ id: a789b3483989747d63b0e427
 title: Return Largest Numbers in Arrays
 challengeType: 5
 forumTopicId: 16042
-dashedName: return-largest-numbers-in-arrays
 ---
 
 # --description--

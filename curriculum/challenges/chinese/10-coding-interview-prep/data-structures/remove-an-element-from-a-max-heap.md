@@ -1,28 +1,17 @@
 ---
 id: 587d825b367417b2b2512c8b
-title: Remove an Element from a Max Heap
+title: 从最大堆中删除元素
 challengeType: 1
-forumTopicId: 301710
-dashedName: remove-an-element-from-a-max-heap
+videoUrl: ''
 ---
 
 # --description--
 
-Now that we can add elements to our heap let's see how we can remove elements. Removing and inserting elements both require similar logic. In a max heap you will usually want to remove the greatest value, so this involves simply extracting it from the root of our tree. This will break the heap property of our tree, so we must reestablish it in some way. Typically, for a max heap this is done in the following way:
-
-<ol>
-  <li>Move the last element in the heap into the root position.</li>
-  <li>If either child of the root is greater than it, swap the root with the child of greater value.</li>
-  <li>Continue swapping until the parent is greater than both children or you reach the last level in the tree.</li>
-</ol>
-
-# --instructions--
-
-Instructions: Add a method to our max heap called `remove`. This method should return the greatest value that has been added to our max heap and remove it from the heap. It should also reorder the heap so the heap property is maintained. After removing an element, the next greatest element remaining in the heap should become the root.
+现在我们可以向堆中添加元素，让我们看看如何删除元素。删除和插入元素都需要类似的逻辑。在最大堆中，您通常需要删除最大值，因此这只需要从树的根中提取它。这将破坏我们树的堆属性，因此我们必须以某种方式重新建立它。通常，对于最大堆，这可以通过以下方式完成：将堆中的最后一个元素移动到根位置。如果root的子节点大于它，则将root与较大值的子节点交换。继续交换，直到父级大于两个子级，或者到达树中的最后一级。说明：向我们的最大堆添加一个名为remove的方法。此方法应返回已添加到最大堆的最大值，并将其从堆中删除。它还应该重新排序堆，以便保持堆属性。删除元素后，堆中剩余的下一个最大元素应该成为根。此处再次添加插入方法。
 
 # --hints--
 
-The MaxHeap data structure should exist.
+存在MaxHeap数据结构。
 
 ```js
 assert(
@@ -36,7 +25,7 @@ assert(
 );
 ```
 
-MaxHeap should have a method called print.
+MaxHeap有一个名为print的方法。
 
 ```js
 assert(
@@ -52,7 +41,7 @@ assert(
 );
 ```
 
-MaxHeap should have a method called insert.
+MaxHeap有一个名为insert的方法。
 
 ```js
 assert(
@@ -68,7 +57,7 @@ assert(
 );
 ```
 
-MaxHeap should have a method called remove.
+MaxHeap有一个名为remove的方法。
 
 ```js
 assert(
@@ -84,7 +73,7 @@ assert(
 );
 ```
 
-The remove method should remove the greatest element from the max heap while maintaining the max heap property.
+remove方法从最大堆中删除最大元素，同时保持最大堆属性。
 
 ```js
 assert(
@@ -109,35 +98,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-var MaxHeap = function() {
-  this.heap = [null];
-  this.insert = (ele) => {
-    var index = this.heap.length;
-    var arr = [...this.heap];
-    arr.push(ele);
-    while (ele > arr[Math.floor(index / 2)] && index > 1) {
-      arr[index] = arr[Math.floor(index / 2)];
-      arr[Math.floor(index / 2)] = ele;
-      index = arr[Math.floor(index / 2)];
-    }
-    this.heap = arr;
-  }
-  this.print = () => {
-    return this.heap.slice(1);
-  }
-  // Only change code below this line
-
-  // Only change code above this line
-};
-```
-
 # --solutions--
 
-```js
-// solution required
-```

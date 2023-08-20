@@ -3,7 +3,6 @@ id: 587d7db6367417b2b2512b9b
 title: Find Characters with Lazy Matching
 challengeType: 1
 forumTopicId: 301341
-dashedName: find-characters-with-lazy-matching
 ---
 
 # --description--
@@ -16,7 +15,8 @@ Regular expressions are by default greedy, so the match would return `["titani"]
 
 However, you can use the `?` character to change it to lazy matching. `"titanic"` matched against the adjusted regex of `/t[a-z]*?i/` returns `["ti"]`.
 
-**Note:** Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
+**Note**  
+Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
 
 # --instructions--
 
@@ -36,7 +36,7 @@ assert(result[0] == '<h1>');
 assert(/\?/g.test(myRegex));
 ```
 
-`myRegex` should not include the string `h1`
+`myRegex` should not include the string 'h1'
 
 ```js
 assert(!myRegex.source.match('h1'));

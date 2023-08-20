@@ -2,7 +2,6 @@
 id: 5e601c0d5ac9d0ecd8b94afe
 title: American British Translator
 challengeType: 4
-dashedName: american-british-translator
 ---
 
 # --description--
@@ -10,7 +9,7 @@ dashedName: american-british-translator
 Build a full stack JavaScript app that is functionally similar to this: <https://american-british-translator.freecodecamp.rocks/>. Working on this project will involve you writing your code using one of the following methods:
 
 -   Clone [this GitHub repo](https://github.com/freeCodeCamp/boilerplate-project-american-british-english-translator/) and complete your project locally.
--   Use [our Replit starter project](https://replit.com/github/freeCodeCamp/boilerplate-project-american-british-english-translator) to complete your project.
+-   Use [our repl.it starter project](https://repl.it/github/freeCodeCamp/boilerplate-project-american-british-english-translator) to complete your project.
 -   Use a site builder of your choice to complete the project. Be sure to incorporate all the files from our GitHub repo.
 
 When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
@@ -21,8 +20,8 @@ When you are done, make sure a working demo of your project is hosted somewhere 
 -   Complete the `/api/translate` route in `/routes/api.js`
 -   Create all of the unit/functional tests in `tests/1_unit-tests.js` and `tests/2_functional-tests.js`
 -   See the JavaScript files in `/components` for the different spelling and terms your application should translate
--   To run the tests on Replit, set `NODE_ENV` to `test` without quotes in the `.env` file
--   To run the tests in the console, use the command `npm run test`. To open the Replit console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell"
+-   To run the tests on Repl.it, set `NODE_ENV` to `test` without quotes in the `.env` file
+-   To run the tests in the console, use the command `npm run test`. To open the Repl.it console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell"
 
 Write the following tests in `tests/1_unit-tests.js`:
 
@@ -102,7 +101,7 @@ async (getUserInput) => {
 };
 ```
 
-The `/api/translate` route should handle the way time is written in American and British English. For example, ten thirty is written as "10.30" in British English and "10:30" in American English. The `span` element should wrap the entire time string, i.e. `<span class="highlight">10:30</span>`.
+The `/api/translate` route should handle the way time is written in American and British English. For example, ten thirty is written as "10.30" in British English and "10:30" in American English.
 
 ```js
 async (getUserInput) => {
@@ -283,7 +282,7 @@ async (getUserInput) => {
     const getTests = await $.get(getUserInput('url') + '/_api/get-tests');
     assert.isArray(getTests);
     const unitTests = getTests.filter((test) => {
-      return !!test.context.match(/Unit Tests/gi);
+      return !!test.context.match(/Unit Tests ->/gi);
     });
     assert.isAtLeast(unitTests.length, 24, 'At least 24 tests passed');
     unitTests.forEach((test) => {
@@ -308,7 +307,7 @@ async (getUserInput) => {
     const getTests = await $.get(getUserInput('url') + '/_api/get-tests');
     assert.isArray(getTests);
     const functTests = getTests.filter((test) => {
-      return !!test.context.match(/Functional Tests/gi);
+      return !!test.context.match(/Functional Tests ->/gi);
     });
     assert.isAtLeast(functTests.length, 6, 'At least 6 tests passed');
     functTests.forEach((test) => {
@@ -324,6 +323,8 @@ async (getUserInput) => {
   }
 };
 ```
+
+# --seed--
 
 # --solutions--
 

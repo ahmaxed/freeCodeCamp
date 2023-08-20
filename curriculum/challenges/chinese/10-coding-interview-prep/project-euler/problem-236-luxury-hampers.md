@@ -1,48 +1,31 @@
 ---
 id: 5900f4591000cf542c50ff6b
-title: 'Problem 236: Luxury Hampers'
+title: 问题236：豪华礼篮
 challengeType: 5
-forumTopicId: 301881
-dashedName: problem-236-luxury-hampers
+videoUrl: ''
 ---
 
 # --description--
 
-Suppliers 'A' and 'B' provided the following numbers of products for the luxury hamper market:
+供应商'A'和'B'为奢侈品篮子市场提供以下数量的产品：
 
-Product'A''B'Beluga Caviar5248640Christmas Cake13121888Gammon Joint26243776Vintage Port57603776Champagne Truffles39365664
+Product'A“B'Beluga Caviar5248640Christmas Cake13121888Gammon Joint26243776Vintage Port57603776Champagne Truffles39365664
 
-Although the suppliers try very hard to ship their goods in perfect condition, there is inevitably some spoilage - i.e. products gone bad.
+虽然供应商非常努力地将货物运送到完美的状态，但不可避免地会有一些变质 - 即产品变坏了。
 
-The suppliers compare their performance using two types of statistic:The five per-product spoilage rates for each supplier are equal to the number of products gone bad divided by the number of products supplied, for each of the five products in turn. The overall spoilage rate for each supplier is equal to the total number of products gone bad divided by the total number of products provided by that supplier.To their surprise, the suppliers found that each of the five per-product spoilage rates was worse (higher) for 'B' than for 'A' by the same factor (ratio of spoilage rates), m>1; and yet, paradoxically, the overall spoilage rate was worse for 'A' than for 'B', also by a factor of m.
+供应商使用两种类型的统计数据来比较他们的表现：每个供应商的五个每个产品的腐败率等于坏的产品数量除以供应的产品数量，依次为五个产品中的每一个。每个供应商的整体腐败率等于坏的产品总数除以该供应商提供的产品总数。令他们惊讶的是，供应商发现五种每种产品的腐败率都更差（更高） ）对于'B'而不是'A'由相同的因子（腐败率的比率），m> 1;然而，矛盾的是，'A'的整体腐败率比'B'更差，也是m倍。
 
-There are thirty-five m>1 for which this surprising result could have occurred, the smallest of which is 1476/1475.
+有三十五米> 1，这个惊人的结果可能会发生，其中最小的是1476/1475。
 
-What's the largest possible value of m? Give your answer as a fraction reduced to its lowest terms, in the form u/v.
+m的最大可能值是多少？以u / v的形式将答案缩小到最低值。
 
 # --hints--
 
-`euler236()` should return 123 / 59.
+`euler236()`应返回`euler236()` 。
 
 ```js
 assert.strictEqual(euler236(), 123 / 59);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler236() {
-
-  return true;
-}
-
-euler236();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

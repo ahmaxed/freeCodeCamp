@@ -4,7 +4,6 @@ title: Chaining If Else Statements
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/caeJgsw'
 forumTopicId: 16772
-dashedName: chaining-if-else-statements
 ---
 
 # --description--
@@ -28,11 +27,11 @@ if (condition1) {
 
 Write chained `if`/`else if` statements to fulfill the following conditions:
 
-`num < 5` - return `Tiny`  
-`num < 10` - return `Small`  
-`num < 15` - return `Medium`  
-`num < 20` - return `Large`  
-`num >= 20` - return `Huge`
+`num < 5` - return "Tiny"  
+`num < 10` - return "Small"  
+`num < 15` - return "Medium"  
+`num < 20` - return "Large"  
+`num >= 20` - return "Huge"
 
 # --hints--
 
@@ -54,61 +53,61 @@ You should have at least one `return` statement
 assert(code.match(/return/g).length >= 1);
 ```
 
-`testSize(0)` should return the string `Tiny`
+`testSize(0)` should return "Tiny"
 
 ```js
 assert(testSize(0) === 'Tiny');
 ```
 
-`testSize(4)` should return the string `Tiny`
+`testSize(4)` should return "Tiny"
 
 ```js
 assert(testSize(4) === 'Tiny');
 ```
 
-`testSize(5)` should return the string `Small`
+`testSize(5)` should return "Small"
 
 ```js
 assert(testSize(5) === 'Small');
 ```
 
-`testSize(8)` should return the string `Small`
+`testSize(8)` should return "Small"
 
 ```js
 assert(testSize(8) === 'Small');
 ```
 
-`testSize(10)` should return the string `Medium`
+`testSize(10)` should return "Medium"
 
 ```js
 assert(testSize(10) === 'Medium');
 ```
 
-`testSize(14)` should return the string `Medium`
+`testSize(14)` should return "Medium"
 
 ```js
 assert(testSize(14) === 'Medium');
 ```
 
-`testSize(15)` should return the string `Large`
+`testSize(15)` should return "Large"
 
 ```js
 assert(testSize(15) === 'Large');
 ```
 
-`testSize(17)` should return the string `Large`
+`testSize(17)` should return "Large"
 
 ```js
 assert(testSize(17) === 'Large');
 ```
 
-`testSize(20)` should return the string `Huge`
+`testSize(20)` should return "Huge"
 
 ```js
 assert(testSize(20) === 'Huge');
 ```
 
-`testSize(25)` should return the string `Huge`
+`testSize(25)` should return "Huge"
 
 ```js
 assert(testSize(25) === 'Huge');

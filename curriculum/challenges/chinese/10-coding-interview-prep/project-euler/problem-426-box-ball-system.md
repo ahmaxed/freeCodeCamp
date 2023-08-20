@@ -1,9 +1,8 @@
 ---
 id: 5900f5171000cf542c510029
-title: 'Problem 426: Box-ball system'
+title: 问题426：箱式球系统
 challengeType: 5
-forumTopicId: 302096
-dashedName: problem-426-box-ball-system
+videoUrl: ''
 ---
 
 # --description--
@@ -24,27 +23,11 @@ Starting from the initial configuration (t0, t1, …, t10), the final state beco
 
 # --hints--
 
-`euler426()` should return 31591886008.
+`euler426()`应该返回31591886008。
 
 ```js
 assert.strictEqual(euler426(), 31591886008);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler426() {
-
-  return true;
-}
-
-euler426();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

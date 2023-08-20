@@ -3,7 +3,6 @@ id: 589fc831f9fc0f352b528e76
 title: Handle a Disconnect
 challengeType: 2
 forumTopicId: 301552
-dashedName: handle-a-disconnect
 ---
 
 # --description--
@@ -57,6 +56,8 @@ Your client should be listening for 'user count' event.
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

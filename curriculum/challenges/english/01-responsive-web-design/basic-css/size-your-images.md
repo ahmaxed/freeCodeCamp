@@ -4,7 +4,6 @@ title: Size Your Images
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cM9MmCP'
 forumTopicId: 18282
-dashedName: size-your-images
 ---
 
 # --description--

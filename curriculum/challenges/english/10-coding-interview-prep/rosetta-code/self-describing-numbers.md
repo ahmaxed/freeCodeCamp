@@ -3,7 +3,6 @@ id: 5eaf48389ee512d4d103684b
 title: Self Describing Numbers
 challengeType: 5
 forumTopicId: 385289
-dashedName: self-describing-numbers
 ---
 
 # --description--

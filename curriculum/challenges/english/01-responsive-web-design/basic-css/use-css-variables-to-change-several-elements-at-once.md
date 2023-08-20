@@ -4,7 +4,6 @@ title: Use CSS Variables to change several elements at once
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/c6bDECm'
 forumTopicId: 301093
-dashedName: use-css-variables-to-change-several-elements-at-once
 ---
 
 # --description--

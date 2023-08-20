@@ -4,7 +4,6 @@ title: Nest one Array within Another Array
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/crZQZf8'
 forumTopicId: 18247
-dashedName: nest-one-array-within-another-array
 ---
 
 # --description--
@@ -15,7 +14,7 @@ You can also nest arrays within other arrays, like below:
 [["Bulls", 23], ["White Sox", 45]]
 ```
 
-This is also called a <dfn>multi-dimensional array</dfn>.
+This is also called a <dfn>multi-dimensional array<dfn>.</dfn></dfn>
 
 # --instructions--
 

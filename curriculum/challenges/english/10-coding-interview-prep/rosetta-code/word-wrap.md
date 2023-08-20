@@ -3,7 +3,6 @@ id: 594810f028c0303b75339ad4
 title: Word wrap
 challengeType: 5
 forumTopicId: 302344
-dashedName: word-wrap
 ---
 
 # --description--

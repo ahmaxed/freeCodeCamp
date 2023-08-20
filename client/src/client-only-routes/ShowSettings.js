@@ -2,10 +2,10 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
-import { Grid } from '@freecodecamp/react-bootstrap';
+import { Grid, Button } from '@freecodecamp/react-bootstrap';
 import Helmet from 'react-helmet';
 
-import envData from '../../../config/env.json';
+import { apiLocation, homeLocation } from '../../config/env.json';
 import {
   signInLoadingSelector,
   userSelector,
@@ -14,9 +14,8 @@ import {
 } from '../redux';
 import { submitNewAbout, updateUserFlag, verifyCert } from '../redux/settings';
 import { createFlashMessage } from '../components/Flash/redux';
-import { useTranslation } from 'react-i18next';
 
-import { Loader, Spacer } from '../components/helpers';
+import { FullWidthRow, Loader, Spacer } from '../components/helpers';
 import About from '../components/settings/About';
 import Privacy from '../components/settings/Privacy';
 import Email from '../components/settings/Email';
@@ -25,9 +24,6 @@ import Portfolio from '../components/settings/Portfolio';
 import Honesty from '../components/settings/Honesty';
 import Certification from '../components/settings/Certification';
 import DangerZone from '../components/settings/DangerZone';
-import { User } from '../redux/propTypes';
-
-const { apiLocation } = envData;
 
 const propTypes = {
   createFlashMessage: PropTypes.func.isRequired,
@@ -40,7 +36,57 @@ const propTypes = {
   updateIsHonest: PropTypes.func.isRequired,
   updatePortfolio: PropTypes.func.isRequired,
   updateQuincyEmail: PropTypes.func.isRequired,
-  user: User,
+  user: PropTypes.shape({
+    about: PropTypes.string,
+    completedChallenges: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        solution: PropTypes.string,
+        githubLink: PropTypes.string,
+        challengeType: PropTypes.number,
+        completedDate: PropTypes.number,
+        files: PropTypes.array
+      })
+    ),
+    email: PropTypes.string,
+    githubProfile: PropTypes.string,
+    is2018DataVisCert: PropTypes.bool,
+    isApisMicroservicesCert: PropTypes.bool,
+    isBackEndCert: PropTypes.bool,
+    isDataVisCert: PropTypes.bool,
+    isEmailVerified: PropTypes.bool,
+    isFrontEndCert: PropTypes.bool,
+    isFrontEndLibsCert: PropTypes.bool,
+    isFullStackCert: PropTypes.bool,
+    isHonest: PropTypes.bool,
+    isInfosecQaCert: PropTypes.bool,
+    isQaCertV7: PropTypes.bool,
+    isInfosecCertV7: PropTypes.bool,
+    isJsAlgoDataStructCert: PropTypes.bool,
+    isRespWebDesignCert: PropTypes.bool,
+    isSciCompPyCertV7: PropTypes.bool,
+    isDataAnalysisPyCertV7: PropTypes.bool,
+    isMachineLearningPyCertV7: PropTypes.bool,
+    linkedin: PropTypes.string,
+    location: PropTypes.string,
+    name: PropTypes.string,
+    picture: PropTypes.string,
+    points: PropTypes.number,
+    portfolio: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string,
+        url: PropTypes.string,
+        image: PropTypes.string,
+        description: PropTypes.string
+      })
+    ),
+    sendQuincyEmail: PropTypes.bool,
+    theme: PropTypes.string,
+    twitter: PropTypes.string,
+    username: PropTypes.string,
+    website: PropTypes.string
+  }),
   verifyCert: PropTypes.func.isRequired
 };
 
@@ -68,7 +114,6 @@ const mapDispatchToProps = {
 };
 
 export function ShowSettings(props) {
-  const { t } = useTranslation();
   const {
     createFlashMessage,
     isSignedIn,
@@ -122,18 +167,30 @@ export function ShowSettings(props) {
   }
 
   if (!isSignedIn) {
-    navigate(`${apiLocation}/signin`);
+    navigate(`${apiLocation}/signin?returnTo=${homeLocation}/settings`);
     return <Loader fullScreen={true} />;
   }
 
   return (
     <Fragment>
-      <Helmet title={`${t('buttons.settings')} | freeCodeCamp.org`} />
+      <Helmet title='Settings | freeCodeCamp.org' />
       <Grid>
         <main>
           <Spacer size={2} />
+          <FullWidthRow>
+            <Button
+              block={true}
+              bsSize='lg'
+              bsStyle='primary'
+              className='btn-invert'
+              href={`${apiLocation}/signout`}
+            >
+              Sign me out of freeCodeCamp
+            </Button>
+          </FullWidthRow>
+          <Spacer />
           <h1 className='text-center' style={{ overflowWrap: 'break-word' }}>
-            {t('settings.for', { username: username })}
+            {`Account Settings for ${username}`}
           </h1>
           <About
             about={about}
@@ -201,4 +258,7 @@ export function ShowSettings(props) {
 ShowSettings.displayName = 'ShowSettings';
 ShowSettings.propTypes = propTypes;
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShowSettings);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ShowSettings);

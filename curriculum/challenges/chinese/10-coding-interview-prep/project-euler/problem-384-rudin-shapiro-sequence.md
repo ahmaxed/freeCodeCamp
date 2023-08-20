@@ -1,54 +1,35 @@
 ---
 id: 5900f4ed1000cf542c50fffe
-title: 'Problem 384: Rudin-Shapiro sequence'
+title: 问题384：Rudin-Shapiro序列
 challengeType: 5
-forumTopicId: 302048
-dashedName: problem-384-rudin-shapiro-sequence
+videoUrl: ''
 ---
 
 # --description--
 
-Define the sequence a(n) as the number of adjacent pairs of ones in the binary expansion of n (possibly overlapping).
+将序列a（n）定义为n的二进制展开（可能重叠）中相邻的1对的数量。例如：a（5）= a（1012）= 0，a（6）= a（1102）= 1，a（7）= a（1112）= 2
 
-E.g.: a(5) = a(1012) = 0, a(6) = a(1102) = 1, a(7) = a(1112) = 2
+定义序列b（n）=（ - 1）a（n）。该序列称为Rudin-Shapiro序列。还要考虑b（n）的总和序列：。
 
-Define the sequence b(n) = (-1)a(n). This sequence is called the Rudin-Shapiro sequence. Also consider the summatory sequence of b(n): .
+这些序列的前几个值是：n 0 1 2 3 4 5 6 7 a（n）0 0 0 1 0 0 1 2 b（n）1 1 1 -1 1 1 -1 1 s（n）1 2 3 2 3 4 3 4
 
-The first couple of values of these sequences are: n 0 1 2 3 4 5 6 7 a(n) 0 0 0 1 0 0 1 2 b(n) 1 1 1 -1 1 1 -1 1 s(n) 1 2 3 2 3 4 3 4
+序列s（n）具有显着特性，即所有元素都是正的，并且每个正整数k恰好出现k次。
 
-The sequence s(n) has the remarkable property that all elements are positive and every positive integer k occurs exactly k times.
+定义g（t，c），其中1≤c≤t，作为s（n）中的索引，其中t在s（n）中出现第c次。例如：g（3,3）= 6，g（4,2）= 7，g（54321,12345）= 1220847710。
 
-Define g(t,c), with 1 ≤ c ≤ t, as the index in s(n) for which t occurs for the c'th time in s(n). E.g.: g(3,3) = 6, g(4,2) = 7 and g(54321,12345) = 1220847710.
+设F（n）为由下式定义的斐波那契数：F（0）= F（1）= 1且F（n）= F（n-1）+ F（n-2），n> 1。
 
-Let F(n) be the fibonacci sequence defined by: F(0)=F(1)=1 and F(n)=F(n-1)+F(n-2) for n>1.
+定义GF（t）= g（F（t），F（t-1））。
 
-Define GF(t)=g(F(t),F(t-1)).
-
-Find ΣGF(t) for 2≤t≤45.
+找到ΣGF（t）为2≤t≤45。
 
 # --hints--
 
-`euler384()` should return 3354706415856333000.
+`euler384()`应返回3354706415856333000。
 
 ```js
 assert.strictEqual(euler384(), 3354706415856333000);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler384() {
-
-  return true;
-}
-
-euler384();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

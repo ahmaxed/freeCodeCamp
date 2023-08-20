@@ -1,22 +1,17 @@
 ---
 id: 587d8258367417b2b2512c80
-title: Delete a Leaf Node in a Binary Search Tree
+title: 删除二进制搜索树中的叶节点
 challengeType: 1
-forumTopicId: 301637
-dashedName: delete-a-leaf-node-in-a-binary-search-tree
+videoUrl: ''
 ---
 
 # --description--
 
-This is the first of three challenges where we will implement a more difficult operation in binary search trees: deletion. Deletion is difficult because removing nodes breaks links in the tree. These links must be carefully reestablished to ensure the binary tree structure is maintained. For some deletions, this means the tree must be rearranged. In general, you will encounter one of three cases when trying to delete a node: Leaf Node: The target to delete has zero children. One Child: The target to delete only has one child. Two Children: The target to delete has two child nodes. Removing a leaf node is easy, we simply remove it. Deleting a node with one child is also relatively easy, we simply remove it and link its parent to child of the node we deleted. Removing a node with two children is more difficult, however, because this creates two child nodes that need to be reconnected to the parent tree. We'll see how to deal with this case in the third challenge. Additionally, you need to be mindful of some edge cases when handling deletion. What if the tree is empty? What if the node to delete is the root node? What if there are only two elements in the tree? For now, let's handle the first case where we delete a leaf node.
-
-# --instructions--
-
-Create a method on our binary tree called `remove`. We'll build the logic for our deletion operation in here. First, you'll want to create a function within remove that finds the node we are trying to delete in the current tree. If the node is not present in the tree, `remove` should return `null`. Now, if the target node is a leaf node with no children, then the parent reference to it should be set to `null`. This effectively deletes the node from the tree. To do this, you will have to keep track of the parent of the node we are trying to delete as well. It will also be useful to create a way to track the number of children the target node has, as this will determine which case our deletion falls under. We will handle the second and third cases in the next challenges. Good luck!
+这是我们将在二叉搜索树中实现更难操作的三个挑战中的第一个：删除。删除很困难，因为删除节点会破坏树中的链接。必须仔细重新建立这些链接以确保维护二叉树结构。对于某些删除，这意味着必须重新排列树。通常，在尝试删除节点时，您将遇到以下三种情况之一：叶节点：要删除的目标没有子节点。一个孩子：要删除的目标只有一个孩子。两个子节点：要删除的目标有两个子节点。删除叶节点很简单，我们只需删除它。删除具有一个子节点的节点也相对容易，我们只需删除它并将其父节点链接到我们删除的节点的子节点。但是，删除具有两个子节点的节点更加困难，因为这会创建两个需要重新连接到父树的子节点。我们将在第三个挑战中看到如何处理这个案例。此外，在处理删除时，您需要注意一些边缘情况。如果树是空的怎么办？如果要删除的节点是根节点怎么办？如果树中只有两个元素怎么办？现在，让我们处理第一种删除叶节点的情况。说明：在我们的二叉树上创建一个名为`remove` 。我们将在这里为我们的删除操作构建逻辑。首先，您需要在remove中创建一个函数，该函数在当前树中找到我们尝试删除的节点。如果树中不存在该节点，则`remove`应返回`null` 。现在，如果目标节点是没有子节点的叶节点，则应将其父节点引用设置为`null` 。这有效地从树中删除节点。为此，您必须跟踪我们尝试删除的节点的父节点。创建一种跟踪目标节点具有的子节点数的方法也很有用，因为这将确定我们的删除属于哪种情况。我们将在下一次挑战中处理第二和第三个案例。祝你好运！
 
 # --hints--
 
-The `BinarySearchTree` data structure should exist.
+存在`BinarySearchTree`数据结构。
 
 ```js
 assert(
@@ -30,7 +25,7 @@ assert(
 );
 ```
 
-The binary search tree should have a method called `remove`.
+二叉搜索树有一个名为`remove`的方法。
 
 ```js
 assert(
@@ -46,7 +41,7 @@ assert(
 );
 ```
 
-Trying to remove an element that does not exist should return `null`.
+尝试删除不存在的元素将返回`null` 。
 
 ```js
 assert(
@@ -65,7 +60,7 @@ assert(
 );
 ```
 
-If the root node has no children, deleting it should set the root to `null`.
+如果根节点没有子节点，则删除它会将根节点设置为`null` 。
 
 ```js
 assert(
@@ -86,7 +81,7 @@ assert(
 );
 ```
 
-The `remove` method should remove leaf nodes from the tree.
+`remove`方法从树中删除叶节点
 
 ```js
 assert(
@@ -114,82 +109,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --after-user-code--
-
-```js
-BinarySearchTree.prototype = Object.assign(
-  BinarySearchTree.prototype,
-  {
-    add: function(value) {
-      var node = this.root;
-      if (node == null) {
-        this.root = new Node(value);
-        return;
-      } else {
-        function searchTree(node) {
-          if (value < node.value) {
-            if (node.left == null) {
-              node.left = new Node(value);
-              return;
-            } else if (node.left != null) {
-              return searchTree(node.left);
-            }
-          } else if (value > node.value) {
-            if (node.right == null) {
-              node.right = new Node(value);
-              return;
-            } else if (node.right != null) {
-              return searchTree(node.right);
-            }
-          } else {
-            return null;
-          }
-        }
-        return searchTree(node);
-      }
-    },
-    inorder: function() {
-      if (this.root == null) {
-        return null;
-      } else {
-        var result = new Array();
-        function traverseInOrder(node) {
-          if (node.left != null) {
-            traverseInOrder(node.left);
-          }
-          result.push(node.value);
-          if (node.right != null) {
-            traverseInOrder(node.right);
-          }
-        }
-        traverseInOrder(this.root);
-        return result;
-      }
-    }
-  }
-);
-```
-
-## --seed-contents--
-
-```js
-var displayTree = tree => console.log(JSON.stringify(tree, null, 2));
-function Node(value) {
-  this.value = value;
-  this.left = null;
-  this.right = null;
-}
-
-function BinarySearchTree() {
-  this.root = null;
-  // Only change code below this line
-}
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -3,7 +3,6 @@ id: 587d7dba367417b2b2512ba9
 title: Positive and Negative Lookahead
 challengeType: 1
 forumTopicId: 301360
-dashedName: positive-and-negative-lookahead
 ---
 
 # --description--
@@ -23,23 +22,21 @@ let quit = "qu";
 let noquit = "qt";
 let quRegex= /q(?=u)/;
 let qRegex = /q(?!u)/;
-quit.match(quRegex);
-noquit.match(qRegex);
+quit.match(quRegex); // Returns ["q"]
+noquit.match(qRegex); // Returns ["q"]
 ```
-
-Both of these `match` calls would return `["q"]`.
 
 A more practical use of lookaheads is to check two or more patterns in one string. Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number:
 
 ```js
 let password = "abc123";
 let checkPass = /(?=\w{3,6})(?=\D*\d)/;
-checkPass.test(password);
+checkPass.test(password); // Returns true
 ```
 
 # --instructions--
 
-Use lookaheads in the `pwRegex` to match passwords that are greater than 5 characters long, and have two consecutive digits.
+Use lookaheads in the `pwRegex` to match passwords that are greater than 5 characters long, do not begin with numbers, and have two consecutive digits.
 
 # --hints--
 
@@ -49,49 +46,49 @@ Your regex should use two positive `lookaheads`.
 assert(pwRegex.source.match(/\(\?=.*?\)\(\?=.*?\)/) !== null);
 ```
 
-Your regex should not match the string `astronaut`
+Your regex should not match `"astronaut"`
 
 ```js
 assert(!pwRegex.test('astronaut'));
 ```
 
-Your regex should not match the string `banan1`
+Your regex should not match `"banan1"`
 
 ```js
 assert(!pwRegex.test('banan1'));
 ```
 
-Your regex should match the string `bana12`
+Your regex should match `"bana12"`
 
 ```js
 assert(pwRegex.test('bana12'));
 ```
 
-Your regex should match the string `abc123`
+Your regex should match `"abc123"`
 
 ```js
 assert(pwRegex.test('abc123'));
 ```
 
-Your regex should not match the string `12345`
+Your regex should not match `"1234"`
 
 ```js
-assert(!pwRegex.test('12345'));
+assert(!pwRegex.test('1234'));
 ```
 
-Your regex should match the string `8pass99`
+Your regex should not match `"8pass99"`
 
 ```js
-assert(pwRegex.test('8pass99'));
+assert(!pwRegex.test('8pass99'));
 ```
 
-Your regex should not match the string `1a2bcde`
+Your regex should not match `"12abcde"`
 
 ```js
-assert(!pwRegex.test('1a2bcde'));
+assert(!pwRegex.test('12abcde'));
 ```
 
-Your regex should match the string `astr1on11aut`
+Your regex should match `"astr1on11aut"`
 
 ```js
 assert(pwRegex.test('astr1on11aut'));
@@ -110,5 +107,5 @@ let result = pwRegex.test(sampleWord);
 # --solutions--
 
 ```js
-let pwRegex =  /(?=\w{6})(?=\w*\d{2})/;
+var pwRegex =  /^\D(?=\w{5})(?=\w*\d{2})/;
 ```

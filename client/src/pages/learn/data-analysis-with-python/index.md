@@ -1,6 +1,6 @@
 ---
 title: Data Analysis with Python
-superBlock: data-analysis-with-python
+superBlock: Data Analysis with Python
 ---
 ## Introduction to Data Analysis with Python
 

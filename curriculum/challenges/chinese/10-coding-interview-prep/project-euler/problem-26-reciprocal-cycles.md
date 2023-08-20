@@ -1,68 +1,93 @@
 ---
 id: 5900f3861000cf542c50fe99
-title: 'Problem 26: Reciprocal cycles'
+title: 问题26：互惠周期
 challengeType: 5
-forumTopicId: 301908
-dashedName: problem-26-reciprocal-cycles
+videoUrl: ''
 ---
 
 # --description--
 
-A unit fraction contains 1 in the numerator. The decimal representation of the unit fractions with denominators 2 to 10 are given:
+单位分数在分子中包含1。给出分母2到10的单位分数的十进制表示：
 
-<div style='padding-left: 4em; display: inline-grid; grid-template-rows: auto; row-gap: 7px;'><div><sup>1</sup>/<sub>2</sub> = 0.5</div><div><sup>1</sup>/<sub>3</sub> = 0.(3)</div><div><sup>1</sup>/<sub>4</sub> = 0.25</div><div><sup>1</sup>/<sub>5</sub> = 0.2</div><div><sup>1</sup>/<sub>6</sub> = 0.1(6)</div><div><sup>1</sup>/<sub>7</sub> = 0.(142857)</div><div><sup>1</sup>/<sub>8</sub> = 0.125</div><div><sup>1</sup>/<sub>9</sub> = 0.(1)</div><div><sup>1</sup>/<sub>10</sub> = 0.1</div></div>
+<sup><sub>二分之一</sub></sup>
 
-Where 0.1(6) means 0.166666..., and has a 1-digit recurring cycle. It can be seen that <sup>1</sup>/<sub>7</sub> has a 6-digit recurring cycle.
+ = 0.5
 
-Find the value of `d` &lt; `n` for which <sup>1</sup>/<sub>d</sub> contains the longest recurring cycle in its decimal fraction part.
+<sup><sub>三分之一</sub></sup>
+
+ = 0（3）
+
+<sup><sub>四分之一</sub></sup>
+
+ = 0.25
+
+<sup>的<sub>1/5</sub></sup>
+
+ = 0.2
+
+<sup><sub>六分之一</sub></sup>
+
+ = 0.1（6）
+
+<sup><sub>七分之一</sub></sup>
+
+ = 0（142857）
+
+<sup><sub>八分之一</sub></sup>
+
+ = 0.125
+
+<sup><sub>九分之一</sub></sup>
+
+ = 0（1）
+
+<sup><sub>一十分之一</sub></sup>
+
+ = 0.1
+
+其中0.1（6）表示0.166666 ...，并具有1位循环周期。可以看出， 
+
+<sup>1</sup>
+
+ / 
+
+<sub>7</sub>
+
+具有6位循环周期。找到`d` &lt; `n`的值，其中
+
+<sup>1</sup>
+
+ / 
+
+<sub>d</sub>
+
+包含其小数部分中最长的循环周期。
 
 # --hints--
 
-`reciprocalCycles(700)` should return a number.
-
-```js
-assert(typeof reciprocalCycles(700) === 'number');
-```
-
-`reciprocalCycles(700)` should return 659.
+`reciprocalCycles(700)`应该返回659。
 
 ```js
 assert(reciprocalCycles(700) == 659);
 ```
 
-`reciprocalCycles(800)` should return 743.
+`reciprocalCycles(800)`应该返回743。
 
 ```js
 assert(reciprocalCycles(800) == 743);
 ```
 
-`reciprocalCycles(900)` should return 887.
+`reciprocalCycles(900)`应该返回887。
 
 ```js
 assert(reciprocalCycles(900) == 887);
 ```
 
-`reciprocalCycles(1000)` should return 983.
+`reciprocalCycles(1000)`应该返回983。
 
 ```js
 assert(reciprocalCycles(1000) == 983);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function reciprocalCycles(n) {
-
-  return n;
-}
-
-reciprocalCycles(1000);
-```
-
 # --solutions--
 
-```js
-// solution required
-```

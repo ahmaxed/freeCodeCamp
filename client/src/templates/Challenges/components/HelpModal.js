@@ -3,15 +3,12 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Button, Modal } from '@freecodecamp/react-bootstrap';
-import { Trans, withTranslation } from 'react-i18next';
 
 import { createQuestion, closeModal, isHelpModalOpenSelector } from '../redux';
 import { executeGA } from '../../../redux';
-import envData from '../../../../../config/env.json';
+import { forumLocation } from '../../../../config/env.json';
 
 import './help-modal.css';
-
-const { forumLocation } = envData;
 
 const mapStateToProps = state => ({ isOpen: isHelpModalOpenSelector(state) });
 const mapDispatchToProps = dispatch =>
@@ -24,15 +21,14 @@ const propTypes = {
   closeHelpModal: PropTypes.func.isRequired,
   createQuestion: PropTypes.func.isRequired,
   executeGA: PropTypes.func,
-  isOpen: PropTypes.bool,
-  t: PropTypes.func.isRequired
+  isOpen: PropTypes.bool
 };
 
 const RSA = forumLocation + '/t/19514';
 
 export class HelpModal extends Component {
   render() {
-    const { isOpen, closeHelpModal, createQuestion, executeGA, t } = this.props;
+    const { isOpen, closeHelpModal, createQuestion, executeGA } = this.props;
     if (isOpen) {
       executeGA({ type: 'modal', data: '/help-modal' });
     }
@@ -42,22 +38,20 @@ export class HelpModal extends Component {
           className='help-modal-header fcc-modal'
           closeButton={true}
         >
-          <Modal.Title className='text-center'>
-            {t('buttons.ask-for-help')}
-          </Modal.Title>
+          <Modal.Title className='text-center'>Ask for help?</Modal.Title>
         </Modal.Header>
         <Modal.Body className='help-modal-body text-center'>
           <h3>
-            <Trans i18nKey='learn.tried-rsa'>
-              <a
-                href={RSA}
-                rel='noopener noreferrer'
-                target='_blank'
-                title={t('learn.rsa')}
-              >
-                placeholder
-              </a>
-            </Trans>
+            If you've already tried the&nbsp;
+            <a
+              href={RSA}
+              rel='noopener noreferrer'
+              target='_blank'
+              title='Read, search, ask'
+            >
+              Read-Search-Ask
+            </a>
+            &nbsp; method, then you can ask for help on the freeCodeCamp forum.
           </h3>
           <Button
             block={true}
@@ -65,7 +59,7 @@ export class HelpModal extends Component {
             bsStyle='primary'
             onClick={createQuestion}
           >
-            {t('buttons.create-post')}
+            Create a help post on the forum
           </Button>
           <Button
             block={true}
@@ -73,7 +67,7 @@ export class HelpModal extends Component {
             bsStyle='primary'
             onClick={closeHelpModal}
           >
-            {t('buttons.cancel')}
+            Cancel
           </Button>
         </Modal.Body>
       </Modal>
@@ -87,4 +81,4 @@ HelpModal.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(HelpModal));
+)(HelpModal);

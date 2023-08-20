@@ -3,7 +3,6 @@ id: 587d7dba367417b2b2512ba8
 title: Check for All or None
 challengeType: 1
 forumTopicId: 301338
-dashedName: check-for-all-or-none
 ---
 
 # --description--
@@ -18,15 +17,13 @@ For example, there are slight differences in American and British English and yo
 let american = "color";
 let british = "colour";
 let rainbowRegex= /colou?r/;
-rainbowRegex.test(american);
-rainbowRegex.test(british);
+rainbowRegex.test(american); // Returns true
+rainbowRegex.test(british); // Returns true
 ```
-
-Both uses of the `test` method would return `true`.
 
 # --instructions--
 
-Change the regex `favRegex` to match both the American English (`favorite`) and the British English (`favourite`) version of the word.
+Change the regex `favRegex` to match both the American English (favorite) and the British English (favourite) version of the word.
 
 # --hints--
 
@@ -37,21 +34,21 @@ favRegex.lastIndex = 0;
 assert(favRegex.source.match(/\?/).length > 0);
 ```
 
-Your regex should match the string `favorite`
+Your regex should match `"favorite"`
 
 ```js
 favRegex.lastIndex = 0;
 assert(favRegex.test('favorite'));
 ```
 
-Your regex should match the string `favourite`
+Your regex should match `"favourite"`
 
 ```js
 favRegex.lastIndex = 0;
 assert(favRegex.test('favourite'));
 ```
 
-Your regex should not match the string `fav`
+Your regex should not match `"fav"`
 
 ```js
 favRegex.lastIndex = 0;

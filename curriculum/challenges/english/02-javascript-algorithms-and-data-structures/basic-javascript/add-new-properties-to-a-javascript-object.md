@@ -4,26 +4,21 @@ title: Add New Properties to a JavaScript Object
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cQe38UD'
 forumTopicId: 301169
-dashedName: add-new-properties-to-a-javascript-object
 ---
 
 # --description--
 
 You can add new properties to existing JavaScript objects the same way you would modify them.
 
-Here's how we would add a `bark` property to `ourDog`:
+Here's how we would add a `"bark"` property to `ourDog`:
 
-```js
-ourDog.bark = "bow-wow";
-```
+`ourDog.bark = "bow-wow";`
 
 or
 
-```js
-ourDog["bark"] = "bow-wow";
-```
+`ourDog["bark"] = "bow-wow";`
 
-Now when we evaluate `ourDog.bark`, we'll get his bark, `bow-wow`.
+Now when we evaluate `ourDog.bark`, we'll get his bark, "bow-wow".
 
 Example:
 
@@ -40,17 +35,17 @@ ourDog.bark = "bow-wow";
 
 # --instructions--
 
-Add a `bark` property to `myDog` and set it to a dog sound, such as "woof". You may use either dot or bracket notation.
+Add a `"bark"` property to `myDog` and set it to a dog sound, such as "woof". You may use either dot or bracket notation.
 
 # --hints--
 
-You should add the property `bark` to `myDog`.
+You should add the property `"bark"` to `myDog`.
 
 ```js
 assert(myDog.bark !== undefined);
 ```
 
-You should not add `bark` to the initialization of `myDog`.
+You should not add `"bark"` to the setup section.
 
 ```js
 assert(!/bark[^\n]:/.test(code));
@@ -67,6 +62,7 @@ assert(!/bark[^\n]:/.test(code));
 ## --seed-contents--
 
 ```js
+// Setup
 var myDog = {
   "name": "Happy Coder",
   "legs": 4,
@@ -74,7 +70,7 @@ var myDog = {
   "friends": ["freeCodeCamp Campers"]
 };
 
-
+// Only change code below this line
 ```
 
 # --solutions--

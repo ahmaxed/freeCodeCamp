@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Form } from '@freecodecamp/react-bootstrap';
-import { useTranslation } from 'react-i18next';
 
 import ToggleSetting from './ToggleSetting';
 
@@ -11,16 +10,14 @@ const propTypes = {
 };
 
 export default function ThemeSettings({ currentTheme, toggleNightMode }) {
-  const { t } = useTranslation();
-
   return (
     <Form inline={true} onSubmit={e => e.preventDefault()}>
       <ToggleSetting
-        action={t('settings.labels.night-mode')}
+        action='Night Mode'
         flag={currentTheme === 'night'}
         flagName='currentTheme'
-        offLabel={t('buttons.off')}
-        onLabel={t('buttons.on')}
+        offLabel='Off'
+        onLabel='On'
         toggleFlag={() =>
           toggleNightMode(currentTheme === 'night' ? 'default' : 'night')
         }

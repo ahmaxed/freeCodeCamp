@@ -1,52 +1,35 @@
 ---
 id: 5900f4021000cf542c50ff13
-title: 'Problem 149: Searching for a maximum-sum subsequence'
+title: 问题149：搜索最大和子序列
 challengeType: 5
-forumTopicId: 301778
-dashedName: problem-149-searching-for-a-maximum-sum-subsequence
+videoUrl: ''
 ---
 
 # --description--
 
-Looking at the table below, it is easy to verify that the maximum possible sum of adjacent numbers in any direction (horizontal, vertical, diagonal or anti-diagonal) is 16 (= 8 + 7 + 1).
+查看下表，可以很容易地验证任意方向（水平，垂直，对角或反对角）上相邻数字的最大和为16（= 8 + 7 + 1）。
 
 −25329−6513273−18−4 8
 
-Now, let us repeat the search, but on a much larger scale:
+现在，让我们重复搜索，但范围更大：
 
-First, generate four million pseudo-random numbers using a specific form of what is known as a "Lagged Fibonacci Generator":
+首先，使用称为“滞后斐波那契生成器”的特定形式生成四百万个伪随机数：
 
-For 1 ≤ k ≤ 55, sk = \[100003 − 200003k + 300007k3] (modulo 1000000) − 500000. For 56 ≤ k ≤ 4000000, sk = \[sk−24 + sk−55 + 1000000] (modulo 1000000) − 500000.
+对于1≤k≤55，sk = \[100003 − 200003k + 300007k3]（模1000000）− 500000。 对于56≤k≤4000000，sk = \[sk-24 + sk-55 + 1000000]（模1000000）− 500000。
 
-Thus, s10 = −393027 and s100 = 86613.
+因此，s10 = -393027，s100 = 86613。
 
-The terms of s are then arranged in a 2000×2000 table, using the first 2000 numbers to fill the first row (sequentially), the next 2000 numbers to fill the second row, and so on.
+然后，将s的项排列在2000×2000表中，使用前2000个数字（顺序）填充第一行，使用后2000个数字填充第二行，依此类推。
 
-Finally, find the greatest sum of (any number of) adjacent entries in any direction (horizontal, vertical, diagonal or anti-diagonal).
+最后，在任何方向（水平，垂直，对角线或反对角线）上找到（任意数量）相邻项的最大和。
 
 # --hints--
 
-`euler149()` should return 52852124.
+`euler149()`应该返回52852124。
 
 ```js
 assert.strictEqual(euler149(), 52852124);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler149() {
-
-  return true;
-}
-
-euler149();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

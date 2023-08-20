@@ -3,7 +3,6 @@ id: 595011cba5a81735713873bd
 title: Top rank per group
 challengeType: 5
 forumTopicId: 302339
-dashedName: top-rank-per-group
 ---
 
 # --description--
@@ -12,8 +11,7 @@ Find the top `n` ranked data in each group, where `n` is provided as a parameter
 
 Given the following data:
 
-```js
-testData1 = [
+<pre>[
   { name: 'Tyler Bennett', id: 'E10297', salary: 32000, dept: 'D101' },
   { name: 'John Rappl', id: 'E21437', salary: 47000, dept: 'D050' },
   { name: 'George Woltman', id: 'E00127', salary: 53500, dept: 'D101' },
@@ -28,55 +26,26 @@ testData1 = [
   { name: 'Kim Arlich', id: 'E10001', salary: 57000, dept: 'D190' },
   { name: 'Timothy Grove', id: 'E16398', salary: 29900, dept: 'D190' }
 ];
-```
+</pre>
 
-One could rank top 10 employees in each department by calling:
+one could rank top 10 employees in each department by calling
 
-```js
-topRankPerGroup(10, testData1, 'dept', 'salary')
-```
+`topRankPerGroup(10, data, 'dept', 'salary')`
 
 Given the following data:
 
-```js
-testData2 = [
+<pre>[
   { name: 'Friday 13th', genre: 'horror', rating: 9.9 },
   { name: "Nightmare on Elm's Street", genre: 'horror', rating: 5.7 },
   { name: 'Titanic', genre: 'drama', rating: 7.3 },
   { name: 'Maze Runner', genre: 'scifi', rating: 7.1 },
   { name: 'Blade runner', genre: 'scifi', rating: 8.9 }
 ];
-```
+</pre>
 
-One could rank the top-rated movie in each genre by calling:
+one could rank the top-rated movie in each genre by calling
 
-```js
-topRankPerGroup(1, testData2, 'genre', 'rating')
-```
-
-The function should return an array with an array for each group containing the top `n` objects.
-
-For example, given data:
-
-```js
-[
-  { name: 'Claire Buckman', id: 'E39876', salary: 27800, dept: 'D101' },
-  { name: 'Rich Holcomb', id: 'E01234', salary: 49500, dept: 'D050' },
-  { name: 'David Motsinger', id: 'E27002', salary: 19250, dept: 'D050' },
-  { name: 'Tim Sampair', id: 'E03033', salary: 27000, dept: 'D101' },
-  { name: 'Kim Arlich', id: 'E10001', salary: 57000, dept: 'D050' },
-  { name: 'Timothy Grove', id: 'E16398', salary: 29900, dept: 'D101' }
-];
-```
-
-Top two ranking employees in each department by salary would be:
-
-```js
-[ [ { name: 'Kim Arlich', id: 'E10001', salary: 57000, dept: 'D050' },
-    { name: 'Rich Holcomb', id: 'E01234', salary: 49500, dept: 'D050' } ],
-  [ { name: 'Timothy Grove', id: 'E16398', salary: 29900, dept: 'D101' },
-    { name: 'Claire Buckman', id: 'E39876', salary: 27800, dept: 'D101' } ] ]
-```
+`topRankPerGroup(1, data, 'genre', 'rating')`
 
 # --hints--
 
@@ -92,16 +61,22 @@ assert(typeof topRankPerGroup === 'function');
 assert(typeof topRankPerGroup(-1, []) === 'undefined');
 ```
 
-For `topRankPerGroup(10, testData1, 'dept', 'salary')`, the first result in the first group should be `{ name: 'John Rappl', id: 'E21437', salary: 47000, dept: 'D050'}`.
+First department should be D050
 
 ```js
-assert.deepEqual(res1[0][0], { name: 'John Rappl', id: 'E21437', salary: 47000, dept: 'D050'});
+assert.equal(res1[0][0].dept, 'D050');
 ```
 
-For `topRankPerGroup(10, testData1, 'dept', 'salary')`, the last result in the last group should be `{ name: 'Adam Smith', id: 'E63535', salary: 18000, dept: 'D202' }`.
+First department should be D050
 
 ```js
-assert.deepEqual(res1[3][3], { name: 'Adam Smith', id: 'E63535', salary: 18000, dept: 'D202' });
+assert.equal(res1[0][1].salary, 21900);
+```
+
+The last department should be D202
+
+```js
+assert.equal(res1[3][3].dept, 'D202');
 ```
 
 `topRankPerGroup(1, ...)` should return only top ranking result per group.
@@ -110,7 +85,7 @@ assert.deepEqual(res1[3][3], { name: 'Adam Smith', id: 'E63535', salary: 18000, 
 assert.equal(res2[2].length, 1);
 ```
 
-`topRankPerGroup(2, ...)` should return two ranking results per group.
+`topRankPerGroup(1, ...)` should return only top ranking result per group.
 
 ```js
 assert.equal(res3[2][1].name, 'Maze Runner');

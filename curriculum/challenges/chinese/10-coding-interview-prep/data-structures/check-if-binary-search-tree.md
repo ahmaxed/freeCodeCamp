@@ -3,7 +3,6 @@ id: 5cc0c1b32479e176caf3b422
 title: Check if Tree is Binary Search Tree
 challengeType: 1
 forumTopicId: 301624
-dashedName: check-if-tree-is-binary-search-tree
 ---
 
 # --description--
@@ -89,7 +88,7 @@ function BinarySearchTree() {
 }
 function isBinarySearchTree(tree) {
   // Only change code below this line
-
+  
   // Only change code above this line
 }
 ```

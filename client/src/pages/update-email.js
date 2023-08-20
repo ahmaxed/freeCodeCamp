@@ -16,8 +16,7 @@ import {
 } from '@freecodecamp/react-bootstrap';
 import Helmet from 'react-helmet';
 import isEmail from 'validator/lib/isEmail';
-import { isString } from 'lodash-es';
-import { withTranslation } from 'react-i18next';
+import { isString } from 'lodash';
 
 import { Spacer } from '../components/helpers';
 import './update-email.css';
@@ -27,7 +26,6 @@ import { maybeEmailRE } from '../utils';
 
 const propTypes = {
   isNewEmail: PropTypes.bool,
-  t: PropTypes.func.isRequired,
   updateMyEmail: PropTypes.func.isRequired
 };
 
@@ -78,14 +76,14 @@ class UpdateEmail extends Component {
   }
 
   render() {
-    const { isNewEmail, t } = this.props;
+    const { isNewEmail } = this.props;
     return (
       <Fragment>
         <Helmet>
-          <title>{t('misc.update-email-1')} | freeCodeCamp.org</title>
+          <title>Update your email address | freeCodeCamp.org</title>
         </Helmet>
         <Spacer />
-        <h2 className='text-center'>{t('misc.update-email-2')}</h2>
+        <h2 className='text-center'>Update your email address here:</h2>
         <Grid>
           <Row>
             <Col sm={6} smOffset={3}>
@@ -100,7 +98,7 @@ class UpdateEmail extends Component {
                       componentClass={ControlLabel}
                       sm={2}
                     >
-                      {t('misc.email')}
+                      Email
                     </Col>
                     <Col sm={10}>
                       <FormControl
@@ -118,13 +116,11 @@ class UpdateEmail extends Component {
                     disabled={this.getEmailValidationState() !== 'success'}
                     type='submit'
                   >
-                    {isNewEmail
-                      ? t('buttons.update-email')
-                      : t('buttons.verify-email')}
+                    {isNewEmail ? 'Update my Email' : 'Verify Email'}
                   </Button>
                 </Form>
                 <p className='text-center'>
-                  <Link to='/signout'>{t('buttons.sign-out')}</Link>
+                  <Link to='/signout'>Sign out</Link>
                 </p>
               </Row>
             </Col>
@@ -141,4 +137,4 @@ UpdateEmail.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(UpdateEmail));
+)(UpdateEmail);

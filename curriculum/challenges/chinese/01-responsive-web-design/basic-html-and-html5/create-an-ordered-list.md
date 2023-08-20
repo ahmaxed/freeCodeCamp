@@ -4,69 +4,68 @@ title: 创建一个有序列表
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVMPUv/cQ3B8TM'
 forumTopicId: 16824
-dashedName: create-an-ordered-list
 ---
 
 # --description--
 
-HTML 中有用于创建<dfn>有序列表</dfn>的特定元素。
+HTML 有一个特定的元素用于创建有序列表`ordered lists（缩写 ol）`。
 
-有序列表以 `<ol>` 开始，中间包含一个或多个 `<li>` 元素。 最后以 `</ol>` 结束。
+有序列表以`<ol>`开始，中间包含一个或多个`<li>`元素，最后以`</ol>`结尾。
 
 例如:
 
 ```html
 <ol>
-  <li>Garfield</li>
-  <li>Sylvester</li>
+  <li>加菲猫</li>
+  <li>哆啦A梦</li>
 </ol>
 ```
 
-将创建一个包含 `Garfield` 和 `Sylvester` 的编号列表。
+将会创建一个包含加菲猫和哆啦A梦的有序列表。
 
 # --instructions--
 
-请创建一个有序列表，内容是猫咪最讨厌的三样东西。
+创建一个有序列表，内容是猫咪最讨厌的三件东西，内容可以任意指定。
 
 # --hints--
 
-应包含一个有序列表，内容是猫咪最讨厌的三样东西（`Top 3 things cats hate:`）。
+页面应该有一个无序列表，内容是猫咪最喜欢的三件东西。
 
 ```js
 assert(/Top 3 things cats hate:/i.test($('ol').prev().text()));
 ```
 
-应包含有一个无序列表，内容是猫咪最喜欢的东西（`Things cats love:`）。
+页面应该有一个有序列表，内容是猫咪最讨厌的三件东西。
 
 ```js
 assert(/Things cats love:/i.test($('ul').prev().text()));
 ```
 
-页面应只包含一个 `ul` 元素。
+页面应该只有一个`ul`元素。
 
 ```js
 assert.equal($('ul').length, 1);
 ```
 
-页面应只包含一个 `ol` 元素。
+页面应该只有一个`ol`元素。
 
 ```js
 assert.equal($('ol').length, 1);
 ```
 
-`ul` 无序列表中应包含 3 个 `li` 元素。
+`ul`无序列表应该包含3个`li`条目。
 
 ```js
 assert.equal($('ul li').length, 3);
 ```
 
-`ol` 有序列表应该包含 3 个 `li` 元素。
+`ol`有序列表应该包含3个`li`元素。
 
 ```js
 assert.equal($('ol li').length, 3);
 ```
 
-`ul` 无序列表应有结束标签。
+确保`ul`无序列表有结束标记。
 
 ```js
 assert(
@@ -75,7 +74,7 @@ assert(
 );
 ```
 
-`ol` 有序列表应有结束标签。
+确保`ol`有序列表有结束标记。
 
 ```js
 assert(
@@ -84,7 +83,7 @@ assert(
 );
 ```
 
-`li` 元素应有结束标签。
+确保每个`li`条目都有结束标记。
 
 ```js
 assert(
@@ -94,64 +93,17 @@ assert(
 );
 ```
 
-无序列表里的 `li` 元素内容不应为空。
+无序列表里的 `li` 元素不应该为空。
 
 ```js
-$('ul li').each((i, val) =>
-  assert(__helpers.removeWhiteSpace(val.textContent))
-);
+$('ul li').each((i, val) => assert(val.textContent.replace(/\s/g, '')));
 ```
 
-有序列表里的 `li` 元素内容不应该为空。
+有序列表里的 `li` 元素不应该为空。
 
 ```js
-$('ol li').each((i, val) =>
-  assert(!!__helpers.removeWhiteSpace(val.textContent))
-);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```html
-<h2>CatPhotoApp</h2>
-<main>
-  <p>Click here to view more <a href="#">cat photos</a>.</p>
-
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-
-  <p>Things cats love:</p>
-  <ul>
-    <li>cat nip</li>
-    <li>laser pointers</li>
-    <li>lasagna</li>
-  </ul>
-  <p>Top 3 things cats hate:</p>
-
-</main>
+$('ol li').each((i, val) => assert(!!val.textContent.replace(/\s/g, '')));
 ```
 
 # --solutions--
 
-```html
-<h2>CatPhotoApp</h2>
-<main>
-  <p>Click here to view more <a href="#">cat photos</a>.</p>
-
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-
-  <p>Things cats love:</p>
-  <ul>
-    <li>cat nip</li>
-    <li>laser pointers</li>
-    <li>lasagna</li>
-  </ul>
-  <p>Top 3 things cats hate:</p>
-  <ol>
-    <li>hate 1</li>
-    <li>hate 2</li>
-    <li>hate 3</li>
-  </ol>
-</main>
-```

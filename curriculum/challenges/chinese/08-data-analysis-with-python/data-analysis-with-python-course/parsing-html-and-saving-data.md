@@ -1,19 +1,20 @@
 ---
 id: 5e9a093a74c4063ca6f7c164
-title: Parsing HTML and Saving Data
 challengeType: 11
 videoId: bJaqnTWQmb0
-dashedName: parsing-html-and-saving-data
 ---
 
 # --description--
 
-*Instead of using notebooks.ai like it shows in the video, you can use Google Colab instead.*
-
 More resources:
 
--   [Notebooks on GitHub](https://github.com/ine-rmotr-curriculum/RDP-Reading-Data-with-Python-and-Pandas)
--   [How to open Notebooks from GitHub using Google Colab.](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
+\- [Reading CSVs Notebook](https://notebooks.ai/rmotr-curriculum/rdp-reading-csv-and-txt-files-fb829f46)
+
+\- [Reading SQL](https://notebooks.ai/rmotr-curriculum/rdp-reading-data-from-relational-databases-2a3a889b)
+
+\- [Reading HTML](https://notebooks.ai/rmotr-curriculum/rdp-reading-html-tables-eb9cca73)
+
+\- [Reading Excel files](https://notebooks.ai/rmotr-curriculum/rdp-reading-excel-files-a6b99973)
 
 # --question--
 
@@ -40,4 +41,9 @@ Pandas
 ## --video-solution--
 
 4
+
+# --hints--
+
+
+# --solutions--
 

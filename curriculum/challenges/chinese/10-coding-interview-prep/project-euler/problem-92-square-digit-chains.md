@@ -1,55 +1,21 @@
 ---
 id: 5900f3c81000cf542c50fedb
-title: 'Problem 92: Square digit chains'
+title: 问题92：方形数字链
 challengeType: 5
-forumTopicId: 302209
-dashedName: problem-92-square-digit-chains
+videoUrl: ''
 ---
 
 # --description--
 
-A number chain is created by continuously adding the square of the digits in a number to form a new number until it has been seen before.
-
-For example,
-
-<div style='margin-left: 4em;'>
-  44 → 32 → 13 → 10 → <strong>1</strong> → <strong>1</strong><br>
-  85 → <strong>89</strong> → 145 → 42 → 20 → 4 → 16 → 37 → 58 → <strong>89</strong>
-</div>
-
-Therefore any chain that arrives at 1 or 89 will become stuck in an endless loop. What is most amazing is that EVERY starting number will eventually arrive at 1 or 89.
-
-How many starting numbers below ten million will arrive at 89?
+通过在数字中连续添加数字的平方来创建数字链，以形成新的数字，直到之前看到它为止。例如，44→32→13→10→1→1 85→89→145→42→20→4→16→37→58→89因此，任何到达1或89的链条都会卡在无限循环中。最令人惊讶的是，每个起始号码最终都会达到1或89.低于一千万的起始号码将达到89个？
 
 # --hints--
 
-`squareDigitChains()` should return a number.
+`euler92()`应返回8581146。
 
 ```js
-assert(typeof squareDigitChains() === 'number');
-```
-
-`squareDigitChains()` should return 8581146.
-
-```js
-assert.strictEqual(squareDigitChains(), 8581146);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function squareDigitChains() {
-
-  return true;
-}
-
-squareDigitChains();
+assert.strictEqual(euler92(), 8581146);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

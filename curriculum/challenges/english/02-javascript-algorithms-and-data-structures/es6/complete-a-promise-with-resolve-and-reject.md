@@ -3,7 +3,6 @@ id: 5cdafbc32913098997531680
 title: Complete a Promise with resolve and reject
 challengeType: 1
 forumTopicId: 301196
-dashedName: complete-a-promise-with-resolve-and-reject
 ---
 
 # --description--
@@ -32,7 +31,11 @@ Make the promise handle success and failure. If `responseFromServer` is `true`, 
 
 ```js
 assert(
-  code.match(/if\s*\(\s*responseFromServer\s*\)\s*{\s*resolve\s*\(\s*('|"|`)We got the data\1\s*\)(\s*|\s*;\s*)}/g)
+  __helpers
+    .removeJSComments(code)
+    .match(
+      /if\s*\(\s*responseFromServer\s*\)\s*{\s*resolve\s*\(\s*('|"|`)We got the data\1\s*\)(\s*|\s*;\s*)}/g
+    )
 );
 ```
 
@@ -40,7 +43,11 @@ assert(
 
 ```js
 assert(
-  code.match(/}\s*else\s*{\s*reject\s*\(\s*('|"|`)Data not received\1\s*\)(\s*|\s*;\s*)}/g)
+  __helpers
+    .removeJSComments(code)
+    .match(
+      /}\s*else\s*{\s*reject\s*\(\s*('|"|`)Data not received\1\s*\)(\s*|\s*;\s*)}/g
+    )
 );
 ```
 

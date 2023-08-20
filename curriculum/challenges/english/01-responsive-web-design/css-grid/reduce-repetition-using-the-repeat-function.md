@@ -4,7 +4,6 @@ title: Reduce Repetition Using the repeat Function
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pByETK/cQvqyHR'
 forumTopicId: 301133
-dashedName: reduce-repetition-using-the-repeat-function
 ---
 
 # --description--

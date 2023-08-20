@@ -1,54 +1,37 @@
 ---
 id: 5900f5221000cf542c510033
-title: 'Problem 436: Unfair wager'
+title: 问题436：不公平的赌注
 challengeType: 5
-forumTopicId: 302107
-dashedName: problem-436-unfair-wager
+videoUrl: ''
 ---
 
 # --description--
 
-Julie proposes the following wager to her sister Louise.
+朱莉向妹妹路易丝提出以下赌注。
 
-She suggests they play a game of chance to determine who will wash the dishes.
+她建议他们玩一场机会游戏，以确定谁来洗碗。
 
-For this game, they shall use a generator of independent random numbers uniformly distributed between 0 and 1.
+对于此游戏，他们应使用独立随机数的生成器，该生成器均匀分布在0和1之间。
 
-The game starts with S = 0.
+游戏从S = 0开始。
 
-The first player, Louise, adds to S different random numbers from the generator until S > 1 and records her last random number 'x'.
+第一个玩家路易丝（Louise）向生成器添加了S个不同的随机数，直到S> 1并记录了她的最后一个随机数'x'。
 
-The second player, Julie, continues adding to S different random numbers from the generator until S > 2 and records her last random number 'y'.
+第二个玩家朱莉继续从生成器中添加S个不同的随机数，直到S> 2并记录她的最后一个随机数“ y”。
 
-The player with the highest number wins and the loser washes the dishes, i.e. if y > x the second player wins.
+拥有最高数字的玩家获胜，而输家则洗碗，即，如果y> x，则第二名玩家获胜。
 
-For example, if the first player draws 0.62 and 0.44, the first player turn ends since 0.62+0.44 > 1 and x = 0.44. If the second players draws 0.1, 0.27 and 0.91, the second player turn ends since 0.62+0.44+0.1+0.27+0.91 > 2 and y = 0.91. Since y > x, the second player wins.
+例如，如果第一个玩家抽出0.62和0.44，则第一个玩家回合结束，因为0.62 + 0.44> 1且x = 0.44。 如果第二名玩家抽出0.1、0.27和0.91，则第二名玩家回合结束，因为0.62 + 0.44 + 0.1 + 0.27 + 0.91> 2且y = 0.91。 由于y> x，第二名玩家获胜。
 
-Louise thinks about it for a second, and objects: "That's not fair". What is the probability that the second player wins? Give your answer rounded to 10 places behind the decimal point in the form 0.abcdefghij
+路易丝考虑了一秒钟，然后反对：“那不公平”。 第二名玩家获胜的概率是多少？ 以0.abcdefghij的形式将答案四舍五入到小数点后10位。
 
 # --hints--
 
-`euler436()` should return 0.5276662759.
+`euler436()`应该返回0.5276662759。
 
 ```js
 assert.strictEqual(euler436(), 0.5276662759);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler436() {
-
-  return true;
-}
-
-euler436();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

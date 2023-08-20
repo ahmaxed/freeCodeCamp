@@ -1,6 +1,6 @@
-const reallyWeirdErrorMessage = {
+export default {
   type: 'danger',
-  message: 'flash.really-weird'
+  message:
+    'Something really weird happened, if it happens again, please consider ' +
+    'raising an issue on https://github.com/freeCodeCamp/freeCodeCamp/issues/new'
 };
-
-export default reallyWeirdErrorMessage;

@@ -1,12 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { ReflexContainer, ReflexSplitter, ReflexElement } from 'react-reflex';
 import PropTypes from 'prop-types';
-import { first } from 'lodash-es';
+import { first } from 'lodash';
 import EditorTabs from './EditorTabs';
 import ActionRow from './ActionRow';
-import envData from '../../../../../config/env.json';
-
-const { showUpcomingChanges } = envData;
+import { showUpcomingChanges } from '../../../../config/env.json';
 
 const propTypes = {
   challengeFiles: PropTypes.object,
@@ -29,20 +27,6 @@ const reflexProps = {
 };
 
 class DesktopLayout extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { showNotes: false, showPreview: true, showConsole: false };
-    this.switchDisplayTab = this.switchDisplayTab.bind(this);
-  }
-
-  switchDisplayTab(displayTab) {
-    this.setState(state => {
-      return {
-        [displayTab]: !state[displayTab]
-      };
-    });
-  }
-
   getChallengeFile() {
     const { challengeFiles } = this.props;
     return first(Object.keys(challengeFiles).map(key => challengeFiles[key]));
@@ -59,30 +43,16 @@ class DesktopLayout extends Component {
       hasEditableBoundries
     } = this.props;
 
-    const { showPreview, showConsole } = this.state;
-
     const challengeFile = this.getChallengeFile();
-    const projectBasedChallenge = showUpcomingChanges && hasEditableBoundries;
-    const isPreviewDisplayable = projectBasedChallenge
-      ? showPreview && hasPreview
-      : hasPreview;
-    const isConsoleDisplayable = projectBasedChallenge ? showConsole : true;
 
     return (
       <Fragment>
-        {projectBasedChallenge && (
-          <ActionRow switchDisplayTab={this.switchDisplayTab} {...this.state} />
-        )}
+        {showUpcomingChanges && hasEditableBoundries && <ActionRow />}
         <ReflexContainer className='desktop-layout' orientation='vertical'>
-          {!projectBasedChallenge && (
-            <ReflexElement flex={1} {...resizeProps}>
-              {instructions}
-            </ReflexElement>
-          )}
-          {!projectBasedChallenge && (
-            <ReflexSplitter propagate={true} {...resizeProps} />
-          )}
-
+          <ReflexElement flex={1} {...resizeProps}>
+            {instructions}
+          </ReflexElement>
+          <ReflexSplitter propagate={true} {...resizeProps} />
           <ReflexElement flex={1} {...resizeProps}>
             {challengeFile && (
               <ReflexContainer key={challengeFile.key} orientation='horizontal'>
@@ -96,21 +66,15 @@ class DesktopLayout extends Component {
                     </Fragment>
                   }
                 </ReflexElement>
-                {isConsoleDisplayable && (
-                  <ReflexSplitter propagate={true} {...resizeProps} />
-                )}
-                {isConsoleDisplayable && (
-                  <ReflexElement flex={0.25} {...reflexProps} {...resizeProps}>
-                    {testOutput}
-                  </ReflexElement>
-                )}
+                <ReflexSplitter propagate={true} {...resizeProps} />
+                <ReflexElement flex={0.25} {...reflexProps} {...resizeProps}>
+                  {testOutput}
+                </ReflexElement>
               </ReflexContainer>
             )}
           </ReflexElement>
-          {isPreviewDisplayable && (
-            <ReflexSplitter propagate={true} {...resizeProps} />
-          )}
-          {isPreviewDisplayable && (
+          {hasPreview && <ReflexSplitter propagate={true} {...resizeProps} />}
+          {hasPreview && (
             <ReflexElement flex={0.7} {...resizeProps}>
               {preview}
             </ReflexElement>

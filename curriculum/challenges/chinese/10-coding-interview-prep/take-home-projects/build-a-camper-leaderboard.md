@@ -1,31 +1,16 @@
 ---
 id: bd7156d8c242eddfaeb5bd13
-title: Build a freeCodeCamp Forum Homepage
+title: 建立一个露营者排行榜
 challengeType: 3
-forumTopicId: 302349
-dashedName: build-a-freecodecamp-forum-homepage
+videoUrl: ''
 ---
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/JqdoMV>.
+**目标：** 构建一个功能类似于此的[CodePen.io](https://codepen.io)应用程序： [https](https://codepen.io/freeCodeCamp/full/eZGMjp/) **：** [//codepen.io/freeCodeCamp/full/eZGMjp/](https://codepen.io) 。完成以下[用户故事](https://en.wikipedia.org/wiki/User_story) 。使用您需要的任何库或API。给它你自己的个人风格。 **用户故事：** 我可以看到freeCodeCamp露营者的表格，他们在过去30天内获得了最多的布朗尼积分。 **用户故事：** 我可以看到他们在过去30天内获得了多少布朗尼积分，以及他们获得了多少积分。 **用户故事：** 我可以根据他们在过去30天内获得的布朗尼点数和他们总共获得的布朗尼点数来对列表进行排序。 **提示：** 要获得过去30天的前100名营员： [https](https://fcctop100.herokuapp.com/api/fccusers/top/recent) ： [//fcctop100.herokuapp.com/api/fccusers/top/recent](https://fcctop100.herokuapp.com/api/fccusers/top/recent) 。 **提示：** 要获得有史以来前100名的露营者： [https](https://fcctop100.herokuapp.com/api/fccusers/top/alltime) ： [//fcctop100.herokuapp.com/api/fccusers/top/alltime](https://fcctop100.herokuapp.com/api/fccusers/top/alltime) 。如果卡住，请记得使用[Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck-coding/19514) 。完成后，单击“我已完成此挑战”按钮并包含指向CodePen的链接。您可以通过Facebook上的朋友分享您的项目反馈。
 
-Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
+# --hints--
 
-**User Story:** I can see a list of the most recent posts on the freeCodeCamp forum.
-
-**User Story:** For each topic, I can see the title and a list of links to users who have recently posted in it.
-
-**User Story:** I can see the number of replies and views that each topic has had, and a timestamp of when the topic was last active.
-
-**Hint:** To get the 30 most recent forum posts: <https://forum-proxy.freecodecamp.rocks/latest>.
-
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
-
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 
-```js
-// solution required
-```

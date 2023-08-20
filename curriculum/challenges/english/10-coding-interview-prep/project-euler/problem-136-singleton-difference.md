@@ -3,7 +3,6 @@ id: 5900f3f51000cf542c50ff07
 title: 'Problem 136: Singleton difference'
 challengeType: 5
 forumTopicId: 301764
-dashedName: problem-136-singleton-difference
 ---
 
 # --description--

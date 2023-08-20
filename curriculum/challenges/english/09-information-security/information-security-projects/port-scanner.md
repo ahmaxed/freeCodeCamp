@@ -3,14 +3,13 @@ id: 5e46f979ac417301a38fb932
 title: Port Scanner
 challengeType: 10
 helpCategory: Python
-dashedName: port-scanner
 ---
 
 # --description--
 
 Create a port scanner using Python.
 
-You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-port-scanner).
+You can access [the full project description and starter code on Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-port-scanner).
 
 After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
 
@@ -32,6 +31,8 @@ It should pass all Python tests.
 ```js
 
 ```
+
+# --seed--
 
 # --solutions--
 

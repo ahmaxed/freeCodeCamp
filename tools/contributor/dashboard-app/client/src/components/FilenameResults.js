@@ -20,12 +20,12 @@ const FilenameResults = ({ searchValue, results, rateLimitMessage }) => {
       return <ListItem number={number} username={username} prTitle={title} />;
     });
 
-    const fileOnMain = `https://github.com/freeCodeCamp/freeCodeCamp/blob/main/${filename}`;
+    const fileOnMaster = `https://github.com/freeCodeCamp/freeCodeCamp/blob/master/${filename}`;
     return (
       <Result key={filename}>
         <span style={filenameTitle}>{filename}</span>{' '}
-        <a href={fileOnMain} rel="noopener noreferrer" target="_blank">
-          (File on Main)
+        <a href={fileOnMaster} rel="noopener noreferrer" target="_blank">
+          (File on Master)
         </a>
         <List>{prs}</List>
       </Result>

@@ -1,40 +1,23 @@
 ---
 id: 5900f3e01000cf542c50fef2
-title: 'Problem 114: Counting block combinations I'
+title: 问题114：计数块组合I
 challengeType: 5
-forumTopicId: 301740
-dashedName: problem-114-counting-block-combinations-i
+videoUrl: ''
 ---
 
 # --description--
 
-A row measuring seven units in length has red blocks with a minimum length of three units placed on it, such that any two red blocks (which are allowed to be different lengths) are separated by at least one black square. There are exactly seventeen ways of doing this.
+测量七个单元长度的行具有红色块，其上放置有最小长度为三个单元，使得任何两个红色块（允许为不同长度）由至少一个黑色方块隔开。有七种方法可以做到这一点。
 
-How many ways can a row measuring fifty units in length be filled? NOTE: Although the example above does not lend itself to the possibility, in general it is permitted to mix block sizes. For example, on a row measuring eight units in length you could use red (3), black (1), and red (4).
+一行可以测量多达50个长度的行数？注意：虽然上面的示例不适合这种可能性，但通常允许混合块大小。例如，在一个长度为8个单位的行上，您可以使用红色（3），黑色（1）和红色（4）。
 
 # --hints--
 
-`euler114()` should return 16475640049.
+`euler114()`应该返回16475640049。
 
 ```js
 assert.strictEqual(euler114(), 16475640049);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler114() {
-
-  return true;
-}
-
-euler114();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

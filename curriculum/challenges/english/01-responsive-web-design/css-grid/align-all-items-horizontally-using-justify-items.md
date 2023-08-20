@@ -4,7 +4,6 @@ title: Align All Items Horizontally using justify-items
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pByETK/cJbpECn'
 forumTopicId: 301120
-dashedName: align-all-items-horizontally-using-justify-items
 ---
 
 # --description--

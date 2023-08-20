@@ -3,7 +3,6 @@ id: 587d7b8f367417b2b2512b61
 title: Use the map Method to Extract Data from an Array
 challengeType: 1
 forumTopicId: 18214
-dashedName: use-the-map-method-to-extract-data-from-an-array
 ---
 
 # --description--
@@ -30,10 +29,8 @@ const users = [
 ];
 
 const names = users.map(user => user.name);
-console.log(names);
+console.log(names); // [ 'John', 'Amy', 'camperCat' ]
 ```
-
-The console would display the value ` [ 'John', 'Amy', 'camperCat' ]`.
 
 # --instructions--
 
@@ -52,7 +49,7 @@ assert(
 Your code should not use a `for` loop.
 
 ```js
-assert(!code.match(/for\s*?\([\s\S]*?\)/));
+assert(!__helpers.removeJSComments(code).match(/for\s*?\([\s\S]*?\)/));
 ```
 
 Your code should use the `map` method.
@@ -89,7 +86,7 @@ var watchList = [
     "Genre": "Action, Adventure, Crime",
     "Director": "Christopher Nolan",
     "Writer": "Christopher Nolan",
-    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
     "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
     "Language": "English, Japanese, French",
     "Country": "USA, UK",
@@ -218,7 +215,7 @@ var watchList = [
     "Genre": "Action, Adventure, Crime",
     "Director": "Christopher Nolan",
     "Writer": "Christopher Nolan",
-    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Tom Hardy",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy",
     "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.",
     "Language": "English, Japanese, French",
     "Country": "USA, UK",

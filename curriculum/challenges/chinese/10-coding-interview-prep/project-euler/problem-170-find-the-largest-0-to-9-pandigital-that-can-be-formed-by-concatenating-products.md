@@ -1,48 +1,29 @@
 ---
 id: 5900f4161000cf542c50ff29
-title: >-
-  Problem 170: Find the largest 0 to 9 pandigital that can be formed by concatenating products
+title: 问题170：找到可以通过连接产品形成的最大的0到9个pandigital
 challengeType: 5
-forumTopicId: 301805
-dashedName: >-
-  problem-170-find-the-largest-0-to-9-pandigital-that-can-be-formed-by-concatenating-products
+videoUrl: ''
 ---
 
 # --description--
 
-Take the number 6 and multiply it by each of 1273 and 9854:
+取数字6并乘以1273和9854：
 
-6 × 1273 = 7638 6 × 9854 = 59124
+6×1273 = 7638 6×9854 = 59124
 
-By concatenating these products we get the 1 to 9 pandigital 763859124. We will call 763859124 the "concatenated product of 6 and (1273,9854)". Notice too, that the concatenation of the input numbers, 612739854, is also 1 to 9 pandigital.
+通过连接这些产品，我们得到1到9 pandigital 763859124.我们将763859124称为“6和（1273,9854）”的连接产品。另请注意，输入数字612739854的串联也是1到9 pandigital。
 
-The same can be done for 0 to 9 pandigital numbers.
+对于0到9个pandigital数字也可以这样做。
 
-What is the largest 0 to 9 pandigital 10-digit concatenated product of an integer with two or more other integers, such that the concatenation of the input numbers is also a 0 to 9 pandigital 10-digit number?
+什么是具有两个或更多其他整数的整数的0到9 pandigital 10位连接产品，这样输入数字的串联也是0到9 pandigital 10位数字？
 
 # --hints--
 
-`euler170()` should return 9857164023.
+`euler170()`应返回9857164023。
 
 ```js
 assert.strictEqual(euler170(), 9857164023);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler170() {
-
-  return true;
-}
-
-euler170();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

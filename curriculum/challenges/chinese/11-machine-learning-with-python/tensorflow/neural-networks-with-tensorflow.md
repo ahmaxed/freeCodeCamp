@@ -1,9 +1,7 @@
 ---
 id: 5e8f2f13c4cdbe86b5c72d92
-title: Neural Networks with TensorFlow
 challengeType: 11
 videoId: uisdfrNrZW4
-dashedName: neural-networks-with-tensorflow
 ---
 
 # --question--
@@ -27,4 +25,9 @@ all the neurons in the current layer are connected to every neuron in the previo
 ## --video-solution--
 
 3
+
+# --hints--
+
+
+# --solutions--
 

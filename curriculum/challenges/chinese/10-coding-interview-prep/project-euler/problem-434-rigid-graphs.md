@@ -1,52 +1,35 @@
 ---
 id: 5900f51f1000cf542c510031
-title: 'Problem 434: Rigid graphs'
+title: 问题434：刚性图
 challengeType: 5
-forumTopicId: 302105
-dashedName: problem-434-rigid-graphs
+videoUrl: ''
 ---
 
 # --description--
 
-Recall that a graph is a collection of vertices and edges connecting the vertices, and that two vertices connected by an edge are called adjacent.
+回想一下，图是顶点和连接顶点的边的集合，并且通过边连接的两个顶点称为相邻。
 
-Graphs can be embedded in Euclidean space by associating each vertex with a point in the Euclidean space.
+通过将每个顶点与欧氏空间中的一个点相关联，可以将图嵌入到欧氏空间中。
 
-A flexible graph is an embedding of a graph where it is possible to move one or more vertices continuously so that the distance between at least two nonadjacent vertices is altered while the distances between each pair of adjacent vertices is kept constant.
+柔性图是图的嵌入，其中可以连续移动一个或多个顶点，以便至少两个不相邻顶点之间的距离发生变化，而每对相邻顶点之间的距离保持恒定。
 
-A rigid graph is an embedding of a graph which is not flexible.
+刚性图是不灵活的图的嵌入。
 
-Informally, a graph is rigid if by replacing the vertices with fully rotating hinges and the edges with rods that are unbending and inelastic, no parts of the graph can be moved independently from the rest of the graph.
+非正式地，如果通过用完全旋转的铰链替换顶点，并用不弯曲且无弹性的杆代替边，则图形是刚性的，则图形的任何部分都不能独立于图形的其余部分移动。
 
-The grid graphs embedded in the Euclidean plane are not rigid, as the following animation demonstrates: However, one can make them rigid by adding diagonal edges to the cells. For example, for the 2x3 grid graph, there are 19 ways to make the graph rigid: Note that for the purposes of this problem, we do not consider changing the orientation of a diagonal edge or adding both diagonal edges to a cell as a different way of making a grid graph rigid.
+嵌入在欧几里得平面中的网格图不是刚性的，如以下动画所示： 但是，可以通过向单元格添加对角线边缘来使它们变硬。例如，对于2x3网格图，有19种方法可以使图变刚性： 请注意，出于解决此问题的目的，我们不考虑更改对角线边缘的方向或将两个对角线边缘添加到单元格，这是使网格图变硬的另一种方法。
 
-Let R(m,n) be the number of ways to make the m × n grid graph rigid. E.g. R(2,3) = 19 and R(5,5) = 23679901
+令R（m，n）为使m×n网格图变硬的方法的数量。 例如。 R（2,3）= 19和R（5,5）= 23679901
 
-Define S(N) as ∑R(i,j) for 1 ≤ i, j ≤ N. E.g. S(5) = 25021721. Find S(100), give your answer modulo 1000000033
+对于1≤i，j≤N，将S（N）定义为∑R（i，j）。 例如。 S（5）= 25021721。 求S（100），以1000000033为模给出答案
 
 # --hints--
 
-`euler434()` should return 863253606.
+`euler434()`应该返回863253606。
 
 ```js
 assert.strictEqual(euler434(), 863253606);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler434() {
-
-  return true;
-}
-
-euler434();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

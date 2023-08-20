@@ -3,7 +3,6 @@ id: bd7158d8c442eddfaeb5bd10
 title: Show the Local Weather
 challengeType: 3
 forumTopicId: 302368
-dashedName: show-the-local-weather
 ---
 
 # --description--
@@ -25,6 +24,11 @@ dashedName: show-the-local-weather
 When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
 
 You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+
+# --hints--
+
+
+# --seed--
 
 # --solutions--
 

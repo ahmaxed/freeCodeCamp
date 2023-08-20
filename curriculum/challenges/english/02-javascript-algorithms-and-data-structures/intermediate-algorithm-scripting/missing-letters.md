@@ -3,42 +3,41 @@ id: af7588ade1100bde429baf20
 title: Missing letters
 challengeType: 5
 forumTopicId: 16023
-dashedName: missing-letters
 ---
 
 # --description--
 
 Find the missing letter in the passed letter range and return it.
 
-If all letters are present in the range, return `undefined`.
+If all letters are present in the range, return undefined.
 
 # --hints--
 
-`fearNotLetter("abce")` should return the string `d`.
+`fearNotLetter("abce")` should return "d".
 
 ```js
 assert.deepEqual(fearNotLetter('abce'), 'd');
 ```
 
-`fearNotLetter("abcdefghjklmno")` should return the string `i`.
+`fearNotLetter("abcdefghjklmno")` should return "i".
 
 ```js
 assert.deepEqual(fearNotLetter('abcdefghjklmno'), 'i');
 ```
 
-`fearNotLetter("stvwx")` should return the string `u`.
+`fearNotLetter("stvwx")` should return "u".
 
 ```js
 assert.deepEqual(fearNotLetter('stvwx'), 'u');
 ```
 
-`fearNotLetter("bcdf")` should return the string `e`.
+`fearNotLetter("bcdf")` should return "e".
 
 ```js
 assert.deepEqual(fearNotLetter('bcdf'), 'e');
 ```
 
-`fearNotLetter("abcdefghijklmnopqrstuvwxyz")` should return `undefined`.
+`fearNotLetter("abcdefghijklmnopqrstuvwxyz")` should return undefined.
 
 ```js
 assert.isUndefined(fearNotLetter('abcdefghijklmnopqrstuvwxyz'));

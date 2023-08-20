@@ -1,66 +1,21 @@
 ---
 id: 5900f54a1000cf542c51005c
-title: 'Problem 477: Number Sequence Game'
+title: 问题477：数字序列游戏
 challengeType: 5
-forumTopicId: 302154
-dashedName: problem-477-number-sequence-game
+videoUrl: ''
 ---
 
 # --description--
 
-The number sequence game starts with a sequence S of N numbers written on a line.
-
-Two players alternate turns. At his turn, a player must select and remove either the first or the last number remaining in the sequence.
-
-The player score is the sum of all the numbers he has taken. Each player attempts to maximize his own sum.
-
-If N = 4 and S = {1, 2, 10, 3}, then each player maximizes his score as follows:
-
-Player 1: removes the first number (1)
-
-Player 2: removes the last number from the remaining sequence (3)
-
-Player 1: removes the last number from the remaining sequence (10)
-
-Player 2: removes the remaining number (2)
-
-Player 1 score is 1 + 10 = 11.
-
-Let F(N) be the score of player 1 if both players follow the optimal strategy for the sequence S = {s1, s2, ..., sN} defined as:
-
-s1 = 0
-
-si+1 = (si2 + 45) modulo 1 000 000 007
-
-The sequence begins with S = {0, 45, 2070, 4284945, 753524550, 478107844, 894218625, ...}.
-
-You are given F(2) = 45, F(4) = 4284990, F(100) = 26365463243, F(104) = 2495838522951.
-
-Find F(108).
+数字序列游戏以写在一行上的N个数字的序列S开始。两名球员交替轮流。在轮到他时，玩家必须选择并删除序列中剩余的第一个或最后一个数字。球员得分是他所取得的所有数字的总和。每个玩家都试图最大化自己的总和。如果N = 4并且S = {1,2,10,3}，则每个玩家最大化他的得分如下：玩家1：移除第一个数字（1）玩家2：从剩余序列移除最后一个数字（3）玩家1：从剩余序列中移除最后一个号码（10）玩家2：移除剩余号码（2）玩家1得分为1 + 10 = 11.如果两个玩家都遵循，则F（N）为玩家1的得分序列的最优策略S = {s1，s2，...，sN}定义为：s1 = 0 si + 1 =（si2 + 45）modulo 1 000 000 007序列以S = {0,45,2070开头，4284945,753524550,478107844,894218625，...}。给出F（2）= 45，F（4）= 4284990，F（100）= 26365463243，F（104）= 2495838522951。求F（108）。
 
 # --hints--
 
-`euler477()` should return 25044905874565164.
+`euler477()`应该返回25044905874565164。
 
 ```js
 assert.strictEqual(euler477(), 25044905874565164);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler477() {
-
-  return true;
-}
-
-euler477();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

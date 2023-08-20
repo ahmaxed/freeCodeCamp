@@ -1,5 +1,5 @@
 /* global expect */
-import { isObject } from 'lodash-es';
+import { isObject } from 'lodash';
 import sinon from 'sinon';
 import {
   isHandledError,

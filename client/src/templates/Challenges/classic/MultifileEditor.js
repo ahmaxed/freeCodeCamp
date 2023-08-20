@@ -169,7 +169,7 @@ class MultifileEditor extends Component {
       editorRef,
       theme,
       resizeProps,
-      visibleEditors: { indexcss, indexhtml, indexjs, indexjsx }
+      visibleEditors
     } = this.props;
     const editorTheme = theme === 'night' ? 'vs-dark-custom' : 'vs-custom';
     // TODO: the tabs mess up the rendering (scroll doesn't work properly and
@@ -185,22 +185,11 @@ class MultifileEditor extends Component {
       renderOnResizeRate: 20
     };
 
-    let splitterJSXRight, splitterHTMLRight, splitterCSSRight;
-    if (indexjsx) {
-      if (indexhtml || indexcss || indexjs) {
-        splitterJSXRight = true;
-      }
-    }
-    if (indexhtml) {
-      if (indexcss || indexjs) {
-        splitterHTMLRight = true;
-      }
-    }
-    if (indexcss) {
-      if (indexjs) {
-        splitterCSSRight = true;
-      }
-    }
+    // TODO: this approach (||ing the visibleEditors) isn't great.
+    const splitCSS = visibleEditors.indexhtml && visibleEditors.indexcss;
+    const splitJS =
+      visibleEditors.indexcss ||
+      (visibleEditors.indexhtml && visibleEditors.indexjs);
 
     // TODO: tabs should be dynamically created from the challengeFiles
     // TODO: the tabs mess up the rendering (scroll doesn't work properly and
@@ -215,24 +204,7 @@ class MultifileEditor extends Component {
       >
         <ReflexElement flex={10} {...reflexProps} {...resizeProps}>
           <ReflexContainer orientation='vertical'>
-            {indexjsx && (
-              <ReflexElement {...reflexProps} {...resizeProps}>
-                <Editor
-                  challengeFiles={challengeFiles}
-                  containerRef={containerRef}
-                  description={targetEditor === 'indexjsx' ? description : null}
-                  fileKey='indexjsx'
-                  key='indexjsx'
-                  ref={editorRef}
-                  resizeProps={resizeProps}
-                  theme={editorTheme}
-                />
-              </ReflexElement>
-            )}
-            {splitterJSXRight && (
-              <ReflexSplitter propagate={true} {...resizeProps} />
-            )}
-            {indexhtml && (
+            {visibleEditors.indexhtml && (
               <ReflexElement {...reflexProps} {...resizeProps}>
                 <Editor
                   challengeFiles={challengeFiles}
@@ -248,10 +220,8 @@ class MultifileEditor extends Component {
                 />
               </ReflexElement>
             )}
-            {splitterHTMLRight && (
-              <ReflexSplitter propagate={true} {...resizeProps} />
-            )}
-            {indexcss && (
+            {splitCSS && <ReflexSplitter propagate={true} {...resizeProps} />}
+            {visibleEditors.indexcss && (
               <ReflexElement {...reflexProps} {...resizeProps}>
                 <Editor
                   challengeFiles={challengeFiles}
@@ -259,17 +229,14 @@ class MultifileEditor extends Component {
                   description={targetEditor === 'indexcss' ? description : null}
                   fileKey='indexcss'
                   key='indexcss'
-                  ref={editorRef}
                   resizeProps={resizeProps}
                   theme={editorTheme}
                 />
               </ReflexElement>
             )}
-            {splitterCSSRight && (
-              <ReflexSplitter propagate={true} {...resizeProps} />
-            )}
+            {splitJS && <ReflexSplitter propagate={true} {...resizeProps} />}
 
-            {indexjs && (
+            {visibleEditors.indexjs && (
               <ReflexElement {...reflexProps} {...resizeProps}>
                 <Editor
                   challengeFiles={challengeFiles}
@@ -277,7 +244,19 @@ class MultifileEditor extends Component {
                   description={targetEditor === 'indexjs' ? description : null}
                   fileKey='indexjs'
                   key='indexjs'
-                  ref={editorRef}
+                  resizeProps={resizeProps}
+                  theme={editorTheme}
+                />
+              </ReflexElement>
+            )}
+            {visibleEditors.indexjsx && (
+              <ReflexElement {...reflexProps} {...resizeProps}>
+                <Editor
+                  challengeFiles={challengeFiles}
+                  containerRef={containerRef}
+                  description={targetEditor === 'indexjsx' ? description : null}
+                  fileKey='indexjsx'
+                  key='indexjsx'
                   resizeProps={resizeProps}
                   theme={editorTheme}
                 />
@@ -295,6 +274,9 @@ MultifileEditor.propTypes = propTypes;
 
 // NOTE: withRef gets replaced by forwardRef in react-redux 6,
 // https://github.com/reduxjs/react-redux/releases/tag/v6.0.0
-export default connect(mapStateToProps, mapDispatchToProps, null, {
-  withRef: true
-})(MultifileEditor);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  null,
+  { withRef: true }
+)(MultifileEditor);

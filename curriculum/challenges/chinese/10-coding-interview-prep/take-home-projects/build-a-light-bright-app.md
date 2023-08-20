@@ -1,37 +1,16 @@
 ---
 id: 5a5d02bd919fcf9ca8cf46cb
-title: Build a Light-Bright App
+title: 构建一个明亮的应用程序
 challengeType: 3
-forumTopicId: 302350
-dashedName: build-a-light-bright-app
+videoUrl: ''
 ---
 
 # --description--
 
-**Objective:** Build a [CodePen.io](https://codepen.io) app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/eyLYXE>.
+**目标：** 构建一个功能类似于此的[CodePen.io](https://codepen.io)应用程序： [https](https://codepen.io/freeCodeCamp/full/eyLYXE) **：** [//codepen.io/freeCodeCamp/full/eyLYXE](https://codepen.io) 。 **规则＃1：** 不要查看示例项目的代码。自己搞清楚。 **规则＃2：** 完成以下[用户故事](https://en.wikipedia.org/wiki/User_story) 。使用您需要的任何库或API。给它你自己的个人风格。 **用户故事：** 我可以单击或拖动鼠标光标为圆圈着色。 **用户故事：** 我可以双击彩色圆圈去除颜色。 **用户故事：** 我可以点击彩色圆圈来改变它的颜色。 **用户故事：** 每次点击我都会得到一个不同颜色的圆圈。 **用户故事：** 我可以点击“重置”按钮删除最近的颜色。 **用户故事：** 我可以单击“全部重置”按钮删除圆圈中的所有颜色。如果卡住，请记得使用[Read-Search-Ask](https://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck-coding/19514) 。完成后，单击“我已完成此挑战”按钮并包含指向CodePen的链接。您可以通过Facebook上的朋友分享您的项目反馈。
 
-**Rule #1:** Don't look at the example project's code. Figure it out for yourself.
+# --hints--
 
-**Rule #2:** Fulfill the below [user stories](https://en.wikipedia.org/wiki/User_story). Use whichever libraries or APIs you need. Give it your own personal style.
-
-**User Story:** I can click or drag the mouse cursor to color the circles.
-
-**User Story:** I can double-click on a colored circle to remove the color.
-
-**User Story:** I can click on a colored circle to change its color.
-
-**User Story:** I should get a circle of different color on each click.
-
-**User Story:** I can click on the 'Reset' button to remove the recent color.
-
-**User Story:** I can click on the 'Reset All' button to remove all the colors from the circles.
-
-When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
-
-You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
 
 # --solutions--
 
-```js
-// solution required
-```

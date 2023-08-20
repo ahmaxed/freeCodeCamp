@@ -4,7 +4,6 @@ title: Nesting For Loops
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cRn6GHM'
 forumTopicId: 18248
-dashedName: nesting-for-loops
 ---
 
 # --description--

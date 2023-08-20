@@ -1,44 +1,21 @@
 ---
 id: 5900f3e71000cf542c50fefa
-title: 'Problem 123: Prime square remainders'
+title: 问题123：素数正方形余数
 challengeType: 5
-forumTopicId: 301750
-dashedName: problem-123-prime-square-remainders
+videoUrl: ''
 ---
 
 # --description--
 
-Let pn be the nth prime: 2, 3, 5, 7, 11, ..., and let r be the remainder when (pn−1)n + (pn+1)n is divided by pn2.
-
-For example, when n = 3, p3 = 5, and 43 + 63 = 280 ≡ 5 mod 25.
-
-The least value of n for which the remainder first exceeds 109 is 7037.
-
-Find the least value of n for which the remainder first exceeds 1010.
+令pn为第n个素数：2,3,5,7,11 ......，并且当r（pn-1）n +（pn + 1）n除以pn2时，令r为余数。例如，当n = 3时，p3 = 5，并且43 + 63 =280≡5mod 25.余数首先超过109的n的最小值是7037.求出余数首次超过的n的最小值1010。
 
 # --hints--
 
-`euler123()` should return 21035.
+`euler123()`应该返回21035。
 
 ```js
 assert.strictEqual(euler123(), 21035);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler123() {
-
-  return true;
-}
-
-euler123();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

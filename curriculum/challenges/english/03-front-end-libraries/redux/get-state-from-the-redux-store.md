@@ -3,7 +3,6 @@ id: 5a24c314108439a4d403614c
 title: Get State from the Redux Store
 challengeType: 6
 forumTopicId: 301443
-dashedName: get-state-from-the-redux-store
 ---
 
 # --description--
@@ -16,7 +15,7 @@ The code from the previous challenge is re-written more concisely in the code ed
 
 # --hints--
 
-The Redux store should have a value of 5 for the initial state.
+The redux store should have a value of 5 for the initial state.
 
 ```js
 assert(store.getState() === 5);

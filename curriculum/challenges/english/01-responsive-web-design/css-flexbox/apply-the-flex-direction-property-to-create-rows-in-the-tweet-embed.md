@@ -4,7 +4,6 @@ title: Apply the flex-direction Property to Create Rows in the Tweet Embed
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVaDAv/cJb8yuq'
 forumTopicId: 301104
-dashedName: apply-the-flex-direction-property-to-create-rows-in-the-tweet-embed
 ---
 
 # --description--
@@ -13,23 +12,17 @@ The `header` and `footer` in the tweet embed example have child items that could
 
 # --instructions--
 
-Add the CSS property `flex-direction` to both the `header` and `footer` and set the value to `row`.
+Add the CSS property `flex-direction` to both the `header` and `footer` and set the value to row.
 
 # --hints--
 
-Your `.follow-btn` should be rendered on the page. Be sure to turn off any extensions such as ad blockers.
-
-```js
-assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');
-```
-
-The `header` should have a `flex-direction` property set to `row`.
+The `header` should have a `flex-direction` property set to row.
 
 ```js
 assert(code.match(/header\s*?{[^}]*?flex-direction:\s*?row;/g));
 ```
 
-The `footer` should have a `flex-direction` property set to `row`.
+The `footer` should have a `flex-direction` property set to row.
 
 ```js
 assert(code.match(/footer\s*?{[^}]*?flex-direction:\s*?row;/g));

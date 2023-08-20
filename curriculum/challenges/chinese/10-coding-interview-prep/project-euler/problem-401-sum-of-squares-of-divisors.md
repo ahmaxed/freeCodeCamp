@@ -1,46 +1,27 @@
 ---
 id: 5900f4fd1000cf542c51000f
-title: 'Problem 401: Sum of squares of divisors'
+title: 问题401：除数的平方和
 challengeType: 5
-forumTopicId: 302069
-dashedName: problem-401-sum-of-squares-of-divisors
+videoUrl: ''
 ---
 
 # --description--
 
-The divisors of 6 are 1,2,3 and 6.
+6的除数是1,2,3和6.这些数的平方和是1 + 4 + 9 + 36 = 50。
 
-The sum of the squares of these numbers is 1+4+9+36=50.
+设sigma2（n）代表n的除数的平方和。因此sigma2（6）= 50。
 
-Let sigma2(n) represent the sum of the squares of the divisors of n. Thus sigma2(6)=50.
+设SIGMA2表示sigma2的和函数，即对于i = 1到n，SIGMA2（n）=Σsigma2（i）。 SIGMA2的前6个值是：1,6,16,37,63和113。
 
-Let SIGMA2 represent the summatory function of sigma2, that is SIGMA2(n)=∑sigma2(i) for i=1 to n. The first 6 values of SIGMA2 are: 1,6,16,37,63 and 113.
-
-Find SIGMA2(1015) modulo 109.
+找到SIGMA2（1015）modulo 109。
 
 # --hints--
 
-`euler401()` should return 281632621.
+`euler401()`应该返回281632621。
 
 ```js
 assert.strictEqual(euler401(), 281632621);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler401() {
-
-  return true;
-}
-
-euler401();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

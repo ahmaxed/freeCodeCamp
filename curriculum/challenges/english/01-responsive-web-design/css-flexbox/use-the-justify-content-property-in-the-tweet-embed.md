@@ -4,7 +4,6 @@ title: Use the justify-content Property in the Tweet Embed
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVaDAv/c43GgTa'
 forumTopicId: 301115
-dashedName: use-the-justify-content-property-in-the-tweet-embed
 ---
 
 # --description--
@@ -16,12 +15,6 @@ The last challenge showed an example of the `justify-content` property. For the 
 Add the CSS property `justify-content` to the header's `.profile-name` element and set the value to any of the options from the last challenge.
 
 # --hints--
-
-Your `.follow-btn` should be rendered on the page. Be sure to turn off any extensions such as ad blockers.
-
-```js
-assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');
-```
 
 The `.profile-name` element should have the `justify-content` property set to any of these values: `center`, `flex-start`, `flex-end`, `space-between`, `space-around`, or `space-evenly`.
 

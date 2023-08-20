@@ -1,50 +1,33 @@
 ---
 id: 5900f4b71000cf542c50ffca
-title: 'Problem 331: Cross flips'
+title: 问题331：交叉翻转
 challengeType: 5
-forumTopicId: 301989
-dashedName: problem-331-cross-flips
+videoUrl: ''
 ---
 
 # --description--
 
-N×N disks are placed on a square game board. Each disk has a black side and white side.
+N×N个盘放在方形游戏板上。每个磁盘都有黑色和白色。
 
-At each turn, you may choose a disk and flip all the disks in the same row and the same column as this disk: thus 2×N-1 disks are flipped. The game ends when all disks show their white side. The following example shows a game on a 5×5 board.
+在每个回合中，您可以选择一个磁盘并翻转与该磁盘相同的行和同一列中的所有磁盘：因此翻转2×N-1个磁盘。当所有磁盘显示其白色边时，游戏结束。以下示例显示了5×5板上的游戏。
 
-It can be proven that 3 is the minimal number of turns to finish this game.
+可以证明3是完成这个游戏的最小转弯次数。
 
-The bottom left disk on the N×N board has coordinates (0,0); the bottom right disk has coordinates (N-1,0) and the top left disk has coordinates (0,N-1).
+N×N板上的左下盘具有坐标（0,0）;右下盘具有坐标（N-1,0），左上盘具有坐标（0，N-1）。
 
-Let CN be the following configuration of a board with N×N disks: A disk at (x,y) satisfying , shows its black side; otherwise, it shows its white side. C5 is shown above.
+CN为具有N×N个盘的板的以下配置：（x，y）处的盘满足，表示其黑色侧;否则，它显示其白色的一面。 C5如上所示。
 
-Let T(N) be the minimal number of turns to finish a game starting from configuration CN or 0 if configuration CN is unsolvable. We have shown that T(5)=3. You are also given that T(10)=29 and T(1 000)=395253.
+设T（N）是从配置CN开始完成游戏的最小圈数，如果配置CN不可解，则为0。我们已经证明T（5）= 3。你还得到T（10）= 29和T（1 000）= 395253。
 
-Find .
+找 。
 
 # --hints--
 
-`euler331()` should return 467178235146843500.
+`euler331()`应该返回467178235146843500。
 
 ```js
 assert.strictEqual(euler331(), 467178235146843500);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler331() {
-
-  return true;
-}
-
-euler331();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

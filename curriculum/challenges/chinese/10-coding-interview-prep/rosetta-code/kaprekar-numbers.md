@@ -3,12 +3,11 @@ id: 5a23c84252665b21eecc7eca
 title: Kaprekar numbers
 challengeType: 5
 forumTopicId: 302296
-dashedName: kaprekar-numbers
 ---
 
 # --description--
 
-A positive integer is a [Kaprekar number](https://en.wikipedia.org/wiki/Kaprekar number) if:
+A positive integer is a [Kaprekar number](<https://en.wikipedia.org/wiki/Kaprekar number>) if:
 
 <ul>
   <li>It is 1, or,</li>

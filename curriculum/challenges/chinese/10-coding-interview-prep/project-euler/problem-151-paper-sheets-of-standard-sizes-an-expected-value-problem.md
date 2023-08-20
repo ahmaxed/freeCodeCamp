@@ -1,46 +1,23 @@
 ---
 id: 5900f4031000cf542c50ff16
-title: 'Problem 151: Paper sheets of standard sizes: an expected-value problem'
+title: 问题151：标准尺寸的纸张：期望值问题
 challengeType: 5
-forumTopicId: 301782
-dashedName: problem-151-paper-sheets-of-standard-sizes-an-expected-value-problem
+videoUrl: ''
 ---
 
 # --description--
 
-A printing shop runs 16 batches (jobs) every week and each batch requires a sheet of special colour-proofing paper of size A5.
+印刷车间每周运行16批（工作），每批需要一张A5尺寸的特殊颜色纸。每个星期一早上，工头打开一个新信封，里面装着一张大小为A1的特殊纸张。他继续把它切成两半，从而得到两张A2尺寸的纸。然后，他将其中一个切成两半，得到两张A3尺寸，依此类推，直到他获得了本周第一批所需的A5尺寸纸张。所有未使用的纸张都放回信封中。
 
-Every Monday morning, the foreman opens a new envelope, containing a large sheet of the special paper with size A1.
-
-He proceeds to cut it in half, thus getting two sheets of size A2. Then he cuts one of them in half to get two sheets of size A3 and so on until he obtains the A5-size sheet needed for the first batch of the week.
-
-All the unused sheets are placed back in the envelope.
-
-At the beginning of each subsequent batch, he takes from the envelope one sheet of paper at random. If it is of size A5, he uses it. If it is larger, he repeats the 'cut-in-half' procedure until he has what he needs and any remaining sheets are always placed back in the envelope. Excluding the first and last batch of the week, find the expected number of times (during each week) that the foreman finds a single sheet of paper in the envelope. Give your answer rounded to six decimal places using the format x.xxxxxx .
+在每个后续批次开始时，他随机从信封中取出一张纸。如果它的大小为A5，他会使用它。如果它更大，他会重复“切成两半”的程序，直到他有他需要的东西，任何剩余的床单总是放回信封里。排除本周的第一批和最后一批，找到工头在信封中找到一张纸的预期次数（每周）。使用格式x.xxxxxx将您的答案四舍五入到小数点后六位。
 
 # --hints--
 
-`euler151()` should return 0.464399.
+<code>euler151()&lt;/ code>应该返回0.464399。
 
 ```js
 assert.strictEqual(euler151(), 0.464399);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler151() {
-
-  return true;
-}
-
-euler151();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

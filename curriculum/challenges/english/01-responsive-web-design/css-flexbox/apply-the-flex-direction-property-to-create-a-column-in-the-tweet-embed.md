@@ -4,7 +4,6 @@ title: Apply the flex-direction Property to Create a Column in the Tweet Embed
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVaDAv/cnzdVC9'
 forumTopicId: 301103
-dashedName: apply-the-flex-direction-property-to-create-a-column-in-the-tweet-embed
 ---
 
 # --description--
@@ -13,17 +12,11 @@ The tweet embed `header` and `footer` used the `flex-direction` property earlier
 
 # --instructions--
 
-Add the CSS property `flex-direction` to the header's `.profile-name` element and set the value to `column`.
+Add the CSS property `flex-direction` to the header's `.profile-name` element and set the value to column.
 
 # --hints--
 
-Your `.follow-btn` should be rendered on the page. Be sure to turn off any extensions such as ad blockers.
-
-```js
-assert($('.follow-btn').length > 0 && $('.follow-btn').css('display') !== 'none');
-```
-
-The `.profile-name` element should have a `flex-direction` property set to `column`.
+The `.profile-name` element should have a `flex-direction` property set to column.
 
 ```js
 assert($('.profile-name').css('flex-direction') == 'column');

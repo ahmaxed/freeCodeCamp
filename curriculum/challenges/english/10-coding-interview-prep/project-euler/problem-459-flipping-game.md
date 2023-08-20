@@ -3,7 +3,6 @@ id: 5900f5371000cf542c51004a
 title: 'Problem 459: Flipping game'
 challengeType: 5
 forumTopicId: 302133
-dashedName: problem-459-flipping-game
 ---
 
 # --description--

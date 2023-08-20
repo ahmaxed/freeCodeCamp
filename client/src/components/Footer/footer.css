@@ -2,7 +2,7 @@
 /* ---------------------------------------------------------- */
 
 .site-footer {
-  flex-shrink: 0;
+  position: relative;
   color: var(--tertiary-color);
   background: var(--tertiary-background);
   line-height: 1.6;
@@ -102,14 +102,14 @@ p.footer-donation a:hover {
   margin: 0 0 3rem;
 }
 
-.footer-bottom .our-nonprofit {
+.footer-buttom .our-nonprofit {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.footer-bottom .our-nonprofit a {
+.footer-buttom .our-nonprofit a {
   padding: 5px 10px;
 }
 
@@ -156,7 +156,7 @@ p.footer-donation a:hover {
   .footer-container .col-spacer {
     margin-top: 40px;
   }
-  .footer-bottom .our-nonprofit a {
+  .footer-buttom .our-nonprofit a {
     padding: 5px;
   }
 }
@@ -196,12 +196,12 @@ p.footer-donation a:hover {
     margin-top: 18px;
   }
 
-  .footer-bottom .our-nonprofit {
+  .footer-buttom .our-nonprofit {
     padding: 0 10px;
     justify-content: space-between;
   }
 
-  .footer-bottom .col-header {
+  .footer-buttom .col-header {
     display: none;
   }
   .our-nonprofit {

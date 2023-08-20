@@ -3,7 +3,6 @@ id: 5cdafbe72913098997531682
 title: Handle a Rejected Promise with catch
 challengeType: 1
 forumTopicId: 301204
-dashedName: handle-a-rejected-promise-with-catch
 ---
 
 # --description--
@@ -12,7 +11,7 @@ dashedName: handle-a-rejected-promise-with-catch
 
 ```js
 myPromise.catch(error => {
-  
+  // do something with the error.
 });
 ```
 

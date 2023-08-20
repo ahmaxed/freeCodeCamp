@@ -4,7 +4,6 @@ title: Set the font-size for Multiple Heading Elements
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cPpQNT3'
 forumTopicId: 301067
-dashedName: set-the-font-size-for-multiple-heading-elements
 ---
 
 # --description--

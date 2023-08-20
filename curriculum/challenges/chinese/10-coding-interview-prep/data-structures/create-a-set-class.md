@@ -1,47 +1,42 @@
 ---
 id: 8d1323c8c441eddfaeb5bdef
-title: Create a Set Class
+title: 创建一个Set类
 challengeType: 1
-forumTopicId: 301632
-dashedName: create-a-set-class
+videoUrl: ''
 ---
 
 # --description--
 
-In this exercise we are going to create a class named `Set` to emulate an abstract data structure called "set". A set is like an array, but it cannot contain duplicate values. The typical use for a set is to simply check for the presence of an item. We can see how the ES6 `Set` object works in the example below:
+在接下来的几个练习中，我们将创建一个函数来模拟一个名为“Set”的数据结构。 Set类似于数组，但不能包含重复值。 Set的典型用途是简单地检查项目是否存在。这可以用对象实现，例如：
 
-```js
-const set1 = new Set([1, 2, 3, 5, 5, 2, 0]);
-console.log(set1);
-// output: {1, 2, 3, 5, 0}
-console.log(set1.has(1));
-// output: true
-console.log(set1.has(6));
-// output: false
-```
+> var set = new Object（）;  
+> set.foo = true;  
+> //看看我们的集合中是否存在foo：  
+> console.log（set.foo）// true
 
-First, we will create an add method that adds a value to our set collection as long as the value does not already exist in the set. Then we will create a remove method that removes a value from the set collection if it already exists. And finally, we will create a size method that returns the number of elements inside the set collection.
+在接下来的几个练习中，我们将从头开始构建一个全功能的Set。对于本练习，只要该值中尚不存在该值，就创建一个将值添加到set集合的函数。例如：
 
-# --instructions--
+> this.add = function（element）{  
+> //一些代码来为集合添加值  
+> }
 
-Create an `add` method that adds a unique value to the set collection and returns `true` if the value was successfully added and `false` otherwise.
-
-Create a `remove` method that accepts a value and checks if it exists in the set. If it does, then this method should remove it from the set collection, and return `true`. Otherwise, it should return `false`. Create a `size` method that returns the size of the set collection.
+如果成功添加该值，则该函数应返回`true`否则返回`false` 。
 
 # --hints--
 
-Your `Set` class should have an `add` method.
+您的`Set`类应该有一个`add`方法。
 
 ```js
 assert(
   (function () {
     var test = new Set();
     return typeof test.add === 'function';
-  })()
+  })(),
+  'Your <code>Set</code> class should have an <code>add</code> method.'
 );
 ```
 
-Your `add` method should not add duplicate values.
+您的`add`方法不应添加重复值。
 
 ```js
 assert(
@@ -52,11 +47,12 @@ assert(
     test.add('a');
     var vals = test.values();
     return vals[0] === 'a' && vals[1] === 'b' && vals.length === 2;
-  })()
+  })(),
+  'Your <code>add</code> method should not add duplicate values.'
 );
 ```
 
-Your `add` method should return `true` when a value has been successfully added.
+成功添加值后， `add`方法应返回`true` 。
 
 ```js
 assert(
@@ -64,11 +60,12 @@ assert(
     var test = new Set();
     var result = test.add('a');
     return result != undefined && result === true;
-  })()
+  })(),
+  'Your <code>add</code> method should return <code>true</code> when a value has been successfully added.'
 );
 ```
 
-Your `add` method should return `false` when a duplicate value is added.
+`add`重复值时， `add`方法应返回`false` 。
 
 ```js
 assert(
@@ -77,143 +74,10 @@ assert(
     test.add('a');
     var result = test.add('a');
     return result != undefined && result === false;
-  })()
-);
-```
-
-Your `Set` class should have a `remove` method.
-
-```js
-assert(
-  (function () {
-    var test = new Set();
-    return typeof test.remove === 'function';
-  })()
-);
-```
-
-Your `remove` method should only remove items that are present in the set.
-
-```js
-assert.deepEqual(
-  (function () {
-    var test = new Set();
-    test.add('a');
-    test.add('b');
-    test.remove('c');
-    return test.values();
   })(),
-  ['a', 'b']
+  'Your <code>add</code> method should return <code>false</code> when a duplicate value is added.'
 );
-```
-
-Your `remove` method should remove the given item from the set.
-
-```js
-assert(
-  (function () {
-    var test = new Set();
-    test.add('a');
-    test.add('b');
-    test.remove('a');
-    var vals = test.values();
-    return vals[0] === 'b' && vals.length === 1;
-  })()
-);
-```
-
-Your `Set` class should have a `size` method.
-
-```js
-assert(
-  (function () {
-    var test = new Set();
-    return typeof test.size === 'function';
-  })()
-);
-```
-
-The `size` method should return the number of elements in the collection.
-
-```js
-assert(
-  (function () {
-    var test = new Set();
-    test.add('a');
-    test.add('b');
-    test.remove('a');
-    return test.size() === 1;
-  })()
-);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-class Set {
-  constructor() {
-    // Dictionary will hold the items of our set
-    this.dictionary = {};
-    this.length = 0;
-  }
-
-  // This method will check for the presence of an element and return true or false
-  has(element) {
-    return this.dictionary[element] !== undefined;
-  }
-
-  // This method will return all the values in the set
-  values() {
-    return Object.values(this.dictionary);
-  }
-
-  // Only change code below this line
-
-  // Only change code above this line
-}
 ```
 
 # --solutions--
 
-```js
-class Set {
-  constructor() {
-    this.dictionary = {};
-    this.length = 0;
-  }
-
-  has(element) {
-    return this.dictionary[element] !== undefined;
-  }
-
-  values() {
-    return Object.values(this.dictionary);
-  }
-
-  add(element) {
-    if (!this.has(element)) {
-      this.dictionary[element] = element;
-      this.length++;
-      return true;
-    }
-
-    return false;
-  }
-
-  remove(element) {
-    if (this.has(element)) {
-      delete this.dictionary[element];
-      this.length--;
-      return true;
-    }
-
-    return false;
-  }
-
-  size() {
-    return this.length;
-  }
-}
-```

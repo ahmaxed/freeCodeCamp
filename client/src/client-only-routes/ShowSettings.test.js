@@ -1,13 +1,9 @@
 /* global jest, expect */
 import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
-import envData from '../../../config/env.json';
+import { apiLocation, homeLocation } from '../../config/env.json';
 
 import { ShowSettings } from './ShowSettings';
-
-const { apiLocation } = envData;
-
-jest.mock('../analytics');
 
 describe('<ShowSettings />', () => {
   it('renders to the DOM when user is logged in', () => {
@@ -18,7 +14,7 @@ describe('<ShowSettings />', () => {
     expect(result.type.toString()).toBe('Symbol(react.fragment)');
     // Renders Helmet component rather than Loader
     expect(result.props.children[0].props.title).toEqual(
-      'buttons.settings | freeCodeCamp.org'
+      'Settings | freeCodeCamp.org'
     );
   });
 
@@ -26,7 +22,9 @@ describe('<ShowSettings />', () => {
     const shallow = new ShallowRenderer();
     shallow.render(<ShowSettings {...loggedOutProps} />);
     expect(navigate).toHaveBeenCalledTimes(1);
-    expect(navigate).toHaveBeenCalledWith(`${apiLocation}/signin`);
+    expect(navigate).toHaveBeenCalledWith(
+      `${apiLocation}/signin?returnTo=${homeLocation}/settings`
+    );
     const result = shallow.getRenderOutput();
     // Renders Loader rather than ShowSettings
     expect(result.type.displayName).toBe('Loader');

@@ -3,7 +3,6 @@ id: bad87fee1348bd9aedf08845
 title: Use a span to Target Inline Elements
 challengeType: 0
 forumTopicId: 18370
-dashedName: use-a-span-to-target-inline-elements
 ---
 
 # --description--
@@ -18,13 +17,11 @@ That illustrates the difference between an "inline" element and a "block" elemen
 
 By using the inline `span` element, you can put several elements on the same line, and even style different parts of the same line differently.
 
-Using a `span` element, nest the word `love` inside the `p` element that currently has the text `Things cats love`. Then give the `span` the class `text-danger` to make the text red.
+Nest the word "love" in your "Things cats love" element below within a `span` element. Then give that `span` the class `text-danger` to make the text red.
 
-Here's how you would do this for the `p` element that has the text `Top 3 things cats hate`:
+Here's how you would do this with the "Top 3 things cats hate" element:
 
-```html
-<p>Top 3 things cats <span class="text-danger">hate:</span></p>
-```
+`<p>Top 3 things cats <span class="text-danger">hate:</span></p>`
 
 # --hints--
 

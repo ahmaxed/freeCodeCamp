@@ -1,42 +1,23 @@
 ---
 id: 5900f3ec1000cf542c50feff
-title: 'Problem 128: Hexagonal tile differences'
+title: 问题128：六边形瓷砖差异
 challengeType: 5
-forumTopicId: 301755
-dashedName: problem-128-hexagonal-tile-differences
+videoUrl: ''
 ---
 
 # --description--
 
-A hexagonal tile with number 1 is surrounded by a ring of six hexagonal tiles, starting at "12 o'clock" and numbering the tiles 2 to 7 in an anti-clockwise direction.
+编号为1的六边形瓷砖由六个六边形瓷砖环围绕，从“12点钟”开始，并以逆时针方向对瓷砖2至7进行编号。新环以相同的方式添加，下一个环编号为8至19,20至37,38至61，依此类推。下图显示了前三个环。
 
-New rings are added in the same fashion, with the next rings being numbered 8 to 19, 20 to 37, 38 to 61, and so on. The diagram below shows the first three rings.
-
-By finding the difference between tile n and each of its six neighbours we shall define PD(n) to be the number of those differences which are prime. For example, working clockwise around tile 8 the differences are 12, 29, 11, 6, 1, and 13. So PD(8) = 3. In the same way, the differences around tile 17 are 1, 17, 16, 1, 11, and 10, hence PD(17) = 2. It can be shown that the maximum value of PD(n) is 3. If all of the tiles for which PD(n) = 3 are listed in ascending order to form a sequence, the 10th tile would be 271. Find the 2000th tile in this sequence.
+通过找到tile n与其六个邻居中的每一个之间的差异，我们将PD（n）定义为那些作为素数的差异的数量。例如，在瓦片8周围顺时针工作，差异是12,29,11,6,1和13.因此PD（8）= 3.以相同的方式，瓦片17周围的差异是1,17,16,1 ，11和10，因此PD（17）= 2.可以证明PD（n）的最大值是3.如果PD（n）= 3的所有瓦片按升序列出以形成一个序列，第10个瓦片将是271.按此顺序找到第2000个瓦片。
 
 # --hints--
 
-`euler128()` should return 14516824220.
+`euler128()`应该返回14516824220。
 
 ```js
 assert.strictEqual(euler128(), 14516824220);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler128() {
-
-  return true;
-}
-
-euler128();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

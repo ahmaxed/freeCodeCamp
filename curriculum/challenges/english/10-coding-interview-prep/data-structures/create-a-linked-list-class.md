@@ -3,7 +3,6 @@ id: 587d8251367417b2b2512c62
 title: Create a Linked List Class
 challengeType: 1
 forumTopicId: 301628
-dashedName: create-a-linked-list-class
 ---
 
 # --description--

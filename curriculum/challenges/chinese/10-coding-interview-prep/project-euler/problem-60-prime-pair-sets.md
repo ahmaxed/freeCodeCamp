@@ -1,46 +1,21 @@
 ---
 id: 5900f3a81000cf542c50febb
-title: 'Problem 60: Prime pair sets'
+title: 问题60：素数对设置
 challengeType: 5
-forumTopicId: 302172
-dashedName: problem-60-prime-pair-sets
+videoUrl: ''
 ---
 
 # --description--
 
-The primes 3, 7, 109, and 673, are quite remarkable. By taking any two primes and concatenating them in any order the result will always be prime. For example, taking 7 and 109, both 7109 and 1097 are prime. The sum of these four primes, 792, represents the lowest sum for a set of four primes with this property.
-
-Find the lowest sum for a set of five primes for which any two primes concatenate to produce another prime.
+素数3,7,109和673非常值得注意。通过取任何两个素数并以任何顺序连接它们，结果将始终是素数。例如，取7和109，7109和1097都是素数。这四个素数的总和，792，代表具有此属性的一组四个素数的最低和。找到一组五个素数的最低和，其中任何两个素数连接以产生另一个素数。
 
 # --hints--
 
-`primePairSets()` should return a number.
+`euler60()`应返回26033。
 
 ```js
-assert(typeof primePairSets() === 'number');
-```
-
-`primePairSets()` should return 26033.
-
-```js
-assert.strictEqual(primePairSets(), 26033);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function primePairSets() {
-
-  return true;
-}
-
-primePairSets();
+assert.strictEqual(euler60(), 26033);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

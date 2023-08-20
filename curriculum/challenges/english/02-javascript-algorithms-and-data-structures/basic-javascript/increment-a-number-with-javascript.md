@@ -4,24 +4,20 @@ title: Increment a Number with JavaScript
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/ca8GLT9'
 forumTopicId: 18201
-dashedName: increment-a-number-with-javascript
 ---
 
 # --description--
 
 You can easily <dfn>increment</dfn> or add one to a variable with the `++` operator.
 
-```js
-i++;
-```
+`i++;`
 
 is the equivalent of
 
-```js
-i = i + 1;
-```
+`i = i + 1;`
 
-**Note:** The entire line becomes `i++;`, eliminating the need for the equal sign.
+**Note**  
+The entire line becomes `i++;`, eliminating the need for the equal sign.
 
 # --instructions--
 

@@ -3,7 +3,6 @@ id: 599d15309e88c813a40baf58
 title: Entropy
 challengeType: 5
 forumTopicId: 302254
-dashedName: entropy
 ---
 
 # --description--

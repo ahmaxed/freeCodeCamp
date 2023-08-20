@@ -3,7 +3,6 @@ id: 5a24c314108439a4d403616b
 title: Use Default Props
 challengeType: 6
 forumTopicId: 301418
-dashedName: use-default-props
 ---
 
 # --description--

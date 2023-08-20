@@ -1,44 +1,27 @@
 ---
 id: 5900f49b1000cf542c50ffae
-title: 'Problem 303: Multiples with small digits'
+title: 问题303：小数的倍数
 challengeType: 5
-forumTopicId: 301957
-dashedName: problem-303-multiples-with-small-digits
+videoUrl: ''
 ---
 
 # --description--
 
-For a positive integer n, define f(n) as the least positive multiple of n that, written in base 10, uses only digits ≤ 2.
+对于正整数n，将f（n）定义为n的最小正整数，以10为底的数字只能使用≤2的数字。
 
-Thus f(2)=2, f(3)=12, f(7)=21, f(42)=210, f(89)=1121222.
+因此，f（2）= 2，f（3）= 12，f（7）= 21，f（42）= 210，f（89）= 1121222。
 
-Also, .
+另外，。
 
-Find .
+找 。
 
 # --hints--
 
-`euler303()` should return 1111981904675169.
+`euler303()`应该返回1111981904675169。
 
 ```js
 assert.strictEqual(euler303(), 1111981904675169);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler303() {
-
-  return true;
-}
-
-euler303();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

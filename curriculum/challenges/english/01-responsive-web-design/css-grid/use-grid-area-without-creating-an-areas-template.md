@@ -4,7 +4,6 @@ title: Use grid-area Without Creating an Areas Template
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pByETK/c6N7VhK'
 forumTopicId: 301135
-dashedName: use-grid-area-without-creating-an-areas-template
 ---
 
 # --description--

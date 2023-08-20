@@ -1,46 +1,23 @@
 ---
 id: 5900f43e1000cf542c50ff50
-title: 'Problem 210: Obtuse Angled Triangles'
+title: 问题210：钝角三角形
 challengeType: 5
-forumTopicId: 301852
-dashedName: problem-210-obtuse-angled-triangles
+videoUrl: ''
 ---
 
 # --description--
 
-Consider the set S(r) of points (x,y) with integer coordinates satisfying |x| + |y| ≤ r.
+考虑点（x，y）的集合S（r），其中整数坐标满足| x | + | y | ≤r。设O为点（0,0），C为点（r / 4，r / 4）。令N（r）为S（r）中的点B的数量，使得三角形OBC具有钝角，即最大角度α满足90°&lt;α&lt;180°。因此，例如，N（4）= 24并且N（8）= 100。
 
-Let O be the point (0,0) and C the point (r/4,r/4).
-
-Let N(r) be the number of points B in S(r), so that the triangle OBC has an obtuse angle, i.e. the largest angle α satisfies 90°&lt;α&lt;180°.
-
-So, for example, N(4)=24 and N(8)=100.
-
-What is N(1,000,000,000)?
+什么是N（1,000,000,000）？
 
 # --hints--
 
-`euler210()` should return 1598174770174689500.
+`euler210()`应该返回1598174770174689500。
 
 ```js
 assert.strictEqual(euler210(), 1598174770174689500);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler210() {
-
-  return true;
-}
-
-euler210();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

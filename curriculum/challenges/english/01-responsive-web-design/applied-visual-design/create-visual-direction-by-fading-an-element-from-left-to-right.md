@@ -4,7 +4,6 @@ title: Create Visual Direction by Fading an Element from Left to Right
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cGJqqAE'
 forumTopicId: 301054
-dashedName: create-visual-direction-by-fading-an-element-from-left-to-right
 ---
 
 # --description--

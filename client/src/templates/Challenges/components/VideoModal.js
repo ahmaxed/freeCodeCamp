@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Modal } from '@freecodecamp/react-bootstrap';
-import { withTranslation } from 'react-i18next';
 
 import { closeModal, isVideoModalOpenSelector } from '../redux';
 import { executeGA } from '../../../redux';
@@ -21,13 +20,12 @@ const propTypes = {
   closeVideoModal: PropTypes.func.isRequired,
   executeGA: PropTypes.func,
   isOpen: PropTypes.bool,
-  t: PropTypes.func.isRequired,
   videoUrl: PropTypes.string
 };
 
 export class VideoModal extends Component {
   render() {
-    const { isOpen, closeVideoModal, videoUrl, executeGA, t } = this.props;
+    const { isOpen, closeVideoModal, videoUrl, executeGA } = this.props;
     if (isOpen) {
       executeGA({ type: 'modal', data: '/completion-modal' });
     }
@@ -41,17 +39,15 @@ export class VideoModal extends Component {
           className='video-modal-header fcc-modal'
           closeButton={true}
         >
-          <Modal.Title className='text-center'>
-            {t('buttons.watch-video')}
-          </Modal.Title>
+          <Modal.Title className='text-center'>Watch A Video</Modal.Title>
         </Modal.Header>
         <Modal.Body className='video-modal-body'>
-          <iframe
-            frameBorder='0'
-            src={videoUrl}
-            title={t('buttons.watch-video')}
-          />
-          <p>{t('learn.scrimba-tip')}</p>
+          <iframe frameBorder='0' src={videoUrl} title='Watch a video' />
+          <p>
+            Tip: If the mini-browser is covering the code, click and drag to
+            move it. Also, feel free to stop and edit the code in the video at
+            any time.
+          </p>
         </Modal.Body>
       </Modal>
     );
@@ -64,4 +60,4 @@ VideoModal.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(VideoModal));
+)(VideoModal);

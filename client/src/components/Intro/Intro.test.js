@@ -1,12 +1,10 @@
-/* global expect jest */
+/* global expect */
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { createStore } from '../../redux/createStore';
 
 import Intro from './';
-
-jest.mock('../../analytics');
 
 function rendererCreateWithRedux(ui) {
   return renderer.create(<Provider store={createStore()}>{ui}</Provider>);

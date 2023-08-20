@@ -1,44 +1,27 @@
 ---
 id: 5900f4d41000cf542c50ffe7
-title: 'Problem 360: Scary Sphere'
+title: 问题360：可怕的球体
 challengeType: 5
-forumTopicId: 302021
-dashedName: problem-360-scary-sphere
+videoUrl: ''
 ---
 
 # --description--
 
-Given two points (x1,y1,z1) and (x2,y2,z2) in three dimensional space, the Manhattan distance between those points is defined as |x1-x2|+|y1-y2|+|z1-z2|.
+给定三维空间中的两个点（x1，y1，z1）和（x2，y2，z2），这些点之间的曼哈顿距离定义为| x1-x2 | + | y1-y2 | + | z1-z2 |。
 
-Let C(r) be a sphere with radius r and center in the origin O(0,0,0). Let I(r) be the set of all points with integer coordinates on the surface of C(r). Let S(r) be the sum of the Manhattan distances of all elements of I(r) to the origin O.
+令C（r）为半径为r且在原点O（0,0,0）中心的球体。设I（r）是C（r）表面上具有整数坐标的所有点的集合。设S（r）是I（r）的所有元素与原点O的曼哈顿距离之和。
 
-E.g. S(45)=34518.
+例如S（45）= 34518。
 
-Find S(1010).
+找到S（1010）。
 
 # --hints--
 
-`euler360()` should return 878825614395267100.
+`euler360()`应该返回878825614395267100。
 
 ```js
 assert.strictEqual(euler360(), 878825614395267100);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler360() {
-
-  return true;
-}
-
-euler360();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

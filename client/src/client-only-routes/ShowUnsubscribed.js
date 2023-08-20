@@ -2,20 +2,18 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Panel, Button } from '@freecodecamp/react-bootstrap';
 import Helmet from 'react-helmet';
-import { useTranslation } from 'react-i18next';
 
-import envData from '../../../config/env.json';
+import env from '../../config/env.json';
 import FullWidthRow from '../components/helpers/FullWidthRow';
 import { Spacer } from '../components/helpers';
 
-const { apiLocation } = envData;
+const { apiLocation } = env;
 
 function ShowUnsubscribed({ unsubscribeId }) {
-  const { t } = useTranslation();
   return (
     <Fragment>
       <Helmet>
-        <title>{t('metaTags:youre-unsubscribed')} | freeCodeCamp.org</title>
+        <title>You have been unsubscribed | freeCodeCamp.org</title>
       </Helmet>
       <Grid>
         <main>
@@ -23,8 +21,8 @@ function ShowUnsubscribed({ unsubscribeId }) {
             <Spacer size={2} />
             <Panel bsStyle='primary' className='text-center'>
               <Spacer />
-              <h2>{t('misc.unsubscribed')}</h2>
-              <p>{t('misc.keep-coding')}</p>
+              <h2>You have successfully been unsubscribed</h2>
+              <p>Whatever you go on to, keep coding!</p>
             </Panel>
           </FullWidthRow>
           {unsubscribeId ? (
@@ -35,7 +33,7 @@ function ShowUnsubscribed({ unsubscribeId }) {
                 bsStyle='primary'
                 href={`${apiLocation}/resubscribe/${unsubscribeId}`}
               >
-                {t('buttons.resubscribe')}
+                You can click here to resubscribe
               </Button>
             </FullWidthRow>
           ) : null}

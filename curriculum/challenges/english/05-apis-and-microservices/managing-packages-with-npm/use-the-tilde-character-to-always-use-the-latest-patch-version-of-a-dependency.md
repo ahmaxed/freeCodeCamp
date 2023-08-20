@@ -3,7 +3,6 @@ id: 587d7fb5367417b2b2512c02
 title: Use the Tilde-Character to Always Use the Latest Patch Version of a Dependency
 challengeType: 2
 forumTopicId: 301532
-dashedName: use-the-tilde-character-to-always-use-the-latest-patch-version-of-a-dependency
 ---
 
 # --description--
@@ -63,6 +62,8 @@ Use the tilde (`~`) character to prefix the version of moment in your dependenci
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

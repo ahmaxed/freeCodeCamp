@@ -3,7 +3,6 @@ id: 587d7dab367417b2b2512b6f
 title: Use the some Method to Check that Any Elements in an Array Meet a Criteria
 challengeType: 1
 forumTopicId: 301314
-dashedName: use-the-some-method-to-check-that-any-elements-in-an-array-meet-a-criteria
 ---
 
 # --description--
@@ -17,9 +16,8 @@ var numbers = [10, 50, 8, 220, 110, 11];
 numbers.some(function(currentValue) {
   return currentValue < 10;
 });
+// Returns true
 ```
-
-The `some` method would return `true`.
 
 # --instructions--
 

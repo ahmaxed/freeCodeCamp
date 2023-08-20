@@ -4,7 +4,6 @@ title: Add Different Padding to Each Side of an Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cB7mwUw'
 forumTopicId: 16634
-dashedName: add-different-padding-to-each-side-of-an-element
 ---
 
 # --description--

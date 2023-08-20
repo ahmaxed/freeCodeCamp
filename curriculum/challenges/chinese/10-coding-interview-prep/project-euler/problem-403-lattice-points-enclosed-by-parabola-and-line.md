@@ -1,44 +1,27 @@
 ---
 id: 5900f5001000cf542c510013
-title: 'Problem 403: Lattice points enclosed by parabola and line'
+title: 问题403：由抛物线和直线包围的格点
 challengeType: 5
-forumTopicId: 302071
-dashedName: problem-403-lattice-points-enclosed-by-parabola-and-line
+videoUrl: ''
 ---
 
 # --description--
 
-For integers a and b, we define D(a, b) as the domain enclosed by the parabola y = x2 and the line y = a·x + b:D(a, b) = { (x, y) | x2 ≤ y ≤ a·x + b }.
+对于整数a和b，我们将D（a，b）定义为由抛物线y = x2包围的域，并且线y = a·x + b：D（a，b）= {（x，y）| x2≤y≤a·x + b}。
 
-L(a, b) is defined as the number of lattice points contained in D(a, b). For example, L(1, 2) = 8 and L(2, -1) = 1.
+L（a，b）定义为D（a，b）中包含的晶格点数。例如，L（1,2）= 8并且L（2，-1）= 1。
 
-We also define S(N) as the sum of L(a, b) for all the pairs (a, b) such that the area of D(a, b) is a rational number and |a|,|b| ≤ N. We can verify that S(5) = 344 and S(100) = 26709528.
+我们还将S（N）定义为所有对（a，b）的L（a，b）之和，使得D（a，b）的面积是有理数并且| a |，| b | ≤N。我们可以验证S（5）= 344和S（100）= 26709528。
 
-Find S(1012). Give your answer mod 108.
+找到S（1012）。给你的答案mod 108。
 
 # --hints--
 
-`euler403()` should return 18224771.
+`euler403()`应该返回18224771。
 
 ```js
 assert.strictEqual(euler403(), 18224771);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler403() {
-
-  return true;
-}
-
-euler403();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

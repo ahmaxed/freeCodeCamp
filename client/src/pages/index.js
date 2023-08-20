@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Landing from '../components/landing';
 import { AllChallengeNode } from '../redux/propTypes';
 
-const IndexPage = () => {
+export const IndexPage = () => {
   return <Landing />;
 };
 

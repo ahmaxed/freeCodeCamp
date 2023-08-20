@@ -1,16 +1,13 @@
 ---
 id: 5e46f979ac417301a38fb932
-title: Port Scanner
 challengeType: 10
-helpCategory: Python
-dashedName: port-scanner
 ---
 
 # --description--
 
 Create a port scanner using Python.
 
-You can access [the full project description and starter code on Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-port-scanner).
+You can access [the full project description and starter code on repl.it](https://repl.it/@freeCodeCamp/fcc-port-scanner).
 
 After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
 
@@ -23,7 +20,7 @@ We are still developing the interactive instructional part of the Python curricu
   <li>
     <a href='https://www.freecodecamp.org/news/learn-python-basics-in-depth-video-course/'>Learn Python Video Course</a> (2 hours)
   </li>
-</ul>
+<ul>
 
 # --hints--
 
@@ -35,8 +32,3 @@ It should pass all Python tests.
 
 # --solutions--
 
-```py
-  # Python challenges don't need solutions,
-  # because they would need to be tested against a full working project.
-  # Please check our contributing guidelines to learn more.
-```

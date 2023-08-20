@@ -1,52 +1,25 @@
 ---
 id: 5900f3c71000cf542c50feda
-title: 'Problem 91: Right triangles with integer coordinates'
+title: 问题91：带有整数坐标的直角三角形
 challengeType: 5
-forumTopicId: 302208
-dashedName: problem-91-right-triangles-with-integer-coordinates
+videoUrl: ''
 ---
 
 # --description--
 
-The points P (`x`<sub>1</sub>, `y`<sub>1</sub>) and Q (`x`<sub>2</sub>, `y`<sub>2</sub>) are plotted at integer co-ordinates and are joined to the origin, O(0,0), to form ΔOPQ.
+点P（x1，y1）和Q（x2，y2）绘制在整数坐标处并连接到原点O（0,0），以形成ΔOPQ。
 
-<img class="img-responsive center-block" alt="a graph plotting points P (x_1, y_1) and Q(x_2, y_2) at integer coordinates that are joined to the origin O (0, 0)" src="https://cdn-media-1.freecodecamp.org/project-euler/right-triangles-integer-coordinates-1.png" style="background-color: white; padding: 10px;" />
+正好有十四个三角形包含一个直角，当每个坐标位于0和2之间时，可以形成直角;即，0≤x1，y1，x2，y2≤2。
 
-There are exactly fourteen triangles containing a right angle that can be formed when each co-ordinate lies between 0 and 2 inclusive; that is, 0 ≤ `x`<sub>1</sub>, `y`<sub>1</sub>, `x`<sub>2</sub>, `y`<sub>2</sub> ≤ 2.
-
-<img class="img-responsive center-block" alt="a diagram showing the 14 triangles containing a right angle that can be formed when each coordinate is between 0 and 2" src="https://cdn-media-1.freecodecamp.org/project-euler/right-triangles-integer-coordinates-2.png" style="background-color: white; padding: 10px;" />
-
-Given that 0 ≤ `x`<sub>1</sub>, `y`<sub>1</sub>, `x`<sub>2</sub>, `y`<sub>2</sub> ≤ 50, how many right triangles can be formed?
+假设0≤x1，y1，x2，y2≤50，可以形成多少个直角三角形？
 
 # --hints--
 
-`rightTrianglesIntCoords()` should return a number.
+`euler91()`应返回`euler91()` 。
 
 ```js
-assert(typeof rightTrianglesIntCoords() === 'number');
-```
-
-`rightTrianglesIntCoords()` should return 14234.
-
-```js
-assert.strictEqual(rightTrianglesIntCoords(), 14234);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function rightTrianglesIntCoords() {
-
-  return true;
-}
-
-rightTrianglesIntCoords();
+assert.strictEqual(euler91(), 14234);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

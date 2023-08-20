@@ -4,7 +4,6 @@ title: Escape Sequences in Strings
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cvmqRh6'
 forumTopicId: 17567
-dashedName: escape-sequences-in-strings
 ---
 
 # --description--
@@ -28,7 +27,9 @@ Assign the following three lines of text into the single variable `myStr` using 
 
 You will need to use escape sequences to insert special characters correctly. You will also need to follow the spacing as it looks above, with no spaces between escape sequences or words.
 
-**Note:** The indentation for `SecondLine` is achieved with the tab escape character, not spaces.
+Here is the text with the escape sequences written out.
+
+"FirstLine```newline``tab``backslash```SecondLine`newline`ThirdLine"
 
 # --hints--
 

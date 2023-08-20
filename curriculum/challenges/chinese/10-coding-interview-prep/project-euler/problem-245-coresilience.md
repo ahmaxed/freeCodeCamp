@@ -1,40 +1,23 @@
 ---
 id: 5900f4621000cf542c50ff74
-title: 'Problem 245: Coresilience'
+title: 问题245：Coresilience
 challengeType: 5
-forumTopicId: 301892
-dashedName: problem-245-coresilience
+videoUrl: ''
 ---
 
 # --description--
 
-We shall call a fraction that cannot be cancelled down a resilient fraction. Furthermore we shall define the resilience of a denominator, R(d), to be the ratio of its proper fractions that are resilient; for example, R(12) = 4⁄11.
+我们将称一个无法取消弹性部分的分数。此外，我们将分母R（d）的弹性定义为具有弹性的适当分数的比率;例如，R（12）= 4/11。
 
-The resilience of a number d > 1 is then φ(d)d − 1 , where φ is Euler's totient function. We further define the coresilience of a number n > 1 as C(n)= n − φ(n)n − 1. The coresilience of a prime p is C(p) = 1p − 1. Find the sum of all composite integers 1 &lt; n ≤ 2×1011, for which C(n) is a unit fraction.
+数d> 1的弹性则为φ（d）d-1，其中φ是欧拉的函数。我们进一步定义了n> 1的核心，即C（n）= n - φ（n）n - 1.素数p的核心是C（p）= 1p - 1.找出所有复合整数的总和1 &lt;n≤2×1011，其中C（n）是单位分数。
 
 # --hints--
 
-`euler245()` should return 288084712410001.
+`euler245()`应该返回288084712410001。
 
 ```js
 assert.strictEqual(euler245(), 288084712410001);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler245() {
-
-  return true;
-}
-
-euler245();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

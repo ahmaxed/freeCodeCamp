@@ -3,7 +3,6 @@ id: 5eaf48389ee512d4d103684b
 title: Self Describing Numbers
 challengeType: 5
 forumTopicId: 385289
-dashedName: self-describing-numbers
 ---
 
 # --description--
@@ -89,7 +88,7 @@ function isSelfDescribing(n) {
     if (digits.length != count.length) {
         return false;
     }
-
+    
     for (let i=0; i< digits.length; i++){
       if (digits[i] !== count[i]) {
         return false;

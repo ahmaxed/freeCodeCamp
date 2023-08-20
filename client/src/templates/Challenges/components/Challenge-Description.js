@@ -5,14 +5,14 @@ import PrismFormatted from './PrismFormatted';
 import './challenge-description.css';
 
 const propTypes = {
-  block: PropTypes.string,
   description: PropTypes.string,
-  instructions: PropTypes.string
+  instructions: PropTypes.string,
+  section: PropTypes.string
 };
 
-function ChallengeDescription({ description, instructions, block }) {
+function ChallengeDescription({ description, instructions, section }) {
   return (
-    <div className={`challenge-instructions${block ? ' ' + block : ''}`}>
+    <div className={`challenge-instructions${section ? ' ' + section : ''}`}>
       {description && <PrismFormatted text={description} />}
       {instructions && (
         <Fragment>

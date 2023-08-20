@@ -3,12 +3,11 @@ id: 587d824e367417b2b2512c55
 title: Test if an Object has a Property
 challengeType: 2
 forumTopicId: 301604
-dashedName: test-if-an-object-has-a-property
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Replit](https://replit.com/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
+As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-mochachai), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-mochachai/).
 
 `property` asserts that the actual object has a given property.
 
@@ -81,6 +80,8 @@ You should choose the correct method for the third assertion - `property` vs. `n
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

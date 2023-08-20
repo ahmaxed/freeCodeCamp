@@ -3,7 +3,6 @@ id: 5e9a093a74c4063ca6f7c15d
 title: Data Cleaning Introduction
 challengeType: 11
 videoId: ovYNhnltVxY
-dashedName: data-cleaning-introduction
 ---
 
 # --description--
@@ -36,21 +35,25 @@ print(s.notnull().sum())
 
 ---
 
-<pre>0     True
+```
+0     True
 1     True
 2    False
 3     True
 4    False
-dtype: bool</pre>
+dtype: bool
+```
 
 ---
 
-<pre>0    False
+```
+0    False
 1    False
 2     True
 3    False
 4     True
-dtype: bool</pre>
+dtype: bool
+```
 
 ## --video-solution--
 

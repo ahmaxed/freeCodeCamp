@@ -3,7 +3,6 @@ id: 595671d4d2cdc305f0d5b36f
 title: Hash from two arrays
 challengeType: 5
 forumTopicId: 302283
-dashedName: hash-from-two-arrays
 ---
 
 # --description--

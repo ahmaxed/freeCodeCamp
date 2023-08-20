@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Row } from '@freecodecamp/react-bootstrap';
 import { Spacer } from '../../helpers';
+import Login from '../../Header/components/Login';
 import {
   AmazonLogo,
   AppleLogo,
@@ -10,27 +11,33 @@ import {
   GoogleLogo
 } from '../../../assets/images/components';
 import CampersImage from './CampersImage';
-import BigCallToAction from './BigCallToAction';
-import { useTranslation } from 'react-i18next';
 
 const propTypes = {
   page: PropTypes.string
 };
 
-function LandingTop({ page }) {
-  const { t } = useTranslation();
-
+function landingTop({ page }) {
+  const BigCallToAction = (
+    <Login block={true} data-test-label={`${page}-big-cta`}>
+      {page === 'landing'
+        ? "Get started (it's free)"
+        : "Sign in to save your progress (it's free)"}
+    </Login>
+  );
   return (
     <div className='landing-top'>
       <Row>
         <Spacer />
         <Col lg={8} lgOffset={2} sm={10} smOffset={1} xs={12}>
           <h1 className='big-heading' data-test-label={`${page}-header`}>
-            {t('landing.big-heading-1')}
+            Learn to code at home.
           </h1>
-          <p className='big-heading'>{t('landing.big-heading-2')}</p>
-          <p className='big-heading'>{t('landing.big-heading-3')}</p>
-          <p>{t('landing.h2-heading')}</p>
+          <h1 className='big-heading '>Build projects.</h1>
+          <h1 className='big-heading'>Earn certifications.</h1>
+          <h2>
+            Since 2014, more than 40,000 freeCodeCamp.org graduates have gotten
+            jobs at tech companies including:
+          </h2>
           <div className='logo-row'>
             <AppleLogo />
             <GoogleLogo />
@@ -39,7 +46,7 @@ function LandingTop({ page }) {
             <SpotifyLogo />
           </div>
           <Spacer />
-          <BigCallToAction page={page} />
+          {BigCallToAction}
           <CampersImage page={page} />
           <Spacer />
         </Col>
@@ -48,6 +55,6 @@ function LandingTop({ page }) {
   );
 }
 
-LandingTop.displayName = 'LandingTop';
-LandingTop.propTypes = propTypes;
-export default LandingTop;
+landingTop.displayName = 'LandingTop';
+landingTop.propTypes = propTypes;
+export default landingTop;

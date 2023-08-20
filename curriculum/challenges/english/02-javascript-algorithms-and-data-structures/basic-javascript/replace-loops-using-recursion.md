@@ -5,7 +5,6 @@ challengeType: 1
 videoUrl: >-
   https://www.freecodecamp.org/news/how-recursion-works-explained-with-flowcharts-and-a-video-de61f40cb7f9/
 forumTopicId: 301175
-dashedName: replace-loops-using-recursion
 ---
 
 # --description--
@@ -66,7 +65,9 @@ Your code should not rely on any kind of loops (`for` or `while` or higher order
 
 ```js
 assert(
-  !code.match(/for|while|forEach|map|filter|reduce/g)
+  !__helpers
+    .removeJSComments(code)
+    .match(/for|while|forEach|map|filter|reduce/g)
 );
 ```
 
@@ -74,7 +75,7 @@ You should use recursion to solve this problem.
 
 ```js
 assert(
-  sum.toString().match(/sum\(.*\)/g).length > 1
+  __helpers.removeJSComments(sum.toString()).match(/sum\(.*\)/g).length > 1
 );
 ```
 

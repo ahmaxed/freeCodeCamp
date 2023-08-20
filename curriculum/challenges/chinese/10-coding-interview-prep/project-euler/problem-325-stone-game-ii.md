@@ -1,50 +1,33 @@
 ---
 id: 5900f4b11000cf542c50ffc4
-title: 'Problem 325: Stone Game II'
+title: 问题325：石头游戏II
 challengeType: 5
-forumTopicId: 301982
-dashedName: problem-325-stone-game-ii
+videoUrl: ''
 ---
 
 # --description--
 
-A game is played with two piles of stones and two players. At her turn, a player removes a number of stones from the larger pile. The number of stones she removes must be a positive multiple of the number of stones in the smaller pile.
+一场比赛是用两堆石头和两个球员进行的。在轮到她时，玩家从较大的堆中移除了许多石头。她移除的石头数量必须是较小桩中石头数量的正数倍。
 
-E.g., let the ordered pair(6,14) describe a configuration with 6 stones in the smaller pile and 14 stones in the larger pile, then the first player can remove 6 or 12 stones from the larger pile.
+例如，让有序对（6,14）描述一个配置，在较小的桩中有6个石头，在较大的桩中有14个石头，那么第一个玩家可以从较大的桩中移除6或12个石头。
 
-The player taking all the stones from a pile wins the game.
+从一堆中取出所有宝石的玩家赢得比赛。
 
-A winning configuration is one where the first player can force a win. For example, (1,5), (2,6) and (3,12) are winning configurations because the first player can immediately remove all stones in the second pile.
+获胜配置是第一个玩家可以强制获胜的配置。例如，（1,5），（2,6）和（3,12）是获胜配置，因为第一个玩家可以立即移除第二堆中的所有宝石。
 
-A losing configuration is one where the second player can force a win, no matter what the first player does. For example, (2,3) and (3,4) are losing configurations: any legal move leaves a winning configuration for the second player.
+失败的配置是第二个玩家可以强制获胜的配置，无论第一个玩家做什么。例如，（2,3）和（3,4）正在失去配置：任何合法移动都会为第二个玩家留下获胜配置。
 
-Define S(N) as the sum of (xi+yi) for all losing configurations (xi,yi), 0 &lt; xi &lt; yi ≤ N. We can verify that S(10) = 211 and S(104) = 230312207313.
+将S（N）定义为所有丢失配置（xi，yi）的总和（xi + yi），0 &lt;xi &lt;yi≤N。我们可以验证S（10）= 211和S（104）= 230312207313。
 
-Find S(1016) mod 710.
+找到S（1016）mod 710。
 
 # --hints--
 
-`euler325()` should return 54672965.
+`euler325()`应该返回54672965。
 
 ```js
 assert.strictEqual(euler325(), 54672965);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler325() {
-
-  return true;
-}
-
-euler325();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

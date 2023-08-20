@@ -1,9 +1,8 @@
 ---
 id: a0b5010f579e69b815e7c5d6
-title: 搜索与替换
+title: 搜索和替换
 challengeType: 5
 forumTopicId: 16045
-dashedName: search-and-replace
 ---
 
 # --description--
@@ -16,11 +15,14 @@ dashedName: search-and-replace
 
 第三个参数为替换后的单词。
 
-**注意：** 在更换原始单词时保留原始单词中第一个字符的大小写。 即如果传入的第二个参数为 `Book`，第三个参数为 `dog`，那么替换后的结果应为 `Dog`
+**注意：**  
+你需要保留被替换单词首字母的大小写格式。即如果传入的第二个参数为 "Book"，第三个参数为 "dog"，那么替换后的结果应为 "Dog"
+
+如果你遇到了问题，请点击[帮助](https://forum.freecodecamp.one/t/topic/157)。
 
 # --hints--
 
-`myReplace("Let us go to the store", "store", "mall")` 应返回 `Let us go to the mall`。
+`myReplace('Let us go to the store', 'store', 'mall')`应该返回 'Let us go to the mall'。
 
 ```js
 assert.deepEqual(
@@ -29,7 +31,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("He is Sleeping on the couch", "Sleeping", "sitting")` 应返回 `He is Sitting on the couch`。
+`myReplace('He is Sleeping on the couch', 'Sleeping', 'sitting')`应该返回 'He is Sitting on the couch'。
 
 ```js
 assert.deepEqual(
@@ -38,16 +40,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("I think we should look up there", "up", "Down")` 应返回 `I think we should look down there`。
-
-```js
-assert.deepEqual(
-  myReplace('I think we should look up there', 'up', 'Down'),
-  'I think we should look down there'
-);
-```
-
-`myReplace("This has a spellngi error", "spellngi", "spelling")` 应返回 `This has a spelling error`。
+`myReplace('This has a spellngi error', 'spellngi', 'spelling')`应该返回 'This has a spelling error'。
 
 ```js
 assert.deepEqual(
@@ -56,7 +49,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("His name is Tom", "Tom", "john")` 应返回 `His name is John`。
+`myReplace('His name is Tom', 'Tom', 'john')`应该返回 'His name is John'。
 
 ```js
 assert.deepEqual(
@@ -65,7 +58,7 @@ assert.deepEqual(
 );
 ```
 
-`myReplace("Let us get back to more Coding", "Coding", "algorithms")` 应返回 `Let us get back to more Algorithms`。
+`myReplace('Let us get back to more Coding', 'Coding', 'algorithms')`应该返回 'Let us get back to more Algorithms'。
 
 ```js
 assert.deepEqual(
@@ -74,27 +67,5 @@ assert.deepEqual(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function myReplace(str, before, after) {
-  return str;
-}
-
-myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
-```
-
 # --solutions--
 
-```js
-function myReplace(str, before, after) {
-  if (before.charAt(0) === before.charAt(0).toUpperCase()) {
-    after = after.charAt(0).toUpperCase() + after.substring(1);
-  } else {
-    after = after.charAt(0).toLowerCase() + after.substring(1);
-  }
-  return str.replace(before, after);
-}
-```

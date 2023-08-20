@@ -3,7 +3,6 @@ id: 587d7b8a367417b2b2512b4d
 title: Use Destructuring Assignment to Pass an Object as a Function's Parameters
 challengeType: 1
 forumTopicId: 301217
-dashedName: use-destructuring-assignment-to-pass-an-object-as-a-functions-parameters
 ---
 
 # --description--
@@ -15,7 +14,7 @@ Consider the code below:
 ```js
 const profileUpdate = (profileData) => {
   const { name, age, nationality, location } = profileData;
-
+  // do something with these variables
 }
 ```
 
@@ -23,7 +22,7 @@ This effectively destructures the object sent into the function. This can also b
 
 ```js
 const profileUpdate = ({ name, age, nationality, location }) => {
-
+  /* do something with these fields */
 }
 ```
 

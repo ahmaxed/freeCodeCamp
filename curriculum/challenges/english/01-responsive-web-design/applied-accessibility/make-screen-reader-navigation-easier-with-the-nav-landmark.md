@@ -4,7 +4,6 @@ title: Make Screen Reader Navigation Easier with the nav Landmark
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/czVwWSv'
 forumTopicId: 301024
-dashedName: make-screen-reader-navigation-easier-with-the-nav-landmark
 ---
 
 # --description--

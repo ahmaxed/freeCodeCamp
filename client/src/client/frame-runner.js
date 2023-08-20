@@ -33,7 +33,7 @@ async function initTestFrame(e = { code: {} }) {
   // Hardcode Deep Freeze dependency
   const DeepFreeze = o => {
     Object.freeze(o);
-    Object.getOwnPropertyNames(o).forEach(function (prop) {
+    Object.getOwnPropertyNames(o).forEach(function(prop) {
       if (
         o.hasOwnProperty(prop) &&
         o[prop] !== null &&
@@ -82,13 +82,15 @@ async function initTestFrame(e = { code: {} }) {
           try {
             // eslint-disable-next-line no-eval
             const test = eval(testString);
-            resolve(test);
+            resolve({ test });
           } catch (err) {
-            reject(err);
+            reject({ err });
           }
         })
       );
-      const test = await testPromise;
+      const { test, err } = await testPromise;
+      if (err) throw err;
+
       if (typeof test === 'function') {
         await test(e.getUserInput);
       }
@@ -97,11 +99,8 @@ async function initTestFrame(e = { code: {} }) {
       if (!(err instanceof chai.AssertionError)) {
         console.error(err);
       }
-      // to provide useful debugging information when debugging the tests, we
-      // have to extract the message and stack before returning
-      return {
-        err: { message: err.message, stack: err.stack }
-      };
+      // return the error so that the curriculum tests are more informative
+      return { err };
     }
   };
 }

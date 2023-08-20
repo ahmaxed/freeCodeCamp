@@ -3,12 +3,13 @@ id: 587d7b8d367417b2b2512b5b
 title: Learn About Functional Programming
 challengeType: 1
 forumTopicId: 301233
-dashedName: learn-about-functional-programming
 ---
 
 # --description--
 
-Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope: `INPUT -> PROCESS -> OUTPUT`
+Functional programming is a style of programming where solutions are simple, isolated functions, without any side effects outside of the function scope.
+
+`INPUT -> PROCESS -> OUTPUT`
 
 Functional programming is about:
 

@@ -3,7 +3,6 @@ id: 5a24c314108439a4d4036154
 title: Combine Multiple Reducers
 challengeType: 6
 forumTopicId: 301436
-dashedName: combine-multiple-reducers
 ---
 
 # --description--

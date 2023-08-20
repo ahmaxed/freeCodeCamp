@@ -1,46 +1,29 @@
 ---
 id: 5900f49d1000cf542c50ffb0
-title: 'Problem 305: Reflexive Position'
+title: 问题305：反身姿势
 challengeType: 5
-forumTopicId: 301959
-dashedName: problem-305-reflexive-position
+videoUrl: ''
 ---
 
 # --description--
 
-Let's call S the (infinite) string that is made by concatenating the consecutive positive integers (starting from 1) written down in base 10.
+我们称S为（无限）字符串，该字符串是通过连接以10为底的连续正整数（从1开始）而形成的。
 
-Thus, S = 1234567891011121314151617181920212223242...
+因此，S = 1234567891011121314151617181920212223242 ...
 
-It's easy to see that any number will show up an infinite number of times in S.
+很容易看出，任何数字在S中都会显示无数次。
 
-Let's call f(n) the starting position of the nth occurrence of n in S. For example, f(1)=1, f(5)=81, f(12)=271 and f(7780)=111111365.
+让我们将f（n）称为S中第n次出现n的起始位置。 例如，f（1）= 1，f（5）= 81，f（12）= 271和f（7780）= 111111365。
 
-Find ∑f(3k) for 1≤k≤13.
+求出∑f（3k）为1≤k≤13。
 
 # --hints--
 
-`euler305()` should return 18174995535140.
+`euler305()`应该返回18174995535140。
 
 ```js
 assert.strictEqual(euler305(), 18174995535140);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler305() {
-
-  return true;
-}
-
-euler305();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

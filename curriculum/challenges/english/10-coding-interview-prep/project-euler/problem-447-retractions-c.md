@@ -3,7 +3,6 @@ id: 5900f52c1000cf542c51003e
 title: 'Problem 447: Retractions C'
 challengeType: 5
 forumTopicId: 302119
-dashedName: problem-447-retractions-c
 ---
 
 # --description--

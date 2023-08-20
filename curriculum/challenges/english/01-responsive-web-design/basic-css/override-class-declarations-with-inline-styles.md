@@ -4,7 +4,6 @@ title: Override Class Declarations with Inline Styles
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cGJDRha'
 forumTopicId: 18252
-dashedName: override-class-declarations-with-inline-styles
 ---
 
 # --description--
@@ -15,11 +14,9 @@ There are other ways that you can override CSS. Do you remember inline styles?
 
 # --instructions--
 
-Use an inline style to try to make our `h1` element white. Remember, inline styles look like this:
+Use an inline style to try to make our `h1` element white. Remember, in line styles look like this:
 
-```html
-<h1 style="color: green;">
-```
+`<h1 style="color: green;">`
 
 Leave the `blue-text` and `pink-text` classes on your `h1` element.
 

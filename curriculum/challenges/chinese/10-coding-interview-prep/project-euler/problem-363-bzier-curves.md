@@ -1,48 +1,31 @@
 ---
 id: 5900f4d91000cf542c50ffeb
-title: 'Problem 363: Bézier Curves'
+title: 问题363：Bézier曲线
 challengeType: 5
-forumTopicId: 302024
-dashedName: problem-363-bzier-curves
+videoUrl: ''
 ---
 
 # --description--
 
-A cubic Bézier curve is defined by four points: P0, P1, P2 and P3.
+立方贝塞尔曲线由四个点定义：P0，P1，P2和P3。
 
-The curve is constructed as follows: On the segments P0P1, P1P2 and P2P3 the points Q0,Q1 and Q2 are drawn such that P0Q0 / P0P1 = P1Q1 / P1P2 = P2Q2 / P2P3 = t (t in \[0,1]). On the segments Q0Q1 and Q1Q2 the points R0 and R1 are drawn such that Q0R0 / Q0Q1 = Q1R1 / Q1Q2 = t for the same value of t. On the segment R0R1 the point B is drawn such that R0B / R0R1 = t for the same value of t. The Bézier curve defined by the points P0, P1, P2, P3 is the locus of B as Q0 takes all possible positions on the segment P0P1. (Please note that for all points the value of t is the same.)
+曲线构造如下：在段P0P1，P1P2和P2P3上绘制点Q0，Q1和Q2，使得P0Q0 / P0P1 = P1Q1 / P1P2 = P2Q2 / P2P3 = t（\[0,1]中的t）。在段Q0Q1和Q1Q2上绘制点R0和R1，使得对于相同的t值，Q0R0 / Q0Q1 = Q1R1 / Q1Q2 = t。在段R0R1上绘制点B，使得对于相同的t值，R0B / R0R1 = t。由点P0，P1，P2，P3定义的贝塞尔曲线是B的轨迹，因为Q0占据了段P0P1上的所有可能位置。 （请注意，对于所有点，t的值都相同。）
 
-At this (external) web address you will find an applet that allows you to drag the points P0, P1, P2 and P3 to see what the Bézier curve (green curve) defined by those points looks like. You can also drag the point Q0 along the segment P0P1.
+在此（外部）Web地址，您将找到一个小程序，它允许您拖动点P0，P1，P2和P3，以查看这些点定义的Bézier曲线（绿色曲线）是什么样的。您也可以沿着段P0P1拖动点Q0。
 
-From the construction it is clear that the Bézier curve will be tangent to the segments P0P1 in P0 and P2P3 in P3.
+从构造中可以清楚地看出，Bézier曲线将与P0中的P0P1和P3中的P2P3相切。
 
-A cubic Bézier curve with P0=(1,0), P1=(1,v), P2=(v,1) and P3=(0,1) is used to approximate a quarter circle. The value v > 0 is chosen such that the area enclosed by the lines OP0, OP3 and the curve is equal to π/4 (the area of the quarter circle).
+使用P0 =（1,0），P1 =（1，v），P2 =（v，1）和P3 =（0,1）的三次Bézier曲线来近似四分之一圆。选择值v> 0，使得由线OP0，OP3和曲线包围的区域等于π/ 4（四分之一圆的面积）。
 
-By how many percent does the length of the curve differ from the length of the quarter circle? That is, if L is the length of the curve, calculate 100 × L − π/2π/2Give your answer rounded to 10 digits behind the decimal point.
+曲线长度与四分之一圆的长度有多少百分比？也就是说，如果L是曲线的长度，则计算100×L - π/2π/ 2给你的答案四舍五入到小数点后面的10位数。
 
 # --hints--
 
-`euler363()` should return 0.0000372091.
+`euler363()`应返回0.0000372091。
 
 ```js
 assert.strictEqual(euler363(), 0.0000372091);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler363() {
-
-  return true;
-}
-
-euler363();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -1,48 +1,31 @@
 ---
 id: 5900f5081000cf542c51001a
-title: 'Problem 412: Gnomon numbering'
+title: 问题412：Gnomon编号
 challengeType: 5
-forumTopicId: 302081
-dashedName: problem-412-gnomon-numbering
+videoUrl: ''
 ---
 
 # --description--
 
-For integers m, n (0 ≤ n &lt; m), let L(m, n) be an m×m grid with the top-right n×n grid removed.
+对于整数m，n（0≤n&lt;m），令L（m，n）为m×m网格，其中右上n×n网格被移除。
 
-For example, L(5, 3) looks like this:
+例如，L（5,3）看起来像这样：
 
-We want to number each cell of L(m, n) with consecutive integers 1, 2, 3, ... such that the number in every cell is smaller than the number below it and to the left of it.
+我们希望用连续的整数1,2,3 ......对L（m，n）的每个单元进行编号，使得每个单元格中的数字小于它下面和左边的数字。
 
-For example, here are two valid numberings of L(5, 3):
+例如，这里有两个有效的L（5,3）编号：
 
-Let LC(m, n) be the number of valid numberings of L(m, n). It can be verified that LC(3, 0) = 42, LC(5, 3) = 250250, LC(6, 3) = 406029023400 and LC(10, 5) mod 76543217 = 61251715.
+设LC（m，n）为L（m，n）的有效编号。可以证实LC（3,0）= 42，LC（5,3）= 250250，LC（6,3）= 406029023400和LC（10,5）mod 76543217 = 61251715。
 
-Find LC(10000, 5000) mod 76543217.
+找到LC（10000,5000）mod 76543217。
 
 # --hints--
 
-`euler412()` should return 38788800.
+`euler412()`应该返回38788800。
 
 ```js
 assert.strictEqual(euler412(), 38788800);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler412() {
-
-  return true;
-}
-
-euler412();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

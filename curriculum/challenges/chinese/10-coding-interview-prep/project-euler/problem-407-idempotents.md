@@ -1,42 +1,25 @@
 ---
 id: 5900f5041000cf542c510016
-title: 'Problem 407: Idempotents'
+title: 问题407：幂等元素
 challengeType: 5
-forumTopicId: 302075
-dashedName: problem-407-idempotents
+videoUrl: ''
 ---
 
 # --description--
 
-If we calculate a2 mod 6 for 0 ≤ a ≤ 5 we get: 0,1,4,3,4,1.
+如果我们计算a2 mod 6为0≤a≤5，我们得到：0,1,4,3,4,1。
 
-The largest value of a such that a2 ≡ a mod 6 is 4. Let's call M(n) the largest value of a &lt; n such that a2 ≡ a (mod n). So M(6) = 4.
+a2≡amod 6的最大值为4.让我们将M（n）称为a &lt;n的最大值，使得a2≡a（mod n）。所以M（6）= 4。
 
-Find ∑M(n) for 1 ≤ n ≤ 107.
+找ΣM（n）为1≤n≤107。
 
 # --hints--
 
-`euler407()` should return 39782849136421.
+`euler407()`应该返回39782849136421。
 
 ```js
 assert.strictEqual(euler407(), 39782849136421);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler407() {
-
-  return true;
-}
-
-euler407();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

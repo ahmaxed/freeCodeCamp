@@ -3,7 +3,6 @@ id: 5e7b9f060b6c005b0e76f05b
 title: Build your own Functions
 challengeType: 11
 videoId: nLDychdBwUg
-dashedName: build-your-own-functions
 ---
 
 # --description--
@@ -31,35 +30,47 @@ jane()
 
 ## --answers--
 
-<pre>Zap
+Zap
+
 ABC
+
 jane
+
 fred
-jane</pre>
+
+jane
 
 ---
 
-<pre>Zap
+Zap
+
 ABC
-Zap</pre>
+
+Zap
 
 ---
 
-<pre>ABC
+ABC
+
 Zap
-jane</pre>
+
+jane
 
 ---
 
-<pre>ABC
+ABC
+
 Zap
-ABC</pre>
+
+ABC
 
 ---
 
-<pre>Zap
 Zap
-Zap</pre>
+
+Zap
+
+Zap
 
 ## --video-solution--
 

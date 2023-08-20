@@ -3,7 +3,6 @@ id: 5900f4c21000cf542c50ffd4
 title: 'Problem 340: Crazy Function'
 challengeType: 5
 forumTopicId: 301999
-dashedName: problem-340-crazy-function
 ---
 
 # --description--

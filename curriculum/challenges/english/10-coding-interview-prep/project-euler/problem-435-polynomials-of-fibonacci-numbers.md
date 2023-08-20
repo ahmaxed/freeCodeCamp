@@ -3,7 +3,6 @@ id: 5900f5201000cf542c510032
 title: 'Problem 435: Polynomials of Fibonacci numbers'
 challengeType: 5
 forumTopicId: 302106
-dashedName: problem-435-polynomials-of-fibonacci-numbers
 ---
 
 # --description--

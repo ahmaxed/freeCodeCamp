@@ -4,7 +4,6 @@ title: Create Your First CSS Grid
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pByETK/cqwREC4'
 forumTopicId: 301129
-dashedName: create-your-first-css-grid
 ---
 
 # --description--

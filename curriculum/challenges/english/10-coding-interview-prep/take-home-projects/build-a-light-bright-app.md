@@ -3,7 +3,6 @@ id: 5a5d02bd919fcf9ca8cf46cb
 title: Build a Light-Bright App
 challengeType: 3
 forumTopicId: 302350
-dashedName: build-a-light-bright-app
 ---
 
 # --description--
@@ -29,6 +28,11 @@ dashedName: build-a-light-bright-app
 When you are finished, include a link to your project on CodePen and click the "I've completed this challenge" button.
 
 You can get feedback on your project by sharing it on the [freeCodeCamp forum](https://forum.freecodecamp.org/c/project-feedback/409).
+
+# --hints--
+
+
+# --seed--
 
 # --solutions--
 

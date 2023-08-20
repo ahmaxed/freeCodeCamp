@@ -1,27 +1,8 @@
 const { isEmpty } = require('lodash');
 const visit = require('unist-util-visit');
 var css = require('css');
+var visitCss = require('rework-visit');
 const { commentToData } = require('../comment-to-data');
-
-function visitComments(node, cb) {
-  node.rules.forEach(rule => {
-    if (rule.type === 'rule') {
-      visitDeclarations(rule.declarations, cb);
-    } else if (rule.type === 'comment') {
-      cb(rule.comment);
-    } else if (rule.type === 'media') {
-      visitComments(rule, cb);
-    }
-  });
-}
-
-function visitDeclarations(declarations, cb) {
-  declarations.forEach(dec => {
-    if (dec.type === 'comment') {
-      cb(dec.comment);
-    }
-  });
-}
 
 function plugin() {
   return transformer;
@@ -35,9 +16,12 @@ function plugin() {
     }
     function cssVisitor(node) {
       const ast = css.parse(node.value);
-      visitComments(ast.stylesheet, comment =>
-        commentToData(file, comment.trim())
-      );
+      visitCss(ast.stylesheet, dec => {
+        let comments = dec
+          .filter(({ type }) => type === 'comment')
+          .map(({ comment }) => comment.trim());
+        comments.forEach(comment => commentToData(file, comment));
+      });
     }
   }
 }

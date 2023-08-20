@@ -3,7 +3,6 @@ id: 587d7db0367417b2b2512b82
 title: Understand the Prototype Chain
 challengeType: 1
 forumTopicId: 301329
-dashedName: understand-the-prototype-chain
 ---
 
 # --description--
@@ -15,20 +14,20 @@ function Bird(name) {
   this.name = name;
 }
 
-typeof Bird.prototype;
+typeof Bird.prototype; // yields 'object'
 ```
 
 Because a `prototype` is an object, a `prototype` can have its own `prototype`! In this case, the `prototype` of `Bird.prototype` is `Object.prototype`:
 
 ```js
-Object.prototype.isPrototypeOf(Bird.prototype);
+Object.prototype.isPrototypeOf(Bird.prototype); // returns true
 ```
 
 How is this useful? You may recall the `hasOwnProperty` method from a previous challenge:
 
 ```js
 let duck = new Bird("Donald");
-duck.hasOwnProperty("name");
+duck.hasOwnProperty("name"); // yields true
 ```
 
 The `hasOwnProperty` method is defined in `Object.prototype`, which can be accessed by `Bird.prototype`, which can then be accessed by `duck`. This is an example of the `prototype` chain. In this `prototype` chain, `Bird` is the `supertype` for `duck`, while `duck` is the `subtype`. `Object` is a `supertype` for both `Bird` and `duck`. `Object` is a `supertype` for all objects in JavaScript. Therefore, any object can use the `hasOwnProperty` method.

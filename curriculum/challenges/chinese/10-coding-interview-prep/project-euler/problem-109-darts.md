@@ -1,16 +1,15 @@
 ---
 id: 5900f3db1000cf542c50feec
-title: 'Problem 109: Darts'
+title: 问题109：飞镖
 challengeType: 5
-forumTopicId: 301733
-dashedName: problem-109-darts
+videoUrl: ''
 ---
 
 # --description--
 
-In the game of darts a player throws three darts at a target board which is split into twenty equal sized sections numbered one to twenty.
+在飞镖游戏中，玩家在目标板上投掷三个飞镖，该目标板被分成二十个相等大小的部分，编号为一到二十。
 
-The score of a dart is determined by the number of the region that the dart lands in. A dart landing outside the red/green outer ring scores zero. The black and cream regions inside this ring represent single scores. However, the red/green outer ring and middle ring score double and treble scores respectively. At the centre of the board are two concentric circles called the bull region, or bulls-eye. The outer bull is worth 25 points and the inner bull is a double, worth 50 points. There are many variations of rules but in the most popular game the players will begin with a score 301 or 501 and the first player to reduce their running total to zero is a winner. However, it is normal to play a "doubles out" system, which means that the player must land a double (including the double bulls-eye at the centre of the board) on their final dart to win; any other dart that would reduce their running total to one or lower means the score for that set of three darts is "bust". When a player is able to finish on their current score it is called a "checkout" and the highest checkout is 170: T20 T20 D25 (two treble 20s and double bull). There are exactly eleven distinct ways to checkout on a score of 6:
+飞镖的得分由飞镖着陆区域的数量决定。红色/绿色外圈外的飞镖着陆得分为零。该戒指内的黑色和奶油色区域代表单个分数。然而，红色/绿色外圈和中圈分别得分为双倍和高音。在董事会的中心是两个同心圆，称为公牛区或公牛眼。外面的公牛价值25点，内部公牛是双倍，价值50点。规则有很多变化，但在最流行的游戏中，玩家将以301或501的分数开始，并且第一个将他们的总跑动总数减少到零的玩家是胜利者。然而，玩“双打”系统是正常的，这意味着玩家必须在他们的最终飞镖上获得双倍（包括在棋盘中央的双靶心）才能获胜;任何其他飞镖都会将他们的跑动总数减少到一个或更低意味着这组三个飞镖的得分是“半身像”。当玩家能够完成他们当前的分数时，它被称为“结账”，最高结账时间是170：T20 T20 D25（两个高音20和双牛）。有6种截然不同的结账方式，分数为6：
 
 D3
 
@@ -24,31 +23,15 @@ S4 D1
 
 S1 S1 D2 S1 T1 D1 S1 S3 D1 D1 D1 D1 D1 S2 D1 S2 S2 D1
 
-Note that D1 D2 is considered different to D2 D1 as they finish on different doubles. However, the combination S1 T1 D1 is considered the same as T1 S1 D1. In addition we shall not include misses in considering combinations; for example, D3 is the same as 0 D3 and 0 0 D3. Incredibly there are 42336 distinct ways of checking out in total. How many distinct ways can a player checkout with a score less than 100?
+请注意，D1 D2被认为与D2 D1不同，因为它们在不同的双打上完成。但是，组合S1 T1 D1被认为与T1 S1 D1相同。此外，我们不会在考虑组合时包含未命中数;例如，D3与0 D3和0 0 D3相同。令人难以置信的是，共有42336种不同的检查方式。玩家以低于100的分数结账有多少种不同的方式？
 
 # --hints--
 
-`euler109()` should return 38182.
+`euler109()`应返回38182。
 
 ```js
 assert.strictEqual(euler109(), 38182);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler109() {
-
-  return true;
-}
-
-euler109();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

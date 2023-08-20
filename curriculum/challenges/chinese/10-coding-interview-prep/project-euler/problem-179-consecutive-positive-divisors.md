@@ -1,38 +1,21 @@
 ---
 id: 5900f41f1000cf542c50ff32
-title: 'Problem 179: Consecutive positive divisors'
+title: 问题179：连续的正向除数
 challengeType: 5
-forumTopicId: 301814
-dashedName: problem-179-consecutive-positive-divisors
+videoUrl: ''
 ---
 
 # --description--
 
-Find the number of integers 1 &lt; n &lt; 107, for which n and n + 1 have the same number of positive divisors. For example, 14 has the positive divisors 1, 2, 7, 14 while 15 has 1, 3, 5, 15.
+求整数1 &lt;n &lt;107，其中n和n + 1具有相同的正除数。例如，14具有正除数1,2,7,14而15具有1,3,5,15。
 
 # --hints--
 
-`euler179()` should return 986262.
+`euler179()`应返回986262。
 
 ```js
 assert.strictEqual(euler179(), 986262);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler179() {
-
-  return true;
-}
-
-euler179();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

@@ -9,7 +9,7 @@ import { reducer as settings, ns as settingsNameSpace } from './settings';
 import {
   reducer as curriculumMap,
   ns as curriculumMapNameSpace
-} from '../templates/Introduction/redux';
+} from '../components/Map/redux';
 import {
   reducer as challenge,
   ns as challengeNameSpace

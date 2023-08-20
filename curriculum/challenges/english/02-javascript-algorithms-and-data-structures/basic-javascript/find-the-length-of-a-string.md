@@ -4,20 +4,15 @@ title: Find the Length of a String
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cvmqEAd'
 forumTopicId: 18182
-dashedName: find-the-length-of-a-string
 ---
 
 # --description--
 
 You can find the length of a `String` value by writing `.length` after the string variable or string literal.
 
-```js
-console.log("Alan Peter".length);
-```
+`"Alan Peter".length; // 10`
 
-The value `10` would be displayed in the console.
-
-For example, if we created a variable `var firstName = "Charles"`, we could find out how long the string `Charles` is by using the `firstName.length` property.
+For example, if we created a variable `var firstName = "Charles"`, we could find out how long the string `"Charles"` is by using the `firstName.length` property.
 
 # --instructions--
 

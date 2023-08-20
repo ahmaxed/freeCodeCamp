@@ -4,7 +4,6 @@ title: Selecting from Many Options with Switch Statements
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/c4mv4fm'
 forumTopicId: 18277
-dashedName: selecting-from-many-options-with-switch-statements
 ---
 
 # --description--
@@ -29,32 +28,32 @@ switch(lowercaseLetter) {
 # --instructions--
 
 Write a switch statement which tests `val` and sets `answer` for the following conditions:  
-`1` - `alpha`  
-`2` - `beta`  
-`3` - `gamma`  
-`4` - `delta`
+`1` - "alpha"  
+`2` - "beta"  
+`3` - "gamma"  
+`4` - "delta"
 
 # --hints--
 
-`caseInSwitch(1)` should have a value of the string `alpha`
+`caseInSwitch(1)` should have a value of "alpha"
 
 ```js
 assert(caseInSwitch(1) === 'alpha');
 ```
 
-`caseInSwitch(2)` should have a value of the string `beta`
+`caseInSwitch(2)` should have a value of "beta"
 
 ```js
 assert(caseInSwitch(2) === 'beta');
 ```
 
-`caseInSwitch(3)` should have a value of the string `gamma`
+`caseInSwitch(3)` should have a value of "gamma"
 
 ```js
 assert(caseInSwitch(3) === 'gamma');
 ```
 
-`caseInSwitch(4)` should have a value of the string `delta`
+`caseInSwitch(4)` should have a value of "delta"
 
 ```js
 assert(caseInSwitch(4) === 'delta');

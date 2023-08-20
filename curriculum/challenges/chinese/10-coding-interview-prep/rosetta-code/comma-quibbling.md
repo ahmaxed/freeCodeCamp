@@ -1,101 +1,51 @@
 ---
 id: 596e414344c3b2872167f0fe
-title: Comma quibbling
+title: 逗号狡猾
 challengeType: 5
-forumTopicId: 302234
-dashedName: comma-quibbling
+videoUrl: ''
 ---
 
 # --description--
 
-Comma quibbling is a task originally set by Eric Lippert in his [blog](https://blogs.msdn.com/b/ericlippert/archive/2009/04/15/comma-quibbling.aspx).
-
-# --instructions--
-
-Write a function to generate a string output which is the concatenation of input words from a list/sequence where:
-
-<ol>
-  <li>An input of no words produces the output string of just the two brace characters (<code>"{}"</code>)</li>
-  <li>An input of just one word, e.g. <code>["ABC"]</code>, produces the output string of the word inside the two braces, e.g. <code>"{ABC}"</code></li>
-  <li>An input of two words, e.g. <code>["ABC", "DEF"]</code>, produces the output string of the two words inside the two braces with the words separated by the string <code>" and "</code>, e.g. <code>"{ABC and DEF}"</code></li>
-  <li>An input of three or more words, e.g. <code>["ABC", "DEF", "G", "H"]</code>, produces the output string of all but the last word separated by <code>", "</code> with the last word separated by <code>" and "</code> and all within braces; e.g. <code>"{ABC, DEF, G and H}"</code></li>
-</ol>
-
-Test your function with the following series of inputs showing your output here on this page:
-
-<ul>
-  <li>[] # (No input words).</li>
-  <li>["ABC"]</li>
-  <li>["ABC", "DEF"]</li>
-  <li>["ABC", "DEF", "G", "H"]</li>
-</ul>
-
-**Note:** Assume words are non-empty strings of uppercase characters for this task.
+<p> Comma quibbling是Eric Lippert在他的<a href='http://blogs.msdn.com/b/ericlippert/archive/2009/04/15/comma-quibbling.aspx' title='链接：http：//blogs.msdn.com/b/ericlippert/archive/2009/04/15/comma-quibbling.aspx'>博客中</a>最初设定的任务。 </p>任务： <p>编写一个函数来生成一个字符串输出，它是列表/序列中输入字的串联，其中： </p>没有单词的输入产生仅两个大括号字符“{}”的输出字符串。只有一个单词的输入，例如\[“ABC”]，会在两个大括号内产生单词的输出字符串，例如“{ABC}”。两个单词的输入，例如\[“ABC”，“DEF”]，产生两个大括号内的两个单词的输出字符串，其中单词由字符串“和”分隔，例如“{ABC和DEF}”。三个或更多单词的输入，例如\[“ABC”，“DEF”，“G”，“H”]，产生除了最后一个单词之外的所有输出字符串，用“，”分隔，最后一个单词用“和”分隔。 “并且都在括号内;例如“{ABC，DEF，G和H}”。 <p>在此页面上显示输出的以下一系列输入测试您的功能： </p> \[]＃（无输入字）。 \[“ABC”] \[“ABC”，“DEF”] \[“ABC”，“DEF”，“G”，“H”] <p>注意：假设此单词是此任务的非空字符串大写字符。 </p>
 
 # --hints--
 
-`quibble` should be a function.
+`quibble`是一种功能。
 
 ```js
 assert(typeof quibble === 'function');
 ```
 
-`quibble(["ABC"])` should return a string.
+`quibble(["ABC"])`应该返回一个字符串。
 
 ```js
 assert(typeof quibble(['ABC']) === 'string');
 ```
 
-`quibble([])` should return "{}".
+`quibble([])`应返回“{}”。
 
 ```js
 assert.equal(quibble(testCases[0]), results[0]);
 ```
 
-`quibble(["ABC"])` should return "{ABC}".
+`quibble(["ABC"])`应该返回“{ABC}”。
 
 ```js
 assert.equal(quibble(testCases[1]), results[1]);
 ```
 
-`quibble(["ABC", "DEF"])` should return "{ABC and DEF}".
+`quibble(["ABC", "DEF"])`应返回“{ABC和DEF}”。
 
 ```js
 assert.equal(quibble(testCases[2]), results[2]);
 ```
 
-`quibble(["ABC", "DEF", "G", "H"])` should return "{ABC,DEF,G and H}".
+`quibble(["ABC", "DEF", "G", "H"])`应返回“{ABC，DEF，G和H}”。
 
 ```js
 assert.equal(quibble(testCases[3]), results[3]);
 ```
 
-# --seed--
-
-## --after-user-code--
-
-```js
-const testCases = [[], ["ABC"], ["ABC", "DEF"], ["ABC", "DEF", "G", "H"]];
-const results = ["{}", "{ABC}", "{ABC and DEF}", "{ABC,DEF,G and H}"];
-```
-
-## --seed-contents--
-
-```js
-function quibble(words) {
-
-  return true;
-}
-```
-
 # --solutions--
 
-```js
-function quibble(words) {
-  return "{" +
-    words.slice(0, words.length - 1).join(",") +
-   (words.length > 1 ? " and " : "") +
-   (words[words.length - 1] || '') +
-  "}";
-}
-```

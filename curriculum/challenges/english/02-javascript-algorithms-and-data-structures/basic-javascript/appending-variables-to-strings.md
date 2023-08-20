@@ -4,7 +4,6 @@ title: Appending Variables to Strings
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cbQmZfa'
 forumTopicId: 16656
-dashedName: appending-variables-to-strings
 ---
 
 # --description--
@@ -17,9 +16,8 @@ Example:
 var anAdjective = "awesome!";
 var ourStr = "freeCodeCamp is ";
 ourStr += anAdjective;
+// ourStr is now "freeCodeCamp is awesome!"
 ```
-
-`ourStr` would have the value `freeCodeCamp is awesome!`.
 
 # --instructions--
 

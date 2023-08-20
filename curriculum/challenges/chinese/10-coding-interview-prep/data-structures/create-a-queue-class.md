@@ -1,26 +1,17 @@
 ---
 id: 587d8250367417b2b2512c60
-title: Create a Queue Class
+title: 创建队列类
 challengeType: 1
-forumTopicId: 301631
-dashedName: create-a-queue-class
+videoUrl: ''
 ---
 
 # --description--
 
-Like stacks, queues are a collection of elements. But unlike stacks, queues follow the FIFO (First-In First-Out) principle. Elements added to a queue are pushed to the tail, or the end, of the queue, and only the element at the front of the queue is allowed to be removed.
-
-We could use an array to represent a queue, but just like stacks, we want to limit the amount of control we have over our queues.
-
-The two main methods of a queue class is the enqueue and the dequeue method. The enqueue method pushes an element to the tail of the queue, and the dequeue method removes and returns the element at the front of the queue. Other useful methods are the front, size, and isEmpty methods.
-
-# --instructions--
-
-Write an `enqueue` method that pushes an element to the tail of the queue, a `dequeue` method that removes and returns the front element, a `front` method that lets us see the front element, a `size` method that shows the length, and an `isEmpty` method to check if the queue is empty.
+与堆栈一样，队列是元素的集合。但与堆栈不同，队列遵循FIFO（先入先出）原则。添加到队列的元素将被推送到队列的尾部或末尾，并且只允许删除队列前面的元素。我们可以使用数组来表示队列，但就像堆栈一样，我们希望限制我们对队列的控制量。队列类的两个主要方法是enqueue和dequeue方法。 enqueue方法将元素推送到队列的尾部，dequeue方法移除并返回队列前面的元素。其他有用的方法是front，size和isEmpty方法。说明编写一个将元素推送到队列尾部的入队方法，一个删除并返回前面元素的出列方法，一个让我们看到前面元素的前方法，一个显示长度的大小方法，以及一个isEmpty方法检查队列是否为空。
 
 # --hints--
 
-Your `Queue` class should have a `enqueue` method.
+您的`Queue`类应该有一个`enqueue`方法。
 
 ```js
 assert(
@@ -31,7 +22,7 @@ assert(
 );
 ```
 
-Your `Queue` class should have a `dequeue` method.
+您的`Queue`类应该有一个`dequeue`方法。
 
 ```js
 assert(
@@ -42,7 +33,7 @@ assert(
 );
 ```
 
-Your `Queue` class should have a `front` method.
+您的`Queue`类应该有一个`front`方法。
 
 ```js
 assert(
@@ -53,7 +44,7 @@ assert(
 );
 ```
 
-Your `Queue` class should have a `size` method.
+您的`Queue`类应该有一个`size`方法。
 
 ```js
 assert(
@@ -64,7 +55,7 @@ assert(
 );
 ```
 
-Your `Queue` class should have an `isEmpty` method.
+您的`Queue`类应该有一个`isEmpty`方法。
 
 ```js
 assert(
@@ -75,7 +66,7 @@ assert(
 );
 ```
 
-The `dequeue` method should remove and return the front element of the queue
+`dequeue`方法应该删除并返回队列的前端元素
 
 ```js
 assert(
@@ -88,7 +79,7 @@ assert(
 );
 ```
 
-The `front` method should return value of the front element of the queue
+`front`方法应该返回队列的front元素的值
 
 ```js
 assert(
@@ -101,7 +92,7 @@ assert(
 );
 ```
 
-The `size` method should return the length of the queue
+`size`方法应该返回队列的长度
 
 ```js
 assert(
@@ -113,7 +104,7 @@ assert(
 );
 ```
 
-The `isEmpty` method should return `false` if there are elements in the queue
+如果队列中有元素，则`isEmpty`方法应返回`false`
 
 ```js
 assert(
@@ -125,50 +116,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function Queue() {
-  var collection = [];
-  this.print = function() {
-    console.log(collection);
-  };
-  // Only change code below this line
-
-  // Only change code above this line
-}
-```
-
 # --solutions--
 
-```js
-function Queue () { 
-    var collection = [];
-    this.print = function() {
-        console.log(collection);
-    };
-    // Only change code below this line
-    this.enqueue = function(item) {
-        collection.push(item);
-    }
-
-    this.dequeue = function() {
-        return collection.shift();
-    }
-
-    this.front = function() {
-        return collection[0];
-    }
-
-    this.size = function(){
-        return collection.length;
-    }
-
-    this.isEmpty = function() {
-        return collection.length === 0 ? true : false;
-    }
-    // Only change code above this line
-}
-```

@@ -3,7 +3,6 @@ id: 5e7b9f070b6c005b0e76f05f
 title: 'Iterations: More Patterns'
 challengeType: 11
 videoId: 9Wtqo6vha1M
-dashedName: iterations-more-patterns
 ---
 
 # --description--

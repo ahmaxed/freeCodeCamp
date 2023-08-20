@@ -3,7 +3,6 @@ id: 587d7dad367417b2b2512b77
 title: Define a Constructor Function
 challengeType: 1
 forumTopicId: 16804
-dashedName: define-a-constructor-function
 ---
 
 # --description--
@@ -53,7 +52,6 @@ assert(typeof new Dog().numLegs === 'number');
 ## --seed-contents--
 
 ```js
-
 ```
 
 # --solutions--

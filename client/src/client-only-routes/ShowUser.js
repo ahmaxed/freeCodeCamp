@@ -12,7 +12,6 @@ import {
   Row
 } from '@freecodecamp/react-bootstrap';
 import Helmet from 'react-helmet';
-import { Trans, withTranslation } from 'react-i18next';
 
 import Login from '../components/Header/components/Login';
 
@@ -28,7 +27,6 @@ const propTypes = {
   email: PropTypes.string,
   isSignedIn: PropTypes.bool,
   reportUser: PropTypes.func.isRequired,
-  t: PropTypes.func.isRequired,
   userFetchState: PropTypes.shape({
     pending: PropTypes.bool,
     complete: PropTypes.bool,
@@ -78,7 +76,7 @@ class ShowUser extends Component {
   }
 
   render() {
-    const { username, isSignedIn, userFetchState, email, t } = this.props;
+    const { username, isSignedIn, userFetchState, email } = this.props;
     const { pending, complete, errored } = userFetchState;
     if (pending && !complete) {
       return <Loader fullScreen={true} />;
@@ -92,13 +90,13 @@ class ShowUser extends Component {
             <Panel bsStyle='info' className='text-center'>
               <Panel.Heading>
                 <Panel.Title componentClass='h3'>
-                  {t('report.sign-in')}
+                  You need to be signed in to report a user
                 </Panel.Title>
               </Panel.Heading>
               <Panel.Body className='text-center'>
                 <Spacer size={2} />
                 <Col md={6} mdOffset={3} sm={8} smOffset={2} xs={12}>
-                  <Login block={true}>{t('buttons.click-here')}</Login>
+                  <Login block={true}>Click here to sign in</Login>
                 </Col>
                 <Spacer size={3} />
               </Panel.Body>
@@ -109,29 +107,31 @@ class ShowUser extends Component {
     }
 
     const { textarea } = this.state;
-    const placeholderText = t('report.details');
+    const placeholderText = `Please provide as much detail as possible about the account or behavior you are reporting.`;
     return (
       <Fragment>
         <Helmet>
-          <title>{t('report.portfolio')} | freeCodeCamp.org</title>
+          <title>Report a users portfolio | freeCodeCamp.org</title>
         </Helmet>
         <Spacer size={2} />
-        <Row className='text-center overflow-fix'>
+        <Row className='text-center'>
           <Col sm={8} smOffset={2} xs={12}>
-            <h2>{t('report.portfolio-2', { username: username })}</h2>
+            <h2>
+              Do you want to report {username}
+              's portfolio for abuse?
+            </h2>
           </Col>
         </Row>
-        <Row className='overflow-fix'>
+        <Row>
           <Col sm={6} smOffset={3} xs={12}>
             <p>
-              <Trans email={email} i18nKey='report.notify-1'>
-                <strong>{{ email }}</strong>
-              </Trans>
+              We will notify the community moderators' team, and a send copy of
+              this report to your email: <strong>{email}</strong>
             </p>
-            <p>{t('report.notify-2')}</p>
+            <p>We may get back to you for more information, if required.</p>
             <form onSubmit={this.handleSubmit}>
               <FormGroup controlId='report-user-textarea'>
-                <ControlLabel>{t('report.what')}</ControlLabel>
+                <ControlLabel>What would you like to report?</ControlLabel>
                 <FormControl
                   componentClass='textarea'
                   onChange={this.handleChange}
@@ -140,7 +140,7 @@ class ShowUser extends Component {
                 />
               </FormGroup>
               <Button block={true} bsStyle='primary' type='submit'>
-                {t('report.submit')}
+                Submit the report
               </Button>
               <Spacer />
             </form>
@@ -154,6 +154,7 @@ class ShowUser extends Component {
 ShowUser.displayName = 'ShowUser';
 ShowUser.propTypes = propTypes;
 
-export default withTranslation()(
-  connect(mapStateToProps, mapDispatchToProps)(ShowUser)
-);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ShowUser);

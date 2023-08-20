@@ -1,68 +1,35 @@
 ---
 id: 5900f37b1000cf542c50fe8e
-title: 'Problem 15: Lattice paths'
+title: 问题15：格子路径
 challengeType: 5
-forumTopicId: 301780
-dashedName: problem-15-lattice-paths
+videoUrl: ''
 ---
 
 # --description--
 
-Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner.
+从2×2网格的左上角开始，只能向右和向下移动，右下角有6条路线。 ![6 2乘2网格的图表显示了右下角的所有路线](https://cdn-media-1.freecodecamp.org/imgr/1Atixoj.gif)
 
-<img class="img-responsive center-block" alt="a diagram of 6 2 by 2 grids showing all the routes to the bottom right corner" src="https://cdn-media-1.freecodecamp.org/project-euler/1Atixoj.gif" style="background-color: white; padding: 10px;" />
-
-How many such routes are there through a given `gridSize`?
+通过给定的`gridSize`有多少这样的路由？
 
 # --hints--
 
-`latticePaths(4)` should return a number.
-
-```js
-assert(typeof latticePaths(4) === 'number');
-```
-
-`latticePaths(4)` should return 70.
+`latticePaths(4)`应该返回70。
 
 ```js
 assert.strictEqual(latticePaths(4), 70);
 ```
 
-`latticePaths(9)` should return 48620.
+`latticePaths(9)`应该返回48620。
 
 ```js
 assert.strictEqual(latticePaths(9), 48620);
 ```
 
-`latticePaths(20)` should return 137846528820.
+`latticePaths(20)`应该返回137846528820。
 
 ```js
 assert.strictEqual(latticePaths(20), 137846528820);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function latticePaths(gridSize) {
-
-  return true;
-}
-
-latticePaths(4);
-```
-
 # --solutions--
 
-```js
-function latticePaths(gridSize) {
-  let paths = 1;
-
-  for (let i = 0; i < gridSize; i++) {
-    paths *= (2 * gridSize) - i;
-    paths /= i + 1;
-  }
-  return paths;
-}
-```

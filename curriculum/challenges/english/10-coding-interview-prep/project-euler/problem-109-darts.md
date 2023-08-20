@@ -3,7 +3,6 @@ id: 5900f3db1000cf542c50feec
 title: 'Problem 109: Darts'
 challengeType: 5
 forumTopicId: 301733
-dashedName: problem-109-darts
 ---
 
 # --description--

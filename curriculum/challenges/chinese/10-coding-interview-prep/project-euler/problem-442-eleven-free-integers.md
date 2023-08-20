@@ -1,44 +1,27 @@
 ---
 id: 5900f5271000cf542c510039
-title: 'Problem 442: Eleven-free integers'
+title: 问题442：十一个整数
 challengeType: 5
-forumTopicId: 302114
-dashedName: problem-442-eleven-free-integers
+videoUrl: ''
 ---
 
 # --description--
 
-An integer is called eleven-free if its decimal expansion does not contain any substring representing a power of 11 except 1.
+如果整数的十进制扩展不包含任何表示11的幂的子串（除1之外），则称其为十一无码。
 
-For example, 2404 and 13431 are eleven-free, while 911 and 4121331 are not.
+例如，2404和13431不包含11，而911和4121331不是。
 
-Let E(n) be the nth positive eleven-free integer. For example, E(3) = 3, E(200) = 213 and E(500 000) = 531563.
+令E（n）为第n个正十一无整数。 例如，E（3）= 3，E（200）= 213和E（500’000）= 531563。
 
-Find E(1018).
+找出E（1018）。
 
 # --hints--
 
-`euler442()` should return 1295552661530920200.
+`euler442()`应该返回1295552661530920200。
 
 ```js
 assert.strictEqual(euler442(), 1295552661530920200);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler442() {
-
-  return true;
-}
-
-euler442();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

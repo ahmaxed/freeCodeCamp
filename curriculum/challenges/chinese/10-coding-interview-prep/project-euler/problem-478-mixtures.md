@@ -1,50 +1,33 @@
 ---
 id: 5900f54c1000cf542c51005e
-title: 'Problem 478: Mixtures'
+title: 问题478：混合物
 challengeType: 5
-forumTopicId: 302155
-dashedName: problem-478-mixtures
+videoUrl: ''
 ---
 
 # --description--
 
-Let us consider mixtures of three substances: A, B and C. A mixture can be described by a ratio of the amounts of A, B, and C in it, i.e., (a : b : c). For example, a mixture described by the ratio (2 : 3 : 5) contains 20% A, 30% B and 50% C.
+让我们考虑三种物质的混合物：A，B和C.混合物可以用其中A，B和C的量的比例来描述，即（a：b：c）。例如，由比例（2：3：5）描述的混合物含有20％A，30％B和50％C。
 
-For the purposes of this problem, we cannot separate the individual components from a mixture. However, we can combine different amounts of different mixtures to form mixtures with new ratios.
+出于这个问题的目的，我们不能将各个组分与混合物分开。但是，我们可以将不同量的不同混合物组合以形成具有新比例的混合物。
 
-For example, say we have three mixtures with ratios (3 : 0 : 2), (3 : 6 : 11) and (3 : 3 : 4). By mixing 10 units of the first, 20 units of the second and 30 units of the third, we get a new mixture with ratio (6 : 5 : 9), since: (10·3/5 + 20·3/20 + 30·3/10 : 10·0/5 + 20·6/20 + 30·3/10 : 10·2/5 + 20·11/20 + 30·4/10) = (18 : 15 : 27) = (6 : 5 : 9)
+例如，假设我们有三种比例（3：0：2），（3：6：11）和（3：3：4）的混合物。通过混合10个单位的第一个，20个单位的第二个和30个单位的第三个，我们得到一个比例（6：5：9）的新混合物，因为：（10·3/5 + 20·3/20 + 30·3/10：10·0/5 + 20·6/20 + 30·3/10：10·2/5 + 20·11/20 + 30·4/10）=（18：15：27） =（6：5：9）
 
-However, with the same three mixtures, it is impossible to form the ratio (3 : 2 : 1), since the amount of B is always less than the amount of C.
+然而，使用相同的三种混合物，不可能形成比例（3：2：1），因为B的量总是小于C的量。
 
-Let n be a positive integer. Suppose that for every triple of integers (a, b, c) with 0 ≤ a, b, c ≤ n and gcd(a, b, c) = 1, we have a mixture with ratio (a : b : c). Let M(n) be the set of all such mixtures.
+设n是正整数。假设对于0≤a，b，c≤n和gcd（a，b，c）= 1的整数（a，b，c）的每三个，我们得到具有比率（a：b：c）的混合。设M（n）为所有这些混合物的集合。
 
-For example, M(2) contains the 19 mixtures with the following ratios: {(0 : 0 : 1), (0 : 1 : 0), (0 : 1 : 1), (0 : 1 : 2), (0 : 2 : 1), (1 : 0 : 0), (1 : 0 : 1), (1 : 0 : 2), (1 : 1 : 0), (1 : 1 : 1), (1 : 1 : 2), (1 : 2 : 0), (1 : 2 : 1), (1 : 2 : 2), (2 : 0 : 1), (2 : 1 : 0), (2 : 1 : 1), (2 : 1 : 2), (2 : 2 : 1)}.
+例如，M（2）包含具有以下比率的19种混合物：{（0：0：1），（0：1：0），（0：1：1），（0：1：2），（ 0：2：1），（1：0：0），（1：0：1），（1：0：2），（1：1：0），（1：1：1），（1： 1：2），（1：2：0），（1：2：1），（1：2：2），（2：0：1），（2：1：0），（2：1： 1），（2：1：2），（2：2：1）}。
 
-Let E(n) be the number of subsets of M(n) which can produce the mixture with ratio (1 : 1 : 1), i.e., the mixture with equal parts A, B and C. We can verify that E(1) = 103, E(2) = 520447, E(10) mod 118 = 82608406 and E(500) mod 118 = 13801403. Find E(10 000 000) mod 118.
+令E（n）为M（n）的子集数，其可以产生具有比率（1：1：1）的混合物，即具有相等部分A，B和C的混合物。我们可以验证E（1） ）= 103，E（2）= 520447，E（10）mod 118 = 82608406和E（500）mod 118 = 13801403.求E（10 000 000）mod 118。
 
 # --hints--
 
-`euler478()` should return 59510340.
+`euler478()`应该返回59510340。
 
 ```js
 assert.strictEqual(euler478(), 59510340);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler478() {
-
-  return true;
-}
-
-euler478();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

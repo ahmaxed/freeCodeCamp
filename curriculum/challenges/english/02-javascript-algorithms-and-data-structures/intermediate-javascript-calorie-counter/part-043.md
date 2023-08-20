@@ -2,7 +2,6 @@
 id: 5ddb965c65d27e1512d44dc2
 title: Part 43
 challengeType: 0
-dashedName: part-43
 ---
 
 # --description--

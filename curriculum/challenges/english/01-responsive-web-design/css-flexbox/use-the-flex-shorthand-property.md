@@ -4,7 +4,6 @@ title: Use the flex Shorthand Property
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVaDAv/cbpW2tE'
 forumTopicId: 301112
-dashedName: use-the-flex-shorthand-property
 ---
 
 # --description--

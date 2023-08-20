@@ -4,7 +4,6 @@ title: Improve Accessibility of Audio Content with the audio Element
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cVJVkcZ'
 forumTopicId: 301014
-dashedName: improve-accessibility-of-audio-content-with-the-audio-element
 ---
 
 # --description--
@@ -17,8 +16,8 @@ Here's an example:
 
 ```html
 <audio id="meowClip" controls>
-  <source src="audio/meow.mp3" type="audio/mpeg">
-  <source src="audio/meow.ogg" type="audio/ogg">
+  <source src="audio/meow.mp3" type="audio/mpeg" />
+  <source src="audio/meow.ogg" type="audio/ogg" />
 </audio>
 ```
 
@@ -26,7 +25,7 @@ Here's an example:
 
 # --instructions--
 
-Time to take a break from Camper Cat and meet fellow camper Zersiax (@zersiax), a champion of accessibility and a screen reader user. To hear a clip of his screen reader in action, add an `audio` element after the `p`. Include the `controls` attribute. Then place a `source` tag inside the `audio` tags with the `src` attribute set to `https://s3.amazonaws.com/freecodecamp/screen-reader.mp3` and `type` attribute set to `"audio/mpeg"`.
+Time to take a break from Camper Cat and meet fellow camper Zersiax (@zersiax), a champion of accessibility and a screen reader user. To hear a clip of his screen reader in action, add an `audio` element after the `p`. Include the `controls` attribute. Then place a `source` tag inside the `audio` tags with the `src` attribute set to "`https://s3.amazonaws.com/freecodecamp/screen-reader.mp3`" and `type` attribute set to "audio/mpeg".
 
 **Note:** The audio clip may sound fast and be difficult to understand, but that is a normal speed for screen reader users.
 

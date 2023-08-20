@@ -1,90 +1,39 @@
 ---
 id: 59da22823d04c95919d46269
-title: 'Sailors, coconuts and a monkey problem'
+title: 水手，椰子和猴子问题
 challengeType: 5
-forumTopicId: 302304
-dashedName: sailors-coconuts-and-a-monkey-problem
+videoUrl: ''
 ---
 
 # --description--
 
-Five sailors are shipwrecked on an island and collect a large pile of coconuts during the day. That night the first sailor wakes up and decides to take his first share early so tries to divide the pile of coconuts equally into five piles but finds that there is one coconut left over, so he tosses it to a monkey and then hides "his" one of the five equally sized piles of coconuts and pushes the other four piles together to form a single visible pile of coconuts again and goes to bed. To cut a long story short, each of the sailors in turn gets up once during the night and performs the same actions of dividing the coconut pile into five, finding that one coconut is left over and giving that single remainder coconut to the monkey. In the morning (after the surreptitious and separate action of each of the five sailors during the night), the remaining coconuts are divided into five equal piles for each of the sailors, whereupon it is found that the pile of coconuts divides equally amongst the sailors with no remainder. (Nothing for the monkey in the morning.)
-
-# --instructions--
-
-Create a function that returns the minimum possible size of the initial pile of coconuts collected during the day for `N` sailors. **Note:** Of course the tale is told in a world where the collection of any amount of coconuts in a day and multiple divisions of the pile, etc. can occur in time fitting the story line, so as not to affect the mathematics. **C.f:**
-
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=U9qU20VmvaU" target="_blank"> Monkeys and Coconuts - Numberphile</a> (Video) Analytical solution.</li>
-  <li><a href="https://oeis.org/A002021" target="_blank">A002021 Pile of coconuts problem</a> The On-Line Encyclopedia of Integer Sequences. (Although some of its references may use the alternate form of the tale).</li>
-</ul>
+<p>五名水手在岛上遭遇海难，并在白天收集了一大堆椰子。 </p><p>那天晚上，第一个水手醒来并决定早点拿走他的第一份，所以试图将一堆椰子平分成五堆，但发现剩下一个椰子，所以他把它扔到一只猴子然后隐藏“他的”五个同样大小的椰子堆中的一个，并将其他四个桩推到一起，再次形成一堆可见的椰子并上床睡觉。 </p><p>长话短说，每个水手轮流在夜间起床，并执行将椰子堆分成五个的相同动作，发现剩下一个椰子并将剩下的椰子留给猴子。 </p><p>在早上（在夜间五个水手的暗中和分开行动之后），剩下的椰子被分成五个相等的堆，每个水手，然后发现一堆椰子在水手之间平分没有余数。 （早上猴子没什么。） </p><p>任务： </p><pre> <code> Create a function that returns the the minimum possible size of the initial pile of coconuts collected during the day for N sailors.</code> </pre><p>注意： </p><pre> <code> Of course the tale is told in a world where the collection of any amount of coconuts in a day and multiple divisions of the pile, etc can occur in time fitting the story line, so as not to affect the mathematics.</code> </pre><p> CF卡： </p><p> <a href='https://www.youtube.com/watch?v=U9qU20VmvaU' title='链接：https：//www.youtube.com/watch？v = U9qU20VmvaU'>猴子和椰子 -  Numberphile</a> （视频）分析解决方案。 </p><pre> <code> &#x3C;a href="http://oeis.org/A002021" title="link: http://oeis.org/A002021">A002021 Pile of coconuts problem&#x3C;/a> The On-Line Encyclopedia of Integer Sequences. (Although some of its references may use the alternate form of the tale).</code> </pre>
 
 # --hints--
 
-`splitCoconuts` should be a function.
+`splitCoconuts`是一个函数。
 
 ```js
 assert(typeof splitCoconuts === 'function');
 ```
 
-`splitCoconuts(5)` should return 3121.
+`splitCoconuts(5)`应该返回3121。
 
 ```js
 assert(splitCoconuts(5) === 3121);
 ```
 
-`splitCoconuts(6)` should return 233275.
+`splitCoconuts(6)`应返回233275。
 
 ```js
 assert(splitCoconuts(6) === 233275);
 ```
 
-`splitCoconuts(7)` should return 823537.
+`splitCoconuts(7)`应该返回823537。
 
 ```js
 assert(splitCoconuts(7) === 823537);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function splitCoconuts(intSailors) {
-
-  return true;
-}
-```
-
 # --solutions--
 
-```js
-function splitCoconuts(intSailors) {
-  let intNuts = intSailors;
-  let result = splitCoconutsHelper(intNuts, intSailors);
-  while (!result) {
-    intNuts += 1;
-    result = splitCoconutsHelper(intNuts, intSailors);
-  }
-
-  return intNuts;
-}
-
-function splitCoconutsHelper(intNuts, intSailors, intDepth) {
-  const nDepth = intDepth !== undefined ? intDepth : intSailors;
-  const portion = Math.floor(intNuts / intSailors);
-  const remain = intNuts % intSailors;
-
-  if (portion <= 0 || remain !== (nDepth ? 1 : 0)) {
-    return null;
-  }
-
-  if (nDepth) {
-    return splitCoconutsHelper(
-      intNuts - portion - remain, intSailors, nDepth - 1
-    );
-  }
-
-  return intNuts;
-}
-```

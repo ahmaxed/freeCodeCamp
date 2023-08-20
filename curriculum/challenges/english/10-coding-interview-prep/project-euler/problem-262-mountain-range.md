@@ -3,7 +3,6 @@ id: 5900f4731000cf542c50ff85
 title: 'Problem 262: Mountain Range'
 challengeType: 5
 forumTopicId: 301911
-dashedName: problem-262-mountain-range
 ---
 
 # --description--

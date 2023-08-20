@@ -4,7 +4,6 @@ title: Multiply Two Numbers with JavaScript
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cP3y3Aq'
 forumTopicId: 18243
-dashedName: multiply-two-numbers-with-javascript
 ---
 
 # --description--
@@ -16,10 +15,8 @@ JavaScript uses the `*` symbol for multiplication of two numbers.
 **Example**
 
 ```js
-myVar = 13 * 13;
+myVar = 13 * 13; // assigned 169
 ```
-
-`myVar` would have the value `169`.
 
 # --instructions--
 

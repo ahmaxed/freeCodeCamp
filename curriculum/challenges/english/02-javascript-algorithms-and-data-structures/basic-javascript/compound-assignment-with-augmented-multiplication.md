@@ -4,22 +4,17 @@ title: Compound Assignment With Augmented Multiplication
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/c83vrfa'
 forumTopicId: 16662
-dashedName: compound-assignment-with-augmented-multiplication
 ---
 
 # --description--
 
 The `*=` operator multiplies a variable by a number.
 
-```js
-myVar = myVar * 5;
-```
+`myVar = myVar * 5;`
 
 will multiply `myVar` by `5`. This can be rewritten as:
 
-```js
-myVar *= 5;
-```
+`myVar *= 5;`
 
 # --instructions--
 

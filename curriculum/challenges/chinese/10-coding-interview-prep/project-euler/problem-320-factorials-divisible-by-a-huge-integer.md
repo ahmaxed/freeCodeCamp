@@ -1,44 +1,27 @@
 ---
 id: 5900f4ae1000cf542c50ffbf
-title: 'Problem 320: Factorials divisible by a huge integer'
+title: 问题320：阶乘被整数整除
 challengeType: 5
-forumTopicId: 301977
-dashedName: problem-320-factorials-divisible-by-a-huge-integer
+videoUrl: ''
 ---
 
 # --description--
 
-Let N(i) be the smallest integer n such that n! is divisible by (i!)1234567890
+令N（i）是最小的整数n，这样n！ 被（i！）整除1234567890
 
-Let S(u)=∑N(i) for 10 ≤ i ≤ u.
+设S（u）= ∑N（i）且10≤i≤u。
 
-S(1000)=614538266565663.
+S（1000）= 614538266565663。
 
-Find S(1 000 000) mod 1018.
+找出S（1 000 000）mod 1018。
 
 # --hints--
 
-`euler320()` should return 278157919195482660.
+`euler320()`应该返回278157919195482660。
 
 ```js
 assert.strictEqual(euler320(), 278157919195482660);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler320() {
-
-  return true;
-}
-
-euler320();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

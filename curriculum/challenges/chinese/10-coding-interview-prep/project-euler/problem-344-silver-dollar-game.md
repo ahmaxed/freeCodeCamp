@@ -1,54 +1,37 @@
 ---
 id: 5900f4c51000cf542c50ffd7
-title: 'Problem 344: Silver dollar game'
+title: 问题344：银元游戏
 challengeType: 5
-forumTopicId: 302003
-dashedName: problem-344-silver-dollar-game
+videoUrl: ''
 ---
 
 # --description--
 
-One variant of N.G. de Bruijn's silver dollar game can be described as follows:
+NG de Bruijn的银元游戏的一个变种可以描述如下：
 
-On a strip of squares a number of coins are placed, at most one coin per square. Only one coin, called the silver dollar, has any value. Two players take turns making moves. At each turn a player must make either a regular or a special move.
+在正方形条上放置了许多硬币，每平方最多一枚硬币。只有一枚硬币，称为银元，具有任何价值。两名球员轮流做出动作。在每个回合中，玩家必须进行常规或特殊动作。
 
-A regular move consists of selecting one coin and moving it one or more squares to the left. The coin cannot move out of the strip or jump on or over another coin.
+常规移动包括选择一个硬币并将其移动到左侧的一个或多个方块。硬币不能从条带中移出或跳到另一个硬币上或上方。
 
-Alternatively, the player can choose to make the special move of pocketing the leftmost coin rather than making a regular move. If no regular moves are possible, the player is forced to pocket the leftmost coin.
+或者，玩家可以选择将最左边的硬币扒窃而不是定期移动。如果没有可能的常规动作，则玩家被迫掏出最左边的硬币。
 
-The winner is the player who pockets the silver dollar.
+获胜者是兜售银元的玩家。
 
-A winning configuration is an arrangement of coins on the strip where the first player can force a win no matter what the second player does.
+获胜配置是在条带上的硬币排列，其中第一玩家可以强制获胜而不管第二玩家做什么。
 
-Let W(n,c) be the number of winning configurations for a strip of n squares, c worthless coins and one silver dollar.
+设W（n，c）为n个正方形，c个无价值硬币和1个银元的获胜配置数。
 
-You are given that W(10,2) = 324 and W(100,10) = 1514704946113500.
+给出W（10,2）= 324和W（100,10）= 1514704946113500。
 
-Find W(1 000 000, 100) modulo the semiprime 1000 036 000 099 (= 1 000 003 · 1 000 033).
+找到W（1 000 000,100）模数半数1000 036 000 099（= 1 000 003·1 000 033）。
 
 # --hints--
 
-`euler344()` should return 65579304332.
+`euler344()`应该返回65579304332。
 
 ```js
 assert.strictEqual(euler344(), 65579304332);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler344() {
-
-  return true;
-}
-
-euler344();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

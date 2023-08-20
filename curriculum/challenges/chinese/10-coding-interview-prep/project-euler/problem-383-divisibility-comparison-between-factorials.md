@@ -1,44 +1,25 @@
 ---
 id: 5900f4ed1000cf542c50ffff
-title: 'Problem 383: Divisibility comparison between factorials'
+title: 问题383：阶乘之间的可比性比较
 challengeType: 5
-forumTopicId: 302047
-dashedName: problem-383-divisibility-comparison-between-factorials
+videoUrl: ''
 ---
 
 # --description--
 
-Let f5(n) be the largest integer x for which 5x divides n.
+设f5（n）是最大整数x，其中5x除以n。例如，f5（625000）= 7。
 
-For example, f5(625000) = 7.
+令T5（n）为满足f5（（2·i-1）！）&lt;2·f5（i！）且1≤i≤n的整数i。可以证实T5（103）= 68并且T5（109）= 2408210。
 
-Let T5(n) be the number of integers i which satisfy f5((2·i-1)!) &lt; 2·f5(i!) and 1 ≤ i ≤ n. It can be verified that T5(103) = 68 and T5(109) = 2408210.
-
-Find T5(1018).
+找到T5（1018）。
 
 # --hints--
 
-`euler383()` should return 22173624649806.
+`euler383()`应该返回22173624649806。
 
 ```js
 assert.strictEqual(euler383(), 22173624649806);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler383() {
-
-  return true;
-}
-
-euler383();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

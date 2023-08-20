@@ -1,8 +1,6 @@
-/* global expect jest */
+/* global expect */
 
 import { getCompletedPercent } from './CompletionModal';
-
-jest.mock('../../../analytics');
 
 const completedChallengesIds = ['1', '3', '5'],
   currentBlockIds = ['1', '3', '5', '7'],

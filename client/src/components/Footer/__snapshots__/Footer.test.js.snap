@@ -14,24 +14,23 @@ exports[`<Footer /> matches snapshot 1`] = `
         className="footer-desc-col"
       >
         <p>
-          footer.tax-exempt-status
+          freeCodeCamp is a donor-supported tax-exempt 501(c)(3) nonprofit organization (United States Federal Tax Identification Number: 82-0779546)
         </p>
         <p>
-          footer.mission-statement
+          Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public. We also have thousands of freeCodeCamp study groups around the world.
         </p>
         <p>
-          footer.donation-initiatives
+          Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.
         </p>
         <p
           className="footer-donation"
         >
-          footer.donate-text
-           
+          You can 
           <a
             className="inline"
             href="/donate"
           >
-            footer.donate-link
+            make a tax-deductible donation here
           </a>
           .
         </p>
@@ -42,7 +41,7 @@ exports[`<Footer /> matches snapshot 1`] = `
         <div
           className="col-header"
         >
-          footer.trending-guides
+          Trending Guides
         </div>
         <div
           className="trending-guides-row"
@@ -51,148 +50,148 @@ exports[`<Footer /> matches snapshot 1`] = `
             className="footer-col footer-col-1"
           >
             <a
-              href="trending:article0link"
+              href="https://www.freecodecamp.org/news/git-clone-branch-how-to-clone-a-specific-branch/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article0title
+              Git Clone
             </a>
             <a
-              href="trending:article1link"
+              href="https://www.freecodecamp.org/news/agile-methods-and-methodology-for-beginners/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article1title
+              Agile Methods
             </a>
             <a
-              href="trending:article2link"
+              href="https://www.freecodecamp.org/news/if-name-main-python-example/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article2title
+              Python Main
             </a>
             <a
-              href="trending:article3link"
+              href="https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article3title
+              Callback
             </a>
             <a
-              href="trending:article4link"
+              href="https://www.freecodecamp.org/news/debounce-javascript-tutorial-how-to-make-your-js-wait-up/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article4title
+              Debounce
             </a>
             <a
-              href="trending:article5link"
+              href="https://www.freecodecamp.org/news/javascript-url-encode-example-how-to-use-encodeuricomponent-and-encodeuri/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article5title
+              URL Encode
             </a>
             <a
-              href="trending:article6link"
+              href="https://www.freecodecamp.org/news/make-it-blink-html-tutorial-how-to-use-the-blink-tag-with-code-examples/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article6title
+              Blink HTML
             </a>
             <a
-              href="trending:article7link"
+              href="https://www.freecodecamp.org/news/python-returns-multiple-values-how-to-return-a-tuple-list-dictionary/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article7title
+              Python Tuple
             </a>
             <a
-              href="trending:article8link"
+              href="https://www.freecodecamp.org/news/javascript-array-insert-how-to-add-to-an-array-with-the-push-unshift-and-concat-functions/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article8title
+              JavaScript Push
             </a>
             <a
-              href="trending:article9link"
+              href="https://www.freecodecamp.org/news/java-list-tutorial-util-list-api-example/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article9title
+              Java List
             </a>
           </div>
           <div
             className="footer-col footer-col-2"
           >
             <a
-              href="trending:article10link"
+              href="https://www.freecodecamp.org/news/learn-ux-design-self-taught-user-experience-designer/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article10title
+              UX
             </a>
             <a
-              href="trending:article11link"
+              href="https://www.freecodecamp.org/news/what-is-design-thinking-an-introduction-to-the-design-process-for-entrepreneurs-and-developers/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article11title
+              Design Thinking
             </a>
             <a
-              href="trending:article12link"
+              href="https://www.freecodecamp.org/news/prime-numbers-list-chart-of-primes/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article12title
+              Prime Number List
             </a>
             <a
-              href="trending:article13link"
+              href="https://www.freecodecamp.org/news/product-design-explained-in-plain-english/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article13title
+              Product Design
             </a>
             <a
-              href="trending:article14link"
+              href="https://www.freecodecamp.org/news/what-is-digital-design-and-why-does-it-matter/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article14title
+              Digital Design
             </a>
             <a
-              href="trending:article15link"
+              href="https://www.freecodecamp.org/news/best-coding-games-online-adults-learn-to-code/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article15title
+              Coding Games
             </a>
             <a
-              href="trending:article16link"
+              href="https://www.freecodecamp.org/news/svm-machine-learning-tutorial-what-is-the-support-vector-machine-algorithm-explained-with-code-examples/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article16title
+              SVM
             </a>
             <a
-              href="trending:article17link"
+              href="https://www.freecodecamp.org/news/javascript-foreach-how-to-loop-through-an-array-in-js/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article17title
+              JavaScript forEach
             </a>
             <a
-              href="trending:article18link"
+              href="https://www.freecodecamp.org/news/google-bert-nlp-machine-learning-tutorial/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article18title
+              Google BERT
             </a>
             <a
-              href="trending:article19link"
+              href="https://www.freecodecamp.org/news/sql-create-table-statement-with-example-syntax/"
               rel="noopener noreferrer"
               target="_blank"
             >
-              trending:article19title
+              Create Table SQL
             </a>
           </div>
           <div
@@ -202,78 +201,78 @@ exports[`<Footer /> matches snapshot 1`] = `
               className="footer-left"
             >
               <a
-                href="trending:article20link"
+                href="https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article20title
+                Responsive Web Design
               </a>
               <a
-                href="trending:article21link"
+                href="https://www.freecodecamp.org/news/svg-basics-what-are-scalable-vector-graphics-and-how-do-you-use-them/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article21title
+                What Is an SVG File?
               </a>
               <a
-                href="trending:article22link"
+                href="https://www.freecodecamp.org/news/pdf-password-remover-guide-how-to-remove-password-protection-from-a-pdf/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article22title
+                PDF Password Remover
               </a>
               <a
-                href="trending:article23link"
+                href="https://www.freecodecamp.org/news/what-is-a-pdf-file-and-how-do-you-open-it-solved/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article23title
+                What Is a PDF?
               </a>
               <a
-                href="trending:article24link"
+                href="https://www.freecodecamp.org/news/what-is-python-used-for-10-coding-uses-for-the-python-programming-language/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article24title
+                What Is Python?
               </a>
             </div>
             <div
               className="footer-right"
             >
               <a
-                href="trending:article25link"
+                href="https://www.freecodecamp.org/news/what-is-tls-transport-layer-security-encryption-explained-in-plain-english/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article25title
+                What Is TLS?
               </a>
               <a
-                href="trending:article26link"
+                href="https://www.freecodecamp.org/news/what-is-a-lan-local-area-network-explained-in-plain-english/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article26title
+                What Is a LAN?
               </a>
               <a
-                href="trending:article27link"
+                href="https://www.freecodecamp.org/news/what-is-npm-a-node-package-manager-tutorial-for-beginners/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article27title
+                What Is npm?
               </a>
               <a
-                href="trending:article28link"
+                href="https://www.freecodecamp.org/news/rsync-examples-rsync-options-and-how-to-copy-files-over-ssh/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article28title
+                RSync Examples
               </a>
               <a
-                href="trending:article29link"
+                href="https://www.freecodecamp.org/news/how-to-use-the-tree-based-algorithm-for-machine-learning/"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                trending:article29title
+                Random Forest
               </a>
             </div>
           </div>
@@ -281,12 +280,12 @@ exports[`<Footer /> matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="footer-bottom"
+      className="footer-buttom"
     >
       <div
         className="col-header"
       >
-        footer.our-nonprofit
+        Our Nonprofit
       </div>
       <div
         className="footer-divder"
@@ -295,81 +294,81 @@ exports[`<Footer /> matches snapshot 1`] = `
         className="our-nonprofit"
       >
         <a
-          href="links:footer.about-url"
+          href="https://www.freecodecamp.org/news/about/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.about
+          About
         </a>
         <a
           href="https://www.linkedin.com/school/free-code-camp/people/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.alumni
+          Alumni Network
         </a>
         <a
           href="https://github.com/freeCodeCamp/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.open-source
+          Open Source
         </a>
         <a
-          href="links:footer.shop-url"
+          href="https://www.freecodecamp.org/shop/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.shop
+          Shop
         </a>
         <a
-          href="links:footer.support-url"
+          href="https://www.freecodecamp.org/news/support/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.support
+          Support
         </a>
         <a
-          href="links:footer.sponsors-url"
+          href="https://www.freecodecamp.org/news/sponsors/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.sponsors
+          Sponsors
         </a>
         <a
-          href="links:footer.honesty-url"
+          href="https://www.freecodecamp.org/news/academic-honesty-policy/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.honesty
+          Academic Honesty
         </a>
         <a
-          href="links:footer.coc-url"
+          href="https://www.freecodecamp.org/news/code-of-conduct/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.coc
+          Code of Conduct
         </a>
         <a
-          href="links:footer.privacy-url"
+          href="https://www.freecodecamp.org/news/privacy-policy/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.privacy
+          Privacy Policy
         </a>
         <a
-          href="links:footer.tos-url"
+          href="https://www.freecodecamp.org/news/terms-of-service/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.tos
+          Terms of Service
         </a>
         <a
-          href="links:footer.copyright-url"
+          href="https://www.freecodecamp.org/news/copyright-policy/"
           rel="noopener noreferrer"
           target="_blank"
         >
-          footer.links.copyright
+          Copyright Policy
         </a>
       </div>
     </div>

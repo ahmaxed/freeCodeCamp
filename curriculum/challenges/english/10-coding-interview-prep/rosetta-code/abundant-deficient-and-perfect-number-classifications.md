@@ -3,12 +3,11 @@ id: 594810f028c0303b75339acd
 title: 'Abundant, deficient and perfect number classifications'
 challengeType: 5
 forumTopicId: 302221
-dashedName: abundant-deficient-and-perfect-number-classifications
 ---
 
 # --description--
 
-These define three classifications of positive integers based on their proper divisors.
+These define three classifications of positive integers based on their [proper divisors](<https://rosettacode.org/wiki/Proper divisors> "Proper divisors").
 
 Let $P(n)$ be the sum of the proper divisors of `n` where proper divisors are all positive integers `n` other than `n` itself.
 
@@ -22,7 +21,7 @@ If `P(n) > n` then `n` is classed as `abundant`
 
 # --instructions--
 
-Implement a function that calculates how many of the integers from `1` to `num` (inclusive) are in each of the three classes. Output the result as an array in the following format `[deficient, perfect, abundant]`.
+Implement a function that calculates how many of the integers from `1` to `20,000` (inclusive) are in each of the three classes. Output the result as an array in the following format `[deficient, perfect, abundant]`.
 
 # --hints--
 
@@ -32,37 +31,31 @@ Implement a function that calculates how many of the integers from `1` to `num` 
 assert(typeof getDPA === 'function');
 ```
 
-`getDPA(5000)` should return an array.
+`getDPA` should return an array.
 
 ```js
-assert(Array.isArray(getDPA(5000)));
+assert(Array.isArray(getDPA(100)));
 ```
 
-`getDPA(5000)` return array should have a length of `3`.
+`getDPA` return value should have a length of 3.
 
 ```js
-assert(getDPA(5000).length === 3);
+assert(getDPA(100).length === 3);
 ```
 
-`getDPA(5000)` should return `[3758, 3, 1239]`.
+`getDPA(20000)` should equal [15043, 4, 4953]
 
 ```js
-assert.deepEqual(getDPA(5000), [3758, 3, 1239]);
-```
-
-`getDPA(10000)` should return `[7508, 4, 2488]`.
-
-```js
-assert.deepEqual(getDPA(10000), [7508, 4, 2488]);
-```
-
-`getDPA(20000)` should return `[15043, 4, 4953]`.
-
-```js
-assert.deepEqual(getDPA(20000), [15043, 4, 4953]);
+assert.deepEqual(getDPA(20000), solution);
 ```
 
 # --seed--
+
+## --after-user-code--
+
+```js
+const solution = [15043, 4, 4953];
+```
 
 ## --seed-contents--
 

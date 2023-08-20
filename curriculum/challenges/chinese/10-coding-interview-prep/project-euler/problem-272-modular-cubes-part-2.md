@@ -1,42 +1,25 @@
 ---
 id: 5900f47d1000cf542c50ff8f
-title: 'Problem 272: Modular Cubes, part 2'
+title: 问题272：模块化立方体，第2部分
 challengeType: 5
-forumTopicId: 301922
-dashedName: problem-272-modular-cubes-part-2
+videoUrl: ''
 ---
 
 # --description--
 
-For a positive number n, define C(n) as the number of the integers x, for which 1
+对于正数n，将C（n）定义为整数x的数量，为1
 
-When n=91, there are 8 possible values for x, namely : 9, 16, 22, 29, 53, 74, 79, 81. Thus, C(91)=8.
+当n = 91时，x有8个可能的值，即：9,16,22,29,53,74,79,81。因此，C（91）= 8。
 
-Find the sum of the positive numbers n≤1011 for which C(n)=242.
+求出正数n≤1011的总和，其中C（n）= 242。
 
 # --hints--
 
-`euler272()` should return 8495585919506151000.
+`euler272()`应该返回8495585919506151000。
 
 ```js
 assert.strictEqual(euler272(), 8495585919506151000);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler272() {
-
-  return true;
-}
-
-euler272();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

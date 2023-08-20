@@ -3,7 +3,6 @@ id: 5992e222d397f00d21122931
 title: Fibonacci word
 challengeType: 5
 forumTopicId: 302269
-dashedName: fibonacci-word
 ---
 
 # --description--

@@ -1,27 +1,16 @@
 ---
 id: bd7158d8c443edefaeb5bdee
-title: Build an Image Search Abstraction Layer
+title: 构建图像搜索抽象层
 challengeType: 4
-forumTopicId: 302361
-dashedName: build-an-image-search-abstraction-layer
+videoUrl: ''
 ---
 
 # --description--
 
-Build a full stack JavaScript app that allows you to search for images like this: <https://image-search-abstraction-layer.freecodecamp.rocks/query/lolcats%20funny?page=10> and browse recent search queries like this: <https://image-search-abstraction-layer.freecodecamp.rocks/recent/>. Use a site builder of your choice to complete the project.
+**目标：** 构建一个完整的堆栈JavaScript应用程序，允许您搜索如下图像： [https](https://cryptic-ridge-9197.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10) ： [//cryptic-ridge-9197.herokuapp.com/api/imagesearch/lolcats%20funny？offset = 10](https://cryptic-ridge-9197.herokuapp.com/api/imagesearch/lolcats%20funny?offset=10)并浏览此类最近的搜索查询： [https](https://cryptic-ridge-9197.herokuapp.com/api/latest/imagesearch/) ： [//cryptic-ridge-9197.herokuapp.com/api/latest/imagesearch/](https://cryptic-ridge-9197.herokuapp.com/api/latest/imagesearch/) 。然后将其部署到Glitch。请注意，对于每个项目，您应该创建一个新的GitHub存储库和一个新的Glitch项目。如果您不记得如何执行此操作，请重新访问[https://freecodecamp.org/challenges/get-set-for-our-api-development-projects](/challenges/get-set-for-our-api-development-projects) 。以下是您应该为此项目实现的特定用户故事： **用户故事：** 我可以获取与给定搜索字符串相关的一组图像的图像URL，替代文本和页面URL。 **用户故事：** 我可以通过在URL中添加？offset = 2参数来对响应进行分页。 **用户故事：** 我可以获得最近提交的搜索字符串列表。完成这些用户故事的实现后，单击“我已完成此挑战”按钮，然后输入GitHub存储库和在Glitch上运行的实时应用程序的URL。您可以通过Facebook上的朋友分享您的项目反馈。
 
-Here are the specific user stories you should implement for this project:
+# --hints--
 
-**User Story:** You can get the image URLs, description and page URLs for a set of images relating to a given search string.
-
-**User Story:** You can paginate through the responses by adding a `?page=2` parameter to the URL.
-
-**User Story:** You can get a list of the most recently submitted search strings.
-
-When you are done, make sure a working demo of your project is hosted somewhere public. Then submit the URL to it in the `Solution Link` field. Optionally, also submit a link to your project's source code in the `GitHub Link` field.
 
 # --solutions--
 
-```js
-// solution required
-```

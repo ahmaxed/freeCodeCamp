@@ -1,9 +1,7 @@
 ---
 id: 5e7b9f190b6c005b0e76f090
-title: 'Relational Databases: Many-to-many Relationships'
 challengeType: 11
 videoId: z-SBYcvEQOc
-dashedName: relational-databases-many-to-many-relationships
 ---
 
 # --description--
@@ -45,4 +43,9 @@ city to country
 ## --video-solution--
 
 1
+
+# --hints--
+
+
+# --solutions--
 

@@ -3,7 +3,6 @@ id: 587d7b87367417b2b2512b43
 title: Use Arrow Functions to Write Concise Anonymous Functions
 challengeType: 1
 forumTopicId: 301211
-dashedName: use-arrow-functions-to-write-concise-anonymous-functions
 ---
 
 # --description--
@@ -42,7 +41,7 @@ Rewrite the function assigned to the variable `magic` which returns a `new Date(
 
 # --hints--
 
-You should replace the `var` keyword.
+User should replace `var` keyword.
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/var/g));
@@ -60,13 +59,13 @@ You should replace the `var` keyword.
 assert(typeof magic === 'function');
 ```
 
-`magic()` should return the correct date.
+`magic()` should return correct date.
 
 ```js
 assert(magic().setHours(0, 0, 0, 0) === new Date().setHours(0, 0, 0, 0));
 ```
 
-The `function` keyword should not be used.
+`function` keyword should not be used.
 
 ```js
 (getUserInput) => assert(!getUserInput('index').match(/function/g));

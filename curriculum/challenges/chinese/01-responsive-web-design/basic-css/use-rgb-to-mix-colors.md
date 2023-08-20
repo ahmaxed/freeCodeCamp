@@ -4,7 +4,6 @@ title: 使用 RGB 混合颜色
 challengeType: 0
 videoUrl: 'https://scrimba.com/c/cm24JU6'
 forumTopicId: 18368
-dashedName: use-rgb-to-mix-colors
 ---
 
 # --description--
@@ -13,19 +12,19 @@ dashedName: use-rgb-to-mix-colors
 
 # --instructions--
 
-将 `style` 标签里面中的十六进制编码替换为正确的 RGB 值。
+将`style`标签里面中的十六进制编码替换为正确的 RGB 值。
 
-<table class='table table-striped'><tbody><tr><th>颜色</th><th>RGB</th></tr><tr><td>蓝色</td><td><code>rgb(0, 0, 255)</code></td></tr><tr><td>红色</td><td><code>rgb(255, 0, 0)</code></td></tr><tr><td>淡紫色</td><td><code>rgb(218, 112, 214)</code></td></tr><tr><td>赭黄色</td><td><code>rgb(160, 82, 45)</code></td></tr></tbody></table>
+<table class='table table-striped'><tbody><tr><th>Color</th><th>RGB</th></tr><tr><td>Blue</td><td><code>rgb(0, 0, 255)</code></td></tr><tr><td>Red</td><td><code>rgb(255, 0, 0)</code></td></tr><tr><td>Orchid</td><td><code>rgb(218, 112, 214)</code></td></tr><tr><td>Sienna</td><td><code>rgb(160, 82, 45)</code></td></tr></tbody></table>
 
 # --hints--
 
-文本内容为 `I am red!` 的 `h1` 元素的 `color` 值应为红色。
+文本内容为`I am red!`的`h1`元素的字体颜色应该为`red`。
 
 ```js
 assert($('.red-text').css('color') === 'rgb(255, 0, 0)');
 ```
 
-红色应使用 `rgb` 值来表示。
+`red`颜色应使用`RGB`值。
 
 ```js
 assert(
@@ -35,13 +34,13 @@ assert(
 );
 ```
 
-文本内容为 `I am orchid!` 的 `h1` 元素的 `color` 应为淡紫色。
+文本内容为`I am orchid!`的`h1`元素的字体颜色应该为`orchid`。
 
 ```js
 assert($('.orchid-text').css('color') === 'rgb(218, 112, 214)');
 ```
 
-淡紫色应使用 `rgb` 值来表示。
+`orchid`颜色应使用`RGB`值。
 
 ```js
 assert(
@@ -51,13 +50,13 @@ assert(
 );
 ```
 
-文本内容为 `I am blue!` 的 `h1` 元素的 `color` 应为蓝色。
+文本内容为`I am blue!`的`h1`元素的字体颜色应该为`blue`。
 
 ```js
 assert($('.blue-text').css('color') === 'rgb(0, 0, 255)');
 ```
 
-蓝色应使用 `rgb` 值来表示。
+`blue`颜色应使用`RGB`值。
 
 ```js
 assert(
@@ -67,13 +66,13 @@ assert(
 );
 ```
 
-文本内容为 `I am sienna!` 的 `h1` 元素的 `color` 应为赭黄色。
+文本内容为`I am sienna!`的`h1`元素的字体颜色应该为`sienna`。
 
 ```js
 assert($('.sienna-text').css('color') === 'rgb(160, 82, 45)');
 ```
 
-赭黄色应使用 `rgb` 值来表示。
+`sienna`颜色应使用`RGB`值。
 
 ```js
 assert(
@@ -83,58 +82,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```html
-<style>
-  .red-text {
-    color: #000000;
-  }
-  .orchid-text {
-    color: #000000;
-  }
-  .sienna-text {
-    color: #000000;
-  }
-  .blue-text {
-    color: #000000;
-  }
-</style>
-
-<h1 class="red-text">I am red!</h1>
-
-<h1 class="orchid-text">I am orchid!</h1>
-
-<h1 class="sienna-text">I am sienna!</h1>
-
-<h1 class="blue-text">I am blue!</h1>
-```
-
 # --solutions--
 
-```html
-<style>
-  .red-text {
-    color: rgb(255, 0, 0);
-  }
-  .orchid-text {
-    color: rgb(218, 112, 214);
-  }
-  .sienna-text {
-    color: rgb(160, 82, 45);
-  }
-  .blue-text {
-    color:rgb(0, 0, 255);
-  }
-</style>
-
-<h1 class="red-text">I am red!</h1>
-
-<h1 class="orchid-text">I am orchid!</h1>
-
-<h1 class="sienna-text">I am sienna!</h1>
-
-<h1 class="blue-text">I am blue!</h1>
-```

@@ -3,7 +3,6 @@ id: bad87fee1348bd9aed608826
 title: Use appendTo to Move Elements with jQuery
 challengeType: 6
 forumTopicId: 18340
-dashedName: use-appendto-to-move-elements-with-jquery
 ---
 
 # --description--
@@ -14,9 +13,7 @@ jQuery has a function called `appendTo()` that allows you to select HTML element
 
 For example, if we wanted to move `target4` from our right well to our left well, we would use:
 
-```js
-$("#target4").appendTo("#left-well");
-```
+`$("#target4").appendTo("#left-well");`
 
 Move your `target2` element from your `left-well` to your `right-well`.
 

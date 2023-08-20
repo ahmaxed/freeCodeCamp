@@ -1,6 +1,6 @@
 ---
 title: JavaScript Algorithms and Data Structures
-superBlock: javascript-algorithms-and-data-structures
+superBlock: JavaScript Algorithms and Data Structures
 ---
 ## Introduction to JavaScript Algorithms and Data Structures
 

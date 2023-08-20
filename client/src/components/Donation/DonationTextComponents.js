@@ -1,55 +1,64 @@
 import React from 'react';
-import { useTranslation, Trans } from 'react-i18next';
 
-export const DonationSupportText = () => {
-  const { t } = useTranslation();
-  return (
-    <>
-      <h4>
-        <b>{t('donate.need-help')}</b>
-      </h4>
-      <p>{t('donate.forward-receipt')}</p>
-    </>
-  );
-};
+export const DonationSupportText = () => (
+  <>
+    <h4>
+      <b>Need help with your current or past donations?</b>
+    </h4>
+    <p>
+      Forward a copy of your donation receipt to donors@freecodecamp.org and
+      tell us how we can help.
+    </p>
+  </>
+);
 
 export const DonationText = () => {
-  const { t } = useTranslation();
   return (
     <>
-      <p>{t('donate.efficiency')}</p>
-      <p>{t('donate.why-donate-1')}</p>
-      <p>{t('donate.why-donate-2')}</p>
-    </>
-  );
-};
-
-export const DonationOptionsText = () => {
-  const { t } = useTranslation();
-  return (
-    <>
-      <h4>
-        <b>
-          <Trans>donate.bigger-donation</Trans>
-        </b>
-      </h4>
+      <p>freeCodeCamp is a highly efficient education nonprofit.</p>
       <p>
-        <Trans i18nKey='donate.other-ways'>
-          <a href={t('links:donate.other-ways-url')}>placeholder</a>
-        </Trans>
+        When you donate to freeCodeCamp, you help people learn new skills and
+        provide for their families.
+      </p>
+      <p>
+        You also help us create new resources for you to use to expand your own
+        technology skills.
       </p>
     </>
   );
 };
 
-export const DonationOptionsAlertText = () => {
-  const { t } = useTranslation();
-  return (
+export const DonationOptionsText = () => (
+  <>
+    <h4>
+      <b>
+        Want to make a bigger one-time donation, mail us a check, or give in
+        other ways?
+      </b>
+    </h4>
     <p>
-      <Trans>donate.bigger-donation</Trans>{' '}
-      <Trans i18nKey='donate.other-ways'>
-        <a href={t('links:donate.other-ways-url')}>placeholder</a>
-      </Trans>
+      Here are many{' '}
+      <a
+        href={
+          'https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp'
+        }
+      >
+        other ways we could support our non-profit's mission
+      </a>
+      .
     </p>
-  );
-};
+  </>
+);
+
+export const DonationOptionsAlertText = () => (
+  <p>
+    Want to make a bigger one-time donation, mail us a check, or give in other
+    ways? Here are many{' '}
+    <a
+      href={'https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp'}
+    >
+      other ways we could support our non-profit's mission
+    </a>
+    .
+  </p>
+);

@@ -1,15 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { curry } from 'lodash-es';
+import { curry } from 'lodash';
 import { createSelector } from 'reselect';
 import { connect } from 'react-redux';
 import { Row, Col } from '@freecodecamp/react-bootstrap';
-import { useTranslation } from 'react-i18next';
 
 import { certificatesByNameSelector } from '../../../redux';
 import { ButtonSpacer, FullWidthRow, Link, Spacer } from '../../helpers';
 import './certifications.css';
-import { CurrentCertsType } from '../../../redux/propTypes';
 
 const mapStateToProps = (state, props) =>
   createSelector(
@@ -22,11 +20,19 @@ const mapStateToProps = (state, props) =>
     })
   )(state, props);
 
+const certArrayTypes = PropTypes.arrayOf(
+  PropTypes.shape({
+    show: PropTypes.bool,
+    title: PropTypes.string,
+    showURL: PropTypes.string
+  })
+);
+
 const propTypes = {
-  currentCerts: CurrentCertsType,
+  currentCerts: certArrayTypes,
   hasLegacyCert: PropTypes.bool,
   hasModernCert: PropTypes.bool,
-  legacyCerts: CurrentCertsType,
+  legacyCerts: certArrayTypes,
   username: PropTypes.string
 };
 
@@ -38,7 +44,7 @@ function renderCertShow(username, cert) {
           <Link
             className='btn btn-lg btn-primary btn-block'
             external={true}
-            to={`/certification/${username}/${cert.certSlug}`}
+            to={`/certification/${username}/${cert.showURL}`}
           >
             View {cert.title}
           </Link>
@@ -56,21 +62,22 @@ function Certificates({
   hasModernCert,
   username
 }) {
-  const { t } = useTranslation();
   const renderCertShowWithUsername = curry(renderCertShow)(username);
   return (
     <FullWidthRow className='certifications'>
-      <h2 className='text-center'>{t('profile.fcc-certs')}</h2>
+      <h2 className='text-center'>freeCodeCamp Certifications</h2>
       <br />
       {hasModernCert ? (
         currentCerts.map(renderCertShowWithUsername)
       ) : (
-        <p className='text-center'>{t('profile.no-certs')}</p>
+        <p className='text-center'>
+          No certifications have been earned under the current curriculum
+        </p>
       )}
       {hasLegacyCert ? (
         <div>
           <br />
-          <h3 className='text-center'>{t('settings.headings.legacy-certs')}</h3>
+          <h3 className='text-center'>Legacy Certifications</h3>
           <br />
           {legacyCerts.map(renderCertShowWithUsername)}
           <Spacer size={2} />

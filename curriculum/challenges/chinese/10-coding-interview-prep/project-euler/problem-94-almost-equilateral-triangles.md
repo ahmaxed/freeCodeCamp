@@ -1,48 +1,21 @@
 ---
 id: 5900f3ca1000cf542c50fedd
-title: 'Problem 94: Almost equilateral triangles'
+title: 问题94：几乎等边三角形
 challengeType: 5
-forumTopicId: 302211
-dashedName: problem-94-almost-equilateral-triangles
+videoUrl: ''
 ---
 
 # --description--
 
-It is easily proved that no equilateral triangle exists with integral length sides and integral area. However, the <dfn>almost equilateral triangle</dfn> 5-5-6 has an area of 12 square units.
-
-We shall define an <dfn>almost equilateral triangle</dfn> to be a triangle for which two sides are equal and the third differs by no more than one unit.
-
-Find the sum of the perimeters of all <dfn>almost equilateral triangle</dfn> with integral side lengths and area and whose perimeters do not exceed one billion (1,000,000,000).
+很容易证明，不存在具有整体长边和整体面积的等边三角形。然而，几乎等边三角形5-5-6的面积为12平方单位。我们将几乎等边三角形定义为三边形，其中两边相等，第三边相差不超过一个单位。求出所有几乎等边三角形的周长之和，其中边长和面积不超过十亿（1,000,000,000）。
 
 # --hints--
 
-`almostEquilateralTriangles()` should return a number.
+`euler94()`应该返回518408346。
 
 ```js
-assert(typeof almostEquilateralTriangles() === 'number');
-```
-
-`almostEquilateralTriangles()` should return 518408346.
-
-```js
-assert.strictEqual(almostEquilateralTriangles(), 518408346);
-```
-
-# --seed--
-
-## --seed-contents--
-
-```js
-function almostEquilateralTriangles() {
-
-  return true;
-}
-
-almostEquilateralTriangles();
+assert.strictEqual(euler94(), 518408346);
 ```
 
 # --solutions--
 
-```js
-// solution required
-```

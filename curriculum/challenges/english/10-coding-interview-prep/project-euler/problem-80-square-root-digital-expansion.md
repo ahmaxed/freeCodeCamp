@@ -3,7 +3,6 @@ id: 5900f3bc1000cf542c50fecf
 title: 'Problem 80: Square root digital expansion'
 challengeType: 5
 forumTopicId: 302194
-dashedName: problem-80-square-root-digital-expansion
 ---
 
 # --description--

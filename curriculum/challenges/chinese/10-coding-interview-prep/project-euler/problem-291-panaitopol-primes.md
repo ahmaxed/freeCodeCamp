@@ -1,40 +1,23 @@
 ---
 id: 5900f48f1000cf542c50ffa2
-title: 'Problem 291: Panaitopol Primes'
+title: 问题291：Panaitopol素数
 challengeType: 5
-forumTopicId: 301943
-dashedName: problem-291-panaitopol-primes
+videoUrl: ''
 ---
 
 # --description--
 
-A prime number p is called a Panaitopol prime if for some positive integersx and y.
+如果对于某些正整数x和y，素数p称为Panaitopol素数。
 
-Find how many Panaitopol primes are less than 5×1015.
+找出多少个Panaitopol素数小于5×1015。
 
 # --hints--
 
-`euler291()` should return 4037526.
+`euler291()`应该返回4037526。
 
 ```js
 assert.strictEqual(euler291(), 4037526);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler291() {
-
-  return true;
-}
-
-euler291();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

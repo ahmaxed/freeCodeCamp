@@ -1,30 +1,17 @@
 ---
 id: 587d8255367417b2b2512c74
-title: Create a Priority Queue Class
+title: 创建优先级队列类
 challengeType: 1
-forumTopicId: 301630
-dashedName: create-a-priority-queue-class
+videoUrl: ''
 ---
 
 # --description--
 
-In this challenge you will be creating a Priority Queue. A Priority Queue is a special type of Queue in which items may have additional information which specifies their priority. This could be simply represented with an integer. Item priority will override placement order in determining the sequence items are dequeued. If an item with a higher priority is enqueued after items with lower priority, the higher priority item will be dequeued before all the others.
-
-For instance, let’s imagine we have a priority queue with three items:
-
-`[['kitten', 2], ['dog', 2], ['rabbit', 2]]`
-
-Here the second value (an integer) represents item priority. If we enqueue `['human', 1]` with a priority of `1` (assuming lower priorities are given precedence) it would then be the first item to be dequeued. The collection would look like this:
-
-`[['human', 1], ['kitten', 2], ['dog', 2], ['rabbit', 2]]`.
-
-We’ve started writing a `PriorityQueue` in the code editor. You will need to add an `enqueue` method for adding items with a priority, a `dequeue` method for removing and returning items, a `size` method to return the number of items in the queue, a `front` method to return the element at the front of the queue, and finally an `isEmpty` method that will return `true` if the queue is empty or `false` if it is not.
-
-The `enqueue` should accept items with the format shown above (`['human', 1]`) where `1` represents the priority. `dequeue` and `front` should return only the item's name, not its priority.
+在此挑战中，您将创建一个优先级队列。优先级队列是一种特殊类型的队列，其中项目可能具有指定其优先级的附加信息。这可以简单地用整数表示。项目优先级将覆盖确定序列项目已出列的放置顺序。如果具有较高优先级的项目在具有较低优先级的项目之后排队，则较高优先级项目将在所有其他项目之前出列。例如，让我们假设我们有一个包含三个项目的优先级队列： `[['kitten', 2], ['dog', 2], ['rabbit', 2]]`这里第二个值（整数）表示项目优先级。如果我们将优先级为`1` `['human', 1]`排入队列（假设优先级较低，则优先级较低），那么它将成为第一个出列的项目。该集合将是这样的： `[['human', 1], ['kitten', 2], ['dog', 2], ['rabbit', 2]]` 。我们已经开始在代码编辑器中编写`PriorityQueue` 。您需要添加一个`enqueue`方法来添加具有优先级的项目，一个用于删除项目的`dequeue`方法，一个用于返回队列中项目数量的`size`方法，一个用于返回队列`front`元素的`front`方法，以及最后一个`isEmpty`方法，如果队列为空则返回`true` ，否则返回`false` 。入`enqueue`应接受上面显示格式的项目（ `['human', 1]` ），其中`1`表示优先级。 `dequeue`应该只返回当前项目，而不是其优先级。
 
 # --hints--
 
-Your `PriorityQueue` class should have a `enqueue` method.
+您的`Queue`类应该有一个`enqueue`方法。
 
 ```js
 assert(
@@ -35,7 +22,7 @@ assert(
 );
 ```
 
-Your `PriorityQueue` class should have a `dequeue` method.
+您的`Queue`类应该有一个`dequeue`方法。
 
 ```js
 assert(
@@ -46,7 +33,7 @@ assert(
 );
 ```
 
-Your `PriorityQueue` class should have a `size` method.
+您的`Queue`类应该有一个`size`方法。
 
 ```js
 assert(
@@ -57,18 +44,7 @@ assert(
 );
 ```
 
-Your `PriorityQueue` class should have a `front` method.
-
-```js
-assert(
-  (function () {
-    var test = new PriorityQueue();
-    return typeof test.front === 'function';
-  })()
-);
-```
-
-Your `PriorityQueue` class should have an `isEmpty` method.
+您的`Queue`类应该有一个`isEmpty`方法。
 
 ```js
 assert(
@@ -79,7 +55,7 @@ assert(
 );
 ```
 
-Your `PriorityQueue` class should correctly keep track of the current number of items using the `size` method as items are enqueued and dequeued.
+当项目入队和出列时，您的PriorityQueue应使用`size`方法正确跟踪当前项目数。
 
 ```js
 assert(
@@ -98,34 +74,7 @@ assert(
 );
 ```
 
-The `front` method should return the correct item at the front of the queue as items are enqueued and dequeued.
-
-```js
-assert(
-  (function () {
-    var test = new PriorityQueue();
-    test.enqueue(['David Brown', 2]);
-    var front1 = test.front();
-    test.enqueue(['Jon Snow', 1]);
-    var front2 = test.front();
-    test.dequeue();
-    test.enqueue(['A', 3]);
-    var front3 = test.front();
-    test.enqueue(['B', 3]);
-    test.enqueue(['C', 3]);
-    test.dequeue();
-    var front4 = test.front();
-    return (
-      front1 === 'David Brown' &&
-      front2 === 'Jon Snow' &&
-      front3 === 'David Brown' &&
-      front4 === 'A'
-    );
-  })()
-);
-```
-
-The `isEmpty` method should return `true` when the queue is empty.
+当队列为空时， `isEmpty`方法应该返回`true` 。
 
 ```js
 assert(
@@ -141,7 +90,7 @@ assert(
 );
 ```
 
-The priority queue should return items with a higher priority before items with a lower priority and return items in first-in-first-out order otherwise.
+优先级队列应该在具有较低优先级的项之前返回具有较高优先级的项，否则以先进先出顺序返回项。
 
 ```js
 assert(
@@ -165,63 +114,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function PriorityQueue () {
-  this.collection = [];
-  this.printCollection = function() {
-    console.log(this.collection);
-  };
-  // Only change code below this line
-
-  // Only change code above this line
-}
-```
-
 # --solutions--
 
-```js
-function PriorityQueue() {
-  this.collection = [];
-  this.printCollection = function () {
-    console.log(this.collection);
-  };
-  // Only change code below this line
-  this.enqueue = function (newitem) {
-    if (this.isEmpty()) {
-      return this.collection.push(newitem);
-    }
-
-    this.collection = this.collection.reverse();
-    var found_index = this.collection.findIndex(function (item) {
-      return newitem[1] >= item[1];
-    });
-    if (found_index === -1) {
-      this.collection.push(newitem);
-    } else {
-      this.collection.splice(found_index, 0, newitem);
-    }
-    this.collection = this.collection.reverse();
-  };
-  this.dequeue = function () {
-    if (!this.isEmpty()) {
-      return this.collection.shift()[0];
-    } else {
-      return "The queue is empty.";
-    }
-  };
-  this.size = function () {
-    return this.collection.length;
-  };
-  this.front = function () {
-    return this.collection[0][0];
-  };
-  this.isEmpty = function () {
-    return this.size() > 0 ? false : true;
-  };
-  // Only change code above this line
-}
-```

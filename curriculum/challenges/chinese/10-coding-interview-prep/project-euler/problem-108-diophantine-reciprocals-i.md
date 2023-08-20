@@ -1,48 +1,23 @@
 ---
 id: 5900f3d91000cf542c50feeb
-title: 'Problem 108: Diophantine Reciprocals I'
+title: 问题108：丢番图互惠I
 challengeType: 5
-forumTopicId: 301732
-dashedName: problem-108-diophantine-reciprocals-i
+videoUrl: ''
 ---
 
 # --description--
 
-In the following equation x, y, and n are positive integers.
-
-1/`x` + 1/`y` = 1/`n`
-
-For `n` = 4 there are exactly three distinct solutions:
-
-1/5 + 1/20 = 1/4  
+在下面的等式中，x，y和n是正整数。 1 / `x` + 1 / `y` = 1 / `n`对于`n` = 4，恰好有三种不同的解：1/5 + 1/20 = 1/4  
 1/6 + 1/12 = 1/4  
-1/8 + 1/8 = 1/4
-
-What is the least value of `n` for which the number of distinct solutions exceeds one-thousand?
+1/8 + 1/8 = 1/4不同解的数量超过一千的`n的`最小值是多少？
 
 # --hints--
 
-`diophantineOne()` should return 180180.
+diophantineOne `diophantineOne()`应返回180180。
 
 ```js
 assert.strictEqual(diophantineOne(), 180180);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function diophantineOne() {
-
-  return true;
-}
-
-diophantineOne();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

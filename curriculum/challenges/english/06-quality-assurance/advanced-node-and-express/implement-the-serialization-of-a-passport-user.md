@@ -3,7 +3,6 @@ id: 5895f70cf9fc0f352b528e67
 title: Implement the Serialization of a Passport User
 challengeType: 2
 forumTopicId: 301556
-dashedName: implement-the-serialization-of-a-passport-user
 ---
 
 # --description--
@@ -79,6 +78,8 @@ Deserialization should now be correctly using the DB and `done(null, null)` shou
     }
   );
 ```
+
+# --seed--
 
 # --solutions--
 

@@ -1,48 +1,27 @@
 ---
 id: 5900f5021000cf542c510014
-title: 'Problem 405: A rectangular tiling'
+title: 问题405：矩形平铺
 challengeType: 5
-forumTopicId: 302073
-dashedName: problem-405-a-rectangular-tiling
+videoUrl: ''
 ---
 
 # --description--
 
-We wish to tile a rectangle whose length is twice its width.
+我们希望平铺一个长度是其宽度两倍的矩形。设T（0）为由单个矩形组成的平铺。对于n> 0，通过以下列方式替换所有瓦片，从T（n-1）获得T（n）：
 
-Let T(0) be the tiling consisting of a single rectangle.
+以下动画演示了从0到5的n的倾斜T（n）：
 
-For n > 0, let T(n) be obtained from T(n-1) by replacing all tiles in the following manner:
+设f（n）是四个瓦片在T（n）中相交的点数。例如，f（1）= 0，f（4）= 82并且f（109）mod 177 = 126897180。
 
-The following animation demonstrates the tilings T(n) for n from 0 to 5:
-
-Let f(n) be the number of points where four tiles meet in T(n). For example, f(1) = 0, f(4) = 82 and f(109) mod 177 = 126897180.
-
-Find f(10k) for k = 1018, give your answer modulo 177.
+找到f（10k）为k = 1018，给出你的答案模数为177。
 
 # --hints--
 
-`euler405()` should return 237696125.
+`euler405()`应返回237696125。
 
 ```js
 assert.strictEqual(euler405(), 237696125);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler405() {
-
-  return true;
-}
-
-euler405();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

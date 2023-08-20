@@ -3,7 +3,6 @@ id: 587d7b89367417b2b2512b48
 title: Use the Spread Operator to Evaluate Arrays In-Place
 challengeType: 1
 forumTopicId: 301222
-dashedName: use-the-spread-operator-to-evaluate-arrays-in-place
 ---
 
 # --description--
@@ -14,24 +13,20 @@ The ES5 code below uses `apply()` to compute the maximum value in an array:
 
 ```js
 var arr = [6, 89, 3, 45];
-var maximus = Math.max.apply(null, arr);
+var maximus = Math.max.apply(null, arr); // returns 89
 ```
-
-`maximus` would have a value of `89`.
 
 We had to use `Math.max.apply(null, arr)` because `Math.max(arr)` returns `NaN`. `Math.max()` expects comma-separated arguments, but not an array. The spread operator makes this syntax much better to read and maintain.
 
 ```js
 const arr = [6, 89, 3, 45];
-const maximus = Math.max(...arr);
+const maximus = Math.max(...arr); // returns 89
 ```
-
-`maximus` would have a value of `89`.
 
 `...arr` returns an unpacked array. In other words, it *spreads* the array. However, the spread operator only works in-place, like in an argument to a function or in an array literal. The following code will not work:
 
 ```js
-const spreaded = ...arr;
+const spreaded = ...arr; // will throw a syntax error
 ```
 
 # --instructions--

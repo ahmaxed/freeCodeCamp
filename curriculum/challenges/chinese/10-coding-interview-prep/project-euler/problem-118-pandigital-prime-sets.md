@@ -1,40 +1,21 @@
 ---
 id: 5900f3e21000cf542c50fef5
-title: 'Problem 118: Pandigital prime sets'
+title: 问题118：Pandigital prime set
 challengeType: 5
-forumTopicId: 301744
-dashedName: problem-118-pandigital-prime-sets
+videoUrl: ''
 ---
 
 # --description--
 
-Using all of the digits 1 through 9 and concatenating them freely to form decimal integers, different sets can be formed. Interestingly with the set {2,5,47,89,631}, all of the elements belonging to it are prime.
-
-How many distinct sets containing each of the digits one through nine exactly once contain only prime elements?
+使用所有数字1到9并自由地连接它们以形成十进制整数，可以形成不同的集合。有趣的是，集合{2,5,47,89,631}，属于它的所有元素都是素数。包含每个数字1到9的多少个不同的集合只包含主要元素？
 
 # --hints--
 
-`euler118()` should return 44680.
+`euler118()`应返回44680。
 
 ```js
 assert.strictEqual(euler118(), 44680);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler118() {
-
-  return true;
-}
-
-euler118();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

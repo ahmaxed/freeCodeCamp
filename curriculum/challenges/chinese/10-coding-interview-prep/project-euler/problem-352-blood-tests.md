@@ -1,56 +1,37 @@
 ---
 id: 5900f4cd1000cf542c50ffdf
-title: 'Problem 352: Blood tests'
+title: 问题352：验血
 challengeType: 5
-forumTopicId: 302012
-dashedName: problem-352-blood-tests
+videoUrl: ''
 ---
 
 # --description--
 
-Each one of the 25 sheep in a flock must be tested for a rare virus, known to affect 2% of the sheep population.
+必须对一群羊中的25只绵羊中的每一只进行稀有病毒检测，已知这种病毒会影响2％的绵羊群体。对血液样品存在准确且极其灵敏的PCR测试，产生明显的阳性/阴性结果，但是它非常耗时且昂贵。
 
-An accurate and extremely sensitive PCR test exists for blood samples, producing a clear positive / negative result, but it is very time-consuming and expensive.
+由于成本高，负责人建议不要进行25次单独的测试，而是可以使用以下程序：将绵羊分成5组，每组5只绵羊。对于每组，将5个样品混合在一起并进行单次测试。然后，如果结果是阴性，则该组中的所有绵羊都被认为是无病毒的。如果结果为阳性，将进行5次额外测试（对每只动物进行单独测试）以确定受影响的个体。
 
-Because of the high cost, the vet-in-charge suggests that instead of performing 25 separate tests, the following procedure can be used instead: The sheep are split into 5 groups of 5 sheep in each group. For each group, the 5 samples are mixed together and a single test is performed. Then, If the result is negative, all the sheep in that group are deemed to be virus-free. If the result is positive, 5 additional tests will be performed (a separate test for each animal) to determine the affected individual(s).
+由于任何特定动物的感染概率仅为0.02，因此每组的第一次测试（在合并的样本上）将为：阴性（并且不再需要测试），概率为0.985 = 0.9039207968。正（需要5次额外测试），概率为1 - 0.9039207968 = 0.0960792032。
 
-Since the probability of infection for any specific animal is only 0.02, the first test (on the pooled samples) for each group will be: Negative (and no more tests needed) with probability 0.985 = 0.9039207968. Positive (5 additional tests needed) with probability 1 - 0.9039207968 = 0.0960792032.
+因此，每组的预期测试次数是1 + 0.0960792032×5 = 1.480396016。因此，所有5组都可以使用平均仅1.480396016×5 = 7.40198008的测试进行筛选，这意味着节省了超过70％的巨额费用！
 
-Thus, the expected number of tests for each group is 1 + 0.0960792032 × 5 = 1.480396016. Consequently, all 5 groups can be screened using an average of only 1.480396016 × 5 = 7.40198008 tests, which represents a huge saving of more than 70% !
+尽管我们刚刚描述的方案似乎非常有效，但它仍然可以得到显着改善（总是假设测试足够敏感并且不会因混合不同样品而产生不利影响）。例如：我们可以首先对所有25个样本的混合物进行测试。可以证实，在大约60.35％的情况下，该测试将是否定的，因此不再需要进行测试。其余39.65％的案件只需要进一步测试。如果我们知道5个一组中至少有一只动物被感染并且前4个个体测试结果为阴性，则不需要对第五个动物进行测试（我们知道它必须被感染）。我们可以在每组中尝试不同数量的组/不同数量的动物，在每个级别调整这些数字，以便最小化测试的总预期数量。
 
-Although the scheme we have just described seems to be very efficient, it can still be improved considerably (always assuming that the test is sufficiently sensitive and that there are no adverse effects caused by mixing different samples). E.g.: We may start by running a test on a mixture of all the 25 samples. It can be verified that in about 60.35% of the cases this test will be negative, thus no more tests will be needed. Further testing will only be required for the remaining 39.65% of the cases. If we know that at least one animal in a group of 5 is infected and the first 4 individual tests come out negative, there is no need to run a test on the fifth animal (we know that it must be infected). We can try a different number of groups / different number of animals in each group, adjusting those numbers at each level so that the total expected number of tests will be minimised.
+为了简化各种各样的可能性，我们在设计最具成本效益的测试方案时有一个限制：每当我们从混合样本开始时，必须对所有对该样本做出贡献的绵羊进行全面筛选（即对感染的判断）在我们开始检查任何其他动物之前，必须达到/无病毒。
 
-To simplify the very wide range of possibilities, there is one restriction we place when devising the most cost-efficient testing scheme: whenever we start with a mixed sample, all the sheep contributing to that sample must be fully screened (i.e. a verdict of infected / virus-free must be reached for all of them) before we start examining any other animals.
+对于当前的例子，事实证明，最具成本效益的测试方案（我们称之为最优策略）需要平均只需4.155452次测试！
 
-For the current example, it turns out that the most cost-efficient testing scheme (we'll call it the optimal strategy) requires an average of just 4.155452 tests!
+使用最优策略，让T（s，p）代表筛选一群绵羊所需的平均测试次数，以获得任何个体中存在概率p的病毒。因此，四舍五入到小数点后六位，T（25,0.02）= 4.155452，T（25,0.10）= 12.702124。
 
-Using the optimal strategy, let T(s,p) represent the average number of tests needed to screen a flock of s sheep for a virus having probability p to be present in any individual. Thus, rounded to six decimal places, T(25, 0.02) = 4.155452 and T(25, 0.10) = 12.702124.
-
-Find ΣT(10000, p) for p=0.01, 0.02, 0.03, ... 0.50. Give your answer rounded to six decimal places.
+找到ΣT（10000，p），p = 0.01,0.02,0.03，...... 0.50。将您的答案四舍五入到小数点后六位。
 
 # --hints--
 
-`euler352()` should return 378563.260589.
+`euler352()`应该返回378563.260589。
 
 ```js
 assert.strictEqual(euler352(), 378563.260589);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler352() {
-
-  return true;
-}
-
-euler352();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

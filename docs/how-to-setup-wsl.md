@@ -69,10 +69,10 @@ Once you have configured Docker Desktop to work with WSL2, follow these steps to
 
 1. Launch a new Ubuntu-18.04 terminal
 
-2. Pull `MongoDB 4.0.x` from dockerhub
+2. Pull `MongoDB 3.6` from dockerhub
 
    ```console
-   docker pull mongo:4.0
+   docker pull mongo:3
    ```
 
 3. Start the MongoDB service at port `27017`, and configure it to run automatically on system restarts
@@ -83,7 +83,7 @@ Once you have configured Docker Desktop to work with WSL2, follow these steps to
      -p 27017:27017 \
      --name mongodb \
      --restart unless-stopped \
-     -d mongo:4.0
+     -d mongo:3
    ```
 
 4. You can now access the service from both Windows or Ubuntu at `mongodb://localhost:27017`.

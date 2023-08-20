@@ -1,50 +1,33 @@
 ---
 id: 5900f49a1000cf542c50ffac
-title: 'Problem 300: Protein folding'
+title: 问题300：蛋白质折叠
 challengeType: 5
-forumTopicId: 301954
-dashedName: problem-300-protein-folding
+videoUrl: ''
 ---
 
 # --description--
 
-In a very simplified form, we can consider proteins as strings consisting of hydrophobic (H) and polar (P) elements, e.g. HHPPHHHPHHPH.
+以一种非常简化的形式，我们可以将蛋白质视为由疏水（H）和极性（P）元素（例如HHPPHHHPHHPH。
 
-For this problem, the orientation of a protein is important; e.g. HPP is considered distinct from PPH. Thus, there are 2n distinct proteins consisting of n elements.
+对于这个问题，蛋白质的方向很重要。例如HPP被认为与PPH不同。因此，存在2n个由n个元素组成的不同蛋白质。
 
-When one encounters these strings in nature, they are always folded in such a way that the number of H-H contact points is as large as possible, since this is energetically advantageous. As a result, the H-elements tend to accumulate in the inner part, with the P-elements on the outside. Natural proteins are folded in three dimensions of course, but we will only consider protein folding in two dimensions.
+当人们自然地遇到这些弦时，它们总是以H-H接触点的数量尽可能多的方式折叠，因为这在能量上是有利的。 结果，H元素倾向于在内部积累，而P元素在外部。 天然蛋白质当然会在三个维度上折叠，但我们只会考虑蛋白质在两个维度上的折叠。
 
-The figure below shows two possible ways that our example protein could be folded (H-H contact points are shown with red dots).
+下图显示了我们的示例蛋白质可以折叠的两种可能方式（H-H接触点用红色圆点显示）。
 
-The folding on the left has only six H-H contact points, thus it would never occur naturally. On the other hand, the folding on the right has nine H-H contact points, which is optimal for this string.
+左侧的折叠只有六个H-H接触点，因此永远不会自然发生。 另一方面，右侧的折叠具有9个H-H接触点，这对于此琴弦是最佳的。
 
-Assuming that H and P elements are equally likely to occur in any position along the string, the average number of H-H contact points in an optimal folding of a random protein string of length 8 turns out to be 850 / 28=3.3203125.
+假设H和P元素同样可能出现在沿着字符串的任何位置，那么长度为8的随机蛋白质字符串最优折叠中H-H接触点的平均数量为850/28 = 3.3203125。
 
-What is the average number of H-H contact points in an optimal folding of a random protein string of length 15? Give your answer using as many decimal places as necessary for an exact result.
+在最佳折叠长度为15的随机蛋白质串中，H-H接触点的平均数量是多少？ 要获得准确的结果，请使用尽可能多的小数位给出答案。
 
 # --hints--
 
-`euler300()` should return 8.0540771484375.
+`euler300()`应该返回8.0540771484375。
 
 ```js
 assert.strictEqual(euler300(), 8.0540771484375);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler300() {
-
-  return true;
-}
-
-euler300();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

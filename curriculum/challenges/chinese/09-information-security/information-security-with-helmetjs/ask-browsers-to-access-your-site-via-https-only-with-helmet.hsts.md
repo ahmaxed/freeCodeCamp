@@ -1,26 +1,25 @@
 ---
 id: 587d8248367417b2b2512c3c
-title: Ask Browsers to Access Your Site via HTTPS Only with helmet.hsts()
+title: 要求浏览器通过HTTPS访问您的站点仅限于使用helmet.hsts（）
 challengeType: 2
 forumTopicId: 301573
-dashedName: ask-browsers-to-access-your-site-via-https-only-with-helmet-hsts
 ---
 
 # --description--
 
-As a reminder, this project is being built upon the following starter project on [Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-infosec), or cloned from [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/).
+请注意，本项目在 [这个 Repl.it 项目](https://repl.it/github/freeCodeCamp/boilerplate-infosec) 的基础上进行开发。你也可以从 [GitHub](https://github.com/freeCodeCamp/boilerplate-infosec/) 上克隆。
 
-HTTP Strict Transport Security (HSTS) is a web security policy which helps to protect websites against protocol downgrade attacks and cookie hijacking. If your website can be accessed via HTTPS you can ask user’s browsers to avoid using insecure HTTP. By setting the header Strict-Transport-Security, you tell the browsers to use HTTPS for the future requests in a specified amount of time. This will work for the requests coming after the initial request.
+HTTP 严格安全传输（HSTS）是一个能帮助我们抵御协议 [降级攻击](https://en.wikipedia.org/wiki/Downgrade_attack) 和 [Cookie 挟持](https://en.wikipedia.org/wiki/Session_hijacking) 的 WEB 安全协议。如果你的网站能够通过 HTTPS 访问，那么你就可以让你的用户避免使用不安全的 HTTP 协议访问。为此，你只需要在 header 中设置 Strict-Transport-Security 字段，以此来告诉浏览器在今后的一段时间内使用 HTTPS 来请求网站内容。这一设置对首次请求之后所以的后续请求都适用。
 
 # --instructions--
 
-Configure `helmet.hsts()` to use HTTPS for the next 90 days. Pass the config object `{maxAge: timeInSeconds, force: true}`. You can create a variable `ninetyDaysInSeconds = 90*24*60*60;` to use for the `timeInSeconds`. Repl.it already has hsts enabled. To override its settings you need to set the field "force" to true in the config object. We will intercept and restore the Repl.it header, after inspecting it for testing.
+通过 `helmet.hsts()`，网站会在未来的90天内使用 HTTPS。我们还可以传入配置对象 `{maxAge: timeInSeconds, force: true}`。Repl.it 默认已经开启 hsts，但你仍然可以通过添加 `{force: true}` 来覆盖它。我们会拦截 Glitch 请求的 header 来进行此挑战的测试，然后恢复此项配置。
 
-Note: Configuring HTTPS on a custom website requires the acquisition of a domain, and a SSL/TLS Certificate.
+注意: 配置 HTTPS 需要域名以及 SSL/TSL 证书。
 
 # --hints--
 
-helmet.hsts() middleware should be mounted correctly
+应正确加载 helmet.hsts() 中间件
 
 ```js
 (getUserInput) =>
@@ -35,7 +34,7 @@ helmet.hsts() middleware should be mounted correctly
   );
 ```
 
-maxAge should be equal to 7776000 s (90 days)
+应将 maxAge 设置为 7776000 ms（90 天）
 
 ```js
 (getUserInput) =>
@@ -54,10 +53,3 @@ maxAge should be equal to 7776000 s (90 days)
 
 # --solutions--
 
-```js
-/**
-  Backend challenges don't need solutions, 
-  because they would need to be tested against a full working project. 
-  Please check our contributing guidelines to learn more.
-*/
-```

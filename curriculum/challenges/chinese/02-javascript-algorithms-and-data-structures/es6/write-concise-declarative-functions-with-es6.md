@@ -3,12 +3,11 @@ id: 587d7b8b367417b2b2512b50
 title: 用 ES6 编写简洁的函数声明
 challengeType: 1
 forumTopicId: 301224
-dashedName: write-concise-declarative-functions-with-es6
 ---
 
 # --description--
 
-在 ES5 中，当我们需要在对象中定义一个函数的时候，必须像这样使用 `function` 关键字：
+在 ES5 中，当我们需要在对象中定义一个函数的时候，我们必须如下面这般使用`function`关键字：
 
 ```js
 const person = {
@@ -19,7 +18,7 @@ const person = {
 };
 ```
 
-用 ES6 的语法在对象中定义函数的时候，可以删除 `function` 关键词和冒号。 请看以下例子：
+在 ES6 语法的对象中定义函数的时候，你可以完全删除`function`关键字和冒号。请看以下例子：
 
 ```js
 const person = {
@@ -32,17 +31,17 @@ const person = {
 
 # --instructions--
 
-使用以上这种简短的语法，重构在 `bicycle` 对象中的 `setGear` 函数。
+使用以上这种简短的语法，重构在`bicycle`对象中的`setGear`函数。
 
 # --hints--
 
-不应使用传统的函数定义方法。
+不应使用`function`关键字定义方法。
 
 ```js
-(getUserInput) => assert(!code.match(/function/));
+(getUserInput) => assert(!removeJSComments(code).match(/function/));
 ```
 
-`setGear` 应是一个声明函数。
+`setGear`应是一个函数。
 
 ```js
 assert(
@@ -50,37 +49,11 @@ assert(
 );
 ```
 
-`bicycle.setGear(48)` 应将 `gear` 的值改为 48。
+执行`bicycle.setGear(48)`应可以让`gear`的值变为 48。
 
 ```js
 assert(new bicycle.setGear(48).gear === 48);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-// Only change code below this line
-const bicycle = {
-  gear: 2,
-  setGear: function(newGear) {
-    this.gear = newGear;
-  }
-};
-// Only change code above this line
-bicycle.setGear(3);
-console.log(bicycle.gear);
-```
-
 # --solutions--
 
-```js
-const bicycle = {
-  gear: 2,
-  setGear(newGear) {
-    this.gear = newGear;
-  }
-};
-bicycle.setGear(3);
-```

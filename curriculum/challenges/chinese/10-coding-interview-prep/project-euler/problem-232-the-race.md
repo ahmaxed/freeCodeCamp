@@ -1,44 +1,27 @@
 ---
 id: 5900f4551000cf542c50ff67
-title: 'Problem 232: The Race'
+title: 问题232：比赛
 challengeType: 5
-forumTopicId: 301876
-dashedName: problem-232-the-race
+videoUrl: ''
 ---
 
 # --description--
 
-Two players share an unbiased coin and take it in turns to play "The Race". On Player 1's turn, he tosses the coin once: if it comes up Heads, he scores one point; if it comes up Tails, he scores nothing. On Player 2's turn, she chooses a positive integer T and tosses the coin T times: if it comes up all Heads, she scores 2T-1 points; otherwise, she scores nothing. Player 1 goes first. The winner is the first to 100 or more points.
+两名玩家分享一个无偏见的硬币并轮流玩“The Race”。在玩家1的回合中，他扔了一次硬币：如果它出现在Heads，他得分为1分;如果它出现Tails，他什么都没得分。在玩家2的回合中，她选择一个正整数T并将硬币投掷T次：如果它出现在所有的头上，她得到2T-1分;否则，她没有得分。玩家1排在第一位。获胜者是第一个达到100分或更多分。
 
-On each turn Player 2 selects the number, T, of coin tosses that maximises the probability of her winning.
+在每次转弯时，玩家2选择硬币投掷的数量T，以最大化她获胜的概率。
 
-What is the probability that Player 2 wins?
+玩家2获胜的概率是多少？
 
-Give your answer rounded to eight decimal places in the form 0.abcdefgh .
+将您的答案四舍五入到0.abcdefgh形式的八位小数。
 
 # --hints--
 
-`euler232()` should return 0.83648556.
+`euler232()`应返回0.83648556。
 
 ```js
 assert.strictEqual(euler232(), 0.83648556);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler232() {
-
-  return true;
-}
-
-euler232();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

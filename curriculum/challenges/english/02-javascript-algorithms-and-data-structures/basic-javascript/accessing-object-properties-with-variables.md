@@ -4,7 +4,6 @@ title: Accessing Object Properties with Variables
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cnQyKur'
 forumTopicId: 16165
-dashedName: accessing-object-properties-with-variables
 ---
 
 # --description--
@@ -19,10 +18,8 @@ var dogs = {
 };
 var myDog = "Hunter";
 var myBreed = dogs[myDog];
-console.log(myBreed);
+console.log(myBreed); // "Doberman"
 ```
-
-The string `Doberman` would be displayed in the console.
 
 Another way you can use this concept is when the property's name is collected dynamically during the program execution, as follows:
 
@@ -34,11 +31,9 @@ function propPrefix(str) {
   var s = "prop";
   return s + str;
 }
-var someProp = propPrefix("Name");
-console.log(someObj[someProp]);
+var someProp = propPrefix("Name"); // someProp now holds the value 'propName'
+console.log(someObj[someProp]); // "John"
 ```
-
-`someProp` would have a value of the string `propName`, and the string `John` would be displayed in the console.
 
 Note that we do *not* use quotes around the variable name when using it to access the property because we are using the *value* of the variable, not the *name*.
 
@@ -60,7 +55,7 @@ The variable `player` should be a string
 assert(typeof player === 'string');
 ```
 
-The value of `player` should be the string `Montana`
+The value of `player` should be "Montana"
 
 ```js
 assert(player === 'Montana');

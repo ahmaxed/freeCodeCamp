@@ -1,12 +1,10 @@
-/* global expect jest */
+/* global expect */
 
 import { Subject } from 'rxjs';
 import { ActionsObservable, StateObservable } from 'redux-observable';
 import failedUpdatesEpic from './failed-updates-epic';
 import { types } from './';
 import store from 'store';
-
-jest.mock('../analytics');
 
 const key = 'fcc-failed-updates';
 

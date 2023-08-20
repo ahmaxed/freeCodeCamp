@@ -3,12 +3,11 @@ id: 5a24c314108439a4d4036164
 title: Create a Component with Composition
 challengeType: 6
 forumTopicId: 301383
-dashedName: create-a-component-with-composition
 ---
 
 # --description--
 
-Now we will look at how we can compose multiple React components together. Imagine you are building an app and have created three components: a `Navbar`, `Dashboard`, and `Footer`.
+Now we will look at how we can compose multiple React components together. Imagine you are building an App and have created three components, a `Navbar`, `Dashboard`, and `Footer`.
 
 To compose these components together, you could create an `App` *parent* component which renders each of these three components as *children*. To render a component as a child in a React component, you include the component name written as a custom HTML tag in the JSX. For example, in the `render` method you could write:
 
@@ -54,7 +53,7 @@ assert(
 );
 ```
 
-The component should return the `ChildComponent` as its second child.
+The component should return the ChildComponent as its second child.
 
 ```js
 assert(

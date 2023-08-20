@@ -3,7 +3,6 @@ id: 587d7b7b367417b2b2512b13
 title: Copy an Array with the Spread Operator
 challengeType: 1
 forumTopicId: 301157
-dashedName: copy-an-array-with-the-spread-operator
 ---
 
 # --description--
@@ -15,9 +14,9 @@ In practice, we can use the spread operator to copy an array like so:
 ```js
 let thisArray = [true, true, undefined, false, null];
 let thatArray = [...thisArray];
+// thatArray equals [true, true, undefined, false, null]
+// thisArray remains unchanged and thatArray contains the same elements as thisArray
 ```
-
-`thatArray` equals `[true, true, undefined, false, null]`. `thisArray` remains unchanged and `thatArray` contains the same elements as `thisArray`.
 
 # --instructions--
 
@@ -65,7 +64,7 @@ assert.deepEqual(copyMachine(['it works'], 3), [
 The `copyMachine` function should utilize the `spread operator` with array `arr`
 
 ```js
-assert(code.match(/\.\.\.arr/));
+assert(__helpers.removeJSComments(code).match(/\.\.\.arr/));
 ```
 
 # --seed--

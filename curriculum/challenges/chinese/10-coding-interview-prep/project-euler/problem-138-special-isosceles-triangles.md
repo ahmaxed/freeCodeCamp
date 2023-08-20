@@ -1,40 +1,23 @@
 ---
 id: 5900f3f61000cf542c50ff09
-title: 'Problem 138: Special isosceles triangles'
+title: 问题138：特殊的等腰三角形
 challengeType: 5
-forumTopicId: 301766
-dashedName: problem-138-special-isosceles-triangles
+videoUrl: ''
 ---
 
 # --description--
 
-Consider the isosceles triangle with base length, b = 16, and legs, L = 17.
+考虑具有基本长度，b = 16和腿，L = 17的等腰三角形。
 
-By using the Pythagorean theorem it can be seen that the height of the triangle, h = √(172 − 82) = 15, which is one less than the base length. With b = 272 and L = 305, we get h = 273, which is one more than the base length, and this is the second smallest isosceles triangle with the property that h = b ± 1. Find ∑ L for the twelve smallest isosceles triangles for which h = b ± 1 and b, L are positive integers.
+通过使用毕达哥拉斯定理，可以看出三角形的高度h =√（172-82）= 15，比基本长度小1。当b = 272且L = 305时，我们得到h = 273，这比基本长度多一个，这是第二个最小的等腰三角形，具有h = b±1的性质。找到12个最小等腰的ΣL h = b±1且b，L为正整数的三角形。
 
 # --hints--
 
-`euler138()` should return 1118049290473932.
+`euler138()`应该返回1118049290473932。
 
 ```js
 assert.strictEqual(euler138(), 1118049290473932);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler138() {
-
-  return true;
-}
-
-euler138();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

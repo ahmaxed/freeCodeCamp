@@ -133,7 +133,7 @@ export default function completionEpic(action$, state$) {
     switchMap(({ type }) => {
       const state = state$.value;
       const meta = challengeMetaSelector(state);
-      const { nextChallengePath, challengeType } = meta;
+      const { nextChallengePath, introPath, challengeType } = meta;
       const closeChallengeModal = of(closeModal('completion'));
 
       let submitter = () => of({ type: 'no-user-signed-in' });
@@ -151,7 +151,7 @@ export default function completionEpic(action$, state$) {
       }
 
       return submitter(type, state).pipe(
-        tap(() => navigate(nextChallengePath)),
+        tap(() => navigate(introPath ? introPath : nextChallengePath)),
         concat(closeChallengeModal),
         filter(Boolean)
       );

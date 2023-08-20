@@ -3,7 +3,6 @@ id: 5a23c84252665b21eecc7ed2
 title: Knapsack problem/Bounded
 challengeType: 5
 forumTopicId: 323652
-dashedName: knapsack-problembounded
 ---
 
 # --description--

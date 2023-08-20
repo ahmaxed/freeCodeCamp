@@ -4,7 +4,6 @@ title: Use Bracket Notation to Find the Nth-to-Last Character in a String
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cw4vkh9'
 forumTopicId: 18344
-dashedName: use-bracket-notation-to-find-the-nth-to-last-character-in-a-string
 ---
 
 # --description--
@@ -17,10 +16,8 @@ Example:
 
 ```js
 var firstName = "Charles";
-var thirdToLastLetter = firstName[firstName.length - 3];
+var thirdToLastLetter = firstName[firstName.length - 3]; // thirdToLastLetter is "l"
 ```
-
-`thirdToLastLetter` would have a value of the string `l`.
 
 # --instructions--
 
@@ -30,7 +27,7 @@ Use <dfn>bracket notation</dfn> to find the second-to-last character in the `las
 
 # --hints--
 
-`secondToLastLetterOfLastName` should be the letter `c`.
+`secondToLastLetterOfLastName` should be "c".
 
 ```js
 assert(secondToLastLetterOfLastName === 'c');

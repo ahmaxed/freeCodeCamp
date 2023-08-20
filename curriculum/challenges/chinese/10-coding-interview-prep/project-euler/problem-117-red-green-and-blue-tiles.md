@@ -1,40 +1,23 @@
 ---
 id: 5900f3e21000cf542c50fef4
-title: 'Problem 117: Red, green, and blue tiles'
+title: 问题117：红色，绿色和蓝色瓷砖
 challengeType: 5
-forumTopicId: 301743
-dashedName: problem-117-red-green-and-blue-tiles
+videoUrl: ''
 ---
 
 # --description--
 
-Using a combination of black square tiles and oblong tiles chosen from: red tiles measuring two units, green tiles measuring three units, and blue tiles measuring four units, it is possible to tile a row measuring five units in length in exactly fifteen different ways.
+使用黑色正方形瓷砖和椭圆形瓷砖的组合，选自：测量两个单位的红色瓷砖，测量三个单位的绿色瓷砖和测量四个单位的蓝色瓷砖，可以以十五种不同的方式平铺一个长度为五个单位的行。
 
-How many ways can a row measuring fifty units in length be tiled? NOTE: This is related to Problem 116.
+一行测量五十个单位长度的平铺方式有多少？注意：这与问题116有关。
 
 # --hints--
 
-`euler117()` should return 100808458960497.
+`euler117()`应该返回100808458960497。
 
 ```js
 assert.strictEqual(euler117(), 100808458960497);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler117() {
-
-  return true;
-}
-
-euler117();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

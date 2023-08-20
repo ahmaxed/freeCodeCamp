@@ -9,7 +9,6 @@ import {
   Alert,
   FormGroup
 } from '@freecodecamp/react-bootstrap';
-import { withTranslation } from 'react-i18next';
 
 import {
   validateUsername,
@@ -23,7 +22,6 @@ import { isValidUsername } from '../../../../utils/validate';
 const propTypes = {
   isValidUsername: PropTypes.bool,
   submitNewUsername: PropTypes.func.isRequired,
-  t: PropTypes.func.isRequired,
   username: PropTypes.string,
   validateUsername: PropTypes.func.isRequired,
   validating: PropTypes.bool
@@ -118,45 +116,41 @@ class UsernameSettings extends Component {
   }
 
   renderAlerts(validating, error, isValidUsername) {
-    const { t } = this.props;
-
     if (!validating && error) {
-      console.log(error);
       return (
         <FullWidthRow>
-          <Alert bsStyle='danger'>
-            {t(`settings.username.${error}`, {
-              username: this.state.formValue
-            })}
-          </Alert>
+          <Alert bsStyle='danger'>{'Username ' + error}</Alert>
         </FullWidthRow>
       );
     }
     if (!validating && !isValidUsername) {
       return (
         <FullWidthRow>
-          <Alert bsStyle='warning'>{t('settings.username.unavailable')}</Alert>
+          <Alert bsStyle='warning'>Username not available.</Alert>
         </FullWidthRow>
       );
     }
     if (validating) {
       return (
         <FullWidthRow>
-          <Alert bsStyle='info'>{t('settings.username.validating')}</Alert>
+          <Alert bsStyle='info'>Validating username...</Alert>
         </FullWidthRow>
       );
     }
     if (!validating && isValidUsername && this.state.isUserNew) {
       return (
         <FullWidthRow>
-          <Alert bsStyle='success'>{t('settings.username.available')}</Alert>
+          <Alert bsStyle='success'>Username is available.</Alert>
         </FullWidthRow>
       );
     } else if (!validating && isValidUsername && !this.state.isUserNew) {
       return (
         <FullWidthRow>
-          <Alert bsStyle='success'>{t('settings.username.available')}</Alert>
-          <Alert bsStyle='info'>{t('settings.username.change')}</Alert>
+          <Alert bsStyle='success'>Username is available.</Alert>
+          <Alert bsStyle='info'>
+            Please note, changing your username will also change the URL to your
+            profile and your certifications.
+          </Alert>
         </FullWidthRow>
       );
     }
@@ -170,7 +164,7 @@ class UsernameSettings extends Component {
       characterValidation: { valid, error },
       submitClicked
     } = this.state;
-    const { isValidUsername, t, validating } = this.props;
+    const { isValidUsername, validating } = this.props;
 
     return (
       <Fragment>
@@ -178,7 +172,7 @@ class UsernameSettings extends Component {
           <FullWidthRow>
             <FormGroup>
               <ControlLabel htmlFor='username-settings'>
-                <strong>{t('settings.labels.username')}</strong>
+                <strong>Username</strong>
               </ControlLabel>
               <FormControl
                 name='username-settings'
@@ -208,4 +202,4 @@ UsernameSettings.propTypes = propTypes;
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withTranslation()(UsernameSettings));
+)(UsernameSettings);

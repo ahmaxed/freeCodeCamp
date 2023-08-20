@@ -1,21 +1,20 @@
 ---
 id: 56bbb991ad1ed5201cd392d0
-title: 创建 JavaScript 对象
+title: 新建 JavaScript 对象
 challengeType: 1
 videoUrl: 'https://scrimba.com/c/cWGkbtd'
 forumTopicId: 16769
-dashedName: build-javascript-objects
 ---
 
 # --description--
 
-你之前可能听过 `object` 这个词。
+你之前可能听说过对象`object`。
 
-对象和 `arrays` 类似，区别在于数组使用索引来访问和修改数据，而对象中的数据是通过 `properties` 访问的。
+对象和数组很相似，数组是通过索引来访问和修改数据，而对象是通过属性来访问和修改数据。
 
-对象非常适合用来存储结构化数据，可以表示真实世界中的物体，比如一只猫。
+对象适合用来存储结构化数据，就和真实世界的对象一模一样，比如一只猫。
 
-这里是一个猫对象的样本：
+这是一个对象的示例：
 
 ```js
 var cat = {
@@ -26,7 +25,7 @@ var cat = {
 };
 ```
 
-在这个示例中，所有的属性都被纯属为字符串，比如 `name`、`legs` 和 `tails`。 然而，你也可以使用数字作为属性。 你甚至可以省略单字字符串属性中的引号，如下所示：
+在这个示例中所有的属性以字符串的形式储存，例如，`"name"`、`"legs"`和`"tails"`。但是，你也可以使用数字作为属性，你甚至可以省略字符串属性的引号，如下所示：
 
 ```js
 var anotherObject = {
@@ -36,17 +35,17 @@ var anotherObject = {
 };
 ```
 
-然而，如果你的对象有非字符串属性的话，JavaScript 会自动将它们转为字符串。
+但是，如果你的对象具有任何非字符串属性，JavaScript 将自动将它们转换为字符串类型。
 
 # --instructions--
 
-确保对象表示一只名为 `myDog` 的狗，包含属性 `name`（字符串）、`legs`、`tails` 和 `friends`。
+创建一个叫做`myDog`的对象，它里面有这些属性：`"name"`、`"legs"`、`"tails"`、`"friends"`。
 
-你可以随意设置这些对象的属性值，只要 `name` 是字符串，`legs` 和 `tails` 是数字，`friends` 是数组即可。
+你可以设置对象属性为任何值，只需要确保`"name"`是字符串，`"legs"`和`"tails"`是数字，`"friends"`是数组。
 
 # --hints--
 
-`myDog` 应该包含 `name` 属性，并且它应该是一个 `string`。
+`myDog`应该包含`name`属性，并且是一个字符串`string`。
 
 ```js
 assert(
@@ -64,7 +63,7 @@ assert(
 );
 ```
 
-`myDog`应该包含 `legs` 属性，并且它应该是一个 `number`。
+`myDog`应该包含`legs`属性，并且是一个数字`number`。
 
 ```js
 assert(
@@ -82,7 +81,7 @@ assert(
 );
 ```
 
-`myDog` 应该包含 `tails` 属性，并且它应该是一个 `number`。
+`myDog`应该包含`tails`属性，并且是一个数字`number`。
 
 ```js
 assert(
@@ -100,7 +99,7 @@ assert(
 );
 ```
 
-`myDog` 应该包含 `friends` 属性，并且它应该是一个 `array`。
+`myDog`应该包含`friends`属性，并且是一个数组`array`。
 
 ```js
 assert(
@@ -118,7 +117,7 @@ assert(
 );
 ```
 
-`myDog` 只应该包含所有给定的属性。
+`myDog`应该只包含给出的属性。
 
 ```js
 assert(
@@ -128,32 +127,5 @@ assert(
 );
 ```
 
-# --seed--
-
-## --after-user-code--
-
-```js
-(function(z){return z;})(myDog);
-```
-
-## --seed-contents--
-
-```js
-var myDog = {
-// Only change code below this line
-
-
-// Only change code above this line
-};
-```
-
 # --solutions--
 
-```js
-var myDog = {
-  "name": "Camper",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["everything!"]
-};
-```

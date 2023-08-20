@@ -1,52 +1,31 @@
 ---
 id: 5900f4f31000cf542c510006
-title: 'Problem 391: Hopping Game'
+title: 问题391：跳跃游戏
 challengeType: 5
-forumTopicId: 302056
-dashedName: problem-391-hopping-game
+videoUrl: ''
 ---
 
 # --description--
 
-Let sk be the number of 1’s when writing the numbers from 0 to k in binary.
+当将数字从0写入k到二进制时，令sk为1的数。例如，以二进制形式写0到5，我们有0,1,10,11,100,101。有7个1，所以s5 = 7.序列S = {sk：k≥0}开始{0,1 ，2,4,5,7,9,12，......}。
 
-For example, writing 0 to 5 in binary, we have 0, 1, 10, 11, 100, 101. There are seven 1’s, so s5 = 7.
+一个游戏由两个玩家玩。在游戏开始之前，选择数字n。计数器c从0开始。每转一圈，玩家选择一个从1到n（含）的数字，然后用该数字增加c。结果值c必须是S的成员。如果没有更多有效的移动，则玩家输掉。
 
-The sequence S = {sk : k ≥ 0} starts {0, 1, 2, 4, 5, 7, 9, 12, ...}.
+例如：设n = 5.c从0开始。玩家1选择4，所以c变为0 + 4 = 4.玩家2选择5，所以c变为4 + 5 = 9.玩家1选择3，所以c变为9 + 3 = 12.等等。请注意，c必须始终属于S，并且每个玩家最多可以将c增加n。
 
-A game is played by two players. Before the game starts, a number n is chosen. A counter c starts at 0. At each turn, the player chooses a number from 1 to n (inclusive) and increases c by that number. The resulting value of c must be a member of S. If there are no more valid moves, the player loses.
+设M（n）是第一个玩家在第一个回合强制获胜时可以选择的最高数字，如果没有这样的移动则M（n）= 0。例如，M（2）= 2，M（7）= 1且M（20）= 4。
 
-For example: Let n = 5. c starts at 0. Player 1 chooses 4, so c becomes 0 + 4 = 4. Player 2 chooses 5, so c becomes 4 + 5 = 9. Player 1 chooses 3, so c becomes 9 + 3 = 12. etc. Note that c must always belong to S, and each player can increase c by at most n.
+给定Σ（M（n））3 = 8150，1≤n≤20。
 
-Let M(n) be the highest number the first player can choose at her first turn to force a win, and M(n) = 0 if there is no such move. For example, M(2) = 2, M(7) = 1 and M(20) = 4.
-
-Given Σ(M(n))3 = 8150 for 1 ≤ n ≤ 20.
-
-Find Σ(M(n))3 for 1 ≤ n ≤ 1000.
+找Σ（M（n））3表示1≤n≤1000。
 
 # --hints--
 
-`euler391()` should return 61029882288.
+`euler391()`应该返回61029882288。
 
 ```js
 assert.strictEqual(euler391(), 61029882288);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler391() {
-
-  return true;
-}
-
-euler391();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

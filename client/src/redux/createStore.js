@@ -9,9 +9,7 @@ import rootReducer from './rootReducer';
 import rootSaga from './rootSaga';
 import { isBrowser } from '../../utils';
 
-import envData from '../../../config/env.json';
-
-const { environment } = envData;
+import { environment } from '../../../config/env.json';
 
 const clientSide = isBrowser();
 

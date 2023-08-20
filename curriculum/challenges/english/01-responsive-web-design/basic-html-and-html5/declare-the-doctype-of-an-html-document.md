@@ -4,7 +4,6 @@ title: Declare the Doctype of an HTML Document
 challengeType: 0
 videoUrl: 'https://scrimba.com/p/pVMPUv/cra98AJ'
 forumTopicId: 301095
-dashedName: declare-the-doctype-of-an-html-document
 ---
 
 # --description--
@@ -19,12 +18,12 @@ The `!` and uppercase `DOCTYPE` is important, especially for older browsers. The
 
 Next, the rest of your HTML code needs to be wrapped in `html` tags. The opening `<html>` goes directly below the `<!DOCTYPE html>` line, and the closing `</html>` goes at the end of the page.
 
-Here's an example of the page structure. Your HTML code would go in the space between the two `html` tags.
+Here's an example of the page structure:
 
 ```html
 <!DOCTYPE html>
 <html>
-
+  <!-- Your HTML code goes here -->
 </html>
 ```
 
@@ -57,7 +56,6 @@ assert(code.match(/<html>\s*?<h1>\s*?.*?\s*?<\/h1>\s*?<\/html>/gi));
 ## --seed-contents--
 
 ```html
-
 ```
 
 # --solutions--

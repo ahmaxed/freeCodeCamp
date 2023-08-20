@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { useTranslation } from 'react-i18next';
 
 import {
   Button,
@@ -44,7 +43,6 @@ function ToolPanel({
   guideUrl,
   videoUrl
 }) {
-  const { t } = useTranslation();
   return (
     <Fragment>
       <div
@@ -53,7 +51,7 @@ function ToolPanel({
         }`}
       >
         <Button block={true} bsStyle='primary' onClick={executeChallenge}>
-          {isMobile ? t('buttons.run') : t('buttons.run-test')}
+          {isMobile ? 'Run' : 'Run the Tests'}
         </Button>
         <Button
           block={true}
@@ -61,14 +59,14 @@ function ToolPanel({
           className='btn-invert'
           onClick={openResetModal}
         >
-          {isMobile ? t('buttons.reset') : t('buttons.reset-code')}
+          {isMobile ? 'Reset' : 'Reset All Code'}
         </Button>
         <DropdownButton
           block={true}
           bsStyle='primary'
           className='btn-invert'
           id='get-help-dropdown'
-          title={isMobile ? t('buttons.help') : t('buttons.get-help')}
+          title={isMobile ? 'Help' : 'Get Help'}
         >
           {guideUrl ? (
             <MenuItem
@@ -77,7 +75,7 @@ function ToolPanel({
               href={guideUrl}
               target='_blank'
             >
-              {t('buttons.get-hint')}
+              {'Get a Hint'}
             </MenuItem>
           ) : null}
           {videoUrl ? (
@@ -86,7 +84,7 @@ function ToolPanel({
               className='btn-invert'
               onClick={openVideoModal}
             >
-              {t('buttons.watch-video')}
+              {'Watch a video'}
             </MenuItem>
           ) : null}
           <MenuItem
@@ -94,7 +92,7 @@ function ToolPanel({
             className='btn-invert'
             onClick={openHelpModal}
           >
-            {t('buttons.ask-for-help')}
+            {'Ask for help'}
           </MenuItem>
         </DropdownButton>
       </div>
@@ -105,4 +103,7 @@ function ToolPanel({
 ToolPanel.displayName = 'ToolPanel';
 ToolPanel.propTypes = propTypes;
 
-export default connect(mapStateToProps, mapDispatchToProps)(ToolPanel);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ToolPanel);

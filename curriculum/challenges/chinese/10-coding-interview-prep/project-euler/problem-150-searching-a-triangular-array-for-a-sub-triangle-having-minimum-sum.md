@@ -1,57 +1,37 @@
 ---
 id: 5900f4031000cf542c50ff15
-title: >-
-  Problem 150: Searching a triangular array for a sub-triangle having minimum-sum
+title: 问题150：在三角形阵列中搜索具有最小和的子三角形
 challengeType: 5
-forumTopicId: 301781
-dashedName: problem-150-searching-a-triangular-array-for-a-sub-triangle-having-minimum-sum
+videoUrl: ''
 ---
 
 # --description--
 
-In a triangular array of positive and negative integers, we wish to find a sub-triangle such that the sum of the numbers it contains is the smallest possible.
+在正整数和负整数的三角形阵列中，我们希望找到一个子三角形，使得它包含的数字之和尽可能小。在下面的示例中，可以很容易地验证标记的三角形满足具有-42的总和的条件。
 
-In the example below, it can be easily verified that the marked triangle satisfies this condition having a sum of −42.
+我们希望制作一个包含一千行的三角形数组，因此我们使用一种随机数生成器（称为线性同余生成器）生成5009个伪随机数sk，范围为±219，如下所示：t：= 0
 
-We wish to make such a triangular array with one thousand rows, so we generate 500500 pseudo-random numbers sk in the range ±219, using a type of random number generator (known as a Linear Congruential Generator) as follows: t := 0
+对于k = 1到k = 500500：
 
-for k = 1 up to k = 500500:
-
-t := (615949\*t + 797807) modulo 220 sk := t−219 Thus: s1 = 273519, s2 = −153582, s3 = 450905 etc Our triangular array is then formed using the pseudo-random numbers thus:
+t：=（615949 \* t + 797807）modulo 220 sk：= t-219因此：s1 = 273519，s2 = -153582，s3 = 450905等我们的三角形数组然后使用伪随机数形成：
 
 s1 s2 s3 s4 s5 s6
 
-s7 s8 s9 s10 ...
+s7 s8 s9 s10 ......
 
-Sub-triangles can start at any element of the array and extend down as far as we like (taking-in the two elements directly below it from the next row, the three elements directly below from the row after that, and so on).
+子三角形可以从数组的任何元素开始，并在我们喜欢的范围内向下延伸（从下一行直接接收它下面的两个元素，之后直接从该行下面的三个元素，依此类推）。
 
-The "sum of a sub-triangle" is defined as the sum of all the elements it contains.
+“三角形的总和”定义为它包含的所有元素的总和。
 
-Find the smallest possible sub-triangle sum.
+找到可能的最小子三角形和。
 
 # --hints--
 
-`euler150()` should return -271248680.
+`euler150()`应返回-271248680。
 
 ```js
 assert.strictEqual(euler150(), -271248680);
 ```
 
-# --seed--
-
-## --seed-contents--
-
-```js
-function euler150() {
-
-  return true;
-}
-
-euler150();
-```
-
 # --solutions--
 
-```js
-// solution required
-```

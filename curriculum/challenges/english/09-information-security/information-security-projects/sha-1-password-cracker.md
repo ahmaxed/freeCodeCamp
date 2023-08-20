@@ -3,14 +3,13 @@ id: 5e46f983ac417301a38fb933
 title: SHA-1 Password Cracker
 challengeType: 10
 helpCategory: Python
-dashedName: sha-1-password-cracker
 ---
 
 # --description--
 
 For this project you will learn about the importance of good security by creating a password cracker to figure out passwords that were hashed using SHA-1.
 
-You can access [the full project description and starter code on Replit](https://replit.com/github/freeCodeCamp/boilerplate-SHA-1-password-cracker).
+You can access [the full project description and starter code on Repl.it](https://repl.it/github/freeCodeCamp/boilerplate-SHA-1-password-cracker).
 
 After going to that link, fork the project. Once you complete the project based on the instructions in 'README.md', submit your project link below.
 
@@ -32,6 +31,8 @@ It should pass all Python tests.
 ```js
 
 ```
+
+# --seed--
 
 # --solutions--
 
