@@ -30,7 +30,7 @@ import {
   currentBlockIdsSelector,
   socratesHintStateSelector
 } from '../redux/selectors';
-import { apiLocation } from '../../../../config/env.json';
+import { apiLocation, clientLocale } from '../../../../config/env.json';
 import { openModal, executeChallenge, askSocrates } from '../redux/actions';
 import { saveChallenge } from '../../../redux/actions';
 import Help from '../../../assets/icons/help';
@@ -163,7 +163,8 @@ export function IndependentLowerJaw({
   hasSocratesAccess
 }: IndependentLowerJawProps): JSX.Element {
   const { t } = useTranslation();
-  const showSocratesFlag = useFeature('show-socrates').on;
+  const showSocratesFlag =
+    useFeature('show-socrates').on && clientLocale === 'english';
   const submitChallenge = useSubmit();
   const firstFailedTest = tests.find(test => !!test.err);
   const hint = firstFailedTest?.message;
