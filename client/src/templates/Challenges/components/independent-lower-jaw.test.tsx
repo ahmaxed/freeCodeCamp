@@ -158,12 +158,12 @@ describe('<IndependentLowerJaw />', () => {
     await userEvent.click(screen.getByRole('button', { name: /ask-socrates/ }));
 
     expect(callGA).toHaveBeenCalledWith({
-      event: 'CallSocrates',
+      event: 'call_socrates',
       action: 'Socrates LowerJaw Button Click',
-      isDonating: false,
+      is_donating: false,
       attempts: 2,
       limit: 3,
-      optimizedRequest: null
+      optimized_request: null
     });
   });
 

@@ -271,12 +271,12 @@ export function IndependentLowerJaw({
 
   const askSocratesAttempt = () => {
     callGA({
-      event: 'CallSocrates',
+      event: 'call_socrates',
       action: 'Socrates LowerJaw Button Click',
-      isDonating,
+      is_donating: isDonating,
       attempts: socratesHintState.attempts,
       limit: socratesHintState.limit,
-      optimizedRequest: null
+      optimized_request: null
     });
 
     setShowSocratesResults(true);
