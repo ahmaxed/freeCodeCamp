@@ -183,7 +183,7 @@ export function ShowSettings(props: ShowSettingsProps): JSX.Element {
         <SettingsSidebarNav userToken={userToken} />
         <main className='settings-main'>
           <Spacer size='l' />
-          <FullWidthRow>
+          <FullWidthRow className='overflow-fix'>
             <ScrollElement name='username'>
               <h1
                 id='content-start'
