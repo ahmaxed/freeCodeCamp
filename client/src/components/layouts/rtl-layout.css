@@ -112,8 +112,6 @@ sections that need to stay left to right
 [dir='rtl'] :has(#learn-app-wrapper) pre,
 /* Code snippet*/
 [dir='rtl'] code,
-/* trending articles */
-[dir='rtl'] .trending-guides .trending-guides-row div a,
 [dir='rtl'] .overflow-guard,
 [dir='rtl'] .challenge-preview,
 /* timeline*/

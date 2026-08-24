@@ -9,27 +9,9 @@
   font-size: 16px;
 }
 
-.footer-top {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30.5em, 1fr));
-}
-
-@media (max-width: 500px) {
-  .footer-top {
-    grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
-  }
-}
-
-.footer-top,
 .footer-bottom {
   width: min(100%, 1300px);
   margin-inline: auto;
-}
-
-.site-footer p {
-  margin: 0 0 1.45rem;
-  line-height: 30px;
-  font-size: 16px;
 }
 
 .site-footer a {
@@ -42,8 +24,7 @@
   text-decoration: underline;
 }
 
-.site-footer .col-header,
-.trending-guides .col-header {
+.site-footer .col-header {
   text-align: center;
   font-weight: 700;
   font-size: 16px;
@@ -53,76 +34,6 @@
 
 .site-footer h2 {
   line-height: 1.1;
-}
-
-.trending-guides-articles {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11em, 1fr));
-  grid-column-gap: 3rem;
-  grid-row-gap: 0.5rem;
-  white-space: pre;
-}
-
-@media (max-width: 1400px) {
-  .trending-guides-articles {
-    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-  }
-}
-
-@media (max-width: 800px) {
-  .trending-guides-articles {
-    grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
-  }
-}
-
-.footer-desc-col {
-  padding-inline: 15px;
-  margin-bottom: 30px;
-  align-self: start;
-}
-
-.footer-desc-col a {
-  text-decoration: underline;
-  padding: 2px;
-}
-
-p.footer-donation {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-p.footer-donation a:hover {
-  text-decoration: none;
-}
-
-.trending-guides {
-  margin: 0 0 3rem;
-}
-
-.mobile-app-container {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-/* This rule to is ensure the li element doesn't take more space than it needs */
-.mobile-app-container li {
-  display: flex;
-  flex: initial;
-}
-
-.mobile-app-container img {
-  width: 9.5rem;
-  height: 3rem;
-  object-fit: cover;
 }
 
 .footer-bottom .our-nonprofit {
@@ -136,12 +47,6 @@ p.footer-donation a:hover {
   padding: 5px 10px;
 }
 
-@media (min-width: 500px) {
-  .mobile-app-container {
-    flex-direction: row;
-  }
-}
-
 @media (min-width: 800px) {
   .footer-bottom .our-nonprofit a {
     padding: 5px;
@@ -149,15 +54,6 @@ p.footer-donation a:hover {
 }
 
 @media (min-width: 1200px) {
-  .footer-desc-col {
-    flex: 1 0 45%;
-  }
-  .trending-guides {
-    flex: 1 0 58%;
-  }
-  p.footer-donation {
-    margin-top: 40px;
-  }
   .footer-bottom .our-nonprofit {
     padding-inline: 10px;
     padding-top: 1.25rem;
